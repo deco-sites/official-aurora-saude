@@ -3,14 +3,24 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
-
+import * as $change_step_function from "./islands/change-step-function.tsx";
+import * as $control_form_steps from "./islands/control-form-steps.tsx";
+import * as $first_step_img from "./islands/first-step-img.tsx";
+import * as $first_step_opt_btn from "./islands/first-step-opt-btn.tsx";
+import * as $next_step_btn from "./islands/next-step-btn.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
     "./routes/_app.tsx": $_app,
   },
-  islands: {},
+  islands: {
+    "./islands/change-step-function.tsx": $change_step_function,
+    "./islands/control-form-steps.tsx": $control_form_steps,
+    "./islands/first-step-img.tsx": $first_step_img,
+    "./islands/first-step-opt-btn.tsx": $first_step_opt_btn,
+    "./islands/next-step-btn.tsx": $next_step_btn,
+  },
   baseUrl: import.meta.url,
 } satisfies Manifest;
 

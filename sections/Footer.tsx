@@ -20,22 +20,22 @@ function Footer({
   width = 50,
 }: Props) {
   return (
-    <div class="py-8 lg:px-0 px-6 fixed bottom-0 w-full mx-auto">
-      <a
-        href={href}
-        class="flex flex-row gap-1 items-center justify-center text-xs"
-        target="_blank"
-      >
-        {text && <p>{text}</p>}
-        {image && (
-          <Image
-            src={image || ""}
-            alt={alt || ""}
-            height={height || 20}
-            width={width || 50}
-          />
-        )}
-      </a>
+    <div
+      className="flex py-6 justify-center border-t-[#f0ecec] border-t-[1px] mt-12"
+      style={{ width: "calc(100vw - 18px)" }}
+    >
+      <footer className="flex items-center justify-between text-[#bcbcbc] text-xs w-[1400px]">
+        <div className="bg-black p-2">
+          <span className="border-white border-[1px] p-1">ANS No: 423629</span>
+        </div>
+        <span>CNPJ: 49.955.478/0001-64</span>
+        <span>
+          Endereço: Alameda Oscar Niemeyer, 288 - sala 503 - Vila da Serra -
+          Nova Lima- MG
+        </span>
+        <img src={"/ans-selo.png"} alt="" className="w-32" />
+        <span>Todos os Direitos Reservados © 2023</span>
+      </footer>
     </div>
   );
 }
