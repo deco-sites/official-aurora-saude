@@ -3,6 +3,7 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
+import * as $add_beneficiary from "./islands/add-beneficiary.tsx";
 import * as $change_step_function from "./islands/change-step-function.tsx";
 import * as $control_form_steps from "./islands/control-form-steps.tsx";
 import * as $first_step_img from "./islands/first-step-img.tsx";
@@ -15,6 +16,7 @@ const manifest = {
     "./routes/_app.tsx": $_app,
   },
   islands: {
+    "./islands/add-beneficiary.tsx": $add_beneficiary,
     "./islands/change-step-function.tsx": $change_step_function,
     "./islands/control-form-steps.tsx": $control_form_steps,
     "./islands/first-step-img.tsx": $first_step_img,

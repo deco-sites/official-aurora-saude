@@ -6,21 +6,31 @@ import * as $$$$$$$$$$$0 from "./apps/deco/htmx.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
 import * as $$$$$$0 from "./sections/Footer.tsx";
 import * as $$$$$$1 from "./sections/FormStepOne.tsx";
-import * as $$$$$$2 from "./sections/FormStepTwo.tsx";
-import * as $$$$$$3 from "./sections/Header.tsx";
-import * as $$$$$$4 from "./sections/ItWorks.tsx";
-import * as $$$$$$5 from "./sections/SimulatorContent.tsx";
-import * as $$$$$$6 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$2 from "./sections/FormStepThree.tsx";
+import * as $$$$$$3 from "./sections/FormStepTwo.tsx";
+import * as $$$$$$4 from "./sections/Header.tsx";
+import * as $$$$$$5 from "./sections/ItWorks.tsx";
+import * as $$$$$$6 from "./sections/SecondStepOption1.tsx";
+import * as $$$$$$7 from "./sections/SecondStepOption2.tsx";
+import * as $$$$$$8 from "./sections/SimulatorContent.tsx";
+import * as $$$$$$9 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$10 from "./sections/ThirdStepOption1.tsx";
+import * as $$$$$$11 from "./sections/ThirdStepOption2.tsx";
 
 const manifest = {
   "sections": {
     "site/sections/Footer.tsx": $$$$$$0,
     "site/sections/FormStepOne.tsx": $$$$$$1,
-    "site/sections/FormStepTwo.tsx": $$$$$$2,
-    "site/sections/Header.tsx": $$$$$$3,
-    "site/sections/ItWorks.tsx": $$$$$$4,
-    "site/sections/SimulatorContent.tsx": $$$$$$5,
-    "site/sections/Theme/Theme.tsx": $$$$$$6,
+    "site/sections/FormStepThree.tsx": $$$$$$2,
+    "site/sections/FormStepTwo.tsx": $$$$$$3,
+    "site/sections/Header.tsx": $$$$$$4,
+    "site/sections/ItWorks.tsx": $$$$$$5,
+    "site/sections/SecondStepOption1.tsx": $$$$$$6,
+    "site/sections/SecondStepOption2.tsx": $$$$$$7,
+    "site/sections/SimulatorContent.tsx": $$$$$$8,
+    "site/sections/Theme/Theme.tsx": $$$$$$9,
+    "site/sections/ThirdStepOption1.tsx": $$$$$$10,
+    "site/sections/ThirdStepOption2.tsx": $$$$$$11,
   },
   "apps": {
     "site/apps/deco/htmx.ts": $$$$$$$$$$$0,

@@ -8,7 +8,7 @@ export interface InputProps {
   name: string;
   label: string;
   options: Option[];
-  placeholder: string;
+  placeholder?: string;
 }
 
 export default function InputSelect(

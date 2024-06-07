@@ -7,6 +7,6 @@ export default function changeStep(step, action) {
   if (action === "increase") {
     activeStep.value = step + 1;
   } else if (action === "decrease") {
-    activeStep.value = step - 1;
+    activeStep.value = step;
   }
 }
