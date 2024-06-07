@@ -1,3 +1,4 @@
+import FormTitleH1 from "site/components/form-title-h1.tsx";
 import ProgressTracker from "../components/progress-tracker.tsx";
 import NextStepBtn from "site/islands/next-step-btn.tsx";
 
@@ -24,9 +25,11 @@ export default function FormStepTwo({ Component }: FormStepTwoProps) {
                 <ProgressTracker currentStep={2} />
               </div>
               <div className="flex flex-col gap-4">
-                <span className="text-[#767676] font-semibold text-lg my-8">
-                  Faça a simulação para você <br /> ou para outra pessoa.
-                </span>
+                <FormTitleH1
+                  text1={"Faça a simulação para você"}
+                  text2={"ou para outra pessoa."}
+                />
+
                 {<Component />}
               </div>
               <div className="flex justify-end py-8">

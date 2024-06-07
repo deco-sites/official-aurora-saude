@@ -1,4 +1,4 @@
-import FormTitle from "site/components/form-title.tsx";
+import FormTitleH2 from "../components/form-title-h2.tsx";
 import InputText from "site/components/input-text.tsx";
 import InputSelect from "site/components/input-select.tsx";
 
@@ -6,7 +6,7 @@ export default function SecondStepOption2() {
   return (
     <>
       <div className="flex flex-col gap-8">
-        <FormTitle text={"Informações de contato:"} />
+        <FormTitleH2 text={"Informações de contato:"} />
 
         <InputText
           id={"corporatereason"}
@@ -14,7 +14,6 @@ export default function SecondStepOption2() {
           label={"Razão social"}
           placeholder={"Escreva aqui"}
         />
-        <FormTitle text={"Informações de contato:"} />
 
         <InputText
           id={"name"}
