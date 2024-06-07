@@ -12,7 +12,10 @@ export default function AddBeneficiary() {
   ];
 
   const { inputs } = useBeneficiaryInputs();
-  const [test, setTest] = useState<string[]>([]);
+  const [test, setTest] = useState<string[]>([
+    "New Beneficiary",
+    "New Beneficiary",
+  ]);
 
   const handleAddInput = () => {
     inputs.value.push([...inputs.value, "New Beneficiary"]);
@@ -22,7 +25,7 @@ export default function AddBeneficiary() {
 
   return (
     <div className="flex flex-col gap-6">
-      {inputs.value.map(() => {
+      {test.map(() => {
         return (
           <div className="flex gap-6">
             <InputSelect

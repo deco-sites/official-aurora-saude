@@ -1,11 +1,10 @@
 import { useFormSteps } from "site/sdk/useFormSteps.ts";
 import { useUI } from "../sdk/useUI.ts";
+import { useEffect } from "https://esm.sh/v128/preact@10.19.6/hooks/src/index.js";
 
 export default function ProgressTracker({ currentStep }) {
   const { changeStep } = useFormSteps();
   const { activeOption } = useUI();
-
-  console.log("erick", activeOption.value);
 
   const steps = [
     { title: "Tipo de Simulação", status: true, step: 1 }, //true é ativo e false é inativo
@@ -19,11 +18,14 @@ export default function ProgressTracker({ currentStep }) {
     { title: "Envio", status: false, step: 5 },
   ];
 
-  console.log("aqui2", currentStep);
+  const updatedSteps = steps.map((step) => ({
+    ...step,
+    status: step.step <= currentStep,
+  }));
 
   return (
     <div className="flex justify-between items-center w-full py-6">
-      {steps.map((step, index) => (
+      {updatedSteps.map((step, index) => (
         //Antes do step.status === true eu estava usando index + 1 <= currentStep
         <div key={index} className="relative flex flex-col flex-1">
           <button
@@ -52,7 +54,7 @@ export default function ProgressTracker({ currentStep }) {
               className={`absolute top-3 w-full h-px 
               ${step.status === true ? "bg-[#ff8461]" : "bg-[#ffdcd2]"}
               ${
-                step.status === true && steps[index + 1].status === false
+                step.status === true && updatedSteps[index + 1].status === false
                   ? "bg-gradient-to-r from-[#ff8461] to-[#ffdcd2]"
                   : ""
               }`}

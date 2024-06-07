@@ -24,17 +24,7 @@ export default function FormStepThree({ Component }: FormStepTwoProps) {
               <div>
                 <ProgressTracker currentStep={3} />
               </div>
-              <div className="flex flex-col gap-4">
-                <span className="text-[#767676] font-semibold text-lg my-8">
-                  Informe os dados das pessoas <br /> que utilizarão o plano.
-                </span>
-                <InputSelect
-                  id={"whowilluse"}
-                  name={"whowilluse"}
-                  label={"Quem utilizará o plano?"}
-                  options={whoWillUseThePlan}
-                  placeholder={"Somente eu"}
-                />
+              <div>
                 {<Component />}
               </div>
               <div className="flex justify-end py-8">
