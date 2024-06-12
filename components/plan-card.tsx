@@ -36,7 +36,7 @@ export default function PlanCard(
           } rounded-xl p-10 flex-1`}
         >
           <span
-            className={`font-semibold text-2xl ${
+            className={`font-semibold text-2xl font-sora ${
               color != "yellow" ? "text-[#FCFF73]" : "text-[#FA7651]"
             }`}
           >
@@ -92,7 +92,7 @@ export default function PlanCard(
             <div className="flex flex-col justify-between border-[1px] border-[#D9D9D9] rounded-xl px-10 py-4">
               <span className="text-[#D9D9D9] text-sm">A partir de</span>
               <div className="flex justify-between">
-                <span className="text-[#FA7651] text-2xl font-semibold">
+                <span className="text-[#FA7651] text-2xl font-semibold font-sora">
                   R$ XXX,XX
                 </span>
                 <button
@@ -102,7 +102,7 @@ export default function PlanCard(
                     color != "yellow" ? "text-[#FCFF73]" : "text-[#FA7651]"
                   }`}
                 >
-                  Simular
+                  Selecionar
                 </button>
               </div>
             </div>

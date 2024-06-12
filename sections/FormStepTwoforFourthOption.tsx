@@ -4,56 +4,11 @@ import InputText from "site/components/input-text.tsx";
 import InputSelect from "site/components/input-select.tsx";
 import { useFormSteps } from "site/sdk/useFormSteps.ts";
 import NewSimulationButton from "site/islands/new-simulation-btn.tsx";
+import { plansInfos } from "site/helpers/plansInfos.ts";
+import ReceiveContactButton from "site/islands/receive-contact-btn.tsx";
 
 export default function FormStepTwoforFourthOption() {
   const { activeStep, changeStep } = useFormSteps();
-
-  const plansInfos = [
-    {
-      title: "a100",
-      description:
-        "O a100 é um plano com cobertura ambulatorial que compreende consultas médicas em número ilimitado, exames de diagnóstico, fisioterapia e muitos outros procedimentos que podem ser realizados em consultórios, clínicas e laboratórios, além do atendimento de urgência e emergência 24 horas por dia, até as primeiras 12 horas. Com acesso a rede de prestadores de alta qualidade e telemedicina 24 horas por dia, trazendo tranquilidade e conforto.",
-      segmentation: "Ambulatorial",
-      coverage:
-        "Belo Horizonte, Betim, Brumadinho, Caeté, Contagem, Esmeraldas, Ibirité, Igarapé, Juatuba, Lagoa Santa, Mateus Leme, Matozinhos, Nova Lima, Pedro Leopoldo, Ribeirão das Neves, Sabará, Santa Luzia, São Joaquim de Bicas, São José da Lapa, Sarzedo, Sete Lagoas, Vespasiano.",
-      coparticipation: "com Copay",
-      accommodation: "-",
-      color: "orange",
-    },
-    {
-      title: "a300 enfermaria",
-      description:
-        "O a300 é para quem busca segurança com investimento sob medida. O plano cobre todos os procedimentos ambulatoriais e hospitalares, como consultas médicas, exames diagnósticos, cirurgias e internações hospitalares na acomodação enfermaria. Com uma rede muito qualificada e telemedicina 24 horas por dia, trazendo tranquilidade e conforto.",
-      segmentation: "Amb + Hosp + Obst",
-      coverage:
-        "Belo Horizonte, Betim, Brumadinho, Caeté, Contagem, Esmeraldas, Ibirité, Igarapé, Juatuba, Lagoa Santa, Mateus Leme, Matozinhos, Nova Lima, Pedro Leopoldo, Ribeirão das Neves, Sabará, Santa Luzia, São Joaquim de Bicas, São José da Lapa, Sarzedo, Sete Lagoas, Vespasiano.",
-      coparticipation: "com Copay",
-      accommodation: "Enfermaria",
-      color: "green",
-    },
-    {
-      title: "a500 enfermaria",
-      description:
-        "O a500 é para quem quer ter a maior rede de atendimento e flexibilidade na escolha dos hospitais na acomodação enfermaria. Nossa rede de médicos, hospitais e clínicas é extensa e de alta qualidade. Isso significa que você pode escolher os melhores profissionais e instalações para atender às suas necessidades. Com coparticipação, que garante seu planejamento de despesas. Telemedicina 24 horas por dia, trazendo tranquilidade e conforto.",
-      segmentation: "Amb + Hosp + Obst",
-      coverage:
-        "Belo Horizonte, Betim, Brumadinho, Caeté, Contagem, Esmeraldas, Ibirité, Igarapé, Juatuba, Lagoa Santa, Mateus Leme, Matozinhos, Nova Lima, Pedro Leopoldo, Ribeirão das Neves, Sabará, Santa Luzia, São Joaquim de Bicas, São José da Lapa, Sarzedo, Sete Lagoas, Vespasiano.",
-      coparticipation: "com Copay",
-      accommodation: "Enfermaria",
-      color: "yellow",
-    },
-    {
-      title: "a500 apartamento",
-      description:
-        "O a500 é para quem quer ter a maior rede de atendimento e flexibilidade na escolha dos hospitais na acomodação apartamento. Nossa rede de médicos, hospitais e clínicas é extensa e de alta qualidade. Isso significa que você pode escolher os melhores profissionais e instalações para atender às suas necessidades. Com coparticipação, que garante seu planejamento de despesas. Telemedicina 24 horas por dia, trazendo tranquilidade e conforto.",
-      segmentation: "Amb + Hosp + Obst",
-      coverage:
-        "Belo Horizonte, Betim, Brumadinho, Caeté, Contagem, Esmeraldas, Ibirité, Igarapé, Juatuba, Lagoa Santa, Mateus Leme, Matozinhos, Nova Lima, Pedro Leopoldo, Ribeirão das Neves, Sabará, Santa Luzia, São Joaquim de Bicas, São José da Lapa, Sarzedo, Sete Lagoas, Vespasiano.",
-      coparticipation: "com Copay",
-      accommodation: "Apartamento",
-      color: "yellow",
-    },
-  ];
 
   const lifesqty = [
     { value: "option1", text: "Opção 1" },
@@ -73,7 +28,7 @@ export default function FormStepTwoforFourthOption() {
         <div className="flex flex-col gap-6 w-[1400px]">
           <div className="flex gap-6 w-full max-h-96">
             <div className="flex items-center justify-center bg-[#ff50a4] rounded-2xl p-24 w-[40%] h-full">
-              <span className="flex flex-col text-white text-xl font-semibold">
+              <span className="flex flex-col text-white text-xl font-semibold font-sora">
                 <span className="text-[#FCFF73]">
                   Plano de saúde<br /> precisa estar junto.<br />
                 </span>
@@ -192,7 +147,8 @@ export default function FormStepTwoforFourthOption() {
               </div>
 
               <div className="flex justify-end gap-8 my-8">
-                <button
+                {
+                  /*<button
                   onClick={(e) => {
                     changeStep(5, "increase");
                     //changeStep(currentStep + 1, e);
@@ -200,9 +156,15 @@ export default function FormStepTwoforFourthOption() {
                   }}
                   className="flex items-center gap-8 bg-orange rounded-full text-white text-left px-12 py-4 text-sm"
                 >
-                  <img src={"/phone-icon2.png"} alt="Icon" className="w-8" />
+                  <img
+                    src={"/yellow-phone-icon.png"}
+                    alt="Icon"
+                    className="w-7"
+                  />
                   Receber contato de <br /> especialistas
-                </button>
+                </button>*/
+                }
+                <ReceiveContactButton number={5} mission={"increase"} />
                 <NewSimulationButton />
               </div>
             </div>

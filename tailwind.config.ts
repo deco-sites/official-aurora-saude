@@ -17,18 +17,21 @@ export default {
         gray3: "#A8A8A8",
         gray4: "#F5F5F5",
         gray5: "#F2F2F2",
+        gray6: "#DCDCDC",
         aquagreen: "#72CCCC",
         yellow: "#FCFF73",
       },
       height: {
         "banner-height": "calc(100vh - 250px)",
       },
-      fontFamily: {
-        getho: ["getho", "sans-serif"],
-      },
+
       boxShadow: {
         "outline-orange": "0 0 0 2px rgba(255, 165, 0, 1)", // Ajuste a cor e o tamanho conforme necessário
       },
+    },
+    fontFamily: {
+      sora: ["Sora", "sans-serif"],
+      inter: ["Inter", "sans-serif"],
     },
   },
 };

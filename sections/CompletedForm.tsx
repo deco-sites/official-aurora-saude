@@ -8,7 +8,7 @@ export default function CompletedForm() {
     >
       <div className="flex gap-6 w-[1400px]">
         <div className="bg-bg-gray rounded-2xl h-[700px] text-center w-full gap-28 flex flex-col items-center justify-center">
-          <span className="text-5xl text-orange font-extrabold">
+          <span className="text-5xl text-orange font-extrabold font-sora">
             Solicitação enviada <br />com sucesso.
           </span>
           <NewSimulationButton />

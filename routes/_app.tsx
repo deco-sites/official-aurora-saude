@@ -8,6 +8,11 @@ export default defineApp(async (_req, ctx) => {
 
   return (
     <>
+      <style>
+        @import
+        url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Sora:wght@100..800&display=swap');
+      </style>
+
       {/* Include default fonts and css vars */}
       <Theme colorScheme="any" />
 

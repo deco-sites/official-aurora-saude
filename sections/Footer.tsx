@@ -25,15 +25,20 @@ function Footer({
       style={{ width: "calc(100vw - 18px)" }}
     >
       <footer className="flex items-center justify-between text-[#bcbcbc] text-xs w-[1400px]">
-        <div className="bg-black p-2">
-          <span className="border-white border-[1px] p-1">ANS No: 423629</span>
+        <div className="bg-black p-1 inline-block">
+          <div className="border-white border-[1px] p-[5px] inline-block">
+            <span className="p-2">
+              ANS No: 423629
+            </span>
+          </div>
         </div>
+
         <span>CNPJ: 49.955.478/0001-64</span>
         <span>
           Endereço: Alameda Oscar Niemeyer, 288 - sala 503 - Vila da Serra -
           Nova Lima- MG
         </span>
-        <img src={"/ans-selo.png"} alt="" className="w-32" />
+        <img src={"/ans-logo.png"} alt="ANS Logo" className="" />
         <span>Todos os Direitos Reservados © 2023</span>
       </footer>
     </div>
