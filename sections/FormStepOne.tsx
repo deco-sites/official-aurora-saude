@@ -28,15 +28,15 @@ const options = [
   },
   {
     id: 2,
-    icon: "/bag-icon.png",
-    image: "/banner2.jpeg",
+    icon: "/briefcase-icon.png",
+    image: "/banner2.png",
     option: "MEI ou empresas de 01 a 29 vidas",
     yellowText: "Ofereça a tranquilidade de um plano de saúde",
     normaltext: "que caminha ao lado dos seus colaboradores",
   },
   {
     id: 3,
-    icon: "/bag-icon.png",
+    icon: "/briefcase-icon.png",
     image: "/banner3.png",
     option: "Empresas de 30 a 99 vidas",
     yellowText: "Invista no bem-estar da sua equipe",
@@ -44,7 +44,7 @@ const options = [
   },
   {
     id: 4,
-    icon: "/bag-icon.png",
+    icon: "/briefcase-icon.png",
     image: "/banner4.png",
     option: "Empresas acima de 100 vidas",
     yellowText: "Temos uma solução customizada para sua empresa.",

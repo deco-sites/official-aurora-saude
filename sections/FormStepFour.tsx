@@ -28,7 +28,7 @@ export default function FormStepFour({ Component }: FormStepFourProps) {
       color: "orange",
     },
     {
-      title: "a300",
+      title: "a300 enfermaria",
       description:
         "O a300 é para quem busca segurança com investimento sob medida. O plano cobre todos os procedimentos ambulatoriais e hospitalares, como consultas médicas, exames diagnósticos, cirurgias e internações hospitalares na acomodação enfermaria. Com uma rede muito qualificada e telemedicina 24 horas por dia, trazendo tranquilidade e conforto.",
       segmentation: "Amb + Hosp + Obst",
@@ -39,14 +39,25 @@ export default function FormStepFour({ Component }: FormStepFourProps) {
       color: "green",
     },
     {
-      title: "a500",
+      title: "a500 enfermaria",
       description:
-        "O a500 é para quem quer ter a maior rede de atendimento e flexibilidade na escolha dos hospitais e da acomodação entre enfermaria e apartamento. Nossa rede de médicos, hospitais e clínicas é extensa e de alta qualidade. Isso significa que você pode escolher os melhores profissionais e instalações para atender às suas necessidades. Com coparticipação o que garante seu planejamento de despesas. Telemedicina 24 horas por dia, trazendo tranquilidade e conforto.",
+        "O a500 é para quem quer ter a maior rede de atendimento e flexibilidade na escolha dos hospitais na acomodação enfermaria. Nossa rede de médicos, hospitais e clínicas é extensa e de alta qualidade. Isso significa que você pode escolher os melhores profissionais e instalações para atender às suas necessidades. Com coparticipação, que garante seu planejamento de despesas. Telemedicina 24 horas por dia, trazendo tranquilidade e conforto.",
       segmentation: "Amb + Hosp + Obst",
       coverage:
         "Belo Horizonte, Betim, Brumadinho, Caeté, Contagem, Esmeraldas, Ibirité, Igarapé, Juatuba, Lagoa Santa, Mateus Leme, Matozinhos, Nova Lima, Pedro Leopoldo, Ribeirão das Neves, Sabará, Santa Luzia, São Joaquim de Bicas, São José da Lapa, Sarzedo, Sete Lagoas, Vespasiano.",
       coparticipation: "com Copay",
-      accommodation: "Enfermaria ou apartamento",
+      accommodation: "Enfermaria",
+      color: "yellow",
+    },
+    {
+      title: "a500 apartamento",
+      description:
+        "O a500 é para quem quer ter a maior rede de atendimento e flexibilidade na escolha dos hospitais na acomodação apartamento. Nossa rede de médicos, hospitais e clínicas é extensa e de alta qualidade. Isso significa que você pode escolher os melhores profissionais e instalações para atender às suas necessidades. Com coparticipação, que garante seu planejamento de despesas. Telemedicina 24 horas por dia, trazendo tranquilidade e conforto.",
+      segmentation: "Amb + Hosp + Obst",
+      coverage:
+        "Belo Horizonte, Betim, Brumadinho, Caeté, Contagem, Esmeraldas, Ibirité, Igarapé, Juatuba, Lagoa Santa, Mateus Leme, Matozinhos, Nova Lima, Pedro Leopoldo, Ribeirão das Neves, Sabará, Santa Luzia, São Joaquim de Bicas, São José da Lapa, Sarzedo, Sete Lagoas, Vespasiano.",
+      coparticipation: "com Copay",
+      accommodation: "Apartamento",
       color: "yellow",
     },
   ];
@@ -66,7 +77,7 @@ export default function FormStepFour({ Component }: FormStepFourProps) {
 
               <FormTitleH1 text1={"Escolha seu plano"} />
 
-              <div className="flex gap-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                 {plansInfos.map((item) => (
                   <PlanCard
                     title={item.title}

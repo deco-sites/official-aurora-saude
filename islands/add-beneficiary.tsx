@@ -28,13 +28,16 @@ export default function AddBeneficiary() {
       {test.map(() => {
         return (
           <div className="flex gap-6">
-            <InputSelect
-              id={"agerange"}
-              name={"agerange"}
-              label={"Faixa Etária:"}
-              options={agerangeoptions}
-              placeholder={"Selecione"}
-            />
+            <div className="w-1/4">
+              <InputSelect
+                id={"agerange"}
+                name={"agerange"}
+                label={"Faixa Etária:"}
+                options={agerangeoptions}
+                placeholder={"Selecione"}
+                wfull
+              />
+            </div>
             <InputNumber
               id={"recipientqty"}
               name={"recipientqty"}

@@ -8,7 +8,7 @@ export default function FirstStepImage({}) {
       <Image
         src={selectedImage.value}
         alt=""
-        className="rounded-2xl h-banner-height object-cover"
+        className="rounded-2xl h-banner-height object-cover w-full"
       />
       <span className="absolute font-getho left-40 w-[150px] text-[#fcff73] text-2xl font-semibold">
         {selectedYellowText.value}{" "}

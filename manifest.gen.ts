@@ -4,35 +4,41 @@
 
 import * as $$$$$$$$$$$0 from "./apps/deco/htmx.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
-import * as $$$$$$0 from "./sections/Footer.tsx";
-import * as $$$$$$1 from "./sections/FormStepFour.tsx";
-import * as $$$$$$2 from "./sections/FormStepOne.tsx";
-import * as $$$$$$3 from "./sections/FormStepThree.tsx";
-import * as $$$$$$4 from "./sections/FormStepTwo.tsx";
-import * as $$$$$$5 from "./sections/Header.tsx";
-import * as $$$$$$6 from "./sections/ItWorks.tsx";
-import * as $$$$$$7 from "./sections/SecondStepOption1.tsx";
-import * as $$$$$$8 from "./sections/SecondStepOption2.tsx";
-import * as $$$$$$9 from "./sections/SimulatorContent.tsx";
-import * as $$$$$$10 from "./sections/Theme/Theme.tsx";
-import * as $$$$$$11 from "./sections/ThirdStepOption1.tsx";
-import * as $$$$$$12 from "./sections/ThirdStepOption2.tsx";
+import * as $$$$$$0 from "./sections/CompletedForm.tsx";
+import * as $$$$$$1 from "./sections/Footer.tsx";
+import * as $$$$$$2 from "./sections/FormStepFive.tsx";
+import * as $$$$$$3 from "./sections/FormStepFour.tsx";
+import * as $$$$$$4 from "./sections/FormStepOne.tsx";
+import * as $$$$$$5 from "./sections/FormStepThree.tsx";
+import * as $$$$$$6 from "./sections/FormStepTwo.tsx";
+import * as $$$$$$7 from "./sections/FormStepTwoforFourthOption.tsx";
+import * as $$$$$$8 from "./sections/Header.tsx";
+import * as $$$$$$9 from "./sections/ItWorks.tsx";
+import * as $$$$$$10 from "./sections/SecondStepOption1.tsx";
+import * as $$$$$$11 from "./sections/SecondStepOption2.tsx";
+import * as $$$$$$12 from "./sections/SimulatorContent.tsx";
+import * as $$$$$$13 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$14 from "./sections/ThirdStepOption1.tsx";
+import * as $$$$$$15 from "./sections/ThirdStepOption2.tsx";
 
 const manifest = {
   "sections": {
-    "site/sections/Footer.tsx": $$$$$$0,
-    "site/sections/FormStepFour.tsx": $$$$$$1,
-    "site/sections/FormStepOne.tsx": $$$$$$2,
-    "site/sections/FormStepThree.tsx": $$$$$$3,
-    "site/sections/FormStepTwo.tsx": $$$$$$4,
-    "site/sections/Header.tsx": $$$$$$5,
-    "site/sections/ItWorks.tsx": $$$$$$6,
-    "site/sections/SecondStepOption1.tsx": $$$$$$7,
-    "site/sections/SecondStepOption2.tsx": $$$$$$8,
-    "site/sections/SimulatorContent.tsx": $$$$$$9,
-    "site/sections/Theme/Theme.tsx": $$$$$$10,
-    "site/sections/ThirdStepOption1.tsx": $$$$$$11,
-    "site/sections/ThirdStepOption2.tsx": $$$$$$12,
+    "site/sections/CompletedForm.tsx": $$$$$$0,
+    "site/sections/Footer.tsx": $$$$$$1,
+    "site/sections/FormStepFive.tsx": $$$$$$2,
+    "site/sections/FormStepFour.tsx": $$$$$$3,
+    "site/sections/FormStepOne.tsx": $$$$$$4,
+    "site/sections/FormStepThree.tsx": $$$$$$5,
+    "site/sections/FormStepTwo.tsx": $$$$$$6,
+    "site/sections/FormStepTwoforFourthOption.tsx": $$$$$$7,
+    "site/sections/Header.tsx": $$$$$$8,
+    "site/sections/ItWorks.tsx": $$$$$$9,
+    "site/sections/SecondStepOption1.tsx": $$$$$$10,
+    "site/sections/SecondStepOption2.tsx": $$$$$$11,
+    "site/sections/SimulatorContent.tsx": $$$$$$12,
+    "site/sections/Theme/Theme.tsx": $$$$$$13,
+    "site/sections/ThirdStepOption1.tsx": $$$$$$14,
+    "site/sections/ThirdStepOption2.tsx": $$$$$$15,
   },
   "apps": {
     "site/apps/deco/htmx.ts": $$$$$$$$$$$0,

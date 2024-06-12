@@ -1,3 +1,5 @@
+import { Signal } from "@preact/signals-core";
+
 interface Option {
   value: string;
   text: string;
@@ -9,20 +11,31 @@ export interface InputProps {
   label: string;
   options: Option[];
   placeholder?: string;
+  signalValue?: Signal<string>;
+  wfull?: boolean;
 }
 
 export default function InputSelect(
-  { id, name, label, options, placeholder }: InputProps,
+  { id, name, label, options, placeholder, signalValue, wfull }: InputProps,
 ) {
-  console.log(options);
   return (
-    <div className="flex gap-6 items-center">
-      <label className="text-[#ff8461]" htmlFor={name}>{label}</label>
-      <div className="relative">
+    <div className="flex gap-6 items-center w-full">
+      <label className="text-[#ff8461] text-nowrap" htmlFor={name}>
+        {label}
+      </label>
+      <div className={`relative ${wfull && "w-full"}`}>
         <select
-          className="px-6 py-2 rounded-full bg-[#f2f2f2] outline-none text-[#9ca3be] appearance-none pr-8" // Adicionando pr-8 para espaçar a seta
+          className={`px-6 py-2 rounded-full bg-[#f2f2f2] outline-none text-[#9ca3be] appearance-none pr-8 ${
+            wfull && "w-full"
+          }`} // Adicionando pr-8 para espaçar a seta
           id={id}
           name={name}
+          onChange={(e) => {
+            const target = e.target as HTMLSelectElement;
+            if (target) {
+              signalValue.value = target.value;
+            }
+          }}
         >
           <option value="" selected disabled hidden>{placeholder}</option>
           {options.map((op) => (

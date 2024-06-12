@@ -6,6 +6,7 @@ export interface IplanInfos {
   coparticipation: string;
   accommodation: string;
   color: keyof typeof CARD_COLOR;
+  onlybutton: boolean;
 }
 
 const CARD_COLOR = {
@@ -23,6 +24,7 @@ export default function PlanCard(
     coparticipation,
     accommodation,
     color,
+    onlybutton,
   }: IplanInfos,
 ) {
   return (
@@ -74,24 +76,37 @@ export default function PlanCard(
             </span>
           </div>
         </div>
-
-        <div className="flex flex-col justify-between border-[1px] border-[#D9D9D9] rounded-xl px-10 py-4">
-          <span className="text-[#D9D9D9] text-sm">A partir de</span>
-          <div className="flex justify-between">
-            <span className="text-[#FA7651] text-2xl font-semibold">
-              R$ XXX,XX
-            </span>
+        {onlybutton
+          ? (
             <button
               className={`${
                 CARD_COLOR[color]
-              } rounded-full font-semibold text-sm px-12 py-2 ${
+              } rounded-full font-semibold text-sm px-12 py-3 ${
                 color != "yellow" ? "text-[#FCFF73]" : "text-[#FA7651]"
               }`}
             >
-              Simular
+              Solicitar Contato
             </button>
-          </div>
-        </div>
+          )
+          : (
+            <div className="flex flex-col justify-between border-[1px] border-[#D9D9D9] rounded-xl px-10 py-4">
+              <span className="text-[#D9D9D9] text-sm">A partir de</span>
+              <div className="flex justify-between">
+                <span className="text-[#FA7651] text-2xl font-semibold">
+                  R$ XXX,XX
+                </span>
+                <button
+                  className={`${
+                    CARD_COLOR[color]
+                  } rounded-full font-semibold text-sm px-12 py-2 ${
+                    color != "yellow" ? "text-[#FCFF73]" : "text-[#FA7651]"
+                  }`}
+                >
+                  Simular
+                </button>
+              </div>
+            </div>
+          )}
       </div>
     </>
   );
