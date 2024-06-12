@@ -19,7 +19,7 @@ export default function FormStepTwo({ Component }: FormStepTwoProps) {
         style={{ width: "calc(100vw - 18px)" }}
       >
         <div className="flex gap-6 w-[1400px]">
-          <div className="bg-bg-gray rounded-2xl p-8 w-full">
+          <div className="bg-gray1 rounded-2xl p-8 w-full">
             <div>
               <div>
                 <ProgressTracker currentStep={2} />

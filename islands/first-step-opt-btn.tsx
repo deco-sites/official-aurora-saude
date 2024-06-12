@@ -11,7 +11,7 @@ export default function OptionButton({ op }) {
   return (
     <button
       className={`flex items-center justify-center text-sm bg-[#f3f3f3] rounded-full h-20 ${
-        op.id === activeOption.value ? "shadow-outline-orange" : ""
+        op.id === activeOption.value ? "shadow-outline-orange1" : ""
       }`}
       onClick={() => {
         activeOption.value = op.id;

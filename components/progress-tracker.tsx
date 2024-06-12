@@ -33,14 +33,14 @@ export default function ProgressTracker({ currentStep }) {
             onClick={() => changeStep(step.step, "decrease")}
             className={`w-6 h-6 rounded-full flex items-center justify-center z-50 ${
               step.status === true
-                ? "bg-[#ff8461] text-white"
-                : "bg-[#ffdcd2] text-[#ffdcd2]"
+                ? "bg-orange1 text-white"
+                : "bg-orange2 text-orange2"
             }`}
           >
           </button>
           <div
             className={`mt-2 ${
-              step.status === true ? "text-[#ff8461]" : "text-[#ffdcd2]"
+              step.status === true ? "text-orange1" : "text-orange2"
             }`}
           >
             <span className="font-semibold">
@@ -52,10 +52,10 @@ export default function ProgressTracker({ currentStep }) {
           {index < steps.length - 1 && (
             <div
               className={`absolute top-3 w-full h-px 
-              ${step.status === true ? "bg-[#ff8461]" : "bg-[#ffdcd2]"}
+              ${step.status === true ? "bg-orange1" : "bg-orange2"}
               ${
                 step.status === true && updatedSteps[index + 1].status === false
-                  ? "bg-gradient-to-r from-[#ff8461] to-[#ffdcd2]"
+                  ? "bg-gradient-to-r from-orange1 to-orange2"
                   : ""
               }`}
             />

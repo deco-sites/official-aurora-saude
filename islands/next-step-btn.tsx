@@ -16,8 +16,8 @@ export default function NextStepBtn({ options }) {
         //console.log(activeOption); //Dou um console.log na opção escolhida inicialmente
       }}
     >
-      <span className="text-orange">Próximo</span>
-      <div className="bg-orange rounded-full w-9 h-9 flex items-center justify-center">
+      <span className="text-orange1">Próximo</span>
+      <div className="bg-orange1 rounded-full w-9 h-9 flex items-center justify-center">
         <Image src={"/arrow-right-icon.png"} alt="" className="w-6" />
       </div>
     </button>

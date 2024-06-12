@@ -48,7 +48,7 @@ export default function AddBeneficiary() {
       })}
 
       <button
-        className="bg-[#ff8461] rounded-full text-white py-2 px-8 text-xs w-max"
+        className="bg-orange1 rounded-full text-white py-2 px-8 text-xs w-max"
         onClick={handleAddInput}
       >
         + Adicionar

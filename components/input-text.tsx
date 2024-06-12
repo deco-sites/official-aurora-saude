@@ -11,11 +11,11 @@ export default function InputText(
 ) {
   return (
     <div className="flex gap-6 items-center w-full">
-      <label className="text-[#ff8461] text-nowrap" htmlFor={name}>
+      <label className="text-orange1 text-nowrap" htmlFor={name}>
         {label}:
       </label>
       <input
-        className={`px-6 py-2 rounded-full bg-[#f2f2f2] outline-none ${
+        className={`px-6 py-2 rounded-full bg-gray5 outline-none ${
           wfull && "w-full"
         }`}
         type="text"

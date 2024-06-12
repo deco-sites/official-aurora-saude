@@ -1,4 +1,4 @@
-import PlanCard from "site/components/plan-card.tsx";
+import PlanCard from "../islands/plan-card.tsx";
 import FormTitleH1 from "site/components/form-title-h1.tsx";
 import InputText from "site/components/input-text.tsx";
 import InputSelect from "site/components/input-select.tsx";
@@ -27,9 +27,9 @@ export default function FormStepTwoforFourthOption() {
       >
         <div className="flex flex-col gap-6 w-[1400px]">
           <div className="flex gap-6 w-full max-h-96">
-            <div className="flex items-center justify-center bg-[#ff50a4] rounded-2xl p-24 w-[40%] h-full">
+            <div className="flex items-center justify-center bg-pink1 rounded-2xl p-24 w-[40%] h-full">
               <span className="flex flex-col text-white text-xl font-semibold font-sora">
-                <span className="text-[#FCFF73]">
+                <span className="text-yellow">
                   Plano de saúde<br /> precisa estar junto.<br />
                 </span>
                 Mais segurança para<br /> sua empresa e<br />{" "}
@@ -46,10 +46,11 @@ export default function FormStepTwoforFourthOption() {
             </div>
           </div>
 
-          <div className="bg-bg-gray rounded-2xl p-8 w-full">
+          <div className="bg-gray1 rounded-2xl p-8 w-full">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
               {plansInfos.map((item) => (
                 <PlanCard
+                  id={item.id}
                   title={item.title}
                   description={item.description}
                   segmentation={item.segmentation}
@@ -62,7 +63,7 @@ export default function FormStepTwoforFourthOption() {
               ))}
             </div>
           </div>
-          <div className="bg-bg-gray rounded-2xl p-8 w-full">
+          <div className="bg-gray1 rounded-2xl p-8 w-full">
             <div className="flex flex-col gap-6">
               <FormTitleH1 text1="Solicite o contato dos nossos especialistas:" />
               <div className="flex gap-8">
@@ -154,7 +155,7 @@ export default function FormStepTwoforFourthOption() {
                     //changeStep(currentStep + 1, e);
                     //console.log(activeOption); //Dou um console.log na opção escolhida inicialmente
                   }}
-                  className="flex items-center gap-8 bg-orange rounded-full text-white text-left px-12 py-4 text-sm"
+                  className="flex items-center gap-8 bg-orange1 rounded-full text-white text-left px-12 py-4 text-sm"
                 >
                   <img
                     src={"/yellow-phone-icon.png"}

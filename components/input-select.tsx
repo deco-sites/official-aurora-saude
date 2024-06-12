@@ -20,12 +20,12 @@ export default function InputSelect(
 ) {
   return (
     <div className="flex gap-6 items-center w-full">
-      <label className="text-[#ff8461] text-nowrap" htmlFor={name}>
+      <label className="text-orange1 text-nowrap" htmlFor={name}>
         {label}
       </label>
       <div className={`relative ${wfull && "w-full"}`}>
         <select
-          className={`px-6 py-2 rounded-full bg-[#f2f2f2] outline-none text-[#9ca3be] appearance-none pr-8 ${
+          className={`px-6 py-2 rounded-full bg-gray5 outline-none text-[#9ca3be] appearance-none pr-8 ${
             wfull && "w-full"
           }`} // Adicionando pr-8 para espaçar a seta
           id={id}

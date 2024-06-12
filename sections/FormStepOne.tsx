@@ -39,7 +39,7 @@ export default function FormStepOne() {
 
           <div className="flex gap-6">
             <FirstStepImage />
-            <div className="bg-bg-gray rounded-2xl p-8 w-1/4">
+            <div className="bg-gray1 rounded-2xl p-8 w-1/4">
               <span className="text-[#8b8b8b] font-sora font-bold">
                 Antes de começarmos, precisamos saber um pouco mais sobre você:
               </span>

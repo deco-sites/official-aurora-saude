@@ -39,7 +39,7 @@ export default function Section(
 
         <div className="flex gap-4">
           <a href={buttonReceiveContact.link}>
-            <button className="flex items-center gap-2 bg-[#f2f2f2] text-[#9c9c9c] text-sm font-semibold px-5 rounded-full py-3">
+            <button className="flex items-center gap-2 bg-gray5 text-gray7 text-xs px-5 rounded-full py-3">
               <Image src={buttonReceiveContact.icon} alt="" className="w-4" />
               <div
                 dangerouslySetInnerHTML={{ __html: buttonReceiveContact.text }}
@@ -48,7 +48,7 @@ export default function Section(
           </a>
 
           <a href={buttonBackToSite.link}>
-            <button className="bg-[#ff8461] text-white text-sm px-5 rounded-full py-3">
+            <button className="bg-orange1 text-white text-xs px-5 rounded-full py-3">
               <div
                 dangerouslySetInnerHTML={{ __html: buttonBackToSite.text }}
               />

@@ -4,13 +4,13 @@ export default function SelectedPlan() {
   const { activeOption } = useUI();
   console.log("ericão", activeOption.value);
   return (
-    <div className="flex justify-between bg-[#FF8461] rounded-2xl px-28 py-16">
+    <div className="flex justify-between bg-orange1 rounded-2xl px-28 py-16">
       <div className="flex flex-col justify-between">
         <div className="flex flex-col gap-2">
           <span className="text-white text-2xl font-sora">
             O plano escolhido foi:
           </span>
-          <span className="text-[#FCFF73] text-6xl font-bold font-sora">
+          <span className="text-yellow text-6xl font-bold font-sora">
             a100 rmbh
           </span>
         </div>
@@ -44,7 +44,7 @@ export default function SelectedPlan() {
           </span>
         </div>
         {activeOption.value === 1 && (
-          <div className="flex flex-col gap-6 px-12 py-6 border-[1px] border-[#FCFF73] rounded-2xl text-white w-64">
+          <div className="flex flex-col gap-6 px-12 py-6 border-[1px] border-yellow rounded-2xl text-white w-64">
             <div className="flex items-center gap-2">
               <img src={"/desktop-icon.png"} alt="icon" className="w-4" />
               <span className="text-sm font-semibold">

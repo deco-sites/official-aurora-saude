@@ -17,7 +17,7 @@ export default function FormStepFive({ Component }: FormStepFourProps) {
     <>
       {/*<Component />*/}
       <div className="flex gap-6 w-[1400px]">
-        <div className="bg-bg-gray rounded-2xl p-12 w-full">
+        <div className="bg-gray1 rounded-2xl p-12 w-full">
           <ProgressTracker currentStep={5} />
           <div className="flex flex-col">
             <FormTitleH1 text1={"Seu plano"} />
@@ -31,7 +31,7 @@ export default function FormStepFive({ Component }: FormStepFourProps) {
                   //changeStep(currentStep + 1, e);
                   //console.log(activeOption); //Dou um console.log na opção escolhida inicialmente
                 }}
-                className="flex items-center gap-8 bg-[#FF8461] rounded-full text-white text-left px-12 py-4 text-sm"
+                className="flex items-center gap-8 bg-orange1 rounded-full text-white text-left px-12 py-4 text-sm"
               >
                 <img
                   src={"/yellow-phone-icon.png"}

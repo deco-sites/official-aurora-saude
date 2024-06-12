@@ -7,8 +7,8 @@ export default function CompletedForm() {
       style={{ width: "calc(100vw - 18px)" }}
     >
       <div className="flex gap-6 w-[1400px]">
-        <div className="bg-bg-gray rounded-2xl h-[700px] text-center w-full gap-28 flex flex-col items-center justify-center">
-          <span className="text-5xl text-orange font-extrabold font-sora">
+        <div className="bg-gray1 rounded-2xl h-[700px] text-center w-full gap-28 flex flex-col items-center justify-center">
+          <span className="text-5xl text-orange1 font-extrabold font-sora">
             Solicitação enviada <br />com sucesso.
           </span>
           <NewSimulationButton />

@@ -10,7 +10,7 @@ export default function FirstStepImage({}) {
         alt=""
         className="rounded-2xl h-banner-height object-cover w-full"
       />
-      <span className="absolute font-sora left-40 w-[150px] text-[#fcff73] text-2xl font-semibold">
+      <span className="absolute font-sora left-40 w-[150px] text-yellow text-2xl font-semibold">
         {selectedYellowText.value}{" "}
         <span className="text-white">{selectedNormalText.value}</span>
       </span>
