@@ -5,8 +5,7 @@
     {
       "__resolveType": "site/sections/Header.tsx",
       "buttonBackToSite": {
-        "text": "<p>voltar para o <strong>site</strong></p>",
-        "link": "#"
+        "text": "<p>voltar para o <strong>site</strong></p>"
       },
       "logo": {
         "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/f068764b-f9e7-405c-abe2-8263cbc48745",
@@ -15,7 +14,6 @@
       },
       "buttonReceiveContact": {
         "text": "<p>Receber contato de um especialista</p>",
-        "link": "#",
         "icon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/2427b73b-32c1-42f6-b143-504218a831cf"
       }
     },

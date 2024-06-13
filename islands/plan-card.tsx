@@ -92,18 +92,24 @@ export default function PlanCard({
       </div>
       {onlybutton
         ? (
-          <button
-            className={`${
-              CARD_COLOR[color]
-            } rounded-full font-semibold text-sm px-12 py-3 ${
-              color != "yellow" ? "text-yellow" : "text-[#FA7651]"
-            }`}
+          <a
+            href={"https://wa.me/5521965494547?text=Mensagem%20padr%C3%A3o"}
+            target="_blank"
+            className="flex justify-center"
           >
-            Solicitar Contato
-          </button>
+            <button
+              className={`${
+                CARD_COLOR[color]
+              } rounded-full font-semibold text-sm px-12 py-3 w-full ${
+                color != "yellow" ? "text-yellow" : "text-[#FA7651]"
+              }`}
+            >
+              Solicitar Contato
+            </button>
+          </a>
         )
         : (
-          <div className="flex flex-col justify-between border-[1px] border-[#D9D9D9] rounded-xl px-10 py-4">
+          <div className="flex flex-col justify-between border-[1px] border-[#D9D9D9] rounded-xl px-10 py-3">
             <span className="text-[#D9D9D9] text-sm">A partir de</span>
             <div className="flex justify-between">
               <span className="text-[#FA7651] text-2xl font-semibold font-sora">
@@ -111,7 +117,7 @@ export default function PlanCard({
               </span>
               <button
                 onClick={() => handleSelectPlan(id)}
-                className={`rounded-full font-semibold text-sm px-12 py-2 ${
+                className={`rounded-full font-semibold text-sm w-36 py-2 ${
                   selectedPlan.value.includes(id)
                     ? `${CARD_COLOR[color]} ${
                       color != "yellow" ? "text-yellow" : "text-[#FA7651]"
@@ -119,7 +125,7 @@ export default function PlanCard({
                     : "bg-gray6 text-white"
                 }`}
               >
-                Selecionar
+                {selectedPlan.value.includes(id) ? "Selecionado" : "Selecionar"}
               </button>
             </div>
           </div>

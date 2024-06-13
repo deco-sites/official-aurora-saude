@@ -1,14 +1,11 @@
 import FormTitleH2 from "../components/form-title-h2.tsx";
 import InputText from "site/components/input-text.tsx";
 import InputSelect from "site/components/input-select.tsx";
+import { agerangeoptions } from "site/helpers/ageRangeOptions.ts";
+import { alreadyhaveplanoptions } from "site/helpers/alreadyHavePlan.ts";
+import { citiesOptions } from "site/helpers/cities.ts";
 
 export default function SecondStepOption1() {
-  const alreadyhaveplanoptions = [
-    { value: "option1", text: "Opção 1" },
-    { value: "option2", text: "Opção 2" },
-    { value: "option3", text: "Opção 3" },
-  ];
-
   return (
     <>
       <div className="flex flex-col gap-8">
@@ -36,7 +33,7 @@ export default function SecondStepOption1() {
           id={"city"}
           name={"city"}
           label={"Cidade"}
-          options={alreadyhaveplanoptions}
+          options={citiesOptions}
           placeholder={"Selecione"}
         />
 
@@ -45,7 +42,7 @@ export default function SecondStepOption1() {
           id={"agerange"}
           name={"agerange"}
           label={"Faixa Etária:"}
-          options={alreadyhaveplanoptions}
+          options={agerangeoptions}
           placeholder={"Selecione"}
         />
         <InputSelect

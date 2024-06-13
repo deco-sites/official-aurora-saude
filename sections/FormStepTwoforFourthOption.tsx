@@ -6,19 +6,12 @@ import { useFormSteps } from "site/sdk/useFormSteps.ts";
 import NewSimulationButton from "site/islands/new-simulation-btn.tsx";
 import { plansInfos } from "site/helpers/plansInfos.ts";
 import ReceiveContactButton from "site/islands/receive-contact-btn.tsx";
+import { citiesOptions } from "site/helpers/cities.ts";
+import { lifesqty } from "site/helpers/lifesQty.ts";
 
 export default function FormStepTwoforFourthOption() {
   const { activeStep, changeStep } = useFormSteps();
 
-  const lifesqty = [
-    { value: "option1", text: "Opção 1" },
-    { value: "option2", text: "Opção 2" },
-  ];
-
-  const cities = [
-    { value: "option1", text: "Opção 1" },
-    { value: "option2", text: "Opção 2" },
-  ];
   return (
     <>
       <div
@@ -120,7 +113,7 @@ export default function FormStepTwoforFourthOption() {
                   <InputSelect
                     id={"lifesqty"}
                     name={"lifesqty"}
-                    label={"Quantidade de Vidas"}
+                    label={"Quantidade de Vidas:"}
                     placeholder={"Selecione"}
                     options={lifesqty}
                     wfull
@@ -133,7 +126,7 @@ export default function FormStepTwoforFourthOption() {
                   name={"city"}
                   label={"Cidade"}
                   placeholder={"Selecione"}
-                  options={cities}
+                  options={citiesOptions}
                   wfull
                 />
               </div>

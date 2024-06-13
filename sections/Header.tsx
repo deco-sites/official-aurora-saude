@@ -6,9 +6,9 @@ export interface CTA {
    * @format rich-text
    * @description the text of button
    */
-  text: string;
+  text?: string;
   icon?: ImageWidget;
-  link: string;
+  link?: string;
 }
 
 export interface Props {
@@ -38,19 +38,36 @@ export default function Section(
         />
 
         <div className="flex gap-4">
-          <a href={buttonReceiveContact.link}>
+          <a
+            href={buttonReceiveContact.link ??
+              "https://wa.me/5521965494547?text=Mensagem%20padr%C3%A3o"}
+            target="_blank"
+          >
             <button className="flex items-center gap-2 bg-gray5 text-gray7 text-xs px-5 rounded-full py-3">
-              <Image src={buttonReceiveContact.icon} alt="" className="w-4" />
+              <div className="w-5 h-5 bg-no-repeat animate-sprite bg-cover">
+              </div>
+
+              {
+                /*
+              <Image
+                  src={buttonReceiveContact.icon}
+                  alt=""
+                  className="w-5 animation-sprite"
+                />*/
+              }
+
               <div
                 dangerouslySetInnerHTML={{ __html: buttonReceiveContact.text }}
               />
             </button>
           </a>
 
-          <a href={buttonBackToSite.link}>
+          <a href={buttonBackToSite.link ?? "/"}>
             <button className="bg-orange1 text-white text-xs px-5 rounded-full py-3">
               <div
-                dangerouslySetInnerHTML={{ __html: buttonBackToSite.text }}
+                dangerouslySetInnerHTML={{
+                  __html: buttonBackToSite.text ?? "Voltar para o site",
+                }}
               />
             </button>
           </a>

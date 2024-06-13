@@ -4,18 +4,13 @@ import NextStepBtn from "site/islands/next-step-btn.tsx";
 import FormTitleH1 from "site/components/form-title-h1.tsx";
 import PlanCard from "../islands/plan-card.tsx";
 import { plansInfos } from "site/helpers/plansInfos.ts";
+import { whoWillUseThePlan } from "site/helpers/whoWillUseThePlan.ts";
 
 interface FormStepFourProps {
   Component: React.ComponentType;
 }
 
 export default function FormStepFour({ Component }: FormStepFourProps) {
-  const whoWillUseThePlan = [
-    { value: "option1", text: "Somente eu" },
-    { value: "option2", text: "Eu e meus dependentes" },
-    { value: "option3", text: "Outra pessoa" },
-  ];
-
   return (
     <>
       <div

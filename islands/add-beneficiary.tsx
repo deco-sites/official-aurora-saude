@@ -1,16 +1,10 @@
 import InputSelect from "site/components/input-select.tsx";
 import InputNumber from "site/components/input-number.tsx";
 import { useBeneficiaryInputs } from "../sdk/useBeneficiaryInputs.ts";
-import InputText from "site/components/input-text.tsx";
-import { useEffect, useState } from "preact/hooks";
+import { useState } from "preact/hooks";
+import { agerangeoptions } from "site/helpers/ageRangeOptions.ts";
 
 export default function AddBeneficiary() {
-  const agerangeoptions = [
-    { value: "option1", text: "Opção 1" },
-    { value: "option2", text: "Opção 2" },
-    { value: "option3", text: "Opção 3" },
-  ];
-
   const { inputs } = useBeneficiaryInputs();
   const [test, setTest] = useState<string[]>([
     "New Beneficiary",

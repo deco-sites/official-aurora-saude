@@ -5,15 +5,10 @@ import InputNumber from "site/components/input-number.tsx";
 import AddBeneficiary from "site/islands/add-beneficiary.tsx";
 import FormTitleH1 from "site/components/form-title-h1.tsx";
 import { useBeneficiaryInputs } from "site/sdk/useBeneficiaryInputs.ts";
+import { whoWillUseThePlan } from "site/helpers/whoWillUseThePlan.ts";
 
 export default function ThirdStepOption1() {
   const { selectedBeneficiaryInput } = useBeneficiaryInputs();
-
-  const whoWillUseThePlan = [
-    { value: "option1", text: "Somente eu" },
-    { value: "option2", text: "Eu e meus dependentes" },
-    { value: "option3", text: "Outra pessoa" },
-  ];
 
   const textOptions = [
     "Adicione os dependentes:",

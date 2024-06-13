@@ -1,17 +1,13 @@
 import InputSelect from "site/components/input-select.tsx";
 import ProgressTracker from "../components/progress-tracker.tsx";
 import NextStepBtn from "site/islands/next-step-btn.tsx";
+import { whoWillUseThePlan } from "site/helpers/whoWillUseThePlan.ts";
 
 interface FormStepTwoProps {
   Component: React.ComponentType;
 }
 
 export default function FormStepThree({ Component }: FormStepTwoProps) {
-  const whoWillUseThePlan = [
-    { value: "option1", text: "Somente eu" },
-    { value: "option2", text: "Eu e meus dependentes" },
-    { value: "option3", text: "Outra pessoa" },
-  ];
   return (
     <>
       <div
