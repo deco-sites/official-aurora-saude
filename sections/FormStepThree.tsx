@@ -10,10 +10,7 @@ interface FormStepTwoProps {
 export default function FormStepThree({ Component }: FormStepTwoProps) {
   return (
     <>
-      <div
-        className="flex justify-center"
-        style={{ width: "calc(100vw - 18px)" }}
-      >
+      <div className="flex justify-center sm:width-calc">
         <div className="flex gap-6 w-[1400px]">
           <div className="bg-gray1 rounded-2xl p-8 w-full">
             <div>

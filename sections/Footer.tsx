@@ -20,10 +20,7 @@ function Footer({
   width = 50,
 }: Props) {
   return (
-    <div
-      className="flex py-6 justify-center border-t-[#f0ecec] border-t-[1px] mt-12"
-      style={{ width: "calc(100vw - 18px)" }}
-    >
+    <div className="flex py-6 justify-center border-t-[#f0ecec] border-t-[1px] mt-12 sm:width-calc">
       <footer className="flex items-center justify-between text-[#bcbcbc] text-xs w-[1400px]">
         <div className="bg-black p-1 inline-block">
           <div className="border-white border-[1px] p-[5px] inline-block">

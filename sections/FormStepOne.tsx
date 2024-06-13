@@ -21,10 +21,7 @@ export interface Props {
 export default function FormStepOne() {
   return (
     <>
-      <div
-        className="flex justify-center"
-        style={{ width: "calc(100vw - 18px)" }}
-      >
+      <div className="flex justify-center sm:width-calc">
         <div className="flex w-[1400px] relative">
           <span
             className="absolute bottom-0 left-[-18px] text-[10px] font-sora text-gray3" // Ajuste a posição conforme necessário

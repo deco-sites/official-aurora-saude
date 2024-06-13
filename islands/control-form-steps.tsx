@@ -13,7 +13,7 @@ import FormStepTwoforFourthOption from "site/sections/FormStepTwoforFourthOption
 import CompletedForm from "site/sections/CompletedForm.tsx";
 
 export default function ControlFormSteps() {
-  const { activeStep, StepComponent } = useFormSteps();
+  const { activeStep } = useFormSteps();
   const { activeOption } = useUI();
   console.log("clarinha", activeOption.value);
   return (

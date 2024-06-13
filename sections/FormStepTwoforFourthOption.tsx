@@ -14,10 +14,7 @@ export default function FormStepTwoforFourthOption() {
 
   return (
     <>
-      <div
-        className="flex justify-center"
-        style={{ width: "calc(100vw - 18px)" }}
-      >
+      <div className="flex justify-center sm:width-calc">
         <div className="flex flex-col gap-6 w-[1400px]">
           <div className="flex gap-6 w-full max-h-96">
             <div className="flex items-center justify-center bg-pink1 rounded-2xl p-24 w-[40%] h-full">

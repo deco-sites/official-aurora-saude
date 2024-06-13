@@ -41,4 +41,10 @@
   .scrollbar-none::-webkit-scrollbar {
     display: none;
   }
+
+  @media (min-width: 640px) {
+    .sm\:width-calc {
+      width: calc(100vw - 18px);
+    }
+  }
 }

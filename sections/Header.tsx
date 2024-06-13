@@ -25,11 +25,8 @@ export default function Section(
   { logo, buttonReceiveContact, buttonBackToSite }: Props,
 ) {
   return (
-    <div
-      className="flex justify-center"
-      style={{ width: "calc(100vw - 18px)" }}
-    >
-      <header className="flex items-center justify-between py-10 min-w-[1400px] max-w-[1660px]">
+    <div className="flex justify-center sm:width-calc">
+      <header className="w-full flex items-center justify-center sm:justify-between py-10 sm:max-w-[1400px]">
         <Image
           src={"/logo_simulador.png"}
           alt="Aurora Simulador Logo"
@@ -37,7 +34,7 @@ export default function Section(
           style={{ width: `${logo.width}px` }}
         />
 
-        <div className="flex gap-4">
+        <div className="hidden justify-center gap-4 sm:flex">
           <a
             href={buttonReceiveContact.link ??
               "https://wa.me/5521965494547?text=Mensagem%20padr%C3%A3o"}
