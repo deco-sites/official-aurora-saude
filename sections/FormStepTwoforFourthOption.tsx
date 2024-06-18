@@ -107,12 +107,11 @@ export default function FormStepTwoforFourthOption() {
                   />
                 </div>
                 <div className="w-[45%]">
-                  <InputSelect
+                  <InputText
                     id={"lifesqty"}
                     name={"lifesqty"}
-                    label={"Quantidade de Vidas:"}
-                    placeholder={"Selecione"}
-                    options={lifesqty}
+                    label={"Quantidade de Vidas"}
+                    placeholder={"Escreva aqui"}
                     wfull
                   />
                 </div>

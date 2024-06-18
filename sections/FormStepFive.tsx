@@ -16,14 +16,17 @@ export default function FormStepFive({ Component }: FormStepFourProps) {
   return (
     <>
       {/*<Component />*/}
-      <div className="flex gap-6 w-[1400px]">
-        <div className="bg-gray1 rounded-2xl p-12 w-full">
-          <ProgressTracker currentStep={5} />
-          <div className="flex flex-col">
+
+      <div className="flex gap-6 sm:w-[1400px]">
+        <div className="bg-white sm:bg-gray1 rounded-2xl sm:p-8 w-full">
+          <div className="overflow-x-auto sm:overflow-x-visible pl-8 sm:pl-0 w-screen sm:w-full scrollbar-none">
+            <ProgressTracker currentStep={5} />
+          </div>
+          <div className="flex flex-col gap-4 sm:gap-0 px-8 sm:px-0 w-screen sm:w-auto">
             <FormTitleH1 text1={"Seu plano"} />
             <SelectedPlan />
             <SelectedPlanDetails />
-            <div className="flex justify-end gap-8 my-8">
+            <div className="flex flex-col sm:flex-row justify-end gap-8 my-8">
               {
                 /*<button
                 onClick={(e) => {

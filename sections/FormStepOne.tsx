@@ -22,7 +22,7 @@ export default function FormStepOne() {
   return (
     <>
       <div className="flex justify-center sm:width-calc">
-        <div className="flex w-[1400px] relative">
+        <div className="flex sm:w-[1400px] relative">
           <span
             className="absolute bottom-0 left-[-18px] text-[10px] font-sora text-gray3" // Ajuste a posição conforme necessário
             style={{
@@ -34,9 +34,9 @@ export default function FormStepOne() {
             benefícios.
           </span>
 
-          <div className="flex gap-6">
+          <div className="flex flex-col gap-6 sm:flex-row">
             <FirstStepImage />
-            <div className="bg-gray1 rounded-2xl p-8 w-1/4">
+            <div className="w-full bg-white rounded-2xl p-8 sm:w-1/4 sm:bg-gray1">
               <span className="text-[#8b8b8b] font-sora font-bold">
                 Antes de começarmos, precisamos saber um pouco mais sobre você:
               </span>
@@ -44,7 +44,7 @@ export default function FormStepOne() {
               <div className="flex flex-col gap-4 mt-8">
                 {options?.map((op) => <OptionButton op={op} />)}
               </div>
-              <div className="flex justify-end py-8">
+              <div className="flex justify-center sm:justify-end py-8">
                 <NextStepBtn options={options} />
               </div>
             </div>

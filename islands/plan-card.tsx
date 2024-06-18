@@ -9,11 +9,11 @@ export interface IplanInfos {
   coverage: string;
   coparticipation: string;
   accommodation: string;
-  color: keyof typeof CARD_COLOR;
+  color: keyof typeof CARD_COLORS;
   onlybutton: boolean;
 }
 
-const CARD_COLOR = {
+const CARD_COLORS = {
   orange: "bg-orange1",
   green: "bg-aquagreen",
   yellow: "bg-yellow",
@@ -43,10 +43,10 @@ export default function PlanCard({
   };
 
   return (
-    <div className="flex flex-col gap-4 flex-1">
+    <div className="flex flex-col gap-4 flex-1 min-w-80 snap-center">
       <div
         className={`flex flex-col gap-4 ${
-          CARD_COLOR[color]
+          CARD_COLORS[color]
         } rounded-xl p-10 flex-1`}
       >
         <span
@@ -65,7 +65,7 @@ export default function PlanCard({
         </span>
       </div>
 
-      <div className="flex flex-col gap-4 bg-white rounded-xl p-10">
+      <div className="flex flex-col gap-4 bg-gray1 sm:bg-white rounded-xl p-10">
         <div className="border-b flex items-center py-4">
           <span className="text-sm text-black text-opacity-25">
             <strong>Segmentação:</strong> {segmentation}
@@ -99,7 +99,7 @@ export default function PlanCard({
           >
             <button
               className={`${
-                CARD_COLOR[color]
+                CARD_COLORS[color]
               } rounded-full font-semibold text-sm px-12 py-3 w-full ${
                 color != "yellow" ? "text-yellow" : "text-[#FA7651]"
               }`}
@@ -109,17 +109,18 @@ export default function PlanCard({
           </a>
         )
         : (
-          <div className="flex flex-col justify-between border-[1px] border-[#D9D9D9] rounded-xl px-10 py-3">
+          <div className="flex flex-col justify-between border-[1px] border-[#D9D9D9] rounded-2xl sm:rounded-xl px-10 py-3">
             <span className="text-[#D9D9D9] text-sm">A partir de</span>
             <div className="flex justify-between">
               <span className="text-[#FA7651] text-2xl font-semibold font-sora">
                 R$ XXX,XX
               </span>
+
               <button
                 onClick={() => handleSelectPlan(id)}
-                className={`rounded-full font-semibold text-sm w-36 py-2 ${
+                className={`hidden sm:block rounded-full font-semibold text-sm w-36 py-2 ${
                   selectedPlan.value.includes(id)
-                    ? `${CARD_COLOR[color]} ${
+                    ? `${CARD_COLORS[color]} ${
                       color != "yellow" ? "text-yellow" : "text-[#FA7651]"
                     }`
                     : "bg-gray6 text-white"

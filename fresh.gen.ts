@@ -3,6 +3,7 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
+import * as $PlanMobileButton from "./islands/PlanMobileButton.tsx";
 import * as $add_beneficiary from "./islands/add-beneficiary.tsx";
 import * as $change_step_function from "./islands/change-step-function.tsx";
 import * as $control_form_steps from "./islands/control-form-steps.tsx";
@@ -20,6 +21,7 @@ const manifest = {
     "./routes/_app.tsx": $_app,
   },
   islands: {
+    "./islands/PlanMobileButton.tsx": $PlanMobileButton,
     "./islands/add-beneficiary.tsx": $add_beneficiary,
     "./islands/change-step-function.tsx": $change_step_function,
     "./islands/control-form-steps.tsx": $control_form_steps,

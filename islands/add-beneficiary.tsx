@@ -22,7 +22,7 @@ export default function AddBeneficiary() {
       {test.map(() => {
         return (
           <div className="flex gap-6">
-            <div className="w-1/4">
+            <div className="w-full sm:w-1/4">
               <InputSelect
                 id={"agerange"}
                 name={"agerange"}
@@ -32,6 +32,7 @@ export default function AddBeneficiary() {
                 wfull
               />
             </div>
+
             <InputNumber
               id={"recipientqty"}
               name={"recipientqty"}

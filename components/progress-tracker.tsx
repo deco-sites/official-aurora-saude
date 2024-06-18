@@ -7,15 +7,42 @@ export default function ProgressTracker({ currentStep }) {
   const { activeOption } = useUI();
 
   const steps = [
-    { title: "Tipo de Simulação", status: true, step: 1 }, //true é ativo e false é inativo
     {
-      title: { op1: "Sobre você", op2: "Sobre sua empresa" },
+      title: (
+        <p>
+          Tipo de <br /> Simulação
+        </p>
+      ),
+      status: true,
+      step: 1,
+    }, //true é ativo e false é inativo
+    {
+      title: {
+        op1: (
+          <p>
+            Sobre <br /> você
+          </p>
+        ),
+        op2: (
+          <p>
+            Sobre sua <br /> empresa
+          </p>
+        ),
+      },
       status: true,
       step: 2,
     },
-    { title: "Beneficiários", status: false, step: 3 },
-    { title: "Escolha seu plano", status: false, step: 4 },
-    { title: "Envio", status: false, step: 5 },
+    { title: <p>Beneficiários</p>, status: false, step: 3 },
+    {
+      title: (
+        <p>
+          Escolha <br /> seu plano
+        </p>
+      ),
+      status: false,
+      step: 4,
+    },
+    { title: <p>Envio</p>, status: false, step: 5 },
   ];
 
   const updatedSteps = steps.map((step) => ({
@@ -24,10 +51,13 @@ export default function ProgressTracker({ currentStep }) {
   }));
 
   return (
-    <div className="flex justify-between items-center w-full py-6">
+    <div className="flex items-start py-6">
       {updatedSteps.map((step, index) => (
         //Antes do step.status === true eu estava usando index + 1 <= currentStep
-        <div key={index} className="relative flex flex-col flex-1">
+        <div
+          key={index}
+          className="relative flex flex-col sm:flex-1 max-w-60"
+        >
           <button
             disabled={!step.status}
             onClick={() => changeStep(step.step, "decrease")}
@@ -39,11 +69,11 @@ export default function ProgressTracker({ currentStep }) {
           >
           </button>
           <div
-            className={`mt-2 ${
+            className={`mt-2 pr-12 ${
               step.status === true ? "text-orange1" : "text-orange2"
             }`}
           >
-            <span className="font-semibold">
+            <span className="font-semibold text-nowrap">
               {index === 1 && typeof step.title === "object"
                 ? activeOption.value === 1 ? step.title.op1 : step.title.op2
                 : step.title}

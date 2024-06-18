@@ -3,28 +3,32 @@ import { useUI } from "site/sdk/useUI.ts";
 export default function SelectedPlan() {
   const { activeOption } = useUI();
   console.log("ericão", activeOption.value);
+
   return (
-    <div className="flex justify-between bg-orange1 rounded-2xl px-28 py-16">
+    <div className="flex flex-col gap-6 sm:gap-0 sm:flex-row justify-between bg-orange1 rounded-2xl px-8 sm:px-28 py-16">
       <div className="flex flex-col justify-between">
         <div className="flex flex-col gap-2">
-          <span className="text-white text-2xl font-sora">
+          <span className="text-white text-sm sm:text-2xl font-sora">
             O plano escolhido foi:
           </span>
-          <span className="text-yellow text-6xl font-bold font-sora">
+          <span className="hidden sm:flex text-yellow font-bold font-sora text-6xl ">
             a100 rmbh
           </span>
+          <span className="sm:hidden text-yellow font-bold font-sora py-4 text-5xl ">
+            a100 <br /> rmbh
+          </span>
         </div>
-        <div className="flex items-baseline gap-4">
+        <div className="flex flex-col sm:flex-row items-baseline sm:gap-4">
           <span className="text-sm text-white">Valor total por mês</span>
           <span className="text-white font-semibold font-sora text-xl">
             R$ XXX,XX
           </span>
         </div>
       </div>
-      <div className="flex gap-4">
+      <div className="flex flex-col sm:flex-row gap-8 sm:gap-4">
         <div
-          className={`flex flex-col gap-4 px-12 py-6 border-[1px] border-wite rounded-2xl text-white ${
-            activeOption.value != 1 ? "w-[600px]" : "w-96"
+          className={`flex flex-col gap-4 px-8 sm:px-12 py-6 border-[1px] border-wite rounded-2xl text-white ${
+            activeOption.value != 1 ? "sm:w-[600px]" : "sm:w-96"
           }`}
         >
           <span className="flex gap-2 text-sm">
@@ -39,12 +43,14 @@ export default function SelectedPlan() {
           <span className="flex gap-2 text-sm">
             <span className="font-semibold">Dependentes:</span>03
           </span>
-          <span className="flex gap-2 text-sm">
-            <span className="font-semibold">Coparticipação:</span>com Copay
+          <span className="flex gap-2 text-sm text-nowrap">
+            <span className="font-semibold">
+              Coparticipação:
+            </span>com Copay
           </span>
         </div>
         {activeOption.value === 1 && (
-          <div className="flex flex-col gap-6 px-12 py-6 border-[1px] border-yellow rounded-2xl text-white w-64">
+          <div className="flex flex-col gap-6 px-8 sm:px-12 py-6 border-[1px] border-yellow rounded-2xl text-white sm:w-64">
             <div className="flex items-center gap-2">
               <img src={"/desktop-icon.png"} alt="icon" className="w-4" />
               <span className="text-sm font-semibold">

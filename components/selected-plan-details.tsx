@@ -6,8 +6,8 @@ export default function SelectedPlanDetails() {
     <>
       <div className="flex flex-col">
         <FormTitleH1 text1={"Detalhamento do"} text2={"seu plano"} />
-        <div className="flex justify-between border-b pb-16">
-          <div className="flex flex-col gap-8">
+        <div className="flex flex-col sm:flex-row justify-between border-b pb-16">
+          <div className="flex flex-col gap-8 mb-8 sm:mb-0 pb-8 sm:pb-0 border-b-gray1 border-b-2 sm:border-none">
             <div className="flex flex-col gap-5">
               <div className="flex gap-2 items-center">
                 <FormTitleH2 text={"Tipo de Simulação"} />
@@ -42,7 +42,7 @@ export default function SelectedPlanDetails() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-8 mb-8 sm:mb-0 pb-8 sm:pb-0 border-b-gray1 border-b-2 sm:border-none">
             <div className="flex flex-col gap-5">
               <div className="flex gap-2 items-center">
                 <FormTitleH2 text={"Titular"} />

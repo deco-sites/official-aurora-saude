@@ -32,7 +32,6 @@ export default function ThirdStepOption1() {
           signalValue={selectedBeneficiaryInput}
         />
 
-        {/*aqui entrará a condicional para renderizar a div abaixo com base no valor selecionado do input acima*/}
         {selectedBeneficiaryInput.value != "option1" && (
           <div className="flex flex-col gap-8">
             <FormTitleH2

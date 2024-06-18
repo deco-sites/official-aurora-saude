@@ -21,21 +21,28 @@ function Footer({
 }: Props) {
   return (
     <div className="flex py-6 justify-center border-t-[#f0ecec] border-t-[1px] mt-12 sm:width-calc">
-      <footer className="flex items-center justify-between text-[#bcbcbc] text-xs w-[1400px]">
-        <div className="bg-black p-1 inline-block">
-          <div className="border-white border-[1px] p-[5px] inline-block">
-            <span className="p-2">
-              ANS No: 423629
-            </span>
+      <footer className="flex flex-col gap-6 sm:flex-row items-center justify-between text-[#bcbcbc] text-xs sm:w-[1400px]">
+        <div className="flex items-center gap-12">
+          <div className="bg-black p-1 inline-block">
+            <div className="border-white border-[1px] p-[5px] inline-block">
+              <span className="p-2">
+                ANS No: 423629
+              </span>
+            </div>
           </div>
-        </div>
 
-        <span>CNPJ: 49.955.478/0001-64</span>
-        <span>
+          <span>CNPJ: 49.955.478/0001-64</span>
+        </div>
+        <span className="hidden text-center sm:flex">
           Endereço: Alameda Oscar Niemeyer, 288 - sala 503 - Vila da Serra -
           Nova Lima- MG
         </span>
         <img src={"/ans-logo.png"} alt="ANS Logo" className="" />
+
+        <span className="text-center sm:hidden">
+          Endereço: Alameda Oscar Niemeyer, 288 - sala 503 - Vila da Serra -
+          Nova Lima- MG
+        </span>
         <span>Todos os Direitos Reservados © 2023</span>
       </footer>
     </div>

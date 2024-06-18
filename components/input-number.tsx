@@ -20,7 +20,7 @@ export default function InputNumber(
   };
 
   return (
-    <div className="flex gap-2 items-center">
+    <div className="flex gap-2 items-center justify-center w-full sm:w-auto">
       <button onClick={handleDecrement}>
         <img src={"/trash-icon.png"} alt="Plus Icon" className="w-4" />
       </button>
