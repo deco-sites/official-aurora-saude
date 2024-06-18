@@ -65,7 +65,7 @@ export default function PlanCard({
         </span>
       </div>
 
-      <div className="flex flex-col gap-4 bg-gray1 sm:bg-white rounded-xl p-10">
+      <div className="flex flex-col gap-4 bg-black bg-opacity-[2%] sm:bg-white rounded-xl p-10">
         <div className="border-b flex items-center py-4">
           <span className="text-sm text-black text-opacity-25">
             <strong>Segmentação:</strong> {segmentation}
@@ -95,7 +95,7 @@ export default function PlanCard({
           <a
             href={"https://wa.me/5521965494547?text=Mensagem%20padr%C3%A3o"}
             target="_blank"
-            className="flex justify-center"
+            className="hidden sm:flex justify-center"
           >
             <button
               className={`${

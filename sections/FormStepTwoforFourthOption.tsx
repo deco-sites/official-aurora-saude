@@ -122,8 +122,8 @@ export default function FormStepTwoforFourthOption() {
   return (
     <>
       <div className="flex justify-center sm:width-calc">
-        <div className="flex flex-col gap-6 w-screen sm:w-[1400px]">
-          <div className="flex flex-col-reverse sm:flex-row gap-6 w-full sm:max-h-96 p-8 sm:p-0">
+        <div className="flex flex-col sm:gap-6 w-screen sm:w-[1400px]">
+          <div className="bg-gray1 sm:bg-transparent flex flex-col-reverse sm:flex-row gap-6 w-full sm:max-h-96 p-8 sm:p-0">
             <div className="flex items-center justify-center bg-pink1 rounded-2xl px-11 py-16 sm:p-24 w-full sm:w-[40%] h-full">
               <span className="flex flex-col text-white text-2xl sm:text-xl font-semibold font-sora">
                 <span className="text-yellow">
@@ -143,7 +143,7 @@ export default function FormStepTwoforFourthOption() {
             </div>
           </div>
 
-          <div className="bg-gray1 rounded-2xl sm:p-8 w-full">
+          <div className="bg-gray1 pb-12 pt-16 rounded-2xl sm:p-8 w-full">
             <div
               ref={plansDivTwoRef}
               className="flex px-8 sm:pl-0 gap-4 overflow-x-scroll sm:grid sm:grid-cols-3 sm:gap-10 scrollbar-none snap-mandatory snap-x"
