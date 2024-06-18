@@ -15,10 +15,10 @@ export default function FormStepTwoforFourthOption() {
   return (
     <>
       <div className="flex justify-center sm:width-calc">
-        <div className="flex flex-col gap-6 w-[1400px]">
-          <div className="flex gap-6 w-full max-h-96">
-            <div className="flex items-center justify-center bg-pink1 rounded-2xl p-24 w-[40%] h-full">
-              <span className="flex flex-col text-white text-xl font-semibold font-sora">
+        <div className="flex flex-col gap-6 sm:w-[1400px]">
+          <div className="flex flex-col-reverse sm:flex-row gap-6 w-full sm:max-h-96 p-8 sm:p-0">
+            <div className="flex items-center justify-center bg-pink1 rounded-2xl px-11 py-16 sm:p-24 w-full sm:w-[40%] h-full">
+              <span className="flex flex-col text-white text-2xl sm:text-xl font-semibold font-sora">
                 <span className="text-yellow">
                   Plano de saúde<br /> precisa estar junto.<br />
                 </span>
@@ -27,7 +27,7 @@ export default function FormStepTwoforFourthOption() {
                 colaboradores.
               </span>
             </div>
-            <div className="w-[60%] h-full flex items-center justify-center">
+            <div className="w-full sm:w-[60%] h-full flex items-center justify-center">
               <img
                 src={"/banner5.png"}
                 alt="Banner"
@@ -136,7 +136,7 @@ export default function FormStepTwoforFourthOption() {
                 </span>
               </div>
 
-              <div className="flex justify-end gap-8 my-8">
+              <div className="flex flex-col sm:flex-row justify-end gap-8 my-8">
                 {
                   /*<button
                   onClick={(e) => {
