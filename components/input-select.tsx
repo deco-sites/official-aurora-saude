@@ -13,11 +13,33 @@ export interface InputProps {
   placeholder?: string;
   signalValue?: Signal<string>;
   wfull?: boolean;
+  value?: string;
+  inputValueSetter?: (value: string) => void;
 }
 
 export default function InputSelect(
-  { id, name, label, options, placeholder, signalValue, wfull }: InputProps,
+  {
+    id,
+    name,
+    label,
+    options,
+    placeholder,
+    signalValue,
+    wfull,
+    value,
+    inputValueSetter,
+  }: InputProps,
 ) {
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = e.target.value;
+    if (inputValueSetter) {
+      inputValueSetter(value);
+    }
+    if (signalValue) {
+      signalValue.value = value;
+    }
+  };
+
   return (
     <div className="flex gap-6 items-center w-full">
       <label className="hidden sm:flex text-orange1 text-nowrap" htmlFor={name}>
@@ -30,12 +52,8 @@ export default function InputSelect(
           }`} // Adicionando pr-8 para espaçar a seta
           id={id}
           name={name}
-          onChange={(e) => {
-            const target = e.target as HTMLSelectElement;
-            if (target) {
-              signalValue.value = target.value;
-            }
-          }}
+          value={value}
+          onChange={handleChange}
         >
           <option value="" selected disabled hidden>{placeholder}</option>
           {options.map((op) => (

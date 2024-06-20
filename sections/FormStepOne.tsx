@@ -3,6 +3,7 @@ import OptionButton from "../islands/first-step-opt-btn.tsx";
 import FirstStepImage from "../islands/first-step-img.tsx";
 import NextStepBtn from "../islands/next-step-btn.tsx";
 import { options } from "site/helpers/form-step1-menu-options.ts";
+import { handleNextStepFirstStep } from "site/sdk/FirstStep/checkFirstStep.ts";
 
 export interface CTA {
   text: string;
@@ -45,7 +46,10 @@ export default function FormStepOne() {
                 {options?.map((op) => <OptionButton op={op} />)}
               </div>
               <div className="flex justify-center sm:justify-end py-8">
-                <NextStepBtn options={options} />
+                <NextStepBtn
+                  options={options}
+                  executionFunc={handleNextStepFirstStep}
+                />
               </div>
             </div>
           </div>

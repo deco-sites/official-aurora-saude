@@ -1,6 +1,12 @@
 import FormTitleH1 from "site/components/form-title-h1.tsx";
 import ProgressTracker from "../components/progress-tracker.tsx";
 import NextStepBtn from "site/islands/next-step-btn.tsx";
+import {
+  handleNextStepSecondStepOp1,
+} from "../sdk/SecondStepOption1/checkStepTwoOption1Fields.ts";
+
+import { handleNextStepSecondStepOp2 } from "../sdk/SecondStepOption2/checkStepTwoOption2Fields.ts";
+import { useUI } from "site/sdk/useUI.ts";
 
 interface FormStepTwoProps {
   Component: React.ComponentType;
@@ -12,6 +18,8 @@ export default function FormStepTwo({ Component }: FormStepTwoProps) {
     { value: "option2", text: "Opção 2" },
     { value: "option3", text: "Opção 3" },
   ];
+
+  const { activeOption } = useUI();
 
   return (
     <>
@@ -30,7 +38,12 @@ export default function FormStepTwo({ Component }: FormStepTwoProps) {
               {<Component />}
             </div>
             <div className="flex justify-center sm:justify-end py-8 px-8 sm:px-0">
-              <NextStepBtn options={alreadyhaveplanoptions} />
+              <NextStepBtn
+                options={alreadyhaveplanoptions}
+                executionFunc={activeOption.value === 1
+                  ? handleNextStepSecondStepOp1
+                  : handleNextStepSecondStepOp2}
+              />
             </div>
           </div>
         </div>

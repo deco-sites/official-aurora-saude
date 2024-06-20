@@ -5,6 +5,8 @@ import { agerangeoptions } from "site/helpers/ageRangeOptions.ts";
 import { alreadyhaveplanoptions } from "site/helpers/alreadyHavePlan.ts";
 import { citiesOptions } from "site/helpers/cities.ts";
 import { useEffect, useState } from "preact/hooks";
+import { useStepTwoOption1InputValues } from "../sdk/SecondStepOption1/useStepTwoOption1InputValues.ts";
+import { PhoneMask } from "site/helpers/phoneMask.ts";
 
 export default function SecondStepOption1() {
   const [namePlaceholder, setNamePlaceholder] = useState("Nome e sobrenome");
@@ -13,6 +15,22 @@ export default function SecondStepOption1() {
   const [cityPlaceholder, setCityPlaceholder] = useState("Escreva aqui");
   const [ageRangePlaceholder, setAgeRangePlaceholder] = useState("Selecione");
   const [havePlanPlaceholder, setHavePlanPlaceholder] = useState("Selecione");
+
+  const {
+    nameValue,
+    emailValue,
+    telValue,
+    cityValue,
+    ageRangeValue,
+    alreadyHavePlanValue,
+
+    nameError,
+    emailError,
+    telError,
+    cityError,
+    ageRangeError,
+    alreadyHavePlanError,
+  } = useStepTwoOption1InputValues();
 
   useEffect(() => {
     const updateNamePlaceholder = () => {
@@ -39,52 +57,138 @@ export default function SecondStepOption1() {
     return () => window.removeEventListener("resize", updateNamePlaceholder);
   }, []);
 
+  useEffect(() => {
+    nameError.value = false;
+    emailError.value = false;
+  }, []);
+
   return (
     <>
       <div className="flex flex-col gap-8">
         <FormTitleH2 text={"Informações de contato:"} />
 
-        <InputText
-          id={"name"}
-          name={"name"}
-          label={"Nome e Sobrenome"}
-          placeholder={namePlaceholder}
-        />
-        <InputText
-          id={"email"}
-          name={"email"}
-          label={"E-mail"}
-          placeholder={emailPlaceholder}
-        />
-        <InputText
-          id={"tel"}
-          name={"tel"}
-          label={"Telefone/WhatsApp"}
-          placeholder={telPlaceholder}
-        />
-        <InputSelect
-          id={"city"}
-          name={"city"}
-          label={"Cidade"}
-          options={citiesOptions}
-          placeholder={cityPlaceholder}
-        />
+        <div className="relative flex gap-2 items-center">
+          <InputText
+            id={"name"}
+            name={"name"}
+            label={"Nome e Sobrenome"}
+            placeholder={namePlaceholder}
+            value={nameValue.value}
+            inputValueSetter={(value) => nameValue.value = value}
+          />
+
+          {nameError.value && (
+            <img
+              src={"/error-circle-icon.png"}
+              alt="Error Icon"
+              className="h-5 w-5 absolute top-50 right-2 sm:left-[470px]"
+            />
+          )}
+        </div>
+
+        <div className="relative flex gap-2 items-center">
+          <InputText
+            id={"email"}
+            name={"email"}
+            label={"E-mail"}
+            placeholder={emailPlaceholder}
+            value={emailValue.value}
+            inputValueSetter={(value) => emailValue.value = value}
+          />
+          {emailError.value && (
+            <img
+              src={"/error-circle-icon.png"}
+              alt="Error Icon"
+              className="h-5 w-5 absolute top-50 right-2 sm:left-[470px]"
+            />
+          )}
+        </div>
+
+        <div className="relative flex gap-2 items-center">
+          <InputText
+            id={"tel"}
+            name={"tel"}
+            label={"Telefone/WhatsApp"}
+            placeholder={telPlaceholder}
+            inputValueSetter={(value) => telValue.value = value}
+            value={telValue.value}
+            mask={PhoneMask}
+          />
+          {
+            /*<img
+            src={"/check-circle-icon.png"}
+            alt="Check Icon"
+            className="h-5 w-5 absolute top-50 right-2 sm:left-[470px]"
+          />*/
+          }
+
+          {telError.value && (
+            <img
+              src={"/error-circle-icon.png"}
+              alt="Error Icon"
+              className="h-5 w-5 absolute top-50 right-2 sm:left-[470px]"
+            />
+          )}
+        </div>
+
+        <div className="relative flex gap-2 items-center">
+          <InputSelect
+            id={"city"}
+            name={"city"}
+            label={"Cidade"}
+            options={citiesOptions}
+            placeholder={cityPlaceholder}
+            value={cityValue.value}
+            inputValueSetter={(value) => cityValue.value = value}
+          />
+          {cityError.value && (
+            <img
+              src={"/error-circle-icon.png"}
+              alt="Error Icon"
+              className="h-5 w-5 absolute top-50 right-2 sm:left-[470px]"
+            />
+          )}
+        </div>
 
         <FormTitleH2 text={"Informações de quem utilizará o plano:"} />
-        <InputSelect
-          id={"agerange"}
-          name={"agerange"}
-          label={"Faixa Etária:"}
-          options={agerangeoptions}
-          placeholder={ageRangePlaceholder}
-        />
-        <InputSelect
-          id={"alreadyhaveplan"}
-          name={"alreadyhaveplan"}
-          label={"Já possui plano de saúde?"}
-          options={alreadyhaveplanoptions}
-          placeholder={havePlanPlaceholder}
-        />
+
+        <div className="relative flex gap-2 items-center">
+          <InputSelect
+            id={"agerange"}
+            name={"agerange"}
+            label={"Faixa Etária:"}
+            options={agerangeoptions}
+            placeholder={ageRangePlaceholder}
+            value={ageRangeValue.value}
+            inputValueSetter={(value) => ageRangeValue.value = value}
+          />
+          {ageRangeError.value && (
+            <img
+              src={"/error-circle-icon.png"}
+              alt="Error Icon"
+              className="h-5 w-5 absolute top-50 right-2 sm:left-[470px]"
+            />
+          )}
+        </div>
+
+        <div className="relative flex gap-2 items-center">
+          <InputSelect
+            id={"alreadyhaveplan"}
+            name={"alreadyhaveplan"}
+            label={"Já possui plano de saúde?"}
+            options={alreadyhaveplanoptions}
+            placeholder={havePlanPlaceholder}
+            value={alreadyHavePlanValue.value}
+            inputValueSetter={(value) => alreadyHavePlanValue.value = value}
+          />
+          {alreadyHavePlanError.value && (
+            <img
+              src={"/error-circle-icon.png"}
+              alt="Error Icon"
+              className="h-5 w-5 absolute top-50 right-2 sm:left-[470px]"
+            />
+          )}
+        </div>
       </div>
     </>
   );

@@ -12,6 +12,7 @@ import { useEffect, useRef, useState } from "preact/hooks";
 import { useSelectPlanButtons } from "site/sdk/useSelectPlanButtons.ts";
 import PlanMobileButton from "site/islands/PlanMobileButton.tsx";
 import FormTitleH2 from "site/components/form-title-h2.tsx";
+import { CnpjMask } from "site/helpers/cnpjMask.ts";
 
 const plans = [
   { id: 1, text1: "a100", text2: "", color: "orange" },

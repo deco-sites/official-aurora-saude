@@ -76,6 +76,7 @@ export default {
         gray7: "#727272",
         gray8: "#B8B8B8",
         aquagreen: "#72CCCC",
+        green: "#70FF00",
         yellow: "#FCFF73",
       },
       height: {

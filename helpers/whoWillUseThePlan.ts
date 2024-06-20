@@ -1,5 +1,5 @@
 export const whoWillUseThePlan = [
-  { value: "option1", text: "Somente eu" },
-  { value: "option2", text: "Eu e meus dependentes" },
-  { value: "option3", text: "Outra pessoa" },
+  { value: "somente_eu", text: "Somente eu" },
+  { value: "eu_e_meus_dependentes", text: "Eu e meus dependentes" },
+  { value: "outra_pessoa", text: "Outra pessoa" },
 ];

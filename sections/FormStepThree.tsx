@@ -2,10 +2,14 @@ import InputSelect from "site/components/input-select.tsx";
 import ProgressTracker from "../components/progress-tracker.tsx";
 import NextStepBtn from "site/islands/next-step-btn.tsx";
 import { whoWillUseThePlan } from "site/helpers/whoWillUseThePlan.ts";
+import { handleNextStepThirdStepOp1 } from "site/sdk/ThirdStepOption1/checkStepThreeOption1Fields.ts";
+import { useUI } from "site/sdk/useUI.ts";
 
 interface FormStepTwoProps {
   Component: React.ComponentType;
 }
+
+const { activeOption } = useUI();
 
 export default function FormStepThree({ Component }: FormStepTwoProps) {
   return (
@@ -20,7 +24,12 @@ export default function FormStepThree({ Component }: FormStepTwoProps) {
               {<Component />}
             </div>
             <div className="flex justify-center sm:justify-end py-8 px-8 sm:px-0">
-              <NextStepBtn options={whoWillUseThePlan} />
+              <NextStepBtn
+                options={whoWillUseThePlan}
+                executionFunc={activeOption.value === 1
+                  ? handleNextStepThirdStepOp1
+                  : "handleNextStepThirdStepOp2"}
+              />
             </div>
           </div>
         </div>

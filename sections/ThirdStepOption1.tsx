@@ -6,9 +6,16 @@ import AddBeneficiary from "site/islands/add-beneficiary.tsx";
 import FormTitleH1 from "site/components/form-title-h1.tsx";
 import { useBeneficiaryInputs } from "site/sdk/useBeneficiaryInputs.ts";
 import { whoWillUseThePlan } from "site/helpers/whoWillUseThePlan.ts";
+import { useStepThreeOption1InputValues } from "site/sdk/ThirdStepOption1/useStepThreeOption1InputValues.ts";
 
 export default function ThirdStepOption1() {
   const { selectedBeneficiaryInput } = useBeneficiaryInputs();
+
+  const {
+    whoUseThePlan,
+
+    whoUseThePlanError,
+  } = useStepThreeOption1InputValues();
 
   const textOptions = [
     "Adicione os dependentes:",
@@ -23,19 +30,30 @@ export default function ThirdStepOption1() {
           text2={"que utilizarão o plano."}
         />
 
-        <InputSelect
-          id={"whowilluse"}
-          name={"whowilluse"}
-          label={"Quem utilizará o plano?"}
-          options={whoWillUseThePlan}
-          placeholder={"Somente eu"}
-          signalValue={selectedBeneficiaryInput}
-        />
+        <div className="relative flex gap-2 items-center">
+          <InputSelect
+            id={"whowilluse"}
+            name={"whowilluse"}
+            label={"Quem utilizará o plano?"}
+            options={whoWillUseThePlan}
+            placeholder={"Somente eu"}
+            value={selectedBeneficiaryInput.value}
+            signalValue={selectedBeneficiaryInput}
+            inputValueSetter={(value) => selectedBeneficiaryInput.value = value}
+          />
+          {whoUseThePlanError.value && (
+            <img
+              src={"/error-circle-icon.png"}
+              alt="Error Icon"
+              className="h-5 w-5 absolute top-50 right-2 sm:left-[470px]"
+            />
+          )}
+        </div>
 
-        {selectedBeneficiaryInput.value != "option1" && (
+        {selectedBeneficiaryInput.value != "somente_eu" && (
           <div className="flex flex-col gap-8">
             <FormTitleH2
-              text={selectedBeneficiaryInput.value === "option2"
+              text={selectedBeneficiaryInput.value === "eu_e_meus_dependentes"
                 ? textOptions[0]
                 : textOptions[1]}
             />

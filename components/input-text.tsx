@@ -4,24 +4,37 @@ export interface InputProps {
   label: string;
   placeholder?: string;
   wfull?: boolean;
+  value?: string;
+  inputValueSetter: (value: string) => void;
+  mask?: (value: string) => string;
 }
 
 export default function InputText(
-  { id, name, label, placeholder, wfull }: InputProps,
+  { id, name, label, placeholder, wfull, value, inputValueSetter, mask }:
+    InputProps,
 ) {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let myValue = e.target.value;
+
+    if (mask) myValue = mask(myValue);
+    inputValueSetter(myValue);
+  };
+
   return (
-    <div className="flex gap-6 items-center w-full">
+    <div className={`flex gap-6 items-center w-full`}>
       <label className="hidden sm:flex text-orange1 text-nowrap" htmlFor={name}>
         {label}:
       </label>
       <input
         className={`px-6 py-5 sm:py-2 rounded-md sm:rounded-full bg-black bg-opacity-[3%] outline-none w-full sm:w-auto ${
-          wfull && "sm:w-full"
+          wfull ? "sm:w-full" : ""
         }`}
         type="text"
         id={id}
         name={name}
+        value={mask ? mask(value) : value}
         placeholder={placeholder}
+        onInput={handleChange}
       />
     </div>
   );
