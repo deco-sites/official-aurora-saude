@@ -97,7 +97,7 @@ export default function FormStepFour({ Component }: FormStepFourProps) {
 
               <div
                 ref={plansDivRef}
-                className="flex px-8 sm:pl-0 gap-4 overflow-x-scroll sm:grid sm:grid-cols-3 sm:gap-10 scrollbar-none snap-mandatory snap-x"
+                className="flex px-8 sm:pl-0 gap-4 overflow-x-scroll sm:grid sm:grid-cols-2 sm:gap-10 scrollbar-none snap-mandatory snap-x"
               >
                 {plansInfos.map((item) => (
                   <PlanCard

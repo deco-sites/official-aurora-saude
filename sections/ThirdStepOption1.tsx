@@ -6,7 +6,7 @@ import AddBeneficiary from "site/islands/add-beneficiary.tsx";
 import FormTitleH1 from "site/components/form-title-h1.tsx";
 import { useBeneficiaryInputs } from "site/sdk/useBeneficiaryInputs.ts";
 import { whoWillUseThePlan } from "site/helpers/whoWillUseThePlan.ts";
-import { useStepThreeOption1InputValues } from "site/sdk/ThirdStepOption1/useStepThreeOption1InputValues.ts";
+import { useStepThreeInputValues } from "../sdk/ThirdStep/useStepThreeInputValues.ts";
 
 export default function ThirdStepOption1() {
   const { selectedBeneficiaryInput } = useBeneficiaryInputs();
@@ -15,7 +15,7 @@ export default function ThirdStepOption1() {
     whoUseThePlan,
 
     whoUseThePlanError,
-  } = useStepThreeOption1InputValues();
+  } = useStepThreeInputValues();
 
   const textOptions = [
     "Adicione os dependentes:",
@@ -30,25 +30,16 @@ export default function ThirdStepOption1() {
           text2={"que utilizarão o plano."}
         />
 
-        <div className="relative flex gap-2 items-center">
-          <InputSelect
-            id={"whowilluse"}
-            name={"whowilluse"}
-            label={"Quem utilizará o plano?"}
-            options={whoWillUseThePlan}
-            placeholder={"Somente eu"}
-            value={selectedBeneficiaryInput.value}
-            signalValue={selectedBeneficiaryInput}
-            inputValueSetter={(value) => selectedBeneficiaryInput.value = value}
-          />
-          {whoUseThePlanError.value && (
-            <img
-              src={"/error-circle-icon.png"}
-              alt="Error Icon"
-              className="h-5 w-5 absolute top-50 right-2 sm:left-[470px]"
-            />
-          )}
-        </div>
+        <InputSelect
+          id={"whowilluse"}
+          name={"whowilluse"}
+          label={"Quem utilizará o plano?"}
+          options={whoWillUseThePlan}
+          placeholder={"Somente eu"}
+          value={selectedBeneficiaryInput.value}
+          signalValue={selectedBeneficiaryInput}
+          inputValueSetter={(value) => selectedBeneficiaryInput.value = value}
+        />
 
         {selectedBeneficiaryInput.value != "somente_eu" && (
           <div className="flex flex-col gap-8">

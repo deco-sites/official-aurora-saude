@@ -3,41 +3,54 @@ import { useState } from "preact/hooks";
 export interface InputProps {
   id: string;
   name: string;
+  value: number;
   placeholder?: string;
+  handleDeleteLine?: () => void;
+  showTrashIcon: boolean;
 }
 
 export default function InputNumber(
-  { id, name, placeholder }: InputProps,
+  { id, name, value, placeholder, handleDeleteLine, showTrashIcon }: InputProps,
 ) {
-  const [value, setValue] = useState(0);
+  const [useValue, setUseValue] = useState(1);
 
   const handleIncrement = () => {
-    setValue((prev) => prev + 1);
+    setUseValue((prev) => prev + 1);
   };
 
   const handleDecrement = () => {
-    setValue((prev) => (prev > 0 ? prev - 1 : 0));
+    setUseValue((prev) => (prev > 1 ? prev - 1 : 1));
   };
 
   return (
-    <div className="flex gap-2 items-center justify-center w-full sm:w-auto">
-      <button onClick={handleDecrement}>
-        <img src={"/trash-icon.png"} alt="Plus Icon" className="w-4" />
-      </button>
+    <>
+      <div className="flex items-center gap-8">
+        <div className="flex gap-2 items-center justify-center w-full sm:w-auto">
+          <button onClick={handleDecrement}>
+            <img src={"/minus-icon.png"} alt="Plus Icon" className="w-4" />
+          </button>
 
-      <input
-        className="px-6 py-2 rounded-full bg-gray5 outline-none w-20 text-center text-black text-opacity-25"
-        type="number"
-        id={id}
-        name={name}
-        placeholder={placeholder}
-        value={value.toString().padStart(2, "0")}
-        readOnly
-      />
+          <input
+            className="px-6 py-2 rounded-full bg-gray5 outline-none w-20 text-center text-black text-opacity-25"
+            type="number"
+            id={id}
+            name={name}
+            value={useValue.toString().padStart(2, "0")}
+            placeholder={placeholder}
+            //readOnly
+          />
 
-      <button onClick={handleIncrement}>
-        <img src={"/plus-icon.png"} alt="Plus Icon" className="w-4" />
-      </button>
-    </div>
+          <button onClick={handleIncrement}>
+            <img src={"/plus-icon.png"} alt="Plus Icon" className="w-4" />
+          </button>
+        </div>
+
+        {showTrashIcon && (
+          <button onClick={handleDeleteLine}>
+            <img src={"/trash-icon.png"} alt="Plus Icon" className="w-4" />
+          </button>
+        )}
+      </div>
+    </>
   );
 }

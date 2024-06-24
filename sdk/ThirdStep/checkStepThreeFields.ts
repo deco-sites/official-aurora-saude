@@ -1,6 +1,6 @@
 import { useFormSteps } from "site/sdk/useFormSteps.ts";
 import { useUI } from "site/sdk/useUI.ts";
-import { useStepThreeOption1InputValues } from "site/sdk/ThirdStepOption1/useStepThreeOption1InputValues.ts";
+import { useStepThreeInputValues } from "./useStepThreeInputValues.ts";
 import { useBeneficiaryInputs } from "site/sdk/useBeneficiaryInputs.ts";
 
 const { activeStep, changeStep } = useFormSteps();
@@ -9,9 +9,10 @@ const { selectedBeneficiaryInput } = useBeneficiaryInputs();
 
 const {
     whoUseThePlan,
+    recipientqty,
 
     whoUseThePlanError,
-} = useStepThreeOption1InputValues();
+} = useStepThreeInputValues();
 
 export const CheckFields = () => {
     //activeStep.value - É o passo atual do formulário
@@ -22,7 +23,8 @@ export const CheckFields = () => {
     changeStep(activeStep.value, "increase");
 };
 
-export const handleNextStepThirdStepOp1 = () => {
+export const handleNextStepThirdStep = () => {
+    console.log("Quantidade no input:", recipientqty.value);
     // Se o passo atual é 1, sempre permita avançar
     if (activeStep.value === 1) {
         changeStep(activeStep.value, "increase");
