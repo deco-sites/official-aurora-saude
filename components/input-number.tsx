@@ -1,4 +1,5 @@
 import { useState } from "preact/hooks";
+import { useStepThreeInputValues } from "site/sdk/ThirdStep/useStepThreeInputValues.ts";
 
 export interface InputProps {
   id: string;
@@ -12,13 +13,16 @@ export interface InputProps {
 export default function InputNumber(
   { id, name, value, placeholder, handleDeleteLine, showTrashIcon }: InputProps,
 ) {
+  //const { recipientqty } = useStepThreeInputValues();
   const [useValue, setUseValue] = useState(1);
 
   const handleIncrement = () => {
+    //recipientqty.value += 1;
     setUseValue((prev) => prev + 1);
   };
 
   const handleDecrement = () => {
+    //recipientqty.value = recipientqty.value > 1 ? recipientqty.value - 1 : 1;
     setUseValue((prev) => (prev > 1 ? prev - 1 : 1));
   };
 

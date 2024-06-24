@@ -7,14 +7,13 @@ import FormTitleH1 from "site/components/form-title-h1.tsx";
 import { useBeneficiaryInputs } from "site/sdk/useBeneficiaryInputs.ts";
 import { whoWillUseThePlan } from "site/helpers/whoWillUseThePlan.ts";
 import { useStepThreeInputValues } from "../sdk/ThirdStep/useStepThreeInputValues.ts";
+import { handleDataChange } from "../helpers/handleDataChange.ts";
 
 export default function ThirdStepOption1() {
   const { selectedBeneficiaryInput } = useBeneficiaryInputs();
 
   const {
-    whoUseThePlan,
-
-    whoUseThePlanError,
+    thirdStepSignal,
   } = useStepThreeInputValues();
 
   const textOptions = [
@@ -36,15 +35,16 @@ export default function ThirdStepOption1() {
           label={"Quem utilizará o plano?"}
           options={whoWillUseThePlan}
           placeholder={"Somente eu"}
-          value={selectedBeneficiaryInput.value}
-          signalValue={selectedBeneficiaryInput}
-          inputValueSetter={(value) => selectedBeneficiaryInput.value = value}
+          value={thirdStepSignal.value.whoUseThePlan}
+          inputValueSetter={(value) =>
+            handleDataChange(thirdStepSignal, `whoUseThePlan`, value)}
         />
 
-        {selectedBeneficiaryInput.value != "somente_eu" && (
+        {thirdStepSignal.value.whoUseThePlan != "somente_eu" && (
           <div className="flex flex-col gap-8">
             <FormTitleH2
-              text={selectedBeneficiaryInput.value === "eu_e_meus_dependentes"
+              text={thirdStepSignal.value.whoUseThePlan ===
+                  "eu_e_meus_dependentes"
                 ? textOptions[0]
                 : textOptions[1]}
             />

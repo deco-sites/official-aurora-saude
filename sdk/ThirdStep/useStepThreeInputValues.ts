@@ -1,16 +1,33 @@
 import { signal } from "@preact/signals";
+import { whoWillUseThePlan } from "site/helpers/whoWillUseThePlan.ts";
+
+interface Beneficiary {
+    id: number;
+    name: string;
+    range: string;
+    qty: number;
+}
+
+interface IThirdStepSchema {
+    whoUseThePlan: string;
+    beneficiariesValuesArr: Beneficiary[];
+}
+
+const thirdStepSchema: IThirdStepSchema = {
+    whoUseThePlan: "somente_eu",
+    beneficiariesValuesArr: [{
+        id: 1,
+        name: "agerange-1",
+        range: "",
+        qty: 0,
+    }],
+};
 
 //SecondStep Option 1
-const whoUseThePlan = signal("");
-const recipientqty = signal(0);
-
-const whoUseThePlanError = signal(false);
+const thirdStepSignal = signal(thirdStepSchema);
 
 const state = {
-    whoUseThePlan,
-    recipientqty,
-
-    whoUseThePlanError,
+    thirdStepSignal,
 };
 
 export const useStepThreeInputValues = () => state;

@@ -1,56 +1,47 @@
 import InputSelect from "site/components/input-select.tsx";
 import InputNumber from "site/components/input-number.tsx";
 import { useBeneficiaryInputs } from "../sdk/useBeneficiaryInputs.ts";
-import { useState } from "preact/hooks";
+import { useSignal } from "@preact/signals";
 import { agerangeoptions } from "site/helpers/ageRangeOptions.ts";
 import { useStepThreeInputValues } from "site/sdk/ThirdStep/useStepThreeInputValues.ts";
+import { handleArrDataChange } from "../helpers/handleDataChange.ts";
 
 export default function AddBeneficiary() {
-  {
-    /*const { inputs } = useBeneficiaryInputs();
-  const [beneficiariesArr, setBeneficiariesArr] = useState<string[]>([
-    "New Beneficiary",
-  ]);
+  const { thirdStepSignal } = useStepThreeInputValues();
+  let beneficiariesArr = thirdStepSignal.value.beneficiariesValuesArr;
 
   const handleAddInput = () => {
-    //inputs.value.push([...inputs.value, "New Beneficiary"]);
-    setBeneficiariesArr([...beneficiariesArr, "New Beneficiary"]);
-    //console.log(inputs.value);
-  };
-  */
-  }
+    console.log("ESTOU AQUI", thirdStepSignal.value.beneficiariesValuesArr);
 
-  const [beneficiariesArr, setBeneficiariesArr] = useState([
-    { id: 1, name: "New Beneficiary" },
-  ]);
-
-  const handleAddInput = () => {
-    const newId = beneficiariesArr.length > 0
-      ? beneficiariesArr[beneficiariesArr.length - 1].id + 1
+    const newId = thirdStepSignal.value.beneficiariesValuesArr.length > 0
+      ? thirdStepSignal.value
+        .beneficiariesValuesArr[
+          thirdStepSignal.value.beneficiariesValuesArr.length - 1
+        ].id + 1
       : 1;
-    setBeneficiariesArr([
-      ...beneficiariesArr,
-      {
-        id: newId,
-        name: "New Beneficiary",
-      },
-    ]);
+
+    thirdStepSignal.value = {
+      ...thirdStepSignal.value,
+      beneficiariesValuesArr: [
+        ...thirdStepSignal.value.beneficiariesValuesArr,
+        {
+          id: newId,
+          name: `agerange-${newId}`,
+          range: "",
+          qty: 0,
+        },
+      ],
+    };
   };
 
-  const handleDeleteLine = (id, index) => {
-    //setBeneficiariesArr(beneficiariesArr.filter((item) => id !== item.id));
-    setBeneficiariesArr((prevBeneficiaries) =>
-      prevBeneficiaries.filter((item) => item.id !== id)
-    );
+  const handleDeleteLine = (id) => {
+    thirdStepSignal.value.beneficiariesValuesArr = thirdStepSignal.value
+      .beneficiariesValuesArr.filter((item) => item.id !== id);
   };
-
-  const {
-    recipientqty,
-  } = useStepThreeInputValues();
 
   return (
     <div className="flex flex-col gap-6">
-      {beneficiariesArr.map((item, index) => {
+      {thirdStepSignal.value.beneficiariesValuesArr.map((item, index) => {
         return (
           <div key={item.id} className="flex gap-6">
             <div className="w-full sm:w-1/4">
@@ -60,6 +51,16 @@ export default function AddBeneficiary() {
                 label={"Faixa Etária:"}
                 options={agerangeoptions}
                 placeholder={"Selecione"}
+                value={item.range}
+                inputValueSetter={(value) =>
+                  handleArrDataChange(
+                    thirdStepSignal,
+                    "beneficiariesValuesArr",
+                    value,
+                    item,
+                    "id",
+                    "range",
+                  )}
                 wfull
               />
             </div>
@@ -67,10 +68,11 @@ export default function AddBeneficiary() {
             <InputNumber
               id={`recipientqty-${item.id}`}
               name={`recipientqty-${item.id}`}
-              value={recipientqty.value}
+              value={0}
               placeholder={"00"}
-              handleDeleteLine={() => handleDeleteLine(item.id, index)}
-              showTrashIcon={beneficiariesArr.length > 1}
+              handleDeleteLine={() => handleDeleteLine(item.id)}
+              showTrashIcon={thirdStepSignal.value.beneficiariesValuesArr
+                .length > 1}
             />
           </div>
         );

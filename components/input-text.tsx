@@ -26,7 +26,7 @@ export default function InputText(
         {label}:
       </label>
       <input
-        className={`px-6 py-5 sm:py-2 rounded-md sm:rounded-full bg-black bg-opacity-[3%] outline-none w-full sm:w-auto ${
+        className={`px-6 py-5 sm:py-2 rounded-md sm:rounded-full bg-black bg-opacity-[3%] outline-none w-full sm:w-auto text-gray3 ${
           wfull ? "sm:w-full" : ""
         }`}
         type="text"

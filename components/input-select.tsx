@@ -49,7 +49,7 @@ export default function InputSelect(
         <select
           className={`px-6 py-5 sm:py-2 rounded-md sm:rounded-full bg-black bg-opacity-[3%] outline-none text-[#9ca3be] appearance-none pr-8 w-full ${
             wfull && "w-full"
-          }`} // Adicionando pr-8 para espaçar a seta
+          }`}
           id={id}
           name={name}
           value={value}
