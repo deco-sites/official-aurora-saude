@@ -15,6 +15,8 @@ export const handleNextStepThirdStep = () => {
         thirdStepSignal.value.beneficiariesValuesArr,
     );
 
+    changeStep(activeStep.value, "increase");
+
     // Validação dos campos do passo atual
     {
         /*

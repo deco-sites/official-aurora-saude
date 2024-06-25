@@ -4,7 +4,10 @@ import { useBeneficiaryInputs } from "../sdk/useBeneficiaryInputs.ts";
 import { useSignal } from "@preact/signals";
 import { agerangeoptions } from "site/helpers/ageRangeOptions.ts";
 import { useStepThreeInputValues } from "site/sdk/ThirdStep/useStepThreeInputValues.ts";
-import { handleArrDataChange } from "../helpers/handleDataChange.ts";
+import {
+  handleArrDataChange,
+  handleDataChange,
+} from "../helpers/handleDataChange.ts";
 
 export default function AddBeneficiary() {
   const { thirdStepSignal } = useStepThreeInputValues();
@@ -28,15 +31,18 @@ export default function AddBeneficiary() {
           id: newId,
           name: `agerange-${newId}`,
           range: "",
-          qty: 0,
+          qty: 1,
         },
       ],
     };
   };
 
   const handleDeleteLine = (id) => {
-    thirdStepSignal.value.beneficiariesValuesArr = thirdStepSignal.value
-      .beneficiariesValuesArr.filter((item) => item.id !== id);
+    thirdStepSignal.value = {
+      ...thirdStepSignal.value,
+      beneficiariesValuesArr: thirdStepSignal.value
+        .beneficiariesValuesArr.filter((item) => item.id !== id),
+    };
   };
 
   return (
@@ -68,11 +74,20 @@ export default function AddBeneficiary() {
             <InputNumber
               id={`recipientqty-${item.id}`}
               name={`recipientqty-${item.id}`}
-              value={0}
+              value={item.qty}
               placeholder={"00"}
               handleDeleteLine={() => handleDeleteLine(item.id)}
               showTrashIcon={thirdStepSignal.value.beneficiariesValuesArr
                 .length > 1}
+              inputValueSetter={(value) =>
+                handleArrDataChange(
+                  thirdStepSignal,
+                  "beneficiariesValuesArr",
+                  value,
+                  item,
+                  "id",
+                  "qty",
+                )}
             />
           </div>
         );

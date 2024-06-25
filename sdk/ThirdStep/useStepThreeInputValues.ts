@@ -19,7 +19,7 @@ const thirdStepSchema: IThirdStepSchema = {
         id: 1,
         name: "agerange-1",
         range: "",
-        qty: 0,
+        qty: 1,
     }],
 };
 

@@ -8,29 +8,47 @@ export interface InputProps {
   placeholder?: string;
   handleDeleteLine?: () => void;
   showTrashIcon: boolean;
+  inputValueSetter: (value: number) => void;
 }
 
 export default function InputNumber(
-  { id, name, value, placeholder, handleDeleteLine, showTrashIcon }: InputProps,
+  {
+    id,
+    name,
+    value,
+    placeholder,
+    handleDeleteLine,
+    showTrashIcon,
+    inputValueSetter,
+  }: InputProps,
 ) {
   //const { recipientqty } = useStepThreeInputValues();
-  const [useValue, setUseValue] = useState(1);
 
-  const handleIncrement = () => {
-    //recipientqty.value += 1;
-    setUseValue((prev) => prev + 1);
+  const handleButtonClick = (operation: "increment" | "decrement") => {
+    if (operation === "increment") {
+      inputValueSetter(value + 1);
+      //setUseValue((prev) => prev + 1);
+    } else {
+      const max = value > 1 ? value - 1 : 1;
+      inputValueSetter(max);
+      //setUseValue((prev) => (prev > 1 ? prev - 1 : 1));
+    }
   };
 
-  const handleDecrement = () => {
-    //recipientqty.value = recipientqty.value > 1 ? recipientqty.value - 1 : 1;
-    setUseValue((prev) => (prev > 1 ? prev - 1 : 1));
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log("Bateu aki");
+    const value = e.target.value;
+
+    if (inputValueSetter) {
+      inputValueSetter(value);
+    }
   };
 
   return (
     <>
       <div className="flex items-center gap-8">
         <div className="flex gap-2 items-center justify-center w-full sm:w-auto">
-          <button onClick={handleDecrement}>
+          <button onClick={() => handleButtonClick("decrement")}>
             <img src={"/minus-icon.png"} alt="Plus Icon" className="w-4" />
           </button>
 
@@ -39,12 +57,13 @@ export default function InputNumber(
             type="number"
             id={id}
             name={name}
-            value={useValue.toString().padStart(2, "0")}
+            value={value.toString().padStart(2, "0")}
             placeholder={placeholder}
+            onChange={handleChange}
             //readOnly
           />
 
-          <button onClick={handleIncrement}>
+          <button onClick={() => handleButtonClick("increment")}>
             <img src={"/plus-icon.png"} alt="Plus Icon" className="w-4" />
           </button>
         </div>
