@@ -7,19 +7,18 @@ import { whoWillUseThePlan } from "site/helpers/whoWillUseThePlan.ts";
 import PlanMobileButton from "../islands/PlanMobileButton.tsx";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { useSelectPlanButtons } from "site/sdk/useSelectPlanButtons.ts";
+import { handleNextStepFourthStep } from "site/sdk/FourthStep/checkStepFourFields.ts";
+import { plans } from "site/helpers/plansCards.ts";
+import PreviousStepBtn from "site/islands/previous-step-btn.tsx";
+import { useFormSteps } from "site/sdk/useFormSteps.ts";
+import changeStep from "site/islands/change-step-function.tsx";
 
 interface FormStepFourProps {
   Component: React.ComponentType;
 }
 
-const plans = [
-  { id: 1, text1: "a100", text2: "", color: "orange" },
-  { id: 2, text1: "a300", text2: "enfermaria", color: "green" },
-  { id: 3, text1: "a500", text2: "enfermaria", color: "yellow" },
-  { id: 4, text1: "a500", text2: "apartamento", color: "yellow" },
-];
-
 export default function FormStepFour({ Component }: FormStepFourProps) {
+  const { activeStep } = useFormSteps();
   //const $PlansDiv = useRef<HTMLDivElement | null>(null);
   const plansDivRef = useRef<HTMLDivElement | null>(null);
   const { activePlanBtn } = useSelectPlanButtons();
@@ -109,6 +108,7 @@ export default function FormStepFour({ Component }: FormStepFourProps) {
                     coparticipation={item.coparticipation}
                     accommodation={item.accommodation}
                     color={item.color}
+                    scrollToCard={scrollToCard}
                   />
                 ))}
               </div>
@@ -132,8 +132,16 @@ export default function FormStepFour({ Component }: FormStepFourProps) {
 
               {/*<Component />*/}
 
-              <div className="flex justify-center sm:justify-end px-8 py-8">
-                <NextStepBtn options={whoWillUseThePlan} />
+              <div className="flex gap-4 justify-center py-14 px-8 sm:justify-between sm:px-0">
+                <PreviousStepBtn
+                  options={whoWillUseThePlan}
+                  executionFunc={() => changeStep(activeStep.value, "decrease")}
+                />
+
+                <NextStepBtn
+                  options={whoWillUseThePlan}
+                  executionFunc={handleNextStepFourthStep}
+                />
               </div>
             </div>
           </div>

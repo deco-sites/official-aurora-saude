@@ -1,4 +1,5 @@
 import { Signal } from "@preact/signals-core";
+import { useStepThreeInputValues } from "site/sdk/ThirdStep/useStepThreeInputValues.ts";
 
 export const handleDataChange = <T, K>(
     setSignal: Signal<T>,
@@ -8,6 +9,10 @@ export const handleDataChange = <T, K>(
     setSignal.value = { ...setSignal.value, [valueKey]: value };
     //setSignal({ ...state, [valueKey]: value })
 };
+
+const {
+    thirdStepSignal,
+} = useStepThreeInputValues();
 
 export const handleArrDataChange = <T, Y, K extends Y[keyof Y]>(
     setSignal: Signal<T>,

@@ -15,7 +15,7 @@ export default function NextStepBtn({ options, executionFunc }: INextStep) { //A
 
   return (
     <button
-      className="bg-orange1 sm:bg-transparent rounded-full flex items-center justify-center px-12 py-3 sm:p-0 gap-2 sm:gap-6"
+      className="bg-orange1 sm:bg-transparent rounded-full flex items-center justify-center px-8 py-3 sm:p-0 gap-2 sm:gap-6"
       onClick={(e) => {
         console.log(e);
         console.log("clicou", activeOption.value);

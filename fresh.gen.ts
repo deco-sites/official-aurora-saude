@@ -12,6 +12,7 @@ import * as $first_step_opt_btn from "./islands/first-step-opt-btn.tsx";
 import * as $new_simulation_btn from "./islands/new-simulation-btn.tsx";
 import * as $next_step_btn from "./islands/next-step-btn.tsx";
 import * as $plan_card from "./islands/plan-card.tsx";
+import * as $previous_step_btn from "./islands/previous-step-btn.tsx";
 import * as $receive_contact_btn from "./islands/receive-contact-btn.tsx";
 import * as $selected_plan from "./islands/selected-plan.tsx";
 import { type Manifest } from "$fresh/server.ts";
@@ -30,6 +31,7 @@ const manifest = {
     "./islands/new-simulation-btn.tsx": $new_simulation_btn,
     "./islands/next-step-btn.tsx": $next_step_btn,
     "./islands/plan-card.tsx": $plan_card,
+    "./islands/previous-step-btn.tsx": $previous_step_btn,
     "./islands/receive-contact-btn.tsx": $receive_contact_btn,
     "./islands/selected-plan.tsx": $selected_plan,
   },

@@ -9,9 +9,18 @@ import {
   handleDataChange,
 } from "../helpers/handleDataChange.ts";
 
+import { handleNextStepThirdStep } from "site/sdk/ThirdStep/checkStepThreeFields.ts";
+import { useMemo } from "preact/hooks";
+
 export default function AddBeneficiary() {
   const { thirdStepSignal } = useStepThreeInputValues();
   let beneficiariesArr = thirdStepSignal.value.beneficiariesValuesArr;
+
+  {
+    /*const idsWithEmptyRange = useMemo(() => handleNextStepThirdStep(), [
+    JSON.stringify(thirdStepSignal.value.beneficiariesValuesArr),
+  ]);*/
+  }
 
   const handleAddInput = () => {
     console.log("ESTOU AQUI", thirdStepSignal.value.beneficiariesValuesArr);
@@ -49,8 +58,8 @@ export default function AddBeneficiary() {
     <div className="flex flex-col gap-6">
       {thirdStepSignal.value.beneficiariesValuesArr.map((item, index) => {
         return (
-          <div key={item.id} className="flex gap-6">
-            <div className="w-full sm:w-1/4">
+          <div key={item.id} className="relative flex gap-6">
+            <div className="w-full sm:w-1/3">
               <InputSelect
                 id={`agerange-${item.id}`}
                 name={`agerange-${item.id}`}
@@ -58,7 +67,7 @@ export default function AddBeneficiary() {
                 options={agerangeoptions}
                 placeholder={"Selecione"}
                 value={item.range}
-                inputValueSetter={(value) =>
+                inputValueSetter={(value) => {
                   handleArrDataChange(
                     thirdStepSignal,
                     "beneficiariesValuesArr",
@@ -66,7 +75,9 @@ export default function AddBeneficiary() {
                     item,
                     "id",
                     "range",
-                  )}
+                  );
+                  handleNextStepThirdStep();
+                }}
                 wfull
               />
             </div>
@@ -89,6 +100,14 @@ export default function AddBeneficiary() {
                   "qty",
                 )}
             />
+
+            {thirdStepSignal.value.idsWithEmptyRange.includes(item.id) && (
+              <img
+                src={"/error-circle-icon.png"}
+                alt="Error Icon"
+                className="absolute h-5 w-5 left-[110px] top-[22px] sm:top-[10px] sm:left-[570px]"
+              />
+            )}
           </div>
         );
       })}

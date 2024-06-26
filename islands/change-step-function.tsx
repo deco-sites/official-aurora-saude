@@ -23,6 +23,8 @@ export default function changeStep(
   if (direction === "increase") {
     activeStep.value = currentStep + 1;
   } else if (direction === "decrease") {
+    activeStep.value = currentStep - 1;
+  } else if (direction === "specificStep") {
     activeStep.value = currentStep;
   }
 }

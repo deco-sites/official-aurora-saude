@@ -1,4 +1,5 @@
 import { useSelectPlanButtons } from "site/sdk/useSelectPlanButtons.ts";
+import { useSelectPlan } from "site/sdk/useSelectPlan.ts";
 
 interface IPlanBtnMobile {
   text1: string;
@@ -18,9 +19,15 @@ export default function PlanMobileButton(
   { text1, text2, id, color, scrollToCard }: IPlanBtnMobile,
 ) {
   const { activePlanBtn } = useSelectPlanButtons();
+  const { selectedPlan } = useSelectPlan();
 
   const handleClick = () => {
     activePlanBtn.value = id;
+    console.log("AQUI 1 - ", activePlanBtn.value);
+
+    selectedPlan.value = id;
+    console.log("AQUI 2 - ", selectedPlan.value);
+
     scrollToCard(id);
   };
 

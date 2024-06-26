@@ -1,5 +1,6 @@
 import { useSelectPlan } from "site/sdk/useSelectPlan.ts";
 import { signal } from "@preact/signals";
+import { useSelectPlanButtons } from "site/sdk/useSelectPlanButtons.ts";
 
 export interface IplanInfos {
   id: number;
@@ -29,16 +30,25 @@ export default function PlanCard({
   accommodation,
   color,
   onlybutton,
+  scrollToCard,
 }: IplanInfos) {
   const { selectedPlan } = useSelectPlan();
+  const { activePlanBtn } = useSelectPlanButtons();
 
   const handleSelectPlan = (id: number) => {
-    console.log(selectedPlan.value);
+    console.log("CHAMOU AQUI", selectedPlan.value);
+
+    activePlanBtn.value = id;
+    selectedPlan.value = id;
+    scrollToCard(id);
+    {
+      /*
     const index = selectedPlan.value.indexOf(id);
     if (index === -1) {
       selectedPlan.value = [...selectedPlan.value, id];
     } else {
       selectedPlan.value = selectedPlan.value.filter((item) => item !== id);
+    }*/
     }
   };
 
@@ -119,14 +129,15 @@ export default function PlanCard({
               <button
                 onClick={() => handleSelectPlan(id)}
                 className={`hidden sm:block rounded-full font-semibold text-sm w-36 py-2 ${
-                  selectedPlan.value.includes(id)
+                  selectedPlan.value === id
                     ? `${CARD_COLORS[color]} ${
                       color != "yellow" ? "text-yellow" : "text-[#FA7651]"
                     }`
                     : "bg-gray6 text-white"
                 }`}
               >
-                {selectedPlan.value.includes(id) ? "Selecionado" : "Selecionar"}
+                {/*selectedPlan.value.includes(id) ? "Selecionado" : "Selecionar"*/}
+                {selectedPlan.value === id ? "Selecionado" : "Selecionar"}
               </button>
             </div>
           </div>

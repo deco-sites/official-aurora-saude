@@ -46,7 +46,7 @@ export default function InputNumber(
 
   return (
     <>
-      <div className="flex items-center gap-8">
+      <div className="flex items-center gap-8 w-full">
         <div className="flex gap-2 items-center justify-center w-full sm:w-auto">
           <button onClick={() => handleButtonClick("decrement")}>
             <img src={"/minus-icon.png"} alt="Plus Icon" className="w-4" />

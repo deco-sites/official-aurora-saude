@@ -7,12 +7,17 @@ import {
 
 import { handleNextStepSecondStepOp2 } from "../sdk/SecondStepOption2/checkStepTwoOption2Fields.ts";
 import { useUI } from "site/sdk/useUI.ts";
+import PreviousStepBtn from "site/islands/previous-step-btn.tsx";
+import changeStep from "site/islands/change-step-function.tsx";
+import { useFormSteps } from "site/sdk/useFormSteps.ts";
 
 interface FormStepTwoProps {
   Component: React.ComponentType;
 }
 
 export default function FormStepTwo({ Component }: FormStepTwoProps) {
+  const { activeStep } = useFormSteps();
+
   const alreadyhaveplanoptions = [
     { value: "option1", text: "Opção 1" },
     { value: "option2", text: "Opção 2" },
@@ -21,6 +26,7 @@ export default function FormStepTwo({ Component }: FormStepTwoProps) {
 
   const { activeOption } = useUI();
 
+  console.log("TESTE 1 - BOTÃO VOLTAR", activeStep.value);
   return (
     <>
       <div className="flex justify-center sm:width-calc">
@@ -37,7 +43,12 @@ export default function FormStepTwo({ Component }: FormStepTwoProps) {
 
               {<Component />}
             </div>
-            <div className="flex justify-center sm:justify-end py-8 px-8 sm:px-0">
+            <div className="flex gap-4 justify-center py-14 px-8 sm:justify-between sm:px-0">
+              <PreviousStepBtn
+                options={alreadyhaveplanoptions}
+                executionFunc={() => changeStep(activeStep.value, "decrease")}
+              />
+
               <NextStepBtn
                 options={alreadyhaveplanoptions}
                 executionFunc={activeOption.value === 1

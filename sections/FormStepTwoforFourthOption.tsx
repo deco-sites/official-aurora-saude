@@ -13,13 +13,7 @@ import { useSelectPlanButtons } from "site/sdk/useSelectPlanButtons.ts";
 import PlanMobileButton from "site/islands/PlanMobileButton.tsx";
 import FormTitleH2 from "site/components/form-title-h2.tsx";
 import { CnpjMask } from "site/helpers/cnpjMask.ts";
-
-const plans = [
-  { id: 1, text1: "a100", text2: "", color: "orange" },
-  { id: 2, text1: "a300", text2: "enfermaria", color: "green" },
-  { id: 3, text1: "a500", text2: "enfermaria", color: "yellow" },
-  { id: 4, text1: "a500", text2: "apartamento", color: "yellow" },
-];
+import { plans } from "site/helpers/plansCards.ts";
 
 export default function FormStepTwoforFourthOption() {
   const [socialReasonPlaceholder, setSocialReasonPlaceholder] = useState(

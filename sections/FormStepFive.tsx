@@ -5,6 +5,8 @@ import SelectedPlanDetails from "site/components/selected-plan-details.tsx";
 import { useFormSteps } from "site/sdk/useFormSteps.ts";
 import NewSimulationButton from "../islands/new-simulation-btn.tsx";
 import ReceiveContactButton from "site/islands/receive-contact-btn.tsx";
+import PreviousStepBtn from "site/islands/previous-step-btn.tsx";
+import { whoWillUseThePlan } from "site/helpers/whoWillUseThePlan.ts";
 
 interface FormStepFourProps {
   Component: React.ComponentType;
@@ -26,7 +28,7 @@ export default function FormStepFive({ Component }: FormStepFourProps) {
             <FormTitleH1 text1={"Seu plano"} />
             <SelectedPlan />
             <SelectedPlanDetails />
-            <div className="flex flex-col sm:flex-row justify-end gap-8 my-8">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
               {
                 /*<button
                 onClick={(e) => {
@@ -44,12 +46,17 @@ export default function FormStepFive({ Component }: FormStepFourProps) {
                 Receber contato de <br /> um especialista
               </button>*/
               }
-
-              <ReceiveContactButton
-                number={activeStep.value}
-                mission={"increase"}
+              <PreviousStepBtn
+                options={whoWillUseThePlan}
+                executionFunc={() => changeStep(activeStep.value, "decrease")}
               />
-              <NewSimulationButton />
+              <div className="flex flex-col sm:flex-row justify-end gap-8 my-8">
+                <ReceiveContactButton
+                  number={activeStep.value}
+                  mission={"increase"}
+                />
+                <NewSimulationButton />
+              </div>
             </div>
           </div>
         </div>
