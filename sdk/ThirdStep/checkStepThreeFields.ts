@@ -9,7 +9,7 @@ const {
     thirdStepSignal,
 } = useStepThreeInputValues();
 
-export const handleNextStepThirdStep = () => {
+export const checkFieldsForThirdStep = () => {
     console.log(
         "Array dos Beneficiários:",
         thirdStepSignal.value.beneficiariesValuesArr,
@@ -25,10 +25,14 @@ export const handleNextStepThirdStep = () => {
             "ID'S DOS ITENS VAZIOS",
             thirdStepSignal.value.idsWithEmptyRange,
         );
+    }
+};
 
-        if (thirdStepSignal.value.idsWithEmptyRange.length === 0) {
-            changeStep(activeStep.value, "increase");
-        }
+export const handleNextStepThirdStep = () => {
+    checkFieldsForThirdStep();
+
+    if (thirdStepSignal.value.idsWithEmptyRange.length === 0) {
+        changeStep(activeStep.value, "increase");
     }
 
     // Validação dos campos do passo atual

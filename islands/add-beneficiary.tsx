@@ -9,8 +9,11 @@ import {
   handleDataChange,
 } from "../helpers/handleDataChange.ts";
 
-import { handleNextStepThirdStep } from "site/sdk/ThirdStep/checkStepThreeFields.ts";
-import { useMemo } from "preact/hooks";
+import {
+  checkFieldsForThirdStep,
+  handleNextStepThirdStep,
+} from "site/sdk/ThirdStep/checkStepThreeFields.ts";
+import { useEffect, useMemo } from "preact/hooks";
 
 export default function AddBeneficiary() {
   const { thirdStepSignal } = useStepThreeInputValues();
@@ -76,7 +79,8 @@ export default function AddBeneficiary() {
                     "id",
                     "range",
                   );
-                  handleNextStepThirdStep();
+
+                  checkFieldsForThirdStep();
                 }}
                 wfull
               />
