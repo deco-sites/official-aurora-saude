@@ -1,13 +1,19 @@
 import { useFormSteps } from "site/sdk/useFormSteps.ts";
 import { useStepThreeInputValues } from "./useStepThreeInputValues.ts";
 import { useBeneficiaryInputs } from "site/sdk/useBeneficiaryInputs.ts";
+import { useUI } from "site/sdk/useUI.ts";
 
 const { activeStep, changeStep } = useFormSteps();
 const { selectedBeneficiaryInput } = useBeneficiaryInputs();
 
 const {
     thirdStepSignal,
+    idsWithEmptyRange,
 } = useStepThreeInputValues();
+
+export const checkSingleSelect = (id: number) => {
+    idsWithEmptyRange.value = idsWithEmptyRange.value.filter((el) => id !== el);
+};
 
 export const checkFieldsForThirdStep = () => {
     console.log(
@@ -16,7 +22,7 @@ export const checkFieldsForThirdStep = () => {
     );
 
     if (activeStep.value === 3) {
-        thirdStepSignal.value.idsWithEmptyRange = thirdStepSignal.value
+        idsWithEmptyRange.value = thirdStepSignal.value
             .beneficiariesValuesArr
             .filter((item) => item.range === "")
             .map((item) => item.id);
@@ -25,13 +31,21 @@ export const checkFieldsForThirdStep = () => {
             "ID'S DOS ITENS VAZIOS",
             thirdStepSignal.value.idsWithEmptyRange,
         );
+        console.log("Lucca", thirdStepSignal.value.whoUseThePlan);
     }
 };
 
 export const handleNextStepThirdStep = () => {
-    checkFieldsForThirdStep();
+    if (thirdStepSignal.value.whoUseThePlan !== "somente_eu") {
+        checkFieldsForThirdStep();
+    }
 
-    if (thirdStepSignal.value.idsWithEmptyRange.length === 0) {
+    //TO-DO
+
+    if (
+        idsWithEmptyRange.value.length === 0 ||
+        thirdStepSignal.value.whoUseThePlan === "somente_eu"
+    ) {
         changeStep(activeStep.value, "increase");
     }
 

@@ -27,9 +27,11 @@ const thirdStepSchema: IThirdStepSchema = {
 
 //SecondStep Option 1
 const thirdStepSignal = signal(thirdStepSchema);
+const idsWithEmptyRange = signal<number[]>([]);
 
 const state = {
     thirdStepSignal,
+    idsWithEmptyRange,
 };
 
 export const useStepThreeInputValues = () => state;

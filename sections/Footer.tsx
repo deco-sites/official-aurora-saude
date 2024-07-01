@@ -20,28 +20,28 @@ function Footer({
   width = 50,
 }: Props) {
   return (
-    <div className="bg-gray1 sm:bg-transparent flex py-6 justify-center sm:border-t-[#f0ecec] sm:border-t-[1px] mt-12 sm:width-calc">
-      <footer className="flex flex-col gap-6 sm:flex-row items-center justify-between text-[#bcbcbc] text-xs sm:w-[1400px]">
+    <div className="bg-gray1 lg:bg-transparent flex py-6 justify-center lg:border-t-[#f0ecec] lg:border-t-[1px] mt-12 lg:width-calc">
+      <footer className="flex flex-col gap-6 lg:flex-row items-center justify-between text-[#bcbcbc] text-xs lg:w-[1400px]">
         <div className="flex items-center gap-12">
           <div className="bg-black p-1 inline-block">
             <div className="border-white border-[1px] p-[5px] inline-block">
               <span className="p-2">
-                ANS No: 423629
+                ANS Nº: 423629
               </span>
             </div>
           </div>
 
           <span>CNPJ: 49.955.478/0001-64</span>
         </div>
-        <span className="hidden text-center sm:flex">
-          Endereço: Alameda Oscar Niemeyer, 288 - sala 503 - Vila da Serra -
-          Nova Lima- MG
+        <span className="hidden text-center lg:flex">
+          Endereço: Rua Ministro Orozimbo Nonato, 422 - Sala 903 - Vila da Serra
+          - Nova Lima - MG
         </span>
         <img src={"/ans-logo.png"} alt="ANS Logo" className="" />
 
-        <span className="text-center sm:hidden">
-          Endereço: Alameda Oscar Niemeyer, 288 - sala 503 - Vila da Serra -
-          Nova Lima- MG
+        <span className="text-center lg:hidden">
+          Endereço: Rua Ministro Orozimbo Nonato, 422 - Sala 903 - Vila da Serra
+          - Nova Lima - MG
         </span>
         <span>Todos os Direitos Reservados © 2023</span>
       </footer>

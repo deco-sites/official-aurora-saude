@@ -23,22 +23,26 @@ export default function ThirdStepOption1() {
 
   return (
     <>
-      <div className="flex flex-col gap-4">
-        <FormTitleH1
-          text1={"Informe os dados das pessoas"}
-          text2={"que utilizarão o plano."}
-        />
+      <div className="flex flex-col">
+        <div className="pb-36">
+          <FormTitleH1
+            text1={"Informe os dados das pessoas"}
+            text2={"que utilizarão o plano."}
+          />
+        </div>
 
-        <InputSelect
-          id={"whowilluse"}
-          name={"whowilluse"}
-          label={"Quem utilizará o plano?"}
-          options={whoWillUseThePlan}
-          placeholder={"Somente eu"}
-          value={thirdStepSignal.value.whoUseThePlan}
-          inputValueSetter={(value) =>
-            handleDataChange(thirdStepSignal, `whoUseThePlan`, value)}
-        />
+        <div className="pb-24">
+          <InputSelect
+            id={"whowilluse"}
+            name={"whowilluse"}
+            label={"Quem utilizará o plano?"}
+            options={whoWillUseThePlan}
+            placeholder={"Somente eu"}
+            value={thirdStepSignal.value.whoUseThePlan}
+            inputValueSetter={(value) =>
+              handleDataChange(thirdStepSignal, `whoUseThePlan`, value)}
+          />
+        </div>
 
         {thirdStepSignal.value.whoUseThePlan != "somente_eu" && (
           <div className="flex flex-col gap-8">

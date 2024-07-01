@@ -42,12 +42,12 @@ export default function InputSelect(
 
   return (
     <div className="flex gap-6 items-center w-full">
-      <label className="hidden sm:flex text-orange1 text-nowrap" htmlFor={name}>
+      <label className="hidden lg:flex text-orange1 text-nowrap" htmlFor={name}>
         {label}
       </label>
-      <div className={`relative w-full sm:w-auto ${wfull && "sm:w-full"}`}>
+      <div className={`relative w-full lg:w-auto ${wfull && "lg:w-full"}`}>
         <select
-          className={`px-6 py-5 sm:py-2 rounded-md sm:rounded-full bg-black bg-opacity-[3%] outline-none text-[#9ca3be] appearance-none pr-8 w-full ${
+          className={`px-6 py-5 lg:py-2 rounded-md lg:rounded-full bg-black bg-opacity-[3%] outline-none text-[#9ca3be] appearance-none pr-8 w-full ${
             wfull && "w-full"
           }`}
           id={id}

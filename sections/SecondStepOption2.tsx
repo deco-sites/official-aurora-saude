@@ -63,7 +63,7 @@ export default function SecondStepOption2() {
             <img
               src={"/error-circle-icon.png"}
               alt="Error Icon"
-              className="h-5 w-5 absolute top-50 right-2 sm:left-[470px]"
+              className="h-5 w-5 absolute top-50 right-2 lg:left-[470px]"
             />
           )}
         </div>
@@ -81,7 +81,7 @@ export default function SecondStepOption2() {
             <img
               src={"/error-circle-icon.png"}
               alt="Error Icon"
-              className="h-5 w-5 absolute top-50 right-2 sm:left-[470px]"
+              className="h-5 w-5 absolute top-50 right-2 lg:left-[470px]"
             />
           )}
         </div>
@@ -99,7 +99,7 @@ export default function SecondStepOption2() {
             <img
               src={"/error-circle-icon.png"}
               alt="Error Icon"
-              className="h-5 w-5 absolute top-50 right-2 sm:left-[470px]"
+              className="h-5 w-5 absolute top-50 right-2 lg:left-[470px]"
             />
           )}
         </div>
@@ -117,7 +117,7 @@ export default function SecondStepOption2() {
             <img
               src={"/error-circle-icon.png"}
               alt="Error Icon"
-              className="h-5 w-5 absolute top-50 right-2 sm:left-[470px]"
+              className="h-5 w-5 absolute top-50 right-2 lg:left-[470px]"
             />
           )}
         </div>

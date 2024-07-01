@@ -14,6 +14,8 @@ import PlanMobileButton from "site/islands/PlanMobileButton.tsx";
 import FormTitleH2 from "site/components/form-title-h2.tsx";
 import { CnpjMask } from "site/helpers/cnpjMask.ts";
 import { plans } from "site/helpers/plansCards.ts";
+import PreviousStepBtn from "site/islands/previous-step-btn.tsx";
+import { whoWillUseThePlan } from "site/helpers/whoWillUseThePlan.ts";
 
 export default function FormStepTwoforFourthOption() {
   const [socialReasonPlaceholder, setSocialReasonPlaceholder] = useState(
@@ -116,11 +118,11 @@ export default function FormStepTwoforFourthOption() {
 
   return (
     <>
-      <div className="flex justify-center sm:width-calc">
-        <div className="flex flex-col sm:gap-6 w-screen sm:w-[1400px]">
-          <div className="bg-gray1 sm:bg-transparent flex flex-col-reverse sm:flex-row gap-6 w-full sm:max-h-96 p-8 sm:p-0">
-            <div className="flex items-center justify-center bg-pink1 rounded-2xl px-11 py-16 sm:p-24 w-full sm:w-[40%] h-full">
-              <span className="flex flex-col text-white text-2xl sm:text-xl font-semibold font-sora">
+      <div className="flex justify-center lg:width-calc">
+        <div className="flex flex-col lg:gap-4 w-screen lg:w-[1400px]">
+          <div className="bg-gray1 lg:bg-transparent flex flex-col-reverse lg:flex-row gap-4 w-full lg:max-h-[600px] p-8 lg:p-0">
+            <div className="flex items-center justify-center bg-pink1 rounded-2xl px-11 py-16 lg:p-24 w-full lg:w-[45%] h-full">
+              <span className="flex flex-col text-white text-2xl lg:text-xl font-semibold font-sora">
                 <span className="text-yellow">
                   Plano de saúde<br /> precisa estar junto.<br />
                 </span>
@@ -129,7 +131,7 @@ export default function FormStepTwoforFourthOption() {
                 colaboradores.
               </span>
             </div>
-            <div className="w-full sm:w-[60%] h-full flex items-center justify-center">
+            <div className="w-full lg:w-[55%] h-full flex items-center justify-center">
               <img
                 src={"/banner5.png"}
                 alt="Banner"
@@ -138,10 +140,10 @@ export default function FormStepTwoforFourthOption() {
             </div>
           </div>
 
-          <div className="bg-gray1 pb-12 pt-16 rounded-2xl sm:p-8 w-full">
+          <div className="bg-gray1 pb-12 pt-16 rounded-2xl lg:p-8 w-full">
             <div
               ref={plansDivTwoRef}
-              className="flex px-8 sm:pl-0 gap-4 overflow-x-scroll sm:grid sm:grid-cols-2 sm:gap-10 scrollbar-none snap-mandatory snap-x"
+              className="flex px-8 lg:pl-0 gap-4 overflow-x-scroll lg:grid lg:grid-cols-2 lg:gap-10 scrollbar-none snap-mandatory snap-x"
             >
               {plansInfos.map((item) => (
                 <PlanCard
@@ -159,7 +161,7 @@ export default function FormStepTwoforFourthOption() {
             </div>
           </div>
 
-          <div className="flex flex-col p-8 sm:hidden">
+          <div className="flex flex-col p-8 lg:hidden">
             <FormTitleH1 text1="Selecione o seu plano" />
             <div className="grid grid-cols-2 gap-2">
               {plans.map((plan) => (
@@ -178,8 +180,8 @@ export default function FormStepTwoforFourthOption() {
           <div className="bg-gray1 rounded-2xl p-8 w-full">
             <div className="flex flex-col gap-6">
               <FormTitleH2 text="Solicite o contato dos nossos especialistas:" />
-              <div className="flex flex-col sm:flex-row gap-8">
-                <div className="sm:w-[60%]">
+              <div className="flex flex-col lg:flex-row gap-8">
+                <div className="lg:w-[60%]">
                   <InputText
                     id={"socialreason"}
                     name={"socialreason"}
@@ -188,7 +190,7 @@ export default function FormStepTwoforFourthOption() {
                     wfull
                   />
                 </div>
-                <div className="sm:w-[40%]">
+                <div className="lg:w-[40%]">
                   <InputText
                     id={"cnpj"}
                     name={"cnpj"}
@@ -198,8 +200,8 @@ export default function FormStepTwoforFourthOption() {
                   />
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row gap-8">
-                <div className="sm:w-1/2">
+              <div className="flex flex-col lg:flex-row gap-8">
+                <div className="lg:w-1/2">
                   <InputText
                     id={"name"}
                     name={"name"}
@@ -208,7 +210,7 @@ export default function FormStepTwoforFourthOption() {
                     wfull
                   />
                 </div>
-                <div className="sm:w-1/2">
+                <div className="lg:w-1/2">
                   <InputText
                     id={"email"}
                     name={"email"}
@@ -218,8 +220,8 @@ export default function FormStepTwoforFourthOption() {
                   />
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row gap-8">
-                <div className="sm:w-[55%]">
+              <div className="flex flex-col lg:flex-row gap-8">
+                <div className="lg:w-[55%]">
                   <InputText
                     id={"tel"}
                     name={"tel"}
@@ -228,7 +230,7 @@ export default function FormStepTwoforFourthOption() {
                     wfull
                   />
                 </div>
-                <div className="sm:w-[45%]">
+                <div className="lg:w-[45%]">
                   <InputText
                     id={"lifesqty"}
                     name={"lifesqty"}
@@ -238,7 +240,7 @@ export default function FormStepTwoforFourthOption() {
                   />
                 </div>
               </div>
-              <div className="sm:w-[40%]">
+              <div className="lg:w-[30%]">
                 <InputSelect
                   id={"city"}
                   name={"city"}
@@ -258,7 +260,7 @@ export default function FormStepTwoforFourthOption() {
                 </span>
               </div>
 
-              <div className="flex flex-col sm:flex-row justify-end gap-8 my-8">
+              <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
                 {
                   /*<button
                   onClick={(e) => {
@@ -276,8 +278,14 @@ export default function FormStepTwoforFourthOption() {
                   Receber contato de <br /> especialistas
                 </button>*/
                 }
-                <ReceiveContactButton number={5} mission={"increase"} />
-                <NewSimulationButton />
+                <PreviousStepBtn
+                  options={whoWillUseThePlan}
+                  executionFunc={() => changeStep(activeStep.value, "decrease")}
+                />
+                <div className="flex flex-col lg:flex-row justify-end gap-8 my-8">
+                  <ReceiveContactButton number={5} mission={"increase"} />
+                  <NewSimulationButton />
+                </div>
               </div>
             </div>
           </div>

@@ -56,7 +56,7 @@ export default function ProgressTracker({ currentStep }) {
         //Antes do step.status === true eu estava usando index + 1 <= currentStep
         <div
           key={index}
-          className="relative flex flex-col sm:flex-1 max-w-60"
+          className="relative flex flex-col lg:flex-1 max-w-60"
         >
           <button
             disabled={!step.status}

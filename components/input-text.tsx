@@ -22,12 +22,12 @@ export default function InputText(
 
   return (
     <div className={`flex gap-6 items-center w-full`}>
-      <label className="hidden sm:flex text-orange1 text-nowrap" htmlFor={name}>
+      <label className="hidden lg:flex text-orange1 text-nowrap" htmlFor={name}>
         {label}:
       </label>
       <input
-        className={`px-6 py-5 sm:py-2 rounded-md sm:rounded-full bg-black bg-opacity-[3%] outline-none w-full sm:w-auto text-gray3 ${
-          wfull ? "sm:w-full" : ""
+        className={`px-6 py-5 lg:py-2 rounded-md lg:rounded-full bg-black bg-opacity-[3%] outline-none w-full lg:w-auto text-gray3 ${
+          wfull ? "lg:w-full" : ""
         }`}
         type="text"
         id={id}

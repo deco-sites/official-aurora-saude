@@ -82,21 +82,21 @@ export default function FormStepFour({ Component }: FormStepFourProps) {
 
   return (
     <>
-      <div className="flex justify-center sm:width-calc">
-        <div className="flex gap-6 sm:w-[1400px]">
-          <div className="bg-white sm:bg-gray1 rounded-2xl sm:p-8 w-full">
-            <div className="overflow-x-auto sm:overflow-x-visible pl-8 sm:pl-0 w-screen sm:w-full scrollbar-none">
+      <div className="flex justify-center lg:width-calc">
+        <div className="flex gap-6 lg:w-[1400px]">
+          <div className="bg-white lg:bg-gray1 rounded-2xl lg:p-8 w-full">
+            <div className="overflow-x-auto lg:overflow-x-visible pl-8 lg:pl-0 w-screen lg:w-full scrollbar-none">
               <ProgressTracker currentStep={4} />
             </div>
 
-            <div className="flex flex-col gap-4 sm:px-0 w-screen sm:w-auto">
-              <div className="pl-8 sm:pl-0">
+            <div className="flex flex-col gap-4 lg:px-0 w-screen lg:w-auto">
+              <div className="pl-8 lg:pl-0">
                 <FormTitleH1 text1={"Escolha seu plano"} />
               </div>
 
               <div
                 ref={plansDivRef}
-                className="flex px-8 sm:pl-0 gap-4 overflow-x-scroll sm:grid sm:grid-cols-2 sm:gap-10 scrollbar-none snap-mandatory snap-x"
+                className="flex px-8 lg:pl-0 gap-4 overflow-x-scroll lg:grid lg:grid-cols-2 lg:gap-10 scrollbar-none snap-mandatory snap-x"
               >
                 {plansInfos.map((item) => (
                   <PlanCard
@@ -113,7 +113,7 @@ export default function FormStepFour({ Component }: FormStepFourProps) {
                 ))}
               </div>
 
-              <div className="flex flex-col p-8 sm:hidden">
+              <div className="flex flex-col p-8 lg:hidden">
                 <FormTitleH1 text1="Selecione o seu plano" />
                 {/*ref={$PlansDiv}    scrolledDiv={$PlansDiv}*/}
                 <div className="grid grid-cols-2 gap-2">
@@ -132,7 +132,7 @@ export default function FormStepFour({ Component }: FormStepFourProps) {
 
               {/*<Component />*/}
 
-              <div className="flex gap-4 justify-center py-14 px-8 sm:justify-between sm:px-0">
+              <div className="flex gap-4 justify-center py-14 px-8 lg:justify-between lg:px-0">
                 <PreviousStepBtn
                   options={whoWillUseThePlan}
                   executionFunc={() => changeStep(activeStep.value, "decrease")}

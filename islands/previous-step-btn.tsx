@@ -15,7 +15,7 @@ export default function PreviousStepBtn({ options, executionFunc }: INextStep) {
 
     return (
         <button
-            className="bg-orange1 sm:bg-transparent rounded-full flex items-center justify-center px-8 py-3 sm:p-0 gap-2 sm:gap-6"
+            className="bg-orange1 lg:bg-transparent rounded-full flex items-center justify-center px-8 py-3 lg:p-0 gap-2 lg:gap-6"
             onClick={(e) => {
                 console.log(e);
                 console.log("clicou", activeOption.value);
@@ -41,7 +41,7 @@ export default function PreviousStepBtn({ options, executionFunc }: INextStep) {
                     className="w-6 rotate-180"
                 />
             </div>
-            <span className="text-white sm:text-orange1">Anterior</span>
+            <span className="text-white lg:text-orange1">Anterior</span>
         </button>
     );
 }

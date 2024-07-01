@@ -75,7 +75,7 @@ export default function PlanCard({
         </span>
       </div>
 
-      <div className="flex flex-col gap-4 bg-black bg-opacity-[2%] sm:bg-white rounded-xl p-10">
+      <div className="flex flex-col gap-4 bg-black bg-opacity-[2%] lg:bg-white rounded-xl p-10">
         <div className="border-b flex items-center py-4">
           <span className="text-sm text-black text-opacity-25">
             <strong>Segmentação:</strong> {segmentation}
@@ -105,7 +105,7 @@ export default function PlanCard({
           <a
             href={"https://wa.me/5521965494547?text=Mensagem%20padr%C3%A3o"}
             target="_blank"
-            className="hidden sm:flex justify-center"
+            className="hidden lg:flex justify-center"
           >
             <button
               className={`${
@@ -119,7 +119,7 @@ export default function PlanCard({
           </a>
         )
         : (
-          <div className="flex flex-col justify-between border-[1px] border-[#D9D9D9] rounded-2xl sm:rounded-xl px-10 py-3">
+          <div className="flex flex-col justify-between border-[1px] border-[#D9D9D9] rounded-2xl lg:rounded-xl px-10 py-3">
             <span className="text-[#D9D9D9] text-sm">A partir de</span>
             <div className="flex justify-between">
               <span className="text-[#FA7651] text-2xl font-semibold font-sora">
@@ -128,7 +128,7 @@ export default function PlanCard({
 
               <button
                 onClick={() => handleSelectPlan(id)}
-                className={`hidden sm:block rounded-full font-semibold text-sm w-36 py-2 ${
+                className={`hidden lg:block rounded-full font-semibold text-sm w-36 py-2 ${
                   selectedPlan.value === id
                     ? `${CARD_COLORS[color]} ${
                       color != "yellow" ? "text-yellow" : "text-[#FA7651]"

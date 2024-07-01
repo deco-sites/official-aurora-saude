@@ -11,13 +11,13 @@ import {
 
 import {
   checkFieldsForThirdStep,
+  checkSingleSelect,
   handleNextStepThirdStep,
 } from "site/sdk/ThirdStep/checkStepThreeFields.ts";
 import { useEffect, useMemo } from "preact/hooks";
 
 export default function AddBeneficiary() {
-  const { thirdStepSignal } = useStepThreeInputValues();
-  let beneficiariesArr = thirdStepSignal.value.beneficiariesValuesArr;
+  const { thirdStepSignal, idsWithEmptyRange } = useStepThreeInputValues();
 
   {
     /*const idsWithEmptyRange = useMemo(() => handleNextStepThirdStep(), [
@@ -62,7 +62,7 @@ export default function AddBeneficiary() {
       {thirdStepSignal.value.beneficiariesValuesArr.map((item, index) => {
         return (
           <div key={item.id} className="relative flex gap-6">
-            <div className="w-full sm:w-1/3">
+            <div className="w-full lg:w-1/3">
               <InputSelect
                 id={`agerange-${item.id}`}
                 name={`agerange-${item.id}`}
@@ -80,7 +80,7 @@ export default function AddBeneficiary() {
                     "range",
                   );
 
-                  checkFieldsForThirdStep();
+                  checkSingleSelect(item.id);
                 }}
                 wfull
               />
@@ -105,11 +105,11 @@ export default function AddBeneficiary() {
                 )}
             />
 
-            {thirdStepSignal.value.idsWithEmptyRange.includes(item.id) && (
+            {idsWithEmptyRange.value.includes(item.id) && (
               <img
                 src={"/error-circle-icon.png"}
                 alt="Error Icon"
-                className="absolute h-5 w-5 left-[110px] top-[22px] sm:top-[10px] sm:left-[570px]"
+                className="absolute h-5 w-5 left-[110px] top-[22px] lg:top-[10px] lg:left-[570px]"
               />
             )}
           </div>
