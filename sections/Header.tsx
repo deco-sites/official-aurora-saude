@@ -25,8 +25,8 @@ export default function Section(
   { logo, buttonReceiveContact, buttonBackToSite }: Props,
 ) {
   return (
-    <div className="flex justify-center lg:width-calc">
-      <header className="w-full flex items-center justify-center lg:justify-between py-10 lg:max-w-[1400px]">
+    <div className="flex justify-center lg:width-calc z-50 bg-white ">
+      <header className="fixed bg-white z-50 w-full flex items-center justify-center lg:justify-between py-10 lg:max-w-[1400px]">
         <Image
           src={"/logo_simulador.png"}
           alt="Aurora Simulador Logo"

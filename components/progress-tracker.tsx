@@ -61,7 +61,7 @@ export default function ProgressTracker({ currentStep }) {
           <button
             disabled={!step.status}
             onClick={() => changeStep(step.step, "specificStep")}
-            className={`w-6 h-6 rounded-full flex items-center justify-center z-50 ${
+            className={`w-6 h-6 rounded-full flex items-center justify-center z-40 ${
               step.status === true
                 ? "bg-orange1 text-white"
                 : "bg-orange2 text-orange2"

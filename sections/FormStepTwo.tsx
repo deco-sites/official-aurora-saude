@@ -29,7 +29,7 @@ export default function FormStepTwo({ Component }: FormStepTwoProps) {
   console.log("TESTE 1 - BOTÃO VOLTAR", activeStep.value);
   return (
     <>
-      <div className="flex justify-center lg:width-calc">
+      <div className="flex justify-center lg:width-calc mt-32">
         <div className="flex gap-6 lg:w-[1400px]">
           <div className="bg-white lg:bg-gray1 rounded-2xl lg:p-8 w-full">
             <div className="overflow-x-auto lg:overflow-x-visible pl-8 lg:pl-0 w-screen lg:w-full scrollbar-none">

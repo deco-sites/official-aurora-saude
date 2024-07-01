@@ -5,7 +5,9 @@ export default function SelectedPlanDetails() {
   return (
     <>
       <div className="flex flex-col">
-        <FormTitleH1 text1={"Detalhamento do"} text2={"seu plano"} />
+        <div className="my-20">
+          <FormTitleH1 text1={"Detalhamento do"} text2={"seu plano"} />
+        </div>
         <div className="flex flex-col lg:flex-row justify-between border-b pb-16">
           <div className="flex flex-col gap-8 mb-8 lg:mb-0 pb-8 lg:pb-0 border-b-gray1 border-b-2 lg:border-none">
             <div className="flex flex-col gap-5">
