@@ -1,14 +1,15 @@
 import { useFormSteps } from "site/sdk/useFormSteps.ts";
 
 import { useBeneficiaryInputs } from "site/sdk/useBeneficiaryInputs.ts";
+import { useSelectPlanButtons } from "site/sdk/useSelectPlanButtons.ts";
 
 const { activeStep, changeStep } = useFormSteps();
 const { selectedBeneficiaryInput } = useBeneficiaryInputs();
 
+const { activePlanBtn } = useSelectPlanButtons();
+
 export const handleNextStepFourthStep = () => {
-    console.log(
-        "Quarto passo",
-    );
+    //console.log("Verificação quarto passo", activePlanBtn.value);
 
     changeStep(activeStep.value, "increase");
 

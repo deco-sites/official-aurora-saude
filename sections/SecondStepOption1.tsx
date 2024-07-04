@@ -67,7 +67,7 @@ export default function SecondStepOption1() {
       <div className="flex flex-col gap-8">
         <FormTitleH2 text={"Informações de contato:"} />
 
-        <div className="relative flex gap-2 items-center">
+        <div className="relative flex gap-2 items-center lg:w-[600px]">
           <InputText
             id={"name"}
             name={"name"}
@@ -75,18 +75,19 @@ export default function SecondStepOption1() {
             placeholder={namePlaceholder}
             value={nameValue.value}
             inputValueSetter={(value) => nameValue.value = value}
+            wfull
           />
 
           {nameError.value && (
             <img
               src={"/error-circle-icon.png"}
               alt="Error Icon"
-              className="h-5 w-5 absolute top-50 right-7 lg:left-[470px]"
+              className="h-5 w-5 absolute top-50 right-7 lg:left-[615px]"
             />
           )}
         </div>
 
-        <div className="relative flex gap-2 items-center">
+        <div className="relative flex gap-2 items-center lg:w-[500px]">
           <InputText
             id={"email"}
             name={"email"}
@@ -94,12 +95,13 @@ export default function SecondStepOption1() {
             placeholder={emailPlaceholder}
             value={emailValue.value}
             inputValueSetter={(value) => emailValue.value = value}
+            wfull
           />
           {emailError.value && (
             <img
               src={"/error-circle-icon.png"}
               alt="Error Icon"
-              className="h-5 w-5 absolute top-50 right-7 lg:left-[470px]"
+              className="h-5 w-5 absolute top-50 right-7 lg:left-[615px]"
             />
           )}
         </div>
@@ -126,7 +128,7 @@ export default function SecondStepOption1() {
             <img
               src={"/error-circle-icon.png"}
               alt="Error Icon"
-              className="h-5 w-5 absolute top-50 right-7 lg:left-[470px]"
+              className="h-5 w-5 absolute top-50 right-7 lg:left-[615px]"
             />
           )}
         </div>
@@ -145,7 +147,7 @@ export default function SecondStepOption1() {
             <img
               src={"/error-circle-icon.png"}
               alt="Error Icon"
-              className="h-5 w-5 absolute top-50 right-7 lg:left-[470px]"
+              className="h-5 w-5 absolute top-50 right-7 lg:left-[615px]"
             />
           )}
         </div>
@@ -166,7 +168,7 @@ export default function SecondStepOption1() {
             <img
               src={"/error-circle-icon.png"}
               alt="Error Icon"
-              className="h-5 w-5 absolute top-50 right-7 lg:left-[470px]"
+              className="h-5 w-5 absolute top-50 right-7 lg:left-[615px]"
             />
           )}
         </div>
@@ -185,7 +187,7 @@ export default function SecondStepOption1() {
             <img
               src={"/error-circle-icon.png"}
               alt="Error Icon"
-              className="h-5 w-5 absolute top-50 right-7 lg:left-[470px]"
+              className="h-5 w-5 absolute top-50 right-7 lg:left-[615px]"
             />
           )}
         </div>

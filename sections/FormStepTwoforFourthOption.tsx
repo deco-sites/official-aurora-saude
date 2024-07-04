@@ -118,10 +118,10 @@ export default function FormStepTwoforFourthOption() {
 
   return (
     <>
-      <div className="flex justify-center lg:width-calc">
+      <div className="flex justify-center lg:width-calc mt-32">
         <div className="flex flex-col lg:gap-4 w-screen lg:w-[1400px]">
           <div className="bg-gray1 lg:bg-transparent flex flex-col-reverse lg:flex-row gap-4 w-full lg:max-h-[600px] p-8 lg:p-0">
-            <div className="flex items-center justify-center bg-pink1 rounded-2xl px-11 py-16 lg:p-24 w-full lg:w-[45%] h-full">
+            <div className="flex items-center justify-center bg-pink1 rounded-2xl px-11 py-16 lg:p-24 w-full lg:w-1/2 h-full">
               <span className="flex flex-col text-white text-2xl lg:text-xl font-semibold font-sora">
                 <span className="text-yellow">
                   Plano de saúde<br /> precisa estar junto.<br />
@@ -131,7 +131,7 @@ export default function FormStepTwoforFourthOption() {
                 colaboradores.
               </span>
             </div>
-            <div className="w-full lg:w-[55%] h-full flex items-center justify-center">
+            <div className="w-full lg:w-1/2 h-full flex items-center justify-center">
               <img
                 src={"/banner5.png"}
                 alt="Banner"
@@ -143,7 +143,7 @@ export default function FormStepTwoforFourthOption() {
           <div className="bg-gray1 pb-12 pt-16 rounded-2xl lg:p-8 w-full">
             <div
               ref={plansDivTwoRef}
-              className="flex px-8 lg:pl-0 gap-4 overflow-x-scroll lg:grid lg:grid-cols-2 lg:gap-10 scrollbar-none snap-mandatory snap-x"
+              className="flex px-8 gap-4 overflow-x-scroll lg:grid lg:grid-cols-2 lg:gap-10 scrollbar-none snap-mandatory snap-x"
             >
               {plansInfos.map((item) => (
                 <PlanCard
@@ -251,8 +251,38 @@ export default function FormStepTwoforFourthOption() {
                 />
               </div>
 
-              <div className="flex gap-6 my-8">
-                <input type="checkbox" />
+              <div className="flex gap-4 items-center my-8">
+                <div className="inline-flex items-center">
+                  <label
+                    className="relative flex items-center p-3 rounded-full cursor-pointer"
+                    htmlFor="agreeCheckbox"
+                  >
+                    <input
+                      type="checkbox"
+                      className="before:content[''] peer relative h-4 w-4 cursor-pointer appearance-none rounded-full border border-gray-900/20 bg-gray-900/10 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-orange2 checked:bg-orange1 checked:before:bg-orange1 hover:scale-105 hover:before:opacity-0"
+                      id="agreeCheckbox"
+                      required
+                    />
+                    <span className="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-2.5 w-2.5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="1"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        >
+                        </path>
+                      </svg>
+                    </span>
+                  </label>
+                </div>
+
                 <span className="text-xs text-black text-opacity-25">
                   Concordo em receber o contato e as informações comerciais da
                   Aurora Saúde por meio dos dados fornecidos acima, que serão

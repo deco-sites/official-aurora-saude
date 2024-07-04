@@ -11,6 +11,8 @@ const {
     idsWithEmptyRange,
 } = useStepThreeInputValues();
 
+const { activeOption } = useUI();
+
 export const checkSingleSelect = (id: number) => {
     idsWithEmptyRange.value = idsWithEmptyRange.value.filter((el) => id !== el);
 };
@@ -20,6 +22,7 @@ export const checkFieldsForThirdStep = () => {
         "Array dos Beneficiários:",
         thirdStepSignal.value.beneficiariesValuesArr,
     );
+    console.log("Luquinha 1", activeOption.value);
 
     if (activeStep.value === 3) {
         idsWithEmptyRange.value = thirdStepSignal.value
@@ -36,7 +39,10 @@ export const checkFieldsForThirdStep = () => {
 };
 
 export const handleNextStepThirdStep = () => {
-    if (thirdStepSignal.value.whoUseThePlan !== "somente_eu") {
+    if (
+        thirdStepSignal.value.whoUseThePlan !== "somente_eu" ||
+        activeOption.value !== 1
+    ) {
         checkFieldsForThirdStep();
     }
 
@@ -44,7 +50,8 @@ export const handleNextStepThirdStep = () => {
 
     if (
         idsWithEmptyRange.value.length === 0 ||
-        thirdStepSignal.value.whoUseThePlan === "somente_eu"
+        (activeOption.value === 1 &&
+            thirdStepSignal.value.whoUseThePlan === "somente_eu")
     ) {
         changeStep(activeStep.value, "increase");
     }

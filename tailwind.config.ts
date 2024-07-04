@@ -75,6 +75,7 @@ export default {
         gray6: "#DCDCDC",
         gray7: "#727272",
         gray8: "#B8B8B8",
+        gray9: "#D9D9D9",
         aquagreen: "#72CCCC",
         green: "#70FF00",
         yellow: "#FCFF73",

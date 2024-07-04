@@ -17,7 +17,7 @@ export default function changeStep(step, action) {
 
 export default function changeStep(
   currentStep: number,
-  direction: "increase" | "decrease",
+  direction: "increase" | "decrease" | "specificStep",
 ) {
   const { activeStep } = useFormSteps();
   if (direction === "increase") {

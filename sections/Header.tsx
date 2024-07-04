@@ -34,13 +34,13 @@ export default function Section(
           style={{ width: `${logo.width}px` }}
         />
 
-        <div className="hidden justify-center gap-4 lg:flex">
+        <div className="hidden justify-center gap-7 lg:flex">
           <a
             href={buttonReceiveContact.link ??
               "https://wa.me/5521965494547?text=Mensagem%20padr%C3%A3o"}
             target="_blank"
           >
-            <button className="flex items-center gap-2 bg-gray5 text-gray7 text-xs px-5 rounded-full py-3">
+            <button className="flex items-center gap-2 bg-gray5 text-gray7 text-xs px-7 rounded-full py-3">
               <div className="w-5 h-5 bg-no-repeat animate-sprite bg-cover">
               </div>
 
@@ -60,7 +60,7 @@ export default function Section(
           </a>
 
           <a href={buttonBackToSite.link ?? "/"}>
-            <button className="bg-orange1 text-white text-xs px-5 rounded-full py-3">
+            <button className="bg-orange1 text-white text-xs px-7 rounded-full py-3">
               <div
                 dangerouslySetInnerHTML={{
                   __html: buttonBackToSite.text ?? "Voltar para o site",

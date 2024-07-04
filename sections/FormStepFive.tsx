@@ -7,6 +7,12 @@ import NewSimulationButton from "../islands/new-simulation-btn.tsx";
 import ReceiveContactButton from "site/islands/receive-contact-btn.tsx";
 import PreviousStepBtn from "site/islands/previous-step-btn.tsx";
 import { whoWillUseThePlan } from "site/helpers/whoWillUseThePlan.ts";
+import { useUI } from "site/sdk/useUI.ts";
+import { useStepTwoOption1InputValues } from "site/sdk/SecondStepOption1/useStepTwoOption1InputValues.ts";
+import { useStepTwoOption2InputValues } from "site/sdk/SecondStepOption2/useStepTwoOption2InputValues.ts";
+import { useStepThreeInputValues } from "site/sdk/ThirdStep/useStepThreeInputValues.ts";
+import { useSelectPlanButtons } from "site/sdk/useSelectPlanButtons.ts";
+import { plansInfos } from "site/helpers/plansInfos.ts";
 
 interface FormStepFourProps {
   Component: React.ComponentType;
@@ -14,6 +20,60 @@ interface FormStepFourProps {
 
 export default function FormStepFive({ Component }: FormStepFourProps) {
   const { activeStep, changeStep } = useFormSteps();
+
+  //Step 1
+  const { activeOption } = useUI();
+  console.log("Step1", activeOption.value);
+
+  //Step 2
+  const {
+    nameValue,
+    emailValue,
+    telValue,
+    cityValue,
+    ageRangeValue,
+    alreadyHavePlanValue,
+  } = useStepTwoOption1InputValues();
+
+  console.log(
+    "Step2",
+    nameValue.value,
+    emailValue.value,
+    telValue.value,
+    cityValue.value,
+    ageRangeValue.value,
+    alreadyHavePlanValue.value,
+  );
+
+  //Step 2 option 2
+  const {
+    socialReasonValue,
+    name2Value,
+    tel2Value,
+    email2Value,
+  } = useStepTwoOption2InputValues();
+
+  console.log(
+    "step2 option 2",
+    socialReasonValue.value,
+    name2Value.value,
+    tel2Value.value,
+    email2Value.value,
+  );
+
+  //Step 3
+  const {
+    thirdStepSignal,
+  } = useStepThreeInputValues();
+  console.log(
+    "step 3",
+    thirdStepSignal.value.whoUseThePlan,
+    thirdStepSignal.value.beneficiariesValuesArr,
+  );
+
+  //Step 4
+  const { activePlanBtn } = useSelectPlanButtons();
+  console.log("Step4", activePlanBtn.value);
 
   return (
     <>
@@ -30,8 +90,17 @@ export default function FormStepFive({ Component }: FormStepFourProps) {
                 <FormTitleH1 text1={"Seu plano"} />
               </div>
 
-              <SelectedPlan />
-              <SelectedPlanDetails />
+              <SelectedPlan
+                selectedPlan={plansInfos[activePlanBtn.value - 1].title}
+              />
+              <SelectedPlanDetails
+                simulationType={activeOption.value}
+                name={nameValue.value}
+                email={emailValue.value}
+                alreadyHavePlan={alreadyHavePlanValue.value}
+                whoUseThePlan={thirdStepSignal.value.whoUseThePlan}
+                beneficiariesArr={thirdStepSignal.value.beneficiariesValuesArr}
+              />
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
                 {
                   /*<button

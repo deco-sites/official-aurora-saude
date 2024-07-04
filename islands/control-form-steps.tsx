@@ -11,11 +11,20 @@ import ThirdStepOption1 from "site/sections/ThirdStepOption1.tsx";
 import ThirdStepOption2 from "site/sections/ThirdStepOption2.tsx";
 import FormStepTwoforFourthOption from "site/sections/FormStepTwoforFourthOption.tsx";
 import CompletedForm from "site/sections/CompletedForm.tsx";
+import { useEffect } from "preact/hooks";
 
 export default function ControlFormSteps() {
   const { activeStep } = useFormSteps();
   const { activeOption } = useUI();
-  console.log("clarinha", activeOption.value);
+
+  useEffect(() => {
+    if (typeof globalThis !== "undefined") {
+      globalThis.scrollTo(0, 0);
+    }
+
+    console.log("Chamou essa bagaça aqui");
+  }, [activeStep.value]);
+
   return (
     <>
       {activeStep.value === 1 && <FormStepOne />}

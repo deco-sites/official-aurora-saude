@@ -50,7 +50,7 @@ export default function SecondStepOption2() {
       <div className="flex flex-col gap-8">
         <FormTitleH2 text={"Informações de contato:"} />
 
-        <div className="relative flex gap-2 items-center">
+        <div className="relative flex gap-2 items-center lg:w-[500px]">
           <InputText
             id={"corporatereason"}
             name={"corporatereason"}
@@ -58,17 +58,18 @@ export default function SecondStepOption2() {
             placeholder={socialReasonPlaceholder}
             value={socialReasonValue.value}
             inputValueSetter={(value) => socialReasonValue.value = value}
+            wfull
           />
           {socialReasonError.value && (
             <img
               src={"/error-circle-icon.png"}
               alt="Error Icon"
-              className="h-5 w-5 absolute top-50 right-2 lg:left-[470px]"
+              className="h-5 w-5 absolute top-50 right-2 lg:left-[520px]"
             />
           )}
         </div>
 
-        <div className="relative flex gap-2 items-center">
+        <div className="relative flex gap-2 items-center lg:w-[500px]">
           <InputText
             id={"name"}
             name={"name"}
@@ -76,12 +77,13 @@ export default function SecondStepOption2() {
             placeholder={namePlaceholder}
             value={name2Value.value}
             inputValueSetter={(value) => name2Value.value = value}
+            wfull
           />
           {name2Error.value && (
             <img
               src={"/error-circle-icon.png"}
               alt="Error Icon"
-              className="h-5 w-5 absolute top-50 right-2 lg:left-[470px]"
+              className="h-5 w-5 absolute top-50 right-2 lg:left-[520px]"
             />
           )}
         </div>
@@ -99,12 +101,12 @@ export default function SecondStepOption2() {
             <img
               src={"/error-circle-icon.png"}
               alt="Error Icon"
-              className="h-5 w-5 absolute top-50 right-2 lg:left-[470px]"
+              className="h-5 w-5 absolute top-50 right-2 lg:left-[520px]"
             />
           )}
         </div>
 
-        <div className="relative flex gap-2 items-center">
+        <div className="relative flex gap-2 items-center lg:w-[500px]">
           <InputText
             id={"email"}
             name={"email"}
@@ -112,12 +114,14 @@ export default function SecondStepOption2() {
             placeholder={emailPlaceholder}
             value={email2Value.value}
             inputValueSetter={(value) => email2Value.value = value}
+            w
+            wfull
           />
           {email2Error.value && (
             <img
               src={"/error-circle-icon.png"}
               alt="Error Icon"
-              className="h-5 w-5 absolute top-50 right-2 lg:left-[470px]"
+              className="h-5 w-5 absolute top-50 right-2 lg:left-[520px]"
             />
           )}
         </div>

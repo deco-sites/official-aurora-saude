@@ -1,8 +1,11 @@
 import { useUI } from "site/sdk/useUI.ts";
 
-export default function SelectedPlan() {
+interface ISelectedPlan {
+  selectedPlan: string;
+}
+
+export default function SelectedPlan({ selectedPlan }: ISelectedPlan) {
   const { activeOption } = useUI();
-  console.log("ericão", activeOption.value);
 
   return (
     <div className="flex flex-col gap-6 lg:gap-0 lg:flex-row justify-between bg-orange1 rounded-2xl px-8 lg:px-28 py-16">
@@ -12,7 +15,8 @@ export default function SelectedPlan() {
             O plano escolhido foi:
           </span>
           <span className="hidden lg:flex text-yellow font-bold font-sora text-6xl ">
-            a100 rmbh
+            {selectedPlan}
+            {/*a100 rmbh*/}
           </span>
           <span className="lg:hidden text-yellow font-bold font-sora py-4 text-5xl ">
             a100 <br /> rmbh
@@ -51,22 +55,26 @@ export default function SelectedPlan() {
         </div>
         {activeOption.value === 1 && (
           <div className="flex flex-col gap-6 px-8 lg:px-12 py-6 border-[1px] border-yellow rounded-2xl text-white lg:w-64">
-            <div className="flex items-center gap-2">
+            <a href="#" className="flex items-center gap-2">
               <img src={"/desktop-icon.png"} alt="icon" className="w-4" />
               <span className="text-sm font-semibold">
                 Enviar simulação por e-mail
               </span>
-            </div>
-            <div className="flex items-center gap-2">
+            </a>
+            <a href="#" className="flex items-center gap-2">
               <img src={"/user-icon.png"} alt="icon" className="w-4" />
               <span className="text-sm font-semibold">
                 Receber contato de um consultor
               </span>
-            </div>
-            <div className="flex items-center gap-2">
+            </a>
+            {
+              /*
+            <a href="#" className="flex items-center gap-2">
               <img src={"/store-icon.png"} alt="icon" className="w-4" />
               <span className="text-sm font-semibold">Nossas lojas</span>
-            </div>
+            </a>
+            */
+            }
           </div>
         )}
       </div>
