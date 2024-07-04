@@ -84,7 +84,8 @@ export default function ProgressTracker({ currentStep }) {
               className={`absolute top-3 w-full h-px 
               ${step.status === true ? "bg-orange1" : "bg-orange2"}
               ${
-                step.status === true && updatedSteps[index + 1].status === false
+                step.status === true &&
+                  updatedSteps[index + 1].status === false
                   ? "bg-gradient-to-r from-orange1 to-orange2"
                   : ""
               }`}
