@@ -417,7 +417,7 @@ const ButtonSizesPreview = () => {
   const buttonSizes = {
     lg: "Large",
     md: "Normal",
-    lg: "Small",
+    sm: "Small",
     xs: "Tiny",
   };
 

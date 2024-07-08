@@ -11,51 +11,51 @@ export default {
         spriteAnimation: {
           "0%": {
             backgroundImage:
-              'url("/ReceiveContactBtnSprites/receive-contact-btn-sprite1.png")',
+              'url("/Simulador/ReceiveContactBtnSprites/receive-contact-btn-sprite1.png")',
           },
           "5%": {
             backgroundImage:
-              'url("/ReceiveContactBtnSprites/receive-contact-btn-sprite2.png")',
+              'url("/Simulador/ReceiveContactBtnSprites/receive-contact-btn-sprite2.png")',
           },
           "10%": {
             backgroundImage:
-              'url("/ReceiveContactBtnSprites/receive-contact-btn-sprite3.png")',
+              'url("/Simulador/ReceiveContactBtnSprites/receive-contact-btn-sprite3.png")',
           },
           "20%": {
             backgroundImage:
-              'url("/ReceiveContactBtnSprites/receive-contact-btn-sprite4.png")',
+              'url("/Simulador/ReceiveContactBtnSprites/receive-contact-btn-sprite4.png")',
           },
           "30%": {
             backgroundImage:
-              'url("/ReceiveContactBtnSprites/receive-contact-btn-sprite5.png")',
+              'url("/Simulador/ReceiveContactBtnSprites/receive-contact-btn-sprite5.png")',
           },
           "45%": {
             backgroundImage:
-              'url("/ReceiveContactBtnSprites/receive-contact-btn-sprite6.png")',
+              'url("/Simulador/ReceiveContactBtnSprites/receive-contact-btn-sprite6.png")',
           },
           "50%": {
             backgroundImage:
-              'url("/ReceiveContactBtnSprites/receive-contact-btn-sprite7.png")',
+              'url("/Simulador/ReceiveContactBtnSprites/receive-contact-btn-sprite7.png")',
           },
           "60%": {
             backgroundImage:
-              'url("/ReceiveContactBtnSprites/receive-contact-btn-sprite8.png")',
+              'url("/Simulador/ReceiveContactBtnSprites/receive-contact-btn-sprite8.png")',
           },
           "70%": {
             backgroundImage:
-              'url("/ReceiveContactBtnSprites/receive-contact-btn-sprite9.png")',
+              'url("/Simulador/ReceiveContactBtnSprites/receive-contact-btn-sprite9.png")',
           },
           "85%": {
             backgroundImage:
-              'url("/ReceiveContactBtnSprites/receive-contact-btn-sprite10.png")',
+              'url("/Simulador/ReceiveContactBtnSprites/receive-contact-btn-sprite10.png")',
           },
           "90%": {
             backgroundImage:
-              'url("/ReceiveContactBtnSprites/receive-contact-btn-sprite11.png")',
+              'url("/Simulador/ReceiveContactBtnSprites/receive-contact-btn-sprite11.png")',
           }, // Mantém a última imagem
           "100%": {
             backgroundImage:
-              'url("/ReceiveContactBtnSprites/receive-contact-btn-sprite12.png")',
+              'url("/Simulador/ReceiveContactBtnSprites/receive-contact-btn-sprite12.png")',
           },
         },
       },

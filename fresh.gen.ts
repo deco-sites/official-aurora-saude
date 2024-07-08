@@ -3,18 +3,18 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
-import * as $PlanMobileButton from "./islands/PlanMobileButton.tsx";
-import * as $add_beneficiary from "./islands/add-beneficiary.tsx";
-import * as $change_step_function from "./islands/change-step-function.tsx";
-import * as $control_form_steps from "./islands/control-form-steps.tsx";
-import * as $first_step_img from "./islands/first-step-img.tsx";
-import * as $first_step_opt_btn from "./islands/first-step-opt-btn.tsx";
-import * as $new_simulation_btn from "./islands/new-simulation-btn.tsx";
-import * as $next_step_btn from "./islands/next-step-btn.tsx";
-import * as $plan_card from "./islands/plan-card.tsx";
-import * as $previous_step_btn from "./islands/previous-step-btn.tsx";
-import * as $receive_contact_btn from "./islands/receive-contact-btn.tsx";
-import * as $selected_plan from "./islands/selected-plan.tsx";
+import * as $Simulador_PlanMobileButton from "./islands/Simulador/PlanMobileButton.tsx";
+import * as $Simulador_add_beneficiary from "./islands/Simulador/add-beneficiary.tsx";
+import * as $Simulador_change_step_function from "./islands/Simulador/change-step-function.tsx";
+import * as $Simulador_control_form_steps from "./islands/Simulador/control-form-steps.tsx";
+import * as $Simulador_first_step_img from "./islands/Simulador/first-step-img.tsx";
+import * as $Simulador_first_step_opt_btn from "./islands/Simulador/first-step-opt-btn.tsx";
+import * as $Simulador_new_simulation_btn from "./islands/Simulador/new-simulation-btn.tsx";
+import * as $Simulador_next_step_btn from "./islands/Simulador/next-step-btn.tsx";
+import * as $Simulador_plan_card from "./islands/Simulador/plan-card.tsx";
+import * as $Simulador_previous_step_btn from "./islands/Simulador/previous-step-btn.tsx";
+import * as $Simulador_receive_contact_btn from "./islands/Simulador/receive-contact-btn.tsx";
+import * as $Simulador_selected_plan from "./islands/Simulador/selected-plan.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -22,18 +22,20 @@ const manifest = {
     "./routes/_app.tsx": $_app,
   },
   islands: {
-    "./islands/PlanMobileButton.tsx": $PlanMobileButton,
-    "./islands/add-beneficiary.tsx": $add_beneficiary,
-    "./islands/change-step-function.tsx": $change_step_function,
-    "./islands/control-form-steps.tsx": $control_form_steps,
-    "./islands/first-step-img.tsx": $first_step_img,
-    "./islands/first-step-opt-btn.tsx": $first_step_opt_btn,
-    "./islands/new-simulation-btn.tsx": $new_simulation_btn,
-    "./islands/next-step-btn.tsx": $next_step_btn,
-    "./islands/plan-card.tsx": $plan_card,
-    "./islands/previous-step-btn.tsx": $previous_step_btn,
-    "./islands/receive-contact-btn.tsx": $receive_contact_btn,
-    "./islands/selected-plan.tsx": $selected_plan,
+    "./islands/Simulador/PlanMobileButton.tsx": $Simulador_PlanMobileButton,
+    "./islands/Simulador/add-beneficiary.tsx": $Simulador_add_beneficiary,
+    "./islands/Simulador/change-step-function.tsx":
+      $Simulador_change_step_function,
+    "./islands/Simulador/control-form-steps.tsx": $Simulador_control_form_steps,
+    "./islands/Simulador/first-step-img.tsx": $Simulador_first_step_img,
+    "./islands/Simulador/first-step-opt-btn.tsx": $Simulador_first_step_opt_btn,
+    "./islands/Simulador/new-simulation-btn.tsx": $Simulador_new_simulation_btn,
+    "./islands/Simulador/next-step-btn.tsx": $Simulador_next_step_btn,
+    "./islands/Simulador/plan-card.tsx": $Simulador_plan_card,
+    "./islands/Simulador/previous-step-btn.tsx": $Simulador_previous_step_btn,
+    "./islands/Simulador/receive-contact-btn.tsx":
+      $Simulador_receive_contact_btn,
+    "./islands/Simulador/selected-plan.tsx": $Simulador_selected_plan,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
