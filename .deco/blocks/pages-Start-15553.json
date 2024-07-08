@@ -11,7 +11,8 @@
         "width": 150
       },
       "buttonReceiveContact": {
-        "link": "#"
+        "link": "#",
+        "text": "<p>Receber contato de um especialista</p>"
       }
     },
     {
