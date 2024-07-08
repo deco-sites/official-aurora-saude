@@ -29,8 +29,8 @@ export default function Section(
       <header className="fixed bg-white z-50 w-full flex items-center justify-center lg:justify-between py-10 lg:max-w-[1400px]">
         <Image
           src={"/Simulador/logo_simulador.png"}
-          width=""
-          height=""
+          width={0}
+          height={0}
           alt="Aurora Simulador Logo"
           className="object-cover w-80"
           /*style={{ width: `${logo.width}px` }}*/
