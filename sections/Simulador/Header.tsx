@@ -12,17 +12,17 @@ export interface CTA {
 }
 
 export interface Props {
-  logo: {
+  /*logo: {
     src: ImageWidget;
     alt: string;
     width: number;
-  };
+  };*/
   buttonReceiveContact: CTA;
   buttonBackToSite: CTA;
 }
 
 export default function Section(
-  { logo, buttonReceiveContact, buttonBackToSite }: Props,
+  { buttonReceiveContact, buttonBackToSite }: Props,
 ) {
   return (
     <div className="flex justify-center lg:width-calc z-50 bg-white ">
@@ -32,8 +32,8 @@ export default function Section(
           width=""
           height=""
           alt="Aurora Simulador Logo"
-          className="object-cover"
-          style={{ width: `${logo.width}px` }}
+          className="object-cover w-80"
+          /*style={{ width: `${logo.width}px` }}*/
         />
 
         <div className="hidden justify-center gap-7 lg:flex">
