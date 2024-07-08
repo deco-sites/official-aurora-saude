@@ -3,7 +3,7 @@
   "path": "/",
   "sections": [
     {
-      "__resolveType": "site/sections/Header.tsx",
+      "__resolveType": "site/sections/Simulador/Header.tsx",
       "buttonBackToSite": {
         "text": "<p>voltar para o <strong>site</strong></p>"
       },
@@ -18,10 +18,10 @@
       }
     },
     {
-      "__resolveType": "site/sections/SimulatorContent.tsx"
+      "__resolveType": "site/sections/Simulador/SimulatorContent.tsx"
     },
     {
-      "__resolveType": "Footer"
+      "__resolveType": "site/sections/Simulador/Footer.tsx"
     }
   ],
   "__resolveType": "website/pages/Page.tsx"
