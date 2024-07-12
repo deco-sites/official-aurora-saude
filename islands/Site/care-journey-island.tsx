@@ -8,24 +8,41 @@ import { useEffect, useState } from "preact/hooks";
 export default function CareJourneyIsland() {
     const activeCard = useSignal(1);
     const [animationClass, setAnimationClass] = useState("");
+    const [leftCards, setLeftCards] = useState([careJourneyCardsInfos[0]]);
+    const [rightCards, setRightCards] = useState(
+        careJourneyCardsInfos.slice(1),
+    );
+    const [showControls, setShowControls] = useState("");
 
     const handleNext = () => {
-        setAnimationClass("slide-left");
         setTimeout(() => {
-            activeCard.value = (activeCard.value + 1) %
-                (careJourneyCardsInfos.length + 1);
+            if (rightCards.length > 0) {
+                const nextCard = rightCards[0];
+                setRightCards(rightCards.slice(1));
+                setLeftCards([...leftCards, nextCard]);
+
+                activeCard.value = (activeCard.value + 1) %
+                    (careJourneyCardsInfos.length + 1);
+            }
             setAnimationClass("");
+            setShowControls("control-buttons");
         }, 500);
+        setShowControls("control-buttons-hidden");
+        setAnimationClass("slide-left");
     };
 
     const handlePrev = () => {
-        setAnimationClass("slide-right");
-        setTimeout(() => {
+        if (leftCards.length > 1) {
+            const prevCard = leftCards[leftCards.length - 1];
+            setRightCards([prevCard, ...rightCards]);
+            setLeftCards(leftCards.slice(0, -1));
+
             activeCard.value =
                 (activeCard.value - 1 + careJourneyCardsInfos.length) %
                 careJourneyCardsInfos.length;
-            setAnimationClass("");
-        }, 500);
+        }
+        setShowControls("control-buttons");
+        setAnimationClass("slide-right");
     };
 
     useEffect(() => {
@@ -58,19 +75,22 @@ export default function CareJourneyIsland() {
                 </div>
                 <div className="flex gap-5 w-2/3">
                     <div className="flex">
-                        <CareJourneyCard
-                            key={careJourneyCardsInfos[0].id}
-                            card={careJourneyCardsInfos[0]}
-                            activeCard={activeCard}
-                            handleNext={handleNext}
-                            handlePrev={handlePrev}
-                            cardsLength={careJourneyCardsInfos.length}
-                            isCurrent={careJourneyCardsInfos[0].id ===
-                                activeCard.value}
-                        />
+                        {leftCards.length > 0 && (
+                            <CareJourneyCard
+                                key={leftCards[leftCards.length - 1].id}
+                                card={leftCards[leftCards.length - 1]}
+                                activeCard={activeCard}
+                                handleNext={handleNext}
+                                handlePrev={handlePrev}
+                                cardsLength={careJourneyCardsInfos.length}
+                                isCurrent={leftCards[leftCards.length - 1]
+                                    .id === activeCard.value}
+                                showControls={showControls}
+                            />
+                        )}
                     </div>
                     <div className={`flex gap-5 ${animationClass}`}>
-                        {careJourneyCardsInfos.slice(1).map((card) => (
+                        {rightCards.map((card) => (
                             <CareJourneyCard
                                 key={card.id}
                                 card={card}
@@ -79,6 +99,7 @@ export default function CareJourneyIsland() {
                                 handlePrev={handlePrev}
                                 cardsLength={careJourneyCardsInfos.length}
                                 isCurrent={card.id === activeCard.value}
+                                showControls={showControls}
                             />
                         ))}
                         <div className="bg-white flex flex-col gap-10 flex-shrink-0 justify-center rounded-3xl w-72 mx-2 px-10 py-14">

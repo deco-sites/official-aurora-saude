@@ -16,6 +16,7 @@ export interface ICareJourneyCard {
     handlePrev: () => void;
     cardsLength: number;
     isCurrent: boolean;
+    showControls: string;
 }
 
 export default function CareJourneyCard(
@@ -26,6 +27,7 @@ export default function CareJourneyCard(
         handlePrev,
         cardsLength,
         isCurrent,
+        showControls,
     }: ICareJourneyCard,
 ) {
     return (
@@ -43,7 +45,9 @@ export default function CareJourneyCard(
                 dangerouslySetInnerHTML={{ __html: card.text }}
             >
             </span>
-            <div className="flex justify-center items-center gap-6 h-1/4">
+            <div
+                className={`flex justify-center items-center gap-6 h-1/4 ${showControls}`}
+            >
                 {activeCard.value === card.id && (
                     <>
                         {card.id !== 1 && (

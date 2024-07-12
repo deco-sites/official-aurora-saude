@@ -1,6 +1,11 @@
 import ColorfullButton from "site/components/Site/colorfull-btn.tsx";
+import { Section } from "deco/blocks/section.ts";
 
-export default function ProvidersSection() {
+export interface IProvidersSection {
+    section: Section;
+}
+
+export default function ProvidersSection({ section }: IProvidersSection) {
     return (
         <>
             <div className="flex justify-center bg-aquagreen2">
@@ -26,7 +31,7 @@ export default function ProvidersSection() {
                         </div>
                     </div>
                     <div className="flex justify-center items-center w-full">
-                        <span>BannerCarrossel</span>
+                        <section.Component {...section.props} />
                     </div>
                 </div>
             </div>

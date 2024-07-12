@@ -54,7 +54,35 @@
       "__resolveType": "site/sections/Site/DiscoverOurPlans.tsx"
     },
     {
-      "__resolveType": "site/sections/Site/ProvidersSection.tsx"
+      "__resolveType": "site/sections/Site/ProvidersSection.tsx",
+      "section": {
+        "__resolveType": "site/sections/Site/BannerCarrousel.tsx",
+        "images": [
+          {
+            "desktop": {
+              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/91862226-ee8f-4122-8e65-aa16121f2892"
+            },
+            "mobile": {
+              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/35eed865-9314-4c9b-86cb-527739de0e87"
+            },
+            "alt": "Banner",
+            "link": "#"
+          },
+          {
+            "desktop": {
+              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/2bc43e9d-92f2-453c-9500-7196804a68c2"
+            },
+            "mobile": {
+              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/f86c11b5-fb43-48f7-94e9-79ea532a7c3b"
+            },
+            "alt": "Banner2",
+            "link": "#"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "site/sections/Site/Footer.tsx"
     }
   ],
   "__resolveType": "website/pages/Page.tsx"

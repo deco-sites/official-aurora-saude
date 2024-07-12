@@ -17,6 +17,7 @@ import * as $Simulador_receive_contact_btn from "./islands/Simulador/receive-con
 import * as $Simulador_selected_plan from "./islands/Simulador/selected-plan.tsx";
 import * as $Site_care_journey_card from "./islands/Site/care-journey-card.tsx";
 import * as $Site_care_journey_island from "./islands/Site/care-journey-island.tsx";
+import * as $Site_discover_our_plans from "./islands/Site/discover-our-plans.tsx";
 import * as $Site_service_card_island from "./islands/Site/service-card-island.tsx";
 import * as $Site_sliderjs from "./islands/Site/sliderjs.tsx";
 import { type Manifest } from "$fresh/server.ts";
@@ -42,6 +43,7 @@ const manifest = {
     "./islands/Simulador/selected-plan.tsx": $Simulador_selected_plan,
     "./islands/Site/care-journey-card.tsx": $Site_care_journey_card,
     "./islands/Site/care-journey-island.tsx": $Site_care_journey_island,
+    "./islands/Site/discover-our-plans.tsx": $Site_discover_our_plans,
     "./islands/Site/service-card-island.tsx": $Site_service_card_island,
     "./islands/Site/sliderjs.tsx": $Site_sliderjs,
   },

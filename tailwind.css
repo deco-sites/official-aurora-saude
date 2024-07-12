@@ -73,13 +73,13 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-308px);
+        transform: translateX(-324px);
     }
 }
 
 @keyframes slideRight {
     0% {
-        transform: translateX(-308px);
+        transform: translateX(-324px);
     }
     100% {
         transform: translateX(0);
@@ -100,4 +100,57 @@
 
 .visible {
     display: block;
+}
+
+.control-buttons {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.control-buttons-hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+/*Keyframes e estilização da seção de Conheça os nossos planos*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes cardSlideLeft{
+  0%{
+     transform: translateX(0);
+  }
+  100%{
+     transform: translateX(-300px);
+  }
+}
+
+@keyframes cardSlideRight{
+  0%{
+     transform: translateX(0);
+  }
+  100%{
+     transform: translateX(300px);
+  }
+}
+
+.card-slide-left {
+    animation: cardSlideLeft 0.5s forwards;
+}
+
+.card-slide-right {
+    animation: cardSlideRight 0.5s forwards;
 }
