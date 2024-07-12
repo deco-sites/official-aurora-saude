@@ -19,7 +19,15 @@ import * as $$$$$$11 from "./sections/Simulador/SecondStepOption2.tsx";
 import * as $$$$$$12 from "./sections/Simulador/SimulatorContent.tsx";
 import * as $$$$$$13 from "./sections/Simulador/ThirdStepOption1.tsx";
 import * as $$$$$$14 from "./sections/Simulador/ThirdStepOption2.tsx";
-import * as $$$$$$15 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$15 from "./sections/Site/BannerCarrousel.tsx";
+import * as $$$$$$16 from "./sections/Site/CareJourney.tsx";
+import * as $$$$$$17 from "./sections/Site/ColorfullWrapper.tsx";
+import * as $$$$$$18 from "./sections/Site/DiscoverOurPlans.tsx";
+import * as $$$$$$19 from "./sections/Site/HeaderSite.tsx";
+import * as $$$$$$20 from "./sections/Site/MainServices.tsx";
+import * as $$$$$$21 from "./sections/Site/MeetAurora.tsx";
+import * as $$$$$$22 from "./sections/Site/ProvidersSection.tsx";
+import * as $$$$$$23 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "sections": {
@@ -38,7 +46,15 @@ const manifest = {
     "site/sections/Simulador/SimulatorContent.tsx": $$$$$$12,
     "site/sections/Simulador/ThirdStepOption1.tsx": $$$$$$13,
     "site/sections/Simulador/ThirdStepOption2.tsx": $$$$$$14,
-    "site/sections/Theme/Theme.tsx": $$$$$$15,
+    "site/sections/Site/BannerCarrousel.tsx": $$$$$$15,
+    "site/sections/Site/CareJourney.tsx": $$$$$$16,
+    "site/sections/Site/ColorfullWrapper.tsx": $$$$$$17,
+    "site/sections/Site/DiscoverOurPlans.tsx": $$$$$$18,
+    "site/sections/Site/HeaderSite.tsx": $$$$$$19,
+    "site/sections/Site/MainServices.tsx": $$$$$$20,
+    "site/sections/Site/MeetAurora.tsx": $$$$$$21,
+    "site/sections/Site/ProvidersSection.tsx": $$$$$$22,
+    "site/sections/Theme/Theme.tsx": $$$$$$23,
   },
   "apps": {
     "site/apps/deco/htmx.ts": $$$$$$$$$$$0,

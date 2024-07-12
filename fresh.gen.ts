@@ -15,6 +15,10 @@ import * as $Simulador_plan_card from "./islands/Simulador/plan-card.tsx";
 import * as $Simulador_previous_step_btn from "./islands/Simulador/previous-step-btn.tsx";
 import * as $Simulador_receive_contact_btn from "./islands/Simulador/receive-contact-btn.tsx";
 import * as $Simulador_selected_plan from "./islands/Simulador/selected-plan.tsx";
+import * as $Site_care_journey_card from "./islands/Site/care-journey-card.tsx";
+import * as $Site_care_journey_island from "./islands/Site/care-journey-island.tsx";
+import * as $Site_service_card_island from "./islands/Site/service-card-island.tsx";
+import * as $Site_sliderjs from "./islands/Site/sliderjs.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -36,6 +40,10 @@ const manifest = {
     "./islands/Simulador/receive-contact-btn.tsx":
       $Simulador_receive_contact_btn,
     "./islands/Simulador/selected-plan.tsx": $Simulador_selected_plan,
+    "./islands/Site/care-journey-card.tsx": $Site_care_journey_card,
+    "./islands/Site/care-journey-island.tsx": $Site_care_journey_island,
+    "./islands/Site/service-card-island.tsx": $Site_service_card_island,
+    "./islands/Site/sliderjs.tsx": $Site_sliderjs,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

@@ -50,3 +50,54 @@
 
 
 }
+
+/*Keyframes do Dot do Banner*/
+@keyframes progress-frame {
+  0% {
+    --dot-progress: 0%
+  }
+
+  to {
+    --dot-progress: 100%
+  }
+}
+
+.group:disabled .group-disabled\:animate-progress {
+    animation: progress-frame ease normal
+}
+
+
+ /*Keyframes da animação dos cards da Jornada de Cuidado*/
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-308px);
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-308px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.slide-left {
+    animation: slideLeft 0.5s forwards;
+}
+
+.slide-right {
+    animation: slideRight 0.5s forwards;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}

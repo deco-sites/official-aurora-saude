@@ -3,25 +3,58 @@
   "path": "/",
   "sections": [
     {
-      "__resolveType": "site/sections/Simulador/Header.tsx",
-      "buttonBackToSite": {
-        "text": "<p>voltar para o <strong>site</strong></p>"
-      },
-      "logo": {
-        "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/f068764b-f9e7-405c-abe2-8263cbc48745",
-        "alt": "Logo Aurora",
-        "width": 300
-      },
-      "buttonReceiveContact": {
-        "text": "<p>Receber contato de um especialista</p>",
-        "icon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/2427b73b-32c1-42f6-b143-504218a831cf"
+      "__resolveType": "site/sections/Site/ColorfullWrapper.tsx",
+      "sections": [
+        {
+          "__resolveType": "site/sections/Site/HeaderSite.tsx",
+          "type": "cliente"
+        },
+        {
+          "__resolveType": "site/sections/Site/BannerCarrousel.tsx",
+          "images": [
+            {
+              "desktop": {
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/09a32ccb-a8c6-431c-aa5b-57cd116b59cf"
+              },
+              "mobile": {
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/2fa36b45-6960-4c05-96a2-6411609e1c0a"
+              },
+              "alt": "Banner1",
+              "link": "#"
+            },
+            {
+              "desktop": {
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/d7f8d236-e461-49e3-845c-5ac7a51ba716"
+              },
+              "mobile": {
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/3b46e01f-ffcd-4842-95f8-c8af5ebe68cd"
+              },
+              "alt": "Banner2",
+              "link": "#"
+            }
+          ],
+          "interval": 5
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Site/MainServices.tsx",
+      "photo": {
+        "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/bd2ee3f6-204e-41c2-9d82-7b2d3d2cba78",
+        "alt": "Banner"
       }
     },
     {
-      "__resolveType": "site/sections/Simulador/SimulatorContent.tsx"
+      "__resolveType": "site/sections/Site/MeetAurora.tsx"
     },
     {
-      "__resolveType": "site/sections/Simulador/Footer.tsx"
+      "__resolveType": "site/sections/Site/CareJourney.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Site/DiscoverOurPlans.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Site/ProvidersSection.tsx"
     }
   ],
   "__resolveType": "website/pages/Page.tsx"

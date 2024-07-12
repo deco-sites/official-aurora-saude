@@ -56,5 +56,11 @@
   "/.deco/blocks/Preview%20site%2Fsections%2FFormStepOne.tsx.json": {
     "blockType": "sections",
     "__resolveType": "site/sections/FormStepOne.tsx"
+  },
+  "/.deco/blocks/pages-Simulador-610709.json": {
+    "name": "Simulador",
+    "path": "/simulador-aurora",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }
