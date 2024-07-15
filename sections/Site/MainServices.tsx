@@ -19,10 +19,10 @@ export default function Section({ photo }: IPhoto) {
     return (
         <>
             <div className="flex justify-center lg:width-calc">
-                <div className="flex gap-6 lg:w-[1400px] w-full">
-                    <div className="bg-white flex flex-col gap-14 pt-20 pb-24">
-                        <div className="flex gap-5">
-                            <div className="w-1/2 rounded-3xl">
+                <div className="flex gap-6 lg:w-[1400px]">
+                    <div className="bg-white flex flex-col gap-14 pt-20 pb-24 w-screen">
+                        <div className="flex px-10 lg:px-0 lg:gap-5">
+                            <div className="hidden lg:flex w-1/2 rounded-3xl">
                                 <Image
                                     src={photo.src}
                                     alt={photo.alt}
@@ -31,8 +31,8 @@ export default function Section({ photo }: IPhoto) {
                                     className="w-full h-full rounded-3xl object-cover"
                                 />
                             </div>
-                            <div className="w-1/2 rounded-3xl flex flex-col bg-gray4 pt-24 pb-20 px-16">
-                                <span className="font-sora text-black opacity-60 text-3xl font-semibold pb-5">
+                            <div className="lg:w-1/2 py-12 px-12 rounded-3xl flex flex-col bg-gray4 lg:pt-24 lg:pb-20 lg:px-16">
+                                <span className="font-sora text-black opacity-60 text-4xl lg:text-3xl font-semibold pb-5">
                                     Principais serviços <br /> ao beneficiário
                                 </span>
                                 <span className="font-sora text-lg text-black opacity-40 pb-10">
@@ -51,7 +51,7 @@ export default function Section({ photo }: IPhoto) {
                             </div>
                         </div>
 
-                        <div className="flex justify-between">
+                        <div className="flex px-10 lg:pl-0 gap-5 overflow-x-scroll scrollbar-none lg:overflow-auto lg:justify-between">
                             <ServiceCardIsland cards={serviceCards} />
                         </div>
                     </div>

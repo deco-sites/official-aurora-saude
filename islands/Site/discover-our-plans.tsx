@@ -40,12 +40,12 @@ export default function DiscoverOurPlansIsland() {
     return (
         <>
             <div ref={sectionRef} className="flex justify-center bg-gray4">
-                <div className="flex justify-center gap-6 lg:w-[1400px] w-full pt-32 pb-44">
-                    <div className=" flex flex-col items-center">
+                <div className="flex justify-center gap-6 lg:w-[1400px] pt-32 pb-44">
+                    <div className=" flex flex-col items-center w-full">
                         <span className="font-sora text-2xl text-black opacity-40 mb-6">
                             Conheça os nossos planos
                         </span>
-                        <div className={`flex w-full`}>
+                        <div className={`flex w-full justify-center`}>
                             <div className="flex flex-col items-center justify-center gap-12">
                                 <Image
                                     src={"/Site/a100-card.png"}
@@ -72,7 +72,7 @@ export default function DiscoverOurPlansIsland() {
                         </div>
 
                         <div
-                            className={`flex w-full justify-between ${
+                            className={`flex w-full justify-center gap-60 ${
                                 isVisible ? "fade-in" : "opacity-0"
                             }`}
                         >

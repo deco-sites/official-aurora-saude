@@ -25,10 +25,11 @@ import * as $$$$$$17 from "./sections/Site/ColorfullWrapper.tsx";
 import * as $$$$$$18 from "./sections/Site/DiscoverOurPlans.tsx";
 import * as $$$$$$19 from "./sections/Site/Footer.tsx";
 import * as $$$$$$20 from "./sections/Site/HeaderSite.tsx";
-import * as $$$$$$21 from "./sections/Site/MainServices.tsx";
-import * as $$$$$$22 from "./sections/Site/MeetAurora.tsx";
-import * as $$$$$$23 from "./sections/Site/ProvidersSection.tsx";
-import * as $$$$$$24 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$21 from "./sections/Site/LatestNews.tsx";
+import * as $$$$$$22 from "./sections/Site/MainServices.tsx";
+import * as $$$$$$23 from "./sections/Site/MeetAurora.tsx";
+import * as $$$$$$24 from "./sections/Site/ProvidersSection.tsx";
+import * as $$$$$$25 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "sections": {
@@ -53,10 +54,11 @@ const manifest = {
     "site/sections/Site/DiscoverOurPlans.tsx": $$$$$$18,
     "site/sections/Site/Footer.tsx": $$$$$$19,
     "site/sections/Site/HeaderSite.tsx": $$$$$$20,
-    "site/sections/Site/MainServices.tsx": $$$$$$21,
-    "site/sections/Site/MeetAurora.tsx": $$$$$$22,
-    "site/sections/Site/ProvidersSection.tsx": $$$$$$23,
-    "site/sections/Theme/Theme.tsx": $$$$$$24,
+    "site/sections/Site/LatestNews.tsx": $$$$$$21,
+    "site/sections/Site/MainServices.tsx": $$$$$$22,
+    "site/sections/Site/MeetAurora.tsx": $$$$$$23,
+    "site/sections/Site/ProvidersSection.tsx": $$$$$$24,
+    "site/sections/Theme/Theme.tsx": $$$$$$25,
   },
   "apps": {
     "site/apps/deco/htmx.ts": $$$$$$$$$$$0,

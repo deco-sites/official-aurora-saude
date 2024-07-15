@@ -7,14 +7,14 @@ export interface IColorfullWrapper {
 function ColorfullWrapper({ sections }: IColorfullWrapper) {
     return (
         <>
-            <div className="flex flex-col gap-10 py-8 bg-orange4 lg:bg-gradient-to-b from-orange4 via-orange4 to-pink1">
-                <div className="hidden lg:flex lg:bg-fixed lg:bg-center lg:bg-no-repeat lg:bg-cover flex-col gap-10">
+            <div className="flex items-center flex-col gap-10 py-8 bg-orange4 lg:bg-gradient-to-b from-orange4 via-orange4 to-pink1">
+                <div className="hidden lg:flex lg:bg-fixed lg:bg-center lg:bg-no-repeat lg:bg-cover flex-col gap-10 lg:w-[1400px]">
                     {sections.map((section, index) => (
                         <section.Component key={index} {...section.props} />
                     ))}
                 </div>
 
-                <div className="lg:hidden flex flex-col gap-5">
+                <div className="lg:hidden flex flex-col gap-5 lg:w-[1400px]">
                     {sections.map((section, index) => (
                         <section.Component key={index} {...section.props} />
                     ))}

@@ -1,3 +1,6 @@
+import LoggedAreasBtn from "site/islands/Site/logged-areas-btn.tsx";
+import HeaderMobileMenuBtn from "site/islands/Site/header-mobile-menu-btn.tsx";
+
 export interface Props {
     /**
      * @description Type of Header
@@ -165,20 +168,8 @@ export default function Section({ type }: Props) {
                         </div>
 
                         <div className="flex gap-9 text-white">
-                            <div className="hidden lg:flex items-center gap-9">
-                                <div className="flex items-center gap-2 cursor-pointer">
-                                    <img
-                                        src={"/Site/user-icon.svg"}
-                                        alt="User Icon"
-                                    />
-                                    <span className="font-semibold">
-                                        Áreas Logadas
-                                    </span>
-                                    <img
-                                        src={"/Site/down-arrow.svg"}
-                                        alt="Down Arrow"
-                                    />
-                                </div>
+                            <div className="relative hidden lg:flex items-center gap-9">
+                                <LoggedAreasBtn />
                                 <a href="#">Perguntas Frequentes</a>
                                 <a href="#">Quero ser Cliente</a>
                             </div>
@@ -202,7 +193,7 @@ export default function Section({ type }: Props) {
                     </div>
 
                     <div
-                        className={`relative flex items-center justify-between ${
+                        className={`flex items-center justify-between ${
                             colors[option.color]
                         } p-7 lg:p-16 mt-[6px] rounded-[20px] h-20 lg:h-48`}
                     >
@@ -215,14 +206,7 @@ export default function Section({ type }: Props) {
                             className="w-28 lg:w-44"
                         />
 
-                        <div className="flex items-center gap-5 lg:hidden rounded-3xl bg-[#FB7557] text-white px-5 py-2">
-                            <span>Menu</span>
-                            <img
-                                src={"/Site/down-arrow.svg"}
-                                alt=""
-                                className=""
-                            />
-                        </div>
+                        <HeaderMobileMenuBtn />
 
                         <div className="hidden lg:flex gap-12">
                             <div className="flex items-center gap-16">

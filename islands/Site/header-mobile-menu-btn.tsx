@@ -1,0 +1,41 @@
+import { useEffect, useRef, useState } from "preact/hooks";
+import DropdownMobileMenu from "site/islands/Site/header-mobile-menu-dropdown.tsx";
+
+export default function HeaderMobileMenuBtn() {
+    const [openMobileMenu, setOpenMobileMenu] = useState(false);
+    const MobileMenuRef = useRef(null);
+
+    useEffect(() => {
+        if (openMobileMenu) {
+            document.body.classList.add("overflow-hidden");
+        } else {
+            document.body.classList.remove("overflow-hidden");
+        }
+        return () => {
+            document.body.classList.remove("overflow-hidden");
+        };
+    }, [openMobileMenu]);
+
+    return (
+        <>
+            <div
+                ref={MobileMenuRef}
+                onClick={() => setOpenMobileMenu(true)}
+                className="flex items-center gap-5 lg:hidden rounded-3xl bg-[#FB7557] text-white px-5 py-2"
+            >
+                <span>Menu</span>
+                <img
+                    src={"/Site/down-arrow.svg"}
+                    alt=""
+                    className=""
+                />
+            </div>
+            {openMobileMenu && (
+                <DropdownMobileMenu
+                    openerRef={MobileMenuRef}
+                    setOpen={setOpenMobileMenu}
+                />
+            )}
+        </>
+    );
+}

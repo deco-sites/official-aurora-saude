@@ -51,38 +51,32 @@
       "__resolveType": "site/sections/Site/CareJourney.tsx"
     },
     {
-      "__resolveType": "site/sections/Site/DiscoverOurPlans.tsx"
-    },
-    {
       "__resolveType": "site/sections/Site/ProvidersSection.tsx",
       "section": {
         "__resolveType": "site/sections/Site/BannerCarrousel.tsx",
         "images": [
           {
             "desktop": {
-              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/91862226-ee8f-4122-8e65-aa16121f2892"
+              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/f86c11b5-fb43-48f7-94e9-79ea532a7c3b"
             },
             "mobile": {
-              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/35eed865-9314-4c9b-86cb-527739de0e87"
+              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/8e9171e1-1c96-4a08-8264-ecac6466d76d"
             },
             "alt": "Banner",
             "link": "#"
           },
           {
             "desktop": {
-              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/2bc43e9d-92f2-453c-9500-7196804a68c2"
+              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/3a3eede3-3ffd-42d8-b879-6cfbde9a8b8a"
             },
             "mobile": {
-              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/f86c11b5-fb43-48f7-94e9-79ea532a7c3b"
+              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/49354cfa-ee0e-480a-a645-d83687e2d122"
             },
-            "alt": "Banner2",
+            "alt": "Banner",
             "link": "#"
           }
         ]
       }
-    },
-    {
-      "__resolveType": "site/sections/Site/Footer.tsx"
     }
   ],
   "__resolveType": "website/pages/Page.tsx"

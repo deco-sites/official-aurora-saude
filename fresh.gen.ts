@@ -18,6 +18,10 @@ import * as $Simulador_selected_plan from "./islands/Simulador/selected-plan.tsx
 import * as $Site_care_journey_card from "./islands/Site/care-journey-card.tsx";
 import * as $Site_care_journey_island from "./islands/Site/care-journey-island.tsx";
 import * as $Site_discover_our_plans from "./islands/Site/discover-our-plans.tsx";
+import * as $Site_header_mobile_menu_btn from "./islands/Site/header-mobile-menu-btn.tsx";
+import * as $Site_header_mobile_menu_dropdown from "./islands/Site/header-mobile-menu-dropdown.tsx";
+import * as $Site_logged_areas_btn from "./islands/Site/logged-areas-btn.tsx";
+import * as $Site_logged_areas_dropdown_menu from "./islands/Site/logged-areas-dropdown-menu.tsx";
 import * as $Site_service_card_island from "./islands/Site/service-card-island.tsx";
 import * as $Site_sliderjs from "./islands/Site/sliderjs.tsx";
 import { type Manifest } from "$fresh/server.ts";
@@ -44,6 +48,12 @@ const manifest = {
     "./islands/Site/care-journey-card.tsx": $Site_care_journey_card,
     "./islands/Site/care-journey-island.tsx": $Site_care_journey_island,
     "./islands/Site/discover-our-plans.tsx": $Site_discover_our_plans,
+    "./islands/Site/header-mobile-menu-btn.tsx": $Site_header_mobile_menu_btn,
+    "./islands/Site/header-mobile-menu-dropdown.tsx":
+      $Site_header_mobile_menu_dropdown,
+    "./islands/Site/logged-areas-btn.tsx": $Site_logged_areas_btn,
+    "./islands/Site/logged-areas-dropdown-menu.tsx":
+      $Site_logged_areas_dropdown_menu,
     "./islands/Site/service-card-island.tsx": $Site_service_card_island,
     "./islands/Site/sliderjs.tsx": $Site_sliderjs,
   },
