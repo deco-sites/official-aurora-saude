@@ -68,5 +68,11 @@
     "path": "/fale-com-a-gente",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Request%2520Quote%2520Form-787241.json": {
+    "name": "Request Quote Form",
+    "path": "/solicitar-cotacao",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }

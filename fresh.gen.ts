@@ -22,6 +22,7 @@ import * as $Site_header_mobile_menu_btn from "./islands/Site/header-mobile-menu
 import * as $Site_header_mobile_menu_dropdown from "./islands/Site/header-mobile-menu-dropdown.tsx";
 import * as $Site_logged_areas_btn from "./islands/Site/logged-areas-btn.tsx";
 import * as $Site_logged_areas_dropdown_menu from "./islands/Site/logged-areas-dropdown-menu.tsx";
+import * as $Site_request_quote_form from "./islands/Site/request-quote-form.tsx";
 import * as $Site_search_button_container from "./islands/Site/search-button-container.tsx";
 import * as $Site_search_button from "./islands/Site/search-button.tsx";
 import * as $Site_service_card_island from "./islands/Site/service-card-island.tsx";
@@ -58,6 +59,7 @@ const manifest = {
     "./islands/Site/logged-areas-btn.tsx": $Site_logged_areas_btn,
     "./islands/Site/logged-areas-dropdown-menu.tsx":
       $Site_logged_areas_dropdown_menu,
+    "./islands/Site/request-quote-form.tsx": $Site_request_quote_form,
     "./islands/Site/search-button-container.tsx": $Site_search_button_container,
     "./islands/Site/search-button.tsx": $Site_search_button,
     "./islands/Site/service-card-island.tsx": $Site_service_card_island,
