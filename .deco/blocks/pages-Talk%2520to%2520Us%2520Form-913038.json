@@ -1,0 +1,39 @@
+{
+  "name": "Talk to Us Form",
+  "path": "/fale-com-a-gente",
+  "sections": [
+    {
+      "__resolveType": "site/sections/Site/ColorfullWrapper.tsx",
+      "sections": [
+        {
+          "__resolveType": "site/sections/Site/HeaderSite.tsx",
+          "type": "cliente"
+        },
+        {
+          "__resolveType": "site/sections/Site/BannerSection.tsx",
+          "image": {
+            "desktop": {
+              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/33d005b9-e5b5-4e22-8e8e-164f9d607d9c"
+            },
+            "mobile": {
+              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/350ff06d-c379-4a4e-a03c-5a4ec30710f3"
+            },
+            "alt": "Banner"
+          },
+          "desktopText": "Dúvidas, reclamações<br />ou sugestões? Envie <br />uma mensagem.",
+          "textColor": "Laranja",
+          "mobileText": "Dúvidas,<br /> reclamações<br />ou sugestões? <br />Envie uma <br />mensagem.",
+          "fontSize": "26",
+          "fontWeight": "semi-bold"
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Site/Footer.tsx"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
