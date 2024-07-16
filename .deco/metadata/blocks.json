@@ -80,5 +80,11 @@
     "path": "/ouvidoria",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Work%2520With%2520Us%2520Form-821811.json": {
+    "name": "Work With Us Form",
+    "path": "/trabalhe-conosco",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }

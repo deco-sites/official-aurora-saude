@@ -34,7 +34,8 @@ import * as $$$$$$26 from "./sections/Site/ProvidersSection.tsx";
 import * as $$$$$$27 from "./sections/Site/RequestQuoteForm.tsx";
 import * as $$$$$$28 from "./sections/Site/TalkToUsForm.tsx";
 import * as $$$$$$29 from "./sections/Site/VideoSection.tsx";
-import * as $$$$$$30 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$30 from "./sections/Site/WorkWithUsForm.tsx";
+import * as $$$$$$31 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "sections": {
@@ -68,7 +69,8 @@ const manifest = {
     "site/sections/Site/RequestQuoteForm.tsx": $$$$$$27,
     "site/sections/Site/TalkToUsForm.tsx": $$$$$$28,
     "site/sections/Site/VideoSection.tsx": $$$$$$29,
-    "site/sections/Theme/Theme.tsx": $$$$$$30,
+    "site/sections/Site/WorkWithUsForm.tsx": $$$$$$30,
+    "site/sections/Theme/Theme.tsx": $$$$$$31,
   },
   "apps": {
     "site/apps/deco/htmx.ts": $$$$$$$$$$$0,
