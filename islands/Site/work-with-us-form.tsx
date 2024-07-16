@@ -1,0 +1,186 @@
+//Faça parte do plano<br /> de saúde que anda junto.
+//Faça parte<br /> do plano<br /> de saúde que <br />anda junto.
+import SiteInputText from "site/components/Site/site-input-text.tsx";
+import { ufsOptions } from "site/helpers/Site/ufsOptions.ts";
+import { citiesOptions } from "site/helpers/Simulador/cities.ts";
+import SiteInputSelect from "site/components/Site/site-input-select.tsx";
+import { useEffect, useState } from "preact/hooks";
+import Image from "apps/website/components/Image.tsx";
+
+export default function WorkWithUsIsland() {
+    const [namePlaceholder, setNamePlaceholder] = useState("Escreva aqui");
+    const [emailPlaceholder, setEmailPlaceholder] = useState(
+        "seuemail@email.com",
+    );
+    const [telPlaceholder, setTelPlaceholder] = useState("(xx) x xxxx xxxx");
+    const [UFPlaceholder, setUFPlaceholder] = useState("MG");
+    const [cityPlaceholder, setCityPlaceholder] = useState("Belo Horizonte");
+    const [addressPlaceholder, setAddressPlaceholder] = useState(
+        "Rua, Bairro e Número",
+    );
+    const [cepPlaceholder, setCepPlaceholder] = useState("xx.xxx-xxx");
+
+    useEffect(() => {
+        const updateNamePlaceholder = () => {
+            if (window.innerWidth < 640) {
+                setNamePlaceholder("Nome Completo");
+                setEmailPlaceholder("Email");
+                setTelPlaceholder("Telefone");
+                setUFPlaceholder("UF");
+                setCityPlaceholder("Cidade");
+                setAddressPlaceholder("Endereço");
+                setCepPlaceholder("CEP");
+            } else {
+                setNamePlaceholder("Escreva aqui");
+                setEmailPlaceholder("seuemail@email.com");
+                setTelPlaceholder("(xx) x xxxx xxxx");
+                setUFPlaceholder("MG");
+                setCityPlaceholder("Belo Horizonte");
+                setAddressPlaceholder("Rua, Bairro e Número");
+                setCepPlaceholder("xx.xxx-xxx");
+            }
+        };
+
+        updateNamePlaceholder(); // Set initial placeholder based on screen size
+        window.addEventListener("resize", updateNamePlaceholder);
+
+        return () =>
+            window.removeEventListener("resize", updateNamePlaceholder);
+    }, []);
+
+    return (
+        <>
+            <div className="flex justify-center px-10 lg:px-0">
+                <div className="lg:max-w-[1400px] w-full pt-12 pb-16 lg:py-32 lg:px-32">
+                    <div className="mb-14 flex flex-col px-8 gap-5 lg:gap-0 lg:flex-row lg:items-center justify-between lg:px-14 lg:pb-16 lg:border-b border-b-black border-opacity-15 ">
+                        <span className="font-sora text-2xl text-orange1 font-bold">
+                            Trabalhe <br /> Conosco
+                        </span>
+                        <div className="flex flex-col gap-4 lg:max-w-[500px] text-black text-opacity-50">
+                            <span>
+                                Nossa essência é estar sempre juntos,
+                                colaborando e apoiando uns aos outros em nossa
+                                jornada pelo bem-estar e pela saúde.
+                            </span>
+                            <span>
+                                Faça parte de nossa equipe, em que a empatia,
+                                dedicação e excelência constroem um sistema de
+                                saúde eficaz. Se você é apaixonado por cuidar
+                                dos outros, comprometido com a qualidade e
+                                valoriza respeito, inovação e excelência, a
+                                Aurora Saúde é o lugar ideal.
+                            </span>
+                            <span>
+                                Estamos à procura de talentos comprometidos para
+                                fazer a diferença na vida das pessoas. Junte-se
+                                a nós!
+                            </span>
+                        </div>
+                    </div>
+                    <div className="flex flex-col gap-4 lg:gap-11">
+                        <SiteInputText
+                            id={"name"}
+                            name={"name"}
+                            label={"Nome"}
+                            placeholder={namePlaceholder}
+                            wfull
+                        />
+                        <SiteInputText
+                            id={"email"}
+                            name={"email"}
+                            label={"E-mail"}
+                            placeholder={emailPlaceholder}
+                            wfull
+                        />
+
+                        <div className="flex lg:hidden">
+                            <SiteInputText
+                                id={"tel"}
+                                name={"tel"}
+                                label={"Telefone"}
+                                placeholder={telPlaceholder}
+                                wfull
+                            />
+                        </div>
+
+                        <div className="hidden lg:flex gap-10">
+                            <SiteInputText
+                                id={"tel"}
+                                name={"tel"}
+                                label={"Telefone"}
+                                placeholder={telPlaceholder}
+                                wfull
+                            />
+
+                            <SiteInputSelect
+                                id={"uf"}
+                                name={"uf"}
+                                label={"UF:"}
+                                options={ufsOptions}
+                                placeholder={UFPlaceholder}
+                                wfull
+                            />
+                            <SiteInputSelect
+                                id={"city"}
+                                name={"city"}
+                                label={"Cidade:"}
+                                options={citiesOptions}
+                                placeholder={cityPlaceholder}
+                                wfull
+                            />
+                        </div>
+
+                        <div className="flex gap-4 lg:gap-10 flex-col-reverse lg:flex-row">
+                            <SiteInputText
+                                id={"address"}
+                                name={"address"}
+                                label={"Endereço"}
+                                placeholder={addressPlaceholder}
+                                wfull
+                            />
+                            <SiteInputText
+                                id={"cep"}
+                                name={"cep"}
+                                label={"CEP"}
+                                placeholder={cepPlaceholder}
+                                wfull
+                            />
+                        </div>
+
+                        <div className="flex gap-4 lg:hidden pb-10 border-b border-b-black border-opacity-10 lg:border-none">
+                            <SiteInputSelect
+                                id={"uf"}
+                                name={"uf"}
+                                label={"UF:"}
+                                options={ufsOptions}
+                                placeholder={UFPlaceholder}
+                                wfull
+                            />
+                            <SiteInputSelect
+                                id={"city"}
+                                name={"city"}
+                                label={"Cidade:"}
+                                options={citiesOptions}
+                                placeholder={cityPlaceholder}
+                                wfull
+                            />
+                        </div>
+                        <div className="flex pt-10 lg:pt-0 flex-col lg:flex-row gap-4 lg:gap-0 justify-between w-full">
+                            <button className="flex justify-center items-center gap-5 bg-transparent border border-orange4 text-orange4 w-full lg:w-auto lg:px-10 py-3 rounded-full">
+                                <Image
+                                    src={"/Site/clip-icon.svg"}
+                                    alt="Clip Icon"
+                                    className=""
+                                />
+                                Envie o seu currículo
+                            </button>
+                            <button className="bg-orange4 text-white w-full lg:w-auto lg:px-24 py-3 rounded-full">
+                                Enviar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+}

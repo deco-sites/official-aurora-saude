@@ -30,6 +30,7 @@ import * as $Site_service_card_island from "./islands/Site/service-card-island.t
 import * as $Site_sliderjs from "./islands/Site/sliderjs.tsx";
 import * as $Site_talk_to_us_form from "./islands/Site/talk-to-us-form.tsx";
 import * as $Site_video_player from "./islands/Site/video-player.tsx";
+import * as $Site_work_with_us_form from "./islands/Site/work-with-us-form.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -68,6 +69,7 @@ const manifest = {
     "./islands/Site/sliderjs.tsx": $Site_sliderjs,
     "./islands/Site/talk-to-us-form.tsx": $Site_talk_to_us_form,
     "./islands/Site/video-player.tsx": $Site_video_player,
+    "./islands/Site/work-with-us-form.tsx": $Site_work_with_us_form,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
