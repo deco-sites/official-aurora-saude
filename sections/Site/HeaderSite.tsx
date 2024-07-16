@@ -105,8 +105,8 @@ export default function Section({ type }: Props) {
     }
 
     return (
-        <div className="flex justify-center">
-            <div className="flex gap-6 lg:w-[1400px] w-full px-10 lg:px-0">
+        <div className="flex justify-center px-10 lg:px-0">
+            <div className="flex gap-6 w-full ">
                 <div className="w-full">
                     <div className="flex justify-end lg:justify-between px-7 lg:px-16">
                         <div className="hidden lg:flex gap-3">

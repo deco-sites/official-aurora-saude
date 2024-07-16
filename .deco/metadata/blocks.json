@@ -62,5 +62,11 @@
     "path": "/simulador-aurora",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Talk%2520to%2520Us%2520Form-913038.json": {
+    "name": "Talk to Us Form",
+    "path": "/fale-com-a-gente",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }
