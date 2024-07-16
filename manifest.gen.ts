@@ -30,8 +30,9 @@ import * as $$$$$$22 from "./sections/Site/LatestNews.tsx";
 import * as $$$$$$23 from "./sections/Site/MainServices.tsx";
 import * as $$$$$$24 from "./sections/Site/MeetAurora.tsx";
 import * as $$$$$$25 from "./sections/Site/ProvidersSection.tsx";
-import * as $$$$$$26 from "./sections/Site/VideoSection.tsx";
-import * as $$$$$$27 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$26 from "./sections/Site/TalkToUsForm.tsx";
+import * as $$$$$$27 from "./sections/Site/VideoSection.tsx";
+import * as $$$$$$28 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "sections": {
@@ -61,8 +62,9 @@ const manifest = {
     "site/sections/Site/MainServices.tsx": $$$$$$23,
     "site/sections/Site/MeetAurora.tsx": $$$$$$24,
     "site/sections/Site/ProvidersSection.tsx": $$$$$$25,
-    "site/sections/Site/VideoSection.tsx": $$$$$$26,
-    "site/sections/Theme/Theme.tsx": $$$$$$27,
+    "site/sections/Site/TalkToUsForm.tsx": $$$$$$26,
+    "site/sections/Site/VideoSection.tsx": $$$$$$27,
+    "site/sections/Theme/Theme.tsx": $$$$$$28,
   },
   "apps": {
     "site/apps/deco/htmx.ts": $$$$$$$$$$$0,

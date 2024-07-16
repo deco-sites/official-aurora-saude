@@ -26,6 +26,7 @@ import * as $Site_search_button_container from "./islands/Site/search-button-con
 import * as $Site_search_button from "./islands/Site/search-button.tsx";
 import * as $Site_service_card_island from "./islands/Site/service-card-island.tsx";
 import * as $Site_sliderjs from "./islands/Site/sliderjs.tsx";
+import * as $Site_talk_to_us_form from "./islands/Site/talk-to-us-form.tsx";
 import * as $Site_video_player from "./islands/Site/video-player.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
@@ -61,6 +62,7 @@ const manifest = {
     "./islands/Site/search-button.tsx": $Site_search_button,
     "./islands/Site/service-card-island.tsx": $Site_service_card_island,
     "./islands/Site/sliderjs.tsx": $Site_sliderjs,
+    "./islands/Site/talk-to-us-form.tsx": $Site_talk_to_us_form,
     "./islands/Site/video-player.tsx": $Site_video_player,
   },
   baseUrl: import.meta.url,

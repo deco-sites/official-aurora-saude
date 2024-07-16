@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <>
             <div className="flex justify-center bg-pink3">
-                <div className="lg:w-[1400px] w-full pt-24 pb-16">
+                <div className="lg:max-w-[1400px] w-full pt-24 pb-16">
                     <footer className="flex flex-col text-white px-10 lg:px-0">
                         <div className="border-b border-b-white lg:border-none pb-12 lg:pb-0 flex mb-10 gap-12 items-center">
                             <Image

@@ -29,6 +29,9 @@
       ]
     },
     {
+      "__resolveType": "site/sections/Site/TalkToUsForm.tsx"
+    },
+    {
       "__resolveType": "site/sections/Site/Footer.tsx"
     }
   ],
