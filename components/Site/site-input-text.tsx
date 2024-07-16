@@ -21,12 +21,12 @@ export default function SiteInputText(
   };
 
   return (
-    <div className={`flex gap-6 items-center w-full`}>
+    <div className={`flex gap-6 items-center w-full flex-1`}>
       <label className="hidden lg:flex text-orange1 text-nowrap" htmlFor={name}>
         {label}:
       </label>
       <input
-        className={`px-6 py-5 lg:py-2 rounded-md bg-gray4 outline-none w-full lg:w-auto text-gray3 ${
+        className={`px-6 py-5 lg:py-2 rounded-md bg-gray4 bg-opacity-50 outline-none w-full lg:w-auto text-gray3 ${
           wfull ? "lg:w-full" : ""
         }`}
         type="text"

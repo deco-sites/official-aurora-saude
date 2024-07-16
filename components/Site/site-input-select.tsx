@@ -41,7 +41,7 @@ export default function SiteInputSelect(
     };
 
     return (
-        <div className="flex gap-6 items-center w-full">
+        <div className="flex gap-6 items-center w-full flex-1">
             <label
                 className="hidden lg:flex text-orange1 text-nowrap"
                 htmlFor={name}
@@ -52,7 +52,7 @@ export default function SiteInputSelect(
                 className={`relative w-full lg:w-auto ${wfull && "lg:w-full"}`}
             >
                 <select
-                    className={`px-6 py-5 lg:py-2 lg:rounded-md bg-black bg-opacity-[3%] outline-none text-[#9ca3be] appearance-none pr-8 w-full ${
+                    className={`px-6 py-5 lg:py-2 lg:rounded-md bg-gray4 bg-opacity-50 outline-none text-[#9ca3be] appearance-none pr-8 w-full ${
                         wfull && "w-full"
                     }`}
                     id={id}
