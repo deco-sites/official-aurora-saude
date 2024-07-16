@@ -56,7 +56,7 @@ export default function CareJourneyIsland() {
     return (
         <div className="w-full py-20 bg-yellow overflow-x-hidden">
             <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-28 lg:gap-36">
-                <div className="flex flex-col px-16 font-sora gap-10 lg:w-1/3">
+                <div className="flex flex-col flex-1 px-16 font-sora gap-10 lg:w-1/3">
                     <div className="flex flex-col gap-5">
                         <span className="text-pink1 text-4xl font-bold">
                             Jornada de <br />Cuidado:
@@ -102,11 +102,11 @@ export default function CareJourneyIsland() {
                                 showControls={showControls}
                             />
                         ))}
-                        <div className="bg-white flex flex-col gap-10 flex-shrink-0 justify-center rounded-3xl w-72 mx-2 px-10 py-14">
-                            <span>
+                        <div className="bg-white flex flex-col text-center gap-10 flex-shrink-0 items-center justify-center rounded-3xl w-[550px] mx-2 px-10 py-14">
+                            <span className="font-sora text-4xl text-pink1">
                                 O cuidado não acaba <br /> aqui, ele começa.
                             </span>
-                            <a href="#" className="">
+                            <a href="#" className="text-darkPurple">
                                 Descubra como fazemos diferente
                             </a>
                             <ColorfullButton

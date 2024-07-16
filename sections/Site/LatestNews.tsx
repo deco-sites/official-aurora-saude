@@ -4,11 +4,11 @@ export default function LatestNews() {
     return (
         <>
             <div className="flex justify-center">
-                <div className="flex flex-col gap-16 lg:w-[1400px] w-full pt-32 pb-36">
+                <div className="flex flex-col gap-16 lg:w-[1400px] w-full pt-32 pb-36 px-9 lg:px-0">
                     <span className="font-sora text-orange4 text-2xl font-bold">
                         Últimas Notícias
                     </span>
-                    <div className="flex gap-4">
+                    <div className="flex flex-col lg:flex-row gap-4">
                         <NewsCard
                             imageSrc={"/Site/LatestNews/newsphoto1.png"}
                             alt={"Imagem 1"}

@@ -29,7 +29,8 @@ import * as $$$$$$21 from "./sections/Site/LatestNews.tsx";
 import * as $$$$$$22 from "./sections/Site/MainServices.tsx";
 import * as $$$$$$23 from "./sections/Site/MeetAurora.tsx";
 import * as $$$$$$24 from "./sections/Site/ProvidersSection.tsx";
-import * as $$$$$$25 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$25 from "./sections/Site/VideoSection.tsx";
+import * as $$$$$$26 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "sections": {
@@ -58,7 +59,8 @@ const manifest = {
     "site/sections/Site/MainServices.tsx": $$$$$$22,
     "site/sections/Site/MeetAurora.tsx": $$$$$$23,
     "site/sections/Site/ProvidersSection.tsx": $$$$$$24,
-    "site/sections/Theme/Theme.tsx": $$$$$$25,
+    "site/sections/Site/VideoSection.tsx": $$$$$$25,
+    "site/sections/Theme/Theme.tsx": $$$$$$26,
   },
   "apps": {
     "site/apps/deco/htmx.ts": $$$$$$$$$$$0,

@@ -3,16 +3,47 @@
   "path": "/",
   "sections": [
     {
-      "__resolveType": "site/sections/Simulador/Header.tsx",
-      "buttonBackToSite": {},
-      "logo": {
-        "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/07aab3b2-4412-42fe-99f6-06e525d6fa91",
-        "alt": "Logo Simulador",
-        "width": 150
-      },
-      "buttonReceiveContact": {
-        "link": "#",
-        "text": "<p>Receber contato de um especialista</p>"
+      "__resolveType": "site/sections/Site/ColorfullWrapper.tsx",
+      "sections": [
+        {
+          "__resolveType": "site/sections/Site/HeaderSite.tsx",
+          "type": "cliente"
+        },
+        {
+          "__resolveType": "site/sections/Site/BannerCarrousel.tsx",
+          "images": [
+            {
+              "desktop": {
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/09a32ccb-a8c6-431c-aa5b-57cd116b59cf"
+              },
+              "mobile": {
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/10fea2fe-0735-4be8-a894-ec6ab35f3d5d"
+              },
+              "alt": "Banner1",
+              "link": "#"
+            },
+            {
+              "desktop": {
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/d7f8d236-e461-49e3-845c-5ac7a51ba716"
+              },
+              "mobile": {
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/3b46e01f-ffcd-4842-95f8-c8af5ebe68cd"
+              },
+              "alt": "Banner2",
+              "link": "#"
+            }
+          ],
+          "interval": 5
+        }
+      ],
+      "from": "#FA7651",
+      "to": "#FF50A4"
+    },
+    {
+      "__resolveType": "site/sections/Site/MainServices.tsx",
+      "photo": {
+        "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/bd2ee3f6-204e-41c2-9d82-7b2d3d2cba78",
+        "alt": "Banner"
       }
     },
     {
@@ -20,6 +51,9 @@
     },
     {
       "__resolveType": "site/sections/Site/CareJourney.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Site/DiscoverOurPlans.tsx"
     },
     {
       "__resolveType": "site/sections/Site/ProvidersSection.tsx",
@@ -48,6 +82,15 @@
           }
         ]
       }
+    },
+    {
+      "__resolveType": "site/sections/Site/VideoSection.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Site/LatestNews.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Site/Footer.tsx"
     }
   ],
   "__resolveType": "website/pages/Page.tsx"

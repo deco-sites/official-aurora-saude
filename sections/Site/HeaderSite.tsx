@@ -1,5 +1,6 @@
 import LoggedAreasBtn from "site/islands/Site/logged-areas-btn.tsx";
 import HeaderMobileMenuBtn from "site/islands/Site/header-mobile-menu-btn.tsx";
+import SearchButtonContainer from "site/islands/Site/search-button-container.tsx";
 
 export interface Props {
     /**
@@ -208,40 +209,7 @@ export default function Section({ type }: Props) {
 
                         <HeaderMobileMenuBtn />
 
-                        <div className="hidden lg:flex gap-12">
-                            <div className="flex items-center gap-16">
-                                {option?.menuItems.map((item) => (
-                                    <a
-                                        key={item.text}
-                                        href="#"
-                                        className={`${
-                                            option.name === "prestador"
-                                                ? "text-pink2"
-                                                : "text-white"
-                                        } font-bold text-lg font-sora`}
-                                    >
-                                        {item.text}
-                                    </a>
-                                ))}
-                            </div>
-
-                            <div
-                                className={`flex gap-2 ${
-                                    option.name === "prestador"
-                                        ? "text-pink2 border-pink2"
-                                        : "text-white border-white"
-                                } items-center border rounded-full px-7 py-3 cursor-pointer`}
-                            >
-                                <img
-                                    src={option.name === "prestador"
-                                        ? "/Site/search-icon-pink.svg"
-                                        : "/Site/search-icon.svg"}
-                                    alt=""
-                                    className="w-7 h-7"
-                                />
-                                <span>Buscar</span>
-                            </div>
-                        </div>
+                        <SearchButtonContainer option={option} />
                     </div>
                 </div>
             </div>
