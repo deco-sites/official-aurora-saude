@@ -84,11 +84,11 @@ export default function BannerSection(
     const { alt, mobile, desktop } = image;
 
     return (
-        <div className="relative flex rounded-3xl px-10 lg:px-0">
+        <div className="relative flex rounded-3xl px-10 lg:px-0 w-full max-w-full">
             {device !== "desktop" && (
                 <>
                     <span
-                        className={`absolute top-1/2 transform -translate-y-1/2 left-16 font-sora ${
+                        className={`absolute top-1/2 transform -translate-y-1/2 left-16 right-16 w-auto max-w-full break-words overflow-hidden font-sora ${
                             fontWeights[fontWeight]
                         } ${textColors[textColor]} ${fontSizes[fontSize]}`}
                         dangerouslySetInnerHTML={{ __html: mobileText }}

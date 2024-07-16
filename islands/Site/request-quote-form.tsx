@@ -2,10 +2,9 @@ import SiteInputText from "site/components/Site/site-input-text.tsx";
 import SiteInputSelect from "site/components/Site/site-input-select.tsx";
 import { ufsOptions } from "site/helpers/Site/ufsOptions.ts";
 import { citiesOptions } from "site/helpers/Simulador/cities.ts";
-import SiteTextArea from "site/components/Site/text-area.tsx";
 import { useEffect, useState } from "preact/hooks";
 
-export default function TalkToUsIsland() {
+export default function RequestQuoteIsland() {
     const [namePlaceholder, setNamePlaceholder] = useState("Escreva aqui");
     const [emailPlaceholder, setEmailPlaceholder] = useState(
         "seuemail@email.com",
@@ -13,9 +12,10 @@ export default function TalkToUsIsland() {
     const [telPlaceholder, setTelPlaceholder] = useState("(xx) x xxxx xxxx");
     const [UFPlaceholder, setUFPlaceholder] = useState("MG");
     const [cityPlaceholder, setCityPlaceholder] = useState("Belo Horizonte");
-    const [textAreaPlaceHolder, setTextAreaPlaceHolder] = useState(
-        "Escreva sua mensagem aqui",
-    );
+    const [whereMeetAuroraPlaceHolder, setWhereMeetAuroraPlaceHolder] =
+        useState(
+            "Selecione",
+        );
 
     useEffect(() => {
         const updateNamePlaceholder = () => {
@@ -25,14 +25,14 @@ export default function TalkToUsIsland() {
                 setTelPlaceholder("Telefone");
                 setUFPlaceholder("UF");
                 setCityPlaceholder("Estado");
-                setTextAreaPlaceHolder("Escreva sua mensagem aqui");
+                setWhereMeetAuroraPlaceHolder("Selecione");
             } else {
                 setNamePlaceholder("Escreva aqui");
                 setEmailPlaceholder("seuemail@email.com");
                 setTelPlaceholder("(xx) x xxxx xxxx");
                 setUFPlaceholder("MG");
                 setCityPlaceholder("Belo Horizonte");
-                setTextAreaPlaceHolder("Escreva sua mensagem aqui");
+                setWhereMeetAuroraPlaceHolder("Selecione");
             }
         };
 
@@ -101,15 +101,18 @@ export default function TalkToUsIsland() {
                             wfull
                         />
                     </div>
-                    <SiteTextArea
-                        id={"message"}
-                        name={"message"}
-                        placeholder={textAreaPlaceHolder}
+
+                    <SiteInputSelect
+                        id={"whereDidYouMeetAurora"}
+                        name={"whereDidYouMeetAurora"}
+                        label={"Por onde você conheceu a Aurora?"}
+                        options={citiesOptions}
+                        placeholder={whereMeetAuroraPlaceHolder}
                     />
 
                     <div className="flex justify-end w-full">
                         <button className="bg-orange4 text-white w-full lg:w-auto lg:px-24 py-3 rounded-full">
-                            Enviar
+                            Solicite uma cotação
                         </button>
                     </div>
                 </div>
