@@ -45,7 +45,7 @@ export default function RequestQuoteIsland() {
 
     return (
         <div className="flex justify-center px-10 lg:px-0">
-            <div className="lg:max-w-[1400px] w-full pt-12 pb-16 lg:py-32">
+            <div className="lg:max-w-[1400px] w-full pt-12 pb-16 lg:py-32 lg:px-32">
                 <div className="flex flex-col gap-11">
                     <span className="lg:hidden font-bold text-xl text-gray3">
                         Informações de contato:
@@ -75,7 +75,7 @@ export default function RequestQuoteIsland() {
                         />
                     </div>
                     <div className="flex mb-3 gap-8">
-                        <div className="hidden lg:block w-full">
+                        <div className="hidden lg:flex">
                             <SiteInputText
                                 id={"tel"}
                                 name={"tel"}

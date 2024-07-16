@@ -29,11 +29,12 @@ import * as $$$$$$21 from "./sections/Site/HeaderSite.tsx";
 import * as $$$$$$22 from "./sections/Site/LatestNews.tsx";
 import * as $$$$$$23 from "./sections/Site/MainServices.tsx";
 import * as $$$$$$24 from "./sections/Site/MeetAurora.tsx";
-import * as $$$$$$25 from "./sections/Site/ProvidersSection.tsx";
-import * as $$$$$$26 from "./sections/Site/RequestQuoteForm.tsx";
-import * as $$$$$$27 from "./sections/Site/TalkToUsForm.tsx";
-import * as $$$$$$28 from "./sections/Site/VideoSection.tsx";
-import * as $$$$$$29 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$25 from "./sections/Site/OmbudsmanForm.tsx";
+import * as $$$$$$26 from "./sections/Site/ProvidersSection.tsx";
+import * as $$$$$$27 from "./sections/Site/RequestQuoteForm.tsx";
+import * as $$$$$$28 from "./sections/Site/TalkToUsForm.tsx";
+import * as $$$$$$29 from "./sections/Site/VideoSection.tsx";
+import * as $$$$$$30 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "sections": {
@@ -62,11 +63,12 @@ const manifest = {
     "site/sections/Site/LatestNews.tsx": $$$$$$22,
     "site/sections/Site/MainServices.tsx": $$$$$$23,
     "site/sections/Site/MeetAurora.tsx": $$$$$$24,
-    "site/sections/Site/ProvidersSection.tsx": $$$$$$25,
-    "site/sections/Site/RequestQuoteForm.tsx": $$$$$$26,
-    "site/sections/Site/TalkToUsForm.tsx": $$$$$$27,
-    "site/sections/Site/VideoSection.tsx": $$$$$$28,
-    "site/sections/Theme/Theme.tsx": $$$$$$29,
+    "site/sections/Site/OmbudsmanForm.tsx": $$$$$$25,
+    "site/sections/Site/ProvidersSection.tsx": $$$$$$26,
+    "site/sections/Site/RequestQuoteForm.tsx": $$$$$$27,
+    "site/sections/Site/TalkToUsForm.tsx": $$$$$$28,
+    "site/sections/Site/VideoSection.tsx": $$$$$$29,
+    "site/sections/Theme/Theme.tsx": $$$$$$30,
   },
   "apps": {
     "site/apps/deco/htmx.ts": $$$$$$$$$$$0,

@@ -74,5 +74,11 @@
     "path": "/solicitar-cotacao",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Ombudsman%2520Form-52338.json": {
+    "name": "Ombudsman Form",
+    "path": "/ouvidoria",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }
