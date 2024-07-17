@@ -1,0 +1,157 @@
+{
+  "name": "Plans Page",
+  "path": "/nossos-planos",
+  "sections": [
+    {
+      "__resolveType": "site/sections/Site/SingleColorfullWrapper.tsx",
+      "sections": [
+        {
+          "__resolveType": "site/sections/Site/HeaderSite.tsx",
+          "type": "cliente"
+        }
+      ],
+      "bgColor": "Laranja"
+    },
+    {
+      "__resolveType": "site/sections/Site/PlansSection.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Site/AcceptanceTable.tsx",
+      "hospitals": [
+        {
+          "name": "Hospital Socor",
+          "a300": true,
+          "a500": true,
+          "a100": false
+        },
+        {
+          "name": "Santa Casa de Lagoa Santa",
+          "a100": false,
+          "a300": true,
+          "a500": true
+        },
+        {
+          "name": "Hospital Felício Rocho",
+          "a100": false,
+          "a300": false,
+          "a500": true
+        },
+        {
+          "name": "Instituto de Otorrino",
+          "a100": false,
+          "a300": false,
+          "a500": true
+        },
+        {
+          "name": "Laboratório Hermes Pardini",
+          "a100": false,
+          "a300": false,
+          "a500": true
+        },
+        {
+          "name": "Hospital da Baleia",
+          "a100": true,
+          "a300": true,
+          "a500": true
+        },
+        {
+          "name": "Hospital Belo Horizonte",
+          "a100": true,
+          "a300": true,
+          "a500": true
+        },
+        {
+          "name": "Hospital Espírita André Luiz",
+          "a300": true,
+          "a100": true,
+          "a500": true
+        },
+        {
+          "name": "Oculare - Hosp. de Oftalmologia",
+          "a100": true,
+          "a300": true,
+          "a500": true
+        },
+        {
+          "name": "Ecoar",
+          "a100": true,
+          "a300": true,
+          "a500": true
+        },
+        {
+          "name": "São Marcos Elcordis",
+          "a100": true,
+          "a300": true,
+          "a500": true
+        },
+        {
+          "name": "Oculare - Hospital de Oftalmologia",
+          "a100": true,
+          "a300": true,
+          "a500": true
+        },
+        {
+          "name": "São Marcos Martins e Godoy",
+          "a100": true,
+          "a300": true,
+          "a500": true
+        },
+        {
+          "name": "Laboratório Geraldo Lustosa",
+          "a100": true,
+          "a300": true,
+          "a500": true
+        },
+        {
+          "name": "Laboratório São Marcos",
+          "a100": true,
+          "a300": true,
+          "a500": true
+        },
+        {
+          "name": "Santa Casa de Caeté",
+          "a100": true,
+          "a300": true,
+          "a500": true
+        },
+        {
+          "name": "Hospital São José",
+          "a100": true,
+          "a300": true,
+          "a500": true
+        },
+        {
+          "name": "Hospital Nossa Senhora de Lourdes",
+          "a100": true,
+          "a300": true,
+          "a500": true
+        },
+        {
+          "name": "Santa Casa de Sabará",
+          "a100": true,
+          "a300": true,
+          "a500": true
+        },
+        {
+          "name": "Empremed",
+          "a100": true,
+          "a300": true,
+          "a500": true
+        },
+        {
+          "name": "Hospital Nossa Senhora das Graças",
+          "a100": true,
+          "a300": true,
+          "a500": true
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Site/Footer.tsx"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
