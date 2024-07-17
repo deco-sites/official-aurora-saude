@@ -72,6 +72,7 @@ export default {
         pink3: "#F85883",
         pink4: "#FF5CA3",
         pink5: "#FF5B6B",
+        pink6: "#FB2089",
         gray1: "#FAFAFA",
         gray2: "#767676",
         gray3: "#A8A8A8",
@@ -86,6 +87,7 @@ export default {
         green: "#70FF00",
         yellow: "#FCFF73",
         darkPurple: "#B245F4",
+        darkPurple2: "9D29E4",
         purple: "#B299E8",
       },
       height: {

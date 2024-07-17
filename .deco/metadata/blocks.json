@@ -86,5 +86,11 @@
     "path": "/trabalhe-conosco",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Plans%2520Page-737019.json": {
+    "name": "Plans Page",
+    "path": "/nossos-planos",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }
