@@ -24,7 +24,7 @@ export default function PlansSection() {
             <div className="flex justify-center px-10 lg:px-0 bg-gray4">
                 <div className="lg:max-w-[1400px] w-full pt-12 pb-16 lg:py-32">
                     <div className="flex flex-col">
-                        <div className="flex w-full justify-between mb-36">
+                        <div className="flex flex-col lg:flex-row w-full justify-between mb-36">
                             <span className="text-2xl text-orange4 font-bold">
                                 Escolha um plano<br />{" "}
                                 para estar sempre junto<br /> de você.
@@ -40,12 +40,12 @@ export default function PlansSection() {
                                 />
                             </div>
                         </div>
-                        <div className="flex gap-5">
+                        <div className="flex flex-col lg:flex-row gap-32 lg:gap-5">
                             {plansCardsInfos.map((card) => (
                                 <div
                                     className={`relative flex flex-1 flex-col ${
                                         bgColors[card.bgColor]
-                                    } rounded-3xl px-20 pb-16 pt-48`}
+                                    } rounded-3xl px-11 lg:px-20 pb-16 pt-48`}
                                 >
                                     <Image
                                         src={card.cardImage}
