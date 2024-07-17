@@ -92,5 +92,11 @@
     "path": "/nossos-planos",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Care%2520Journey%2520Page-81671.json": {
+    "name": "Care Journey Page",
+    "path": "/jornada-de-cuidado",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }
