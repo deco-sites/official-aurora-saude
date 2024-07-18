@@ -104,5 +104,11 @@
     "path": "/noticias-noticia",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Common%2520Questions-462863.json": {
+    "name": "Common Questions",
+    "path": "/perguntas-frequentes",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }
