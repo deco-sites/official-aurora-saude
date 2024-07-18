@@ -98,5 +98,11 @@
     "path": "/jornada-de-cuidado",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-News%2520Page-440195.json": {
+    "name": "News Page",
+    "path": "/noticias-noticia",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }

@@ -1,0 +1,31 @@
+{
+  "name": "News Page",
+  "path": "/noticias-noticia",
+  "sections": [
+    {
+      "__resolveType": "site/sections/Site/SingleColorfullWrapper.tsx",
+      "sections": [
+        {
+          "__resolveType": "site/sections/Site/HeaderSite.tsx",
+          "type": "cliente"
+        }
+      ],
+      "bgColor": "Laranja"
+    },
+    {
+      "__resolveType": "site/sections/Site/NewsPage.tsx",
+      "image": {
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/b865758b-3c56-4ace-8327-d45705b6b358",
+        "alt": "Banner",
+        "link": "#"
+      }
+    },
+    {
+      "__resolveType": "site/sections/Site/Footer.tsx"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

@@ -154,3 +154,16 @@
 .card-slide-right {
     animation: cardSlideRight 0.5s forwards;
 }
+
+
+/*O código abaixo é para a tag hr na página de notícias*/
+.hr-extend-left::before {
+    content: '';
+    position: absolute;
+    height: 0.5px; /* Altere a altura para corresponder ao estilo desejado */
+    background-color: rgba(0, 0, 0, 0.1); /* Usa a cor do elemento atual */
+    left: -9999px; /* Ajuste conforme necessário para alcançar a borda esquerda da viewport */
+    right: 100%; /* Faz com que se estenda até o ponto inicial da linha original */
+    bottom: -23px; /* Centraliza verticalmente em relação ao <hr> */
+    transform: translateY(-50%); /* Ajusta para centralizar corretamente */
+}
