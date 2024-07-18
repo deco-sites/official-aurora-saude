@@ -31,16 +31,17 @@ import * as $$$$$$23 from "./sections/Site/HeaderSite.tsx";
 import * as $$$$$$24 from "./sections/Site/LatestNews.tsx";
 import * as $$$$$$25 from "./sections/Site/MainServices.tsx";
 import * as $$$$$$26 from "./sections/Site/MeetAurora.tsx";
-import * as $$$$$$27 from "./sections/Site/OmbudsmanForm.tsx";
-import * as $$$$$$28 from "./sections/Site/PlansSection.tsx";
-import * as $$$$$$29 from "./sections/Site/ProvidersSection.tsx";
-import * as $$$$$$30 from "./sections/Site/RequestQuoteForm.tsx";
-import * as $$$$$$31 from "./sections/Site/SideBySideContent.tsx";
-import * as $$$$$$32 from "./sections/Site/SingleColorfullWrapper.tsx";
-import * as $$$$$$33 from "./sections/Site/TalkToUsForm.tsx";
-import * as $$$$$$34 from "./sections/Site/VideoSection.tsx";
-import * as $$$$$$35 from "./sections/Site/WorkWithUsForm.tsx";
-import * as $$$$$$36 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$27 from "./sections/Site/NewsPage.tsx";
+import * as $$$$$$28 from "./sections/Site/OmbudsmanForm.tsx";
+import * as $$$$$$29 from "./sections/Site/PlansSection.tsx";
+import * as $$$$$$30 from "./sections/Site/ProvidersSection.tsx";
+import * as $$$$$$31 from "./sections/Site/RequestQuoteForm.tsx";
+import * as $$$$$$32 from "./sections/Site/SideBySideContent.tsx";
+import * as $$$$$$33 from "./sections/Site/SingleColorfullWrapper.tsx";
+import * as $$$$$$34 from "./sections/Site/TalkToUsForm.tsx";
+import * as $$$$$$35 from "./sections/Site/VideoSection.tsx";
+import * as $$$$$$36 from "./sections/Site/WorkWithUsForm.tsx";
+import * as $$$$$$37 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "sections": {
@@ -71,16 +72,17 @@ const manifest = {
     "site/sections/Site/LatestNews.tsx": $$$$$$24,
     "site/sections/Site/MainServices.tsx": $$$$$$25,
     "site/sections/Site/MeetAurora.tsx": $$$$$$26,
-    "site/sections/Site/OmbudsmanForm.tsx": $$$$$$27,
-    "site/sections/Site/PlansSection.tsx": $$$$$$28,
-    "site/sections/Site/ProvidersSection.tsx": $$$$$$29,
-    "site/sections/Site/RequestQuoteForm.tsx": $$$$$$30,
-    "site/sections/Site/SideBySideContent.tsx": $$$$$$31,
-    "site/sections/Site/SingleColorfullWrapper.tsx": $$$$$$32,
-    "site/sections/Site/TalkToUsForm.tsx": $$$$$$33,
-    "site/sections/Site/VideoSection.tsx": $$$$$$34,
-    "site/sections/Site/WorkWithUsForm.tsx": $$$$$$35,
-    "site/sections/Theme/Theme.tsx": $$$$$$36,
+    "site/sections/Site/NewsPage.tsx": $$$$$$27,
+    "site/sections/Site/OmbudsmanForm.tsx": $$$$$$28,
+    "site/sections/Site/PlansSection.tsx": $$$$$$29,
+    "site/sections/Site/ProvidersSection.tsx": $$$$$$30,
+    "site/sections/Site/RequestQuoteForm.tsx": $$$$$$31,
+    "site/sections/Site/SideBySideContent.tsx": $$$$$$32,
+    "site/sections/Site/SingleColorfullWrapper.tsx": $$$$$$33,
+    "site/sections/Site/TalkToUsForm.tsx": $$$$$$34,
+    "site/sections/Site/VideoSection.tsx": $$$$$$35,
+    "site/sections/Site/WorkWithUsForm.tsx": $$$$$$36,
+    "site/sections/Theme/Theme.tsx": $$$$$$37,
   },
   "apps": {
     "site/apps/deco/htmx.ts": $$$$$$$$$$$0,
