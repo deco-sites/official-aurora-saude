@@ -72,6 +72,8 @@ export default function SideBySideContent({
         desktop,
     } = image;
 
+    console.log("Device:", device);
+
     return (
         <div className="flex justify-center px-10 lg:px-0 bg-gray4">
             <div className="lg:max-w-[1400px] w-full pt-12 pb-16 lg:py-32 flex flex-col gap-5 lg:gap-20">

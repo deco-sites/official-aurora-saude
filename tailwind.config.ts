@@ -83,6 +83,7 @@ export default {
         gray8: "#B8B8B8",
         gray9: "#D9D9D9",
         gray10: "#ACACAC",
+        gray11: "#8A8A8A",
         aquagreen: "#72CCCC",
         aquagreen2: "#5DD6D6",
         green: "#70FF00",

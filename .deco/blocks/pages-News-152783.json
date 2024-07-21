@@ -1,0 +1,33 @@
+{
+  "name": "News",
+  "path": "/noticias",
+  "sections": [
+    {
+      "__resolveType": "site/sections/Site/SingleColorfullWrapper.tsx",
+      "bgColor": "Laranja",
+      "sections": [
+        {
+          "__resolveType": "site/sections/Site/HeaderSite.tsx",
+          "type": "cliente"
+        },
+        {
+          "__resolveType": "site/sections/Site/Spacer.tsx",
+          "height": 100
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Site/OverlaidNewsBanner.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Site/NewsSection.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Site/Footer.tsx"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
