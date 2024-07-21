@@ -18,12 +18,14 @@ import * as $Simulador_selected_plan from "./islands/Simulador/selected-plan.tsx
 import * as $Site_care_journey_card from "./islands/Site/care-journey-card.tsx";
 import * as $Site_care_journey_island from "./islands/Site/care-journey-island.tsx";
 import * as $Site_common_questions from "./islands/Site/common-questions.tsx";
+import * as $Site_discover_differences from "./islands/Site/discover-differences.tsx";
 import * as $Site_discover_our_plans from "./islands/Site/discover-our-plans.tsx";
 import * as $Site_header_mobile_menu_btn from "./islands/Site/header-mobile-menu-btn.tsx";
 import * as $Site_header_mobile_menu_dropdown from "./islands/Site/header-mobile-menu-dropdown.tsx";
 import * as $Site_logged_areas_btn from "./islands/Site/logged-areas-btn.tsx";
 import * as $Site_logged_areas_dropdown_menu from "./islands/Site/logged-areas-dropdown-menu.tsx";
 import * as $Site_ombudsman_form from "./islands/Site/ombudsman-form.tsx";
+import * as $Site_reels_section from "./islands/Site/reels-section.tsx";
 import * as $Site_request_quote_form from "./islands/Site/request-quote-form.tsx";
 import * as $Site_search_button_container from "./islands/Site/search-button-container.tsx";
 import * as $Site_search_button from "./islands/Site/search-button.tsx";
@@ -56,6 +58,7 @@ const manifest = {
     "./islands/Site/care-journey-card.tsx": $Site_care_journey_card,
     "./islands/Site/care-journey-island.tsx": $Site_care_journey_island,
     "./islands/Site/common-questions.tsx": $Site_common_questions,
+    "./islands/Site/discover-differences.tsx": $Site_discover_differences,
     "./islands/Site/discover-our-plans.tsx": $Site_discover_our_plans,
     "./islands/Site/header-mobile-menu-btn.tsx": $Site_header_mobile_menu_btn,
     "./islands/Site/header-mobile-menu-dropdown.tsx":
@@ -64,6 +67,7 @@ const manifest = {
     "./islands/Site/logged-areas-dropdown-menu.tsx":
       $Site_logged_areas_dropdown_menu,
     "./islands/Site/ombudsman-form.tsx": $Site_ombudsman_form,
+    "./islands/Site/reels-section.tsx": $Site_reels_section,
     "./islands/Site/request-quote-form.tsx": $Site_request_quote_form,
     "./islands/Site/search-button-container.tsx": $Site_search_button_container,
     "./islands/Site/search-button.tsx": $Site_search_button,

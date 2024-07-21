@@ -110,5 +110,17 @@
     "path": "/perguntas-frequentes",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Who%2520We%2520Are-19203.json": {
+    "name": "Who We Are",
+    "path": "/quem-somos",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-News-152783.json": {
+    "name": "News",
+    "path": "/noticias",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }

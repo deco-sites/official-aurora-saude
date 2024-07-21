@@ -23,8 +23,8 @@ export default function CommonQuestionsIsland(
     const activeQuestion = useSignal<number | null>(null);
 
     return (
-        <div className="flex gap-12">
-            <div className="w-1/4 flex flex-col pt-8">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-12">
+            <div className="lg:w-1/4 flex flex-col pt-8">
                 {themes.map((theme, index) => (
                     <CommonQuestionTheme
                         key={index}
@@ -35,7 +35,7 @@ export default function CommonQuestionsIsland(
                 ))}
             </div>
 
-            <div className="w-3/4 flex flex-col gap-4">
+            <div className="lg:w-3/4 flex flex-col gap-4">
                 {themes[activeQuestionsTheme.value].themeQuestions.map((
                     question,
                     index,
