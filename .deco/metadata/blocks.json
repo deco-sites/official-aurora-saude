@@ -122,5 +122,11 @@
     "path": "/noticias",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Corretor%2520-%2520Materiais%2520de%2520Apoio-265963.json": {
+    "name": "Corretor - Materiais de Apoio",
+    "path": "/materiais-de-apoio",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }

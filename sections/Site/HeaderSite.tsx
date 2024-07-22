@@ -207,7 +207,7 @@ export default function Section({ type }: Props) {
                             className="w-28 lg:w-44"
                         />
 
-                        <HeaderMobileMenuBtn />
+                        <HeaderMobileMenuBtn option={option} />
 
                         <SearchButtonContainer option={option} />
                     </div>

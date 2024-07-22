@@ -27,6 +27,7 @@ import * as $Site_logged_areas_dropdown_menu from "./islands/Site/logged-areas-d
 import * as $Site_ombudsman_form from "./islands/Site/ombudsman-form.tsx";
 import * as $Site_reels_section from "./islands/Site/reels-section.tsx";
 import * as $Site_request_quote_form from "./islands/Site/request-quote-form.tsx";
+import * as $Site_sales_section from "./islands/Site/sales-section.tsx";
 import * as $Site_search_button_container from "./islands/Site/search-button-container.tsx";
 import * as $Site_search_button from "./islands/Site/search-button.tsx";
 import * as $Site_service_card_island from "./islands/Site/service-card-island.tsx";
@@ -69,6 +70,7 @@ const manifest = {
     "./islands/Site/ombudsman-form.tsx": $Site_ombudsman_form,
     "./islands/Site/reels-section.tsx": $Site_reels_section,
     "./islands/Site/request-quote-form.tsx": $Site_request_quote_form,
+    "./islands/Site/sales-section.tsx": $Site_sales_section,
     "./islands/Site/search-button-container.tsx": $Site_search_button_container,
     "./islands/Site/search-button.tsx": $Site_search_button,
     "./islands/Site/service-card-island.tsx": $Site_service_card_island,

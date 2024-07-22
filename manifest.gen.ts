@@ -43,13 +43,14 @@ import * as $$$$$$35 from "./sections/Site/PlansSection.tsx";
 import * as $$$$$$36 from "./sections/Site/ProvidersSection.tsx";
 import * as $$$$$$37 from "./sections/Site/ReelsSection.tsx";
 import * as $$$$$$38 from "./sections/Site/RequestQuoteForm.tsx";
-import * as $$$$$$39 from "./sections/Site/SideBySideContent.tsx";
-import * as $$$$$$40 from "./sections/Site/SingleColorfullWrapper.tsx";
-import * as $$$$$$41 from "./sections/Site/Spacer.tsx";
-import * as $$$$$$42 from "./sections/Site/TalkToUsForm.tsx";
-import * as $$$$$$43 from "./sections/Site/VideoSection.tsx";
-import * as $$$$$$44 from "./sections/Site/WorkWithUsForm.tsx";
-import * as $$$$$$45 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$39 from "./sections/Site/SalesSection.tsx";
+import * as $$$$$$40 from "./sections/Site/SideBySideContent.tsx";
+import * as $$$$$$41 from "./sections/Site/SingleColorfullWrapper.tsx";
+import * as $$$$$$42 from "./sections/Site/Spacer.tsx";
+import * as $$$$$$43 from "./sections/Site/TalkToUsForm.tsx";
+import * as $$$$$$44 from "./sections/Site/VideoSection.tsx";
+import * as $$$$$$45 from "./sections/Site/WorkWithUsForm.tsx";
+import * as $$$$$$46 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "sections": {
@@ -92,13 +93,14 @@ const manifest = {
     "site/sections/Site/ProvidersSection.tsx": $$$$$$36,
     "site/sections/Site/ReelsSection.tsx": $$$$$$37,
     "site/sections/Site/RequestQuoteForm.tsx": $$$$$$38,
-    "site/sections/Site/SideBySideContent.tsx": $$$$$$39,
-    "site/sections/Site/SingleColorfullWrapper.tsx": $$$$$$40,
-    "site/sections/Site/Spacer.tsx": $$$$$$41,
-    "site/sections/Site/TalkToUsForm.tsx": $$$$$$42,
-    "site/sections/Site/VideoSection.tsx": $$$$$$43,
-    "site/sections/Site/WorkWithUsForm.tsx": $$$$$$44,
-    "site/sections/Theme/Theme.tsx": $$$$$$45,
+    "site/sections/Site/SalesSection.tsx": $$$$$$39,
+    "site/sections/Site/SideBySideContent.tsx": $$$$$$40,
+    "site/sections/Site/SingleColorfullWrapper.tsx": $$$$$$41,
+    "site/sections/Site/Spacer.tsx": $$$$$$42,
+    "site/sections/Site/TalkToUsForm.tsx": $$$$$$43,
+    "site/sections/Site/VideoSection.tsx": $$$$$$44,
+    "site/sections/Site/WorkWithUsForm.tsx": $$$$$$45,
+    "site/sections/Theme/Theme.tsx": $$$$$$46,
   },
   "apps": {
     "site/apps/deco/htmx.ts": $$$$$$$$$$$0,
