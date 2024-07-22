@@ -1,0 +1,43 @@
+{
+  "name": "Corretor - Materiais de Apoio",
+  "path": "/materiais-de-apoio",
+  "sections": [
+    {
+      "__resolveType": "site/sections/Site/SingleColorfullWrapper.tsx",
+      "sections": [
+        {
+          "__resolveType": "site/sections/Site/HeaderSite.tsx",
+          "type": "corretor"
+        },
+        {
+          "__resolveType": "site/sections/Site/BannerSection.tsx",
+          "image": {
+            "desktop": {
+              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/e73697bd-27dc-429f-9587-f58e5f97067d"
+            },
+            "mobile": {
+              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/c46fba62-4969-4a9b-a71c-9a8ac0acdbb4"
+            },
+            "alt": "Banner"
+          },
+          "title": "Materiais de Apoio",
+          "desktopText": "Acesse nosso portal de materiais de apoio<br />e fique por dentro das campanhas de vendas,<br /> baixe documentos de apoio e muito mais.",
+          "textColor": "Branco",
+          "fontSize": "26",
+          "fontWeight": "semi-bold"
+        }
+      ],
+      "bgColor": "Rosa"
+    },
+    {
+      "__resolveType": "site/sections/Site/SalesSection.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Site/Footer.tsx"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
