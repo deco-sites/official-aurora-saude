@@ -13,7 +13,7 @@ export default function SearchButton({ option, expandedInput }) {
                 option.name === "prestador"
                     ? "text-pink2 border-pink2"
                     : "text-white border-white"
-            } items-center border rounded-full px-7 py-3 cursor-pointer`}
+            } items-center border rounded-full px-7 py-3 cursor-pointer flex-shrink-0`}
         >
             <img
                 src={option.name === "prestador"

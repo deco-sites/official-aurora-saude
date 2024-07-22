@@ -5,7 +5,7 @@ export default function SearchButtonContainer({ option }) {
     const expandedInput = useSignal(false);
 
     return (
-        <div className="hidden lg:flex gap-12">
+        <div className="hidden lg:flex flex-grow justify-end gap-12">
             {expandedInput.value && (
                 <input
                     type="text"
@@ -17,7 +17,11 @@ export default function SearchButtonContainer({ option }) {
             )}
 
             {!expandedInput.value && (
-                <div className="flex items-center gap-16">
+                <div
+                    className={`flex items-center text-center whitespace-nowrap ${
+                        option.id === 3 ? "justify-between flex-grow" : "gap-14"
+                    }`}
+                >
                     {option?.menuItems.map((item) => (
                         <a
                             key={item.text}
