@@ -43,6 +43,7 @@ export default function HeaderMobileMenuBtn({ option }) {
             </div>
             {openMobileMenu && (
                 <DropdownMobileMenu
+                    option={option}
                     openerRef={MobileMenuRef}
                     setOpen={setOpenMobileMenu}
                 />

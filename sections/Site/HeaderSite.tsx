@@ -104,6 +104,13 @@ export default function Section({ type }: Props) {
         ];
     }
 
+    const backgroundColors = {
+        1: "bg-orange4",
+        2: "bg-darkPurple2",
+        3: "bg-pink6",
+        4: "bg-pink6",
+    };
+
     return (
         <div className="flex justify-center px-10 lg:px-0">
             <div className="flex gap-6 w-full ">
@@ -127,7 +134,11 @@ export default function Section({ type }: Props) {
                                         colors[option.color]
                                     } w-14 h-14 -bottom-[33.5px] -left-[25px]`}
                                 >
-                                    <div className="bg-orange4 w-[50%] h-[50%] absolute top-0 left-0 rounded-br-full">
+                                    <div
+                                        className={`${
+                                            backgroundColors[option.id]
+                                        } w-[50%] h-[50%] absolute top-0 left-0 rounded-br-full`}
+                                    >
                                     </div>
                                 </div>
 
@@ -136,7 +147,11 @@ export default function Section({ type }: Props) {
                                         colors[option.color]
                                     } w-14 h-14 -bottom-[33.5px] -right-[25px]`}
                                 >
-                                    <div className="bg-orange4 w-[50%] h-[50%] absolute top-0 right-0 rounded-bl-full">
+                                    <div
+                                        className={`${
+                                            backgroundColors[option.id]
+                                        } w-[50%] h-[50%] absolute top-0 right-0 rounded-bl-full`}
+                                    >
                                     </div>
                                 </div>
 
@@ -194,7 +209,7 @@ export default function Section({ type }: Props) {
                     </div>
 
                     <div
-                        className={`flex items-center justify-between ${
+                        className={`flex items-center gap-12 justify-between ${
                             colors[option.color]
                         } p-7 lg:p-16 mt-[6px] rounded-[20px] h-20 lg:h-48`}
                     >

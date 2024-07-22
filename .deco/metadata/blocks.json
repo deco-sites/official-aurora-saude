@@ -128,5 +128,11 @@
     "path": "/materiais-de-apoio",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Corretor%2520-%2520Seja%2520um%2520corretor-470062.json": {
+    "name": "Corretor - Seja um corretor",
+    "path": "/seja-um-corretor",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }
