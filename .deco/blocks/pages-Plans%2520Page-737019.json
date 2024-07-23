@@ -143,6 +143,12 @@
           "a100": true,
           "a300": true,
           "a500": true
+        },
+        {
+          "name": "Teste Rafaela",
+          "a100": true,
+          "a500": true,
+          "a300": false
         }
       ]
     },

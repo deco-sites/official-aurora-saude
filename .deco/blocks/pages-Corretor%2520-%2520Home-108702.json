@@ -13,7 +13,7 @@
           "__resolveType": "site/sections/Site/BannerSection.tsx",
           "image": {
             "desktop": {
-              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/351e6556-538b-49d7-88c1-5065b4ad69f8"
+              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/e1131930-b621-4b98-b3ce-88f75860d0ea"
             },
             "mobile": {
               "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/a7d0d1f0-ac11-4abd-bc37-d6eb31d9521e"
@@ -25,7 +25,12 @@
           "mobileText": "Conte com a Aurora Saúde<br /> para realizar suas vendas e<br /> aumentar os seus<br /> rendimentos. Vamos começar?",
           "textColor": "Branco",
           "fontSize": "26",
-          "fontWeight": "semi-bold"
+          "fontWeight": "semi-bold",
+          "desktopTitle": "Bem-vindo. Somos o plano <br /> de saúde que está junto. ",
+          "titleFontSize": "26",
+          "textFontSize": "16",
+          "titleFontWeight": "semi-bold",
+          "textFontWeight": "regular"
         },
         {
           "__resolveType": "site/sections/Site/Spacer.tsx"
