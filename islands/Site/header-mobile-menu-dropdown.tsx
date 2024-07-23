@@ -28,7 +28,7 @@ export default function DropdownMobileMenu({ option, openerRef, setOpen }) {
                 } z-50`}
                 ref={dropdownRef}
             >
-                <div className="flex justify-between border-b border-b-white pb-8">
+                <div className="flex justify-between items-center border-b border-b-white pb-8">
                     <div
                         className={`flex items-center gap-5 lg:hidden rounded-3xl ${
                             backgroundBtnColors[option.id]

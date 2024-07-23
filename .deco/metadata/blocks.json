@@ -134,5 +134,11 @@
     "path": "/seja-um-corretor",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Corretor%2520-%2520Home-108702.json": {
+    "name": "Corretor - Home",
+    "path": "/corretor",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }

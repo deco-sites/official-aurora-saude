@@ -1,7 +1,7 @@
 import { Section } from "deco/blocks/section.ts";
 
 export interface IColorfullWrapper {
-    bgColor: "Laranja" | "Roxo" | "Rosa";
+    bgColor: "Laranja" | "Roxo" | "Rosa" | "Cinza";
     sections: Section[];
 }
 
@@ -9,6 +9,7 @@ const bgColors = {
     "Laranja": "bg-orange4",
     "Roxo": "bg-darkPurple2",
     "Rosa": "bg-pink6",
+    "Cinza": "bg-gray4",
 };
 
 function SingleColorfullWrapper({ sections, bgColor }: IColorfullWrapper) {

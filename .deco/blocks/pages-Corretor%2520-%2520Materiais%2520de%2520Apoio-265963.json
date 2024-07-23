@@ -24,7 +24,12 @@
           "desktopText": "Acesse nosso portal de materiais de apoio<br />e fique por dentro das campanhas de vendas,<br /> baixe documentos de apoio e muito mais.",
           "textColor": "Branco",
           "fontSize": "26",
-          "fontWeight": "semi-bold"
+          "fontWeight": "semi-bold",
+          "desktopTitle": "Materiais de Apoio",
+          "mobileTitle": "Materiais<br /> de Apoio",
+          "titleFontSize": "26",
+          "titleFontWeight": "semi-bold",
+          "hasButton": false
         }
       ],
       "bgColor": "Rosa"

@@ -14,8 +14,13 @@ export default function DiscoverOurPlansIsland() {
                 entries.forEach((entry) => {
                     if (entry.intersectionRatio > 0.25) {
                         setIsVisible(true);
-                        setIsSlideToLeft("card-slide-left");
-                        setIsSlideToRight("card-slide-right");
+                        if (window.innerWidth < 640) {
+                            setIsSlideToLeft("card-slide-up");
+                            setIsSlideToRight("card-slide-down");
+                        } else {
+                            setIsSlideToLeft("card-slide-left");
+                            setIsSlideToRight("card-slide-right");
+                        }
                     } else {
                         setIsVisible(false);
                         setIsSlideToLeft("");
@@ -39,40 +44,45 @@ export default function DiscoverOurPlansIsland() {
 
     return (
         <>
-            <div ref={sectionRef} className="flex justify-center bg-gray4">
-                <div className="flex justify-center gap-6 lg:w-[1400px] pt-32 pb-44">
+            <div
+                ref={sectionRef}
+                className="flex justify-center bg-gray4"
+            >
+                <div className="flex justify-center gap-6 lg:w-[1400px] pt-32 pb-32 lg:pb-44 w-screen">
                     <div className=" flex flex-col items-center w-full">
-                        <span className="font-sora text-2xl text-black opacity-40 mb-6">
+                        <span className="font-sora text-2xl text-black opacity-40 mb-56 lg:mb-6">
                             Conheça os nossos planos
                         </span>
-                        <div className={`flex w-full justify-center`}>
-                            <div className="flex flex-col items-center justify-center gap-12">
+                        <div
+                            className={`flex flex-col lg:flex-row w-full justify-center`}
+                        >
+                            <div className="flex flex-col items-center justify-center gap-12 -mb-[300px] lg:mb-0">
                                 <Image
                                     src={"/Site/a100-card.png"}
                                     alt={""}
-                                    className={`w-[650px] ${isSlideToLeft}`}
+                                    className={`w-[400px] lg:w-[650px] ${isSlideToLeft}`}
                                 />
                             </div>
 
-                            <div className="flex flex-col items-center justify-center gap-12 -ml-[580px]">
+                            <div className="flex flex-col items-center justify-center gap-12 lg:-ml-[580px]">
                                 <Image
                                     src={"/Site/a300-card.png"}
                                     alt={""}
-                                    className="w-[650px]"
+                                    className="w-[400px] lg:w-[650px]"
                                 />
                             </div>
 
-                            <div className="flex flex-col items-center justify-center gap-12 -ml-[580px]">
+                            <div className="flex flex-col items-center justify-center gap-12 -mt-[300px] lg:mt-0 lg:-ml-[580px]">
                                 <Image
                                     src={"/Site/a500-card.png"}
                                     alt={""}
-                                    className={`w-[650px] ${isSlideToRight}`}
+                                    className={`w-[400px] lg:w-[650px] ${isSlideToRight}`}
                                 />
                             </div>
                         </div>
 
                         <div
-                            className={`flex w-full justify-center gap-60 ${
+                            className={`flex w-full justify-between mt-56 lg:mt-0 lg:justify-center px-10 lg:px-0 lg:gap-60 ${
                                 isVisible ? "fade-in" : "opacity-0"
                             }`}
                         >

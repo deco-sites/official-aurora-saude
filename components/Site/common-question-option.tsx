@@ -15,7 +15,7 @@ export default function CommmonQuestionOption(
 ) {
     function handleClickIcon(index: number) {
         if (activeQuestion.value === index) {
-            activeQuestion.value = null; // Se a pergunta atual está expandida, contraí-la
+            activeQuestion.value = null;
         } else {
             activeQuestion.value = index;
         }
