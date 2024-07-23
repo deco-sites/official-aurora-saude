@@ -146,5 +146,29 @@
     "path": "/seja-um-prestador",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Cliente%2520-%2520Login-749423.json": {
+    "name": "Cliente - Login",
+    "path": "/cliente-login",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Empresa%2520-%2520Login-58561.json": {
+    "name": "Empresa - Login",
+    "path": "/empresa-login",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Corretor%2520-%2520Login-746666.json": {
+    "name": "Corretor - Login",
+    "path": "/corretor-login",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Prestador%2520-%2520Login-373029.json": {
+    "name": "Prestador - Login",
+    "path": "/prestador-login",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }
