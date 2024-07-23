@@ -28,7 +28,7 @@
     "__resolveType": "site/sections/Theme/Theme.tsx"
   },
   "/.deco/blocks/pages-Start-15553.json": {
-    "name": "Home",
+    "name": "Cliente - Início",
     "path": "/",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
@@ -64,61 +64,61 @@
     "__resolveType": "website/pages/Page.tsx"
   },
   "/.deco/blocks/pages-Talk%2520to%2520Us%2520Form-913038.json": {
-    "name": "Talk to Us Form",
+    "name": "Cliente - Fale com a gente",
     "path": "/fale-com-a-gente",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
   },
   "/.deco/blocks/pages-Request%2520Quote%2520Form-787241.json": {
-    "name": "Request Quote Form",
+    "name": "Cliente - Simulador | Solicitar Cotação",
     "path": "/solicitar-cotacao",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
   },
   "/.deco/blocks/pages-Ombudsman%2520Form-52338.json": {
-    "name": "Ombudsman Form",
+    "name": "Cliente - Ouvidoria Formulário",
     "path": "/ouvidoria",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
   },
   "/.deco/blocks/pages-Work%2520With%2520Us%2520Form-821811.json": {
-    "name": "Work With Us Form",
+    "name": "Cliente - Trabalhe conosco Formulário",
     "path": "/trabalhe-conosco",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
   },
   "/.deco/blocks/pages-Plans%2520Page-737019.json": {
-    "name": "Plans Page",
+    "name": "Cliente - Nossos planos",
     "path": "/nossos-planos",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
   },
   "/.deco/blocks/pages-Care%2520Journey%2520Page-81671.json": {
-    "name": "Care Journey Page",
+    "name": "Cliente - Jornada de Cuidado",
     "path": "/jornada-de-cuidado",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
   },
   "/.deco/blocks/pages-News%2520Page-440195.json": {
-    "name": "News Page",
+    "name": "Cliente - Notícias | Notícia",
     "path": "/noticias-noticia",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
   },
   "/.deco/blocks/pages-Common%2520Questions-462863.json": {
-    "name": "Common Questions",
+    "name": "Cliente - Perguntas frequentes",
     "path": "/perguntas-frequentes",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
   },
   "/.deco/blocks/pages-Who%2520We%2520Are-19203.json": {
-    "name": "Who We Are",
+    "name": "Cliente - Quem somos",
     "path": "/quem-somos",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
   },
   "/.deco/blocks/pages-News-152783.json": {
-    "name": "News",
+    "name": "Cliente - Notícias",
     "path": "/noticias",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
@@ -136,8 +136,14 @@
     "__resolveType": "website/pages/Page.tsx"
   },
   "/.deco/blocks/pages-Corretor%2520-%2520Home-108702.json": {
-    "name": "Corretor - Home",
+    "name": "Corretor - Início",
     "path": "/corretor",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Prestador%2520-%2520Seja%2520um%2520prestador-541707.json": {
+    "name": "Prestador - Seja um prestador",
+    "path": "/seja-um-prestador",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
   }

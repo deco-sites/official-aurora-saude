@@ -16,6 +16,7 @@ import * as $Simulador_previous_step_btn from "./islands/Simulador/previous-step
 import * as $Simulador_receive_contact_btn from "./islands/Simulador/receive-contact-btn.tsx";
 import * as $Simulador_selected_plan from "./islands/Simulador/selected-plan.tsx";
 import * as $Site_be_a_broker_form from "./islands/Site/be-a-broker-form.tsx";
+import * as $Site_be_a_provider from "./islands/Site/be-a-provider.tsx";
 import * as $Site_care_journey_card from "./islands/Site/care-journey-card.tsx";
 import * as $Site_care_journey_island from "./islands/Site/care-journey-island.tsx";
 import * as $Site_common_questions from "./islands/Site/common-questions.tsx";
@@ -59,6 +60,7 @@ const manifest = {
       $Simulador_receive_contact_btn,
     "./islands/Simulador/selected-plan.tsx": $Simulador_selected_plan,
     "./islands/Site/be-a-broker-form.tsx": $Site_be_a_broker_form,
+    "./islands/Site/be-a-provider.tsx": $Site_be_a_provider,
     "./islands/Site/care-journey-card.tsx": $Site_care_journey_card,
     "./islands/Site/care-journey-island.tsx": $Site_care_journey_island,
     "./islands/Site/common-questions.tsx": $Site_common_questions,

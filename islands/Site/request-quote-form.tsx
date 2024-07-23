@@ -3,6 +3,7 @@ import SiteInputSelect from "site/components/Site/site-input-select.tsx";
 import { ufsOptions } from "site/helpers/Site/ufsOptions.ts";
 import { citiesOptions } from "site/helpers/Simulador/cities.ts";
 import { useEffect, useState } from "preact/hooks";
+import { indicationsOptions } from "site/helpers/Site/indications.ts";
 
 export default function RequestQuoteIsland() {
     const [namePlaceholder, setNamePlaceholder] = useState("Escreva aqui");
@@ -24,8 +25,10 @@ export default function RequestQuoteIsland() {
                 setEmailPlaceholder("E-mail");
                 setTelPlaceholder("Telefone");
                 setUFPlaceholder("UF");
-                setCityPlaceholder("Estado");
-                setWhereMeetAuroraPlaceHolder("Selecione");
+                setCityPlaceholder("Cidade");
+                setWhereMeetAuroraPlaceHolder(
+                    "Por onde você conheceu a aurora?",
+                );
             } else {
                 setNamePlaceholder("Escreva aqui");
                 setEmailPlaceholder("seuemail@email.com");
@@ -46,7 +49,7 @@ export default function RequestQuoteIsland() {
     return (
         <div className="flex justify-center px-10 lg:px-0">
             <div className="lg:max-w-[1400px] w-full pt-12 pb-16 lg:py-32 lg:px-32">
-                <div className="flex flex-col gap-11">
+                <div className="flex flex-col gap-4 lg:gap-11">
                     <span className="lg:hidden font-bold text-xl text-gray3">
                         Informações de contato:
                     </span>
@@ -74,7 +77,7 @@ export default function RequestQuoteIsland() {
                             wfull
                         />
                     </div>
-                    <div className="flex mb-3 gap-8">
+                    <div className="flex mb-3 gap-4 lg:gap-11">
                         <div className="hidden lg:flex">
                             <SiteInputText
                                 id={"tel"}
@@ -106,7 +109,7 @@ export default function RequestQuoteIsland() {
                         id={"whereDidYouMeetAurora"}
                         name={"whereDidYouMeetAurora"}
                         label={"Por onde você conheceu a Aurora?"}
-                        options={citiesOptions}
+                        options={indicationsOptions}
                         placeholder={whereMeetAuroraPlaceHolder}
                     />
 
