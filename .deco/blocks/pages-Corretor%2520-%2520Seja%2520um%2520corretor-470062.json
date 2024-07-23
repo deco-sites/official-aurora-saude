@@ -21,10 +21,12 @@
             "alt": "Banner"
           },
           "textColor": "Branco",
-          "desktopText": "Faça parte do plano de<br /> saúde que está sempre<br /> junto.",
           "fontSize": "26",
           "fontWeight": "semi-bold",
-          "mobileText": "Faça parte do<br /> plano de<br /> saúde que está<br /> sempre junto."
+          "desktopTitle": "Faça parte do plano de<br /> saúde que está sempre<br /> junto.",
+          "mobileTitle": "Faça parte do<br /> plano de<br /> saúde que está<br /> sempre junto.",
+          "titleFontSize": "26",
+          "titleFontWeight": "semi-bold"
         }
       ],
       "bgColor": "Rosa"

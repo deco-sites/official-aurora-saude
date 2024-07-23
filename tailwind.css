@@ -113,7 +113,7 @@
 }
 
 
-/*Keyframes e estilização da seção de Conheça os nossos planos*/
+/*Keyframes e estilização da seção de Conheça os nossos planos Desktop*/
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -129,32 +129,57 @@
   animation: fadeIn 1s forwards;
 }
 
-@keyframes cardSlideLeft{
-  0%{
-     transform: translateX(0);
+@keyframes cardSlideLeft {
+  0% {
+    transform: translateX(0);
   }
-  100%{
-     transform: translateX(-300px);
+  100% {
+    transform: translateX(-300px);
   }
 }
 
-@keyframes cardSlideRight{
-  0%{
-     transform: translateX(0);
+@keyframes cardSlideRight {
+  0% {
+    transform: translateX(0);
   }
-  100%{
-     transform: translateX(300px);
+  100% {
+    transform: translateX(300px);
+  }
+}
+
+@keyframes cardSlideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-200px);
+  }
+}
+
+@keyframes cardSlideDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(200px);
   }
 }
 
 .card-slide-left {
-    animation: cardSlideLeft 0.5s forwards;
+  animation: cardSlideLeft 0.5s forwards;
 }
 
 .card-slide-right {
-    animation: cardSlideRight 0.5s forwards;
+  animation: cardSlideRight 0.5s forwards;
 }
 
+.card-slide-up {
+  animation: cardSlideUp 0.5s forwards;
+}
+
+.card-slide-down {
+  animation: cardSlideDown 0.5s forwards;
+}
 
 /*O código abaixo é para a tag hr na página de notícias*/
 .hr-extend-left::before {

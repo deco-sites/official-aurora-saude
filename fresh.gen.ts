@@ -21,6 +21,7 @@ import * as $Site_care_journey_island from "./islands/Site/care-journey-island.t
 import * as $Site_common_questions from "./islands/Site/common-questions.tsx";
 import * as $Site_discover_differences from "./islands/Site/discover-differences.tsx";
 import * as $Site_discover_our_plans from "./islands/Site/discover-our-plans.tsx";
+import * as $Site_frequently_asked_questions from "./islands/Site/frequently-asked-questions.tsx";
 import * as $Site_header_mobile_menu_btn from "./islands/Site/header-mobile-menu-btn.tsx";
 import * as $Site_header_mobile_menu_dropdown from "./islands/Site/header-mobile-menu-dropdown.tsx";
 import * as $Site_logged_areas_btn from "./islands/Site/logged-areas-btn.tsx";
@@ -63,6 +64,8 @@ const manifest = {
     "./islands/Site/common-questions.tsx": $Site_common_questions,
     "./islands/Site/discover-differences.tsx": $Site_discover_differences,
     "./islands/Site/discover-our-plans.tsx": $Site_discover_our_plans,
+    "./islands/Site/frequently-asked-questions.tsx":
+      $Site_frequently_asked_questions,
     "./islands/Site/header-mobile-menu-btn.tsx": $Site_header_mobile_menu_btn,
     "./islands/Site/header-mobile-menu-dropdown.tsx":
       $Site_header_mobile_menu_dropdown,

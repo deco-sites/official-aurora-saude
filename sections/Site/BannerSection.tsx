@@ -33,12 +33,19 @@ export interface Props {
      * @description Check this option when this banner is the biggest image on the screen for image optimizations
      */
     preload?: boolean;
-    title?: string;
+    desktopTitle?: string;
+    mobileTitle?: string;
     desktopText?: string;
     mobileText?: string;
     textColor: "Laranja" | "Amarelo" | "Branco";
-    fontSize: "24" | "26" | "30";
-    fontWeight: "bold" | "semi-bold";
+    titleFontSize?: "24" | "26" | "30";
+    textFontSize?: "16";
+    titleFontWeight?: "bold" | "semi-bold";
+    textFontWeight?: "regular" | "semi-bold";
+    hasButton?: boolean;
+    buttonColor?: "Rosa";
+    buttonText?: string;
+    buttonLink?: string;
 }
 
 const textColors = {
@@ -47,37 +54,57 @@ const textColors = {
     Branco: "text-white",
 };
 
+const buttonColors = {
+    Rosa: "bg-pink6",
+};
+
 const fontSizes = {
+    "16": "text-base",
     "24": "text-2xl",
     "26": "text-[26px]",
     "30": "text-3xl",
 };
 
 const fontWeights = {
+    regular: "font-regular",
     bold: "font-bold",
     "semi-bold": "font-semibold",
 };
 
 interface BannerSectionProps {
     image: Banner;
-    title?: string;
+    desktopTitle?: string;
+    mobileTitle?: string;
     desktopText?: string;
     mobileText?: string;
     textColor: keyof typeof textColors;
-    fontSize: keyof typeof fontSizes;
-    fontWeight: keyof typeof fontWeights;
+    titleFontSize: keyof typeof fontSizes;
+    textFontSize: keyof typeof fontSizes;
+    titleFontWeight: keyof typeof fontWeights;
+    textFontWeight: keyof typeof fontWeights;
+    hasButton: boolean;
+    buttonColor: keyof typeof buttonColors;
+    buttonText: string;
+    buttonLink: string;
     device: Device;
 }
 
 export default function BannerSection(
     {
         image,
-        title,
+        desktopTitle,
+        mobileTitle,
         desktopText,
         mobileText,
         textColor,
-        fontSize,
-        fontWeight,
+        titleFontSize,
+        textFontSize,
+        titleFontWeight,
+        textFontWeight,
+        hasButton,
+        buttonColor,
+        buttonText,
+        buttonLink,
         device,
     }: BannerSectionProps,
 ) {
@@ -87,12 +114,42 @@ export default function BannerSection(
         <div className="relative flex rounded-3xl px-10 lg:px-0 w-full max-w-full">
             {device !== "desktop" && (
                 <>
-                    <span
-                        className={`absolute top-1/2 transform -translate-y-1/2 left-16 right-16 w-auto max-w-full break-words overflow-hidden font-sora ${
-                            fontWeights[fontWeight]
-                        } ${textColors[textColor]} ${fontSizes[fontSize]}`}
-                        dangerouslySetInnerHTML={{ __html: mobileText }}
-                    />
+                    <div className="flex flex-col gap-5 absolute top-1/2 transform -translate-y-1/2 left-16 right-16 w-auto max-w-full font-sora">
+                        {mobileTitle && (
+                            <span
+                                className={`break-words overflow-hidden ${
+                                    fontSizes[titleFontSize]
+                                } ${textColors[textColor]} ${
+                                    fontWeights[titleFontWeight]
+                                }`}
+                                dangerouslySetInnerHTML={{
+                                    __html: mobileTitle,
+                                }}
+                            >
+                            </span>
+                        )}
+                        {mobileText && (
+                            <span
+                                className={` break-words overflow-hidden ${
+                                    fontWeights[textFontWeight]
+                                } ${textColors[textColor]} ${
+                                    fontSizes[textFontSize]
+                                }`}
+                                dangerouslySetInnerHTML={{ __html: mobileText }}
+                            />
+                        )}
+                        {hasButton && (
+                            <a href={buttonLink}>
+                                <button
+                                    className={`text-white py-2 px-8 rounded-full ${
+                                        buttonColors[buttonColor]
+                                    }`}
+                                >
+                                    {buttonText}
+                                </button>
+                            </a>
+                        )}
+                    </div>
                     <Image
                         class="object-cover w-full h-full rounded-[20px]"
                         src={mobile.image}
@@ -105,12 +162,45 @@ export default function BannerSection(
             )}
             {device === "desktop" && (
                 <>
-                    <span
-                        className={`absolute top-1/2 transform -translate-y-1/2 left-8 font-sora ${
-                            fontWeights[fontWeight]
-                        } ${textColors[textColor]} ${fontSizes[fontSize]}`}
-                        dangerouslySetInnerHTML={{ __html: desktopText }}
-                    />
+                    <div className="flex justify-between absolute top-1/2 transform -translate-y-1/2 left-12 pr-24 font-sora w-full items-center">
+                        <div className="flex flex-col gap-5">
+                            {desktopTitle && (
+                                <span
+                                    className={` ${fontSizes[titleFontSize]} ${
+                                        textColors[textColor]
+                                    } ${fontWeights[titleFontWeight]}`}
+                                    dangerouslySetInnerHTML={{
+                                        __html: desktopTitle,
+                                    }}
+                                >
+                                </span>
+                            )}
+
+                            {desktopText && (
+                                <span
+                                    className={` ${
+                                        fontWeights[textFontWeight]
+                                    } ${textColors[textColor]} ${
+                                        fontSizes[textFontSize]
+                                    }`}
+                                    dangerouslySetInnerHTML={{
+                                        __html: desktopText,
+                                    }}
+                                />
+                            )}
+                        </div>
+                        {hasButton && (
+                            <a href={buttonLink}>
+                                <button
+                                    className={`text-white py-3 px-16 rounded-full ${
+                                        buttonColors[buttonColor]
+                                    }`}
+                                >
+                                    {buttonText}
+                                </button>
+                            </a>
+                        )}
+                    </div>
                     <Image
                         class="object-cover w-full h-full rounded-[20px]"
                         src={desktop.image}
