@@ -170,5 +170,17 @@
     "path": "/prestador-login",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Esqueceu%2520a%2520senha-568563.json": {
+    "name": "Cliente - Esqueceu a senha",
+    "path": "/esqueceu-a-senha",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Cliente%2520-%2520Altere%2520sua%2520senha-426485.json": {
+    "name": "Cliente - Altere sua senha",
+    "path": "/altere-sua-senha",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }

@@ -20,11 +20,13 @@ import * as $Site_be_a_provider from "./islands/Site/be-a-provider.tsx";
 import * as $Site_brokers_login_form from "./islands/Site/brokers-login-form.tsx";
 import * as $Site_care_journey_card from "./islands/Site/care-journey-card.tsx";
 import * as $Site_care_journey_island from "./islands/Site/care-journey-island.tsx";
+import * as $Site_change_password from "./islands/Site/change-password.tsx";
 import * as $Site_client_login_form from "./islands/Site/client-login-form.tsx";
 import * as $Site_common_questions from "./islands/Site/common-questions.tsx";
 import * as $Site_discover_differences from "./islands/Site/discover-differences.tsx";
 import * as $Site_discover_our_plans from "./islands/Site/discover-our-plans.tsx";
 import * as $Site_enterprise_login_form from "./islands/Site/enterprise-login-form.tsx";
+import * as $Site_forgot_password from "./islands/Site/forgot-password.tsx";
 import * as $Site_frequently_asked_questions from "./islands/Site/frequently-asked-questions.tsx";
 import * as $Site_header_mobile_menu_btn from "./islands/Site/header-mobile-menu-btn.tsx";
 import * as $Site_header_mobile_menu_dropdown from "./islands/Site/header-mobile-menu-dropdown.tsx";
@@ -68,11 +70,13 @@ const manifest = {
     "./islands/Site/brokers-login-form.tsx": $Site_brokers_login_form,
     "./islands/Site/care-journey-card.tsx": $Site_care_journey_card,
     "./islands/Site/care-journey-island.tsx": $Site_care_journey_island,
+    "./islands/Site/change-password.tsx": $Site_change_password,
     "./islands/Site/client-login-form.tsx": $Site_client_login_form,
     "./islands/Site/common-questions.tsx": $Site_common_questions,
     "./islands/Site/discover-differences.tsx": $Site_discover_differences,
     "./islands/Site/discover-our-plans.tsx": $Site_discover_our_plans,
     "./islands/Site/enterprise-login-form.tsx": $Site_enterprise_login_form,
+    "./islands/Site/forgot-password.tsx": $Site_forgot_password,
     "./islands/Site/frequently-asked-questions.tsx":
       $Site_frequently_asked_questions,
     "./islands/Site/header-mobile-menu-btn.tsx": $Site_header_mobile_menu_btn,
