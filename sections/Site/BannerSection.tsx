@@ -205,8 +205,8 @@ export default function BannerSection(
                         class="object-cover w-full h-full rounded-[20px]"
                         src={desktop.image}
                         alt={alt}
-                        width={desktop.width ?? 1440}
-                        height={desktop.height ?? 600}
+                        width={desktop.width ?? 1436}
+                        height={desktop.height ?? 335}
                         decoding="async"
                     />
                 </>
