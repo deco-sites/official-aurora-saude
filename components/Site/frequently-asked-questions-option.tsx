@@ -4,9 +4,8 @@ export default function QuestionBox({ question, index }) {
     const activeAsk = useSignal<number | null>(null);
 
     function handleClickAskIcon(index: number) {
-        console.log("bateu aqui nessa função");
         if (activeAsk.value === index) {
-            activeAsk.value = null; // Se a pergunta atual está expandida, contraí-la
+            activeAsk.value = null;
         } else {
             activeAsk.value = index;
         }

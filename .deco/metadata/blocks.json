@@ -182,5 +182,11 @@
     "path": "/altere-sua-senha",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Pol%25C3%25ADticas%2520de%2520Privacidade-186508.json": {
+    "name": "Políticas de Privacidade",
+    "path": "/politicas-de-privacidade",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }

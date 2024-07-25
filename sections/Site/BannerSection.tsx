@@ -109,7 +109,7 @@ export default function BannerSection(
     }: BannerSectionProps,
 ) {
     const { alt, mobile, desktop } = image;
-
+    
     return (
         <div className="relative flex rounded-3xl px-10 lg:px-0 w-full max-w-full">
             {device !== "desktop" && (
@@ -154,8 +154,8 @@ export default function BannerSection(
                         class="object-cover w-full h-full rounded-[20px]"
                         src={mobile.image}
                         alt={alt}
-                        width={mobile.width ?? 360}
-                        height={mobile.height ?? 600}
+                        width={mobile.width ?? 350}
+                        height={mobile.height ?? 350}
                         decoding="async"
                     />
                 </>
