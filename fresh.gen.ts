@@ -33,6 +33,7 @@ import * as $Site_header_mobile_menu_dropdown from "./islands/Site/header-mobile
 import * as $Site_i_am_a_new_beneficiary from "./islands/Site/i-am-a-new-beneficiary.tsx";
 import * as $Site_logged_areas_btn from "./islands/Site/logged-areas-btn.tsx";
 import * as $Site_logged_areas_dropdown_menu from "./islands/Site/logged-areas-dropdown-menu.tsx";
+import * as $Site_news_page_template from "./islands/Site/news-page-template.tsx";
 import * as $Site_ombudsman_form from "./islands/Site/ombudsman-form.tsx";
 import * as $Site_privacy_policies from "./islands/Site/privacy-policies.tsx";
 import * as $Site_providers_login_form from "./islands/Site/providers-login-form.tsx";
@@ -88,6 +89,7 @@ const manifest = {
     "./islands/Site/logged-areas-btn.tsx": $Site_logged_areas_btn,
     "./islands/Site/logged-areas-dropdown-menu.tsx":
       $Site_logged_areas_dropdown_menu,
+    "./islands/Site/news-page-template.tsx": $Site_news_page_template,
     "./islands/Site/ombudsman-form.tsx": $Site_ombudsman_form,
     "./islands/Site/privacy-policies.tsx": $Site_privacy_policies,
     "./islands/Site/providers-login-form.tsx": $Site_providers_login_form,

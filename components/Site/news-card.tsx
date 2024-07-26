@@ -21,8 +21,10 @@ export default function NewsCard({ imageSrc, alt, date, title, link }) {
             </div>
             <div className="flex flex-col gap-5 px-14 py-5">
                 <span className="text-pink1 font-normal">{date}</span>
-                <span className="text-black opacity-50 font-sora font-bold text-lg">
-                    {title}
+                <span
+                    className="text-black opacity-50 font-sora font-bold text-lg"
+                    dangerouslySetInnerHTML={{ __html: title }}
+                >
                 </span>
                 <a href={link}>
                     <span className="text-orange4 font-black">Leia mais</span>
