@@ -90,6 +90,7 @@ export default {
         gray11: "#8A8A8A",
         gray12: "#CACACA",
         gray13: "#7B7B7B",
+        gray14: "#C1C1C1",
         aquagreen: "#72CCCC",
         aquagreen2: "#5DD6D6",
         aquagreen3: "#59B7B8",
