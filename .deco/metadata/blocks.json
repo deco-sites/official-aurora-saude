@@ -212,5 +212,11 @@
     "path": "/noticias-noticia4",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-P%25C3%25A1gina%2520DPO-137564.json": {
+    "name": "Página DPO",
+    "path": "/aurora-dpo",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }
