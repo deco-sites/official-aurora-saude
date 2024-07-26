@@ -194,5 +194,23 @@
     "path": "/sou-novo-beneficiario",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Cliente%2520-%2520Not%25C3%25ADcias%2520%257C%2520Not%25C3%25ADcia%25205-405719.json": {
+    "name": "Cliente - Notícias | Notícia 5",
+    "path": "/noticias-noticia5",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Cliente%2520-%2520Not%25C3%25ADcias%2520%257C%2520Not%25C3%25ADcia%25206-497871.json": {
+    "name": "Cliente - Notícias | Notícia 6",
+    "path": "/noticias-noticia6",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Cliente%2520-%2520Not%25C3%25ADcias%2520%257C%2520Not%25C3%25ADcia%25204-367299.json": {
+    "name": "Cliente - Notícias | Notícia 4",
+    "path": "/noticias-noticia4",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }
