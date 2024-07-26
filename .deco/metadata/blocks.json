@@ -188,5 +188,11 @@
     "path": "/politicas-de-privacidade",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Cliente%2520-%2520Novo%2520benefici%25C3%25A1rio-417338.json": {
+    "name": "Cliente - Novo beneficiário",
+    "path": "/sou-novo-beneficiario",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }

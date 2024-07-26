@@ -30,6 +30,7 @@ import * as $Site_forgot_password from "./islands/Site/forgot-password.tsx";
 import * as $Site_frequently_asked_questions from "./islands/Site/frequently-asked-questions.tsx";
 import * as $Site_header_mobile_menu_btn from "./islands/Site/header-mobile-menu-btn.tsx";
 import * as $Site_header_mobile_menu_dropdown from "./islands/Site/header-mobile-menu-dropdown.tsx";
+import * as $Site_i_am_a_new_beneficiary from "./islands/Site/i-am-a-new-beneficiary.tsx";
 import * as $Site_logged_areas_btn from "./islands/Site/logged-areas-btn.tsx";
 import * as $Site_logged_areas_dropdown_menu from "./islands/Site/logged-areas-dropdown-menu.tsx";
 import * as $Site_ombudsman_form from "./islands/Site/ombudsman-form.tsx";
@@ -83,6 +84,7 @@ const manifest = {
     "./islands/Site/header-mobile-menu-btn.tsx": $Site_header_mobile_menu_btn,
     "./islands/Site/header-mobile-menu-dropdown.tsx":
       $Site_header_mobile_menu_dropdown,
+    "./islands/Site/i-am-a-new-beneficiary.tsx": $Site_i_am_a_new_beneficiary,
     "./islands/Site/logged-areas-btn.tsx": $Site_logged_areas_btn,
     "./islands/Site/logged-areas-dropdown-menu.tsx":
       $Site_logged_areas_dropdown_menu,

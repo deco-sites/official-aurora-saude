@@ -164,10 +164,3 @@ export default function PrivacyPoliciesIsland({ sections, device }: Props) {
 
     return device === "desktop" ? desktopComponent : mobileComponent;
 }
-
-export const loader = (props: Props, ctx: FnContext): Props => {
-    return {
-        ...props,
-        device: ctx.device,
-    };
-};

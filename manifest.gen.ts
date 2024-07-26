@@ -41,28 +41,30 @@ import * as $$$$$$33 from "./sections/Site/Footer.tsx";
 import * as $$$$$$34 from "./sections/Site/ForgotPassword.tsx";
 import * as $$$$$$35 from "./sections/Site/FrequentlyAskedQuestions.tsx";
 import * as $$$$$$36 from "./sections/Site/HeaderSite.tsx";
-import * as $$$$$$37 from "./sections/Site/LatestNews.tsx";
-import * as $$$$$$38 from "./sections/Site/MainServices.tsx";
-import * as $$$$$$39 from "./sections/Site/MeetAurora.tsx";
-import * as $$$$$$40 from "./sections/Site/NewsPage.tsx";
-import * as $$$$$$41 from "./sections/Site/NewsSection.tsx";
-import * as $$$$$$42 from "./sections/Site/OmbudsmanForm.tsx";
-import * as $$$$$$43 from "./sections/Site/OverlaidNewsBanner.tsx";
-import * as $$$$$$44 from "./sections/Site/OverlaidVideoSection.tsx";
-import * as $$$$$$45 from "./sections/Site/PlansSection.tsx";
-import * as $$$$$$46 from "./sections/Site/PrivacyPolicies.tsx";
-import * as $$$$$$47 from "./sections/Site/ProviderLoginForm.tsx";
-import * as $$$$$$48 from "./sections/Site/ProvidersSection.tsx";
-import * as $$$$$$49 from "./sections/Site/ReelsSection.tsx";
-import * as $$$$$$50 from "./sections/Site/RequestQuoteForm.tsx";
-import * as $$$$$$51 from "./sections/Site/SalesSection.tsx";
-import * as $$$$$$52 from "./sections/Site/SideBySideContent.tsx";
-import * as $$$$$$53 from "./sections/Site/SingleColorfullWrapper.tsx";
-import * as $$$$$$54 from "./sections/Site/Spacer.tsx";
-import * as $$$$$$55 from "./sections/Site/TalkToUsForm.tsx";
-import * as $$$$$$56 from "./sections/Site/VideoSection.tsx";
-import * as $$$$$$57 from "./sections/Site/WorkWithUsForm.tsx";
-import * as $$$$$$58 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$37 from "./sections/Site/IAmANewBeneficiary.tsx";
+import * as $$$$$$38 from "./sections/Site/LatestNews.tsx";
+import * as $$$$$$39 from "./sections/Site/MainServices.tsx";
+import * as $$$$$$40 from "./sections/Site/MeetAurora.tsx";
+import * as $$$$$$41 from "./sections/Site/NewsPage.tsx";
+import * as $$$$$$42 from "./sections/Site/NewsSection.tsx";
+import * as $$$$$$43 from "./sections/Site/OmbudsmanForm.tsx";
+import * as $$$$$$44 from "./sections/Site/OverlaidNewsBanner.tsx";
+import * as $$$$$$45 from "./sections/Site/OverlaidVideoSection.tsx";
+import * as $$$$$$46 from "./sections/Site/PlansSection.tsx";
+import * as $$$$$$47 from "./sections/Site/PrivacyPolicies.tsx";
+import * as $$$$$$48 from "./sections/Site/ProviderLoginForm.tsx";
+import * as $$$$$$49 from "./sections/Site/ProvidersSection.tsx";
+import * as $$$$$$50 from "./sections/Site/ReelsSection.tsx";
+import * as $$$$$$51 from "./sections/Site/RequestQuoteForm.tsx";
+import * as $$$$$$52 from "./sections/Site/SalesSection.tsx";
+import * as $$$$$$53 from "./sections/Site/SideBySideContent.tsx";
+import * as $$$$$$54 from "./sections/Site/SingleColorfullWrapper.tsx";
+import * as $$$$$$55 from "./sections/Site/Spacer.tsx";
+import * as $$$$$$56 from "./sections/Site/TableTopic.tsx";
+import * as $$$$$$57 from "./sections/Site/TalkToUsForm.tsx";
+import * as $$$$$$58 from "./sections/Site/VideoSection.tsx";
+import * as $$$$$$59 from "./sections/Site/WorkWithUsForm.tsx";
+import * as $$$$$$60 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "sections": {
@@ -103,28 +105,30 @@ const manifest = {
     "site/sections/Site/ForgotPassword.tsx": $$$$$$34,
     "site/sections/Site/FrequentlyAskedQuestions.tsx": $$$$$$35,
     "site/sections/Site/HeaderSite.tsx": $$$$$$36,
-    "site/sections/Site/LatestNews.tsx": $$$$$$37,
-    "site/sections/Site/MainServices.tsx": $$$$$$38,
-    "site/sections/Site/MeetAurora.tsx": $$$$$$39,
-    "site/sections/Site/NewsPage.tsx": $$$$$$40,
-    "site/sections/Site/NewsSection.tsx": $$$$$$41,
-    "site/sections/Site/OmbudsmanForm.tsx": $$$$$$42,
-    "site/sections/Site/OverlaidNewsBanner.tsx": $$$$$$43,
-    "site/sections/Site/OverlaidVideoSection.tsx": $$$$$$44,
-    "site/sections/Site/PlansSection.tsx": $$$$$$45,
-    "site/sections/Site/PrivacyPolicies.tsx": $$$$$$46,
-    "site/sections/Site/ProviderLoginForm.tsx": $$$$$$47,
-    "site/sections/Site/ProvidersSection.tsx": $$$$$$48,
-    "site/sections/Site/ReelsSection.tsx": $$$$$$49,
-    "site/sections/Site/RequestQuoteForm.tsx": $$$$$$50,
-    "site/sections/Site/SalesSection.tsx": $$$$$$51,
-    "site/sections/Site/SideBySideContent.tsx": $$$$$$52,
-    "site/sections/Site/SingleColorfullWrapper.tsx": $$$$$$53,
-    "site/sections/Site/Spacer.tsx": $$$$$$54,
-    "site/sections/Site/TalkToUsForm.tsx": $$$$$$55,
-    "site/sections/Site/VideoSection.tsx": $$$$$$56,
-    "site/sections/Site/WorkWithUsForm.tsx": $$$$$$57,
-    "site/sections/Theme/Theme.tsx": $$$$$$58,
+    "site/sections/Site/IAmANewBeneficiary.tsx": $$$$$$37,
+    "site/sections/Site/LatestNews.tsx": $$$$$$38,
+    "site/sections/Site/MainServices.tsx": $$$$$$39,
+    "site/sections/Site/MeetAurora.tsx": $$$$$$40,
+    "site/sections/Site/NewsPage.tsx": $$$$$$41,
+    "site/sections/Site/NewsSection.tsx": $$$$$$42,
+    "site/sections/Site/OmbudsmanForm.tsx": $$$$$$43,
+    "site/sections/Site/OverlaidNewsBanner.tsx": $$$$$$44,
+    "site/sections/Site/OverlaidVideoSection.tsx": $$$$$$45,
+    "site/sections/Site/PlansSection.tsx": $$$$$$46,
+    "site/sections/Site/PrivacyPolicies.tsx": $$$$$$47,
+    "site/sections/Site/ProviderLoginForm.tsx": $$$$$$48,
+    "site/sections/Site/ProvidersSection.tsx": $$$$$$49,
+    "site/sections/Site/ReelsSection.tsx": $$$$$$50,
+    "site/sections/Site/RequestQuoteForm.tsx": $$$$$$51,
+    "site/sections/Site/SalesSection.tsx": $$$$$$52,
+    "site/sections/Site/SideBySideContent.tsx": $$$$$$53,
+    "site/sections/Site/SingleColorfullWrapper.tsx": $$$$$$54,
+    "site/sections/Site/Spacer.tsx": $$$$$$55,
+    "site/sections/Site/TableTopic.tsx": $$$$$$56,
+    "site/sections/Site/TalkToUsForm.tsx": $$$$$$57,
+    "site/sections/Site/VideoSection.tsx": $$$$$$58,
+    "site/sections/Site/WorkWithUsForm.tsx": $$$$$$59,
+    "site/sections/Theme/Theme.tsx": $$$$$$60,
   },
   "apps": {
     "site/apps/deco/htmx.ts": $$$$$$$$$$$0,
