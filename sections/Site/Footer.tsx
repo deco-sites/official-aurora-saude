@@ -1,4 +1,5 @@
 import Image from "apps/website/components/Image.tsx";
+import Icon from "site/components/ui/Icon.tsx";
 
 export default function Footer() {
     return (
@@ -12,30 +13,38 @@ export default function Footer() {
                                 alt={""}
                             />
                             <div className="flex gap-5">
-                                <Image
-                                    src={"/Site/Footer/facebook-icon.svg"}
-                                    alt={""}
-                                    className="w-6"
-                                />
-                                <Image
-                                    src={"/Site/Footer/instagram-icon.svg"}
-                                    alt={""}
-                                    className="w-6"
-                                />
-                                <Image
-                                    src={"/Site/Footer/linkedin-icon.svg"}
-                                    alt={""}
-                                    className="w-6"
-                                />
-                                <Image
-                                    src={"/Site/Footer/whatsapp-icon.svg"}
-                                    alt={""}
-                                    className="hidden lg:flex w-6"
-                                />
+                                <a href="#">
+                                    <Icon
+                                        class="h-6 w-6"
+                                        id="FacebookFooterIcon"
+                                        size={24}
+                                    />
+                                </a>
+                                <a href="#">
+                                    <Icon
+                                        class="h-6 w-6"
+                                        id="InstagramFooterIcon"
+                                        size={24}
+                                    />
+                                </a>
+                                <a href="#">
+                                    <Icon
+                                        class="h-6 w-6"
+                                        id="LinkedinFooterIcon"
+                                        size={24}
+                                    />
+                                </a>
+                                <a href="#">
+                                    <Icon
+                                        class="hidden lg:flex h-6 w-6"
+                                        id="WhatsappFooterIcon"
+                                        size={24}
+                                    />
+                                </a>
                             </div>
                         </div>
-                        <div className="w-full flex justify-center lg:justify-start text-sm pb-20">
-                            <div className="hidden lg:flex lg:w-3/5 gap-20 border-r border-r-white p-12 whitespace-nowrap">
+                        <div className="w-full flex justify-center lg:justify-start text-base pb-20">
+                            <div className="hidden lg:flex lg:w-3/5 justify-between border-r border-r-white p-12 whitespace-nowrap">
                                 <div className="flex flex-col">
                                     <span className="font-semibold mb-6">
                                         Sou cliente
@@ -82,10 +91,14 @@ export default function Footer() {
                             <div className="lg:w-2/5 text-center lg:text-left items-center lg:items-start flex flex-col gap-8 lg:py-12 lg:pl-20">
                                 <div className="flex flex-col gap-4">
                                     <span>Precisa de ajuda?</span>
-                                    <a href="#" className="flex gap-3">
-                                        <Image
-                                            src={"/Site/Footer/whatsapp-icon.svg"}
-                                            alt={""}
+                                    <a
+                                        href="#"
+                                        className="flex gap-2 items-center"
+                                    >
+                                        <Icon
+                                            class="h-5 w-5"
+                                            id="WhatsappFooterIcon"
+                                            size={20}
                                         />
                                         <span>Tire dúvidas no Whatsapp</span>
                                     </a>
@@ -95,32 +108,37 @@ export default function Footer() {
                                         Já tem o plano e quer falar conosco?
                                         Ligue para:
                                     </span>
-                                    <div className="flex gap-3 justify-center lg:justify-start">
-                                        <Image
-                                            src={"/Site/Footer/phone-icon.svg"}
-                                            alt={""}
+                                    <div className="flex gap-2 items-center justify-center lg:justify-start">
+                                        <Icon
+                                            class="h-5 w-5"
+                                            id="PhoneFooterIcon"
+                                            size={17}
                                         />
                                         <span>4000 2105</span>
                                     </div>
                                 </div>
 
                                 <div className="hidden lg:flex gap-3">
-                                    <Image
-                                        src={"/Site/Footer/android.svg"}
-                                        alt={""}
-                                    />
-                                    <Image
-                                        src={"/Site/Footer/apple.svg"}
-                                        alt={""}
-                                    />
+                                    <a href="">
+                                        <Image
+                                            src={"/Site/Footer/android.svg"}
+                                            alt={""}
+                                        />
+                                    </a>
+                                    <a href="">
+                                        <Image
+                                            src={"/Site/Footer/apple.svg"}
+                                            alt={""}
+                                        />
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div className="w-full flex flex-col lg:flex-row items-center justify-between text-xs border-t border-t-white p-8">
+                        <div className="w-full flex flex-col lg:flex-row items-center justify-between text-sm border-t border-t-white p-8">
                             <span className="block lg:hidden mb-4">
                                 CNPJ: 49.955.478/0001-64
                             </span>
-                            <span className="block lg:hidden mb-6">
+                            <span className="block lg:hidden mb-6 text-center">
                                 Endereço: Rua Ministro Orozimbo Nonato, 422 -
                                 Sala 903 - Vila da Serra - Nova Lima - MG
                             </span>

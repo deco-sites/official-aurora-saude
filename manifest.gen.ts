@@ -62,9 +62,11 @@ import * as $$$$$$54 from "./sections/Site/SingleColorfullWrapper.tsx";
 import * as $$$$$$55 from "./sections/Site/Spacer.tsx";
 import * as $$$$$$56 from "./sections/Site/TableTopic.tsx";
 import * as $$$$$$57 from "./sections/Site/TalkToUsForm.tsx";
-import * as $$$$$$58 from "./sections/Site/VideoSection.tsx";
-import * as $$$$$$59 from "./sections/Site/WorkWithUsForm.tsx";
-import * as $$$$$$60 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$58 from "./sections/Site/TextPage.tsx";
+import * as $$$$$$59 from "./sections/Site/VideoSection.tsx";
+import * as $$$$$$60 from "./sections/Site/WhiteBannerCarrousel.tsx";
+import * as $$$$$$61 from "./sections/Site/WorkWithUsForm.tsx";
+import * as $$$$$$62 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "sections": {
@@ -126,9 +128,11 @@ const manifest = {
     "site/sections/Site/Spacer.tsx": $$$$$$55,
     "site/sections/Site/TableTopic.tsx": $$$$$$56,
     "site/sections/Site/TalkToUsForm.tsx": $$$$$$57,
-    "site/sections/Site/VideoSection.tsx": $$$$$$58,
-    "site/sections/Site/WorkWithUsForm.tsx": $$$$$$59,
-    "site/sections/Theme/Theme.tsx": $$$$$$60,
+    "site/sections/Site/TextPage.tsx": $$$$$$58,
+    "site/sections/Site/VideoSection.tsx": $$$$$$59,
+    "site/sections/Site/WhiteBannerCarrousel.tsx": $$$$$$60,
+    "site/sections/Site/WorkWithUsForm.tsx": $$$$$$61,
+    "site/sections/Theme/Theme.tsx": $$$$$$62,
   },
   "apps": {
     "site/apps/deco/htmx.ts": $$$$$$$$$$$0,

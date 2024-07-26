@@ -88,7 +88,7 @@ function BannerItem(
                     src={desktop.image}
                     alt={alt}
                     width={desktop.width ?? 1440}
-                    height={desktop.height ?? 600}
+                    height={desktop.height ?? 520}
                     fetchPriority={lcp ? "high" : "low"}
                     preload={lcp ? true : false}
                     decoding={"async"}
