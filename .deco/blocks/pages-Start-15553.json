@@ -53,7 +53,91 @@
       "__resolveType": "site/sections/Site/CareJourney.tsx"
     },
     {
-      "__resolveType": "site/sections/Site/DiscoverOurPlans.tsx"
+      "__resolveType": "site/sections/Site/DiscoverOurPlans.tsx",
+      "sectionTitle": "Conheça nossos planos",
+      "plans": [
+        {
+          "benefits": [
+            {
+              "phrase": "Cobertura ambulatorial"
+            },
+            {
+              "phrase": "Consultas médicas ilimitadas"
+            },
+            {
+              "phrase": "Rede médica de alta qualidade"
+            },
+            {
+              "phrase": "Telemedicina de urgência 24h"
+            },
+            {
+              "phrase": "1º check-up gratuito*"
+            }
+          ],
+          "cardImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/7da32d42-0867-4add-85ee-5b961655b6b4",
+          "planName": "a100",
+          "basePrice": "50,52",
+          "bgColor": "Laranja",
+          "textColor": "Branco",
+          "titleColor": "Amarelo",
+          "buttonTextColor": "Laranja",
+          "buttonBgColor": "Amarelo"
+        },
+        {
+          "benefits": [
+            {
+              "phrase": "Cobertura ambulatorial e hospitalar"
+            },
+            {
+              "phrase": "Consultas médicas ilimitadas"
+            },
+            {
+              "phrase": "Rede médica completa e de alta qualidade"
+            },
+            {
+              "phrase": "Telemedicina de urgência 24h"
+            },
+            {
+              "phrase": "1º check-up gratuito*"
+            }
+          ],
+          "planName": "a300",
+          "cardImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/f1bf2519-0225-4396-bd1b-c2f46f19a1eb",
+          "basePrice": "104,67",
+          "bgColor": "Verde",
+          "textColor": "Branco",
+          "titleColor": "Amarelo",
+          "buttonBgColor": "Amarelo",
+          "buttonTextColor": "Verde"
+        },
+        {
+          "benefits": [
+            {
+              "phrase": "Cobertura ambulatorial, hospitalar e obstetrícia"
+            },
+            {
+              "phrase": "A melhor e mais completa rede médica"
+            },
+            {
+              "phrase": "Consultas médicas ilimitadas"
+            },
+            {
+              "phrase": "Telemedicina de urgência 24h"
+            },
+            {
+              "phrase": "1º check-up gratuito*"
+            }
+          ],
+          "cardImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/b13817a7-cfab-4f61-96ea-9cac52a4d54c",
+          "planName": "a500",
+          "basePrice": "120,54",
+          "bgColor": "Amarelo",
+          "textColor": "Laranja",
+          "buttonBgColor": "Laranja",
+          "buttonTextColor": "Amarelo",
+          "titleColor": "Rosa"
+        }
+      ]
     },
     {
       "__resolveType": "site/sections/Site/ProvidersSection.tsx",
