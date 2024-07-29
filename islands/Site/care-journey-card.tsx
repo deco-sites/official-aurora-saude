@@ -1,6 +1,7 @@
 import { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 import { Signal } from "@preact/signals";
+import { Device } from "apps/website/matchers/device.ts";
 
 export interface ICardProps {
     id: number;
@@ -17,6 +18,7 @@ export interface ICareJourneyCard {
     cardsLength: number;
     isCurrent: boolean;
     showControls: string;
+    device: Device;
 }
 
 export default function CareJourneyCard(
@@ -28,8 +30,10 @@ export default function CareJourneyCard(
         cardsLength,
         isCurrent,
         showControls,
+        device,
     }: ICareJourneyCard,
 ) {
+    console.log("aniversariante", device);
     return (
         <div className="flex flex-col flex-shrink-0 bg-gradient-to-b from-pink4 to-pink5 rounded-3xl w-72 mx-2">
             <div className="flex justify-center items-center h-2/4">

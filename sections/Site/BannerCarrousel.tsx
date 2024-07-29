@@ -112,7 +112,7 @@ function Dots({ images, interval = 0 }: Props) {
           `,
                 }}
             />
-            <ul class="carousel justify-center col-span-full gap-4 z-10 row-start-4">
+            <ul class="absolute -bottom-6 lg:bottom-4 left-1/2 -translate-x-1/2 carousel justify-center col-span-full gap-4 z-10 row-start-4">
                 {images?.map((_, index) => (
                     <li class="carousel-item">
                         <Slider.Dot index={index}>
@@ -135,20 +135,20 @@ function Dots({ images, interval = 0 }: Props) {
 function Buttons() {
     return (
         <>
-            <div class="flex items-center justify-center z-10 col-start-1 row-start-2">
+            <div class="absolute top-1/2 -translate-y-1/2 -left-10 lg:left-10 flex items-center justify-center z-10">
                 <Slider.PrevButton>
                     <Icon
-                        class="text-base-100"
+                        class="text-black text-opacity-30 lg:text-white"
                         size={40}
                         id="ChevronLeft"
                         strokeWidth={2}
                     />
                 </Slider.PrevButton>
             </div>
-            <div class="flex items-center justify-center z-10 col-start-3 row-start-2">
+            <div class="absolute top-1/2 -translate-y-1/2 -right-10 lg:right-10 flex items-center justify-center z-10">
                 <Slider.NextButton>
                     <Icon
-                        class="text-base-100 rotate-180"
+                        class="text-black text-opacity-30 lg:text-white rotate-180"
                         size={40}
                         id="ChevronLeft"
                         strokeWidth={2}
@@ -167,11 +167,11 @@ function BannerCarousel(props: ReturnType<typeof loader>) {
     };
 
     return (
-        <div className="flex justify-center lg:width-calc">
+        <div className="flex justify-center lg:width-calc px-10 lg:px-0">
             <div className="flex gap-6 w-full">
                 <div
                     id={id}
-                    class="grid grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px]"
+                    class="relative grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px]"
                 >
                     <Slider class="carousel carousel-center w-full col-span-full row-span-full gap-6">
                         {images?.map((image, index) => {

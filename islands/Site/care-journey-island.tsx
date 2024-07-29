@@ -4,8 +4,10 @@ import CareJourneyCard from "site/islands/Site/care-journey-card.tsx";
 import { signal, useSignal } from "@preact/signals";
 import ColorfullButton from "site/components/Site/colorfull-btn.tsx";
 import { useEffect, useState } from "preact/hooks";
+import { Device } from "apps/website/matchers/device.ts";
 
-export default function CareJourneyIsland() {
+export default function CareJourneyIsland({ device }: Device) {
+    console.log("luquinhaa", device);
     const activeCard = useSignal(1);
     const [animationClass, setAnimationClass] = useState("");
     const [leftCards, setLeftCards] = useState([careJourneyCardsInfos[0]]);
@@ -86,6 +88,7 @@ export default function CareJourneyIsland() {
                                 isCurrent={leftCards[leftCards.length - 1]
                                     .id === activeCard.value}
                                 showControls={showControls}
+                                device={device}
                             />
                         )}
                     </div>
