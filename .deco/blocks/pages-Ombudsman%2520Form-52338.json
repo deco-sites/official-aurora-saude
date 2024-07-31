@@ -23,8 +23,10 @@
           "textColor": "Laranja",
           "fontSize": "24",
           "fontWeight": "semi-bold",
-          "desktopText": "Queremos te ouvir.<br /> Deixe sua mensagem <br />abaixo.",
-          "mobileText": "Queremos te<br /> ouvir. Deixe<br /> sua mensagem <br />abaixo."
+          "desktopTitle": "Queremos te ouvir.<br /> Deixe sua mensagem <br />abaixo.",
+          "mobileTitle": "Queremos te<br /> ouvir. Deixe<br /> sua mensagem <br />abaixo.",
+          "titleFontSize": "24",
+          "titleFontWeight": "semi-bold"
         }
       ]
     },

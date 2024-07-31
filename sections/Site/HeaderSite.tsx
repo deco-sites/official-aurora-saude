@@ -28,9 +28,9 @@ const headerOptions: IheaderOptions[] = [
         color: "orange",
         title: "Sou Cliente",
         menuItems: [
-            { text: "Quem somos", link: "#" },
-            { text: "Nossos planos", link: "#" },
-            { text: "Jornada de Cuidado", link: "#" },
+            { text: "Quem somos", link: "/quem-somos" },
+            { text: "Nossos planos", link: "/nossos-planos" },
+            { text: "Jornada de Cuidado", link: "/jornada-de-cuidado" },
         ],
         logo: "/Site/default_logo_aurora.svg",
         textColor: "white",
@@ -41,9 +41,9 @@ const headerOptions: IheaderOptions[] = [
         color: "purple",
         title: "Sou Empresa",
         menuItems: [
-            { text: "Quem somos", link: "#" },
-            { text: "Nossos planos", link: "#" },
-            { text: "Jornada de Cuidado", link: "#" },
+            { text: "Quem somos", link: "/quem-somos" },
+            { text: "Nossos planos", link: "/nossos-planos" },
+            { text: "Jornada de Cuidado", link: "/jornada-de-cuidado" },
         ],
         logo: "/Site/default_logo_aurora.svg",
         textColor: "white",
@@ -55,8 +55,8 @@ const headerOptions: IheaderOptions[] = [
         title: "Sou Corretor",
         menuItems: [
             { text: "Seja um Corretor", link: "#" },
-            { text: "Quem somos", link: "#" },
-            { text: "Nossos planos", link: "#" },
+            { text: "Quem somos", link: "/quem-somos" },
+            { text: "Nossos planos", link: "/nossos-planos" },
             { text: "Vendas", link: "#" },
             { text: "Materiais de Apoio", link: "#" },
         ],
@@ -70,7 +70,7 @@ const headerOptions: IheaderOptions[] = [
         title: "Sou Prestador",
         menuItems: [
             { text: "Seja um Prestador", link: "#" },
-            { text: "Nossos planos", link: "#" },
+            { text: "Nossos planos", link: "/nossos-planos" },
             { text: "Vendas", link: "#" },
             { text: "Materiais de Apoio", link: "#" },
         ],
@@ -186,7 +186,9 @@ export default function Section({ type }: Props) {
                         <div className="flex gap-9 text-white">
                             <div className="relative hidden lg:flex items-center gap-9">
                                 <LoggedAreasBtn />
-                                <a href="#">Perguntas Frequentes</a>
+                                <a href="/perguntas-frequentes">
+                                    Perguntas Frequentes
+                                </a>
                                 <a href="#">Quero ser Cliente</a>
                             </div>
 

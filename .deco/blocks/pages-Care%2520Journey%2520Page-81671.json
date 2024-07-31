@@ -20,16 +20,19 @@
             },
             "alt": "Banner"
           },
-          "desktopText": "Cuidado integrado é<br />estar junto, sempre.",
-          "mobileText": "Cuidado<br /> integrado é<br />estar junto,<br /> sempre.",
           "textColor": "Branco",
           "fontSize": "26",
-          "fontWeight": "semi-bold"
+          "fontWeight": "semi-bold",
+          "desktopTitle": "Cuidado integrado é<br />estar junto, sempre.",
+          "mobileTitle": "Cuidado<br /> integrado é<br />estar junto,<br /> sempre.",
+          "titleFontSize": "26"
         }
       ]
     },
     {
-      "__resolveType": "site/sections/Site/ColorfullBanner.tsx"
+      "__resolveType": "site/sections/Site/ColorfullBanner.tsx",
+      "title": "<p>Imagine oferecer um plano&lt;br /&gt; que acompanha, de verdade &lt;br /&gt;a saúde dos beneficiários</p>",
+      "text": "<p></p>"
     },
     {
       "__resolveType": "site/sections/Site/SideBySideContent.tsx",

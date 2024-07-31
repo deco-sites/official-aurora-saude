@@ -5,12 +5,16 @@ export default function LoggedAreasBtn() {
     const [open, setOpen] = useState(false);
     const avatarRef = useRef(null);
 
+    const handleToggleOpen = () => {
+        setOpen(!open);
+    };
+
     return (
         <>
             <div
                 className="flex items-center gap-2 cursor-pointer"
                 ref={avatarRef}
-                onClick={() => setOpen(!open)}
+                onClick={handleToggleOpen}
             >
                 <img
                     src={"/Site/user-icon.svg"}

@@ -1,4 +1,6 @@
 import CommonQuestionsIsland from "site/islands/Site/common-questions.tsx";
+import { FnContext } from "deco/types.ts";
+import { Device } from "apps/website/matchers/device.ts";
 
 /** @titleBy questionTitle */
 export interface Question {
@@ -20,7 +22,14 @@ export interface Props {
     themes: Theme[];
 }
 
-export default function CommonQuestions({ themes }: Props) {
+export interface CommonQuestionsProps {
+    themes: Theme[];
+    device: Device;
+}
+
+export default function CommonQuestions(
+    { themes, device }: CommonQuestionsProps,
+) {
     return (
         <>
             <div className="flex justify-center px-10 lg:px-0">
@@ -48,9 +57,20 @@ export default function CommonQuestions({ themes }: Props) {
                             </span>
                         </div>
                     </div>
-                    <CommonQuestionsIsland themes={themes} />
+                    <CommonQuestionsIsland themes={themes} device={device} />
                 </div>
             </div>
         </>
     );
 }
+
+export const loader = (
+    props: Props,
+    req: Request,
+    ctx: FnContext,
+) => {
+    return {
+        ...props,
+        device: ctx.device,
+    };
+};

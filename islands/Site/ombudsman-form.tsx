@@ -10,10 +10,10 @@ import { useEffect, useState } from "preact/hooks";
 
 export default function OmbudsmanIsland() {
     const [protocolNumberPlaceholder, setProtocolNumberPlaceholder] = useState(
-        "xxx.xxx.xxx-xx",
+        "xxxxxxxxxxxxxxxxxxxx",
     );
     const [cardCodePlaceholder, setCardCodePlaceholder] = useState(
-        "x.xxx.xxxxxxx",
+        "xxxxxxxxxxxxxxxxx",
     );
     const [namePlaceholder, setNamePlaceholder] = useState("Escreva aqui");
     const [emailPlaceholder, setEmailPlaceholder] = useState(
@@ -46,8 +46,8 @@ export default function OmbudsmanIsland() {
                 setCepPlaceholder("CEP");
                 setTextareaPlaceholder("Escreva sua mensagem aqui");
             } else {
-                setProtocolNumberPlaceholder("xxx.xxx.xxx-xx");
-                setCardCodePlaceholder("x.xxx.xxxxxxx");
+                setProtocolNumberPlaceholder("xxxxxxxxxxxxxxxxxxxx");
+                setCardCodePlaceholder("xxxxxxxxxxxxxxxxx");
                 setNamePlaceholder("Escreva aqui");
                 setEmailPlaceholder("seuemail@email.com");
                 setCpfPlaceholder("xxx.xxx.xxx-xx");

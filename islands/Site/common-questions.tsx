@@ -1,6 +1,7 @@
 import { useSignal } from "@preact/signals";
 import CommonQuestionTheme from "site/components/Site/common-question-theme.tsx";
 import CommmonQuestionOption from "site/components/Site/common-question-option.tsx";
+import { Device } from "apps/website/matchers/device.ts";
 
 export interface Theme {
     themeName: string;
@@ -14,10 +15,11 @@ export interface Question {
 
 export interface CommonQuestionsIslandProps {
     themes: Theme[];
+    device: Device;
 }
 
 export default function CommonQuestionsIsland(
-    { themes }: CommonQuestionsIslandProps,
+    { themes, device }: CommonQuestionsIslandProps,
 ) {
     const activeQuestionsTheme = useSignal(0);
     const activeQuestion = useSignal<number | null>(null);
@@ -31,6 +33,7 @@ export default function CommonQuestionsIsland(
                         index={index}
                         text={theme.themeName}
                         activeQuestionsTheme={activeQuestionsTheme}
+                        device={device}
                     />
                 ))}
             </div>

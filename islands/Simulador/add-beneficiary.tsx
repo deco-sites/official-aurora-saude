@@ -7,7 +7,8 @@ import { checkSingleSelect } from "../../sdk/Simulador/ThirdStep/checkStepThreeF
 import Image from "apps/website/components/Image.tsx";
 
 export default function AddBeneficiary() {
-  const { thirdStepSignal, idsWithEmptyRange } = useStepThreeInputValues();
+  const { thirdStepSignal, idsWithEmptyRange, lessThirtyLives } =
+    useStepThreeInputValues();
 
   {
     /*const idsWithEmptyRange = useMemo(() => handleNextStepThirdStep(), [
@@ -107,6 +108,10 @@ export default function AddBeneficiary() {
           </div>
         );
       })}
+
+      {lessThirtyLives.value && (
+        <span className="text-red text-xs">Selecione no mínimo 30 vidas</span>
+      )}
 
       <button
         className="bg-orange1 rounded-full text-white py-2 px-8 text-xs w-max"

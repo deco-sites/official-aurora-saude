@@ -28,6 +28,7 @@ import * as $Site_discover_our_plans from "./islands/Site/discover-our-plans.tsx
 import * as $Site_enterprise_login_form from "./islands/Site/enterprise-login-form.tsx";
 import * as $Site_forgot_password from "./islands/Site/forgot-password.tsx";
 import * as $Site_frequently_asked_questions from "./islands/Site/frequently-asked-questions.tsx";
+import * as $Site_header_mobile_dropdown_sections from "./islands/Site/header-mobile-dropdown-sections.tsx";
 import * as $Site_header_mobile_menu_btn from "./islands/Site/header-mobile-menu-btn.tsx";
 import * as $Site_header_mobile_menu_dropdown from "./islands/Site/header-mobile-menu-dropdown.tsx";
 import * as $Site_i_am_a_new_beneficiary from "./islands/Site/i-am-a-new-beneficiary.tsx";
@@ -82,6 +83,8 @@ const manifest = {
     "./islands/Site/forgot-password.tsx": $Site_forgot_password,
     "./islands/Site/frequently-asked-questions.tsx":
       $Site_frequently_asked_questions,
+    "./islands/Site/header-mobile-dropdown-sections.tsx":
+      $Site_header_mobile_dropdown_sections,
     "./islands/Site/header-mobile-menu-btn.tsx": $Site_header_mobile_menu_btn,
     "./islands/Site/header-mobile-menu-dropdown.tsx":
       $Site_header_mobile_menu_dropdown,

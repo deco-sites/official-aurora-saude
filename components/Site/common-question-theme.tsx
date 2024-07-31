@@ -1,6 +1,5 @@
 import Image from "apps/website/components/Image.tsx";
 import { Signal } from "@preact/signals";
-import { FnContext } from "deco/types.ts";
 import { Device } from "apps/website/matchers/device.ts";
 
 export interface CommonQuestionThemeProps {
@@ -17,7 +16,6 @@ export default function CommonQuestionTheme(
         activeQuestionsTheme.value = index;
     }
 
-    console.log("Device:", device);
     return (
         <div
             className="flex justify-between pb-3 mb-14 border-b border-b-black border-opacity-15 cursor-pointer pr-9"
@@ -56,13 +54,3 @@ export default function CommonQuestionTheme(
         </div>
     );
 }
-
-export const loader = (
-    props: CommonQuestionThemeProps,
-    ctx: FnContext,
-) => {
-    return {
-        ...props,
-        device: ctx.device,
-    };
-};

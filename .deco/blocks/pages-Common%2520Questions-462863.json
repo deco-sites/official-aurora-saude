@@ -20,11 +20,13 @@
             },
             "alt": "Banner"
           },
-          "desktopText": "Está com dúvidas?",
-          "mobileText": "Está com<br /> dúvidas?",
           "textColor": "Branco",
           "fontSize": "26",
-          "fontWeight": "semi-bold"
+          "fontWeight": "semi-bold",
+          "desktopTitle": "Está com dúvidas?",
+          "mobileTitle": "Está com<br /> dúvidas?",
+          "titleFontSize": "26",
+          "titleFontWeight": "semi-bold"
         }
       ]
     },

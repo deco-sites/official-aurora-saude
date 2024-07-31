@@ -109,7 +109,7 @@ export default function BannerSection(
     }: BannerSectionProps,
 ) {
     const { alt, mobile, desktop } = image;
-    
+
     return (
         <div className="relative flex rounded-3xl px-10 lg:px-0 w-full max-w-full">
             {device !== "desktop" && (
