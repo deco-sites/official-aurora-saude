@@ -2,8 +2,10 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
+import * as $$$$$$$$$0 from "./actions/saveLead.ts";
 import * as $$$$$$$$$$$0 from "./apps/deco/htmx.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
+import * as $$$0 from "./loaders/supabase/supabaseConfig.ts";
 import * as $$$$$$0 from "./sections/Simulador/CompletedForm.tsx";
 import * as $$$$$$1 from "./sections/Simulador/Footer.tsx";
 import * as $$$$$$2 from "./sections/Simulador/FormStepFive.tsx";
@@ -69,6 +71,9 @@ import * as $$$$$$61 from "./sections/Site/WorkWithUsForm.tsx";
 import * as $$$$$$62 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
+  "loaders": {
+    "site/loaders/supabase/supabaseConfig.ts": $$$0,
+  },
   "sections": {
     "site/sections/Simulador/CompletedForm.tsx": $$$$$$0,
     "site/sections/Simulador/Footer.tsx": $$$$$$1,
@@ -133,6 +138,9 @@ const manifest = {
     "site/sections/Site/WhiteBannerCarrousel.tsx": $$$$$$60,
     "site/sections/Site/WorkWithUsForm.tsx": $$$$$$61,
     "site/sections/Theme/Theme.tsx": $$$$$$62,
+  },
+  "actions": {
+    "site/actions/saveLead.ts": $$$$$$$$$0,
   },
   "apps": {
     "site/apps/deco/htmx.ts": $$$$$$$$$$$0,
