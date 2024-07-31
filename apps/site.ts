@@ -1,9 +1,13 @@
 import { App, AppContext as AC } from "deco/mod.ts";
 import website, { Props } from "apps/website/mod.ts";
-
+import type { Supabase } from "../loaders/supabase/supabaseConfig.ts";
 import manifest, { Manifest } from "../manifest.gen.ts";
 
 type WebsiteApp = ReturnType<typeof website>;
+
+export interface SiteProps extends Props {
+  supabaseClient: Supabase;
+}
 
 /**
  * @title Site
@@ -12,12 +16,15 @@ type WebsiteApp = ReturnType<typeof website>;
  * @logo https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1/0ac02239-61e6-4289-8a36-e78c0975bcc8
  */
 export default function Site(
-  state: Props,
-): App<Manifest, Props, [
+  { supabaseClient, ...state }: SiteProps,
+): App<Manifest, SiteProps, [
   WebsiteApp,
 ]> {
   return {
-    state,
+    state: {
+      supabaseClient,
+      ...state,
+    },
     manifest,
     dependencies: [
       website(state),

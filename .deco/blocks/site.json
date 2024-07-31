@@ -1,1 +1,52 @@
-{"seo":{"type":"website","jsonLDs":[],"noIndexing":false,"description":"Improve your page performance with deco.cx","titleTemplate":"%s | deco.cx","descriptionTemplate":"%s | Deco.cx","title":"Start","favicon":"https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8/d8489214-aa22-44ce-a9aa-7c1b9f8e5177","image":"https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8/07fd7c67-11d2-43a2-a322-6ffd0fbcdee1"},"global":[{"__resolveType":"htmx/sections/htmx.tsx"}],"routes":[{"__resolveType":"website/loaders/pages.ts"},{"__resolveType":"website/loaders/redirects.ts"}],"caching":{"directives":[]},"__resolveType":"site/apps/site.ts","firstByteThresholdMS":true,"theme":{"__resolveType":"Neutral"}}
+{
+  "seo": {
+    "type": "website",
+    "jsonLDs": [],
+    "noIndexing": false,
+    "description": "Improve your page performance with deco.cx",
+    "titleTemplate": "%s | deco.cx",
+    "descriptionTemplate": "%s | Deco.cx",
+    "title": "Start",
+    "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8/d8489214-aa22-44ce-a9aa-7c1b9f8e5177",
+    "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8/07fd7c67-11d2-43a2-a322-6ffd0fbcdee1"
+  },
+  "global": [
+    {
+      "__resolveType": "htmx/sections/htmx.tsx"
+    }
+  ],
+  "routes": [
+    {
+      "__resolveType": "website/loaders/pages.ts"
+    },
+    {
+      "__resolveType": "website/loaders/redirects.ts"
+    }
+  ],
+  "caching": {
+    "directives": []
+  },
+  "__resolveType": "site/apps/site.ts",
+  "firstByteThresholdMS": false,
+  "theme": {
+    "__resolveType": "Neutral"
+  },
+  "supabaseClient": {
+    "__resolveType": "site/loaders/supabase/supabaseConfig.ts",
+    "token": {
+      "__resolveType": "website/loaders/secret.ts",
+      "encrypted": "c78449fb827b91761e41d8a48f202c21ddf82a95364e18ba8e3023d886815f8e9001624830a6dfe95359ba4e6114c6e481543de559e9a685d5963dbf71a09a4d9506bc3c73b2d983de9481a13aa754a3d0bfbcb4a6dbd8e2e1e951f8e18947df407fdb13eee797084c09dd787c5f153c613a30d02e1c721e2563d1c2ffab2bcd86f63607b10eb5a937502351b5205b4745597861ce4720daf0544285b3c56b9ecc20a607adb5a37c04ccff1d8b03ee5b1730b79f8885c19563e5b5438b1a40fd3a500a2f02b37aff997422404de48b8f54a1e02aa27c12d0ce280124be3293b3",
+      "name": "SUPABASEKEY"
+    },
+    "url": "https://gftgvayczjherpsxkfpu.supabase.co"
+  },
+  "abTesting": {
+    "replaces": [],
+    "includeScriptsToHead": {
+      "includes": []
+    }
+  },
+  "flavor": {
+    "framework": "fresh"
+  }
+}
