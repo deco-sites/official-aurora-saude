@@ -30,10 +30,10 @@ export default function BeABrokerFormIsland() {
     );
 
     const [customerBasePlaceholder, setcustomerBasePlaceholder] = useState(
-        "Sim",
+        "Não",
     );
     const [haveSales, sethaveSales] = useState(
-        "Sim",
+        "Não",
     );
 
     useEffect(() => {
@@ -51,8 +51,8 @@ export default function BeABrokerFormIsland() {
                 setemployeesQtyPlaceholder(
                     "Quantos funcionários tem a sua corretora?",
                 );
-                setcustomerBasePlaceholder("Sim");
-                sethaveSales("Sim");
+                setcustomerBasePlaceholder("Não");
+                sethaveSales("Não");
             } else {
                 setbrokerNamePlaceholder("Escreva aqui");
                 setresponsibleNamePlaceholder("Escreva aqui");
@@ -64,8 +64,8 @@ export default function BeABrokerFormIsland() {
                 setAddressPlaceholder("Endereço");
                 setCepPlaceholder("CEP");
                 setemployeesQtyPlaceholder("Escreva aqui");
-                setcustomerBasePlaceholder("Sim");
-                sethaveSales("Sim");
+                setcustomerBasePlaceholder("Não");
+                sethaveSales("Não");
             }
         };
 

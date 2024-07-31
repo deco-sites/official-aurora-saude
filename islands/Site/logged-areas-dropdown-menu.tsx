@@ -15,17 +15,25 @@ export default function LoggedAreasDropdownMenu({
     const dropdownRef = useRef(null);
     useClickOutsideListener(dropdownRef, openerRef, setOpen);
 
+    const handleClickInside = (event: MouseEvent) => {
+        event.stopPropagation();
+    };
+
     return (
         <div
             ref={dropdownRef}
             className="absolute top-10 -left-7 flex flex-col rounded-2xl bg-[#ffb9a6] z-50"
+            onClick={handleClickInside}
         >
             <div className="flex justify-end pt-4 px-5">
                 <Image
                     src={"/Site/close-icon.svg"}
                     alt="Close Icon"
                     className="cursor-pointer"
-                    onClick={() => setOpen(false)}
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        setOpen(false);
+                    }}
                 />
             </div>
             <div className="flex flex-col gap-3 pb-7 px-14">

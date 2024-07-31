@@ -11,6 +11,8 @@ interface IThirdStepSchema {
   whoUseThePlan: string;
   beneficiariesValuesArr: Beneficiary[];
   idsWithEmptyRange: number[];
+  filledBeneficiaries: Beneficiary[];
+  lessThirtyLives: boolean;
 }
 
 const thirdStepSchema: IThirdStepSchema = {
@@ -22,15 +24,21 @@ const thirdStepSchema: IThirdStepSchema = {
     qty: 1,
   }],
   idsWithEmptyRange: [],
+  filledBeneficiaries: [],
+  lessThirtyLives: false,
 };
 
 //SecondStep Option 1
 const thirdStepSignal = signal(thirdStepSchema);
 const idsWithEmptyRange = signal<number[]>([]);
+const filledBeneficiaries = signal<Beneficiary[]>([]);
+const lessThirtyLives = signal(false);
 
 const state = {
   thirdStepSignal,
   idsWithEmptyRange,
+  filledBeneficiaries,
+  lessThirtyLives,
 };
 
 export const useStepThreeInputValues = () => state;

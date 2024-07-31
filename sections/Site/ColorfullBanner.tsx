@@ -16,8 +16,10 @@ export default function ColorfullBanner() {
                             particulares de cada um e<br />{" "}
                             oferece a melhor solução, com um atendimento
                             humanizado, responsável,<br />{" "}
-                            acessível e individualizado. Imaginou? Agora, a
-                            gente cuida!
+                            acessível e individualizado.{" "}
+                            <strong>
+                                Imaginou? Agora, a gente cuida!
+                            </strong>
                         </span>
                     </div>
                 </div>

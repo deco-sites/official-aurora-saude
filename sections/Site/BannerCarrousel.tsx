@@ -173,7 +173,7 @@ function BannerCarousel(props: ReturnType<typeof loader>) {
                     id={id}
                     class="relative grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px]"
                 >
-                    <Slider class="carousel carousel-center w-full col-span-full row-span-full gap-6">
+                    <Slider class="carousel carousel-center w-full col-span-full row-span-full gap-6 rounded-[20px]">
                         {images?.map((image, index) => {
                             const params = { promotion_name: image.alt };
 
