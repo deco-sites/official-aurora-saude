@@ -33,7 +33,6 @@ export default function CareJourneyCard(
         device,
     }: ICareJourneyCard,
 ) {
-    console.log("aniversariante", device);
     return (
         <div className="flex flex-col flex-shrink-0 bg-gradient-to-b from-pink4 to-pink5 rounded-3xl w-72 mx-2">
             <div className="flex justify-center items-center h-2/4">
@@ -62,8 +61,9 @@ export default function CareJourneyCard(
                                 onClick={handlePrev}
                             />
                         )}
-
-                        {card.id !== cardsLength && (
+                        {((device === "desktop" && card.id !== cardsLength) ||
+                            (device !== "desktop" &&
+                                card.id !== cardsLength + 1)) && (
                             <Image
                                 src={"/Site/CareJourney/right-arrow.svg"}
                                 alt=""
