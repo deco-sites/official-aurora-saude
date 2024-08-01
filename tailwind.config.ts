@@ -108,7 +108,9 @@ export default {
       height: {
         "banner-height": "calc(100vh - 250px)",
       },
-
+      rotate: {
+        '270': '270deg',
+      },
       boxShadow: {
         "outline-orange1": "0 0 0 2px rgba(255, 165, 0, 1)",
         "outline-orange5": "0 0 0 4px rgba(230, 111, 77, 1)",

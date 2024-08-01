@@ -62,7 +62,7 @@ export default function BeABrokerFormIsland() {
                 setUFPlaceholder("UF");
                 setCityPlaceholder("Cidade");
                 setAddressPlaceholder("Endereço");
-                setCepPlaceholder("CEP");
+                setCepPlaceholder("xx.xxx-xxx");
                 setemployeesQtyPlaceholder("Escreva aqui");
                 setcustomerBasePlaceholder("Não");
                 sethaveSales("Não");

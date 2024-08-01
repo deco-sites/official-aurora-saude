@@ -32,7 +32,7 @@ export default function ForgotPasswordIsland() {
     return (
         <>
             <div className="flex justify-center px-10 lg:px-0 pt-24 pb-32 bg-white">
-                <div className="lg:max-w-[1400px] w-full pt-12 pb-16">
+                <div className="lg:max-w-[1400px] w-full">
                     <div className="flex flex-col lg:px-44 gap-10">
                         <span className="font-sora font-bold text-orange4 text-2xl">
                             Esqueceu sua senha?
@@ -42,8 +42,8 @@ export default function ForgotPasswordIsland() {
                             sua conta. Enviaremos um e-mail que permitirá que
                             você redefina a sua senha.<br /> Cheque sua caixa de
                             {" "}
-                            <strong className="text-opacity-80">spam</strong>
-                            ou{" "}
+                            <strong className="text-opacity-80">spam</strong> ou
+                            {" "}
                             <strong className="text-opacity-80">
                                 lixo automático.
                             </strong>
@@ -79,7 +79,7 @@ export default function ForgotPasswordIsland() {
                                     </span>
                                 )}
                             </div>
-                            <div className="flex flex-col lg:flex-row justify-between items-center pt-11 gap-8 lg:gap-0">
+                            <div className="flex flex-row justify-between items-center pt-11 gap-[10px]">
                                 <button className="flex gap-4 justify-center items-center rounded-full bg-gray4 text-gray13 text-sm px-10 py-4">
                                     Voltar
                                     <Image
@@ -87,7 +87,7 @@ export default function ForgotPasswordIsland() {
                                         alt="Icon"
                                     />
                                 </button>
-                                <button className="flex justify-center items-center gap-3 px-20 text-sm py-4 bg-orange4 rounded-full text-white">
+                                <button className="flex justify-center items-center gap-3 whitespace-nowrap px-10 lg:px-20 text-sm py-4 bg-orange4 rounded-full text-white">
                                     Enviar e-mail
                                 </button>
                             </div>

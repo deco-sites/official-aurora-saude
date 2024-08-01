@@ -2,6 +2,7 @@ import { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 import { Signal } from "@preact/signals";
 import { Device } from "apps/website/matchers/device.ts";
+import Icon from "site/components/ui/Icon.tsx";
 
 export interface ICardProps {
     id: number;
@@ -54,20 +55,22 @@ export default function CareJourneyCard(
                 {activeCard.value === card.id && (
                     <>
                         {card.id !== 1 && (
-                            <Image
-                                src={"/Site/CareJourney/left-arrow.svg"}
-                                alt=""
-                                className="cursor-pointer w-6 h-6"
+                            <Icon
+                                class="h-auto -rotate-90 text-white cursor-pointer"
+                                id="ChevronUp"
+                                strokeWidth={2}
+                                size={28}
                                 onClick={handlePrev}
                             />
                         )}
                         {((device === "desktop" && card.id !== cardsLength) ||
                             (device !== "desktop" &&
                                 card.id !== cardsLength + 1)) && (
-                            <Image
-                                src={"/Site/CareJourney/right-arrow.svg"}
-                                alt=""
-                                className="cursor-pointer w-6 h-6"
+                            <Icon
+                                class="h-auto -rotate-[270deg] text-white cursor-pointer"
+                                id="ChevronUp"
+                                strokeWidth={2}
+                                size={28}
                                 onClick={handleNext}
                             />
                         )}
