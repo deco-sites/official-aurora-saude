@@ -15,7 +15,6 @@ type Props = {
 };
 
 export default function IAmANewBeneficiaryIsland({ segments, device }: Props) {
-    console.log("aquió", segments);
     const activeSegment = useSignal(0);
     const activeTopic = useSignal<number | null>(0);
 

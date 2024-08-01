@@ -1,19 +1,15 @@
 import Image from "apps/website/components/Image.tsx";
 import { careJourneyCardsInfos } from "site/helpers/Site/care-journey-cards.ts";
 import CareJourneyCard from "site/islands/Site/care-journey-card.tsx";
-import { signal, useSignal } from "@preact/signals";
-import ColorfullButton from "site/components/Site/colorfull-btn.tsx";
+import { useSignal } from "@preact/signals";
 import { useEffect, useState } from "preact/hooks";
 import { Device } from "apps/website/matchers/device.ts";
+import LastWhiteCard from "site/components/Site/last-white-card.tsx";
 
 export default function CareJourneyIsland({ device }: Device) {
-    console.log("luquinhaa", device);
     const activeCard = useSignal(1);
     const [animationClass, setAnimationClass] = useState("");
     const [leftCards, setLeftCards] = useState([careJourneyCardsInfos[0]]);
-    const [rightCards, setRightCards] = useState(
-        careJourneyCardsInfos.slice(1),
-    );
     const [showControls, setShowControls] = useState("");
 
     const handleNext = () => {
@@ -21,11 +17,13 @@ export default function CareJourneyIsland({ device }: Device) {
             if (rightCards.length > 0) {
                 const nextCard = rightCards[0];
                 setRightCards(rightCards.slice(1));
-                setLeftCards([...leftCards, nextCard]);
+                const newArray = [...leftCards, nextCard];
+                setLeftCards(newArray);
 
                 activeCard.value = (activeCard.value + 1) %
                     (careJourneyCardsInfos.length + 1);
             }
+
             setAnimationClass("");
             setShowControls("control-buttons");
         }, 500);
@@ -33,24 +31,53 @@ export default function CareJourneyIsland({ device }: Device) {
         setAnimationClass("slide-left");
     };
 
+    const handlePrev2 = () => {
+        setRightCards((prevRightCards) => [
+            ...prevRightCards,
+            {
+                id: careJourneyCardsInfos.length + 1,
+                component: (
+                    <LastWhiteCard handlePrev={handlePrev2} device={device} />
+                ),
+            },
+        ]);
+        activeCard.value =
+            (activeCard.value - 1 + (careJourneyCardsInfos.length + 1)) %
+            (careJourneyCardsInfos.length + 1);
+        setShowControls("control-buttons");
+        setAnimationClass("slide-right");
+        setLeftCards(careJourneyCardsInfos);
+    };
+
     const handlePrev = () => {
         if (leftCards.length > 1) {
             const prevCard = leftCards[leftCards.length - 1];
             setRightCards([prevCard, ...rightCards]);
-            setLeftCards(leftCards.slice(0, -1));
+            setLeftCards(leftCards.slice(0, leftCards.length - 1));
 
             activeCard.value =
-                (activeCard.value - 1 + careJourneyCardsInfos.length) %
-                careJourneyCardsInfos.length;
+                (activeCard.value - 1 + (careJourneyCardsInfos.length + 1)) %
+                (careJourneyCardsInfos.length + 1);
         }
         setShowControls("control-buttons");
         setAnimationClass("slide-right");
     };
 
+    const [rightCards, setRightCards] = useState(
+        device === "mobile"
+            ? [...careJourneyCardsInfos.slice(1), {
+                id: careJourneyCardsInfos.length + 1,
+                component: (
+                    <LastWhiteCard handlePrev={handlePrev2} device={device} />
+                ),
+            }]
+            : careJourneyCardsInfos.slice(1),
+    );
+
     useEffect(() => {
         const timeout = setTimeout(() => {
             setAnimationClass("");
-        }, 500); // Duração da animação
+        }, 500);
 
         return () => clearTimeout(timeout);
     }, [animationClass]);
@@ -78,46 +105,61 @@ export default function CareJourneyIsland({ device }: Device) {
                 <div className="pl-8 lg:pl-0 flex gap-5 lg:w-2/3">
                     <div className="flex">
                         {leftCards.length > 0 && (
-                            <CareJourneyCard
-                                key={leftCards[leftCards.length - 1].id}
-                                card={leftCards[leftCards.length - 1]}
-                                activeCard={activeCard}
-                                handleNext={handleNext}
-                                handlePrev={handlePrev}
-                                cardsLength={careJourneyCardsInfos.length}
-                                isCurrent={leftCards[leftCards.length - 1]
-                                    .id === activeCard.value}
-                                showControls={showControls}
-                                device={device}
-                            />
+                            leftCards[leftCards.length - 1].component
+                                ? (
+                                    <>
+                                        {leftCards[leftCards.length - 1]
+                                            .component}
+                                    </>
+                                )
+                                : (
+                                    <CareJourneyCard
+                                        key={leftCards[leftCards.length - 1].id}
+                                        card={leftCards[leftCards.length - 1]}
+                                        activeCard={activeCard}
+                                        handleNext={handleNext}
+                                        handlePrev={handlePrev}
+                                        cardsLength={careJourneyCardsInfos
+                                            .length}
+                                        isCurrent={leftCards[
+                                            leftCards.length - 1
+                                        ]
+                                            .id === activeCard.value}
+                                        showControls={showControls}
+                                        device={device}
+                                    />
+                                )
                         )}
                     </div>
                     <div className={`flex gap-5 ${animationClass}`}>
-                        {rightCards.map((card) => (
-                            <CareJourneyCard
-                                key={card.id}
-                                card={card}
-                                activeCard={activeCard}
-                                handleNext={handleNext}
+                        {rightCards.map((card) =>
+                            card.component
+                                ? (
+                                    <>
+                                        {card.component}
+                                    </>
+                                )
+                                : (
+                                    <CareJourneyCard
+                                        key={card.id}
+                                        card={card}
+                                        activeCard={activeCard}
+                                        handleNext={handleNext}
+                                        handlePrev={handlePrev}
+                                        cardsLength={careJourneyCardsInfos
+                                            .length}
+                                        isCurrent={card.id === activeCard.value}
+                                        showControls={showControls}
+                                        device={device}
+                                    />
+                                )
+                        )}
+                        {device !== "mobile" && (
+                            <LastWhiteCard
                                 handlePrev={handlePrev}
-                                cardsLength={careJourneyCardsInfos.length}
-                                isCurrent={card.id === activeCard.value}
-                                showControls={showControls}
+                                device={device}
                             />
-                        ))}
-                        <div className="bg-white flex flex-col text-center gap-10 flex-shrink-0 items-center justify-center rounded-3xl w-[550px] mx-2 px-10 py-14">
-                            <span className="font-sora text-4xl text-pink1">
-                                O cuidado não acaba <br /> aqui, ele começa.
-                            </span>
-                            <a href="#" className="text-darkPurple">
-                                Descubra como fazemos diferente
-                            </a>
-                            <ColorfullButton
-                                bgColor="pink"
-                                textColor="white"
-                                text={"Saiba mais"}
-                            />
-                        </div>
+                        )}
                     </div>
                 </div>
             </div>
