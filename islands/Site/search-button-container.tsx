@@ -1,8 +1,8 @@
 import SearchButton from "site/islands/Site/search-button.tsx";
 import { useSignal } from "@preact/signals";
 
-export default function SearchButtonContainer({ option }) {
-    const expandedInput = useSignal(false);
+export default function SearchButtonContainer({ option, expandedInput }) {
+    //const expandedInput = useSignal(false);
 
     return (
         <div className="hidden lg:flex flex-grow justify-end gap-12">

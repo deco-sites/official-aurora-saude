@@ -33,16 +33,120 @@
           "textFontWeight": "regular"
         },
         {
-          "__resolveType": "site/sections/Site/Spacer.tsx"
+          "__resolveType": "site/sections/Site/Spacer.tsx",
+          "desktopHeight": 90,
+          "mobileHeight": 18
         }
       ],
       "bgColor": "Rosa"
     },
     {
-      "__resolveType": "site/sections/Site/BrokersHomeDivisor.tsx"
+      "__resolveType": "site/sections/Site/BrokersHomeDivisor.tsx",
+      "section": {
+        "__resolveType": "site/sections/Site/WhiteBannerCarrousel.tsx",
+        "images": [
+          {
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/4da358c1-2204-40ff-a5c3-4c5d9c875da3",
+            "alt": "Banner 1"
+          },
+          {
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/b8e94627-c284-43a7-89e8-e6f2b8f0f306",
+            "alt": "Banner 2"
+          },
+          {
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/83f0edcf-eb5a-4cab-82bd-150ee75efe16",
+            "alt": "Banner3"
+          }
+        ],
+        "interval": 50
+      }
     },
     {
-      "__resolveType": "site/sections/Site/DiscoverOurPlans.tsx"
+      "__resolveType": "site/sections/Site/DiscoverOurPlans.tsx",
+      "sectionTitle": "Conheça os nossos planos",
+      "plans": [
+        {
+          "benefits": [
+            {
+              "phrase": "Cobertura ambulatorial"
+            },
+            {
+              "phrase": "Consultas médicas ilimitadas"
+            },
+            {
+              "phrase": "Rede médica de alta qualidade"
+            },
+            {
+              "phrase": "Telemedicina de urgência 24h"
+            },
+            {
+              "phrase": "1º check-up gratuito*"
+            }
+          ],
+          "bgColor": "Laranja",
+          "textColor": "Branco",
+          "titleColor": "Amarelo",
+          "buttonTextColor": "Laranja",
+          "buttonBgColor": "Amarelo",
+          "planName": "a100",
+          "basePrice": "50,52",
+          "cardImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/7da32d42-0867-4add-85ee-5b961655b6b4"
+        },
+        {
+          "benefits": [
+            {
+              "phrase": "Cobertura ambulatorial e hospitalar"
+            },
+            {
+              "phrase": "Consultas médicas ilimitadas"
+            },
+            {
+              "phrase": "Rede médica completa e de alta qualidade"
+            },
+            {
+              "phrase": "Telemedicina de urgência 24h"
+            },
+            {
+              "phrase": "1º check-up gratuito*"
+            }
+          ],
+          "bgColor": "Verde",
+          "textColor": "Branco",
+          "titleColor": "Amarelo",
+          "buttonTextColor": "Verde",
+          "buttonBgColor": "Amarelo",
+          "cardImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/f1bf2519-0225-4396-bd1b-c2f46f19a1eb",
+          "planName": "a300",
+          "basePrice": "104,67"
+        },
+        {
+          "benefits": [
+            {
+              "phrase": "Cobertura ambulatorial, hospitalar e obstetrícia"
+            },
+            {
+              "phrase": "A melhor e mais completa rede médica"
+            },
+            {
+              "phrase": "Consultas médicas ilimitadas"
+            },
+            {
+              "phrase": "Telemedicina de urgência 24h"
+            },
+            {
+              "phrase": "1º check-up gratuito*"
+            }
+          ],
+          "bgColor": "Amarelo",
+          "textColor": "Laranja",
+          "titleColor": "Rosa",
+          "buttonTextColor": "Amarelo",
+          "buttonBgColor": "Laranja",
+          "cardImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/b13817a7-cfab-4f61-96ea-9cac52a4d54c",
+          "planName": "a500",
+          "basePrice": "120,54"
+        }
+      ]
     },
     {
       "__resolveType": "site/sections/Site/BrokerLoginSection.tsx"

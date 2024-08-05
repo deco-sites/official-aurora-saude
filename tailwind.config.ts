@@ -91,6 +91,7 @@ export default {
         gray12: "#CACACA",
         gray13: "#7B7B7B",
         gray14: "#C1C1C1",
+        gray15: "#999999",
         aquagreen: "#72CCCC",
         aquagreen2: "#5DD6D6",
         aquagreen3: "#59B7B8",
@@ -109,7 +110,7 @@ export default {
         "banner-height": "calc(100vh - 250px)",
       },
       rotate: {
-        '270': '270deg',
+        "270": "270deg",
       },
       boxShadow: {
         "outline-orange1": "0 0 0 2px rgba(255, 165, 0, 1)",

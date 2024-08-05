@@ -50,11 +50,27 @@ export default function Footer() {
                                         Sou cliente
                                     </span>
                                     <div className="flex flex-col gap-3">
-                                        <span>Quem somos</span>
-                                        <span>Nossos planos</span>
-                                        <span>Jornada de Cuidado</span>
-                                        <span>Notícias</span>
-                                        <span>Cotação</span>
+                                        <a href="/quem-somos" className="w-fit">
+                                            Quem somos
+                                        </a>
+                                        <a
+                                            href="/nossos-planos"
+                                            className="w-fit"
+                                        >
+                                            Nossos planos
+                                        </a>
+                                        <a
+                                            href="/jornada-de-cuidado"
+                                            className="w-fit"
+                                        >
+                                            Jornada de Cuidado
+                                        </a>
+                                        <a href="/noticias" className="w-fit">
+                                            Notícias
+                                        </a>
+                                        <a href="/quem-somos" className="w-fit">
+                                            Cotação
+                                        </a>
                                     </div>
                                 </div>
                                 <div className="flex flex-col">
@@ -62,11 +78,33 @@ export default function Footer() {
                                         Precisa de Ajuda?
                                     </span>
                                     <div className="flex flex-col gap-3">
-                                        <span>Ouvidoria</span>
-                                        <span>Perguntas Frequentes</span>
-                                        <span>Fale com a Gente</span>
-                                        <span>Trabalhe conosco</span>
-                                        <span>Políticas de Privacidade</span>
+                                        <a href="/ouvidoria" className="w-fit">
+                                            Ouvidoria
+                                        </a>
+                                        <a
+                                            href="/perguntas-frequentes"
+                                            className="w-fit"
+                                        >
+                                            Perguntas Frequentes
+                                        </a>
+                                        <a
+                                            href="/fale-com-a-gente"
+                                            className="w-fit"
+                                        >
+                                            Fale com a Gente
+                                        </a>
+                                        <a
+                                            href="/trabalhe-conosco"
+                                            className="w-fit"
+                                        >
+                                            Trabalhe conosco
+                                        </a>
+                                        <a
+                                            href="/politicas-de-privacidade"
+                                            className="w-fit"
+                                        >
+                                            Políticas de Privacidade
+                                        </a>
                                     </div>
                                 </div>
                                 <div className="flex flex-col">
@@ -74,9 +112,21 @@ export default function Footer() {
                                         Sou corretor
                                     </span>
                                     <div className="flex flex-col gap-3">
-                                        <span>Sou corretor</span>
-                                        <span>Seja um Corretor</span>
-                                        <span>Materiais de Apoio</span>
+                                        <a href="/corretor" className="w-fit">
+                                            Sou corretor
+                                        </a>
+                                        <a
+                                            href="/seja-um-corretor"
+                                            className="w-fit"
+                                        >
+                                            Seja um Corretor
+                                        </a>
+                                        <a
+                                            href="/materiais-de-apoio"
+                                            className="w-fit"
+                                        >
+                                            Materiais de Apoio
+                                        </a>
                                     </div>
                                 </div>
                                 <div className="flex flex-col">
@@ -84,7 +134,12 @@ export default function Footer() {
                                         Prestador
                                     </span>
                                     <div className="flex flex-col gap-3">
-                                        <span>Seja um Prestador</span>
+                                        <a
+                                            href="/seja-um-prestador"
+                                            className="w-fit"
+                                        >
+                                            Seja um Prestador
+                                        </a>
                                     </div>
                                 </div>
                             </div>
