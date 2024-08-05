@@ -6,6 +6,7 @@ export interface Benefit {
     phrase: string;
 }
 
+/** @titleBy planName */
 export interface Plan {
     cardImage: ImageWidget;
     planName: string;

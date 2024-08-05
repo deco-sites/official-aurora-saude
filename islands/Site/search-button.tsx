@@ -1,9 +1,6 @@
 export default function SearchButton({ option, expandedInput }) {
     function handleClick() {
-        console.log("entrou aqui na função");
-        console.log(expandedInput.value);
-        expandedInput.value = !expandedInput.value;
-        console.log(expandedInput.value);
+        expandedInput.value = true;
     }
 
     return (

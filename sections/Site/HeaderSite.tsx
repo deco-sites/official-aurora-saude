@@ -1,6 +1,7 @@
 import LoggedAreasBtn from "site/islands/Site/logged-areas-btn.tsx";
 import HeaderMobileMenuBtn from "site/islands/Site/header-mobile-menu-btn.tsx";
 import SearchButtonContainer from "site/islands/Site/search-button-container.tsx";
+import { useSignal } from "@preact/signals";
 
 export interface Props {
     /**
@@ -89,6 +90,7 @@ const colors = {
 };
 
 export default function Section({ type }: Props) {
+    const expandedInput = useSignal(false);
     const option = headerOptions.find((option) => option.name === type);
     if (!option) return null;
     const buttonsArr = headerOptions.filter((item) => item.name !== type);
@@ -189,7 +191,9 @@ export default function Section({ type }: Props) {
                                 <a href="/perguntas-frequentes">
                                     Perguntas Frequentes
                                 </a>
-                                <a href="#">Quero ser Cliente</a>
+                                <a href="/solicitar-cotacao">
+                                    Quero ser Cliente
+                                </a>
                             </div>
 
                             <div className="flex gap-4 items-center">
@@ -214,6 +218,7 @@ export default function Section({ type }: Props) {
                         className={`flex items-center gap-12 justify-between ${
                             colors[option.color]
                         } p-7 lg:p-16 mt-[6px] rounded-[20px] h-20 lg:h-48`}
+                        onClick={() => expandedInput.value = false}
                     >
                         <img
                             src={option.name === "prestador"
@@ -226,7 +231,10 @@ export default function Section({ type }: Props) {
 
                         <HeaderMobileMenuBtn option={option} />
 
-                        <SearchButtonContainer option={option} />
+                        <SearchButtonContainer
+                            option={option}
+                            expandedInput={expandedInput}
+                        />
                     </div>
                 </div>
             </div>
