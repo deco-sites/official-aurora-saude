@@ -1,5 +1,9 @@
-import SearchButton from "site/islands/Site/search-button.tsx";
-import { useSignal } from "@preact/signals";
+import SearchButton, {
+    handleSearchClick,
+} from "site/islands/Site/search-button.tsx";
+import { signal } from "@preact/signals";
+
+export const searchedWord = signal("");
 
 export default function SearchButtonContainer({ option, expandedInput }) {
     //const expandedInput = useSignal(false);
@@ -13,6 +17,17 @@ export default function SearchButtonContainer({ option, expandedInput }) {
                     id=""
                     name=""
                     className="w-[500px] px-12 rounded-full text-white bg-orange1 border border-white outline-none placeholder-white"
+                    value={searchedWord.value}
+                    onChange={(e) => {
+                        searchedWord.value = e.target.value;
+                        console.log("searchWord", searchedWord.value);
+                    }}
+                    onClick={(e) => e.stopPropagation()}
+                    onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                            handleSearchClick(e, expandedInput);
+                        }
+                    }}
                 />
             )}
 
