@@ -1,13 +1,18 @@
-import { FnContext } from "deco/types.ts";
 import QuickAccess from "site/components/Site/quick-access.tsx";
+import { AppContext } from "site/apps/site.ts";
+import algolia from "https://esm.sh/algoliasearch@4.20.0";
+import { createFetchRequester } from "npm:@algolia/requester-fetch@4.20.0";
+import type { SectionProps } from "deco/mod.ts";
+import SearchResult from "site/components/Site/search-result.tsx";
 
-export interface Props {
-    word: string;
-}
+type Props = Partial<{
+    adminApiKey: string;
+    applicationId: string;
+}>;
 
-export default function SearchPage() {
+export default function SearchPage(props: SectionProps<typeof loader>) {
     return (
-        <div className="flex justify-center px-10 lg:px-0">
+        <div className="flex flex-col items-center px-10 lg:px-0">
             <div className="lg:max-w-[1400px] w-full">
                 <div className="flex flex-col gap-16 py-16">
                     <QuickAccess />
@@ -18,7 +23,7 @@ export default function SearchPage() {
                                 Resultados da Pesquisa:
                             </span>
                             <span className="text-orange1 text-xl font-bold">
-                                "planos"
+                                {props.searchedWord}
                             </span>
                         </div>
                         <button className="text-orange4 font-bold">
@@ -27,13 +32,46 @@ export default function SearchPage() {
                     </div>
                 </div>
             </div>
+            <div className="bg-gray4 w-full flex justify-center">
+                <div className="lg:max-w-[1400px] w-full lg:py-20 flex flex-col gap-6">
+                    {props.resultsFound.map((result, index) => (
+                        <SearchResult
+                            key={index}
+                            text={result.text}
+                            link={result.path}
+                        />
+                    ))}
+                </div>
+            </div>
         </div>
     );
 }
 
-export const loader = (props: Props, req: Request, ctx: FnContext) => {
+export const loader = async (props: Props, req: Request, ctx: AppContext) => {
+    const query = new URL(req.url).search;
+    const params = new URLSearchParams(query);
+    const searchedWord = params.get("query");
+    let resultsFound = [];
+
+    const client = algolia("LM2KGXP27D", "bc4fcf5443843bdda92db82f2d01e847", {
+        requester: createFetchRequester(), // Fetch makes it perform mutch better
+    });
+
+    const index = client.initIndex("testIndex");
+
+    try {
+        const { hits } = await index.search(searchedWord);
+        console.log("Hits:", hits);
+        resultsFound = hits;
+        //return hits;
+    } catch (error) {
+        console.log(error);
+    }
+
     return {
         ...props,
-        device: ctx.device,
+        ctx,
+        searchedWord,
+        resultsFound,
     };
 };
