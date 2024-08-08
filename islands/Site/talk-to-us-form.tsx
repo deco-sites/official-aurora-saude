@@ -4,8 +4,20 @@ import { ufsOptions } from "site/helpers/Site/ufsOptions.ts";
 import { citiesOptions } from "site/helpers/Simulador/cities.ts";
 import SiteTextArea from "site/components/Site/text-area.tsx";
 import { useEffect, useState } from "preact/hooks";
+import { invoke } from "../../runtime.ts";
+import { signal } from "@preact/signals";
+import SendingConfirmation from "site/components/Site/sending-confirmation.tsx";
 
-export default function TalkToUsIsland() {
+export interface RequestQuoteIslandProps {
+    recipientsEmail: string;
+    subject: string;
+}
+
+const talkToUsEmailSended = signal(false);
+
+export default function TalkToUsIsland(
+    { recipientsEmail, subject }: RequestQuoteIslandProps,
+) {
     const [namePlaceholder, setNamePlaceholder] = useState("Escreva aqui");
     const [emailPlaceholder, setEmailPlaceholder] = useState(
         "seuemail@email.com",
@@ -37,16 +49,45 @@ export default function TalkToUsIsland() {
         };
 
         updateNamePlaceholder(); // Set initial placeholder based on screen size
-        window.addEventListener("resize", updateNamePlaceholder);
+        globalThis.addEventListener("resize", updateNamePlaceholder);
 
         return () =>
-            window.removeEventListener("resize", updateNamePlaceholder);
+            globalThis.removeEventListener("resize", updateNamePlaceholder);
     }, []);
 
-    return (
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [tel, setTel] = useState("");
+    const [UF, setUF] = useState("");
+    const [city, setCity] = useState("");
+    const [message, setMessage] = useState("");
+
+    const sendData = `
+        Nome: ${name}
+        E-mail: ${email}
+        Telefone: ${tel}
+        UF: ${UF}
+        Cidade: ${city}
+        Mensagem: ${message}
+    `;
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        talkToUsEmailSended.value = true;
+        await invoke.site.actions.sendEmail({
+            recipientsEmail: recipientsEmail,
+            subject: subject,
+            data: sendData,
+        });
+    };
+
+    const formComponent = (
         <div className="flex justify-center px-10 lg:px-0">
             <div className="lg:max-w-[1400px] w-full pt-12 pb-16 lg:py-32 lg:px-32">
-                <div className="flex flex-col gap-4 lg:gap-11">
+                <form
+                    onSubmit={handleSubmit}
+                    className="flex flex-col gap-4 lg:gap-11"
+                >
                     <span className="lg:hidden font-bold text-xl text-gray3">
                         Informações de contato:
                     </span>
@@ -54,6 +95,8 @@ export default function TalkToUsIsland() {
                         id={"name"}
                         name={"name"}
                         label={"Nome"}
+                        value={name}
+                        inputValueSetter={setName}
                         placeholder={namePlaceholder}
                         wfull
                     />
@@ -61,6 +104,8 @@ export default function TalkToUsIsland() {
                         id={"email"}
                         name={"email"}
                         label={"E-mail"}
+                        value={email}
+                        inputValueSetter={setEmail}
                         placeholder={emailPlaceholder}
                         wfull
                     />
@@ -70,6 +115,8 @@ export default function TalkToUsIsland() {
                             id={"tel"}
                             name={"tel"}
                             label={"Telefone"}
+                            value={tel}
+                            inputValueSetter={setTel}
                             placeholder={telPlaceholder}
                             wfull
                         />
@@ -80,6 +127,8 @@ export default function TalkToUsIsland() {
                                 id={"tel"}
                                 name={"tel"}
                                 label={"Telefone"}
+                                value={tel}
+                                inputValueSetter={setTel}
                                 placeholder={telPlaceholder}
                                 wfull
                             />
@@ -88,6 +137,8 @@ export default function TalkToUsIsland() {
                             id={"uf"}
                             name={"uf"}
                             label={"UF:"}
+                            value={UF}
+                            inputValueSetter={setUF}
                             options={ufsOptions}
                             placeholder={UFPlaceholder}
                             wfull
@@ -96,6 +147,8 @@ export default function TalkToUsIsland() {
                             id={"city"}
                             name={"city"}
                             label={"Cidade:"}
+                            value={city}
+                            inputValueSetter={setCity}
                             options={citiesOptions}
                             placeholder={cityPlaceholder}
                             wfull
@@ -104,16 +157,25 @@ export default function TalkToUsIsland() {
                     <SiteTextArea
                         id={"message"}
                         name={"message"}
+                        value={message}
+                        inputValueSetter={setMessage}
                         placeholder={textAreaPlaceHolder}
                     />
 
                     <div className="flex justify-end w-full">
-                        <button className="bg-orange4 text-white w-full lg:w-auto lg:px-24 py-3 rounded-full">
+                        <button
+                            type="submit"
+                            className="bg-orange4 text-white w-full lg:w-auto lg:px-24 py-3 rounded-full"
+                        >
                             Enviar
                         </button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     );
+
+    return talkToUsEmailSended.value
+        ? <SendingConfirmation signalToChange={talkToUsEmailSended} />
+        : formComponent;
 }

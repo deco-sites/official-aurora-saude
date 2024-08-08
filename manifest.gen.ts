@@ -3,11 +3,13 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $$$$$$$$$0 from "./actions/saveLead.ts";
+import * as $$$$$$$$$1 from "./actions/sendEmail.ts";
 import * as $$$$$$$$$$$0 from "./apps/deco/algolia.ts";
 import * as $$$$$$$$$$$1 from "./apps/deco/htmx.ts";
 import * as $$$$$$$$$$$2 from "./apps/site.ts";
 import * as $$$0 from "./loaders/algolia/algoliaConfig.ts";
-import * as $$$1 from "./loaders/supabase/supabaseConfig.ts";
+import * as $$$1 from "./loaders/sendgrid/sendgridConfig.ts";
+import * as $$$2 from "./loaders/supabase/supabaseConfig.ts";
 import * as $$$$$$0 from "./sections/Simulador/CompletedForm.tsx";
 import * as $$$$$$1 from "./sections/Simulador/Footer.tsx";
 import * as $$$$$$2 from "./sections/Simulador/FormStepFive.tsx";
@@ -81,7 +83,8 @@ import * as $$$$$$68 from "./sections/Theme/Theme.tsx";
 const manifest = {
   "loaders": {
     "site/loaders/algolia/algoliaConfig.ts": $$$0,
-    "site/loaders/supabase/supabaseConfig.ts": $$$1,
+    "site/loaders/sendgrid/sendgridConfig.ts": $$$1,
+    "site/loaders/supabase/supabaseConfig.ts": $$$2,
   },
   "sections": {
     "site/sections/Simulador/CompletedForm.tsx": $$$$$$0,
@@ -156,6 +159,7 @@ const manifest = {
   },
   "actions": {
     "site/actions/saveLead.ts": $$$$$$$$$0,
+    "site/actions/sendEmail.ts": $$$$$$$$$1,
   },
   "apps": {
     "site/apps/deco/algolia.ts": $$$$$$$$$$$0,

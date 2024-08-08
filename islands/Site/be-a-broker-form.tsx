@@ -5,8 +5,20 @@ import SiteInputSelect from "site/components/Site/site-input-select.tsx";
 import MobileInputSelectWithLabel from "site/components/Site/mobile-input-select-with-label.tsx";
 import { useEffect, useState } from "preact/hooks";
 import { yesOrNoOptions } from "site/helpers/Site/yes-or-no.ts";
+import { invoke } from "../../runtime.ts";
+import { signal } from "@preact/signals";
+import SendingConfirmation from "site/components/Site/sending-confirmation.tsx";
 
-export default function BeABrokerFormIsland() {
+export interface RequestQuoteIslandProps {
+    recipientsEmail: string;
+    subject: string;
+}
+
+const beABrokerEmailSended = signal(false);
+
+export default function BeABrokerFormIsland(
+    { recipientsEmail, subject }: RequestQuoteIslandProps,
+) {
     const [brokerNamePlaceholder, setbrokerNamePlaceholder] = useState(
         "Escreva aqui",
     );
@@ -32,7 +44,7 @@ export default function BeABrokerFormIsland() {
     const [customerBasePlaceholder, setcustomerBasePlaceholder] = useState(
         "Não",
     );
-    const [haveSales, sethaveSales] = useState(
+    const [haveSalesPlaceholder, sethaveSalesPlaceholder] = useState(
         "Não",
     );
 
@@ -52,7 +64,7 @@ export default function BeABrokerFormIsland() {
                     "Quantos funcionários tem a sua corretora?",
                 );
                 setcustomerBasePlaceholder("Não");
-                sethaveSales("Não");
+                sethaveSalesPlaceholder("Não");
             } else {
                 setbrokerNamePlaceholder("Escreva aqui");
                 setresponsibleNamePlaceholder("Escreva aqui");
@@ -65,18 +77,56 @@ export default function BeABrokerFormIsland() {
                 setCepPlaceholder("xx.xxx-xxx");
                 setemployeesQtyPlaceholder("Escreva aqui");
                 setcustomerBasePlaceholder("Não");
-                sethaveSales("Não");
+                sethaveSalesPlaceholder("Não");
             }
         };
 
         updateNamePlaceholder(); // Set initial placeholder based on screen size
-        window.addEventListener("resize", updateNamePlaceholder);
+        globalThis.addEventListener("resize", updateNamePlaceholder);
 
         return () =>
-            window.removeEventListener("resize", updateNamePlaceholder);
+            globalThis.removeEventListener("resize", updateNamePlaceholder);
     }, []);
 
-    return (
+    const [brokerName, setBrokerName] = useState("");
+    const [responsibleName, setResponsibleName] = useState("");
+    const [email, setEmail] = useState("");
+    const [cnpj, setCNPJ] = useState("");
+    const [tel, setTel] = useState("");
+    const [UF, setUF] = useState("");
+    const [city, setCity] = useState("");
+    const [address, setAddress] = useState("");
+    const [cep, setCep] = useState("");
+    const [employeesQty, setEmployeesQty] = useState("");
+    const [customerBase, setCustomerBase] = useState("");
+    const [haveSales, setHaveSales] = useState("");
+
+    const sendData = `
+        Nome da Corretora: ${brokerName}
+        Nome do Responsável: ${responsibleName}
+        E-mail: ${email}
+        CNPJ: ${cnpj}
+        Telefone: ${tel}
+        UF: ${UF}
+        Cidade: ${city}
+        Endereço: ${address}
+        Cep: ${cep}
+        Quantidade de funcionários da corretora: ${employeesQty}
+        Já possui carteira de clientes? ${customerBase}
+        Possui venda para lançar na abertura do código? ${haveSales}
+    `;
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        beABrokerEmailSended.value = true;
+        await invoke.site.actions.sendEmail({
+            recipientsEmail: recipientsEmail,
+            subject: subject,
+            data: sendData,
+        });
+    };
+
+    const formComponent = (
         <>
             <div className="flex justify-center px-10 lg:px-0">
                 <div className="lg:max-w-[1400px] w-full pt-12 pb-16">
@@ -85,11 +135,16 @@ export default function BeABrokerFormIsland() {
                             Seja um corretor<br /> parceiro
                         </span>
 
-                        <div className="flex flex-col gap-4 lg:gap-11">
+                        <form
+                            onSubmit={handleSubmit}
+                            className="flex flex-col gap-4 lg:gap-11"
+                        >
                             <SiteInputText
                                 id={"brokerName"}
                                 name={"brokerName"}
                                 label={"Nome da Corretora"}
+                                value={brokerName}
+                                inputValueSetter={setBrokerName}
                                 placeholder={brokerNamePlaceholder}
                                 wfull
                             />
@@ -97,6 +152,8 @@ export default function BeABrokerFormIsland() {
                                 id={"protocol"}
                                 name={"protocol"}
                                 label={"Nome do Responsável"}
+                                value={responsibleName}
+                                inputValueSetter={setResponsibleName}
                                 placeholder={responsibleNamePlaceholder}
                                 wfull
                             />
@@ -105,6 +162,8 @@ export default function BeABrokerFormIsland() {
                                     id={"email"}
                                     name={"email"}
                                     label={"E-mail"}
+                                    value={email}
+                                    inputValueSetter={setEmail}
                                     placeholder={emailPlaceholder}
                                     wfull
                                 />
@@ -112,6 +171,8 @@ export default function BeABrokerFormIsland() {
                                     id={"cnpj"}
                                     name={"cnpj"}
                                     label={"CNPJ"}
+                                    value={cnpj}
+                                    inputValueSetter={setCNPJ}
                                     placeholder={cnpjPlaceholder}
                                     wfull
                                 />
@@ -121,6 +182,8 @@ export default function BeABrokerFormIsland() {
                                     id={"tel"}
                                     name={"tel"}
                                     label={"Telefone"}
+                                    value={tel}
+                                    inputValueSetter={setTel}
                                     placeholder={telPlaceholder}
                                 />
 
@@ -129,6 +192,8 @@ export default function BeABrokerFormIsland() {
                                         id={"address"}
                                         name={"address"}
                                         label={"Endereço"}
+                                        value={address}
+                                        inputValueSetter={setAddress}
                                         placeholder={addressPlaceholder}
                                         wfull
                                     />
@@ -136,6 +201,8 @@ export default function BeABrokerFormIsland() {
                                         id={"cep"}
                                         name={"cep"}
                                         label={"CEP"}
+                                        value={cep}
+                                        inputValueSetter={setCep}
                                         placeholder={cepPlaceholder}
                                         wfull
                                     />
@@ -145,6 +212,8 @@ export default function BeABrokerFormIsland() {
                                         id={"uf"}
                                         name={"uf"}
                                         label={"UF:"}
+                                        value={UF}
+                                        inputValueSetter={setUF}
                                         options={ufsOptions}
                                         placeholder={UFPlaceholder}
                                         wfull
@@ -153,6 +222,8 @@ export default function BeABrokerFormIsland() {
                                         id={"city"}
                                         name={"city"}
                                         label={"Cidade:"}
+                                        value={city}
+                                        inputValueSetter={setCity}
                                         options={citiesOptions}
                                         placeholder={cityPlaceholder}
                                         wfull
@@ -164,6 +235,8 @@ export default function BeABrokerFormIsland() {
                                     id={"address"}
                                     name={"address"}
                                     label={"Endereço"}
+                                    value={address}
+                                    inputValueSetter={setAddress}
                                     placeholder={addressPlaceholder}
                                     wfull
                                 />
@@ -171,58 +244,77 @@ export default function BeABrokerFormIsland() {
                                     id={"cep"}
                                     name={"cep"}
                                     label={"CEP"}
+                                    value={cep}
+                                    inputValueSetter={setCep}
                                     placeholder={cepPlaceholder}
                                     wfull
                                 />
                             </div>
                             <SiteInputText
-                                id={"cep"}
-                                name={"cep"}
+                                id={"employeesQty"}
+                                name={"employeesQty"}
                                 label={"Quantos funcionários tem a sua corretora?"}
+                                value={employeesQty}
+                                inputValueSetter={setEmployeesQty}
                                 placeholder={employeesQtyPlaceholder}
                                 wfull
                             />
                             <div className="hidden lg:flex flex-col gap-9">
                                 <SiteInputSelect
-                                    id={"city"}
-                                    name={"city"}
+                                    id={"customerBase"}
+                                    name={"customerBase"}
                                     label={"Já possui carteira de clientes?"}
+                                    value={customerBase}
+                                    inputValueSetter={setCustomerBase}
                                     options={yesOrNoOptions}
                                     placeholder={customerBasePlaceholder}
                                 />
                                 <SiteInputSelect
-                                    id={"city"}
-                                    name={"city"}
+                                    id={"haveSales"}
+                                    name={"haveSales"}
                                     label={"Possui venda para lançar na abertura do código?"}
+                                    value={haveSales}
+                                    inputValueSetter={setHaveSales}
                                     options={yesOrNoOptions}
-                                    placeholder={haveSales}
+                                    placeholder={haveSalesPlaceholder}
                                 />
                             </div>
                             <div className="flex flex-col lg:hidden">
                                 <MobileInputSelectWithLabel
-                                    id={"city"}
-                                    name={"city"}
+                                    id={"customerBase"}
+                                    name={"customerBase"}
                                     label={"Já possui carteira de clientes?"}
+                                    value={customerBase}
+                                    inputValueSetter={setCustomerBase}
                                     options={yesOrNoOptions}
                                     placeholder={customerBasePlaceholder}
                                 />
                                 <MobileInputSelectWithLabel
-                                    id={"city"}
-                                    name={"city"}
+                                    id={"haveSales"}
+                                    name={"haveSales"}
                                     label={"Possui venda para lançar na<br /> abertura do código?"}
+                                    value={haveSales}
+                                    inputValueSetter={setHaveSales}
                                     options={yesOrNoOptions}
                                     placeholder={haveSales}
                                 />
                             </div>
                             <div className="flex justify-end w-full">
-                                <button className="bg-orange4 text-white w-full lg:w-auto lg:px-24 py-3 rounded-full">
+                                <button
+                                    type="submit"
+                                    className="bg-orange4 text-white w-full lg:w-auto lg:px-24 py-3 rounded-full"
+                                >
                                     Enviar
                                 </button>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </>
     );
+
+    return beABrokerEmailSended.value
+        ? <SendingConfirmation signalToChange={beABrokerEmailSended} />
+        : formComponent;
 }

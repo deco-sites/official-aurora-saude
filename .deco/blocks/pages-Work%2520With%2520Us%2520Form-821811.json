@@ -29,7 +29,9 @@
       ]
     },
     {
-      "__resolveType": "site/sections/Site/WorkWithUsForm.tsx"
+      "__resolveType": "site/sections/Site/WorkWithUsForm.tsx",
+      "recipientsEmail": "erick.nascimento@simbioseventures.com",
+      "subject": "Aurora Saúde - Formulário Trabalhe Conosco"
     },
     {
       "__resolveType": "site/sections/Site/Footer.tsx"

@@ -1,7 +1,7 @@
 import LoggedAreasDropdownMenu from "site/islands/Site/logged-areas-dropdown-menu.tsx";
 import { useRef, useState } from "preact/hooks";
 
-export default function LoggedAreasBtn() {
+export default function LoggedAreasBtn({ option }) {
     const [open, setOpen] = useState(false);
     const avatarRef = useRef(null);
 
@@ -32,6 +32,7 @@ export default function LoggedAreasBtn() {
                     <LoggedAreasDropdownMenu
                         openerRef={avatarRef}
                         setOpen={setOpen}
+                        option={option}
                     />
                 )}
             </div>

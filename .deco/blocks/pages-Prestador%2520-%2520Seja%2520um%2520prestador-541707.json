@@ -30,7 +30,9 @@
       ]
     },
     {
-      "__resolveType": "site/sections/Site/BeAProviderForm.tsx"
+      "__resolveType": "site/sections/Site/BeAProviderForm.tsx",
+      "recipientsEmail": "erick.nascimento@simbioseventures.com",
+      "subject": "Aurora Saúde - Seja um prestador credenciado"
     },
     {
       "__resolveType": "site/sections/Site/Footer.tsx"

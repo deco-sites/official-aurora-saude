@@ -1,5 +1,10 @@
 import RequestQuoteIsland from "site/islands/Site/request-quote-form.tsx";
 
-export default function RequestQuoteForm() {
-    return <RequestQuoteIsland />;
+export interface Props {
+    recipientsEmail: string;
+    subject: string;
+}
+
+export default function RequestQuoteForm({ recipientsEmail, subject }: Props) {
+    return <RequestQuoteIsland recipientsEmail={recipientsEmail} subject={subject} />;
 }

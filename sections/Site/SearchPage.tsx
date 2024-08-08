@@ -53,14 +53,19 @@ export const loader = async (props: Props, req: Request, ctx: AppContext) => {
     const searchedWord = params.get("query");
     let resultsFound = [];
 
-    const client = algolia("LM2KGXP27D", "bc4fcf5443843bdda92db82f2d01e847", {
-        requester: createFetchRequester(), // Fetch makes it perform mutch better
-    });
+    const { algolia } = ctx;
 
-    const index = client.initIndex("testIndex");
+    {
+        /*
+    const client = algolia("aplicationId", "adminKey", {
+        requester: createFetchRequester(), // Fetch makes it perform mutch better
+    });*/
+    }
+
+    //const index = client.initIndex("testIndex");
 
     try {
-        const { hits } = await index.search(searchedWord);
+        const { hits } = await algolia.search(searchedWord);
         console.log("Hits:", hits);
         resultsFound = hits;
         //return hits;

@@ -16,7 +16,11 @@ export default function SearchButtonContainer({ option, expandedInput }) {
                     placeholder="Escreva aqui o que você está procurando"
                     id=""
                     name=""
-                    className="w-[500px] px-12 rounded-full text-white bg-orange1 border border-white outline-none placeholder-white"
+                    className={`${
+                        option.id === 4
+                            ? "text-pink2 border-pink2 placeholder-pink2"
+                            : "text-white border-white placeholder-white"
+                    } w-[500px] bg-inherit px-12 rounded-full border outline-none`}
                     value={searchedWord.value}
                     onChange={(e) => {
                         searchedWord.value = e.target.value;

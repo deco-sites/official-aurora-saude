@@ -7,8 +7,20 @@ import { citiesOptions } from "site/helpers/Simulador/cities.ts";
 import SiteInputSelect from "site/components/Site/site-input-select.tsx";
 import SiteTextArea from "site/components/Site/text-area.tsx";
 import { useEffect, useState } from "preact/hooks";
+import { invoke } from "../../runtime.ts";
+import { signal } from "@preact/signals";
+import SendingConfirmation from "site/components/Site/sending-confirmation.tsx";
 
-export default function OmbudsmanIsland() {
+export interface OmbudsmanIslandProps {
+    recipientsEmail: string;
+    subject: string;
+}
+
+const ombudsmanEmailSended = signal(false);
+
+export default function OmbudsmanIsland(
+    { recipientsEmail, subject }: OmbudsmanIslandProps,
+) {
     const [protocolNumberPlaceholder, setProtocolNumberPlaceholder] = useState(
         "xxxxxxxxxxxxxxxxxxxx",
     );
@@ -61,13 +73,49 @@ export default function OmbudsmanIsland() {
         };
 
         updateNamePlaceholder(); // Set initial placeholder based on screen size
-        window.addEventListener("resize", updateNamePlaceholder);
+        globalThis.addEventListener("resize", updateNamePlaceholder);
 
         return () =>
-            window.removeEventListener("resize", updateNamePlaceholder);
+            globalThis.removeEventListener("resize", updateNamePlaceholder);
     }, []);
 
-    return (
+    const [protocolNumber, setProtocolNumber] = useState("");
+    const [cardCode, setCardCode] = useState("");
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [cpf, setCpf] = useState("");
+    const [tel, setTel] = useState("");
+    const [UF, setUF] = useState("");
+    const [city, setCity] = useState("");
+    const [address, setAddress] = useState("");
+    const [cep, setCep] = useState("");
+    const [message, setMessage] = useState("");
+
+    const sendData = `
+        Número do Protocolo: ${protocolNumber}
+        Código da Carteirinha: ${cardCode}
+        Nome: ${name}
+        E-mail: ${email}
+        CPF: ${cpf}
+        Telefone: ${tel}
+        UF: ${UF}
+        Cidade: ${city}
+        Endereço: ${address}
+        Cep: ${cep}
+        Mensagem: ${message}
+    `;
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        ombudsmanEmailSended.value = true;
+        await invoke.site.actions.sendEmail({
+            recipientsEmail: recipientsEmail,
+            subject: subject,
+            data: sendData,
+        });
+    };
+
+    const formComponent = (
         <>
             <div className="flex justify-center px-10 lg:px-0">
                 <div className="lg:max-w-[1400px] w-full pt-12 pb-16 lg:py-32 lg:px-32">
@@ -89,12 +137,17 @@ export default function OmbudsmanIsland() {
                             </span>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-4 lg:gap-11">
+                    <form
+                        className="flex flex-col gap-4 lg:gap-11"
+                        onSubmit={handleSubmit}
+                    >
                         <div className="flex flex-col lg:flex-row gap-4 lg:gap-5 border-b border-b-black border-opacity-15 lg:border-none pb-10 lg:pb-0">
                             <SiteInputText
                                 id={"protocol"}
                                 name={"protocol"}
                                 label={"Número do Protocolo"}
+                                value={protocolNumber}
+                                inputValueSetter={setProtocolNumber}
                                 placeholder={protocolNumberPlaceholder}
                                 wfull
                             />
@@ -102,6 +155,8 @@ export default function OmbudsmanIsland() {
                                 id={"cardcode"}
                                 name={"cardcode"}
                                 label={"Código da Carteirinha"}
+                                value={cardCode}
+                                inputValueSetter={setCardCode}
                                 placeholder={cardCodePlaceholder}
                                 wfull
                             />
@@ -110,6 +165,8 @@ export default function OmbudsmanIsland() {
                             id={"name"}
                             name={"name"}
                             label={"Nome"}
+                            value={name}
+                            inputValueSetter={setName}
                             placeholder={namePlaceholder}
                             wfull
                         />
@@ -118,6 +175,8 @@ export default function OmbudsmanIsland() {
                                 id={"email"}
                                 name={"email"}
                                 label={"E-mail"}
+                                value={email}
+                                inputValueSetter={setEmail}
                                 placeholder={emailPlaceholder}
                                 wfull
                             />
@@ -126,6 +185,8 @@ export default function OmbudsmanIsland() {
                                     id={"tel"}
                                     name={"tel"}
                                     label={"Telefone"}
+                                    value={tel}
+                                    inputValueSetter={setTel}
                                     placeholder={telPlaceholder}
                                     wfull
                                 />
@@ -134,6 +195,8 @@ export default function OmbudsmanIsland() {
                                 id={"cpf"}
                                 name={"cpf"}
                                 label={"CPF"}
+                                value={cpf}
+                                inputValueSetter={setCpf}
                                 placeholder={cpfPlaceholder}
                                 wfull
                             />
@@ -143,6 +206,8 @@ export default function OmbudsmanIsland() {
                                 id={"cep"}
                                 name={"cep"}
                                 label={"CEP"}
+                                value={cep}
+                                inputValueSetter={setCep}
                                 placeholder={cepPlaceholder}
                                 wfull
                             />
@@ -150,6 +215,8 @@ export default function OmbudsmanIsland() {
                                 id={"address"}
                                 name={"address"}
                                 label={"Endereço"}
+                                value={address}
+                                inputValueSetter={setAddress}
                                 placeholder={addressPlaceholder}
                                 wfull
                             />
@@ -160,6 +227,8 @@ export default function OmbudsmanIsland() {
                                     id={"tel"}
                                     name={"tel"}
                                     label={"Telefone"}
+                                    value={tel}
+                                    inputValueSetter={setTel}
                                     placeholder={telPlaceholder}
                                     wfull
                                 />
@@ -169,6 +238,8 @@ export default function OmbudsmanIsland() {
                                 id={"uf"}
                                 name={"uf"}
                                 label={"UF:"}
+                                value={UF}
+                                inputValueSetter={setUF}
                                 options={ufsOptions}
                                 placeholder={UFPlaceholder}
                                 wfull
@@ -177,6 +248,8 @@ export default function OmbudsmanIsland() {
                                 id={"city"}
                                 name={"city"}
                                 label={"Cidade:"}
+                                value={city}
+                                inputValueSetter={setCity}
                                 options={citiesOptions}
                                 placeholder={cityPlaceholder}
                                 wfull
@@ -187,6 +260,8 @@ export default function OmbudsmanIsland() {
                                 id={"address"}
                                 name={"address"}
                                 label={"Endereço"}
+                                value={address}
+                                inputValueSetter={setAddress}
                                 placeholder={addressPlaceholder}
                                 wfull
                             />
@@ -194,6 +269,8 @@ export default function OmbudsmanIsland() {
                                 id={"cep"}
                                 name={"cep"}
                                 label={"CEP"}
+                                value={cep}
+                                inputValueSetter={setCep}
                                 placeholder={cepPlaceholder}
                                 wfull
                             />
@@ -201,17 +278,26 @@ export default function OmbudsmanIsland() {
                         <SiteTextArea
                             id={"message"}
                             name={"message"}
+                            value={message}
+                            inputValueSetter={setMessage}
                             placeholder={textareaPlaceholder}
                         />
 
                         <div className="flex justify-end w-full">
-                            <button className="bg-orange4 text-white w-full lg:w-auto lg:px-24 py-3 rounded-full">
+                            <button
+                                type="submit"
+                                className="bg-orange4 text-white w-full lg:w-auto lg:px-24 py-3 rounded-full"
+                            >
                                 Enviar
                             </button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </>
     );
+
+    return ombudsmanEmailSended.value
+        ? <SendingConfirmation signalToChange={ombudsmanEmailSended} />
+        : formComponent;
 }

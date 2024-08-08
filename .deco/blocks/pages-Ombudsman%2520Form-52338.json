@@ -31,7 +31,9 @@
       ]
     },
     {
-      "__resolveType": "site/sections/Site/OmbudsmanForm.tsx"
+      "__resolveType": "site/sections/Site/OmbudsmanForm.tsx",
+      "recipientsEmail": "erick.nascimento@simbioseventures.com",
+      "subject": "Aurora Saúde - Formulário Ouvidoria"
     },
     {
       "__resolveType": "site/sections/Site/Footer.tsx"

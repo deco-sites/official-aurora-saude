@@ -186,7 +186,7 @@ export default function HeaderSiteIsland({ type }: Props) {
 
                         <div className="flex gap-9 text-white">
                             <div className="relative hidden lg:flex items-center gap-9">
-                                <LoggedAreasBtn />
+                                <LoggedAreasBtn option={option} />
                                 <a href="/perguntas-frequentes">
                                     Perguntas Frequentes
                                 </a>

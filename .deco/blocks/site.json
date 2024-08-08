@@ -48,5 +48,28 @@
   },
   "flavor": {
     "framework": "fresh"
+  },
+  "algolia": {
+    "__resolveType": "site/loaders/algolia/algoliaConfig.ts",
+    "applicationId": {
+      "__resolveType": "website/loaders/secret.ts",
+      "encrypted": "66af9f11de473b4ed1f4819cde286a66",
+      "name": "ALGOLIAAPPID"
+    },
+    "adminAPIKey": {
+      "__resolveType": "website/loaders/secret.ts",
+      "encrypted": "8ab814c8a1fd0567d22e79c443995c47f371bf9dd741e532c9258909c947a700cbed804494db07d94362b028edd30465",
+      "name": "ALGOLIAADMINAPIKEY"
+    },
+    "indexName": "testIndex"
+  },
+  "framework": "fresh",
+  "sendgrid": {
+    "__resolveType": "site/loaders/sendgrid/sendgridConfig.ts",
+    "sendgridApiKey": {
+      "__resolveType": "website/loaders/secret.ts",
+      "encrypted": "7e5ffb2857b940f0997ff00d2cdfa3e95c10ca319cc803e5c59c087e255fbba3730a448c8e0f69cc8c6f1245d91bf62a3ed1b2b9056868cf937561e81121ed64fa9d79bd9ea218f83dca788aff26ea36",
+      "name": "SENDGRIDAPIKEY"
+    }
   }
 }
