@@ -17,6 +17,7 @@ export default function loader({ token, url }: Props): Supabase {
     const tokenString = typeof token === "string"
         ? token
         : token.get() as string;
+        
     return createClient(
         url,
         tokenString,

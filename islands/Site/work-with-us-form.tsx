@@ -4,10 +4,22 @@ import SiteInputText from "site/components/Site/site-input-text.tsx";
 import { ufsOptions } from "site/helpers/Site/ufsOptions.ts";
 import { citiesOptions } from "site/helpers/Simulador/cities.ts";
 import SiteInputSelect from "site/components/Site/site-input-select.tsx";
-import { useEffect, useState } from "preact/hooks";
+import { useEffect, useRef, useState } from "preact/hooks";
 import Image from "apps/website/components/Image.tsx";
+import { invoke } from "../../runtime.ts";
+import { signal } from "@preact/signals";
+import SendingConfirmation from "site/components/Site/sending-confirmation.tsx";
 
-export default function WorkWithUsIsland() {
+export interface WorkWithUsIslandProps {
+    recipientsEmail: string;
+    subject: string;
+}
+
+const workWithUsEmailSended = signal(false);
+
+export default function WorkWithUsIsland(
+    { recipientsEmail, subject }: WorkWithUsIslandProps,
+) {
     const [namePlaceholder, setNamePlaceholder] = useState("Escreva aqui");
     const [emailPlaceholder, setEmailPlaceholder] = useState(
         "seuemail@email.com",
@@ -42,13 +54,68 @@ export default function WorkWithUsIsland() {
         };
 
         updateNamePlaceholder(); // Set initial placeholder based on screen size
-        window.addEventListener("resize", updateNamePlaceholder);
+        globalThis.addEventListener("resize", updateNamePlaceholder);
 
         return () =>
-            window.removeEventListener("resize", updateNamePlaceholder);
+            globalThis.removeEventListener("resize", updateNamePlaceholder);
     }, []);
 
-    return (
+    const fileInputRef = useRef(null);
+
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [tel, setTel] = useState("");
+    const [UF, setUF] = useState("");
+    const [city, setCity] = useState("");
+    const [address, setAddress] = useState("");
+    const [cep, setCep] = useState("");
+    const [selectedFile, setSelectedFile] = useState(null);
+
+    const sendData = `
+        Nome: ${name}
+        E-mail: ${email}
+        Telefone: ${tel}
+        UF: ${UF}
+        Cidade: ${city}
+        Endereço: ${address}
+        Cep: ${cep}
+    `;
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        workWithUsEmailSended.value = true;
+        await invoke.site.actions.sendEmail({
+            recipientsEmail: recipientsEmail,
+            subject: subject,
+            attachment: selectedFile,
+            data: sendData,
+        });
+    };
+
+    const handleButtonClick = (e) => {
+        e.preventDefault();
+        if (fileInputRef.current) {
+            fileInputRef.current.click();
+        }
+    };
+
+    const handleFileChange = (e) => {
+        e.preventDefault();
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => {
+                setSelectedFile({
+                    name: file.name,
+                    type: file.type,
+                    content: reader.result.split(",")[1], // Pega o conteúdo base64
+                });
+            };
+        }
+    };
+
+    const formComponent = (
         <>
             <div className="flex justify-center px-10 lg:px-0">
                 <div className="lg:max-w-[1400px] w-full pt-12 pb-16 lg:py-32 lg:px-32">
@@ -77,11 +144,16 @@ export default function WorkWithUsIsland() {
                             </span>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-4 lg:gap-11">
+                    <form
+                        className="flex flex-col gap-4 lg:gap-11"
+                        onSubmit={handleSubmit}
+                    >
                         <SiteInputText
                             id={"name"}
                             name={"name"}
                             label={"Nome"}
+                            value={name}
+                            inputValueSetter={setName}
                             placeholder={namePlaceholder}
                             wfull
                         />
@@ -89,6 +161,8 @@ export default function WorkWithUsIsland() {
                             id={"email"}
                             name={"email"}
                             label={"E-mail"}
+                            value={email}
+                            inputValueSetter={setEmail}
                             placeholder={emailPlaceholder}
                             wfull
                         />
@@ -98,6 +172,8 @@ export default function WorkWithUsIsland() {
                                 id={"tel"}
                                 name={"tel"}
                                 label={"Telefone"}
+                                value={tel}
+                                inputValueSetter={setTel}
                                 placeholder={telPlaceholder}
                                 wfull
                             />
@@ -108,6 +184,8 @@ export default function WorkWithUsIsland() {
                                 id={"tel"}
                                 name={"tel"}
                                 label={"Telefone"}
+                                value={tel}
+                                inputValueSetter={setTel}
                                 placeholder={telPlaceholder}
                                 wfull
                             />
@@ -116,6 +194,8 @@ export default function WorkWithUsIsland() {
                                 id={"uf"}
                                 name={"uf"}
                                 label={"UF:"}
+                                value={UF}
+                                inputValueSetter={setUF}
                                 options={ufsOptions}
                                 placeholder={UFPlaceholder}
                                 wfull
@@ -124,6 +204,8 @@ export default function WorkWithUsIsland() {
                                 id={"city"}
                                 name={"city"}
                                 label={"Cidade:"}
+                                value={city}
+                                inputValueSetter={setCity}
                                 options={citiesOptions}
                                 placeholder={cityPlaceholder}
                                 wfull
@@ -135,6 +217,8 @@ export default function WorkWithUsIsland() {
                                 id={"address"}
                                 name={"address"}
                                 label={"Endereço"}
+                                value={address}
+                                inputValueSetter={setAddress}
                                 placeholder={addressPlaceholder}
                                 wfull
                             />
@@ -142,6 +226,8 @@ export default function WorkWithUsIsland() {
                                 id={"cep"}
                                 name={"cep"}
                                 label={"CEP"}
+                                value={cep}
+                                inputValueSetter={setCep}
                                 placeholder={cepPlaceholder}
                                 wfull
                             />
@@ -152,6 +238,8 @@ export default function WorkWithUsIsland() {
                                 id={"uf"}
                                 name={"uf"}
                                 label={"UF:"}
+                                value={UF}
+                                inputValueSetter={setUF}
                                 options={ufsOptions}
                                 placeholder={UFPlaceholder}
                                 wfull
@@ -160,27 +248,47 @@ export default function WorkWithUsIsland() {
                                 id={"city"}
                                 name={"city"}
                                 label={"Cidade:"}
+                                value={city}
+                                inputValueSetter={setCity}
                                 options={citiesOptions}
                                 placeholder={cityPlaceholder}
                                 wfull
                             />
                         </div>
                         <div className="flex pt-10 lg:pt-0 flex-col lg:flex-row gap-4 lg:gap-0 justify-between w-full">
-                            <button className="flex justify-center items-center gap-5 bg-transparent border border-orange4 text-orange4 w-full lg:w-auto lg:px-10 py-3 rounded-full">
-                                <Image
-                                    src={"/Site/clip-icon.svg"}
-                                    alt="Clip Icon"
-                                    className=""
+                            <div>
+                                <input
+                                    type="file"
+                                    ref={fileInputRef}
+                                    style={{ display: "none" }}
+                                    onChange={handleFileChange}
                                 />
-                                Envie o seu currículo
-                            </button>
-                            <button className="bg-orange4 text-white w-full lg:w-auto lg:px-24 py-3 rounded-full">
+                                <button
+                                    className="flex justify-center items-center gap-5 bg-transparent border border-orange4 text-orange4 w-full lg:w-auto lg:px-10 py-3 rounded-full"
+                                    onClick={handleButtonClick}
+                                >
+                                    <Image
+                                        src={"/Site/clip-icon.svg"}
+                                        alt="Clip Icon"
+                                        className=""
+                                    />
+                                    Envie o seu currículo
+                                </button>
+                            </div>
+                            <button
+                                type="submit"
+                                className="bg-orange4 text-white w-full lg:w-auto lg:px-24 py-3 rounded-full"
+                            >
                                 Enviar
                             </button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </>
     );
+
+    return workWithUsEmailSended.value
+        ? <SendingConfirmation signalToChange={workWithUsEmailSended} />
+        : formComponent;
 }

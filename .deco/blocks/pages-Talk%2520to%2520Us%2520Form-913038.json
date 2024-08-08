@@ -32,7 +32,9 @@
       ]
     },
     {
-      "__resolveType": "site/sections/Site/TalkToUsForm.tsx"
+      "__resolveType": "site/sections/Site/TalkToUsForm.tsx",
+      "recipientsEmail": "erick.nascimento@simbioseventures.com",
+      "subject": "Aurora Saúde - Formulário Fale Conosco"
     },
     {
       "__resolveType": "site/sections/Site/Footer.tsx"

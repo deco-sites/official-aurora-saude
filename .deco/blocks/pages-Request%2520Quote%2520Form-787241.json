@@ -29,7 +29,9 @@
       ]
     },
     {
-      "__resolveType": "site/sections/Site/RequestQuoteForm.tsx"
+      "__resolveType": "site/sections/Site/RequestQuoteForm.tsx",
+      "recipientsEmail": "erick.nascimento@simbioseventures.com",
+      "subject": "Aurora Saúde - Formulário de Cotação"
     },
     {
       "__resolveType": "site/sections/Site/Footer.tsx"
