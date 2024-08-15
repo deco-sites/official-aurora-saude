@@ -9,6 +9,7 @@ import * as $Simulador_change_step_function from "./islands/Simulador/change-ste
 import * as $Simulador_control_form_steps from "./islands/Simulador/control-form-steps.tsx";
 import * as $Simulador_first_step_img from "./islands/Simulador/first-step-img.tsx";
 import * as $Simulador_first_step_opt_btn from "./islands/Simulador/first-step-opt-btn.tsx";
+import * as $Simulador_form_step_five from "./islands/Simulador/form-step-five.tsx";
 import * as $Simulador_new_simulation_btn from "./islands/Simulador/new-simulation-btn.tsx";
 import * as $Simulador_next_step_btn from "./islands/Simulador/next-step-btn.tsx";
 import * as $Simulador_plan_card from "./islands/Simulador/plan-card.tsx";
@@ -65,6 +66,7 @@ const manifest = {
     "./islands/Simulador/control-form-steps.tsx": $Simulador_control_form_steps,
     "./islands/Simulador/first-step-img.tsx": $Simulador_first_step_img,
     "./islands/Simulador/first-step-opt-btn.tsx": $Simulador_first_step_opt_btn,
+    "./islands/Simulador/form-step-five.tsx": $Simulador_form_step_five,
     "./islands/Simulador/new-simulation-btn.tsx": $Simulador_new_simulation_btn,
     "./islands/Simulador/next-step-btn.tsx": $Simulador_next_step_btn,
     "./islands/Simulador/plan-card.tsx": $Simulador_plan_card,
