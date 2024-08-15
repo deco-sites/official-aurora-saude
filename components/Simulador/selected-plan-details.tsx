@@ -17,6 +17,7 @@ interface ISelectedPlanDetails {
   alreadyHavePlan: string;
   whoUseThePlan: string;
   beneficiariesArr: Persons[];
+  priceRanges: number[];
 }
 
 export default function SelectedPlanDetails(
@@ -27,6 +28,7 @@ export default function SelectedPlanDetails(
     alreadyHavePlan,
     whoUseThePlan,
     beneficiariesArr,
+    priceRanges,
   }: ISelectedPlanDetails,
 ) {
   const beneficiaries = beneficiariesArr.filter((item) => item.range != "");
@@ -60,6 +62,8 @@ export default function SelectedPlanDetails(
   const beneficiaries59more = beneficiaries.filter((item) =>
     item.range === "59 anos ou mais"
   );
+
+  console.log("CHEGOU NO FILHO", priceRanges);
 
   return (
     <>
@@ -141,14 +145,24 @@ export default function SelectedPlanDetails(
               </div>
               <div className="flex flex-col text-sm text-[#a9a9a9]">
                 <span>a100 rmbh</span>
-                {simulationType === 1 && <span>R$ XXX,XX/mês por pessoa</span>}
+                {simulationType === 1 && (
+                  <span>
+                    R$ {`${
+                      priceRanges.propertyPrice.value?.toString()
+                        .replace(
+                          ".",
+                          ",",
+                        )
+                    }`}/mês por pessoa
+                  </span>
+                )}
               </div>
             </div>
           </div>
 
           {(beneficiaries0x18.length >= 1 || beneficiaries19x23.length >= 1 ||
             beneficiaries24x28.length >= 1) &&
-            whoUseThePlan !== "somente_eu" &&
+            (whoUseThePlan !== "somente_eu" || simulationType !== 1) &&
             (
               <div className="flex flex-col gap-8 lg:flex-grow lg:max-w-[30%]">
                 {beneficiaries0x18.length >= 1 && (
@@ -183,7 +197,15 @@ export default function SelectedPlanDetails(
                           simulationType === 1 ? "dependentes" : "beneficiários"
                         }`}
                       </span>
-                      <span>R$ XXX,XX/mês por pessoa</span>
+                      <span>
+                        R${" "}
+                        {`${
+                          priceRanges.zeroTo18Prices.value?.toString().replace(
+                            ".",
+                            ",",
+                          )
+                        }`}/mês por pessoa
+                      </span>
                     </div>
                   </div>
                 )}
@@ -220,7 +242,15 @@ export default function SelectedPlanDetails(
                           simulationType === 1 ? "dependentes" : "beneficiários"
                         }`}
                       </span>
-                      <span>R$ XXX,XX/mês por pessoa</span>
+                      <span>
+                        R$ {`${
+                          priceRanges.nineteenTo23Prices.value?.toString()
+                            .replace(
+                              ".",
+                              ",",
+                            )
+                        }`}/mês por pessoa
+                      </span>
                     </div>
                   </div>
                 )}
@@ -257,7 +287,16 @@ export default function SelectedPlanDetails(
                           simulationType === 1 ? "dependentes" : "beneficiários"
                         }`}
                       </span>
-                      <span>R$ XXX,XX/mês por pessoa</span>
+                      <span>
+                        R${" "}
+                        {`${
+                          priceRanges.twentyFourTo28Prices.value?.toString()
+                            .replace(
+                              ".",
+                              ",",
+                            )
+                        }`}/mês por pessoa
+                      </span>
                     </div>
                   </div>
                 )}
@@ -266,7 +305,7 @@ export default function SelectedPlanDetails(
 
           {(beneficiaries29x33.length >= 1 || beneficiaries34x38.length >= 1 ||
             beneficiaries39x43.length >= 1) &&
-            whoUseThePlan !== "somente_eu" && (
+            (whoUseThePlan !== "somente_eu" || simulationType !== 1) && (
             <div className="flex flex-col gap-8 lg:flex-grow lg:max-w-[30%]">
               {beneficiaries29x33.length >= 1 && (
                 <div className="flex flex-col gap-5">
@@ -300,7 +339,15 @@ export default function SelectedPlanDetails(
                         simulationType === 1 ? "dependentes" : "beneficiários"
                       }`}
                     </span>
-                    <span>R$ XXX,XX/mês por pessoa</span>
+                    <span>
+                      R$ {`${
+                        priceRanges.twentyNineTo33Prices.value?.toString()
+                          .replace(
+                            ".",
+                            ",",
+                          )
+                      }`}/mês por pessoa
+                    </span>
                   </div>
                 </div>
               )}
@@ -337,7 +384,15 @@ export default function SelectedPlanDetails(
                         simulationType === 1 ? "dependentes" : "beneficiários"
                       }`}
                     </span>
-                    <span>R$ XXX,XX/mês por pessoa</span>
+                    <span>
+                      R$ {`${
+                        priceRanges.thirtyFourTo38Prices.value?.toString()
+                          .replace(
+                            ".",
+                            ",",
+                          )
+                      }`}/mês por pessoa
+                    </span>
                   </div>
                 </div>
               )}
@@ -374,7 +429,15 @@ export default function SelectedPlanDetails(
                         simulationType === 1 ? "dependentes" : "beneficiários"
                       }`}
                     </span>
-                    <span>R$ XXX,XX/mês por pessoa</span>
+                    <span>
+                      R$ {`${
+                        priceRanges.thirtyNineTo43Prices.value?.toString()
+                          .replace(
+                            ".",
+                            ",",
+                          )
+                      }`}/mês por pessoa
+                    </span>
                   </div>
                 </div>
               )}
@@ -382,8 +445,9 @@ export default function SelectedPlanDetails(
           )}
 
           {(beneficiaries44x48.length >= 1 || beneficiaries49x53.length >= 1 ||
-            beneficiaries54x58.length >= 1) &&
-            whoUseThePlan !== "somente_eu" && (
+            beneficiaries54x58.length >= 1 ||
+            beneficiaries59more.length >= 1) &&
+            (whoUseThePlan !== "somente_eu" || simulationType !== 1) && (
             <div className="flex flex-col gap-8 lg:flex-grow lg:max-w-[30%]">
               {beneficiaries44x48.length >= 1 && (
                 <div className="flex flex-col gap-5">
@@ -417,7 +481,15 @@ export default function SelectedPlanDetails(
                         simulationType === 1 ? "dependentes" : "beneficiários"
                       }`}
                     </span>
-                    <span>R$ XXX,XX/mês por pessoa</span>
+                    <span>
+                      R$ {`${
+                        priceRanges.fortyFourTo48Prices.value?.toString()
+                          .replace(
+                            ".",
+                            ",",
+                          )
+                      }`}/mês por pessoa
+                    </span>
                   </div>
                 </div>
               )}
@@ -454,7 +526,15 @@ export default function SelectedPlanDetails(
                         simulationType === 1 ? "dependentes" : "beneficiários"
                       }`}
                     </span>
-                    <span>R$ XXX,XX/mês por pessoa</span>
+                    <span>
+                      R$ {`${
+                        priceRanges.fortyNineTo53Prices.value?.toString()
+                          .replace(
+                            ".",
+                            ",",
+                          )
+                      }`}/mês por pessoa
+                    </span>
                   </div>
                 </div>
               )}
@@ -491,7 +571,15 @@ export default function SelectedPlanDetails(
                         simulationType === 1 ? "dependentes" : "beneficiários"
                       }`}
                     </span>
-                    <span>R$ XXX,XX/mês por pessoa</span>
+                    <span>
+                      R$ {`${
+                        priceRanges.fiftyFourTo58Prices.value?.toString()
+                          .replace(
+                            ".",
+                            ",",
+                          )
+                      }`}/mês por pessoa
+                    </span>
                   </div>
                 </div>
               )}
@@ -528,7 +616,15 @@ export default function SelectedPlanDetails(
                         simulationType === 1 ? "dependentes" : "beneficiários"
                       }`}
                     </span>
-                    <span>R$ XXX,XX/mês por pessoa</span>
+                    <span>
+                      R$ {`${
+                        priceRanges.fiftyNinePlusPrices.value?.toString()
+                          .replace(
+                            ".",
+                            ",",
+                          )
+                      }`}/mês por pessoa
+                    </span>
                   </div>
                 </div>
               )}

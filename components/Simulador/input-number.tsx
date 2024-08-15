@@ -36,12 +36,15 @@ export default function InputNumber(
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log("Bateu aki");
-    const value = e.target.value;
+    const value = parseInt(e.target.value);
 
     if (inputValueSetter) {
       inputValueSetter(value);
     }
   };
+
+  // Formatar o valor para exibir zero à esquerda apenas se for menor que 10
+  const formattedValue = value < 10 ? value.toString().padStart(2, "0") : value.toString();
 
   return (
     <>
@@ -62,7 +65,7 @@ export default function InputNumber(
             type="number"
             id={id}
             name={name}
-            value={value.toString().padStart(2, "0")}
+            value={formattedValue}
             placeholder={placeholder}
             onChange={handleChange}
             //readOnly
