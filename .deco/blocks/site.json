@@ -13,6 +13,13 @@
   "global": [
     {
       "__resolveType": "htmx/sections/htmx.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Site/UserWay.tsx",
+      "dataAccount": "Nth4EfyEtY"
+    },
+    {
+      "__resolveType": "site/sections/Site/CookiesModal.tsx"
     }
   ],
   "routes": [
@@ -35,10 +42,10 @@
     "__resolveType": "site/loaders/supabase/supabaseConfig.ts",
     "token": {
       "__resolveType": "website/loaders/secret.ts",
-      "encrypted": "c78449fb827b91761e41d8a48f202c21ddf82a95364e18ba8e3023d886815f8e9001624830a6dfe95359ba4e6114c6e481543de559e9a685d5963dbf71a09a4d9506bc3c73b2d983de9481a13aa754a3d0bfbcb4a6dbd8e2e1e951f8e18947df407fdb13eee797084c09dd787c5f153c613a30d02e1c721e2563d1c2ffab2bcd86f63607b10eb5a937502351b5205b4745597861ce4720daf0544285b3c56b9ecc20a607adb5a37c04ccff1d8b03ee5b1730b79f8885c19563e5b5438b1a40fd3a500a2f02b37aff997422404de48b8f54a1e02aa27c12d0ce280124be3293b3",
+      "encrypted": "c78449fb827b91761e41d8a48f202c21ddf82a95364e18ba8e3023d886815f8e9001624830a6dfe95359ba4e6114c6e481543de559e9a685d5963dbf71a09a4d6f87307c0b48204ddd4a18e41c0df6d3bfeca5a9756ab231723bef6c0b48410d75458c4aaa23e82783d4d7d8bc68e9d8e61c3af30fab9fbaef1ccead9beae35aee9750bd5375cd7277e867b8632003d199a8a647290031568a657f279c1461052943da5e6f4c8354a465a387d2fe2531cba8ef8511cced64457b3e89581f8c84d070d45ee3b9aef4d41fe903236c04307e0638d528b34a2427ae58d3b7eae62c",
       "name": "SUPABASEKEY"
     },
-    "url": "https://gftgvayczjherpsxkfpu.supabase.co"
+    "url": "https://dxnwgxrdctepmlqvpnfb.supabase.co"
   },
   "abTesting": {
     "replaces": [],

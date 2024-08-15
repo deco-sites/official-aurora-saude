@@ -24,12 +24,14 @@ export default function BrokersHomeDivisor(
                                         uma forma de cuidado exclusiva e
                                         surpreendente.
                                     </span>
-                                    <button className="w-fit bg-white text-aquagreen2 rounded-[20px] py-2 px-6">
-                                        Quero ser um corretor
-                                    </button>
+                                    <a href="/seja-um-corretor">
+                                        <button className="w-fit bg-white text-aquagreen2 rounded-[20px] py-2 px-6">
+                                            Quero ser um corretor
+                                        </button>
+                                    </a>
                                 </div>
                                 <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:w-2/3 bg-white rounded-[20px] pt-14 pb-20 lg:py-28">
-                                    <span className="text-aquagreen font-sora font-bold text-xl lg:w-2/5 px-10 lg:px-16">
+                                    <span className="text-aquagreen font-sora font-bold text-xl lg:w-max flex-shrink-0 px-10 lg:pl-16 lg:pr-0">
                                         Conheça a rede de<br />{" "}
                                         atendimento com os<br />
                                         melhores prestadores<br />{" "}
@@ -37,7 +39,7 @@ export default function BrokersHomeDivisor(
                                         do seu plano.
                                     </span>
 
-                                    <div className="w-3/5">
+                                    <div className="flex relative h-auto w-full">
                                         <section.Component {...section.props} />
                                     </div>
                                 </div>

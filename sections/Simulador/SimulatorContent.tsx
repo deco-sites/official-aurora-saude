@@ -3,9 +3,11 @@ import Site from "site/apps/site.ts";
 import type { App as A, AppContext as AC } from "deco/mod.ts";
 
 export default function Section(props: ReturnType<typeof loader>) {
+  const { ageRanges, ufs } = props;
+
   return (
     <>
-      <ControlFormSteps />
+      <ControlFormSteps ageRanges={ageRanges} ufs={ufs} />
     </>
   );
 }
@@ -18,16 +20,19 @@ export const loader = async (
   req: Request,
   ctx: AppContext,
 ) => {
+  console.log("Matheus");
   const { supabaseClient } = ctx;
-  const { data, error } = await supabaseClient
-    .from("technologies")
+
+  const ageRanges = await supabaseClient
+    .from("faixa_precos")
+    .select("faixa");
+
+  const ufs = await supabaseClient
+    .from("uf")
     .select("*");
 
-  console.log("RETORNO DO SUPABASE", data);
-  console.log("ERRO:", error);
-
   return {
-    ctx,
-    supabaseClient,
+    ageRanges,
+    ufs,
   };
 };

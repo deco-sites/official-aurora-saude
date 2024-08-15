@@ -40,22 +40,42 @@ export default function NewsPageTemplateIsland(
                                             Compartilhe:
                                         </span>
                                         <div className="flex gap-4">
-                                            <Image
-                                                src={"/Site/facebook-icon-news-page.svg"}
-                                                alt={"Icon"}
-                                            />
-                                            <Image
-                                                src={"/Site/linkedin-icon-news-page.svg"}
-                                                alt={"Icon"}
-                                            />
-                                            <Image
-                                                src={"/Site/whatsapp-icon-news-page.svg"}
-                                                alt={"Icon"}
-                                            />
-                                            <Image
-                                                src={"/Site/telegram-icon-news-page.svg"}
-                                                alt={"Icon"}
-                                            />
+                                            <a
+                                                href="https://www.facebook.com/share_channel/?link=http://localhost:8000/noticias-noticia4"
+                                                target="_blank"
+                                            >
+                                                <Image
+                                                    src={"/Site/facebook-icon-news-page.svg"}
+                                                    alt={"Icon"}
+                                                />
+                                            </a>
+                                            <a
+                                                href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//localhost%3A8000/noticias-noticia4"
+                                                target="_blank"
+                                            >
+                                                <Image
+                                                    src={"/Site/linkedin-icon-news-page.svg"}
+                                                    alt={"Icon"}
+                                                />
+                                            </a>
+                                            <a
+                                                href="https://api.whatsapp.com/send?text=http://localhost:8000/noticias-noticia4"
+                                                target="_blank"
+                                            >
+                                                <Image
+                                                    src={"/Site/whatsapp-icon-news-page.svg"}
+                                                    alt={"Icon"}
+                                                />
+                                            </a>
+                                            <a
+                                                href="https://t.me/share/url?url=http%3A//localhost%3A8000/noticias-noticia4&text="
+                                                target="_blank"
+                                            >
+                                                <Image
+                                                    src={"/Site/telegram-icon-news-page.svg"}
+                                                    alt={"Icon"}
+                                                />
+                                            </a>
                                         </div>
                                     </div>
                                     <Image
@@ -90,22 +110,42 @@ export default function NewsPageTemplateIsland(
                                     Compartilhe:
                                 </span>
                                 <div className="flex gap-4">
-                                    <Image
-                                        src={"/Site/facebook-icon-news-page.svg"}
-                                        alt={"Icon"}
-                                    />
-                                    <Image
-                                        src={"/Site/linkedin-icon-news-page.svg"}
-                                        alt={"Icon"}
-                                    />
-                                    <Image
-                                        src={"/Site/whatsapp-icon-news-page.svg"}
-                                        alt={"Icon"}
-                                    />
-                                    <Image
-                                        src={"/Site/telegram-icon-news-page.svg"}
-                                        alt={"Icon"}
-                                    />
+                                    <a
+                                        href="https://www.facebook.com/share_channel/?link=http://localhost:8000/noticias-noticia4"
+                                        target="_blank"
+                                    >
+                                        <Image
+                                            src={"/Site/facebook-icon-news-page.svg"}
+                                            alt={"Icon"}
+                                        />
+                                    </a>
+                                    <a
+                                        href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//localhost%3A8000/noticias-noticia4"
+                                        target="_blank"
+                                    >
+                                        <Image
+                                            src={"/Site/linkedin-icon-news-page.svg"}
+                                            alt={"Icon"}
+                                        />
+                                    </a>
+                                    <a
+                                        href="https://api.whatsapp.com/send?text=http://localhost:8000/noticias-noticia4"
+                                        target="_blank"
+                                    >
+                                        <Image
+                                            src={"/Site/whatsapp-icon-news-page.svg"}
+                                            alt={"Icon"}
+                                        />
+                                    </a>
+                                    <a
+                                        href="https://t.me/share/url?url=http%3A//localhost%3A8000/noticias-noticia4&text="
+                                        target="_blank"
+                                    >
+                                        <Image
+                                            src={"/Site/telegram-icon-news-page.svg"}
+                                            alt={"Icon"}
+                                        />
+                                    </a>
                                 </div>
                             </div>
 

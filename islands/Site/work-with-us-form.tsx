@@ -9,6 +9,8 @@ import Image from "apps/website/components/Image.tsx";
 import { invoke } from "../../runtime.ts";
 import { signal } from "@preact/signals";
 import SendingConfirmation from "site/components/Site/sending-confirmation.tsx";
+import { PhoneMask } from "site/helpers/Simulador/phoneMask.ts";
+import { cepMask } from "site/helpers/Simulador/cepMask.ts";
 
 export interface WorkWithUsIslandProps {
     recipientsEmail: string;
@@ -102,6 +104,7 @@ export default function WorkWithUsIsland(
     const handleFileChange = (e) => {
         e.preventDefault();
         const file = e.target.files[0];
+
         if (file) {
             const reader = new FileReader();
             reader.readAsDataURL(file);
@@ -174,6 +177,8 @@ export default function WorkWithUsIsland(
                                 label={"Telefone"}
                                 value={tel}
                                 inputValueSetter={setTel}
+                                mask={PhoneMask}
+                                maxLength={16}
                                 placeholder={telPlaceholder}
                                 wfull
                             />
@@ -186,6 +191,8 @@ export default function WorkWithUsIsland(
                                 label={"Telefone"}
                                 value={tel}
                                 inputValueSetter={setTel}
+                                mask={PhoneMask}
+                                maxLength={16}
                                 placeholder={telPlaceholder}
                                 wfull
                             />
@@ -228,6 +235,8 @@ export default function WorkWithUsIsland(
                                 label={"CEP"}
                                 value={cep}
                                 inputValueSetter={setCep}
+                                mask={cepMask}
+                                maxLength={10}
                                 placeholder={cepPlaceholder}
                                 wfull
                             />
@@ -256,7 +265,7 @@ export default function WorkWithUsIsland(
                             />
                         </div>
                         <div className="flex pt-10 lg:pt-0 flex-col lg:flex-row gap-4 lg:gap-0 justify-between w-full">
-                            <div>
+                            <div className="flex flex-col items-center">
                                 <input
                                     type="file"
                                     ref={fileInputRef}
@@ -274,6 +283,11 @@ export default function WorkWithUsIsland(
                                     />
                                     Envie o seu currículo
                                 </button>
+                                {selectedFile && (
+                                    <span className="text-xs text-red">
+                                        {selectedFile.name}
+                                    </span>
+                                )}
                             </div>
                             <button
                                 type="submit"

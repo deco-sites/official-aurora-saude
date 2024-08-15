@@ -9,6 +9,7 @@ export interface IplanInfos {
   coverage: string;
   coparticipation: string;
   accommodation: string;
+  price: string;
   color: keyof typeof CARD_COLORS;
   onlybutton: boolean;
 }
@@ -27,6 +28,7 @@ export default function PlanCard({
   coverage,
   coparticipation,
   accommodation,
+  price,
   color,
   onlybutton,
   scrollToCard,
@@ -67,7 +69,7 @@ export default function PlanCard({
         </span>
         <span
           className={`text-sm flex-1 ${
-            color != "yellow" ? "text-white" : "text-black"
+            color != "yellow" ? "text-white" : "text-black text-opacity-45"
           }`}
         >
           {description}
@@ -122,7 +124,7 @@ export default function PlanCard({
             <span className="text-[#D9D9D9] text-sm">A partir de</span>
             <div className="flex justify-between">
               <span className="text-[#FA7651] text-2xl font-semibold font-sora">
-                R$ XXX,XX
+                R$ {price}
               </span>
 
               <button

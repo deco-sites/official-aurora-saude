@@ -85,7 +85,7 @@ export default function CareJourneyIsland({ device }: Device) {
     return (
         <div className="w-full py-20 bg-yellow overflow-x-hidden">
             <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-28 lg:gap-36">
-                <div className="flex flex-col flex-1 px-16 font-sora gap-10 lg:w-1/3">
+                <div className="flex flex-col flex-1 px-16 lg:px-0 font-sora gap-10 lg:w-1/3">
                     <div className="flex flex-col gap-5">
                         <span className="text-pink1 text-4xl font-bold">
                             Jornada de <br />Cuidado:
@@ -94,13 +94,15 @@ export default function CareJourneyIsland({ device }: Device) {
                             acompanhamento de <br /> saúde individualizado.
                         </span>
                     </div>
-                    <button className="flex items-center text-darkPurple gap-1">
-                        Conheça mais
-                        <Image
-                            src={"/Site/arrow-right-purple.svg"}
-                            alt="icon"
-                        />
-                    </button>
+                    <a href="/jornada-de-cuidado" className="w-fit">
+                        <button className="flex items-center text-darkPurple gap-1">
+                            Conheça mais
+                            <Image
+                                src={"/Site/arrow-right-purple.svg"}
+                                alt="icon"
+                            />
+                        </button>
+                    </a>
                 </div>
                 <div className="pl-8 lg:pl-0 flex gap-5 lg:w-2/3">
                     <div className="flex">

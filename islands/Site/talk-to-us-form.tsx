@@ -7,6 +7,7 @@ import { useEffect, useState } from "preact/hooks";
 import { invoke } from "../../runtime.ts";
 import { signal } from "@preact/signals";
 import SendingConfirmation from "site/components/Site/sending-confirmation.tsx";
+import { PhoneMask } from "site/helpers/Simulador/phoneMask.ts";
 
 export interface RequestQuoteIslandProps {
     recipientsEmail: string;
@@ -117,6 +118,8 @@ export default function TalkToUsIsland(
                             label={"Telefone"}
                             value={tel}
                             inputValueSetter={setTel}
+                            mask={PhoneMask}
+                            maxLength={16}
                             placeholder={telPlaceholder}
                             wfull
                         />
@@ -129,6 +132,8 @@ export default function TalkToUsIsland(
                                 label={"Telefone"}
                                 value={tel}
                                 inputValueSetter={setTel}
+                                mask={PhoneMask}
+                                maxLength={16}
                                 placeholder={telPlaceholder}
                                 wfull
                             />

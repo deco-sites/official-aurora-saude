@@ -1,9 +1,9 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import OptionButton from "../../islands/Simulador/first-step-opt-btn.tsx";
 import FirstStepImage from "../../islands/Simulador/first-step-img.tsx";
-import NextStepBtn from "../../islands/Simulador/next-step-btn.tsx";
 import { options } from "../../helpers/Simulador/form-step1-menu-options.ts";
 import { handleNextStepFirstStep } from "../../sdk/Simulador/FirstStep/checkFirstStep.ts";
+import NextStepBtn from "site/islands/Simulador/next-step-btn.tsx";
 
 export interface CTA {
   text: string;

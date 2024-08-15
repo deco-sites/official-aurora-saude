@@ -1,5 +1,6 @@
 import Image from "apps/website/components/Image.tsx";
 import { useUI } from "../../sdk/Simulador/useUI.ts";
+import { previousActiveOption } from "site/islands/Simulador/next-step-btn.tsx";
 
 export default function OptionButton({ op }) {
   const {
@@ -22,6 +23,14 @@ export default function OptionButton({ op }) {
           selectedYellowText.value = op.yellowText;
           selectedNormalText.value = op.normaltext;
           selectedImage.value = op.image;
+
+          {
+            /*
+          //O if abaixo é responsável por resetar os campos do formulário quando altero a opção escolhida na primeira tela
+          if (previousActiveOption.value !== activeOption.value) {
+            console.log("Aqui vou resetar os campos do formulário");
+          }*/
+          }
         }}
         key={op.id}
       >

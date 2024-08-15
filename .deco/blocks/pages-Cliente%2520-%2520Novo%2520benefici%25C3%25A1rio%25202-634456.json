@@ -1,6 +1,6 @@
 {
-  "name": "Cliente - Novo beneficiário 2",
-  "path": "/sou-novo-beneficiario2",
+  "name": "Cliente - Jornada de Cuidado",
+  "path": "/jornada-de-cuidado",
   "sections": [
     {
       "__resolveType": "site/sections/Site/SingleColorfullWrapper.tsx",

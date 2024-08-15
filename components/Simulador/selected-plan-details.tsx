@@ -31,34 +31,34 @@ export default function SelectedPlanDetails(
 ) {
   const beneficiaries = beneficiariesArr.filter((item) => item.range != "");
   const beneficiaries0x18 = beneficiaries.filter((item) =>
-    item.range === "0-18"
+    item.range === "0 a 18 anos"
   );
   const beneficiaries19x23 = beneficiaries.filter((item) =>
-    item.range === "19-23"
+    item.range === "19 a 23 anos"
   );
   const beneficiaries24x28 = beneficiaries.filter((item) =>
-    item.range === "24-28"
+    item.range === "24 a 28 anos"
   );
   const beneficiaries29x33 = beneficiaries.filter((item) =>
-    item.range === "29-33"
+    item.range === "29 a 33 anos"
   );
   const beneficiaries34x38 = beneficiaries.filter((item) =>
-    item.range === "34-38"
+    item.range === "34 a 38 anos"
   );
   const beneficiaries39x43 = beneficiaries.filter((item) =>
-    item.range === "39-43"
+    item.range === "39 a 43 anos"
   );
   const beneficiaries44x48 = beneficiaries.filter((item) =>
-    item.range === "44-48"
+    item.range === "44 a 48 anos"
   );
   const beneficiaries49x53 = beneficiaries.filter((item) =>
-    item.range === "49-53"
+    item.range === "49 a 53 anos"
   );
   const beneficiaries54x58 = beneficiaries.filter((item) =>
-    item.range === "54-58"
+    item.range === "54 a 58 anos"
   );
   const beneficiaries59more = beneficiaries.filter((item) =>
-    item.range === "59-+"
+    item.range === "59 anos ou mais"
   );
 
   return (

@@ -5,15 +5,19 @@ const { activeStep, changeStep } = useFormSteps();
 
 const {
   nameValue,
+  cpfValue,
   emailValue,
   telValue,
+  ufValue,
   cityValue,
   ageRangeValue,
   alreadyHavePlanValue,
 
   nameError,
+  cpfError,
   emailError,
   telError,
+  ufError,
   cityError,
   ageRangeError,
   alreadyHavePlanError,
@@ -24,8 +28,10 @@ export const CheckFields = () => {
   //activeOption.value - É a opção escolhida no primeiro step
 
   console.log("Nome", nameValue.value);
+  console.log("CPF:", cpfValue.value);
   console.log("Email", emailValue.value);
   console.log("Tel", telValue.value);
+  console.log("UF", ufValue.value);
   console.log("Cidade", cityValue.value);
   console.log("Faixa Etária", ageRangeValue.value);
   console.log("Possui plano", alreadyHavePlanValue.value);
@@ -36,6 +42,8 @@ export const CheckFields = () => {
     ? nameError.value = true
     : nameError.value = false;
 
+  cpfValue.value.trim() === "" ? cpfError.value = true : cpfError.value = false;
+
   emailValue.value.trim() === ""
     ? emailError.value = true
     : emailError.value = false;
@@ -43,7 +51,8 @@ export const CheckFields = () => {
   telValue.value.trim() === "" ? telError.value = true : telError.value = false;
 
   if (
-    nameError.value === false && emailError.value === false &&
+    nameError.value === false && cpfError.value === false &&
+    emailError.value === false &&
     telError.value === false
   ) {
     changeStep(activeStep.value, "increase");
@@ -63,6 +72,10 @@ export const handleNextStepSecondStepOp1 = () => {
       ? nameError.value = true
       : nameError.value = false;
 
+    cpfValue.value.trim() === ""
+      ? cpfError.value = true
+      : cpfError.value = false;
+
     emailValue.value.trim() === ""
       ? emailError.value = true
       : emailError.value = false;
@@ -70,6 +83,8 @@ export const handleNextStepSecondStepOp1 = () => {
     telValue.value.trim() === ""
       ? telError.value = true
       : telError.value = false;
+
+    ufValue.value.trim() === "" ? ufError.value = true : ufError.value = false;
 
     cityValue.value.trim() === ""
       ? cityError.value = true
@@ -85,8 +100,10 @@ export const handleNextStepSecondStepOp1 = () => {
 
     // Se todos os campos do passo 2 estão preenchidos, avance para o próximo passo
     if (
-      nameError.value === false && emailError.value === false &&
-      telError.value === false && cityError.value === false &&
+      nameError.value === false && cpfError.value === false &&
+      emailError.value === false &&
+      telError.value === false && ufError.value === false &&
+      cityError.value === false &&
       ageRangeError.value === false && alreadyHavePlanError.value === false
     ) {
       changeStep(activeStep.value, "increase");

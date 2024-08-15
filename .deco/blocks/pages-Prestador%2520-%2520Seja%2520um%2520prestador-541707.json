@@ -22,9 +22,9 @@
             "alt": "Banner"
           },
           "desktopTitle": "Faça parte do plano de<br /> saúde que está sempre<br /> junto.",
-          "textColor": "Branco",
+          "textColor": "Laranja",
           "mobileTitle": "Faça parte<br /> do plano de<br /> saúde que está<br /> sempre junto.",
-          "titleFontSize": "26",
+          "titleFontSize": "24",
           "titleFontWeight": "semi-bold"
         }
       ]

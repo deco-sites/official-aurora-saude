@@ -47,18 +47,17 @@
         "images": [
           {
             "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/4da358c1-2204-40ff-a5c3-4c5d9c875da3",
-            "alt": "Banner 1"
+            "alt": "Banner1"
           },
           {
             "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/b8e94627-c284-43a7-89e8-e6f2b8f0f306",
-            "alt": "Banner 2"
+            "alt": "Banner"
           },
           {
             "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/83f0edcf-eb5a-4cab-82bd-150ee75efe16",
             "alt": "Banner3"
           }
-        ],
-        "interval": 50
+        ]
       }
     },
     {
@@ -194,7 +193,7 @@
         },
         {
           "questionTitle": "Para comercializar como corretor é obrigatório estar cadastrado em corretoras?",
-          "questionText": "Resposta"
+          "questionText": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
         },
         {
           "questionTitle": "Para comercializar contratos da Aurora Saúde é obrigatório estar habilitado na SUSEP?",

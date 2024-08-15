@@ -7,11 +7,21 @@ export interface InputProps {
   value?: string;
   inputValueSetter: (value: string) => void;
   mask?: (value: string) => string;
+  maxLength?: number;
 }
 
 export default function SiteInputText(
-  { id, name, label, placeholder, wfull, value, inputValueSetter, mask }:
-    InputProps,
+  {
+    id,
+    name,
+    label,
+    placeholder,
+    wfull,
+    value,
+    inputValueSetter,
+    mask,
+    maxLength,
+  }: InputProps,
 ) {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let myValue = e.target.value;
@@ -35,6 +45,7 @@ export default function SiteInputText(
         value={mask ? mask(value) : value}
         placeholder={placeholder}
         onInput={handleChange}
+        maxLength={maxLength}
       />
     </div>
   );

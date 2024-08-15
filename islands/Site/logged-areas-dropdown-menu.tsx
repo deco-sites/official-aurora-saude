@@ -53,16 +53,28 @@ export default function LoggedAreasDropdownMenu({
                     option.id === 4 ? "text-pink4" : "text-white"
                 }`}
             >
-                <a href="#">
+                <a
+                    href="https://aurorasaude.plataforma-beneficiario.mosiaomnichannel.com.br/#/"
+                    target="_blank"
+                >
                     <span>Sou Cliente</span>
                 </a>
-                <a href="#">
+                <a
+                    href="https://6167prd-plano.cloudmv.com.br/mvsaudeweb/#/login/empresa"
+                    target="_blank"
+                >
                     <span>Sou Empresa</span>
                 </a>
-                <a href="#">
+                <a
+                    href="https://souaurorasaude.planium.io/web/login/entrar"
+                    target="_blank"
+                >
                     <span>Sou Corretor</span>
                 </a>
-                <a href="#">
+                <a
+                    href="https://6167prd-plano.cloudmv.com.br/mvautorizadorguias/"
+                    target="_blank"
+                >
                     <span>Sou Prestador</span>
                 </a>
             </div>

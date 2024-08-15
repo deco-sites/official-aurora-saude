@@ -38,7 +38,9 @@ export default function SearchButtonContainer({ option, expandedInput }) {
             {!expandedInput.value && (
                 <div
                     className={`flex items-center text-center whitespace-nowrap ${
-                        option.id === 3 ? "justify-between flex-grow" : "gap-14"
+                        option.id === 3
+                            ? "gap-8 justify-end flex-grow"
+                            : "gap-14"
                     }`}
                 >
                     {option?.menuItems.map((item) => (

@@ -8,6 +8,9 @@ import { yesOrNoOptions } from "site/helpers/Site/yes-or-no.ts";
 import { invoke } from "../../runtime.ts";
 import { signal } from "@preact/signals";
 import SendingConfirmation from "site/components/Site/sending-confirmation.tsx";
+import { PhoneMask } from "site/helpers/Simulador/phoneMask.ts";
+import { cepMask } from "site/helpers/Simulador/cepMask.ts";
+import { cnpjMask } from "site/helpers/Simulador/cnpjMask.ts";
 
 export interface RequestQuoteIslandProps {
     recipientsEmail: string;
@@ -69,11 +72,11 @@ export default function BeABrokerFormIsland(
                 setbrokerNamePlaceholder("Escreva aqui");
                 setresponsibleNamePlaceholder("Escreva aqui");
                 setEmailPlaceholder("seuemail@email.com");
-                setCnpjPlaceholder("xx. xxx. xxx/xxxx-xx");
-                setTelPlaceholder("Telefone");
-                setUFPlaceholder("UF");
-                setCityPlaceholder("Cidade");
-                setAddressPlaceholder("Endereço");
+                setCnpjPlaceholder("xx.xxx.xxx/xxxx-xx");
+                setTelPlaceholder("(xx) x xxxx xxxx");
+                setUFPlaceholder("Selecione");
+                setCityPlaceholder("Selecione");
+                setAddressPlaceholder("Rua, Número e Bairro");
                 setCepPlaceholder("xx.xxx-xxx");
                 setemployeesQtyPlaceholder("Escreva aqui");
                 setcustomerBasePlaceholder("Não");
@@ -149,8 +152,8 @@ export default function BeABrokerFormIsland(
                                 wfull
                             />
                             <SiteInputText
-                                id={"protocol"}
-                                name={"protocol"}
+                                id={"responsibleName"}
+                                name={"responsibleName"}
                                 label={"Nome do Responsável"}
                                 value={responsibleName}
                                 inputValueSetter={setResponsibleName}
@@ -173,6 +176,8 @@ export default function BeABrokerFormIsland(
                                     label={"CNPJ"}
                                     value={cnpj}
                                     inputValueSetter={setCNPJ}
+                                    mask={cnpjMask}
+                                    maxLength={18}
                                     placeholder={cnpjPlaceholder}
                                     wfull
                                 />
@@ -184,6 +189,8 @@ export default function BeABrokerFormIsland(
                                     label={"Telefone"}
                                     value={tel}
                                     inputValueSetter={setTel}
+                                    mask={PhoneMask}
+                                    maxLength={16}
                                     placeholder={telPlaceholder}
                                 />
 
@@ -203,6 +210,8 @@ export default function BeABrokerFormIsland(
                                         label={"CEP"}
                                         value={cep}
                                         inputValueSetter={setCep}
+                                        mask={cepMask}
+                                        maxLength={10}
                                         placeholder={cepPlaceholder}
                                         wfull
                                     />
@@ -246,6 +255,8 @@ export default function BeABrokerFormIsland(
                                     label={"CEP"}
                                     value={cep}
                                     inputValueSetter={setCep}
+                                    mask={cepMask}
+                                    maxLength={10}
                                     placeholder={cepPlaceholder}
                                     wfull
                                 />

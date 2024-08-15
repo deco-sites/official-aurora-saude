@@ -45,7 +45,8 @@ export default function Section({ photo }: IPhoto) {
                                         bgColor={"pink"}
                                         textColor={"yellow"}
                                         text={"Acesse o seu perfil"}
-                                        link={"#"}
+                                        link={"https://aurorasaude.plataforma-beneficiario.mosiaomnichannel.com.br/"}
+                                        targetBlank
                                     />
                                 </div>
                             </div>

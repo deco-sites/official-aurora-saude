@@ -13,6 +13,8 @@ export default function Footer() {
                                 alt={""}
                             />
                             <div className="flex gap-5">
+                                {
+                                    /*
                                 <a href="#">
                                     <Icon
                                         class="h-6 w-6"
@@ -20,21 +22,32 @@ export default function Footer() {
                                         size={24}
                                     />
                                 </a>
-                                <a href="#">
+                                */
+                                }
+                                <a
+                                    href="https://www.instagram.com/souaurorasaude"
+                                    target="_blank"
+                                >
                                     <Icon
                                         class="h-6 w-6"
                                         id="InstagramFooterIcon"
                                         size={24}
                                     />
                                 </a>
-                                <a href="#">
+                                <a
+                                    href="https://www.linkedin.com/company/souarorasaude/"
+                                    target="_blank"
+                                >
                                     <Icon
                                         class="h-6 w-6"
                                         id="LinkedinFooterIcon"
                                         size={24}
                                     />
                                 </a>
-                                <a href="#">
+                                <a
+                                    href="https://api.whatsapp.com/send?phone=553140002105"
+                                    target="_blank"
+                                >
                                     <Icon
                                         class="hidden lg:flex h-6 w-6"
                                         id="WhatsappFooterIcon"
@@ -68,7 +81,10 @@ export default function Footer() {
                                         <a href="/noticias" className="w-fit">
                                             Notícias
                                         </a>
-                                        <a href="/quem-somos" className="w-fit">
+                                        <a
+                                            href="/solicitar-cotacao"
+                                            className="w-fit"
+                                        >
                                             Cotação
                                         </a>
                                     </div>

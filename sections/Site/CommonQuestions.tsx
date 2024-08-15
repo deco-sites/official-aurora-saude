@@ -34,7 +34,7 @@ export default function CommonQuestions(
         <>
             <div className="flex justify-center px-10 lg:px-0">
                 <div className="lg:max-w-[1400px] w-full pt-12 lg:pb-16 flex flex-col pb-16 lg:py-32">
-                    <div className="mb-14 flex flex-col px-8 gap-5 lg:gap-0 lg:flex-row lg:items-center justify-between lg:px-14 lg:pb-16 lg:border-b border-b-black border-opacity-15 ">
+                    <div className="mb-14 flex flex-col px-8 gap-5 lg:gap-0 lg:flex-row lg:items-center justify-between lg:px-64 lg:pb-16 lg:border-b border-b-black border-opacity-15 ">
                         <span className="font-sora text-2xl text-orange1 font-bold">
                             Perguntas <br /> Frequentes
                         </span>

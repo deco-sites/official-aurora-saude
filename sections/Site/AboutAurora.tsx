@@ -47,18 +47,18 @@ export default function AboutAurora() {
                         </span>
                     </div>
                     <div className="flex flex-col lg:flex-row justify-center items-center font-sora text-white text-xl text-center font-bold">
-                        <div className="flex justify-center items-center bg-pink1 w-[276px] h-[276px] rounded-full">
+                        <div className="flex justify-center items-center bg-pink1 w-[276px] h-[276px] rounded-full transform transition-transform duration-300 hover:scale-110">
                             <span>
                                 Clientes
                             </span>
                         </div>
-                        <div className="flex justify-center items-center bg-aquagreen w-[276px] h-[276px] rounded-full -mt-10 lg:mt-0 lg:-ml-10">
+                        <div className="flex justify-center items-center bg-aquagreen w-[276px] h-[276px] rounded-full -mt-10 lg:mt-0 lg:-ml-10 transform transition-transform duration-300 hover:scale-110">
                             <span>
                                 Prestadores<br /> de Serviços<br />{" "}
                                 Médico-<br />hospitalares
                             </span>
                         </div>
-                        <div className="flex justify-center items-center bg-purple w-[276px] h-[276px] rounded-full -mt-10 lg:mt-0 lg:-ml-10">
+                        <div className="flex justify-center items-center bg-purple w-[276px] h-[276px] rounded-full -mt-10 lg:mt-0 lg:-ml-10 transform transition-transform duration-300 hover:scale-110">
                             <span>
                                 Canal de vendas
                             </span>
