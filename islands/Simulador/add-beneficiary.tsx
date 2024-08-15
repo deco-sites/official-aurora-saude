@@ -5,8 +5,10 @@ import { useStepThreeInputValues } from "../../sdk/Simulador/ThirdStep/useStepTh
 import { handleArrDataChange } from "../../helpers/Simulador/handleDataChange.ts";
 import { checkSingleSelect } from "../../sdk/Simulador/ThirdStep/checkStepThreeFields.ts";
 import Image from "apps/website/components/Image.tsx";
+import { useLoaderInfos } from "site/sdk/Simulador/useLoaderInfos.ts";
 
 export default function AddBeneficiary() {
+  const { ageRangesSignal } = useLoaderInfos();
   const { thirdStepSignal, idsWithEmptyRange, lessThirtyLives } =
     useStepThreeInputValues();
 
@@ -58,7 +60,7 @@ export default function AddBeneficiary() {
                 id={`agerange-${item.id}`}
                 name={`agerange-${item.id}`}
                 label={"Faixa Etária:"}
-                options={agerangeoptions}
+                options={ageRangesSignal.value}
                 placeholder={"Selecione"}
                 value={item.range}
                 inputValueSetter={(value) => {

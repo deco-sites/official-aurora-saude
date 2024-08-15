@@ -11,13 +11,23 @@ const saveLead = async (
 ): Promise<void> => {
     const { supabaseClient } = ctx;
 
-    const name = "Lucca";
-
     try {
         const { data, error } = await supabaseClient
-            .from("technologies")
+            .from("leads")
             .insert([
-                { name: name, image: "teste" },
+                {
+                    nome_razao_social: "Erick Souza",
+                    cpf_cnpj: "15706200350",
+                    cidade: "Magé",
+                    estado: "RJ",
+                    telefone: "21925494547",
+                    email: "erick.nascimento@simbioseventures.com",
+                    cd_plano: 1,
+                    somente_titular: true,
+                    possui_plano: false,
+                    cd_tab_preco: 4,
+                    outra_pessoa: false,
+                },
             ])
             .select();
     } catch (error) {

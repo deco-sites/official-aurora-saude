@@ -12,11 +12,17 @@ import { useEffect, useRef, useState } from "preact/hooks";
 import { useSelectPlanButtons } from "../../sdk/Simulador/useSelectPlanButtons.ts";
 import PlanMobileButton from "../../islands/Simulador/PlanMobileButton.tsx";
 import FormTitleH2 from "../../components/Simulador/form-title-h2.tsx";
-//import { CnpjMask } from "../../helpers/Simulador/cnpjMask.ts";
+import { cnpjMask } from "../../helpers/Simulador/cnpjMask.ts";
 import { plans } from "../../helpers/Simulador/plansCards.ts";
 import PreviousStepBtn from "../../islands/Simulador/previous-step-btn.tsx";
 import { whoWillUseThePlan } from "../../helpers/Simulador/whoWillUseThePlan.ts";
 import Image from "apps/website/components/Image.tsx";
+import { nameMask } from "site/helpers/Simulador/nameMask.ts";
+import { PhoneMask } from "site/helpers/Simulador/phoneMask.ts";
+import { useFourthStepInputValues } from "site/sdk/Simulador/FourthStep/useFourthStepInputValues.ts";
+import { useLoaderInfos } from "site/sdk/Simulador/useLoaderInfos.ts";
+import { invoke } from "../../runtime.ts";
+import { titleCase } from "site/helpers/titleCase.ts";
 
 export default function FormStepTwoforFourthOption() {
   const [socialReasonPlaceholder, setSocialReasonPlaceholder] = useState(
@@ -27,7 +33,45 @@ export default function FormStepTwoforFourthOption() {
   const [emailPlaceholder, setEmailPlaceholder] = useState("Escreva aqui");
   const [telPlaceholder, setTelPlaceholder] = useState("Selecione");
   const [lifesQtyPlaceholder, setLifesQtyPlaceholder] = useState("Selecione");
+  const [ufPlaceholder, setUFPlaceholder] = useState("Selecione");
   const [cityPlaceholder, setCityPlaceholder] = useState("Selecione");
+
+  const { ufsSignal } = useLoaderInfos();
+
+  const [cities, setCities] = useState([]);
+
+  const handleCitiesDataChange = (newCities) => {
+    setCities(newCities);
+  };
+
+  const changeCitiesData = (fetchedCities, callback) => {
+    const transformedCitiesData = fetchedCities.data.map((item) => {
+      let value = item.descricao.replace(" ", "-");
+      let text = titleCase(item.descricao);
+      return { value, text };
+    });
+    callback(transformedCitiesData);
+  };
+
+  const {
+    socialReasonValue4,
+    cnpjValue4,
+    nameValue4,
+    emailValue4,
+    telValue4,
+    lifesqtyValue4,
+    ufValue4,
+    cityValue4,
+
+    socialReasonError4,
+    cnpjError4,
+    nameError4,
+    emailError4,
+    telError4,
+    lifesqtyError4,
+    ufError4,
+    cityError4,
+  } = useFourthStepInputValues();
 
   useEffect(() => {
     const updateNamePlaceholder = () => {
@@ -38,6 +82,7 @@ export default function FormStepTwoforFourthOption() {
         setEmailPlaceholder("E-mail");
         setTelPlaceholder("Telefone/Whatsapp");
         setLifesQtyPlaceholder("Quantidade de Vidas");
+        setUFPlaceholder("UF");
         setCityPlaceholder("Cidade");
       } else {
         setSocialReasonPlaceholder("Escreva aqui ");
@@ -46,14 +91,16 @@ export default function FormStepTwoforFourthOption() {
         setEmailPlaceholder("Escreva aqui");
         setTelPlaceholder("Escreva aqui");
         setLifesQtyPlaceholder("Escreva aqui");
+        setUFPlaceholder("Selecione");
         setCityPlaceholder("Selecione");
       }
     };
 
     updateNamePlaceholder(); // Set initial placeholder based on screen size
-    window.addEventListener("resize", updateNamePlaceholder);
+    globalThis.addEventListener("resize", updateNamePlaceholder);
 
-    return () => window.removeEventListener("resize", updateNamePlaceholder);
+    return () =>
+      globalThis.removeEventListener("resize", updateNamePlaceholder);
   }, []);
 
   const { activeStep, changeStep } = useFormSteps();
@@ -199,6 +246,9 @@ export default function FormStepTwoforFourthOption() {
                     name={"cnpj"}
                     label={"CNPJ"}
                     placeholder={cnpjPlaceholder}
+                    inputValueSetter={(value) => cnpjValue4.value = value}
+                    mask={cnpjMask}
+                    maxLength={18}
                     wfull
                   />
                 </div>
@@ -210,6 +260,9 @@ export default function FormStepTwoforFourthOption() {
                     name={"name"}
                     label={"Nome Completo"}
                     placeholder={namePlaceholder}
+                    value={nameValue4.value}
+                    inputValueSetter={(value) => nameValue4.value = value}
+                    mask={nameMask}
                     wfull
                   />
                 </div>
@@ -230,6 +283,10 @@ export default function FormStepTwoforFourthOption() {
                     name={"tel"}
                     label={"Telefone/WhatsApp"}
                     placeholder={telPlaceholder}
+                    value={telValue4.value}
+                    inputValueSetter={(value) => telValue4.value = value}
+                    mask={PhoneMask}
+                    maxLength={16}
                     wfull
                   />
                 </div>
@@ -243,15 +300,46 @@ export default function FormStepTwoforFourthOption() {
                   />
                 </div>
               </div>
-              <div className="lg:w-[30%]">
-                <InputSelect
-                  id={"city"}
-                  name={"city"}
-                  label={"Cidade"}
-                  placeholder={cityPlaceholder}
-                  options={citiesOptions}
-                  wfull
-                />
+              <div className="flex flex-col lg:flex-row gap-8">
+                <div className="relative flex gap-2 items-center">
+                  <InputSelect
+                    id={"UF"}
+                    name={"UF"}
+                    label={"UF"}
+                    options={ufsSignal.value}
+                    placeholder={ufPlaceholder}
+                    value={ufValue4.value}
+                    inputValueSetter={async (value) => {
+                      const fetchedCities = await invoke.site.actions.getCities(
+                        {
+                          selectedUF: value,
+                        },
+                      );
+                      changeCitiesData(fetchedCities, handleCitiesDataChange);
+
+                      ufValue4.value = value;
+                    }}
+                  />
+                  {ufError4.value && (
+                    <Image
+                      src={"/Simulador/error-circle-icon.png"}
+                      alt="Error Icon"
+                      className="h-5 w-5 absolute top-50 right-7 lg:left-[615px]"
+                      width=""
+                      height=""
+                    />
+                  )}
+                </div>
+                <div className="lg:w-[30%]">
+                  <InputSelect
+                    id={"city"}
+                    name={"city"}
+                    label={"Cidade"}
+                    placeholder={cityPlaceholder}
+                    options={cities}
+                    wfull
+                  />
+                </div>
               </div>
 
               <div className="flex gap-4 items-center my-8">

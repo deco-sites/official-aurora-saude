@@ -45,7 +45,6 @@ export interface Props {
     hasButton?: boolean;
     buttonColor?: "Rosa";
     buttonText?: string;
-    buttonLink?: string;
 }
 
 const textColors = {
@@ -85,7 +84,6 @@ interface BannerSectionProps {
     hasButton: boolean;
     buttonColor: keyof typeof buttonColors;
     buttonText: string;
-    buttonLink: string;
     device: Device;
 }
 
@@ -104,7 +102,6 @@ export default function BannerSection(
         hasButton,
         buttonColor,
         buttonText,
-        buttonLink,
         device,
     }: BannerSectionProps,
 ) {
@@ -139,7 +136,7 @@ export default function BannerSection(
                             />
                         )}
                         {hasButton && (
-                            <a href={buttonLink}>
+                            <a href="/materiais-de-apoio">
                                 <button
                                     className={`text-white py-2 px-8 rounded-full ${
                                         buttonColors[buttonColor]
@@ -156,6 +153,9 @@ export default function BannerSection(
                         alt={alt}
                         width={mobile.width ?? 350}
                         height={mobile.height ?? 350}
+                        preload
+                        loading="eager"
+                        fetchPriority="high"
                         decoding="async"
                     />
                 </>
@@ -190,7 +190,7 @@ export default function BannerSection(
                             )}
                         </div>
                         {hasButton && (
-                            <a href={buttonLink}>
+                            <a href="/materiais-de-apoio">
                                 <button
                                     className={`text-white py-3 px-16 rounded-full ${
                                         buttonColors[buttonColor]
@@ -207,6 +207,9 @@ export default function BannerSection(
                         alt={alt}
                         width={desktop.width ?? 1436}
                         height={desktop.height ?? 335}
+                        preload
+                        loading="eager"
+                        fetchPriority="high"
                         decoding="async"
                     />
                 </>

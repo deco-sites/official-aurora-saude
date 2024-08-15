@@ -71,13 +71,13 @@ function BannerItem(
             {device !== "desktop" && (
                 <Image
                     class="object-cover w-full h-full"
-                    loading={lcp ? "eager" : "lazy"}
                     src={mobile.image}
                     alt={alt}
                     width={mobile.width ?? 360}
                     height={mobile.height ?? 600}
-                    fetchPriority={lcp ? "high" : "low"}
-                    preload={lcp ? true : false}
+                    preload
+                    loading="eager"
+                    fetchPriority="high"
                     decoding={"async"}
                 />
             )}

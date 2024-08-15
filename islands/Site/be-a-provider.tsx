@@ -6,6 +6,9 @@ import { useEffect, useState } from "preact/hooks";
 import { invoke } from "../../runtime.ts";
 import { signal } from "@preact/signals";
 import SendingConfirmation from "site/components/Site/sending-confirmation.tsx";
+import { cnpjMask } from "site/helpers/Simulador/cnpjMask.ts";
+import { PhoneMask } from "site/helpers/Simulador/phoneMask.ts";
+import { cepMask } from "site/helpers/Simulador/cepMask.ts";
 
 export interface RequestQuoteIslandProps {
     recipientsEmail: string;
@@ -169,6 +172,8 @@ export default function BeAProviderFormIsland(
                                 label={"CNPJ"}
                                 value={cnpj}
                                 inputValueSetter={setCNPJ}
+                                mask={cnpjMask}
+                                maxLength={18}
                                 placeholder={cnpjPlaceholder}
                                 wfull
                             />
@@ -181,6 +186,8 @@ export default function BeAProviderFormIsland(
                                 label={"Telefone"}
                                 value={tel}
                                 inputValueSetter={setTel}
+                                mask={PhoneMask}
+                                maxLength={16}
                                 placeholder={telPlaceholder}
                                 wfull
                             />
@@ -223,6 +230,8 @@ export default function BeAProviderFormIsland(
                                 label={"CEP"}
                                 value={cep}
                                 inputValueSetter={setCep}
+                                mask={cepMask}
+                                maxLength={10}
                                 placeholder={cepPlaceholder}
                                 wfull
                             />

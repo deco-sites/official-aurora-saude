@@ -16,15 +16,17 @@
               "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/a6062319-f5be-44da-8000-2f5853a672a4"
             },
             "mobile": {
-              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/ddc4c57f-95e7-424b-a15b-1d64f1b0c2ed"
+              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/82103b52-1722-43a1-900b-2679abca5bcb"
             },
             "alt": "Banner"
           },
-          "desktopText": "Solicite uma cotação <br />e descubra os planos<br /> disponíveis para você",
-          "mobileText": "Solicite uma cotação <br />e descubra os planos<br /> disponíveis para você",
           "textColor": "Amarelo",
           "fontWeight": "semi-bold",
-          "fontSize": "30"
+          "fontSize": "30",
+          "desktopTitle": "Solicite uma cotação <br />e descubra os planos<br /> disponíveis para você",
+          "mobileTitle": "Solicite uma cotação <br />e descubra os planos<br /> disponíveis para você",
+          "titleFontSize": "30",
+          "titleFontWeight": "semi-bold"
         }
       ]
     },

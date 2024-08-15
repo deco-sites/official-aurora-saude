@@ -1,12 +1,18 @@
 import Image from "apps/website/components/Image.tsx";
 import { useUI } from "../../sdk/Simulador/useUI.ts";
+import { signal } from "@preact/signals";
+import { useFormSteps } from "site/sdk/Simulador/useFormSteps.ts";
+import ClearForm from "site/helpers/Simulador/clearForm.ts";
 
 interface INextStep {
   executionFunc?: () => void;
 }
 
+export const previousActiveOption = signal(1);
+
 export default function NextStepBtn({ options, executionFunc }: INextStep) { //Aqui era passado como primeira prop "options", mas não sei pq
   const { activeOption } = useUI();
+  const { activeStep } = useFormSteps();
   //const { activeStep, changeStep } = useFormSteps();
 
   return (
@@ -20,6 +26,20 @@ export default function NextStepBtn({ options, executionFunc }: INextStep) { //A
         //CheckFields();
         if (executionFunc) {
           executionFunc();
+        }
+
+        //O if abaixo é responsável por resetar os campos do formulário quando altero a opção escolhida na primeira tela
+        if (previousActiveOption.value !== activeOption.value) {
+          ClearForm();
+        }
+
+        //O if abaixo checa se estamos indo pro segundo passo e guarda o valor da opção escolhida na primeira tela em outra variável
+        if (
+          activeStep.value === 2 &&
+          (previousActiveOption.value !== activeOption.value)
+        ) {
+          previousActiveOption.value = activeOption.value;
+          console.log("Passou pro step2", previousActiveOption.value);
         }
 
         //changeStep(activeStep.value, "increase"); //ESSE É O QUE ESTAVA FUNCIONANDO PERFEITAMENTE

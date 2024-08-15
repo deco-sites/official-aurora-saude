@@ -28,7 +28,7 @@ export default function MeetAurora() {
                             bgColor={"yellow"}
                             textColor={"pink"}
                             text={"Conheça a Aurora Saúde"}
-                            link={"#"}
+                            link={"/quem-somos"}
                         />
                     </div>
                 </div>

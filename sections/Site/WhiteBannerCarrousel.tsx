@@ -123,7 +123,7 @@ function Buttons() {
             <div class="absolute top-1/2 -translate-y-1/2 left-2 lg:left-10 flex items-center justify-center z-50">
                 <Slider.PrevButton>
                     <Icon
-                        class="text-aquagreen"
+                        className="text-aquagreen"
                         size={40}
                         id="ChevronLeft"
                         strokeWidth={2}
@@ -133,7 +133,7 @@ function Buttons() {
             <div class="absolute top-1/2 -translate-y-1/2 right-2 lg:right-10 flex items-center justify-center z-50">
                 <Slider.NextButton>
                     <Icon
-                        class="text-aquagreen rotate-180"
+                        className="text-aquagreen rotate-180"
                         size={40}
                         id="ChevronLeft"
                         strokeWidth={2}

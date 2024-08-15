@@ -23,8 +23,10 @@
           "textColor": "Branco",
           "fontSize": "24",
           "fontWeight": "semi-bold",
-          "desktopText": "Faça parte do plano<br /> de saúde que anda junto.",
-          "mobileText": "Faça parte<br /> do plano<br /> de saúde que <br />anda junto."
+          "desktopTitle": "Faça parte do plano<br /> de saúde que anda junto.",
+          "mobileTitle": "Faça parte<br /> do plano<br /> de saúde que <br />anda junto.",
+          "titleFontSize": "24",
+          "titleFontWeight": "semi-bold"
         }
       ]
     },

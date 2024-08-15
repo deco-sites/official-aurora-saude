@@ -192,3 +192,34 @@
     bottom: -23px; /* Centraliza verticalmente em relação ao <hr> */
     transform: translateY(-50%); /* Ajusta para centralizar corretamente */
 }
+
+
+/*Código do efeito do botão de Solicitar Cotação*/
+.button-border-effect {
+  position: relative;
+  z-index: 1;
+  border-radius: 9999px; /* Bordas arredondadas */
+  overflow: visible; /* Permite que o ::before seja visível fora dos limites do botão */
+}
+
+.button-border-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  border: 2px solid rgba(255, 165, 0, 1); /* Borda laranja */
+  z-index: -1; /* Coloca a borda atrás do botão */
+  animation: expandContractBorder 2s ease-in-out infinite;
+}
+
+@keyframes expandContractBorder {
+  0%, 100% {
+    transform: scale(1); /* Tamanho original da borda, encostando no botão */
+  }
+  50% {
+    transform: scaleX(1.15) scaleY(1.4); /* Escala ajustada para 22px horizontalmente e 16px verticalmente */
+  }
+}

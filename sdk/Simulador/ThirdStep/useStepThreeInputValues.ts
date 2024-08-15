@@ -15,7 +15,7 @@ interface IThirdStepSchema {
   lessThirtyLives: boolean;
 }
 
-const thirdStepSchema: IThirdStepSchema = {
+export const thirdStepSchema: IThirdStepSchema = {
   whoUseThePlan: "somente_eu",
   beneficiariesValuesArr: [{
     id: 1,

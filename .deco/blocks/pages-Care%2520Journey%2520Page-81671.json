@@ -1,6 +1,6 @@
 {
-  "name": "Cliente - Jornada de Cuidado",
-  "path": "/jornada-de-cuidado",
+  "name": "Cliente - Cuidado Integrado",
+  "path": "/cuidado-integrado",
   "sections": [
     {
       "__resolveType": "site/sections/Site/ColorfullWrapper.tsx",

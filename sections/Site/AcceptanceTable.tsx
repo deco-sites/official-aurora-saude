@@ -2,6 +2,7 @@ import LineTitle from "site/components/Site/Table/line-title.tsx";
 import DataCellText from "../../components/Site/Table/data-cell-text.tsx";
 import DataCellBoolean from "site/components/Site/Table/data-cell-boolean.tsx";
 
+/** @titleBy name */
 export interface IHospital {
     name: string;
     a100: boolean;
@@ -10,10 +11,26 @@ export interface IHospital {
 }
 
 export interface IAcceptanceTable {
+    a100Price: string;
+    a100Coverage: string;
+    a300Price: string;
+    a300Coverage: string;
+    a500Price: string;
+    a500Coverage: string;
     hospitals: IHospital[];
 }
 
-export default function AcceptanceTable({ hospitals }: IAcceptanceTable) {
+export default function AcceptanceTable(
+    {
+        a100Price,
+        a100Coverage,
+        a300Price,
+        a300Coverage,
+        a500Price,
+        a500Coverage,
+        hospitals,
+    }: IAcceptanceTable,
+) {
     return (
         <>
             <div className="flex justify-center px-10 lg:px-0">
@@ -27,7 +44,7 @@ export default function AcceptanceTable({ hospitals }: IAcceptanceTable) {
                             A Aurora é a única operadora com uma linha
                             de<br />serviços moderna, centrada no cuidado
                             integral e<br />individual de cada beneficiário.
-                            Conheça osnossos<br />planos e descubra o melhor
+                            Conheça os nossos<br />planos e descubra o melhor
                             para você.
                         </span>
                     </div>
@@ -47,18 +64,14 @@ export default function AcceptanceTable({ hospitals }: IAcceptanceTable) {
                                 </div>
 
                                 <LineTitle text={"Valor"} />
-                                <DataCellText text={"A partir de R$ 50,52*"} />
-                                <DataCellText text={"A partir de R$ 104,67*"} />
-                                <DataCellText text={"A partir de R$ 120,54*"} />
+                                <DataCellText text={a100Price} />
+                                <DataCellText text={a300Price} />
+                                <DataCellText text={a500Price} />
 
                                 <LineTitle text={"Cobertura"} />
-                                <DataCellText text={"Ambulatorial"} />
-                                <DataCellText
-                                    text={"Ambulatorial e hospitalar"}
-                                />
-                                <DataCellText
-                                    text={"Ambulatorial e hospitalar e obstetrícia"}
-                                />
+                                <DataCellText text={a100Coverage} />
+                                <DataCellText text={a300Coverage} />
+                                <DataCellText text={a500Coverage} />
                             </div>
 
                             <div className="p-8">

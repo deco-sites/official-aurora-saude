@@ -9,6 +9,7 @@ export const plansInfos = [
       "Belo Horizonte, Betim, Brumadinho, Caeté, Contagem, Esmeraldas, Ibirité, Igarapé, Juatuba, Lagoa Santa, Mateus Leme, Matozinhos, Nova Lima, Pedro Leopoldo, Ribeirão das Neves, Sabará, Santa Luzia, São Joaquim de Bicas, São José da Lapa, Sarzedo, Sete Lagoas, Vespasiano.",
     coparticipation: "com Copay",
     accommodation: "-",
+    price: "29,90",
     color: "orange",
   },
   {
@@ -21,6 +22,7 @@ export const plansInfos = [
       "Belo Horizonte, Betim, Brumadinho, Caeté, Contagem, Esmeraldas, Ibirité, Igarapé, Juatuba, Lagoa Santa, Mateus Leme, Matozinhos, Nova Lima, Pedro Leopoldo, Ribeirão das Neves, Sabará, Santa Luzia, São Joaquim de Bicas, São José da Lapa, Sarzedo, Sete Lagoas, Vespasiano.",
     coparticipation: "com Copay",
     accommodation: "Enfermaria",
+    price: "39,90",
     color: "green",
   },
   {
@@ -33,6 +35,7 @@ export const plansInfos = [
       "Belo Horizonte, Betim, Brumadinho, Caeté, Contagem, Esmeraldas, Ibirité, Igarapé, Juatuba, Lagoa Santa, Mateus Leme, Matozinhos, Nova Lima, Pedro Leopoldo, Ribeirão das Neves, Sabará, Santa Luzia, São Joaquim de Bicas, São José da Lapa, Sarzedo, Sete Lagoas, Vespasiano.",
     coparticipation: "com Copay",
     accommodation: "Enfermaria",
+    price: "19,90",
     color: "yellow",
   },
   {
@@ -45,6 +48,7 @@ export const plansInfos = [
       "Belo Horizonte, Betim, Brumadinho, Caeté, Contagem, Esmeraldas, Ibirité, Igarapé, Juatuba, Lagoa Santa, Mateus Leme, Matozinhos, Nova Lima, Pedro Leopoldo, Ribeirão das Neves, Sabará, Santa Luzia, São Joaquim de Bicas, São José da Lapa, Sarzedo, Sete Lagoas, Vespasiano.",
     coparticipation: "com Copay",
     accommodation: "Apartamento",
+    price: "19,90",
     color: "yellow",
   },
 ];

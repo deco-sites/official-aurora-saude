@@ -7,6 +7,7 @@ import { indicationsOptions } from "site/helpers/Site/indications.ts";
 import { invoke } from "../../runtime.ts";
 import SendingConfirmation from "site/components/Site/sending-confirmation.tsx";
 import { signal } from "@preact/signals";
+import { PhoneMask } from "site/helpers/Simulador/phoneMask.ts";
 
 export interface RequestQuoteIslandProps {
     recipientsEmail: string;
@@ -121,6 +122,8 @@ export default function RequestQuoteIsland(
                             inputValueSetter={setTel}
                             label={"Telefone"}
                             placeholder={telPlaceholder}
+                            mask={PhoneMask}
+                            maxLength={16}
                             wfull
                         />
                     </div>
@@ -133,6 +136,8 @@ export default function RequestQuoteIsland(
                                 inputValueSetter={setTel}
                                 label={"Telefone"}
                                 placeholder={telPlaceholder}
+                                mask={PhoneMask}
+                                maxLength={16}
                                 wfull
                             />
                         </div>
@@ -158,15 +163,18 @@ export default function RequestQuoteIsland(
                         />
                     </div>
 
-                    <SiteInputSelect
-                        id={"whereDidYouMeetAurora"}
-                        name={"whereDidYouMeetAurora"}
-                        label={"Por onde você conheceu a Aurora?"}
-                        value={whereMeetAurora}
-                        inputValueSetter={setWhereMeetAurora}
-                        options={indicationsOptions}
-                        placeholder={whereMeetAuroraPlaceHolder}
-                    />
+                    <div className="w-full lg:w-[40%]">
+                        <SiteInputSelect
+                            id={"whereDidYouMeetAurora"}
+                            name={"whereDidYouMeetAurora"}
+                            label={"Por onde você conheceu a Aurora?"}
+                            value={whereMeetAurora}
+                            inputValueSetter={setWhereMeetAurora}
+                            options={indicationsOptions}
+                            placeholder={whereMeetAuroraPlaceHolder}
+                            wfull
+                        />
+                    </div>
 
                     <div className="flex justify-end w-full">
                         <button

@@ -9,7 +9,7 @@ export interface ICardProps {
 export default function ServiceCard({ icon, text, link }: ICardProps) {
     return (
         <div className="flex flex-col gap-5">
-            <a href={link}>
+            <a href={link} target="_blank">
                 <div className="flex justify-center items-center bg-gradient-to-br from-pink1 to-orange4 rounded-3xl w-44 h-44">
                     <Image
                         src={icon}
@@ -19,7 +19,7 @@ export default function ServiceCard({ icon, text, link }: ICardProps) {
                 </div>
             </a>
 
-            <a href={link}>
+            <a href={link} target="_blank">
                 <div className="flex justify-center items-center text-center bg-gray4 rounded-3xl w-44 h-24">
                     <span
                         className="text-lg text-black opacity-60"

@@ -25,7 +25,7 @@ export default function PlansSection() {
                 <div className="lg:max-w-[1400px] w-full pt-12 pb-16 lg:py-32">
                     <div className="flex flex-col">
                         <div className="flex flex-col lg:flex-row w-full justify-between mb-36">
-                            <span className="text-2xl text-orange4 font-bold">
+                            <span className="text-2xl text-orange4 font-bold lg:pl-20">
                                 Escolha um plano<br />{" "}
                                 para estar sempre junto<br /> de você.
                             </span>

@@ -91,7 +91,7 @@ export default function FormStepFive() {
               </div>
 
               <SelectedPlan
-                selectedPlan={plansInfos[activePlanBtn.value - 1].title}
+                selectedPlanName={plansInfos[activePlanBtn.value - 1].title}
               />
               <SelectedPlanDetails
                 simulationType={activeOption.value}

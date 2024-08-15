@@ -1,4 +1,6 @@
+//import { useEffect } from "preact/hooks";
 import NewSimulationButton from "../../islands/Simulador/new-simulation-btn.tsx";
+//import ClearForm from "site/helpers/Simulador/clearForm.ts";
 
 export default function CompletedForm() {
   return (

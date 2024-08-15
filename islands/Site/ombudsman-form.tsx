@@ -10,6 +10,10 @@ import { useEffect, useState } from "preact/hooks";
 import { invoke } from "../../runtime.ts";
 import { signal } from "@preact/signals";
 import SendingConfirmation from "site/components/Site/sending-confirmation.tsx";
+import { protocolMask } from "site/helpers/Simulador/protocolMask.ts";
+import { cpfMask } from "site/helpers/Simulador/cpfMask.ts";
+import { PhoneMask } from "site/helpers/Simulador/phoneMask.ts";
+import { cepMask } from "site/helpers/Simulador/cepMask.ts";
 
 export interface OmbudsmanIslandProps {
     recipientsEmail: string;
@@ -125,15 +129,17 @@ export default function OmbudsmanIsland(
                         </span>
                         <div className="flex flex-col gap-4 lg:max-w-[500px] text-black text-opacity-50">
                             <span>
-                                A Ouvidoria da Aurora é um canal de comunicação
+                                A Ouvidoria da Aurora é um canal de
+                                comunicação<br />
                                 independente e imparcial, que atua como um
-                                espaço de diálogo entre você e nós.
+                                espaço<br /> de diálogo entre você e nós.
                             </span>
                             <span>
                                 Nosso objetivo é acolher suas manifestações,
-                                seja para assegurar seus direitos contratuais e
+                                seja<br />{" "}
+                                para assegurar seus direitos contratuais e<br />
                                 regulamentares, seja para contribuir para a
-                                melhoria de nossos serviços.
+                                melhoria<br /> de nossos serviços.
                             </span>
                         </div>
                     </div>
@@ -149,6 +155,8 @@ export default function OmbudsmanIsland(
                                 value={protocolNumber}
                                 inputValueSetter={setProtocolNumber}
                                 placeholder={protocolNumberPlaceholder}
+                                mask={protocolMask}
+                                maxLength={17}
                                 wfull
                             />
                             <SiteInputText
@@ -158,6 +166,8 @@ export default function OmbudsmanIsland(
                                 value={cardCode}
                                 inputValueSetter={setCardCode}
                                 placeholder={cardCodePlaceholder}
+                                mask={protocolMask}
+                                maxLength={17}
                                 wfull
                             />
                         </div>
@@ -188,6 +198,8 @@ export default function OmbudsmanIsland(
                                     value={tel}
                                     inputValueSetter={setTel}
                                     placeholder={telPlaceholder}
+                                    mask={PhoneMask}
+                                    maxLength={16}
                                     wfull
                                 />
                             </div>
@@ -198,10 +210,12 @@ export default function OmbudsmanIsland(
                                 value={cpf}
                                 inputValueSetter={setCpf}
                                 placeholder={cpfPlaceholder}
+                                mask={cpfMask}
+                                maxLength={14}
                                 wfull
                             />
                         </div>
-                        <div className="flex gap-4 lg:hidden">
+                        <div className="flex flex-col gap-4 lg:hidden">
                             <SiteInputText
                                 id={"cep"}
                                 name={"cep"}
@@ -209,6 +223,8 @@ export default function OmbudsmanIsland(
                                 value={cep}
                                 inputValueSetter={setCep}
                                 placeholder={cepPlaceholder}
+                                mask={cepMask}
+                                maxLength={10}
                                 wfull
                             />
                             <SiteInputText
@@ -221,7 +237,7 @@ export default function OmbudsmanIsland(
                                 wfull
                             />
                         </div>
-                        <div className="flex mb-3 gap-8 border-b border-b-black border-opacity-15 lg:border-none pb-10 lg:pb-0">
+                        <div className="flex mb-3 gap-4 lg:gap-8 border-b border-b-black border-opacity-15 lg:border-none pb-10 lg:pb-0">
                             <div className="hidden lg:block">
                                 <SiteInputText
                                     id={"tel"}
@@ -230,6 +246,8 @@ export default function OmbudsmanIsland(
                                     value={tel}
                                     inputValueSetter={setTel}
                                     placeholder={telPlaceholder}
+                                    mask={PhoneMask}
+                                    maxLength={16}
                                     wfull
                                 />
                             </div>
@@ -272,6 +290,8 @@ export default function OmbudsmanIsland(
                                 value={cep}
                                 inputValueSetter={setCep}
                                 placeholder={cepPlaceholder}
+                                mask={cepMask}
+                                maxLength={10}
                                 wfull
                             />
                         </div>

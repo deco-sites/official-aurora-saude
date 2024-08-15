@@ -2,6 +2,7 @@ import LoggedAreasBtn from "site/islands/Site/logged-areas-btn.tsx";
 import HeaderMobileMenuBtn from "site/islands/Site/header-mobile-menu-btn.tsx";
 import SearchButtonContainer from "site/islands/Site/search-button-container.tsx";
 import { useSignal } from "@preact/signals";
+import Image from "apps/website/components/Image.tsx";
 
 export interface Props {
     /**
@@ -17,6 +18,8 @@ interface IheaderOptions {
     name: string;
     color: Color;
     title: string;
+    link: string;
+    target: string;
     menuItems: { text: string; link: string }[];
     logo: string;
     textColor: "white" | "darkPink";
@@ -28,6 +31,8 @@ const headerOptions: IheaderOptions[] = [
         name: "cliente",
         color: "orange",
         title: "Sou Cliente",
+        link: "/",
+        target: "_self",
         menuItems: [
             { text: "Quem somos", link: "/quem-somos" },
             { text: "Nossos planos", link: "/nossos-planos" },
@@ -41,6 +46,8 @@ const headerOptions: IheaderOptions[] = [
         name: "empresa",
         color: "purple",
         title: "Sou Empresa",
+        link: "https://6167prd-plano.cloudmv.com.br/mvsaudeweb/#/login/empresa",
+        target: "_blank",
         menuItems: [
             { text: "Quem somos", link: "/quem-somos" },
             { text: "Nossos planos", link: "/nossos-planos" },
@@ -54,12 +61,14 @@ const headerOptions: IheaderOptions[] = [
         name: "corretor",
         color: "pink",
         title: "Sou Corretor",
+        link: "/corretor",
+        target: "_self",
         menuItems: [
-            { text: "Seja um Corretor", link: "#" },
+            { text: "Seja um Corretor", link: "/seja-um-corretor" },
             { text: "Quem somos", link: "/quem-somos" },
             { text: "Nossos planos", link: "/nossos-planos" },
             { text: "Vendas", link: "#" },
-            { text: "Materiais de Apoio", link: "#" },
+            { text: "Materiais de Apoio", link: "/materiais-de-apoio" },
         ],
         logo: "/Site/default_logo_aurora.svg",
         textColor: "white",
@@ -69,11 +78,12 @@ const headerOptions: IheaderOptions[] = [
         name: "prestador",
         color: "yellow",
         title: "Sou Prestador",
+        link: "https://6167prd-plano.cloudmv.com.br/mvautorizadorguias/",
+        target: "_blank",
         menuItems: [
-            { text: "Seja um Prestador", link: "#" },
+            { text: "Seja um Prestador", link: "/seja-um-prestador" },
             { text: "Nossos planos", link: "/nossos-planos" },
-            { text: "Vendas", link: "#" },
-            { text: "Materiais de Apoio", link: "#" },
+            { text: "Cuidado Integrado", link: "/cuidado-integrado" },
         ],
         logo: "/Site/logo_aurora_prestador.svg",
         textColor: "darkPink",
@@ -119,7 +129,7 @@ export default function HeaderSiteIsland({ type }: Props) {
                     <div className="flex justify-end lg:justify-between px-7 lg:px-16">
                         <div className="hidden lg:flex gap-3">
                             <a
-                                href="#"
+                                href={option?.link}
                                 className={`relative font-bold ${
                                     option?.name === "prestador"
                                         ? "text-orange1"
@@ -170,7 +180,8 @@ export default function HeaderSiteIsland({ type }: Props) {
                             {orderedOptions.map((headerOption, index) => (
                                 <a
                                     key={headerOption.id}
-                                    href="#"
+                                    href={headerOption.link}
+                                    target={headerOption.target}
                                     className={` ${
                                         colors[headerOption?.textColor]
                                     } ${
@@ -194,10 +205,14 @@ export default function HeaderSiteIsland({ type }: Props) {
                                     Quero ser Cliente
                                 </a>
                             </div>
-
+                            {
+                                /*
                             <div className="flex gap-4 items-center">
                                 <div className="flex gap-1 font-semibold">
-                                    <span className="cursor-pointer">
+                                    <span
+                                        className="cursor-pointer"
+                                        id="userway-trigger"
+                                    >
                                         A+
                                     </span>
                                     <span className="cursor-pointer">
@@ -208,8 +223,13 @@ export default function HeaderSiteIsland({ type }: Props) {
                                     src={"/Site/contrast-icon.svg"}
                                     alt="Contrast Icon"
                                     className="cursor-pointer"
+                                    onClick={() => {
+                                        globalThis?.UserWay
+                                            .contrastEnable();
+                                    }}
                                 />
-                            </div>
+                            </div>*/
+                            }
                         </div>
                     </div>
 
@@ -219,14 +239,16 @@ export default function HeaderSiteIsland({ type }: Props) {
                         } p-7 lg:p-16 mt-[6px] rounded-[20px] h-20 lg:h-48`}
                         onClick={() => expandedInput.value = false}
                     >
-                        <img
-                            src={option.name === "prestador"
-                                ? "/Site/logo_aurora_prestador.svg"
-                                : "/Site/default_logo_aurora.svg"}
-                            alt="Aurora Logo"
-                            width={140}
-                            className="w-28 lg:w-44"
-                        />
+                        <a href="/">
+                            <img
+                                src={option.name === "prestador"
+                                    ? "/Site/logo_aurora_prestador.svg"
+                                    : "/Site/default_logo_aurora.svg"}
+                                alt="Aurora Logo"
+                                width={140}
+                                className="w-28 lg:w-44"
+                            />
+                        </a>
 
                         <HeaderMobileMenuBtn option={option} />
 

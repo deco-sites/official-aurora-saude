@@ -49,12 +49,6 @@
           "a500": true
         },
         {
-          "name": "Hospital da Baleia",
-          "a100": true,
-          "a300": true,
-          "a500": true
-        },
-        {
           "name": "Hospital Belo Horizonte",
           "a100": true,
           "a300": true,
@@ -62,14 +56,14 @@
         },
         {
           "name": "Hospital Espírita André Luiz",
-          "a300": true,
           "a100": true,
+          "a300": true,
           "a500": true
         },
         {
           "name": "Oculare - Hosp. de Oftalmologia",
-          "a100": true,
           "a300": true,
+          "a100": true,
           "a500": true
         },
         {
@@ -143,14 +137,14 @@
           "a100": true,
           "a300": true,
           "a500": true
-        },
-        {
-          "name": "Teste Rafaela",
-          "a100": true,
-          "a500": true,
-          "a300": false
         }
-      ]
+      ],
+      "a100Price": "A partir de R$ 50,52*",
+      "a100Coverage": "Ambulatorial",
+      "a300Price": "A partir de R$ 104,67*",
+      "a300Coverage": "Ambulatorial e hospitalar",
+      "a500Price": "A partir de R$ 120,54*",
+      "a500Coverage": "Ambulatorial e hospitalar e obstetrícia"
     },
     {
       "__resolveType": "site/sections/Site/Footer.tsx"

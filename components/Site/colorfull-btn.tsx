@@ -6,6 +6,7 @@ export interface IButtonProps {
     textColor: TextColor;
     text: string;
     link: string;
+    targetBlank?: boolean;
 }
 
 const bgColors = {
@@ -24,10 +25,15 @@ const textColors = {
 };
 
 export default function ColorfullButton(
-    { text, link, bgColor, textColor }: IButtonProps,
+    { text, link, bgColor, textColor, targetBlank }: IButtonProps,
 ) {
     return (
-        <a href={link}>
+        <a
+            href={link}
+            {...(targetBlank
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
+        >
             <button
                 className={`${bgColors[bgColor]} ${
                     textColors[textColor]
