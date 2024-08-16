@@ -17,20 +17,35 @@ export interface Lead {
   outra_pessoa: boolean;
 }
 
+export interface DependentLead {
+  cd_faixa: number;
+  quantidade: number;
+  cd_tab_preco: number;
+}
+
 interface IBtnProps {
   number: number;
   mission: string;
   leadToSave: Lead;
+  dependentLead?: DependentLead;
+  whoUseThePlan: string;
+  activeOption: number;
 }
 
 export default function ReceiveContactButton(
-  { number, mission, leadToSave }: IBtnProps,
+  { number, mission, leadToSave, dependentLead, whoUseThePlan, activeOption }:
+    IBtnProps,
 ) {
   const { changeStep } = useFormSteps();
 
   const handleSaveLead = async () => {
-    console.log("Chamou a handleSaveLead");
-    await invoke.site.actions.saveLead({ leadToSave });
+    console.log("Chamou a handleSaveLead", dependentLead);
+    await invoke.site.actions.saveLead({
+      leadToSave,
+      dependentLead,
+      whoUseThePlan,
+      activeOption,
+    });
     changeStep(number, mission);
   };
 

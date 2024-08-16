@@ -104,7 +104,7 @@ export default function PlanCard({
       {onlybutton
         ? (
           <a
-            href={"https://wa.me/5521965494547?text=Mensagem%20padr%C3%A3o"}
+            href={"https://wa.me/553140002105?text=Mensagem%20padr%C3%A3o"}
             target="_blank"
             className="hidden lg:flex justify-center"
           >

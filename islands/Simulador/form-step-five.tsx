@@ -360,7 +360,7 @@ export default function FormStepFiveIsland() {
         fetchCityCode();
     }, [activeOption.value, cityValue.value, cityValue2.value]);
 
-    const obj = {
+    const mainLead = {
         nome: activeOption.value === 1
             ? nameValue.value
             : activeOption.value === 2 || activeOption.value === 3
@@ -399,6 +399,62 @@ export default function FormStepFiveIsland() {
             ? true
             : false,
     };
+
+    //Montando o array de dependentes para salvar no banco
+    {
+        /*
+    const lead_dependents = useSignal([]);
+    useEffect(() => {
+        thirdStepSignal.value.beneficiariesValuesArr.forEach((dependent) => {
+            const dependentRange = ageRangesSignal.value.find((range) =>
+                range.value === dependent.range
+            );
+            console.log("DEPENDENT RANGE", dependent.range);
+
+            // Encontrando o preço correspondente à faixa de idade
+            const priceData = fetchedPrices.value.find((price) =>
+                price.faixa === dependent.range
+            );
+
+            const newDependent = {
+                cd_faixa: dependentRange.cd_faixa,
+                quantidade: dependent.qty,
+                //cd_lead: 1,
+                cd_tab_preco: priceData ? priceData.cd_tab_preco : null,
+            };
+            lead_dependents.value = [...lead_dependents.value, newDependent];
+        });
+
+        console.log("SALVAR DEPENDENTE", lead_dependents.value);
+        console.log("CODIGOS TAB PRECO:", fetchedPrices.value);
+    }, [fetchedPrices.value]);*/
+    }
+
+    function createLeadDependents() {
+        const lead_dependents = [];
+        thirdStepSignal.value.beneficiariesValuesArr
+            .forEach((dependent) => {
+                const dependentRange = ageRangesSignal.value.find((range) =>
+                    range.value === dependent.range
+                );
+                console.log("DEPENDENT RANGE", dependent.range);
+
+                // Encontrando o preço correspondente à faixa de idade
+                const priceData = fetchedPrices.value?.find((price) =>
+                    price.faixa === dependent.range
+                );
+
+                const newDependent = {
+                    cd_faixa: dependentRange?.cd_faixa,
+                    quantidade: dependent.qty,
+                    //cd_lead: 1,
+                    cd_tab_preco: priceData ? priceData.cd_tab_preco : null,
+                };
+                lead_dependents.push(newDependent);
+            });
+        return lead_dependents;
+    }
+    const leads_dependents = createLeadDependents();
 
     return (
         <>
@@ -463,7 +519,11 @@ export default function FormStepFiveIsland() {
                                     <ReceiveContactButton
                                         number={activeStep.value}
                                         mission={"increase"}
-                                        leadToSave={obj}
+                                        leadToSave={mainLead}
+                                        dependentLead={leads_dependents}
+                                        whoUseThePlan={thirdStepSignal.value
+                                            .whoUseThePlan}
+                                            activeOption={activeOption.value}
                                     />
                                     <NewSimulationButton />
                                 </div>

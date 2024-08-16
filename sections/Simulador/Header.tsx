@@ -39,7 +39,7 @@ export default function Section(
         <div className="hidden justify-center gap-7 lg:flex">
           <a
             href={buttonReceiveContact.link ??
-              "https://wa.me/5521965494547?text=Mensagem%20padr%C3%A3o"}
+              "https://wa.me/553140002105?text=Mensagem%20padr%C3%A3o"}
             target="_blank"
           >
             <button className="flex items-center gap-2 bg-gray5 text-gray7 text-xs px-7 rounded-full py-3">
