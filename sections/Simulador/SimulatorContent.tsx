@@ -20,12 +20,11 @@ export const loader = async (
   req: Request,
   ctx: AppContext,
 ) => {
-  console.log("Matheus");
   const { supabaseClient } = ctx;
 
   const ageRanges = await supabaseClient
-    .from("faixa_precos")
-    .select("faixa");
+    .from("faixas_etarias")
+    .select("*");
 
   const ufs = await supabaseClient
     .from("uf")

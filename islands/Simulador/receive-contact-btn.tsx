@@ -2,18 +2,35 @@ import Image from "apps/website/components/Image.tsx";
 import { useFormSteps } from "../../sdk/Simulador/useFormSteps.ts";
 import { invoke } from "../../runtime.ts";
 
+export interface Lead {
+  nome: string;
+  razao_social: string;
+  cpf_cnpj: string;
+  cidade: number;
+  estado: string;
+  telefone: string;
+  email: string;
+  cd_plano: number;
+  somente_titular: boolean;
+  possui_plano: boolean;
+  cd_tab_preco: number;
+  outra_pessoa: boolean;
+}
+
 interface IBtnProps {
   number: number;
   mission: string;
+  leadToSave: Lead;
 }
 
 export default function ReceiveContactButton(
-  { number, mission }: IBtnProps,
+  { number, mission, leadToSave }: IBtnProps,
 ) {
   const { changeStep } = useFormSteps();
 
   const handleSaveLead = async () => {
-    await invoke.site.actions.saveLead();
+    console.log("Chamou a handleSaveLead");
+    await invoke.site.actions.saveLead({ leadToSave });
     changeStep(number, mission);
   };
 

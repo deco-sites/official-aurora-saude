@@ -11,6 +11,7 @@ const getPrices = async (
     ctx: AppContext,
 ) => {
     const { supabaseClient } = ctx;
+    console.log("BATEU AQUI NA GETPRICES", props.ageranges);
 
     const { data, error } = await supabaseClient
         .rpc("getprices", {

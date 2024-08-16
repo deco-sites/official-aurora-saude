@@ -22,9 +22,10 @@ export default function ControlFormSteps({ ageRanges, ufs }) {
 
   //A função abaixo monta o objeto adicionando a chave value e alterando o nome de faixa para text
   const transformedRangesData = ageRanges.data.map((item) => {
+    let cd_faixa = item.cd_faixa;
     let value = item.faixa;
     let text = item.faixa;
-    return { value, text };
+    return { cd_faixa, value, text };
   });
 
   //A função abaixo odena as faixas de idade em ordem crescente
