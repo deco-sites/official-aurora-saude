@@ -2,6 +2,7 @@ import { useFormSteps } from "../../sdk/Simulador/useFormSteps.ts";
 import { useUI } from "../../sdk/Simulador/useUI.ts";
 import { options } from "../../helpers/Simulador/form-step1-menu-options.ts";
 import Image from "apps/website/components/Image.tsx";
+import ClearForm from "site/helpers/Simulador/clearForm.ts";
 
 export default function NewSimulationButton() {
   const { changeStep } = useFormSteps();
@@ -16,6 +17,7 @@ export default function NewSimulationButton() {
   return (
     <button
       onClick={() => {
+        ClearForm();
         changeStep(0, "increase");
         activeOption.value = options[0].id;
         selectedYellowText.value = options[0].yellowText;

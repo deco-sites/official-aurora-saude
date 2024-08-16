@@ -7,7 +7,7 @@ import * as $$$$$$$$$1 from "./actions/getCityCode.ts";
 import * as $$$$$$$$$2 from "./actions/getPlans.ts";
 import * as $$$$$$$$$3 from "./actions/getPrices.ts";
 import * as $$$$$$$$$4 from "./actions/saveLead.ts";
-import * as $$$$$$$$$5 from "./actions/saveLeadDependent.ts";
+import * as $$$$$$$$$5 from "./actions/saveLeadDependents.ts";
 import * as $$$$$$$$$6 from "./actions/sendEmail.ts";
 import * as $$$$$$$$$$$0 from "./apps/deco/algolia.ts";
 import * as $$$$$$$$$$$1 from "./apps/deco/htmx.ts";
@@ -174,7 +174,7 @@ const manifest = {
     "site/actions/getPlans.ts": $$$$$$$$$2,
     "site/actions/getPrices.ts": $$$$$$$$$3,
     "site/actions/saveLead.ts": $$$$$$$$$4,
-    "site/actions/saveLeadDependent.ts": $$$$$$$$$5,
+    "site/actions/saveLeadDependents.ts": $$$$$$$$$5,
     "site/actions/sendEmail.ts": $$$$$$$$$6,
   },
   "apps": {
