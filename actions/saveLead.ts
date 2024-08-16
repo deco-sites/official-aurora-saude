@@ -1,38 +1,49 @@
 import { AppContext } from "site/apps/site.ts";
 
-export interface Props {
+export interface Lead {
+    nome: string;
+    razao_social: string;
+    cpf_cnpj: string;
+    cidade: number;
+    estado: string;
+    telefone: string;
     email: string;
+    cd_plano: number;
+    somente_titular: boolean;
+    possui_plano: boolean;
+    cd_tab_preco: number;
+    outra_pessoa: boolean;
+}
+
+export interface Props {
+    leadToSave: Lead;
 }
 
 const saveLead = async (
     props: Props,
     req: Request,
     ctx: AppContext,
-): Promise<void> => {
+) => {
     const { supabaseClient } = ctx;
 
-    try {
-        const { data, error } = await supabaseClient
-            .from("leads")
-            .insert([
-                {
-                    nome_razao_social: "Erick Souza",
-                    cpf_cnpj: "15706200350",
-                    cidade: "Magé",
-                    estado: "RJ",
-                    telefone: "21925494547",
-                    email: "erick.nascimento@simbioseventures.com",
-                    cd_plano: 1,
-                    somente_titular: true,
-                    possui_plano: false,
-                    cd_tab_preco: 4,
-                    outra_pessoa: false,
-                },
-            ])
-            .select();
-    } catch (error) {
-        console.log(error);
+    console.log("Chamou a action SaveLead", props.leadToSave);
+
+    const { data, error } = await supabaseClient
+        .from("leads")
+        .insert(props.leadToSave)
+        .select();
+
+    if (error) {
+        console.log("Erro da saveLeads", error);
+    } else {
+        console.log("Data da saveLeads", data);
+        console.log("cd_lead gerado", data?.[0].cd_lead);
     }
+
+    return {
+        data,
+        error,
+    };
 };
 
 export default saveLead;

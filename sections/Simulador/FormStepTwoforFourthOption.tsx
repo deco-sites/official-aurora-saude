@@ -23,6 +23,9 @@ import { useFourthStepInputValues } from "site/sdk/Simulador/FourthStep/useFourt
 import { useLoaderInfos } from "site/sdk/Simulador/useLoaderInfos.ts";
 import { invoke } from "../../runtime.ts";
 import { titleCase } from "site/helpers/titleCase.ts";
+import { extractNumbers } from "site/helpers/Simulador/extractNumbers.ts";
+import { getCityCode } from "site/helpers/Simulador/getCityCode.ts";
+import { useSignal } from "@preact/signals";
 
 export default function FormStepTwoforFourthOption() {
   const [socialReasonPlaceholder, setSocialReasonPlaceholder] = useState(
@@ -164,6 +167,32 @@ export default function FormStepTwoforFourthOption() {
     }
   }, [activePlanBtn.value]);
 
+  const cd_cidade = useSignal(null);
+  useEffect(() => {
+    async function fetchCityCode() {
+      let cityCode = await getCityCode(cityValue4.value);
+      cd_cidade.value = cityCode;
+      console.log("CD_CIDADE AQUI ERICK", cd_cidade.value);
+    }
+
+    fetchCityCode();
+  }, [cityValue4.value]);
+
+  const obj = {
+    nome: nameValue4.value,
+    cpf_cnpj: extractNumbers(cnpjValue4.value),
+    razao_social: socialReasonValue4,
+    cidade: cd_cidade.value,
+    estado: ufValue4.value,
+    telefone: extractNumbers(telValue4.value),
+    email: emailValue4.value,
+    cd_plano: null,
+    somente_titular: null,
+    possui_plano: null,
+    cd_tab_preco: 4,
+    outra_pessoa: null,
+  };
+
   return (
     <>
       <div className="flex justify-center lg:width-calc mt-32">
@@ -236,6 +265,9 @@ export default function FormStepTwoforFourthOption() {
                     id={"socialreason"}
                     name={"socialreason"}
                     label={"Razão Social"}
+                    value={socialReasonValue4.value}
+                    inputValueSetter={(value) =>
+                      socialReasonValue4.value = value}
                     placeholder={socialReasonPlaceholder}
                     wfull
                   />
@@ -246,6 +278,7 @@ export default function FormStepTwoforFourthOption() {
                     name={"cnpj"}
                     label={"CNPJ"}
                     placeholder={cnpjPlaceholder}
+                    value={cnpjValue4.value}
                     inputValueSetter={(value) => cnpjValue4.value = value}
                     mask={cnpjMask}
                     maxLength={18}
@@ -271,6 +304,8 @@ export default function FormStepTwoforFourthOption() {
                     id={"email"}
                     name={"email"}
                     label={"E-mail"}
+                    value={emailValue4.value}
+                    inputValueSetter={(value) => emailValue4.value = value}
                     placeholder={emailPlaceholder}
                     wfull
                   />
@@ -295,6 +330,8 @@ export default function FormStepTwoforFourthOption() {
                     id={"lifesqty"}
                     name={"lifesqty"}
                     label={"Quantidade de Vidas"}
+                    value={lifesqtyValue4.value}
+                    inputValueSetter={(value) => lifesqtyValue4.value = value}
                     placeholder={lifesQtyPlaceholder}
                     wfull
                   />
@@ -335,6 +372,8 @@ export default function FormStepTwoforFourthOption() {
                     id={"city"}
                     name={"city"}
                     label={"Cidade"}
+                    value={cityValue4.value}
+                    inputValueSetter={(value) => cityValue4.value = value}
                     placeholder={cityPlaceholder}
                     options={cities}
                     wfull
@@ -404,7 +443,11 @@ export default function FormStepTwoforFourthOption() {
                   executionFunc={() => changeStep(activeStep.value, "decrease")}
                 />
                 <div className="flex flex-col lg:flex-row justify-end gap-8 my-8">
-                  <ReceiveContactButton number={5} mission={"increase"} />
+                  <ReceiveContactButton
+                    number={5}
+                    mission={"increase"}
+                    leadToSave={obj}
+                  />
                   <NewSimulationButton />
                 </div>
               </div>

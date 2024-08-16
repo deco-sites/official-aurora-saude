@@ -14,22 +14,26 @@ import { useStepThreeInputValues } from "../../sdk/Simulador/ThirdStep/useStepTh
 import { useSelectPlanButtons } from "../../sdk/Simulador/useSelectPlanButtons.ts";
 import { plansInfos } from "../../helpers/Simulador/plansInfos.ts";
 import { useSelectPlan } from "site/sdk/Simulador/useSelectPlan.ts";
-import { useEffect, useState } from "preact/hooks";
+import { useEffect, useMemo, useState } from "preact/hooks";
 import getPrices from "site/actions/getPrices.ts";
 import { invoke } from "../../runtime.ts";
 import { signal, useSignal, useSignalEffect } from "@preact/signals";
+import { extractNumbers } from "site/helpers/Simulador/extractNumbers.ts";
+import { getCityCode } from "site/helpers/Simulador/getCityCode.ts";
+import { useLoaderInfos } from "site/sdk/Simulador/useLoaderInfos.ts";
 
 export default function FormStepFiveIsland() {
     const fetchedPrices = useSignal(null);
     const [loading, setLoading] = useState(false);
     const filledRanges = signal([]);
-    const cd_plano = signal(0);
+    const cd_plano = useSignal(0);
     const { activeStep, changeStep } = useFormSteps();
 
     const { activeOption } = useUI(); //Step 1
 
     const {
         nameValue,
+        cpfValue,
         emailValue,
         telValue,
         ufValue,
@@ -126,10 +130,15 @@ export default function FormStepFiveIsland() {
 
     async function fetchPrices() {
         setLoading(true);
+
         try {
             const prices = await invoke.site.actions.getPrices({
                 plan_code: cd_plano.value,
-                ageranges: filledRanges.value,
+                ageranges:
+                    (thirdStepSignal.value.whoUseThePlan === "somente_eu" &&
+                            activeOption.value === 1)
+                        ? [ageRangeValue.value]
+                        : filledRanges.value,
             });
 
             console.log("AQUI ESTÃO OS PRICES:", prices.data);
@@ -261,12 +270,24 @@ export default function FormStepFiveIsland() {
         fetchedPrices.value,
     );
 
+    const cd_tab_preco = signal(null);
+    const cd_faixa = useSignal(null);
+    const { ageRangesSignal, ufsSignal } = useLoaderInfos();
+    console.log("Aqui tenho as faixas e códigos", ageRangesSignal.value);
+    console.log("Aqui tenho a idade do usuário", ageRangeValue.value);
+    cd_faixa.value = ageRangesSignal.value.find((range) =>
+        range.value === ageRangeValue.value
+    );
+    //console.log("Código da faixa do usuário", cd_faixa.value.cd_faixa);
+
     function sumTotalofBeneficiaries(beneficiaries, prices) {
         console.log(
             "Array de Beneficiários:",
             thirdStepSignal.value.beneficiariesValuesArr,
         );
         console.log("Fetched Prices dentro da função:", fetchedPrices.value);
+        console.log("CD_TAB_PRECO:", fetchedPrices.value?.[0].cd_tab_preco);
+        //cd_tab_preco.value = fetchedPrices.value?.[0].cd_tab_preco;
 
         // Primeiro, criar um objeto para armazenar a soma total de beneficiários por faixa etária
         const totalBeneficiariesByRange = beneficiaries.reduce(
@@ -322,6 +343,62 @@ export default function FormStepFiveIsland() {
     }
     const finalValue = returnTotalValue();
     console.log("Valor total dos beneficiários:", finalValue);
+
+    const cd_cidade = useSignal(null);
+    useEffect(() => {
+        async function fetchCityCode() {
+            let cityCode;
+            if (activeOption.value === 1) {
+                cityCode = await getCityCode(cityValue.value);
+            } else if (activeOption.value === 2 || activeOption.value === 3) {
+                cityCode = await getCityCode(cityValue2.value);
+            }
+            cd_cidade.value = cityCode;
+            console.log("CD_CIDADE AQUI ERICK", cd_cidade.value);
+        }
+
+        fetchCityCode();
+    }, [activeOption.value, cityValue.value, cityValue2.value]);
+
+    const obj = {
+        nome: activeOption.value === 1
+            ? nameValue.value
+            : activeOption.value === 2 || activeOption.value === 3
+            ? name2Value.value
+            : null,
+        cpf_cnpj: activeOption.value === 1
+            ? extractNumbers(cpfValue.value)
+            : null,
+        razao_social: activeOption.value === 2 || activeOption.value === 3
+            ? socialReasonValue.value
+            : null,
+        cidade: cd_cidade.value,
+        estado: activeOption.value === 1
+            ? ufValue.value
+            : activeOption.value === 2 || activeOption.value === 3
+            ? ufValue2.value
+            : null,
+        telefone: activeOption.value === 1
+            ? extractNumbers(telValue.value)
+            : activeOption.value === 2 || activeOption.value === 3
+            ? extractNumbers(tel2Value.value)
+            : null,
+        email: activeOption.value === 1
+            ? emailValue.value
+            : activeOption.value === 2 || activeOption.value === 3
+            ? email2Value.value
+            : null,
+        cd_plano: cd_plano.value,
+        somente_titular: thirdStepSignal.value.whoUseThePlan === "somente_eu"
+            ? true
+            : false,
+        possui_plano: alreadyHavePlanValue.value === "yes" ? true : false,
+        cd_faixa: activeOption.value === 1 ? cd_faixa.value?.cd_faixa : null,
+        cd_tab_preco: fetchedPrices.value?.[0].cd_tab_preco,
+        outra_pessoa: thirdStepSignal.value.whoUseThePlan === "outra_pessoa"
+            ? true
+            : false,
+    };
 
     return (
         <>
@@ -386,6 +463,7 @@ export default function FormStepFiveIsland() {
                                     <ReceiveContactButton
                                         number={activeStep.value}
                                         mission={"increase"}
+                                        leadToSave={obj}
                                     />
                                     <NewSimulationButton />
                                 </div>
