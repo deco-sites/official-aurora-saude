@@ -69,7 +69,7 @@ export default function OverlaidVideoSectionIsland({ image, title, device }) {
                                         controls
                                     >
                                         <source
-                                            src="/Site/Videos/manifesto.mp4"
+                                            src="/Site/Videos/Manifesto.mp4"
                                             type="video/mp4"
                                         />
                                         Your browser does not support the video

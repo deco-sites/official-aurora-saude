@@ -1,10 +1,11 @@
 import { ImageWidget } from "apps/admin/widgets.ts";
+import type { Video as LiveVideo } from "deco-sites/std/components/types.ts";
 import ReelsSectionIsland from "site/islands/Site/reels-section.tsx";
 
 /** @titleBy title */
 export interface Banner {
     image: ImageWidget;
-    videoName: string;
+    video: LiveVideo;
     alt: string;
     title: string;
     description: string;
