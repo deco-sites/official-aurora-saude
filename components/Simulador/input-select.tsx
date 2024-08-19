@@ -62,10 +62,19 @@ export default function InputSelect(
         </select>
         <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
           <svg
-            className="w-4 h-4 fill-current text-[#9ca3be]"
-            viewBox="0 0 20 20"
+            width="14"
+            height="7"
+            viewBox="0 0 16 9"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M7 10l5 5 5-5H7z" />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L8 6.58579L14.2929 0.292893C14.6834 -0.0976311 15.3166 -0.0976311 15.7071 0.292893C16.0976 0.683417 16.0976 1.31658 15.7071 1.70711L8.70711 8.70711C8.31658 9.09763 7.68342 9.09763 7.29289 8.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"
+              fill="black"
+              fill-opacity="0.25"
+            />
           </svg>
         </span>
       </div>

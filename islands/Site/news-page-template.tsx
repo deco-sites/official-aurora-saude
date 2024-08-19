@@ -2,9 +2,11 @@ import NewsCard from "site/components/Site/news-card.tsx";
 import Image from "apps/website/components/Image.tsx";
 
 export default function NewsPageTemplateIsland(
-    { image, date, title, text, relatedsNews, galleryImages },
+    { image, date, title, text, relatedsNews, galleryImages, device },
 ) {
     console.log("lucca", galleryImages);
+    console.log("Device:", device);
+
     return (
         <>
             <div className="flex justify-center bg-white lg:bg-gray4">
