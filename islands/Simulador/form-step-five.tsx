@@ -477,6 +477,8 @@ export default function FormStepFiveIsland() {
                                     activePlanBtn.value - 1
                                 ].title}
                                 totalValue={finalValue}
+                                fetchedPrices={fetchedPrices}
+                                propertyPrice={propertyPrice}
                             />
                             <SelectedPlanDetails
                                 simulationType={activeOption.value}
