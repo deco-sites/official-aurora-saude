@@ -11,7 +11,7 @@ export default function DiscoverDifferencesIsland({ cards }) {
         <>
             {cards.map((card, index) => (
                 <div key={index} className="flex flex-col h-full">
-                    <div className="grid grid-rows-5 gap-4 h-full">
+                    <div className="flex flex-col lg:grid lg:grid-rows-4 gap-4 h-full">
                         <div
                             className={`row-span-2 ${
                                 CardColors[card.cardColor]

@@ -55,11 +55,12 @@ export default function PlanDetailsModal(
     return (
         <>
             <div
-                className={`fixed top-0 left-0 z-[100] flex min-h-screen w-screen ${
+                className={`fixed top-0 left-0 flex min-h-screen w-screen ${
                     bgColors[selectedPlan.bgColor]
                 }  justify-center items-start lg:items-center overflow-x-hidden overflow-y-scroll`}
+                style={{ zIndex: 9999 }}
             >
-                <div className="flex w-full flex-col-reverse lg:flex-col items-center justify-center px-10 lg:px-64">
+                <div className="flex w-full flex-col-reverse lg:flex-col items-center justify-center px-10 lg:px-0 max-w-[1100px]">
                     <div className="flex w-full flex-col lg:flex-row items-center">
                         <div className="lg:w-3/6 flex-grow z-40">
                             <Image
@@ -101,8 +102,14 @@ export default function PlanDetailsModal(
                                 médica da Aurora Saúde.
                             </span>
                         </div>
-                        <div className="lg:w-3/12 flex flex-col gap-3 max-w-72 mt-7 lg:mt-0">
-                            <div className="flex flex-col border border-gray9 rounded-[18px] py-5 lg:py-11 px-20">
+                        <div className="lg:w-auto flex-grow flex flex-col gap-3 mt-7 lg:mt-0 pl-14">
+                            <div
+                                className={`flex flex-col border ${
+                                    selectedPlan.planName === "a500"
+                                        ? "border-orange1"
+                                        : "border-gray9"
+                                }  rounded-[18px] py-5 lg:py-11 px-20`}
+                            >
                                 <span
                                     className={`${
                                         textColors[selectedPlan.textColor]
@@ -136,7 +143,7 @@ export default function PlanDetailsModal(
                                         buttonTextColors[
                                             selectedPlan.buttonTextColor
                                         ]
-                                    } font-bold rounded-full px-16 py-4`}
+                                    } font-bold rounded-full px-16 py-4 whitespace-nowrap`}
                                 >
                                     Compare e escolha
                                 </button>

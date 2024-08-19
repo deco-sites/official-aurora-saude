@@ -1,5 +1,7 @@
 import { ImageWidget } from "apps/admin/widgets.ts";
 import NewsPageTemplateIsland from "site/islands/Site/news-page-template.tsx";
+import { FnContext } from "deco/types.ts";
+import { Device } from "apps/website/matchers/device.ts";
 
 export interface Banner {
     image: ImageWidget;
@@ -23,7 +25,7 @@ export interface RelatedNews {
     link: string;
 }
 
-export interface NewsPageProps {
+export interface Props {
     image: Banner;
     date: string;
     title: string;
@@ -36,8 +38,23 @@ export interface NewsPageProps {
     galleryImages?: Image[];
 }
 
+export interface NewsPageProps {
+    image: Banner;
+    date: string;
+    title: string;
+    /**
+     * @format rich-text
+     * @description O texto da matéria
+     */
+    text: string;
+    relatedsNews: RelatedNews[];
+    galleryImages?: Image[];
+    device: Device;
+}
+
 export default function NewsPage(
-    { image, date, title, text, relatedsNews, galleryImages }: NewsPageProps,
+    { image, date, title, text, relatedsNews, galleryImages, device }:
+        NewsPageProps,
 ) {
     return (
         <NewsPageTemplateIsland
@@ -47,6 +64,14 @@ export default function NewsPage(
             text={text}
             relatedsNews={relatedsNews}
             galleryImages={galleryImages}
+            device={device}
         />
     );
 }
+
+export const loader = (props: Props, req: Request, ctx: FnContext) => {
+    return {
+        ...props,
+        device: ctx.device,
+    };
+};
