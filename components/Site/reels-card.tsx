@@ -1,24 +1,46 @@
 import Image from "apps/website/components/Image.tsx";
 import { ImageWidget } from "apps/admin/widgets.ts";
+import { useState } from "preact/hooks";
 
 export interface ReelsCardProps {
     image: ImageWidget;
+    videoName: string;
     alt: string;
     title: string;
     description: string;
-    link: string;
 }
 
 export default function ReelsCard(
-    { image, alt, title, description, link }: ReelsCardProps,
+    { image, videoName, alt, title, description }: ReelsCardProps,
 ) {
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    const handlePlayClick = () => {
+        setIsPlaying(true);
+    };
+
     return (
         <div className="relative">
-            <Image
-                src={image}
-                alt={alt}
-                className="rounded-2xl"
-            />
+            {!isPlaying
+                ? (
+                    <Image
+                        src={image}
+                        alt={alt}
+                        className="rounded-2xl"
+                    />
+                )
+                : (
+                    <video
+                        className="w-full h-full rounded-3xl"
+                        controls
+                    >
+                        <source
+                            src={`/Site/Videos/${videoName}`}
+                            type="video/mp4"
+                        />
+                        Your browser does not support the video tag.
+                    </video>
+                )}
 
             <div className="w-full absolute bottom-4 flex items-center justify-between pl-14 pr-6">
                 <div className="flex flex-col text-white font-sora">
@@ -29,17 +51,13 @@ export default function ReelsCard(
                         {description}
                     </span>
                 </div>
-                <a
-                    href={link}
-                    target="_blank"
-                    className="flex-shrink-0"
-                >
-                    <Image
-                        src={"/Site/play-circle-icon.svg"}
-                        alt={alt}
-                        className="rounded-2xl cursor-pointer w-10 h-10"
-                    />
-                </a>
+
+                <Image
+                    src={"/Site/play-circle-icon.svg"}
+                    alt={alt}
+                    className="rounded-2xl cursor-pointer w-10 h-10"
+                    onClick={handlePlayClick}
+                />
             </div>
         </div>
     );

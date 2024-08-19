@@ -8,7 +8,11 @@ export default function VideoPlayer() {
     };
 
     return (
-        <div className="relative flex justify-center w-full pb-[56.25%]">
+        <div
+            className={`relative flex justify-center w-full ${
+                !isPlaying ? "pb-[56.25%]" : ""
+            }`}
+        >
             {!isPlaying
                 ? (
                     <div className="absolute inset-0 flex items-center justify-center w-full lg:h-full">
@@ -32,18 +36,16 @@ export default function VideoPlayer() {
                     </div>
                 )
                 : (
-                    <div className="absolute inset-0 w-full h-full">
-                        <iframe
-                            width="100%"
-                            height="100%"
-                            src="https://www.youtube.com/embed/yGHnmcY168Q?autoplay=1"
-                            title="YouTube video player"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                            className="rounded-3xl w-full h-full"
+                    <video
+                        className="w-full h-full rounded-3xl"
+                        controls
+                    >
+                        <source
+                            src="/Site/Videos/manifesto.mp4"
+                            type="video/mp4"
                         />
-                    </div>
+                        Your browser does not support the video tag.
+                    </video>
                 )}
         </div>
     );
