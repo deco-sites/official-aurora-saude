@@ -21,12 +21,12 @@ export default function ControlFormSteps({ ageRanges, ufs }) {
   const { ageRangesSignal, ufsSignal } = useLoaderInfos();
 
   //A função abaixo monta o objeto adicionando a chave value e alterando o nome de faixa para text
-  const transformedRangesData = ageRanges.data.map((item) => {
+  const transformedRangesData = ageRanges.data?.map((item) => {
     let cd_faixa = item.cd_faixa;
     let value = item.faixa;
     let text = item.faixa;
     return { cd_faixa, value, text };
-  });
+  }) || [];
 
   //A função abaixo odena as faixas de idade em ordem crescente
   const sortedData = transformedRangesData.sort((a, b) => {
@@ -36,11 +36,11 @@ export default function ControlFormSteps({ ageRanges, ufs }) {
   });
 
   //A função abaixo monta o objeto adicionando a chave value e alterando o nome de faixa para text
-  const transformedUfsData = ufs.data.map((item) => {
+  const transformedUfsData = ufs.data?.map((item) => {
     let value = item.uf;
     let text = item.uf;
     return { value, text };
-  });
+  }) || [];
 
   //Aqui eu atribuo os objetos transformados acima para as variáveis globais do useLoaderInfos
   ageRangesSignal.value = sortedData;

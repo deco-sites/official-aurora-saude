@@ -40,6 +40,7 @@ import * as $Site_logged_areas_dropdown_menu from "./islands/Site/logged-areas-d
 import * as $Site_news_page_template from "./islands/Site/news-page-template.tsx";
 import * as $Site_ombudsman_form from "./islands/Site/ombudsman-form.tsx";
 import * as $Site_overlaid_news_banner from "./islands/Site/overlaid-news-banner.tsx";
+import * as $Site_overlaid_video_section from "./islands/Site/overlaid-video-section.tsx";
 import * as $Site_plans_section from "./islands/Site/plans-section.tsx";
 import * as $Site_privacy_policies from "./islands/Site/privacy-policies.tsx";
 import * as $Site_providers_login_form from "./islands/Site/providers-login-form.tsx";
@@ -104,6 +105,7 @@ const manifest = {
     "./islands/Site/news-page-template.tsx": $Site_news_page_template,
     "./islands/Site/ombudsman-form.tsx": $Site_ombudsman_form,
     "./islands/Site/overlaid-news-banner.tsx": $Site_overlaid_news_banner,
+    "./islands/Site/overlaid-video-section.tsx": $Site_overlaid_video_section,
     "./islands/Site/plans-section.tsx": $Site_plans_section,
     "./islands/Site/privacy-policies.tsx": $Site_privacy_policies,
     "./islands/Site/providers-login-form.tsx": $Site_providers_login_form,

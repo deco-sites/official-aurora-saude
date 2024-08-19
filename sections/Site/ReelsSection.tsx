@@ -4,10 +4,10 @@ import ReelsSectionIsland from "site/islands/Site/reels-section.tsx";
 /** @titleBy title */
 export interface Banner {
     image: ImageWidget;
+    videoName: string;
     alt: string;
     title: string;
     description: string;
-    link: string;
 }
 
 export interface Props {

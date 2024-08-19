@@ -1,5 +1,8 @@
 import NewsCard from "site/components/Site/news-card.tsx";
 import Image from "apps/website/components/Image.tsx";
+import Slider from "../../components/ui/Slider.tsx";
+import SliderJS from "../../islands/Site/sliderjs.tsx";
+import { useId } from "https://esm.sh/v128/preact@10.19.6/compat/src/index.js";
 
 export default function NewsPageTemplateIsland(
     { image, date, title, text, relatedsNews, galleryImages, device },
@@ -92,17 +95,33 @@ export default function NewsPageTemplateIsland(
                                         }}
                                     >
                                     </section>
-                                    <div className="grid grid-cols-3 gap-3">
-                                        {galleryImages && (
-                                            galleryImages.map((item) => (
-                                                <Image
-                                                    src={item.image}
-                                                    alt={item.alt}
-                                                    className="rounded-[20px]"
-                                                />
-                                            ))
-                                        )}
-                                    </div>
+                                    {device === "desktop" && (
+                                        <div className="grid grid-cols-3 gap-3">
+                                            {galleryImages && (
+                                                galleryImages.map((item) => (
+                                                    <Image
+                                                        src={item.image}
+                                                        alt={item.alt}
+                                                        className="rounded-[20px]"
+                                                    />
+                                                ))
+                                            )}
+                                        </div>
+                                    )}
+
+                                    {device === "mobile" && (
+                                        <Slider className="h-full relative carousel carousel-center w-full col-span-full row-span-full gap-6 rounded-[20px]">
+                                            {galleryImages && (
+                                                galleryImages.map((item) => (
+                                                    <Image
+                                                        src={item.image}
+                                                        alt={item.alt}
+                                                        className="rounded-[20px]"
+                                                    />
+                                                ))
+                                            )}
+                                        </Slider>
+                                    )}
                                 </article>
                             </div>
                         </div>
