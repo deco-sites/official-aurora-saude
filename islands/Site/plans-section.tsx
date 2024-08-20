@@ -3,8 +3,42 @@ import { plansCardsInfos } from "site/helpers/Site/plans-cards-infos.ts";
 import Image from "apps/website/components/Image.tsx";
 import ColorfullButton from "site/components/Site/colorfull-btn.tsx";
 import { useState } from "preact/hooks";
+import LineTitle from "site/components/Site/Table/line-title.tsx";
+import DataCellText from "../../components/Site/Table/data-cell-text.tsx";
+import DataCellBoolean from "site/components/Site/Table/data-cell-boolean.tsx";
 
-export default function PlansSectionIsland() {
+export interface IHospital {
+    name: string;
+    a100: boolean;
+    a300: boolean;
+    a500: boolean;
+}
+
+export interface HospitalsByRegion {
+    region: string;
+    hospitals: IHospital[];
+}
+
+export interface Props {
+    a100Price: string;
+    a100Coverage: string;
+    a300Price: string;
+    a300Coverage: string;
+    a500Price: string;
+    a500Coverage: string;
+    regions: HospitalsByRegion[];
+    cities: string[];
+}
+
+export default function PlansSectionIsland(
+    {
+        a100Coverage,
+        a300Coverage,
+        a500Coverage,
+        regions,
+        cities,
+    }: Props,
+) {
     const bgColors = {
         yellow: "bg-yellow",
         orange: "bg-orange1",
@@ -18,18 +52,19 @@ export default function PlansSectionIsland() {
         green: "text-aquagreen2",
         black: "text-black text-opacity-45",
     };
+    console.log("Regiões aqui:", regions);
 
-    const [regionValue, setRegionValue] = useState();
+    const [regionValue, setRegionValue] = useState(0);
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const value = e.target.value;
-        setRegionValue(value);
+        setRegionValue(regions.findIndex((el) => el.region === value));
     };
 
     return (
         <>
             <div className="flex justify-center px-10 lg:px-0 bg-gray4">
-                <div className="lg:max-w-[1400px] w-full pt-12 pb-16 lg:py-32">
+                <div className="flex flex-col lg:max-w-[1400px] w-full pt-12 pb-16 lg:py-32">
                     <div className="flex flex-col">
                         <div className="flex flex-col lg:flex-row w-full justify-between mb-48">
                             <span className="text-2xl text-orange4 font-bold lg:pl-20">
@@ -50,7 +85,7 @@ export default function PlansSectionIsland() {
                                         className={`px-6 py-5 lg:py-2 lg:rounded-md bg-white bg-opacity-50 outline-none text-[#9ca3be] appearance-none pr-8 w-full`}
                                         id="regionValue"
                                         name="regionValue"
-                                        value={regionValue}
+                                        value={cities[regionValue]}
                                         onChange={handleChange}
                                     >
                                         <option
@@ -59,14 +94,14 @@ export default function PlansSectionIsland() {
                                             disabled
                                             hidden
                                         >
-                                            Belo Horizonte e RMBH
+                                            {cities[0]}
                                         </option>
-                                        {ufsOptions.map((op) => (
+                                        {cities.map((city, index) => (
                                             <option
-                                                key={op.value}
-                                                value={op.value}
+                                                key={index}
+                                                value={city}
                                             >
-                                                {op.text}
+                                                {city}
                                             </option>
                                         ))}
                                     </select>
@@ -131,6 +166,85 @@ export default function PlansSectionIsland() {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="flex justify-center px-10 lg:px-0 bg-white">
+                <div className="lg:max-w-[1400px] w-full pt-12 pb-16 lg:py-32 lg:px-40">
+                    <div className="flex flex-col gap-5 lg:gap-0 lg:flex-row w-full justify-between px-0 lg:px-20 mb-28">
+                        <span className="text-orange4 text-4xl font-bold">
+                            Compare e<br /> escolha o ideal<br /> para você
+                        </span>
+
+                        <span className="text-black text-opacity-50">
+                            A Aurora é a única operadora com uma linha
+                            de<br />serviços moderna, centrada no cuidado
+                            integral e<br />individual de cada beneficiário.
+                            Conheça os nossos<br />planos e descubra o melhor
+                            para você.
+                        </span>
+                    </div>
+
+                    <div className="w-full overflow-x-scroll lg:overflow-x-auto scrollbar-none">
+                        <div className="min-w-max lg:min-w-full">
+                            <div class="grid grid-cols-4 text-center gap-4">
+                                <div></div>
+                                <div class="bg-orange1 rounded-[10px] h-[110px] flex justify-center items-center text-2xl text-yellow">
+                                    a100
+                                </div>
+                                <div class="bg-aquagreen rounded-[10px] h-[110px] flex justify-center items-center text-2xl text-yellow">
+                                    a300
+                                </div>
+                                <div class="bg-yellow rounded-[10px] h-[110px] flex justify-center items-center text-2xl text-orange1">
+                                    a500
+                                </div>
+
+                                <LineTitle text={"Valor"} />
+                                <DataCellText
+                                    text={regions[regionValue].a100Price}
+                                />
+                                <DataCellText
+                                    text={regions[regionValue].a300Price}
+                                />
+                                <DataCellText
+                                    text={regions[regionValue].a500Price}
+                                />
+
+                                <LineTitle text={"Cobertura"} />
+                                <DataCellText text={a100Coverage} />
+                                <DataCellText text={a300Coverage} />
+                                <DataCellText text={a500Coverage} />
+                            </div>
+
+                            <div className="p-8">
+                                <hr />
+                            </div>
+                            <div className="flex flex-col gap-4 min-w-max lg:min-w-full">
+                                {regions?.[regionValue].hospitals.map((
+                                    hospital,
+                                ) => (
+                                    <div class="grid grid-cols-4 text-center gap-4">
+                                        <LineTitle
+                                            text={hospital.name}
+                                        />
+                                        <DataCellBoolean
+                                            value={hospital.a100}
+                                        />
+                                        <DataCellBoolean
+                                            value={hospital.a300}
+                                        />
+                                        <DataCellBoolean
+                                            value={hospital.a500}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="flex justify-start mt-10">
+                                <span className="font-sora text-xs text-black text-opacity-60">
+                                    *faixa de 0 a 18 anos
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
