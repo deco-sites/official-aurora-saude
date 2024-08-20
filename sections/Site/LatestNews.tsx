@@ -1,6 +1,20 @@
-import NewsCard from "site/components/Site/news-card.tsx";
+import { ImageWidget } from "apps/admin/widgets.ts";
+import LatestNewsIsland from "site/islands/Site/latest-news.tsx";
 
-export default function LatestNews() {
+/** @titleBy title */
+export interface New {
+    image: ImageWidget;
+    altImage: string;
+    date: string;
+    title: string;
+    link: string;
+}
+
+export interface Props {
+    newsArr: New[];
+}
+
+export default function LatestNews({ newsArr }: Props) {
     return (
         <>
             <div className="flex justify-center">
@@ -9,27 +23,7 @@ export default function LatestNews() {
                         Últimas Notícias
                     </span>
                     <div className="flex flex-col lg:flex-row gap-4">
-                        <NewsCard
-                            imageSrc={"/Site/LatestNews/newsphoto1.png"}
-                            alt={"Imagem 1"}
-                            date={"22 de agosto"}
-                            title={"Minas Gerais ganha operadora de saúde fundada por mulheres"}
-                            link={"#"}
-                        />
-                        <NewsCard
-                            imageSrc={"/Site/LatestNews/newsphoto2.png"}
-                            alt={"Imagem 2"}
-                            date={"1 de setembro"}
-                            title={"Um novo jeito de cuidar da saúde"}
-                            link={"#"}
-                        />
-                        <NewsCard
-                            imageSrc={"/Site/LatestNews/newsphoto3.png"}
-                            alt={"Imagem 3"}
-                            date={"25 de setembro"}
-                            title={"Aurora Saúde fecha parceria com MV Sistemas"}
-                            link={"#"}
-                        />
+                        <LatestNewsIsland newsArr={newsArr} />
                     </div>
                 </div>
             </div>

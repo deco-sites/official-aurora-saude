@@ -36,9 +36,11 @@ import * as $Site_header_mobile_menu_btn from "./islands/Site/header-mobile-menu
 import * as $Site_header_mobile_menu_dropdown from "./islands/Site/header-mobile-menu-dropdown.tsx";
 import * as $Site_header_site from "./islands/Site/header-site.tsx";
 import * as $Site_i_am_a_new_beneficiary from "./islands/Site/i-am-a-new-beneficiary.tsx";
+import * as $Site_latest_news from "./islands/Site/latest-news.tsx";
 import * as $Site_logged_areas_btn from "./islands/Site/logged-areas-btn.tsx";
 import * as $Site_logged_areas_dropdown_menu from "./islands/Site/logged-areas-dropdown-menu.tsx";
 import * as $Site_news_page_template from "./islands/Site/news-page-template.tsx";
+import * as $Site_news_section from "./islands/Site/news-section.tsx";
 import * as $Site_ombudsman_form from "./islands/Site/ombudsman-form.tsx";
 import * as $Site_overlaid_news_banner from "./islands/Site/overlaid-news-banner.tsx";
 import * as $Site_overlaid_video_section from "./islands/Site/overlaid-video-section.tsx";
@@ -101,10 +103,12 @@ const manifest = {
       $Site_header_mobile_menu_dropdown,
     "./islands/Site/header-site.tsx": $Site_header_site,
     "./islands/Site/i-am-a-new-beneficiary.tsx": $Site_i_am_a_new_beneficiary,
+    "./islands/Site/latest-news.tsx": $Site_latest_news,
     "./islands/Site/logged-areas-btn.tsx": $Site_logged_areas_btn,
     "./islands/Site/logged-areas-dropdown-menu.tsx":
       $Site_logged_areas_dropdown_menu,
     "./islands/Site/news-page-template.tsx": $Site_news_page_template,
+    "./islands/Site/news-section.tsx": $Site_news_section,
     "./islands/Site/ombudsman-form.tsx": $Site_ombudsman_form,
     "./islands/Site/overlaid-news-banner.tsx": $Site_overlaid_news_banner,
     "./islands/Site/overlaid-video-section.tsx": $Site_overlaid_video_section,

@@ -19,6 +19,12 @@ export default function CookiesModalIsland() {
         setShowModal(false); // Esconde o modal
     };
 
+    const handleDeclineCookies = () => {
+        // Define o cookie para expirar em 365 dias
+        setCookie("cookiesAccepted", "false", 365);
+        setShowModal(false); // Esconde o modal
+    };
+
     if (!showModal) return null; // Se o modal não deve ser exibido, retorna null
 
     return (
@@ -69,7 +75,10 @@ export default function CookiesModalIsland() {
                     >
                         Entendido
                     </button>
-                    <button className="text-black text-opacity-40 text-xs font-sora underline cursor-pointer">
+                    <button
+                        className="text-black text-opacity-40 text-xs font-sora underline cursor-pointer"
+                        onClick={handleDeclineCookies}
+                    >
                         Rejeitar Todos
                     </button>
                 </div>

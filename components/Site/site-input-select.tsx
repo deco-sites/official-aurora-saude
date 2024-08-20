@@ -64,7 +64,10 @@ export default function SiteInputSelect(
                         {placeholder}
                     </option>
                     {options.map((op) => (
-                        <option key={op.value} value={op.value}>
+                        <option
+                            key={op.value}
+                            value={op.value}
+                        >
                             {op.text}
                         </option>
                     ))}

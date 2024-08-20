@@ -73,8 +73,8 @@ function BannerItem(
                     class="object-cover w-full h-full"
                     src={mobile.image}
                     alt={alt}
-                    width={mobile.width ?? 360}
-                    height={mobile.height ?? 600}
+                    width={mobile.width ?? 350}
+                    height={mobile.height ?? 350}
                     preload
                     loading="eager"
                     fetchPriority="high"
