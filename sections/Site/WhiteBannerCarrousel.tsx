@@ -67,7 +67,7 @@ function BannerItem(
             {device === "desktop" && (
                 <div className="flex justify-between items-center lg:px-14">
                     <Image
-                        class="object-contain w-full max-h-24"
+                        class="object-cover w-full max-h-24"
                         loading={lcp ? "eager" : "lazy"}
                         src={image.image}
                         alt={alt}
