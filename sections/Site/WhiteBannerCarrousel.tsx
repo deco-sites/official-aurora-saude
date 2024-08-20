@@ -50,14 +50,14 @@ function BannerItem(
     return (
         <>
             {device !== "desktop" && (
-                <div className="flex justify-center px-14 w-full">
+                <div className="flex justify-center w-full h-full px-14 w-full">
                     <Image
-                        class="object-contain w-full"
+                        class="object-contain"
                         loading={lcp ? "eager" : "lazy"}
                         src={image.image}
                         alt={alt}
-                        width={image.width ?? 300}
-                        height={image.height ?? 160}
+                        width={image.width ?? 220}
+                        height={image.height ?? 90}
                         fetchPriority={lcp ? "high" : "low"}
                         preload={lcp ? true : false}
                         decoding={"async"}
@@ -65,14 +65,14 @@ function BannerItem(
                 </div>
             )}
             {device === "desktop" && (
-                <div className="flex justify-between items-center lg:px-14">
+                <div className="flex justify-between w-full h-full items-center lg:px-14">
                     <Image
-                        class="object-cover w-full max-h-24"
+                        class="object-contain max-h-24"
                         loading={lcp ? "eager" : "lazy"}
                         src={image.image}
                         alt={alt}
-                        width={image.width ?? 170}
-                        height={image.height ?? 80}
+                        width={image.width ?? 220}
+                        height={image.height ?? 90}
                         fetchPriority={lcp ? "high" : "low"}
                         preload={lcp ? true : false}
                         decoding={"async"}
