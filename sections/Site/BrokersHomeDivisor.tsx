@@ -9,7 +9,7 @@ export default function BrokersHomeDivisor(
 ) {
     return (
         <>
-            <div className="relative flex flex-col items-center h-[600px] lg:h-[300px] bg-pink6 lg:bg-gray4">
+            <div className="relative -mt-[2px] flex flex-col items-center h-[600px] lg:h-[280px] bg-pink6 lg:bg-gray4">
                 <div className="flex px-10 lg:px-0 justify-center lg:bg-fixed lg:bg-center lg:bg-no-repeat lg:bg-cover flex-col gap-10 w-full max-w-[1400px]">
                     <div className="absolute px-10 lg:px-0 inset-0 flex h-auto lg:h-[350px] justify-center -mt-28">
                         <div className="flex gap-6 max-w-[1400px] overflow-hidden rounded-[20px]">
@@ -30,7 +30,7 @@ export default function BrokersHomeDivisor(
                                         </button>
                                     </a>
                                 </div>
-                                <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:w-2/3 bg-white rounded-[20px] pt-14 pb-20 lg:py-28">
+                                <div className="absolute left-10 right-10 -bottom-28 lg:static flex flex-col lg:flex-row items-center justify-center gap-4 lg:w-2/3 bg-white rounded-[20px] pt-14 pb-20 lg:py-28">
                                     <span className="text-aquagreen font-sora font-bold text-xl lg:w-max flex-shrink-0 px-10 lg:pl-16 lg:pr-0">
                                         Conheça a rede de<br />{" "}
                                         atendimento com os<br />
@@ -47,6 +47,8 @@ export default function BrokersHomeDivisor(
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="flex lg:hidden bg-gray4 h-32 w-full">
             </div>
         </>
     );
