@@ -4,11 +4,13 @@ import { useClickOutsideListener } from "site/helpers/Site/useClickOutsideListen
 import { useRef } from "preact/hooks";
 
 interface DropdownSectionsProps {
+    option: number;
     openerRef: MutableRefObject<HTMLElement | null>;
     setOpen: (state: boolean) => void;
 }
 
 export default function DropdownSections({
+    option,
     openerRef,
     setOpen,
 }: DropdownSectionsProps) {
@@ -19,29 +21,62 @@ export default function DropdownSections({
         event.stopPropagation();
     };
 
+    const backgroundColors = {
+        1: "bg-orange1",
+        2: "bg-darkPurple",
+        3: "bg-pink2",
+        4: "bg-yellow",
+    };
+
     return (
         <div
             ref={dropdownRef}
             onClick={handleClickInside}
-            className="flex flex-col gap-1 justify-center items-center absolute -bottom-44 left-0 bg-orange1 rounded-[20px]"
+            className={`flex flex-col gap-1 justify-center items-center absolute -bottom-44 left-0 ${
+                backgroundColors[option.id]
+            } rounded-[20px]`}
         >
-            <button className="flex gap-5 items-center justify-center text-white bg-orange6 rounded-full px-4 py-2 w-full">
-                Sou Cliente
-                <Image
-                    src={"/Site/down-arrow.svg"}
-                    alt=""
-                    className=""
-                />
-            </button>
-            <button className="flex gap-5 items-center justify-center text-white bg-darkPurple rounded-full px-4 py-2 w-full">
-                Sou Empresa
-            </button>
-            <button className="flex gap-5 items-center justify-center text-white bg-pink2 rounded-full px-4 py-2 w-full">
-                Sou Corretor
-            </button>
-            <button className="flex gap-5 items-center justify-center text-white bg-yellow rounded-full px-4 py-2 w-full">
-                Sou Prestador
-            </button>
+            <a
+                href="https://aurorasaude.plataforma-beneficiario.mosiaomnichannel.com.br/#/"
+                target="_blank"
+                className="w-full"
+            >
+                <button className="flex gap-5 items-center justify-center text-white bg-orange6 rounded-full px-4 py-2 w-full">
+                    Sou Cliente
+                    <Image
+                        src={"/Site/down-arrow.svg"}
+                        alt=""
+                        className="rotate-180"
+                    />
+                </button>
+            </a>
+            <a
+                href="https://6167prd-plano.cloudmv.com.br/mvsaudeweb/#/login/empresa"
+                target="_blank"
+                className="w-full"
+            >
+                <button className="flex gap-5 items-center justify-center text-white bg-darkPurple rounded-full px-4 py-2 w-full">
+                    Sou Empresa
+                </button>
+            </a>
+            <a
+                href="https://souaurorasaude.planium.io/web/login/entrar"
+                target="_blank"
+                className="w-full"
+            >
+                <button className="flex gap-5 items-center justify-center text-white bg-pink2 rounded-full px-4 py-2 w-full">
+                    Sou Corretor
+                </button>
+            </a>
+            <a
+                href="https://6167prd-plano.cloudmv.com.br/mvautorizadorguias/"
+                target="_blank"
+                className="w-full"
+            >
+                <button className="flex gap-5 items-center justify-center text-white bg-yellow rounded-full px-4 py-2 w-full">
+                    Sou Prestador
+                </button>
+            </a>
         </div>
     );
 }

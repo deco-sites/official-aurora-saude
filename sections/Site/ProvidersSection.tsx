@@ -34,7 +34,8 @@ export default function ProvidersSection(
                             bgColor="yellow"
                             textColor="green"
                             text={buttonText}
-                            link="#"
+                            link="https://6167prd-plano.cloudmv.com.br/mvsaudeweb/#/guia-medico"
+                            targetBlank
                         />
                     </div>
                     <div className="flex relative justify-center h-80 lg:h-auto items-center w-full py-5 lg:w-2/3 bg-white rounded-[20px]">

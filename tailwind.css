@@ -166,19 +166,19 @@
 }
 
 .card-slide-left {
-  animation: cardSlideLeft 0.5s forwards;
+  animation: cardSlideLeft 1s forwards;
 }
 
 .card-slide-right {
-  animation: cardSlideRight 0.5s forwards;
+  animation: cardSlideRight 1s forwards;
 }
 
 .card-slide-up {
-  animation: cardSlideUp 0.5s forwards;
+  animation: cardSlideUp 1s forwards;
 }
 
 .card-slide-down {
-  animation: cardSlideDown 0.5s forwards;
+  animation: cardSlideDown 1s forwards;
 }
 
 /*O código abaixo é para a tag hr na página de notícias*/

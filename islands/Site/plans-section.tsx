@@ -36,7 +36,7 @@ export default function PlansSectionIsland() {
                                 Escolha um plano<br />{" "}
                                 para estar sempre junto<br /> de você.
                             </span>
-                            <div className="flex gap-6 items-center">
+                            <div className="flex gap-6 items-center z-50">
                                 <label
                                     className="hidden lg:flex text-orange1 text-nowrap"
                                     htmlFor="regionValue"

@@ -20,7 +20,7 @@ interface IheaderOptions {
     title: string;
     link: string;
     target: string;
-    menuItems: { text: string; link: string }[];
+    menuItems: { text: string; link: string; target: string }[];
     logo: string;
     textColor: "white" | "darkPink";
 }
@@ -34,9 +34,13 @@ const headerOptions: IheaderOptions[] = [
         link: "/",
         target: "_self",
         menuItems: [
-            { text: "Quem somos", link: "/quem-somos" },
-            { text: "Nossos planos", link: "/nossos-planos" },
-            { text: "Jornada de Cuidado", link: "/jornada-de-cuidado" },
+            { text: "Quem somos", link: "/quem-somos", target: "_self" },
+            { text: "Nossos planos", link: "/nossos-planos", target: "_self" },
+            {
+                text: "Jornada de Cuidado",
+                link: "/jornada-de-cuidado",
+                target: "_self",
+            },
         ],
         logo: "/Site/default_logo_aurora.svg",
         textColor: "white",
@@ -49,9 +53,13 @@ const headerOptions: IheaderOptions[] = [
         link: "https://6167prd-plano.cloudmv.com.br/mvsaudeweb/#/login/empresa",
         target: "_blank",
         menuItems: [
-            { text: "Quem somos", link: "/quem-somos" },
-            { text: "Nossos planos", link: "/nossos-planos" },
-            { text: "Jornada de Cuidado", link: "/jornada-de-cuidado" },
+            { text: "Quem somos", link: "/quem-somos", target: "_self" },
+            { text: "Nossos planos", link: "/nossos-planos", target: "_self" },
+            {
+                text: "Jornada de Cuidado",
+                link: "/jornada-de-cuidado",
+                target: "_self",
+            },
         ],
         logo: "/Site/default_logo_aurora.svg",
         textColor: "white",
@@ -64,11 +72,24 @@ const headerOptions: IheaderOptions[] = [
         link: "/corretor",
         target: "_self",
         menuItems: [
-            { text: "Seja um Corretor", link: "/seja-um-corretor" },
-            { text: "Quem somos", link: "/quem-somos" },
-            { text: "Nossos planos", link: "/nossos-planos" },
-            { text: "Vendas", link: "#" },
-            { text: "Materiais de Apoio", link: "/materiais-de-apoio" },
+            {
+                text: "Seja um Corretor",
+                link: "/seja-um-corretor",
+                target: "_self",
+            },
+            { text: "Quem somos", link: "/quem-somos", target: "_self" },
+            { text: "Nossos planos", link: "/nossos-planos", target: "_self" },
+            {
+                text: "Vendas",
+                link:
+                    "https://souaurorasaude.planium.io/web/login/?target=venda",
+                target: "_blank",
+            },
+            {
+                text: "Materiais de Apoio",
+                link: "/materiais-de-apoio",
+                target: "_self",
+            },
         ],
         logo: "/Site/default_logo_aurora.svg",
         textColor: "white",
@@ -81,9 +102,17 @@ const headerOptions: IheaderOptions[] = [
         link: "https://6167prd-plano.cloudmv.com.br/mvautorizadorguias/",
         target: "_blank",
         menuItems: [
-            { text: "Seja um Prestador", link: "/seja-um-prestador" },
-            { text: "Nossos planos", link: "/nossos-planos" },
-            { text: "Cuidado Integrado", link: "/cuidado-integrado" },
+            {
+                text: "Seja um Prestador",
+                link: "/seja-um-prestador",
+                target: "_self",
+            },
+            { text: "Nossos planos", link: "/nossos-planos", target: "_self" },
+            {
+                text: "Cuidado Integrado",
+                link: "/cuidado-integrado",
+                target: "_self",
+            },
         ],
         logo: "/Site/logo_aurora_prestador.svg",
         textColor: "darkPink",

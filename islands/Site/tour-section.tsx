@@ -213,9 +213,11 @@ export default function TourSectionIsland(
                 <span className="text-pink1 font-bold text-xl">
                     Ficou com alguma outra dúvida?
                 </span>
-                <button className="bg-pink6 text-white rounded-[20px] px-5 py-2">
-                    Fale com a Aurora
-                </button>
+                <a href="/fale-com-a-gente">
+                    <button className="bg-pink6 text-white rounded-[20px] px-5 py-2">
+                        Fale com a Aurora
+                    </button>
+                </a>
             </div>
         </>
     );
@@ -409,9 +411,11 @@ export default function TourSectionIsland(
                 <span className="text-pink1 font-bold text-xl">
                     Ficou com alguma outra dúvida?
                 </span>
-                <button className="bg-pink6 text-white rounded-[20px] px-5 py-2">
-                    Fale com a Aurora
-                </button>
+                <a href="/fale-com-a-gente">
+                    <button className="bg-pink6 text-white rounded-[20px] px-5 py-2">
+                        Fale com a Aurora
+                    </button>
+                </a>
             </div>
         </>
     );

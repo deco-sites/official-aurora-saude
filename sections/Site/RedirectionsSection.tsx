@@ -45,34 +45,61 @@ export default function RedirectionsSection(
                     </span>
                 </div>
                 <div className="flex flex-col gap-4 lg:flex-row justify-between">
-                    <button className="bg-white rounded-full py-6 px-10 text-pink1 flex justify-between gap-9 font-medium lg:font-normal">
-                        Jornada de Cuidado
-                        <Icon
-                            class="h-auto"
-                            id="PinkArrowDown"
-                            strokeWidth={1}
-                            size={20}
-                        />
-                    </button>
-                    <button className="bg-white rounded-full py-6 px-10 text-pink1 flex justify-between gap-9 font-medium lg:font-normal">
-                        App e Portal
-                        <Icon
-                            class="h-auto"
-                            id="PinkArrowDown"
-                            strokeWidth={1}
-                            size={20}
-                        />
-                    </button>
-                    <button className="bg-white rounded-full py-6 px-10 text-pink1 flex justify-between gap-9 font-medium lg:font-normal">
-                        Dúvidas Frequentes
-                        <Icon
-                            class="h-auto"
-                            id="PinkArrowDown"
-                            strokeWidth={1}
-                            size={20}
-                        />
-                    </button>
+                    <a>
+                        <button className="w-full bg-white rounded-full py-6 px-10 text-pink1 flex justify-between gap-9 font-medium lg:font-normal whitespace-nowrap">
+                            Jornada de Cuidado
+                            <Icon
+                                class="h-auto"
+                                id="PinkArrowDown"
+                                strokeWidth={1}
+                                size={20}
+                            />
+                        </button>
+                    </a>
+                    <a
+                        href={`${
+                            device === "mobile"
+                                ? "https://onelink.to/n5nzam"
+                                : "https://aurorasaude.plataforma-beneficiario.mosiaomnichannel.com.br/#/"
+                        }`}
+                        target="_blank"
+                    >
+                        <button className="w-full bg-white rounded-full py-6 px-10 text-pink1 flex justify-between gap-9 font-medium lg:font-normal whitespace-nowrap">
+                            App e Portal
+                            <Icon
+                                class="h-auto"
+                                id="PinkArrowDown"
+                                strokeWidth={1}
+                                size={20}
+                            />
+                        </button>
+                    </a>
+                    <a href="/perguntas-frequentes">
+                        <button className="w-full bg-white rounded-full py-6 px-10 text-pink1 flex justify-between gap-9 font-medium lg:font-normal whitespace-nowrap">
+                            Dúvidas Frequentes
+                            <Icon
+                                class="h-auto"
+                                id="PinkArrowDown"
+                                strokeWidth={1}
+                                size={20}
+                            />
+                        </button>
+                    </a>
                 </div>
+                {
+                    /*
+                <div className="flex justify-end">
+                    <button className="flex gap-2 bg-pink1 text-gray4 border border-gray4 rounded-full py-4 px-7">
+                        <Icon
+                            class="h-auto text-gray4"
+                            id="GrayChatIcon"
+                            strokeWidth={1}
+                            size={24}
+                        />
+                        Chat
+                    </button>
+                </div>*/
+                }
             </div>
         </>
     );
