@@ -7,7 +7,7 @@ export const handleSearchClick = async (e, expandedInput) => {
     if (expandedInput.value === false) {
         expandedInput.value = true;
     } else {
-        console.log("Faz a pesquisa");
+        //console.log("Faz a pesquisa");
         await invoke.site.actions.search();
         const link = `/pesquisa?query=${searchedWord.value}`;
         globalThis.location.replace(link);

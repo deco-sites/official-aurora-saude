@@ -52,7 +52,7 @@ export default function PlansSectionIsland(
         green: "text-aquagreen2",
         black: "text-black text-opacity-45",
     };
-    console.log("Regiões aqui:", regions);
+    //console.log("Regiões aqui:", regions);
 
     const [regionValue, setRegionValue] = useState(0);
 

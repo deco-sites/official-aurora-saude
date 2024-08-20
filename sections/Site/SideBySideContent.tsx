@@ -72,7 +72,7 @@ export default function SideBySideContent({
         desktop,
     } = image;
 
-    console.log("Device:", device);
+    //console.log("Device:", device);
 
     return (
         <div className="flex justify-center px-10 lg:px-0 bg-gray4">

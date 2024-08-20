@@ -38,10 +38,10 @@ const saveLead = async (
     const { supabaseClient } = ctx;
     const { thirdStepSignal } = useStepThreeInputValues();
 
-    console.log("Chamou a action SaveLead", props.leadToSave);
-    console.log("props.dependentLead", props.dependentLead);
-    console.log("props.whoUseThePlan", props.whoUseThePlan);
-    console.log("props.activeOption", props.activeOption);
+    //console.log("Chamou a action SaveLead", props.leadToSave);
+    //console.log("props.dependentLead", props.dependentLead);
+    //console.log("props.whoUseThePlan", props.whoUseThePlan);
+    //console.log("props.activeOption", props.activeOption);
 
     const { data, error } = await supabaseClient
         .from("leads")
@@ -53,11 +53,8 @@ const saveLead = async (
     } else {
         console.log("Data da saveLeads", data);
         const cd_lead = data?.[0].cd_lead;
-        console.log("cd_lead gerado", cd_lead);
-        console.log(
-            "Verificando 1",
-            thirdStepSignal.value.whoUseThePlan,
-        );
+        //console.log("cd_lead gerado", cd_lead);
+        //console.log("Verificando 1", thirdStepSignal.value.whoUseThePlan);
         // Verifica se há dependentes para inserir
         if (
             (((props.activeOption === 1 &&
@@ -72,13 +69,13 @@ const saveLead = async (
                 ...dependent,
                 cd_lead, // Adiciona a propriedade cd_lead
             }));
-            console.log("updatedDependentLead", updatedDependentLead);
+            //console.log("updatedDependentLead", updatedDependentLead);
             saveLeadDependent(updatedDependentLead);
         }
     }
 
     async function saveLeadDependent(dependentLead) {
-        console.log("Chamou a SaveLeadDependent", props.dependentLead);
+        //console.log("Chamou a SaveLeadDependent", props.dependentLead);
 
         const { data, error } = await supabaseClient
             .from("lead_dependente")

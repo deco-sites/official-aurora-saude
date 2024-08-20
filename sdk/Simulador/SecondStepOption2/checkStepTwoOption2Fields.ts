@@ -19,10 +19,10 @@ export const CheckFields = () => {
   //activeStep.value - É o passo atual do formulário
   //activeOption.value - É a opção escolhida no primeiro step
 
-  console.log("Razão Social", socialReasonValue.value);
-  console.log("Nome2", name2Value.value);
-  console.log("Tel2", tel2Value.value);
-  console.log("Email2", email2Value.value);
+  //console.log("Razão Social", socialReasonValue.value);
+  //console.log("Nome2", name2Value.value);
+  //console.log("Tel2", tel2Value.value);
+  //console.log("Email2", email2Value.value);
 
   changeStep(activeStep.value, "increase");
 };

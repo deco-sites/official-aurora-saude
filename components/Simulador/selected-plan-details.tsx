@@ -63,7 +63,7 @@ export default function SelectedPlanDetails(
     item.range === "59 anos ou mais"
   );
 
-  console.log("CHEGOU NO FILHO", priceRanges);
+  //console.log("CHEGOU NO FILHO", priceRanges);
 
   return (
     <>

@@ -23,7 +23,7 @@ export default function HeaderMobileMenuBtn({ option }) {
         4: "bg-yellow3",
     };
 
-    console.log("Aqui Erick", option);
+    //console.log("Aqui Erick", option);
 
     return (
         <>

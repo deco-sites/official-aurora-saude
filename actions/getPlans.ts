@@ -12,7 +12,7 @@ const getPlans = async (
     ctx: AppContext,
 ) => {
     const { supabaseClient } = ctx;
-    console.log("PROPS da GETPLANS", props.age_range);
+    //console.log("PROPS da GETPLANS", props.age_range);
     const age_range = "19 a 23 anos";
     const city_code = 310620;
     const plan_type = 3;

@@ -42,6 +42,8 @@ export default function FormStepFiveIsland() {
         alreadyHavePlanValue,
     } = useStepTwoOption1InputValues(); //Step 2
 
+    {
+        /*
     console.log(
         "Step2",
         nameValue.value,
@@ -50,7 +52,8 @@ export default function FormStepFiveIsland() {
         cityValue.value,
         ageRangeValue.value,
         alreadyHavePlanValue.value,
-    );
+    );*/
+    }
 
     //Step 2 option 2
     const {
@@ -62,41 +65,44 @@ export default function FormStepFiveIsland() {
         email2Value,
     } = useStepTwoOption2InputValues();
 
+    {
+        /*
     console.log(
         "step2 option 2",
         socialReasonValue.value,
         name2Value.value,
         tel2Value.value,
         email2Value.value,
-    );
+    );*/
+    }
 
     const {
         thirdStepSignal,
     } = useStepThreeInputValues(); //Step 3
+    {
+        /*
     console.log(
         "step 3",
         thirdStepSignal.value.whoUseThePlan,
         thirdStepSignal.value.beneficiariesValuesArr,
-    );
+    );*/
+    }
 
     const { activePlanBtn } = useSelectPlanButtons(); //Step 4
-    console.log("Step4", activePlanBtn.value);
+    //console.log("Step4", activePlanBtn.value);
 
     const { selectedPlan, transformedArray } = useSelectPlan();
 
-    console.log("Opção escolhida na primeira tela:", activeOption.value);
-    console.log("Estado digitado na segunda tela:", ufValue.value);
-    console.log("Cidade digitada na segunda tela:", cityValue.value);
-    console.log("Estado digitado na segunda tela:", ufValue2.value);
-    console.log("Cidade digitada na segunda tela:", cityValue2.value);
-    console.log("Idade selecionada na segunda tela:", ageRangeValue.value);
-    console.log("Quem utilizará o plano:", thirdStepSignal.value.whoUseThePlan);
-    console.log(
-        "Array de Beneficiários:",
-        thirdStepSignal.value.beneficiariesValuesArr,
-    );
-    console.log("Id do plano selecionado:", selectedPlan.value);
-    console.log("Planos puxados do banco:", transformedArray.value);
+    //console.log("Opção escolhida na primeira tela:", activeOption.value);
+    //console.log("Estado digitado na segunda tela:", ufValue.value);
+    //console.log("Cidade digitada na segunda tela:", cityValue.value);
+    //console.log("Estado digitado na segunda tela:", ufValue2.value);
+    //console.log("Cidade digitada na segunda tela:", cityValue2.value);
+    //console.log("Idade selecionada na segunda tela:", ageRangeValue.value);
+    //console.log("Quem utilizará o plano:", thirdStepSignal.value.whoUseThePlan);
+    //console.log("Array de Beneficiários:", thirdStepSignal.value.beneficiariesValuesArr);
+    //console.log("Id do plano selecionado:", selectedPlan.value);
+    //console.log("Planos puxados do banco:", transformedArray.value);
 
     // Primeiro useEffect para atualizar cd_plano e filledRanges
     useEffect(() => {
@@ -106,7 +112,7 @@ export default function FormStepFiveIsland() {
 
         if (selectedPlanObject) {
             cd_plano.value = selectedPlanObject.cd_plano;
-            console.log("CD_PLANO", cd_plano.value);
+            //console.log("CD_PLANO", cd_plano.value);
         } else {
             console.log("Plano não encontrado");
         }
@@ -115,10 +121,7 @@ export default function FormStepFiveIsland() {
             (item) => item.range,
         );
         filledRanges.value = [...new Set(filledRanges.value)];
-        console.log(
-            "Array de idades no formato que preciso",
-            filledRanges.value,
-        );
+        //console.log("Array de idades no formato que preciso", filledRanges.value);
     }, [selectedPlan.value, transformedArray.value, thirdStepSignal.value]);
 
     // Segundo useEffect para chamar fetchPrices quando cd_plano e filledRanges estiverem prontos
@@ -141,7 +144,7 @@ export default function FormStepFiveIsland() {
                         : filledRanges.value,
             });
 
-            console.log("AQUI ESTÃO OS PRICES:", prices.data);
+            //console.log("AQUI ESTÃO OS PRICES:", prices.data);
 
             {
                 /*
@@ -152,9 +155,9 @@ export default function FormStepFiveIsland() {
             }
 
             fetchedPrices.value = prices.data;
-            console.log("Fetched Prices antes do update:", fetchedPrices.value);
+            //console.log("Fetched Prices antes do update:", fetchedPrices.value);
             updatePricesBasedOnRange(fetchedPrices.value);
-            console.log("Fetched Prices:", fetchedPrices.value);
+            //console.log("Fetched Prices:", fetchedPrices.value);
         } catch (error) {
             console.error("Erro ao buscar preços:", error);
         } finally {
@@ -188,7 +191,7 @@ export default function FormStepFiveIsland() {
 
     function updatePricesBasedOnRange(fetchedPrices) {
         fetchedPrices.forEach((priceObj) => {
-            console.log("priceObj:", priceObj);
+            //console.log("priceObj:", priceObj);
             switch (priceObj.faixa) {
                 case "0 a 18 anos":
                     zeroTo18Prices.value = priceObj.valor_mensalidade;
@@ -235,21 +238,18 @@ export default function FormStepFiveIsland() {
     );
     propertyPrice.value = selectedObject?.price;
 
-    console.log(
-        "Faixa de preço da idade de quem preencheu:",
-        propertyPrice.value,
-    );
-    console.log("Fetched Prices:", fetchedPrices.value);
-    console.log("Preço 0-18:", zeroTo18Prices.value);
-    console.log("Preço 19-23:", nineteenTo23Prices.value);
-    console.log("Preço 24-28:", twentyFourTo28Prices.value);
-    console.log("Preço 29-33:", twentyNineTo33Prices.value);
-    console.log("Preço 34-38:", thirtyFourTo38Prices.value);
-    console.log("Preço 39-43:", thirtyNineTo43Prices.value);
-    console.log("Preço 44-48:", fortyFourTo48Prices.value);
-    console.log("Preço 49-53:", fortyNineTo53Prices.value);
-    console.log("Preço 54-58:", fiftyFourTo58Prices.value);
-    console.log("Preço 59-mais:", fiftyNinePlusPrices.value);
+    //console.log("Faixa de preço da idade de quem preencheu:", propertyPrice.value);
+    //console.log("Fetched Prices:", fetchedPrices.value);
+    //console.log("Preço 0-18:", zeroTo18Prices.value);
+    //console.log("Preço 19-23:", nineteenTo23Prices.value);
+    //console.log("Preço 24-28:", twentyFourTo28Prices.value);
+    //console.log("Preço 29-33:", twentyNineTo33Prices.value);
+    //console.log("Preço 34-38:", thirtyFourTo38Prices.value);
+    //console.log("Preço 39-43:", thirtyNineTo43Prices.value);
+    //console.log("Preço 44-48:", fortyFourTo48Prices.value);
+    //console.log("Preço 49-53:", fortyNineTo53Prices.value);
+    //console.log("Preço 54-58:", fiftyFourTo58Prices.value);
+    //console.log("Preço 59-mais:", fiftyNinePlusPrices.value);
 
     const priceRanges = {
         propertyPrice,
@@ -273,20 +273,17 @@ export default function FormStepFiveIsland() {
     const cd_tab_preco = signal(null);
     const cd_faixa = useSignal(null);
     const { ageRangesSignal, ufsSignal } = useLoaderInfos();
-    console.log("Aqui tenho as faixas e códigos", ageRangesSignal.value);
-    console.log("Aqui tenho a idade do usuário", ageRangeValue.value);
+    //console.log("Aqui tenho as faixas e códigos", ageRangesSignal.value);
+    //console.log("Aqui tenho a idade do usuário", ageRangeValue.value);
     cd_faixa.value = ageRangesSignal.value.find((range) =>
         range.value === ageRangeValue.value
     );
     //console.log("Código da faixa do usuário", cd_faixa.value.cd_faixa);
 
     function sumTotalofBeneficiaries(beneficiaries, prices) {
-        console.log(
-            "Array de Beneficiários:",
-            thirdStepSignal.value.beneficiariesValuesArr,
-        );
-        console.log("Fetched Prices dentro da função:", fetchedPrices.value);
-        console.log("CD_TAB_PRECO:", fetchedPrices.value?.[0].cd_tab_preco);
+        //console.log("Array de Beneficiários:", thirdStepSignal.value.beneficiariesValuesArr);
+        //console.log("Fetched Prices dentro da função:", fetchedPrices.value);
+        //console.log("CD_TAB_PRECO:", fetchedPrices.value?.[0].cd_tab_preco);
         //cd_tab_preco.value = fetchedPrices.value?.[0].cd_tab_preco;
 
         // Primeiro, criar um objeto para armazenar a soma total de beneficiários por faixa etária
@@ -304,7 +301,7 @@ export default function FormStepFiveIsland() {
             {},
         );
 
-        console.log("totalBeneficiariesByRange:", totalBeneficiariesByRange);
+        //console.log("totalBeneficiariesByRange:", totalBeneficiariesByRange);
 
         // Agora, calcular o valor total somando os preços multiplicados pelos totais de beneficiários
         const totalValue = Object.keys(totalBeneficiariesByRange).reduce(
@@ -342,7 +339,7 @@ export default function FormStepFiveIsland() {
         }
     }
     const finalValue = returnTotalValue();
-    console.log("Valor total dos beneficiários:", finalValue);
+    //console.log("Valor total dos beneficiários:", finalValue);
 
     const cd_cidade = useSignal(null);
     useEffect(() => {
@@ -354,7 +351,7 @@ export default function FormStepFiveIsland() {
                 cityCode = await getCityCode(cityValue2.value);
             }
             cd_cidade.value = cityCode;
-            console.log("CD_CIDADE AQUI ERICK", cd_cidade.value);
+            //console.log("CD_CIDADE AQUI ERICK", cd_cidade.value);
         }
 
         fetchCityCode();
@@ -437,7 +434,7 @@ export default function FormStepFiveIsland() {
                 const dependentRange = ageRangesSignal.value.find((range) =>
                     range.value === dependent.range
                 );
-                console.log("DEPENDENT RANGE", dependent.range);
+                //console.log("DEPENDENT RANGE", dependent.range);
 
                 // Encontrando o preço correspondente à faixa de idade
                 const priceData = fetchedPrices.value?.find((price) =>
@@ -525,7 +522,7 @@ export default function FormStepFiveIsland() {
                                         dependentLead={leads_dependents}
                                         whoUseThePlan={thirdStepSignal.value
                                             .whoUseThePlan}
-                                            activeOption={activeOption.value}
+                                        activeOption={activeOption.value}
                                     />
                                     <NewSimulationButton />
                                 </div>

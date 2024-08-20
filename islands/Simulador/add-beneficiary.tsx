@@ -19,7 +19,7 @@ export default function AddBeneficiary() {
   }
 
   const handleAddInput = () => {
-    console.log("ESTOU AQUI", thirdStepSignal.value.beneficiariesValuesArr);
+    //console.log("ESTOU AQUI", thirdStepSignal.value.beneficiariesValuesArr);
 
     const newId = thirdStepSignal.value.beneficiariesValuesArr.length > 0
       ? thirdStepSignal.value

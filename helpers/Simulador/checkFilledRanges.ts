@@ -5,12 +5,9 @@ const { ageRangeValue } = useStepTwoOption1InputValues(); //Idade de quem preenc
 const { thirdStepSignal } = useStepThreeInputValues();
 
 export function CheckFilledRanges() {
-    console.log("IDADE DE QUEM PREENCHEU", ageRangeValue.value);
-    console.log(
-        "IDADES DOS BENEFICIÁRIOS",
-        thirdStepSignal.value.beneficiariesValuesArr,
-    );
-    console.log("Quem vai usar o plano", thirdStepSignal.value.whoUseThePlan);
+    //console.log("IDADE DE QUEM PREENCHEU", ageRangeValue.value);
+    //console.log("IDADES DOS BENEFICIÁRIOS", thirdStepSignal.value.beneficiariesValuesArr);
+    //console.log("Quem vai usar o plano", thirdStepSignal.value.whoUseThePlan);
 
     const ageRanges = [
         "0 a 18 anos",
@@ -33,13 +30,13 @@ export function CheckFilledRanges() {
     if (thirdStepSignal.value.whoUseThePlan !== "outra_pessoa") {
         combinedRanges = [ageRangeValue.value, ...combinedRanges];
     }
-    console.log("COMBINEDRANGES", combinedRanges);
+    //console.log("COMBINEDRANGES", combinedRanges);
 
     const validRanges = combinedRanges.filter((range) => range !== "");
 
     // Se não houver faixas válidas, pode-se retornar um valor padrão ou tratar isso de outra forma
     if (validRanges.length === 0) {
-        console.log("Nenhuma faixa válida encontrada.");
+        //console.log("Nenhuma faixa válida encontrada.");
         return null; // ou algum valor padrão
     }
     // Encontre a menor faixa presente
@@ -49,6 +46,6 @@ export function CheckFilledRanges() {
             : min;
     }, validRanges[0]);
 
-    console.log("MENOR FAIXA DE IDADE PRESENTE:", minRange);
+    //console.log("MENOR FAIXA DE IDADE PRESENTE:", minRange);
     return minRange;
 }

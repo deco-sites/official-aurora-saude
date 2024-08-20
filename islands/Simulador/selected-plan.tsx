@@ -68,7 +68,7 @@ export default function SelectedPlan(
 
   ${simulationType[activeOption.value]} */
   }
-  console.log("Preços da faixa pro e-mail:", fetchedPrices.value);
+  //console.log("Preços da faixa pro e-mail:", fetchedPrices.value);
 
   const sendData = `
   Tipo de simulação: Você e sua família
@@ -118,7 +118,7 @@ ${
 `;
 
   const sendEmailToUser = async (e) => {
-    console.log("Envia e-mail pro usuario");
+    //console.log("Envia e-mail pro usuario");
     await invoke.site.actions.sendEmail({
       recipientsEmail: emailValue.value,
       subject: "Simulação - Aurora",

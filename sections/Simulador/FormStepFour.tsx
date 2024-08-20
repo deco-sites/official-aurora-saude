@@ -105,17 +105,17 @@ export default function FormStepFour() {
       };
     });
 
-    console.log("returnedArr", returnedArr);
+    //console.log("returnedArr", returnedArr);
     return returnedArr;
   }
 
   const handleGetPlans = async () => {
-    console.log("Chamou a handleGetPlans");
+    //console.log("Chamou a handleGetPlans");
     const minRange = CheckFilledRanges(); //Essa função retorna a menor idade preenchida
-    console.log("Menor idade no meu componente", minRange);
-    console.log("Opção selecionada na primeira tela:", activeOption.value);
+    //console.log("Menor idade no meu componente", minRange);
+    //console.log("Opção selecionada na primeira tela:", activeOption.value);
 
-    console.log("Cidade selecionada", cityValue.value.toUpperCase());
+    //console.log("Cidade selecionada", cityValue.value.toUpperCase());
 
     // Definir a cidade selecionada com base no valor de activeOption.value
     let selectedCity;
@@ -131,7 +131,7 @@ export default function FormStepFour() {
     const city_code = await invoke.site.actions.getCityCode({
       selectedCity: selectedCity,
     });
-    console.log("Código da cidade selecionada", city_code.data[0].cd_cidade);
+    //console.log("Código da cidade selecionada", city_code.data[0].cd_cidade);
 
     const plan_type = activeOption.value === 1 ? 3 : 2;
     setLoading(true);
@@ -143,7 +143,7 @@ export default function FormStepFour() {
         city_code: city_code.data[0].cd_cidade,
       });
       transformedArray.value = transformData(fetchedPlans.data);
-      console.log("fetchedPlans", fetchedPlans);
+      //console.log("fetchedPlans", fetchedPlans);
     } catch (error) {
       console.error("Erro ao buscar os planos:", error);
     } finally {
@@ -192,7 +192,7 @@ export default function FormStepFour() {
     }
   }, [activePlanBtn.value]);
 
-  console.log("transformedArray final", transformedArray.value);
+  //console.log("transformedArray final", transformedArray.value);
 
   return (
     <>

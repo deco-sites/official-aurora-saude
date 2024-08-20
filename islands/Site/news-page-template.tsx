@@ -7,8 +7,8 @@ import { useId } from "https://esm.sh/v128/preact@10.19.6/compat/src/index.js";
 export default function NewsPageTemplateIsland(
     { image, date, title, text, relatedsNews, galleryImages, device },
 ) {
-    console.log("lucca", galleryImages);
-    console.log("Device:", device);
+    //console.log("Imagens", galleryImages);
+    //console.log("Device:", device);
 
     return (
         <>

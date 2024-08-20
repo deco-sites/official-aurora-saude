@@ -1,7 +1,7 @@
 import LineTitle from "site/components/Site/Table/line-title.tsx";
 
 export default function TableTopic({ topic }) {
-    console.log("luquinhaaa", topic);
+    //console.log("Tópico", topic);
     return (
         <>
             <div className="overflow-x-auto px-14 py-7">

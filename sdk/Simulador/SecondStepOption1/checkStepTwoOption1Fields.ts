@@ -27,14 +27,14 @@ export const CheckFields = () => {
   //activeStep.value - É o passo atual do formulário
   //activeOption.value - É a opção escolhida no primeiro step
 
-  console.log("Nome", nameValue.value);
-  console.log("CPF:", cpfValue.value);
-  console.log("Email", emailValue.value);
-  console.log("Tel", telValue.value);
-  console.log("UF", ufValue.value);
-  console.log("Cidade", cityValue.value);
-  console.log("Faixa Etária", ageRangeValue.value);
-  console.log("Possui plano", alreadyHavePlanValue.value);
+  //console.log("Nome", nameValue.value);
+  //console.log("CPF:", cpfValue.value);
+  //console.log("Email", emailValue.value);
+  //console.log("Tel", telValue.value);
+  //console.log("UF", ufValue.value);
+  //console.log("Cidade", cityValue.value);
+  //console.log("Faixa Etária", ageRangeValue.value);
+  //console.log("Possui plano", alreadyHavePlanValue.value);
 
   if (activeStep.value === 1) changeStep(activeStep.value, "increase");
 

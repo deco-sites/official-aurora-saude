@@ -37,7 +37,7 @@ export default function PlanCard({
   const { activePlanBtn } = useSelectPlanButtons();
 
   const handleSelectPlan = (id: number) => {
-    console.log("CHAMOU AQUI", selectedPlan.value);
+    //console.log("CHAMOU AQUI", selectedPlan.value);
 
     activePlanBtn.value = id;
     selectedPlan.value = id;

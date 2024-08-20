@@ -14,7 +14,7 @@ export interface Props {
 }
 
 export default function LatestNewsIsland({ newsArr }: Props) {
-    console.log("Notícias aqui:", newsArr);
+    //console.log("Notícias aqui:", newsArr);
     return (
         <>
             {newsArr?.map((noticia) => (

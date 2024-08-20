@@ -18,7 +18,7 @@ const saveLeadDependents = async (
 ) => {
     const { supabaseClient } = ctx;
 
-    console.log("Chamou a SaveLeadDependent", props.dependentLead);
+    //console.log("Chamou a SaveLeadDependent", props.dependentLead);
 
     const { data, error } = await supabaseClient
         .from("lead_dependente")

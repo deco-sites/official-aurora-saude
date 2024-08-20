@@ -26,7 +26,7 @@ export default function BrokersLoginFormIsland() {
 
         if (valid) {
             // Submeta o formulário ou execute outras ações
-            console.log("Formulário enviado com sucesso!");
+            //console.log("Formulário enviado com sucesso!");
         }
     };
     return (

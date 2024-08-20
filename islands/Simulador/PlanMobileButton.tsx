@@ -23,10 +23,10 @@ export default function PlanMobileButton(
 
   const handleClick = () => {
     activePlanBtn.value = id;
-    console.log("AQUI 1 - ", activePlanBtn.value);
+    //console.log("AQUI 1 - ", activePlanBtn.value);
 
     selectedPlan.value = id;
-    console.log("AQUI 2 - ", selectedPlan.value);
+    //console.log("AQUI 2 - ", selectedPlan.value);
 
     scrollToCard(id);
   };

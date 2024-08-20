@@ -20,9 +20,9 @@ export default function NextStepBtn({ options, executionFunc }: INextStep) { //A
       className="bg-orange1 lg:bg-transparent rounded-full flex items-center justify-center px-8 py-3 lg:p-0 gap-2 lg:gap-6"
       onClick={(e) => {
         console.log(e);
-        console.log("clicou", activeOption.value);
-        console.log("envio p servidor", options[activeOption.value - 1]);
-        console.log("aqqui", options);
+        //console.log("clicou", activeOption.value);
+        //console.log("envio p servidor", options[activeOption.value - 1]);
+        //console.log("aqqui", options);
         //CheckFields();
         if (executionFunc) {
           executionFunc();
@@ -39,7 +39,7 @@ export default function NextStepBtn({ options, executionFunc }: INextStep) { //A
           (previousActiveOption.value !== activeOption.value)
         ) {
           previousActiveOption.value = activeOption.value;
-          console.log("Passou pro step2", previousActiveOption.value);
+          //console.log("Passou pro step2", previousActiveOption.value);
         }
 
         //changeStep(activeStep.value, "increase"); //ESSE É O QUE ESTAVA FUNCIONANDO PERFEITAMENTE

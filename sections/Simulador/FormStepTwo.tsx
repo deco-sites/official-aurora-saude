@@ -26,7 +26,7 @@ export default function FormStepTwo({ Component }: FormStepTwoProps) {
 
   const { activeOption } = useUI();
 
-  console.log("TESTE 1 - BOTÃO VOLTAR", activeStep.value);
+  //console.log("TESTE 1 - BOTÃO VOLTAR", activeStep.value);
   return (
     <>
       <div className="flex justify-center lg:width-calc mt-32">

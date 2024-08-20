@@ -9,7 +9,7 @@ import { useSelectPlanButtons } from "site/sdk/Simulador/useSelectPlanButtons.ts
 import { useSelectPlan } from "site/sdk/Simulador/useSelectPlan.ts";
 
 export default function ClearForm() {
-    console.log("Limpando os campos do formulário");
+    //console.log("Limpando os campos do formulário");
 
     const {
         nameValue,

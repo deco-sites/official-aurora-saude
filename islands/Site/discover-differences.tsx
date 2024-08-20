@@ -6,7 +6,7 @@ const CardColors = {
 };
 
 export default function DiscoverDifferencesIsland({ cards }) {
-    console.log("aquii", cards);
+    //console.log("aquii", cards);
     return (
         <>
             {cards.map((card, index) => (

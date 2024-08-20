@@ -35,7 +35,6 @@ export default function InputNumber(
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log("Bateu aki");
     const value = parseInt(e.target.value);
 
     if (inputValueSetter) {

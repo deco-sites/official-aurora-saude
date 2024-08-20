@@ -41,7 +41,7 @@ export default function PlansSection(
 
 export const loader = (props: Props, req: Request, ctx: FnContext) => {
     const cities = props.regions.map((region) => (region.region));
-    console.log("cities loader", cities);
+    //console.log("cities loader", cities);
     return {
         ...props,
         cities,

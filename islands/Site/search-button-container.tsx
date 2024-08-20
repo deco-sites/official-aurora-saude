@@ -24,7 +24,7 @@ export default function SearchButtonContainer({ option, expandedInput }) {
                     value={searchedWord.value}
                     onChange={(e) => {
                         searchedWord.value = e.target.value;
-                        console.log("searchWord", searchedWord.value);
+                        //console.log("searchWord", searchedWord.value);
                     }}
                     onClick={(e) => e.stopPropagation()}
                     onKeyDown={(e) => {

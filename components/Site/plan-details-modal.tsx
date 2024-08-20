@@ -5,8 +5,6 @@ import Icon from "site/components/ui/Icon.tsx";
 export default function PlanDetailsModal(
     { isModalOpen, setIsModalOpen, plans },
 ) {
-    console.log("pezinho do lucca", plans);
-
     useEffect(() => {
         if (isModalOpen) {
             document.body.classList.add("overflow-hidden");

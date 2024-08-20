@@ -66,7 +66,7 @@ export const loader = async (props: Props, req: Request, ctx: AppContext) => {
 
     try {
         const { hits } = await algolia.search(searchedWord);
-        console.log("Hits:", hits);
+        //console.log("Hits:", hits);
         resultsFound = hits;
         //return hits;
     } catch (error) {

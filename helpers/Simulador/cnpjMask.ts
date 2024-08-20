@@ -1,5 +1,5 @@
 export const cnpjMask = (cnpj: string): string => {
-  console.log("CNPJ:", cnpj);
+  //console.log("CNPJ:", cnpj);
   {
     /*
   cnpj = cnpj.replace(/\D/g, "");

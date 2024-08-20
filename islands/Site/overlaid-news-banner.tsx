@@ -28,9 +28,9 @@ export interface OverlaidNewsBannerIslandProps {
 export default function OverlaidNewsBannerIsland(
     { featuredNews, carouselNews, device }: OverlaidNewsBannerIslandProps,
 ) {
-    console.log("Device:", device);
-    console.log("Notícia Destaque", featuredNews);
-    console.log("Array de Notícias", carouselNews);
+    //console.log("Device:", device);
+    //console.log("Notícia Destaque", featuredNews);
+    //console.log("Array de Notícias", carouselNews);
 
     const id = useId();
     const [activeNewsLink, setActiveNewsLink] = useState("");
