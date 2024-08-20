@@ -50,7 +50,7 @@ function BannerItem(
     return (
         <>
             {device !== "desktop" && (
-                <div className="flex justify-center w-full h-full px-14 w-full">
+                <div className="flex justify-center w-full h-full px-14">
                     <Image
                         class="object-contain"
                         loading={lcp ? "eager" : "lazy"}
