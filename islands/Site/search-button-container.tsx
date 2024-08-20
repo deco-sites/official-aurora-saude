@@ -52,6 +52,7 @@ export default function SearchButtonContainer({ option, expandedInput }) {
                                     ? "text-pink2"
                                     : "text-white"
                             } font-bold text-lg font-sora`}
+                            target={item.target}
                         >
                             {item.text}
                         </a>

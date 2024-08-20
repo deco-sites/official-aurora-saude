@@ -1,19 +1,26 @@
 import { useSignal } from "@preact/signals";
+import { useRef } from "preact/hooks";
 
 export default function QuestionBox({ question, index }) {
     const activeAsk = useSignal<number | null>(null);
+    const questionRef = useRef<HTMLDivElement | null>(null);
 
     function handleClickAskIcon(index: number) {
         if (activeAsk.value === index) {
             activeAsk.value = null;
         } else {
             activeAsk.value = index;
+            questionRef.current?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
         }
     }
 
     return (
         <>
             <div
+                ref={questionRef}
                 onClick={() => handleClickAskIcon(index)}
                 className={`flex flex-col gap-9 ${
                     activeAsk.value === index ? "bg-white pb-8" : "bg-pink6"

@@ -5,6 +5,7 @@ export interface ICards {
     icon: string;
     text: string;
     link: string;
+    target: string;
 }
 
 export interface Card {
@@ -20,6 +21,7 @@ export default function ServiceCardIsland({ cards }: Card) {
                     icon={card.icon}
                     text={card.text}
                     link={card.link}
+                    target={card.target}
                 />
             ))}
         </>

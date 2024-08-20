@@ -55,6 +55,7 @@ export default function DropdownMobileMenu({ option, openerRef, setOpen }) {
                     >
                         {dropdownSectionsOpen && (
                             <DropdownSections
+                                option={option}
                                 openerRef={secondDropdownRef}
                                 setOpen={setDropdownSectionsOpen}
                             />
@@ -111,13 +112,13 @@ export default function DropdownMobileMenu({ option, openerRef, setOpen }) {
                 </div>
 
                 <div className="flex flex-col gap-7 text-white font-sora font-bold text-2xl pt-8 pb-24">
-                    <a href="#">
+                    <a href="/quem-somos">
                         <span>Quem somos</span>
                     </a>
-                    <a href="#">
+                    <a href="/nossos-planos">
                         <span>Nossos planos</span>
                     </a>
-                    <a href="#">
+                    <a href="/jornada-de-cuidado">
                         <span>Jornada de cuidado</span>
                     </a>
                 </div>
@@ -140,16 +141,43 @@ export default function DropdownMobileMenu({ option, openerRef, setOpen }) {
                     </div>
                     {loggedAreasDropdown && (
                         <div className="flex flex-col text-white gap-4 text-xs pl-7 mt-4">
-                            <span>Sou Cliente</span>
-                            <span>Sou Empresa</span>
-                            <span>Sou Corretor</span>
-                            <span>Sou Prestador</span>
+                            <a
+                                href="https://aurorasaude.plataforma-beneficiario.mosiaomnichannel.com.br/#/"
+                                target="_blank"
+                            >
+                                <span>Sou Cliente</span>
+                            </a>
+
+                            <a
+                                href="https://6167prd-plano.cloudmv.com.br/mvsaudeweb/#/login/empresa"
+                                target="_blank"
+                            >
+                                <span>Sou Empresa</span>
+                            </a>
+
+                            <a
+                                href="https://souaurorasaude.planium.io/web/login/entrar"
+                                target="_blank"
+                            >
+                                <span>Sou Corretor</span>
+                            </a>
+
+                            <a
+                                href="https://6167prd-plano.cloudmv.com.br/mvautorizadorguias/"
+                                target="_blank"
+                            >
+                                <span>Sou Prestador</span>
+                            </a>
                         </div>
                     )}
                 </div>
                 <div className="flex justify-between text-white text-xs py-7">
-                    <span>Perguntas Frequentes</span>
-                    <span>Quero ser Cliente</span>
+                    <a href="/perguntas-frequentes">
+                        <span>Perguntas Frequentes</span>
+                    </a>
+                    <a href="/solicitar-cotacao">
+                        <span>Quero ser Cliente</span>
+                    </a>
                 </div>
                 <div className="flex justify-center pt-16">
                     <div

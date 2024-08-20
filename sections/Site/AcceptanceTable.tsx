@@ -10,6 +10,10 @@ export interface IHospital {
     a500: boolean;
 }
 
+export interface Region {
+    text: string;
+}
+
 export interface IAcceptanceTable {
     a100Price: string;
     a100Coverage: string;
@@ -17,6 +21,7 @@ export interface IAcceptanceTable {
     a300Coverage: string;
     a500Price: string;
     a500Coverage: string;
+    regions: Region[];
     hospitals: IHospital[];
 }
 
@@ -28,6 +33,7 @@ export default function AcceptanceTable(
         a300Coverage,
         a500Price,
         a500Coverage,
+        regions,
         hospitals,
     }: IAcceptanceTable,
 ) {

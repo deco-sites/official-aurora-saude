@@ -6,6 +6,7 @@ import { Device } from "apps/website/matchers/device.ts";
 
 type Section = {
     sectionName: string;
+    sectionTitle: string;
     sectionText: string;
 };
 
@@ -14,7 +15,7 @@ type Props = {
     device: Device;
 };
 
-export default function PrivacyPoliciesIsland({ sections, device }: Props) {
+export default function DpoPageIsland({ sections, device }: Props) {
     const activeSection = useSignal(0);
     const sectionRefs = useRef<HTMLDivElement[]>([]);
     const expandedSection = useSignal<number | null>(null);
@@ -86,7 +87,7 @@ export default function PrivacyPoliciesIsland({ sections, device }: Props) {
                                     <span>{`${index + 1}.`}</span>
                                     <span
                                         dangerouslySetInnerHTML={{
-                                            __html: section.sectionName,
+                                            __html: section.sectionTitle,
                                         }}
                                     />
                                 </div>

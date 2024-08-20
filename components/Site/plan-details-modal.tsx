@@ -134,19 +134,21 @@ export default function PlanDetailsModal(
                                 >
                                     *faixa de 0 a 18 anos
                                 </span>
-                                <button
-                                    className={`${
-                                        buttonBgColors[
-                                            selectedPlan.buttonBgColor
-                                        ]
-                                    } ${
-                                        buttonTextColors[
-                                            selectedPlan.buttonTextColor
-                                        ]
-                                    } font-bold rounded-full px-16 py-4 whitespace-nowrap`}
-                                >
-                                    Compare e escolha
-                                </button>
+                                <a href="/simulador-aurora">
+                                    <button
+                                        className={`${
+                                            buttonBgColors[
+                                                selectedPlan.buttonBgColor
+                                            ]
+                                        } ${
+                                            buttonTextColors[
+                                                selectedPlan.buttonTextColor
+                                            ]
+                                        } font-bold rounded-full px-16 py-4 whitespace-nowrap`}
+                                    >
+                                        Compare e escolha
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>

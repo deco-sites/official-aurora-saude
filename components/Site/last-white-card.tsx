@@ -14,13 +14,14 @@ export default function LastWhiteCard({ device, handlePrev }: Props) {
             <span className="font-sora text-xl lg:text-4xl text-pink1">
                 O cuidado não acaba <br /> aqui, ele começa.
             </span>
-            <a href="#" className="text-darkPurple">
+            <a href="/jornada-de-cuidado" className="text-darkPurple">
                 Descubra como fazemos diferente
             </a>
             <ColorfullButton
                 bgColor="pink"
                 textColor="white"
                 text={"Saiba mais"}
+                link={"/jornada-de-cuidado"}
             />
             {device === "mobile" && (
                 <Icon

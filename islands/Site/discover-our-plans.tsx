@@ -40,7 +40,7 @@ export default function DiscoverOurPlansIsland(
                 entries.forEach((entry) => {
                     if (entry.intersectionRatio > 0.25) {
                         setIsVisible(true);
-                        if (window.innerWidth < 640) {
+                        if (globalThis.innerWidth < 640) {
                             setIsSlideToLeft("card-slide-up");
                             setIsSlideToRight("card-slide-down");
                         } else {

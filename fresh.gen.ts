@@ -27,6 +27,7 @@ import * as $Site_common_questions from "./islands/Site/common-questions.tsx";
 import * as $Site_cookies_modal from "./islands/Site/cookies-modal.tsx";
 import * as $Site_discover_differences from "./islands/Site/discover-differences.tsx";
 import * as $Site_discover_our_plans from "./islands/Site/discover-our-plans.tsx";
+import * as $Site_dpo_page from "./islands/Site/dpo-page.tsx";
 import * as $Site_enterprise_login_form from "./islands/Site/enterprise-login-form.tsx";
 import * as $Site_forgot_password from "./islands/Site/forgot-password.tsx";
 import * as $Site_frequently_asked_questions from "./islands/Site/frequently-asked-questions.tsx";
@@ -88,6 +89,7 @@ const manifest = {
     "./islands/Site/cookies-modal.tsx": $Site_cookies_modal,
     "./islands/Site/discover-differences.tsx": $Site_discover_differences,
     "./islands/Site/discover-our-plans.tsx": $Site_discover_our_plans,
+    "./islands/Site/dpo-page.tsx": $Site_dpo_page,
     "./islands/Site/enterprise-login-form.tsx": $Site_enterprise_login_form,
     "./islands/Site/forgot-password.tsx": $Site_forgot_password,
     "./islands/Site/frequently-asked-questions.tsx":

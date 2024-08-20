@@ -163,7 +163,8 @@ export default function Footer() {
                                 <div className="flex flex-col gap-4">
                                     <span>Precisa de ajuda?</span>
                                     <a
-                                        href="#"
+                                        href="https://api.whatsapp.com/send?phone=553140002105"
+                                        target="_blank"
                                         className="flex gap-2 items-center"
                                     >
                                         <Icon
@@ -190,13 +191,19 @@ export default function Footer() {
                                 </div>
 
                                 <div className="hidden lg:flex gap-3">
-                                    <a href="">
+                                    <a
+                                        href="https://onelink.to/n5nzam"
+                                        target="_blank"
+                                    >
                                         <Image
                                             src={"/Site/Footer/android.svg"}
                                             alt={""}
                                         />
                                     </a>
-                                    <a href="">
+                                    <a
+                                        href="https://onelink.to/n5nzam"
+                                        target="_blank"
+                                    >
                                         <Image
                                             src={"/Site/Footer/apple.svg"}
                                             alt={""}

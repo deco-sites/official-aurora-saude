@@ -48,26 +48,33 @@ export default function AppSection(
                             alt={"Laptop"}
                             className={`w-[862px] h-[638px] lg:w-auto lg:h-auto object-cover`}
                         />
-                        <button className="absolute bottom-4 right-5 lg:left-4 font-medium bg-yellow rounded-full py-5 px-8 text-pink1 flex gap-9 w-fit">
-                            {device === "desktop"
-                                ? "Acesse o Portal do Beneficiário"
-                                : "Portal do Beneficiário"}
-                            <Icon
-                                class="h-auto -rotate-90"
-                                id="PinkArrowDown"
-                                strokeWidth={1}
-                                size={20}
-                            />
-                        </button>
-                        <button className="absolute top-4 left-11 lg:left-auto lg:right-4 font-medium bg-yellow rounded-full py-5 px-8 text-pink1 flex gap-9 w-fit">
-                            Baixe o app
-                            <Icon
-                                class="h-auto -rotate-90"
-                                id="PinkArrowDown"
-                                strokeWidth={1}
-                                size={20}
-                            />
-                        </button>
+                        <a
+                            href="https://aurorasaude.plataforma-beneficiario.mosiaomnichannel.com.br/#/"
+                            target="_blank"
+                        >
+                            <button className="absolute bottom-4 right-5 lg:left-4 font-medium bg-yellow rounded-full py-5 px-8 text-pink1 flex gap-9 w-fit">
+                                {device === "desktop"
+                                    ? "Acesse o Portal do Beneficiário"
+                                    : "Portal do Beneficiário"}
+                                <Icon
+                                    class="h-auto -rotate-90"
+                                    id="PinkArrowDown"
+                                    strokeWidth={1}
+                                    size={20}
+                                />
+                            </button>
+                        </a>
+                        <a href="https://onelink.to/n5nzam" target="_blank">
+                            <button className="absolute top-4 left-11 lg:left-auto lg:right-4 font-medium bg-yellow rounded-full py-5 px-8 text-pink1 flex gap-9 w-fit">
+                                Baixe o app
+                                <Icon
+                                    class="h-auto -rotate-90"
+                                    id="PinkArrowDown"
+                                    strokeWidth={1}
+                                    size={20}
+                                />
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
