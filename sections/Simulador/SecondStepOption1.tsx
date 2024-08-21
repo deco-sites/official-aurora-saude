@@ -27,7 +27,7 @@ export default function SecondStepOption1() {
   const [ageRangePlaceholder, setAgeRangePlaceholder] = useState("Selecione");
   const [havePlanPlaceholder, setHavePlanPlaceholder] = useState("Selecione");
 
-  console.log("ageRangesSignal:", ageRangesSignal.value);
+  //console.log("ageRangesSignal:", ageRangesSignal.value);
   //console.log("ufsSignal:", ufsSignal.value);
 
   const [cities, setCities] = useState([]);

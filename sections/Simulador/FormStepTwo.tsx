@@ -29,13 +29,13 @@ export default function FormStepTwo({ Component }: FormStepTwoProps) {
   //console.log("TESTE 1 - BOTÃO VOLTAR", activeStep.value);
   return (
     <>
-      <div className="flex justify-center lg:width-calc mt-32">
-        <div className="flex gap-6 lg:w-[1400px]">
-          <div className="bg-white lg:bg-gray1 rounded-2xl lg:p-8 w-full">
-            <div className="overflow-x-auto lg:overflow-x-visible pl-8 lg:pl-0 w-screen lg:w-full scrollbar-none">
+      <div className="flex justify-center lg:width-calc mt-28 lg:mt-32">
+        <div className="flex gap-6 lg:w-[1400px] overflow-x-hidden">
+          <div className="bg-white lg:bg-gray1 rounded-2xl lg:px-8 lg:pb-8 w-full">
+            <div className="fixed z-50 bg-white lg:bg-gray1 overflow-x-auto lg:overflow-x-visible pl-8 lg:pl-0 w-screen lg:max-w-[1368px] scrollbar-none rounded-tr-[20px]">
               <ProgressTracker currentStep={2} />
             </div>
-            <div className="flex flex-col gap-4 px-8 lg:px-0">
+            <div className="flex flex-col gap-4 px-8 lg:px-0 mt-32 lg:mt-36">
               <FormTitleH1
                 text1={"Faça a simulação para você"}
                 text2={"ou para outra pessoa."}

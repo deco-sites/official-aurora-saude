@@ -26,7 +26,7 @@ export default function Section(
 ) {
   return (
     <div className="flex justify-center lg:width-calc z-50 bg-white ">
-      <header className="fixed bg-white z-50 w-full flex items-center justify-center lg:justify-between py-10 lg:max-w-[1400px]">
+      <header className="fixed bg-white z-50 w-full flex items-center justify-center lg:justify-between h-32 lg:max-w-[1400px]">
         <Image
           src={"/Simulador/logo_simulador.png"}
           width={0}
