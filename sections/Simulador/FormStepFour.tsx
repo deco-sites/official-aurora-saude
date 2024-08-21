@@ -20,6 +20,7 @@ import { useStepTwoOption1InputValues } from "site/sdk/Simulador/SecondStepOptio
 import getCityCode from "site/actions/getCityCode.ts";
 import { useStepTwoOption2InputValues } from "site/sdk/Simulador/SecondStepOption2/useStepTwoOption2InputValues.ts";
 import { useSelectPlan } from "site/sdk/Simulador/useSelectPlan.ts";
+import LoadinSpinner from "site/components/Simulador/loading-spinner.tsx";
 
 /*interface FormStepFourProps {
   Component: React.ComponentType;
@@ -197,22 +198,21 @@ export default function FormStepFour() {
   return (
     <>
       <div className="flex justify-center lg:width-calc mt-32">
-        <div className="flex gap-6 lg:w-[1400px]">
-          <div className="bg-white lg:bg-gray1 rounded-2xl lg:p-8 w-full">
-            <div className="overflow-x-auto lg:overflow-x-visible pl-8 lg:pl-0 w-screen lg:w-full scrollbar-none">
+        <div className="flex gap-6 lg:w-[1400px] overflow-x-hidden">
+          <div className="bg-white lg:bg-gray1 rounded-2xl lg:px-8 lg:pb-8 w-full">
+            <div className="fixed z-50 bg-white lg:bg-gray1 overflow-x-auto lg:overflow-x-visible pl-8 lg:pl-0 w-screen lg:max-w-[1368px] scrollbar-none rounded-tr-[20px]">
               <ProgressTracker currentStep={4} />
             </div>
 
-            <div className="flex flex-col gap-4 lg:px-0 w-screen lg:w-auto">
-              <div className="pl-8 lg:pl-0">
+            <div className="flex flex-col gap-4 lg:px-0 mt-40 lg:mt-44 w-screen lg:w-auto">
+              <div className="pl-8 lg:pl-0 mb-12">
                 <FormTitleH1 text1={"Escolha seu plano"} />
               </div>
 
               {loading && (
                 <div className="h-full w-full flex justify-center items-center">
                   <div className="flex justify-center items-center">
-                    <div className="w-12 h-12 border-4 border-solid rounded-full animate-spin border-orange1">
-                    </div>
+                    <LoadinSpinner />
                   </div>
                 </div>
               )}

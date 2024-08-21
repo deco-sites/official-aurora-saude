@@ -50,7 +50,7 @@ export default function ProgressTracker({ currentStep }) {
   }));
 
   return (
-    <div className="flex items-start py-6">
+    <div className="flex items-start py-6 lg:pb-6 lg:pr-6 mt-6">
       {updatedSteps.map((step, index) => (
         //Antes do step.status === true eu estava usando index + 1 <= currentStep
         <div
