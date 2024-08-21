@@ -169,32 +169,41 @@ export default function HeaderSiteIsland({ type }: Props) {
                                     ]
                                 } rounded-t-[20px] px-5 py-1`}
                             >
+                                {/*Aqui entra todo o código que tirei*/}
                                 <div
                                     className={`absolute ${
-                                        colors[option.color]
-                                    } w-14 h-14 -bottom-[33.5px] -left-[25px]`}
+                                        colors[
+                                            option.color
+                                        ]
+                                    } w-6 h-6 -bottom-[6px] left-0 transform -translate-x-full`}
                                 >
                                     <div
-                                        className={`${
+                                        className={`w-full h-full ${
                                             backgroundColors[option.id]
-                                        } w-[50%] h-[50%] absolute top-0 left-0 rounded-br-full`}
+                                        }`}
+                                        style={{
+                                            clipPath: "circle(101.8% at 1% 1%)",
+                                        }}
                                     >
                                     </div>
                                 </div>
-
                                 <div
                                     className={`absolute ${
-                                        colors[option.color]
-                                    } w-14 h-14 -bottom-[33.5px] -right-[25px]`}
+                                        colors[
+                                            option.color
+                                        ]
+                                    } w-6 h-6 -bottom-[6px] right-0 transform translate-x-full`}
                                 >
                                     <div
-                                        className={`${
+                                        className={`w-full h-full ${
                                             backgroundColors[option.id]
-                                        } w-[50%] h-[50%] absolute top-0 right-0 rounded-bl-full`}
+                                        }`}
+                                        style={{
+                                            clipPath: "circle(101.8% at 99% 0)",
+                                        }}
                                     >
                                     </div>
                                 </div>
-
                                 <div
                                     className={`absolute ${
                                         colors[option.color]
