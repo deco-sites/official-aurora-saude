@@ -15,6 +15,7 @@ const ATTRIBUTES = {
     'data-slide="prev"': 'data-slide="prev"',
     'data-slide="next"': 'data-slide="next"',
     "data-dot": "data-dot",
+    "data-link": "data-link",
 };
 
 // Percentage of the item that has to be inside the container
@@ -55,6 +56,7 @@ const setup = ({ rootId, scroll, interval, infinite, alwaysGo }: Props) => {
     const prev = root?.querySelector(`[${ATTRIBUTES['data-slide="prev"']}]`);
     const next = root?.querySelector(`[${ATTRIBUTES['data-slide="next"']}]`);
     const dots = root?.querySelectorAll(`[${ATTRIBUTES["data-dot"]}]`);
+    const links = root?.querySelectorAll(`[${ATTRIBUTES["data-link"]}]`);
 
     if (!root || !slider || !items || items.length === 0) {
         console.warn(
@@ -73,6 +75,54 @@ const setup = ({ rootId, scroll, interval, infinite, alwaysGo }: Props) => {
 
         return;
     }
+
+    const observer = new IntersectionObserver(
+        (elements) =>
+            elements.forEach((item) => {
+                const index =
+                    Number(item.target.getAttribute("data-slider-item")) || 0;
+
+                let dotIndex = index;
+
+                if (items && index >= items?.length - 2) {
+                    dotIndex = index - (items.length - 2);
+                } else if (dots && index === -1) {
+                    dotIndex = dots?.length - 1;
+                }
+
+                const dot = alwaysGo ? dots?.item(dotIndex) : dots?.item(index);
+                const link = alwaysGo
+                    ? links?.item(dotIndex)
+                    : links?.item(index);
+                console.log("IsIntersecting", item, item.isIntersecting);
+
+                if (item.isIntersecting) {
+                    dot?.setAttribute("disabled", "");
+                    link?.removeAttribute("disabled");
+                } else {
+                    dot?.removeAttribute("disabled");
+                    link?.setAttribute("disabled", "");
+                }
+
+                if (!infinite) {
+                    if (index === 0) {
+                        if (item.isIntersecting) {
+                            prev?.setAttribute("disabled", "");
+                        } else {
+                            prev?.removeAttribute("disabled");
+                        }
+                    }
+                    if (items && index === items.length - 1) {
+                        if (item.isIntersecting) {
+                            next?.setAttribute("disabled", "");
+                        } else {
+                            next?.removeAttribute("disabled");
+                        }
+                    }
+                }
+            }),
+        { threshold: THRESHOLD, root: slider },
+    );
 
     // If items length be <= 2, it is necessary to clone first and second elements for it to work
     if (alwaysGo && items?.length) {
@@ -235,48 +285,6 @@ const setup = ({ rootId, scroll, interval, infinite, alwaysGo }: Props) => {
         observer.disconnect();
         items.forEach((item) => observer.observe(item));
     };
-
-    const observer = new IntersectionObserver(
-        (elements) =>
-            elements.forEach((item) => {
-                const index =
-                    Number(item.target.getAttribute("data-slider-item")) || 0;
-
-                let dotIndex = index;
-
-                if (items && index >= items?.length - 2) {
-                    dotIndex = index - (items.length - 2);
-                } else if (dots && index === -1) {
-                    dotIndex = dots?.length - 1;
-                }
-
-                const dot = alwaysGo ? dots?.item(dotIndex) : dots?.item(index);
-
-                if (item.isIntersecting) {
-                    dot?.setAttribute("disabled", "");
-                } else {
-                    dot?.removeAttribute("disabled");
-                }
-
-                if (!infinite) {
-                    if (index === 0) {
-                        if (item.isIntersecting) {
-                            prev?.setAttribute("disabled", "");
-                        } else {
-                            prev?.removeAttribute("disabled");
-                        }
-                    }
-                    if (items && index === items.length - 1) {
-                        if (item.isIntersecting) {
-                            next?.setAttribute("disabled", "");
-                        } else {
-                            next?.removeAttribute("disabled");
-                        }
-                    }
-                }
-            }),
-        { threshold: THRESHOLD, root: slider },
-    );
 
     items.forEach((item) => observer.observe(item));
 

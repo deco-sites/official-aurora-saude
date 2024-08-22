@@ -4,8 +4,9 @@ import { Device } from "apps/website/matchers/device.ts";
 import Slider from "../../components/ui/Slider.tsx";
 import SliderJS from "../../islands/Site/sliderjs.tsx";
 import { useId } from "https://esm.sh/v128/preact@10.19.6/compat/src/index.js";
-import { signal } from "@preact/signals";
-import { useState } from "preact/hooks";
+import { signal, useSignal } from "@preact/signals";
+import { useEffect, useRef, useState } from "preact/hooks";
+import { textShortner } from "apps/website/components/_seo/helpers/textShortner.tsx";
 
 export interface New {
     image: ImageWidget;
@@ -28,12 +29,44 @@ export interface OverlaidNewsBannerIslandProps {
 export default function OverlaidNewsBannerIsland(
     { featuredNews, carouselNews, device }: OverlaidNewsBannerIslandProps,
 ) {
-    //console.log("Device:", device);
-    //console.log("Notícia Destaque", featuredNews);
-    //console.log("Array de Notícias", carouselNews);
-
     const id = useId();
-    const [activeNewsLink, setActiveNewsLink] = useState("");
+    const sliderContainerRef = useRef<HTMLDivElement>(null);
+    const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
+    const [activeLink, setActiveLink] = useState("");
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const index = slideRefs.current.indexOf(
+                            entry.target as HTMLDivElement,
+                        );
+
+                        if (index !== -1) {
+                            const newActiveLink = carouselNews[index].link;
+                            if (newActiveLink !== activeLink) {
+                                setActiveLink(newActiveLink);
+                            }
+                        }
+                    }
+                });
+            },
+            {
+                root: sliderContainerRef.current,
+                threshold: 0.5, // Ajuste conforme necessário
+            },
+        );
+
+        // Observa todos os slides novamente ao montar ou atualizar o carrossel
+        slideRefs.current.forEach((slide) => {
+            if (slide) observer.observe(slide);
+        });
+
+        // Limpeza quando o componente for desmontado
+        return () => observer.disconnect();
+    }, [carouselNews, activeLink]);
 
     return (
         <>
@@ -44,17 +77,26 @@ export default function OverlaidNewsBannerIsland(
                             <div className="relative w-full lg:w-2/3">
                                 <div
                                     id={id}
+                                    ref={sliderContainerRef}
                                     className="h-full grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px]"
                                 >
                                     <Slider className="h-full relative carousel carousel-center w-full col-span-full row-span-full gap-6 rounded-[20px]">
                                         {carouselNews.map((image, index) => {
-                                            setActiveNewsLink(image.link);
                                             return (
                                                 <Slider.Item
                                                     index={index}
                                                     className="relative carousel-item w-full"
                                                 >
-                                                    <div className="absolute flex gap-7 lg:gap-0 flex-col lg:flex-row justify-between bottom-24 lg:bottom-10 pl-10 pr-12 lg:pl-16 lg:pr-9 left-0 text-white w-full items-end">
+                                                    <div
+                                                        ref={(
+                                                            ref:
+                                                                | HTMLDivElement
+                                                                | null,
+                                                        ) => (slideRefs
+                                                            .current[index] =
+                                                                ref)}
+                                                        className="absolute flex gap-7 lg:gap-0 flex-col lg:flex-row justify-between bottom-24 lg:bottom-10 pl-10 pr-12 lg:pl-16 lg:pr-9 left-0 text-white w-full items-end"
+                                                    >
                                                         <div className="flex flex-col gap-5">
                                                             <span
                                                                 className="font-light"
@@ -75,6 +117,14 @@ export default function OverlaidNewsBannerIsland(
                                                             >
                                                             </span>
                                                         </div>
+                                                        <a
+                                                            className="relative z-40"
+                                                            href={image.link}
+                                                        >
+                                                            <button className="text-orange4 w-full lg:w-auto whitespace-nowrape font-bold text-xs lg:text-base bg-white bg-opacity-80 rounded-[20px] py-2 px-9 whitespace-nowrap mr-16">
+                                                                Leia Mais
+                                                            </button>
+                                                        </a>
                                                     </div>
 
                                                     <Image
@@ -86,21 +136,17 @@ export default function OverlaidNewsBannerIsland(
                                             );
                                         })}
                                     </Slider>
-                                    <div className="absolute flex gap-7 lg:gap-0 flex-col lg:flex-row justify-between bottom-5 lg:bottom-10 pl-10 pr-12 lg:pl-16 lg:pr-9 left-0 text-white w-full items-end">
-                                        <div className="flex w-full justify-center lg:justify-end items-start gap-11">
+                                    <div className="absolute flex gap-7 lg:gap-0 flex-col lg:flex-row justify-between bottom-5 lg:bottom-8 pl-10 pr-12 lg:pl-16 lg:pr-9 left-0 text-white w-full items-end">
+                                        <div className="flex w-full justify-center lg:justify-end items-start gap-44">
                                             <Slider.PrevButton>
-                                                <svg className="w-7 h-7 lg:w-12 lg:h-12 transform -scale-x-100 cursor-pointer overflow-visible">
+                                                <svg className="relative w-7 h-7 lg:w-12 lg:h-12 transform -scale-x-100 cursor-pointer overflow-visible z-50">
                                                     <use href="/sprites.svg#NewsPageArrowRight">
                                                     </use>
                                                 </svg>
                                             </Slider.PrevButton>
-                                            <a href={activeNewsLink}>
-                                                <button className="text-orange4 w-full lg:w-auto whitespace-nowrape font-bold text-xs lg:text-base bg-white bg-opacity-80 rounded-[20px] py-2 px-9 whitespace-nowrap">
-                                                    Leia Mais
-                                                </button>
-                                            </a>
+
                                             <Slider.NextButton>
-                                                <svg className="w-7 h-7 lg:w-12 lg:h-12 cursor-pointer overflow-visible">
+                                                <svg className="relative w-7 h-7 lg:w-12 lg:h-12 cursor-pointer overflow-visible z-50">
                                                     <use href="/sprites.svg#NewsPageArrowRight">
                                                     </use>
                                                 </svg>

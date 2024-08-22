@@ -16,15 +16,15 @@ export interface Props {
 export default function NewsSectionIsland({ newsArr }: Props) {
     return (
         <>
-            {newsArr.map((noticia) => {
+            {newsArr.map((noticia) => (
                 <NewsCard
                     imageSrc={noticia.image}
                     alt={noticia.altImage}
                     date={noticia.date}
                     title={noticia.title}
                     link={noticia.link}
-                />;
-            })}
+                />
+            ))}
         </>
     );
 }
