@@ -94,7 +94,6 @@ const setup = ({ rootId, scroll, interval, infinite, alwaysGo }: Props) => {
                 const link = alwaysGo
                     ? links?.item(dotIndex)
                     : links?.item(index);
-                console.log("IsIntersecting", item, item.isIntersecting);
 
                 if (item.isIntersecting) {
                     dot?.setAttribute("disabled", "");
