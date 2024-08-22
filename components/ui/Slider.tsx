@@ -34,9 +34,24 @@ function PrevButton(props: JSX.IntrinsicElements["button"]) {
   return <button data-slide="prev" aria-label="Previous item" {...props} />;
 }
 
+function Link({ index, children }: {
+  index: number;
+  children: ComponentChildren;
+}) {
+  return (
+    <button
+      data-link={index}
+      class={`focus:outline-none group`}
+    >
+      {children}
+    </button>
+  );
+}
+
 Slider.Dot = Dot;
 Slider.Item = Item;
 Slider.NextButton = NextButton;
 Slider.PrevButton = PrevButton;
+Slider.Link = Link;
 
 export default Slider;
