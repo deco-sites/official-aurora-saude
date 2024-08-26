@@ -36,7 +36,7 @@ export default function SiteInputText(
         {label}:
       </label>
       <input
-        className={`px-6 py-5 lg:py-2 rounded-md bg-gray4 bg-opacity-50 outline-none w-full lg:w-auto text-gray3 ${
+        className={`px-6 py-5 lg:py-2 rounded-md bg-gray4 bg-opacity-50 outline-none w-full lg:w-auto text-black text-opacity-25 placeholder:text-black placeholder:text-opacity-25 ${
           wfull ? "lg:w-full" : ""
         }`}
         type="text"
