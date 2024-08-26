@@ -52,7 +52,7 @@ export default function SiteInputSelect(
                 className={`relative w-full lg:w-auto ${wfull && "lg:w-full"}`}
             >
                 <select
-                    className={`px-6 py-5 lg:py-2 lg:rounded-md bg-gray4 bg-opacity-50 outline-none text-[#9ca3be] appearance-none pr-8 w-full ${
+                    className={`px-6 py-5 lg:py-2 lg:rounded-md bg-gray4 bg-opacity-50 outline-none text-black text-opacity-25 appearance-none pr-8 w-full ${
                         wfull && "w-full"
                     }`}
                     id={id}

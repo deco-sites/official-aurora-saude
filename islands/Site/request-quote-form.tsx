@@ -8,6 +8,7 @@ import { invoke } from "../../runtime.ts";
 import SendingConfirmation from "site/components/Site/sending-confirmation.tsx";
 import { signal } from "@preact/signals";
 import { PhoneMask } from "site/helpers/Simulador/phoneMask.ts";
+import CustomSelect from "site/components/Site/custom-select.tsx";
 
 export interface RequestQuoteIslandProps {
     recipientsEmail: string;
@@ -65,6 +66,7 @@ export default function RequestQuoteIsland(
     const [UF, setUF] = useState("");
     const [city, setCity] = useState("");
     const [whereMeetAurora, setWhereMeetAurora] = useState("");
+    const [customWhereMeetAurora, setCustomWhereMeetAurora] = useState("");
 
     const sendData = `
         Nome: ${name}
@@ -163,6 +165,8 @@ export default function RequestQuoteIsland(
                         />
                     </div>
 
+                    {
+                        /*
                     <div className="w-full lg:w-[40%]">
                         <SiteInputSelect
                             id={"whereDidYouMeetAurora"}
@@ -173,6 +177,17 @@ export default function RequestQuoteIsland(
                             options={indicationsOptions}
                             placeholder={whereMeetAuroraPlaceHolder}
                             wfull
+                        />
+                    </div>
+                    */
+                    }
+
+                    <div className="w-full lg:w-[50%]">
+                        <CustomSelect
+                            options={indicationsOptions}
+                            label={"Por onde você conheceu a Aurora?"}
+                            value={customWhereMeetAurora}
+                            inputValueSetter={setCustomWhereMeetAurora}
                         />
                     </div>
 
