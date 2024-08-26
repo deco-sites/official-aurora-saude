@@ -3,7 +3,7 @@ import { AppContext } from "site/apps/site.ts";
 export interface DependentLead {
     cd_faixa: number;
     quantidade: number;
-    cd_tab_preco: number;
+    cd_tab_preco?: number;
     cd_lead?: number;
 }
 

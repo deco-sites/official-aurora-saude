@@ -46,7 +46,7 @@ export default function FormStepFour() {
   const [isScrolling, setIsScrolling] = useState(false);
   const [loading, setLoading] = useState(false);
   //const transformedArray = useSignal([]);
-  const { transformedArray } = useSelectPlan();
+  const { transformedArray, fetchedPlans } = useSelectPlan();
 
   const handleScroll = () => {
     if (isScrolling || !plansDivRef.current) return;

@@ -106,7 +106,7 @@ export default function SecondStepOption1() {
   }, []);
 
   async function getMyCities() {
-    console.log("Chamou a getMyCities");
+    //console.log("Chamou a getMyCities");
     const fetchedCities = await invoke.site.actions.getCities({
       selectedUF: ufValue.value,
     });
@@ -258,7 +258,7 @@ export default function SecondStepOption1() {
               placeholder={cityPlaceholder}
               value={cityValue.value}
               inputValueSetter={(value) => {
-                console.log("Valor da city:", value);
+                //console.log("Valor da city:", value);
                 cityValue.value = value;
               }}
               wfull

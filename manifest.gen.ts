@@ -2,13 +2,19 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
-import * as $$$$$$$$$0 from "./actions/getCities.ts";
-import * as $$$$$$$$$1 from "./actions/getCityCode.ts";
-import * as $$$$$$$$$2 from "./actions/getPlans.ts";
-import * as $$$$$$$$$3 from "./actions/getPrices.ts";
-import * as $$$$$$$$$4 from "./actions/saveLead.ts";
-import * as $$$$$$$$$5 from "./actions/saveLeadDependents.ts";
-import * as $$$$$$$$$6 from "./actions/sendEmail.ts";
+import * as $$$$$$$$$0 from "./actions/getAgeRangeCode.ts";
+import * as $$$$$$$$$1 from "./actions/getCities.ts";
+import * as $$$$$$$$$2 from "./actions/getCityCode.ts";
+import * as $$$$$$$$$3 from "./actions/getPlans.ts";
+import * as $$$$$$$$$4 from "./actions/getPrices.ts";
+import * as $$$$$$$$$5 from "./actions/realUpdateDependents.ts";
+import * as $$$$$$$$$6 from "./actions/saveLead.ts";
+import * as $$$$$$$$$7 from "./actions/saveLeadDependents.ts";
+import * as $$$$$$$$$8 from "./actions/saveStep2Option1.ts";
+import * as $$$$$$$$$9 from "./actions/saveStep2Option2.ts";
+import * as $$$$$$$$$10 from "./actions/sendEmail.ts";
+import * as $$$$$$$$$11 from "./actions/updateDependents.ts";
+import * as $$$$$$$$$12 from "./actions/updateLead.ts";
 import * as $$$$$$$$$$$0 from "./apps/deco/algolia.ts";
 import * as $$$$$$$$$$$1 from "./apps/deco/htmx.ts";
 import * as $$$$$$$$$$$2 from "./apps/site.ts";
@@ -167,13 +173,19 @@ const manifest = {
     "site/sections/Theme/Theme.tsx": $$$$$$70,
   },
   "actions": {
-    "site/actions/getCities.ts": $$$$$$$$$0,
-    "site/actions/getCityCode.ts": $$$$$$$$$1,
-    "site/actions/getPlans.ts": $$$$$$$$$2,
-    "site/actions/getPrices.ts": $$$$$$$$$3,
-    "site/actions/saveLead.ts": $$$$$$$$$4,
-    "site/actions/saveLeadDependents.ts": $$$$$$$$$5,
-    "site/actions/sendEmail.ts": $$$$$$$$$6,
+    "site/actions/getAgeRangeCode.ts": $$$$$$$$$0,
+    "site/actions/getCities.ts": $$$$$$$$$1,
+    "site/actions/getCityCode.ts": $$$$$$$$$2,
+    "site/actions/getPlans.ts": $$$$$$$$$3,
+    "site/actions/getPrices.ts": $$$$$$$$$4,
+    "site/actions/realUpdateDependents.ts": $$$$$$$$$5,
+    "site/actions/saveLead.ts": $$$$$$$$$6,
+    "site/actions/saveLeadDependents.ts": $$$$$$$$$7,
+    "site/actions/saveStep2Option1.ts": $$$$$$$$$8,
+    "site/actions/saveStep2Option2.ts": $$$$$$$$$9,
+    "site/actions/sendEmail.ts": $$$$$$$$$10,
+    "site/actions/updateDependents.ts": $$$$$$$$$11,
+    "site/actions/updateLead.ts": $$$$$$$$$12,
   },
   "apps": {
     "site/apps/deco/algolia.ts": $$$$$$$$$$$0,

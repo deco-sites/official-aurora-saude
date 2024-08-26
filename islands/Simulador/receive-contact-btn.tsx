@@ -40,12 +40,16 @@ export default function ReceiveContactButton(
 
   const handleSaveLead = async () => {
     console.log("Chamou a handleSaveLead", dependentLead);
+    {
+      /* Essa parte comentada era responsável por salvar o lead no final do preenchimento
     await invoke.site.actions.saveLead({
       leadToSave,
       dependentLead,
       whoUseThePlan,
       activeOption,
     });
+    */
+    }
     changeStep(number, mission);
   };
 
