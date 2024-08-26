@@ -7,9 +7,14 @@ import {
 import { useFourthStepInputValues } from "site/sdk/Simulador/FourthStep/useFourthStepInputValues.ts";
 import { useSelectPlanButtons } from "site/sdk/Simulador/useSelectPlanButtons.ts";
 import { useSelectPlan } from "site/sdk/Simulador/useSelectPlan.ts";
+import { useCdLead } from "site/sdk/Simulador/useCdLead.ts";
 
 export default function ClearForm() {
     //console.log("Limpando os campos do formulário");
+
+    const { cd_lead, cd_lead_dep } = useCdLead();
+    cd_lead.value = 0;
+    cd_lead_dep.value = {};
 
     const {
         nameValue,
