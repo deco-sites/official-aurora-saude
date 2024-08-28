@@ -35,7 +35,7 @@ const CustomSelect = (
             <div className="relative w-full">
                 {/* Select box */}
                 <div
-                    className={`flex items-center justify-between bg-gray1 text-black text-opacity-25 rounded-md cursor-pointer px-6 py-5 lg:py-2`}
+                    className={`flex items-center justify-between bg-gray1 text-black text-opacity-25 rounded-xl cursor-pointer px-6 py-5 lg:py-2`}
                     onClick={toggleDropdown}
                 >
                     <span>{value || "Selecione"}</span>
@@ -62,7 +62,7 @@ const CustomSelect = (
                 {/* Dropdown */}
                 {isOpen && (
                     <div
-                        className={`absolute left-0 mt-[14px] bg-gray1 text-black text-opacity-25 rounded-md px-[57px] py-[30px] w-full`}
+                        className={`absolute left-0 mt-[14px] bg-gray1 text-black text-opacity-25 rounded-xl px-[57px] py-[30px] w-full animate-[dropdown-bounce_0.3s_ease-out]`}
                     >
                         {options.map((option, index) => (
                             <div

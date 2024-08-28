@@ -9,6 +9,8 @@ import SendingConfirmation from "site/components/Site/sending-confirmation.tsx";
 import { cnpjMask } from "site/helpers/Simulador/cnpjMask.ts";
 import { PhoneMask } from "site/helpers/Simulador/phoneMask.ts";
 import { cepMask } from "site/helpers/Simulador/cepMask.ts";
+import SiteUFSelect from "site/components/Site/site-uf-select.tsx";
+import SiteCitiesSelect from "site/components/Site/site-cities-select.tsx";
 
 export interface RequestQuoteIslandProps {
     recipientsEmail: string;
@@ -43,7 +45,7 @@ export default function BeAProviderFormIsland(
 
     useEffect(() => {
         const updateNamePlaceholder = () => {
-            if (window.innerWidth < 640) {
+            if (globalThis.innerWidth < 640) {
                 setSocialReasonPlaceholder("Razão Social");
                 setResponsibleNamePlaceholder("Nome do Responsável");
                 setEmailPlaceholder("Email");
@@ -67,10 +69,10 @@ export default function BeAProviderFormIsland(
         };
 
         updateNamePlaceholder(); // Set initial placeholder based on screen size
-        window.addEventListener("resize", updateNamePlaceholder);
+        globalThis.addEventListener("resize", updateNamePlaceholder);
 
         return () =>
-            window.removeEventListener("resize", updateNamePlaceholder);
+            globalThis.removeEventListener("resize", updateNamePlaceholder);
     }, []);
 
     const [socialReason, setSocialReason] = useState("");
@@ -78,10 +80,56 @@ export default function BeAProviderFormIsland(
     const [email, setEmail] = useState("");
     const [cnpj, setCNPJ] = useState("");
     const [tel, setTel] = useState("");
+    const [ufs, setUfs] = useState([]);
+    const [cities, setCities] = useState([]);
     const [UF, setUF] = useState("");
     const [city, setCity] = useState("");
     const [address, setAddress] = useState("");
     const [cep, setCep] = useState("");
+
+    // Buscar UFs na API do IBGE
+    useEffect(() => {
+        fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados")
+            .then((response) => response.json())
+            .then((data) => {
+                setUfs(data);
+            })
+            .catch((error) => {
+                console.error("Erro ao buscar UFs: ", error);
+            });
+    }, []);
+
+    //Faz o primeiro fetch usando MG como UF padrão
+    useEffect(() => {
+        fetch(
+            `https://servicodados.ibge.gov.br/api/v1/localidades/estados/MG/municipios`,
+        )
+            .then((response) => response.json())
+            .then((data) => {
+                setCities(data);
+            })
+            .catch((error) => {
+                console.error("Erro ao buscar cidades: ", error);
+            });
+    }, []);
+
+    // Atualizar as cidades sempre que a UF selecionada mudar
+    useEffect(() => {
+        if (UF) {
+            fetch(
+                `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${UF}/municipios`,
+            )
+                .then((response) => response.json())
+                .then((data) => {
+                    setCities(data);
+                })
+                .catch((error) => {
+                    console.error("Erro ao buscar cidades: ", error);
+                });
+        } else {
+            setCities([]);
+        }
+    }, [UF]);
 
     const sendData = `
         Razão Social: ${socialReason}
@@ -192,24 +240,24 @@ export default function BeAProviderFormIsland(
                                 wfull
                             />
                             <div className="hidden lg:flex gap-11 lg:w-3/5">
-                                <SiteInputSelect
+                                <SiteUFSelect
                                     id={"uf"}
                                     name={"uf"}
                                     label={"UF:"}
                                     value={UF}
                                     inputValueSetter={setUF}
-                                    options={ufsOptions}
+                                    options={ufs}
                                     placeholder={UFPlaceholder}
                                     wfull
                                 />
-                                <SiteInputSelect
+                                <SiteCitiesSelect
                                     id={"city"}
                                     name={"city"}
                                     label={"Cidade:"}
                                     value={city}
                                     inputValueSetter={setCity}
-                                    options={ufsOptions}
-                                    placeholder={cityPlaceholder}
+                                    options={cities}
+                                    placeholder={cities[0]?.nome}
                                     wfull
                                 />
                             </div>
@@ -238,24 +286,24 @@ export default function BeAProviderFormIsland(
                         </div>
 
                         <div className="flex gap-4 lg:hidden">
-                            <SiteInputSelect
+                            <SiteUFSelect
                                 id={"uf"}
                                 name={"uf"}
                                 label={"UF:"}
                                 value={UF}
                                 inputValueSetter={setUF}
-                                options={ufsOptions}
+                                options={ufs}
                                 placeholder={UFPlaceholder}
                                 wfull
                             />
-                            <SiteInputSelect
+                            <SiteCitiesSelect
                                 id={"city"}
                                 name={"city"}
                                 label={"Cidade:"}
                                 value={city}
                                 inputValueSetter={setCity}
-                                options={ufsOptions}
-                                placeholder={cityPlaceholder}
+                                options={cities}
+                                placeholder={cities[0]?.nome}
                                 wfull
                             />
                         </div>

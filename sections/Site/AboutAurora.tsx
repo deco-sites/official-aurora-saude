@@ -1,31 +1,29 @@
 import Image from "apps/website/components/Image.tsx";
 
-export default function AboutAurora() {
+export interface Props {
+    title: string;
+    /**
+     * @format rich-text
+     */
+    text: string;
+}
+
+export default function AboutAurora({ title, text }: Props) {
     return (
         <>
             <div className="flex justify-center px-10 lg:px-0">
                 <div className="lg:max-w-[1400px] w-full my-32 lg:pt-32">
                     <div className="flex flex-col lg:flex-row gap-6">
                         <div className="flex flex-col gap-7 lg:w-1/3 rounded-[20px] bg-pink1 p-12 lg:p-20">
-                            <span className="text-yellow font-sora text-2xl font-bold">
-                                1ª operadora de planos de saúde do Brasil
-                                fundada por duas mulheres.
+                            <span
+                                className="text-yellow font-sora text-2xl font-bold"
+                                dangerouslySetInnerHTML={{ __html: title }}
+                            >
                             </span>
-                            <span className="text-white">
-                                Formada por duas mulheres com mais de 18 anos de
-                                experiência no mercado de operadoras de saúde, a
-                                Aurora Saúde nasce com o propósito de oferecer
-                                uma nova experiência ao cuidar da saúde e do
-                                bem-estar.
-
-                                Para nós, saúde vai além de uma consulta médica
-                                e inclui acolhimento, parceria e compromisso com
-                                a qualidade de vida de cada beneficiário. Por
-                                meio de tecnologias avançadas de gestão de
-                                saúde, proporcionamos um cuidado integrado, com
-                                atendimento humanizado e diário, respeitando
-                                suas necessidades e oferecendo um cuidado
-                                personalizado.
+                            <span
+                                className="text-white"
+                                dangerouslySetInnerHTML={{ __html: text }}
+                            >
                             </span>
                         </div>
 

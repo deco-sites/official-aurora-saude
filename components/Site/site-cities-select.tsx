@@ -1,8 +1,7 @@
 import { Signal } from "@preact/signals-core";
 
 interface Option {
-    value: string;
-    text: string;
+    nome: string;
 }
 
 export interface InputProps {
@@ -17,7 +16,7 @@ export interface InputProps {
     inputValueSetter?: (value: string) => void;
 }
 
-export default function SiteInputSelect(
+export default function SiteCitiesSelect(
     {
         id,
         name,
@@ -65,10 +64,10 @@ export default function SiteInputSelect(
                     </option>
                     {options.map((op) => (
                         <option
-                            key={op.value}
-                            value={op.value}
+                            key={op.nome}
+                            value={op.nome}
                         >
-                            {op.text}
+                            {op.nome}
                         </option>
                     ))}
                 </select>

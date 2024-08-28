@@ -3,6 +3,9 @@ import Image from "apps/website/components/Image.tsx";
 import ColorfullButton from "site/components/Site/colorfull-btn.tsx";
 import PlanDetailsModal from "../../components/Site/plan-details-modal.tsx";
 import { ImageWidget } from "apps/admin/widgets.ts";
+import A100DetailsModal from "site/components/Site/a100-details-modal.tsx";
+import A300DetailsModal from "site/components/Site/a300-datails-modal.tsx";
+import A500DetailsModal from "site/components/Site/a500-details-modal.tsx";
 
 export interface Benefit {
     phrase: string;
@@ -32,7 +35,22 @@ export default function DiscoverOurPlansIsland(
     const sectionRef = useRef<HTMLDivElement | null>(null);
     const [isSlideToLeft, setIsSlideToLeft] = useState("");
     const [isSlideToRight, setIsSlideToRight] = useState("");
-    const [isModalOpen, setIsModalOpen] = useState<number | null>(null);
+    const [activeModal, setActiveModal] = useState<number | null>(null);
+    const [previousModal, setpreviousModal] = useState<number | null>(null);
+
+    const handleOpenModal = (modalIndex: number) => {
+        setActiveModal(modalIndex); // Abra o novo modal
+        setpreviousModal(activeModal);
+        setTimeout(() => {
+            // Marque o modal atual como em processo de fechamento
+            setpreviousModal(null); // Após o delay, remova o estado de fechamento
+        }, 500); // O tempo deve coincidir com a duração da animação
+    };
+
+    const handleCloseModal = () => {
+        setActiveModal(null);
+        setpreviousModal(null);
+    };
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -116,21 +134,21 @@ export default function DiscoverOurPlansIsland(
                             }`}
                         >
                             <button
-                                onClick={() => setIsModalOpen(0)}
+                                onClick={() => handleOpenModal(0)}
                                 className="flex justify-center items-center bg-orange1 text-white rounded-full px-6 py-5 lg:px-5 lg:py-4 font-sora font-semibold"
                             >
                                 a100
                             </button>
 
                             <button
-                                onClick={() => setIsModalOpen(1)}
+                                onClick={() => handleOpenModal(1)}
                                 className="flex justify-center items-center bg-aquagreen text-white rounded-full px-6 py-5 lg:px-5 lg:py-4 font-sora font-semibold"
                             >
                                 a300
                             </button>
 
                             <button
-                                onClick={() => setIsModalOpen(2)}
+                                onClick={() => handleOpenModal(2)}
                                 className="flex justify-center items-center bg-yellow text-orange1 rounded-full px-6 py-5 lg:px-5 lg:py-4 font-sora font-semibold"
                             >
                                 a500
@@ -163,11 +181,41 @@ export default function DiscoverOurPlansIsland(
                 </div>
             </div>
 
-            {isModalOpen !== null && (
-                <PlanDetailsModal
+            {
+                /*
+                    <PlanDetailsModal
                     isModalOpen={isModalOpen}
                     setIsModalOpen={setIsModalOpen}
                     plans={plans}
+                />*/
+            }
+            {(activeModal === 0 || previousModal === 0) && (
+                <A100DetailsModal
+                    activeModal={activeModal}
+                    previousModal={previousModal}
+                    onClose={handleCloseModal}
+                    onOpen={handleOpenModal}
+                    planInfos={plans.find((plan) => plan.planName === "a100")}
+                />
+            )}
+
+            {(activeModal === 1 || previousModal === 1) && (
+                <A300DetailsModal
+                    activeModal={activeModal}
+                    previousModal={previousModal}
+                    onClose={handleCloseModal}
+                    onOpen={handleOpenModal}
+                    planInfos={plans.find((plan) => plan.planName === "a300")}
+                />
+            )}
+
+            {(activeModal === 2 || previousModal === 2) && (
+                <A500DetailsModal
+                    activeModal={activeModal}
+                    previousModal={previousModal}
+                    onClose={handleCloseModal}
+                    onOpen={handleOpenModal}
+                    planInfos={plans.find((plan) => plan.planName === "a500")}
                 />
             )}
         </>
