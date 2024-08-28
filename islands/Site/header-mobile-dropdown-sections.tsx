@@ -32,13 +32,13 @@ export default function DropdownSections({
         <div
             ref={dropdownRef}
             onClick={handleClickInside}
-            className={`flex flex-col gap-1 justify-center items-center absolute -bottom-44 left-0 ${
+            className={`flex flex-col gap-1 justify-center items-center absolute -bottom-44 left-0 w-full ${
                 backgroundColors[option.id]
             } rounded-[20px]`}
         >
             <a
-                href="https://aurorasaude.plataforma-beneficiario.mosiaomnichannel.com.br/#/"
-                target="_blank"
+                href="/"
+                target="_self"
                 className="w-full"
             >
                 <button className="flex gap-5 items-center justify-center text-white bg-orange6 rounded-full px-4 py-2 w-full">
@@ -60,8 +60,8 @@ export default function DropdownSections({
                 </button>
             </a>
             <a
-                href="https://souaurorasaude.planium.io/web/login/entrar"
-                target="_blank"
+                href="/corretor"
+                target="_self"
                 className="w-full"
             >
                 <button className="flex gap-5 items-center justify-center text-white bg-pink2 rounded-full px-4 py-2 w-full">

@@ -11,6 +11,8 @@ import { signal } from "@preact/signals";
 import SendingConfirmation from "site/components/Site/sending-confirmation.tsx";
 import { PhoneMask } from "site/helpers/Simulador/phoneMask.ts";
 import { cepMask } from "site/helpers/Simulador/cepMask.ts";
+import SiteCitiesSelect from "site/components/Site/site-cities-select.tsx";
+import SiteUFSelect from "site/components/Site/site-uf-select.tsx";
 
 export interface WorkWithUsIslandProps {
     recipientsEmail: string;
@@ -67,11 +69,57 @@ export default function WorkWithUsIsland(
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [tel, setTel] = useState("");
+    const [ufs, setUfs] = useState([]);
+    const [cities, setCities] = useState([]);
     const [UF, setUF] = useState("");
     const [city, setCity] = useState("");
     const [address, setAddress] = useState("");
     const [cep, setCep] = useState("");
     const [selectedFile, setSelectedFile] = useState(null);
+
+    // Buscar UFs na API do IBGE
+    useEffect(() => {
+        fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados")
+            .then((response) => response.json())
+            .then((data) => {
+                setUfs(data);
+            })
+            .catch((error) => {
+                console.error("Erro ao buscar UFs: ", error);
+            });
+    }, []);
+
+    //Faz o primeiro fetch usando MG como UF padrão
+    useEffect(() => {
+        fetch(
+            `https://servicodados.ibge.gov.br/api/v1/localidades/estados/MG/municipios`,
+        )
+            .then((response) => response.json())
+            .then((data) => {
+                setCities(data);
+            })
+            .catch((error) => {
+                console.error("Erro ao buscar cidades: ", error);
+            });
+    }, []);
+
+    // Atualizar as cidades sempre que a UF selecionada mudar
+    useEffect(() => {
+        if (UF) {
+            fetch(
+                `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${UF}/municipios`,
+            )
+                .then((response) => response.json())
+                .then((data) => {
+                    setCities(data);
+                })
+                .catch((error) => {
+                    console.error("Erro ao buscar cidades: ", error);
+                });
+        } else {
+            setCities([]);
+        }
+    }, [UF]);
 
     const sendData = `
         Nome: ${name}
@@ -197,24 +245,24 @@ export default function WorkWithUsIsland(
                                 wfull
                             />
 
-                            <SiteInputSelect
+                            <SiteUFSelect
                                 id={"uf"}
                                 name={"uf"}
                                 label={"UF:"}
                                 value={UF}
                                 inputValueSetter={setUF}
-                                options={ufsOptions}
+                                options={ufs}
                                 placeholder={UFPlaceholder}
                                 wfull
                             />
-                            <SiteInputSelect
+                            <SiteCitiesSelect
                                 id={"city"}
                                 name={"city"}
                                 label={"Cidade:"}
                                 value={city}
                                 inputValueSetter={setCity}
-                                options={citiesOptions}
-                                placeholder={cityPlaceholder}
+                                options={cities}
+                                placeholder={cities[0]?.nome}
                                 wfull
                             />
                         </div>
@@ -243,24 +291,24 @@ export default function WorkWithUsIsland(
                         </div>
 
                         <div className="flex gap-4 lg:hidden pb-10 border-b border-b-black border-opacity-10 lg:border-none">
-                            <SiteInputSelect
+                            <SiteUFSelect
                                 id={"uf"}
                                 name={"uf"}
                                 label={"UF:"}
                                 value={UF}
                                 inputValueSetter={setUF}
-                                options={ufsOptions}
+                                options={ufs}
                                 placeholder={UFPlaceholder}
                                 wfull
                             />
-                            <SiteInputSelect
+                            <SiteCitiesSelect
                                 id={"city"}
                                 name={"city"}
                                 label={"Cidade:"}
                                 value={city}
                                 inputValueSetter={setCity}
-                                options={citiesOptions}
-                                placeholder={cityPlaceholder}
+                                options={cities}
+                                placeholder={cities[0]?.nome}
                                 wfull
                             />
                         </div>

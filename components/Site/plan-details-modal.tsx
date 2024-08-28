@@ -64,10 +64,13 @@ export default function PlanDetailsModal(
                             <Image
                                 src={`${selectedPlan.cardImage}`}
                                 alt={"Card"}
-                                className="w-[22rem] h-[22rem] lg:w-full lg:h-[25rem] object-contain -mt-12 -mb-12 lg:mb-0 lg:mt-0"
+                                className="w-[22rem] h-[22rem] lg:w-full lg:h-[25rem] object-contain ml-16 lg:ml-0 -mt-12 -mb-12 lg:mb-0 lg:mt-0"
+                                preload
+                                loading="eager"
+                                fetchPriority="high"
                             />
                         </div>
-                        <div className="lg:w-3/12 flex flex-col">
+                        <div className="lg:min-w-3/12 flex flex-col lg:-ml-32 flex-grow flex-shrink-0">
                             <span
                                 className={`${
                                     titleColors[selectedPlan.titleColor]
@@ -100,7 +103,7 @@ export default function PlanDetailsModal(
                                 médica da Aurora Saúde.
                             </span>
                         </div>
-                        <div className="lg:w-auto flex-grow flex flex-col gap-3 mt-7 lg:mt-0 pl-14">
+                        <div className="lg:w-auto flex-grow flex flex-col gap-3 mt-7 lg:mt-0 lg:pl-14">
                             <div
                                 className={`flex flex-col border ${
                                     selectedPlan.planName === "a500"
@@ -132,7 +135,10 @@ export default function PlanDetailsModal(
                                 >
                                     *faixa de 0 a 18 anos
                                 </span>
-                                <a href="/simulador-aurora">
+                                <a
+                                    href="/simulador-aurora"
+                                    className="flex justify-center"
+                                >
                                     <button
                                         className={`${
                                             buttonBgColors[

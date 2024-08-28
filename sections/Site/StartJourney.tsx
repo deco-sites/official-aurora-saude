@@ -9,7 +9,10 @@ export interface StartJourneyProps {
 
 export default function StartJourney({ device }: StartJourneyProps) {
     return (
-        <div className="relative flex flex-col lg:flex-row bg-gray4">
+        <div
+            id="startJourney"
+            className="relative flex flex-col lg:flex-row bg-gray4"
+        >
             <div className="lg:w-1/2">
                 <div className="flex flex-col gap-10 pt-14 px-14 pb-40 lg:pt-36 lg:pb-32 lg:pl-64 lg:pr-48">
                     <span className="text-pink1 font-sora text-5xl">

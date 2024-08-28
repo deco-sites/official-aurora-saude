@@ -14,16 +14,21 @@ import { protocolMask } from "site/helpers/Simulador/protocolMask.ts";
 import { cpfMask } from "site/helpers/Simulador/cpfMask.ts";
 import { PhoneMask } from "site/helpers/Simulador/phoneMask.ts";
 import { cepMask } from "site/helpers/Simulador/cepMask.ts";
+import SiteUFSelect from "site/components/Site/site-uf-select.tsx";
+import SiteCitiesSelect from "site/components/Site/site-cities-select.tsx";
 
 export interface OmbudsmanIslandProps {
     recipientsEmail: string;
+    subtitle: string;
+    mobileSubtitle: string;
     subject: string;
 }
 
 const ombudsmanEmailSended = signal(false);
 
 export default function OmbudsmanIsland(
-    { recipientsEmail, subject }: OmbudsmanIslandProps,
+    { recipientsEmail, subject, subtitle, mobileSubtitle }:
+        OmbudsmanIslandProps,
 ) {
     const [protocolNumberPlaceholder, setProtocolNumberPlaceholder] = useState(
         "xxxxxxxxxxxxxxxxxxxx",
@@ -89,11 +94,57 @@ export default function OmbudsmanIsland(
     const [email, setEmail] = useState("");
     const [cpf, setCpf] = useState("");
     const [tel, setTel] = useState("");
+    const [ufs, setUfs] = useState([]);
+    const [cities, setCities] = useState([]);
     const [UF, setUF] = useState("");
     const [city, setCity] = useState("");
     const [address, setAddress] = useState("");
     const [cep, setCep] = useState("");
     const [message, setMessage] = useState("");
+
+    // Buscar UFs na API do IBGE
+    useEffect(() => {
+        fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados")
+            .then((response) => response.json())
+            .then((data) => {
+                setUfs(data);
+            })
+            .catch((error) => {
+                console.error("Erro ao buscar UFs: ", error);
+            });
+    }, []);
+
+    //Faz o primeiro fetch usando MG como UF padrão
+    useEffect(() => {
+        fetch(
+            `https://servicodados.ibge.gov.br/api/v1/localidades/estados/MG/municipios`,
+        )
+            .then((response) => response.json())
+            .then((data) => {
+                setCities(data);
+            })
+            .catch((error) => {
+                console.error("Erro ao buscar cidades: ", error);
+            });
+    }, []);
+
+    // Atualizar as cidades sempre que a UF selecionada mudar
+    useEffect(() => {
+        if (UF) {
+            fetch(
+                `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${UF}/municipios`,
+            )
+                .then((response) => response.json())
+                .then((data) => {
+                    setCities(data);
+                })
+                .catch((error) => {
+                    console.error("Erro ao buscar cidades: ", error);
+                });
+        } else {
+            setCities([]);
+        }
+    }, [UF]);
 
     const sendData = `
         Número do Protocolo: ${protocolNumber}
@@ -128,18 +179,18 @@ export default function OmbudsmanIsland(
                             Ouvidoria <br /> Aurora Saúde
                         </span>
                         <div className="flex flex-col gap-4 lg:max-w-[500px] text-black text-opacity-50">
-                            <span>
-                                A Ouvidoria da Aurora é um canal de
-                                comunicação<br />
-                                independente e imparcial, que atua como um
-                                espaço<br /> de diálogo entre você e nós.
+                            <span
+                                className="hidden lg:block"
+                                dangerouslySetInnerHTML={{ __html: subtitle }}
+                            >
                             </span>
-                            <span>
-                                Nosso objetivo é acolher suas manifestações,
-                                seja<br />{" "}
-                                para assegurar seus direitos contratuais e<br />
-                                regulamentares, seja para contribuir para a
-                                melhoria<br /> de nossos serviços.
+
+                            <span
+                                className="block lg:hidden"
+                                dangerouslySetInnerHTML={{
+                                    __html: mobileSubtitle,
+                                }}
+                            >
                             </span>
                         </div>
                     </div>
@@ -252,24 +303,24 @@ export default function OmbudsmanIsland(
                                 />
                             </div>
 
-                            <SiteInputSelect
+                            <SiteUFSelect
                                 id={"uf"}
                                 name={"uf"}
                                 label={"UF:"}
                                 value={UF}
                                 inputValueSetter={setUF}
-                                options={ufsOptions}
+                                options={ufs}
                                 placeholder={UFPlaceholder}
                                 wfull
                             />
-                            <SiteInputSelect
+                            <SiteCitiesSelect
                                 id={"city"}
                                 name={"city"}
                                 label={"Cidade:"}
                                 value={city}
                                 inputValueSetter={setCity}
-                                options={citiesOptions}
-                                placeholder={cityPlaceholder}
+                                options={cities}
+                                placeholder={cities[0]?.nome}
                                 wfull
                             />
                         </div>

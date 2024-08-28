@@ -3,6 +3,8 @@ import Image from "apps/website/components/Image.tsx";
 import { serviceCards } from "site/helpers/Site/service-cards.ts";
 import ServiceCardIsland from "site/islands/Site/service-card-island.tsx";
 import ColorfullButton from "site/components/Site/colorfull-btn.tsx";
+import { FnContext } from "deco/types.ts";
+import { Device } from "apps/website/matchers/device.ts";
 
 export interface Props {
     src: ImageWidget;
@@ -15,7 +17,12 @@ export interface IPhoto {
     photo: Props;
 }
 
-export default function Section({ photo }: IPhoto) {
+export interface IPhotoProps {
+    device: Device;
+    photo: Props;
+}
+
+export default function Section({ photo, device }: IPhotoProps) {
     return (
         <>
             <div className="flex justify-center lg:width-calc">
@@ -45,7 +52,9 @@ export default function Section({ photo }: IPhoto) {
                                         bgColor={"pink"}
                                         textColor={"yellow"}
                                         text={"Acesse o seu perfil"}
-                                        link={"https://aurorasaude.plataforma-beneficiario.mosiaomnichannel.com.br/"}
+                                        link={device === "desktop"
+                                            ? "https://aurorasaude.plataforma-beneficiario.mosiaomnichannel.com.br/"
+                                            : "https://play.google.com/store/apps/details?id=br.com.mobilesaude.aurorasaude&hl=pt&gl=US&pli=1"}
                                         targetBlank
                                     />
                                 </div>
@@ -61,3 +70,10 @@ export default function Section({ photo }: IPhoto) {
         </>
     );
 }
+
+export const loader = (props: Props, req: Request, ctx: FnContext) => {
+    return {
+        ...props,
+        device: ctx.device,
+    };
+};

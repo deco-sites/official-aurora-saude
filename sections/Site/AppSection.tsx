@@ -19,11 +19,11 @@ export default function AppSection(
 ) {
     return (
         <>
-            <div className="flex justify-center bg-pink1">
+            <div id="appSection" className="flex justify-center bg-pink1">
                 <div className="lg:max-w-[1400px] w-full flex flex-col lg:flex-row pt-14 pb-28 lg:pt-40 lg:pb-44">
-                    <div className="lg:w-1/3 px-14 flex flex-col gap-5 font-sora">
+                    <div className="lg:w-1/3 pl-14 flex flex-col gap-5 font-sora">
                         <span
-                            className="text-white text-5xl"
+                            className="text-white text-5xl leading-tight"
                             dangerouslySetInnerHTML={{
                                 __html: device === "desktop"
                                     ? desktopTitle

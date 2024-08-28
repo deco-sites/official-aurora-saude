@@ -43,8 +43,9 @@ export default function DropdownMobileMenu({ option, openerRef, setOpen }) {
             <div
                 className={`fixed top-0 left-0 h-screen w-screen flex flex-col p-16 ${
                     backgroundColors[option.id]
-                } z-50`}
+                }`}
                 ref={dropdownRef}
+                style={{ zIndex: 99999 }}
             >
                 <div className="relative flex justify-between items-center border-b border-b-white pb-8 pr-4 pt-2">
                     <div

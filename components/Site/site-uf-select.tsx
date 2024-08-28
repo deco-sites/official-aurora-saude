@@ -1,8 +1,8 @@
 import { Signal } from "@preact/signals-core";
 
 interface Option {
-    value: string;
-    text: string;
+    nome: string;
+    sigla: string;
 }
 
 export interface InputProps {
@@ -17,7 +17,7 @@ export interface InputProps {
     inputValueSetter?: (value: string) => void;
 }
 
-export default function SiteInputSelect(
+export default function SiteUFSelect(
     {
         id,
         name,
@@ -31,6 +31,7 @@ export default function SiteInputSelect(
     }: InputProps,
 ) {
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        console.log("Trocou:", e.target.value);
         const value = e.target.value;
         if (inputValueSetter) {
             inputValueSetter(value);
@@ -65,10 +66,10 @@ export default function SiteInputSelect(
                     </option>
                     {options.map((op) => (
                         <option
-                            key={op.value}
-                            value={op.value}
+                            key={op.sigla}
+                            value={op.sigla}
                         >
-                            {op.text}
+                            {op.sigla}
                         </option>
                     ))}
                 </select>

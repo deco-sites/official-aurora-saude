@@ -1,5 +1,7 @@
 import SiteInputText from "site/components/Site/site-input-text.tsx";
 import SiteInputSelect from "site/components/Site/site-input-select.tsx";
+import SiteUFSelect from "site/components/Site/site-uf-select.tsx";
+import SiteCitiesSelect from "site/components/Site/site-cities-select.tsx";
 import { ufsOptions } from "site/helpers/Site/ufsOptions.ts";
 import { citiesOptions } from "site/helpers/Simulador/cities.ts";
 import { useEffect, useState } from "preact/hooks";
@@ -32,9 +34,64 @@ export default function RequestQuoteIsland(
             "Selecione",
         );
 
+    const [ufs, setUfs] = useState([]);
+    //const [selectedUf, setSelectedUf] = useState("");
+    const [cities, setCities] = useState([]);
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [tel, setTel] = useState("");
+    const [UF, setUF] = useState("");
+    const [city, setCity] = useState("");
+    const [whereMeetAurora, setWhereMeetAurora] = useState("");
+    const [customWhereMeetAurora, setCustomWhereMeetAurora] = useState("");
+
+    // Buscar UFs na API do IBGE
+    useEffect(() => {
+        fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados")
+            .then((response) => response.json())
+            .then((data) => {
+                setUfs(data);
+            })
+            .catch((error) => {
+                console.error("Erro ao buscar UFs: ", error);
+            });
+    }, []);
+
+    //Faz o primeiro fetch usando MG como UF padrão
+    useEffect(() => {
+        fetch(
+            `https://servicodados.ibge.gov.br/api/v1/localidades/estados/MG/municipios`,
+        )
+            .then((response) => response.json())
+            .then((data) => {
+                setCities(data);
+            })
+            .catch((error) => {
+                console.error("Erro ao buscar cidades: ", error);
+            });
+    }, []);
+
+    // Atualizar as cidades sempre que a UF selecionada mudar
+    useEffect(() => {
+        if (UF) {
+            fetch(
+                `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${UF}/municipios`,
+            )
+                .then((response) => response.json())
+                .then((data) => {
+                    setCities(data);
+                })
+                .catch((error) => {
+                    console.error("Erro ao buscar cidades: ", error);
+                });
+        } else {
+            setCities([]);
+        }
+    }, [UF]);
+
     useEffect(() => {
         const updateNamePlaceholder = () => {
-            if (window.innerWidth < 640) {
+            if (globalThis.innerWidth < 640) {
                 setNamePlaceholder("Nome completo");
                 setEmailPlaceholder("E-mail");
                 setTelPlaceholder("Telefone");
@@ -59,14 +116,6 @@ export default function RequestQuoteIsland(
         return () =>
             globalThis.removeEventListener("resize", updateNamePlaceholder);
     }, []);
-
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [tel, setTel] = useState("");
-    const [UF, setUF] = useState("");
-    const [city, setCity] = useState("");
-    const [whereMeetAurora, setWhereMeetAurora] = useState("");
-    const [customWhereMeetAurora, setCustomWhereMeetAurora] = useState("");
 
     const sendData = `
         Nome: ${name}
@@ -143,24 +192,24 @@ export default function RequestQuoteIsland(
                                 wfull
                             />
                         </div>
-                        <SiteInputSelect
+                        <SiteUFSelect
                             id={"uf"}
                             name={"uf"}
                             label={"UF:"}
                             value={UF}
                             inputValueSetter={setUF}
-                            options={ufsOptions}
+                            options={ufs}
                             placeholder={UFPlaceholder}
                             wfull
                         />
-                        <SiteInputSelect
+                        <SiteCitiesSelect
                             id={"city"}
                             name={"city"}
                             label={"Cidade:"}
                             value={city}
                             inputValueSetter={setCity}
-                            options={citiesOptions}
-                            placeholder={cityPlaceholder}
+                            options={cities}
+                            placeholder={cities[0]?.nome}
                             wfull
                         />
                     </div>
@@ -182,7 +231,7 @@ export default function RequestQuoteIsland(
                     */
                     }
 
-                    <div className="w-full lg:w-[50%]">
+                    <div className="w-full lg:w-[45%]">
                         <CustomSelect
                             options={indicationsOptions}
                             label={"Por onde você conheceu a Aurora?"}

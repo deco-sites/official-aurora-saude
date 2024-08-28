@@ -26,7 +26,7 @@ export default function RedirectionsSection(
             <div className="bg-inherit flex flex-col gap-20 px-10 pt-10 pb-20 lg:px-52 lg:pt-32 lg:pb-44">
                 <div className="flex flex-col gap-4 lg:flex-row justify-between">
                     <span
-                        className="text-yellow text-5xl font-sora font-semibold lg:w-2/3"
+                        className="text-yellow text-5xl font-sora font-semibold lg:w-2/3 leading-tight"
                         dangerouslySetInnerHTML={{
                             __html: device === "desktop"
                                 ? desktopTitle
@@ -45,7 +45,7 @@ export default function RedirectionsSection(
                     </span>
                 </div>
                 <div className="flex flex-col gap-4 lg:flex-row justify-between">
-                    <a>
+                    <a href="#startJourney">
                         <button className="w-full bg-white rounded-full py-6 px-10 text-pink1 flex justify-between gap-9 font-medium lg:font-normal whitespace-nowrap">
                             Jornada de Cuidado
                             <Icon
@@ -56,14 +56,7 @@ export default function RedirectionsSection(
                             />
                         </button>
                     </a>
-                    <a
-                        href={`${
-                            device === "mobile"
-                                ? "https://onelink.to/n5nzam"
-                                : "https://aurorasaude.plataforma-beneficiario.mosiaomnichannel.com.br/#/"
-                        }`}
-                        target="_blank"
-                    >
+                    <a href="#appSection">
                         <button className="w-full bg-white rounded-full py-6 px-10 text-pink1 flex justify-between gap-9 font-medium lg:font-normal whitespace-nowrap">
                             App e Portal
                             <Icon
@@ -74,7 +67,7 @@ export default function RedirectionsSection(
                             />
                         </button>
                     </a>
-                    <a href="/perguntas-frequentes">
+                    <a href="#tourSection">
                         <button className="w-full bg-white rounded-full py-6 px-10 text-pink1 flex justify-between gap-9 font-medium lg:font-normal whitespace-nowrap">
                             Dúvidas Frequentes
                             <Icon

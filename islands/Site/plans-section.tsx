@@ -185,10 +185,21 @@ export default function PlansSectionIsland(
                             para você.
                         </span>
                     </div>
-
+                    <div class="hidden lg:grid grid-cols-4 text-center gap-4 sticky top-0 bg-white py-4">
+                        <div></div>
+                        <div class="bg-orange1 rounded-[10px] h-[110px] flex justify-center items-center text-2xl text-yellow">
+                            a100
+                        </div>
+                        <div class="bg-aquagreen rounded-[10px] h-[110px] flex justify-center items-center text-2xl text-yellow">
+                            a300
+                        </div>
+                        <div class="bg-yellow rounded-[10px] h-[110px] flex justify-center items-center text-2xl text-orange1">
+                            a500
+                        </div>
+                    </div>
                     <div className="w-full overflow-x-scroll lg:overflow-x-auto scrollbar-none">
                         <div className="min-w-max lg:min-w-full">
-                            <div class="grid grid-cols-4 text-center gap-4">
+                            <div class="grid lg:hidden grid-cols-4 text-center gap-4 sticky top-0 bg-white py-4">
                                 <div></div>
                                 <div class="bg-orange1 rounded-[10px] h-[110px] flex justify-center items-center text-2xl text-yellow">
                                     a100
@@ -199,22 +210,25 @@ export default function PlansSectionIsland(
                                 <div class="bg-yellow rounded-[10px] h-[110px] flex justify-center items-center text-2xl text-orange1">
                                     a500
                                 </div>
+                            </div>
+                            <div className="flex flex-col">
+                                <div class="grid grid-cols-4 text-center gap-4">
+                                    <LineTitle text={"Valor"} />
+                                    <DataCellText
+                                        text={regions[regionValue].a100Price}
+                                    />
+                                    <DataCellText
+                                        text={regions[regionValue].a300Price}
+                                    />
+                                    <DataCellText
+                                        text={regions[regionValue].a500Price}
+                                    />
 
-                                <LineTitle text={"Valor"} />
-                                <DataCellText
-                                    text={regions[regionValue].a100Price}
-                                />
-                                <DataCellText
-                                    text={regions[regionValue].a300Price}
-                                />
-                                <DataCellText
-                                    text={regions[regionValue].a500Price}
-                                />
-
-                                <LineTitle text={"Cobertura"} />
-                                <DataCellText text={a100Coverage} />
-                                <DataCellText text={a300Coverage} />
-                                <DataCellText text={a500Coverage} />
+                                    <LineTitle text={"Cobertura"} />
+                                    <DataCellText text={a100Coverage} />
+                                    <DataCellText text={a300Coverage} />
+                                    <DataCellText text={a500Coverage} />
+                                </div>
                             </div>
 
                             <div className="p-8">

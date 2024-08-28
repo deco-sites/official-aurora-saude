@@ -180,19 +180,23 @@ export default function Footer() {
                                         Já tem o plano e quer falar conosco?
                                         Ligue para:
                                     </span>
-                                    <div className="flex gap-2 items-center justify-center lg:justify-start">
+
+                                    <a
+                                        href="tel:40002105"
+                                        className="flex gap-2 items-center justify-center lg:justify-start"
+                                    >
                                         <Icon
                                             class="h-5 w-5"
                                             id="PhoneFooterIcon"
                                             size={17}
                                         />
                                         <span>4000 2105</span>
-                                    </div>
+                                    </a>
                                 </div>
 
                                 <div className="hidden lg:flex gap-3">
                                     <a
-                                        href="https://onelink.to/n5nzam"
+                                        href="https://play.google.com/store/apps/details?id=br.com.mobilesaude.aurorasaude&hl=pt&gl=US"
                                         target="_blank"
                                     >
                                         <Image
@@ -201,7 +205,7 @@ export default function Footer() {
                                         />
                                     </a>
                                     <a
-                                        href="https://onelink.to/n5nzam"
+                                        href="https://apps.apple.com/br/app/aurora-sa%C3%BAde/id6469621364"
                                         target="_blank"
                                     >
                                         <Image
