@@ -2,25 +2,22 @@ import { useRef, useState } from "preact/hooks";
 import { useClickOutsideListener } from "site/helpers/Site/useClickOutsideListener.ts";
 
 interface Option {
-    nome: string;
-    sigla: string;
+    value: string;
+    text: string;
 }
 
 export interface InputProps {
     label: string;
     options: Option[];
-    value?: string;
-    inputValueSetter?: (value: string) => void;
+    value: string;
+    inputValueSetter: (value: string) => void;
+    placeholder?: string;
 }
 
-export default function SiteUFSelect(
-    {
-        label,
-        options,
-        value,
-        inputValueSetter,
-    }: InputProps,
-) {
+const CustomSelectWithLabels = (
+    { options, label, value, inputValueSetter, placeholder = "Selecione" }:
+        InputProps,
+) => {
     const [isOpen, setIsOpen] = useState(false);
     const avatarRef = useRef(null);
     const dropdownRef = useRef(null);
@@ -41,9 +38,11 @@ export default function SiteUFSelect(
     };
 
     return (
-        <div className="flex gap-6 items-center w-full flex-1">
-            <label className="hidden lg:flex text-orange1 text-nowrap">
-                {label}
+        <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center w-full flex-1">
+            <label
+                className="flex text-orange1 text-nowrap"
+                dangerouslySetInnerHTML={{ __html: label }}
+            >
             </label>
 
             <div className="relative w-full">
@@ -53,7 +52,7 @@ export default function SiteUFSelect(
                     ref={avatarRef}
                     onClick={toggleDropdown}
                 >
-                    <span>{value || "Selecione"}</span>
+                    <span>{value || placeholder}</span>
                     <svg
                         className={`transform transition-transform duration-200 ${
                             isOpen ? "rotate-180" : ""
@@ -79,15 +78,15 @@ export default function SiteUFSelect(
                     <div
                         ref={dropdownRef}
                         onClick={handleClickInside}
-                        className={`absolute z-50 max-h-80 overflow-y-scroll left-0 mt-[14px] bg-gray1 text-black text-opacity-25 rounded-xl px-[57px] py-[30px] w-full animate-[dropdown-bounce_0.3s_ease-out]`}
+                        className={`absolute z-50 left-0 mt-[14px] bg-gray1 text-black text-opacity-25 rounded-xl px-[57px] py-[30px] w-full animate-[dropdown-bounce_0.3s_ease-out]`}
                     >
                         {options.map((option, index) => (
                             <div
                                 key={index}
                                 className="text-center cursor-pointer mb-[33px] last:mb-0"
-                                onClick={() => handleOptionClick(option.sigla)}
+                                onClick={() => handleOptionClick(option.text)}
                             >
-                                {option.sigla}
+                                {option.text}
                             </div>
                         ))}
                     </div>
@@ -95,4 +94,6 @@ export default function SiteUFSelect(
             </div>
         </div>
     );
-}
+};
+
+export default CustomSelectWithLabels;

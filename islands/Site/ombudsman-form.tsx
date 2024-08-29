@@ -207,7 +207,7 @@ export default function OmbudsmanIsland(
                                 inputValueSetter={setProtocolNumber}
                                 placeholder={protocolNumberPlaceholder}
                                 mask={protocolMask}
-                                maxLength={17}
+                                maxLength={20}
                                 wfull
                             />
                             <SiteInputText

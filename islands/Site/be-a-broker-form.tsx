@@ -13,6 +13,8 @@ import { cepMask } from "site/helpers/Simulador/cepMask.ts";
 import { cnpjMask } from "site/helpers/Simulador/cnpjMask.ts";
 import SiteUFSelect from "site/components/Site/site-uf-select.tsx";
 import SiteCitiesSelect from "site/components/Site/site-cities-select.tsx";
+import CustomSelect from "site/components/Site/custom-select.tsx";
+import CustomSelectWithLabels from "site/components/Site/custom-select-whit-labels.tsx";
 
 export interface RequestQuoteIslandProps {
     recipientsEmail: string;
@@ -318,7 +320,24 @@ export default function BeABrokerFormIsland(
                                 placeholder={employeesQtyPlaceholder}
                                 wfull
                             />
-                            <div className="hidden lg:flex flex-col gap-9">
+                            <div className="hidden lg:flex flex-col gap-9 w-[40%]">
+                                <CustomSelectWithLabels
+                                    label={"Já possui carteira de clientes?"}
+                                    value={customerBase}
+                                    inputValueSetter={setCustomerBase}
+                                    options={yesOrNoOptions}
+                                    placeholder={customerBasePlaceholder}
+                                />
+
+                                <CustomSelectWithLabels
+                                    label={"Possui venda para lançar na<br /> abertura do código?"}
+                                    value={haveSales}
+                                    inputValueSetter={setHaveSales}
+                                    options={yesOrNoOptions}
+                                    placeholder={haveSalesPlaceholder}
+                                />
+                                {
+                                    /*
                                 <SiteInputSelect
                                     id={"customerBase"}
                                     name={"customerBase"}
@@ -336,9 +355,27 @@ export default function BeABrokerFormIsland(
                                     inputValueSetter={setHaveSales}
                                     options={yesOrNoOptions}
                                     placeholder={haveSalesPlaceholder}
-                                />
+                                />*/
+                                }
                             </div>
                             <div className="flex flex-col lg:hidden">
+                                <CustomSelectWithLabels
+                                    label={"Já possui carteira de clientes?"}
+                                    value={customerBase}
+                                    inputValueSetter={setCustomerBase}
+                                    options={yesOrNoOptions}
+                                    placeholder={customerBasePlaceholder}
+                                />
+
+                                <CustomSelectWithLabels
+                                    label={"Possui venda para lançar na<br /> abertura do código?"}
+                                    value={haveSales}
+                                    inputValueSetter={setHaveSales}
+                                    options={yesOrNoOptions}
+                                    placeholder={haveSalesPlaceholder}
+                                />
+                                {
+                                    /*
                                 <MobileInputSelectWithLabel
                                     id={"customerBase"}
                                     name={"customerBase"}
@@ -357,6 +394,8 @@ export default function BeABrokerFormIsland(
                                     options={yesOrNoOptions}
                                     placeholder={haveSales}
                                 />
+                                */
+                                }
                             </div>
                             <div className="flex justify-end w-full">
                                 <button

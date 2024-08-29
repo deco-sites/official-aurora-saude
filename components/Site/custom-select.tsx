@@ -1,4 +1,5 @@
-import { useState } from "preact/hooks";
+import { useRef, useState } from "preact/hooks";
+import { useClickOutsideListener } from "site/helpers/Site/useClickOutsideListener.ts";
 
 interface Option {
     value: string;
@@ -10,12 +11,22 @@ export interface InputProps {
     options: Option[];
     value: string;
     inputValueSetter: (value: string) => void;
+    placeholder?: string;
 }
 
 const CustomSelect = (
-    { options, label, value, inputValueSetter }: InputProps,
+    { options, label, value, inputValueSetter, placeholder = "Selecione" }:
+        InputProps,
 ) => {
     const [isOpen, setIsOpen] = useState(false);
+    const avatarRef = useRef(null);
+    const dropdownRef = useRef(null);
+
+    useClickOutsideListener(dropdownRef, avatarRef, setIsOpen);
+
+    const handleClickInside = (event: MouseEvent) => {
+        event.stopPropagation();
+    };
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
@@ -28,17 +39,20 @@ const CustomSelect = (
 
     return (
         <div className="flex gap-6 items-center w-full flex-1">
-            <label className="hidden lg:flex text-orange1 text-nowrap">
-                {label}
+            <label
+                className="hidden lg:flex text-orange1 text-nowrap"
+                dangerouslySetInnerHTML={{ __html: label }}
+            >
             </label>
 
             <div className="relative w-full">
                 {/* Select box */}
                 <div
                     className={`flex items-center justify-between bg-gray1 text-black text-opacity-25 rounded-xl cursor-pointer px-6 py-5 lg:py-2`}
+                    ref={avatarRef}
                     onClick={toggleDropdown}
                 >
-                    <span>{value || "Selecione"}</span>
+                    <span>{value || placeholder}</span>
                     <svg
                         className={`transform transition-transform duration-200 ${
                             isOpen ? "rotate-180" : ""
@@ -62,7 +76,9 @@ const CustomSelect = (
                 {/* Dropdown */}
                 {isOpen && (
                     <div
-                        className={`absolute left-0 mt-[14px] bg-gray1 text-black text-opacity-25 rounded-xl px-[57px] py-[30px] w-full animate-[dropdown-bounce_0.3s_ease-out]`}
+                        ref={dropdownRef}
+                        onClick={handleClickInside}
+                        className={`absolute z-50 left-0 mt-[14px] bg-gray1 text-black text-opacity-25 rounded-xl px-[57px] py-[30px] w-full animate-[dropdown-bounce_0.3s_ease-out]`}
                     >
                         {options.map((option, index) => (
                             <div
