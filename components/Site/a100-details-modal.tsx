@@ -9,6 +9,7 @@ export default function A100DetailsModal(
         onClose,
         onOpen,
         planInfos,
+        style,
     },
 ) {
     useEffect(() => {
@@ -30,7 +31,7 @@ export default function A100DetailsModal(
             <div
                 className={`fixed top-0 left-0 flex min-h-screen w-screen bg-orange1 justify-center items-start lg:items-center overflow-x-hidden overflow-y-scroll`}
                 style={{
-                    zIndex: 9999,
+                    ...style,
                     animation: activeModal === 0
                         ? "slide-in 0.5s ease-in-out forwards"
                         : "", //slide-out 0.5s ease-in-out forwards
@@ -133,7 +134,7 @@ export default function A100DetailsModal(
                     <div className="flex justify-start w-full lg:justify-center mt-10 mb-7 lg:mb-0 lg:mt-9">
                         <button
                             className={`flex items-center gap-3 text-white font-sora text-base lg:text-sm`}
-                            onClick={() => onClose()}
+                            onClick={() => onClose(0)}
                         >
                             <Icon
                                 class={`h-auto -rotate-90 text-white`}

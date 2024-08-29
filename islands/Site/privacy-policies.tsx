@@ -141,7 +141,7 @@ export default function PrivacyPoliciesIsland({ sections, device }: Props) {
                                 <div
                                     className={`overflow-hidden transition-[height] duration-500 ease-in-out ${
                                         expandedSection.value === index
-                                            ? "h-auto"
+                                            ? "h-auto mb-10"
                                             : "h-0"
                                     }`}
                                     style={{

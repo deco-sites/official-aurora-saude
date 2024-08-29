@@ -4,7 +4,7 @@ import SiteUFSelect from "site/components/Site/site-uf-select.tsx";
 import SiteCitiesSelect from "site/components/Site/site-cities-select.tsx";
 import { ufsOptions } from "site/helpers/Site/ufsOptions.ts";
 import { citiesOptions } from "site/helpers/Simulador/cities.ts";
-import { useEffect, useState } from "preact/hooks";
+import { useEffect, useRef, useState } from "preact/hooks";
 import { indicationsOptions } from "site/helpers/Site/indications.ts";
 import { invoke } from "../../runtime.ts";
 import SendingConfirmation from "site/components/Site/sending-confirmation.tsx";

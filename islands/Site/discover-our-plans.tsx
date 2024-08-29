@@ -37,8 +37,30 @@ export default function DiscoverOurPlansIsland(
     const [isSlideToRight, setIsSlideToRight] = useState("");
     const [activeModal, setActiveModal] = useState<number | null>(null);
     const [previousModal, setpreviousModal] = useState<number | null>(null);
+    const [openModals, setOpenModals] = useState([]);
+
+    const resetAnimation = () => {
+        setIsSlideToLeft("");
+        setIsSlideToRight("");
+        setTimeout(() => {
+            if (globalThis.innerWidth < 640) {
+                setIsSlideToLeft("card-slide-up");
+                setIsSlideToRight("card-slide-down");
+            } else {
+                setIsSlideToLeft("card-slide-left");
+                setIsSlideToRight("card-slide-right");
+            }
+        }, 100); // Pequeno atraso para garantir o reset da animação
+    };
 
     const handleOpenModal = (modalIndex: number) => {
+        setOpenModals((prevOpenModals) => {
+            // Remover o modal do array se já estiver presente (para reordenar)
+            const updatedModals = prevOpenModals.filter((index) =>
+                index !== modalIndex
+            );
+            return [...updatedModals, modalIndex];
+        });
         setActiveModal(modalIndex); // Abra o novo modal
         setpreviousModal(activeModal);
         setTimeout(() => {
@@ -47,9 +69,19 @@ export default function DiscoverOurPlansIsland(
         }, 500); // O tempo deve coincidir com a duração da animação
     };
 
-    const handleCloseModal = () => {
+    const handleCloseModal = (modalIndex) => {
+        setOpenModals((prevOpenModals) =>
+            prevOpenModals.filter((index) => index !== modalIndex)
+        );
         setActiveModal(null);
         setpreviousModal(null);
+        resetAnimation();
+    };
+
+    // Função para calcular o zIndex com base na posição no array openModals
+    const getZIndex = (modalIndex) => {
+        const position = openModals.indexOf(modalIndex);
+        return 9999 + position;
     };
 
     useEffect(() => {
@@ -107,7 +139,7 @@ export default function DiscoverOurPlansIsland(
                                 <Image
                                     src={"/Site/a100-card.png"}
                                     alt={""}
-                                    className={`w-[500px] lg:w-[650px] ${isSlideToLeft}`}
+                                    className={`w-[30rem] lg:w-[650px] ${isSlideToLeft}`}
                                 />
                             </div>
 
@@ -115,7 +147,7 @@ export default function DiscoverOurPlansIsland(
                                 <Image
                                     src={"/Site/a300-card.png"}
                                     alt={""}
-                                    className="w-[400px] lg:w-[650px]"
+                                    className="w-[30rem] lg:w-[650px]"
                                 />
                             </div>
 
@@ -123,7 +155,7 @@ export default function DiscoverOurPlansIsland(
                                 <Image
                                     src={"/Site/a500-card.png"}
                                     alt={""}
-                                    className={`w-[400px] lg:w-[650px] ${isSlideToRight}`}
+                                    className={`w-[30rem] lg:w-[650px] ${isSlideToRight}`}
                                 />
                             </div>
                         </div>
@@ -196,6 +228,7 @@ export default function DiscoverOurPlansIsland(
                     onClose={handleCloseModal}
                     onOpen={handleOpenModal}
                     planInfos={plans.find((plan) => plan.planName === "a100")}
+                    style={{ zIndex: getZIndex(0) }}
                 />
             )}
 
@@ -206,6 +239,7 @@ export default function DiscoverOurPlansIsland(
                     onClose={handleCloseModal}
                     onOpen={handleOpenModal}
                     planInfos={plans.find((plan) => plan.planName === "a300")}
+                    style={{ zIndex: getZIndex(1) }}
                 />
             )}
 
@@ -216,6 +250,7 @@ export default function DiscoverOurPlansIsland(
                     onClose={handleCloseModal}
                     onOpen={handleOpenModal}
                     planInfos={plans.find((plan) => plan.planName === "a500")}
+                    style={{ zIndex: getZIndex(2) }}
                 />
             )}
         </>

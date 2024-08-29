@@ -19,7 +19,7 @@ export default function SiteTextArea(
 
     return (
         <textarea
-            className="px-6 py-5 min-h-[250px] lg:py-2 rounded-md bg-gray4 bg-opacity-50 outline-none w-full lg:w-auto text-black text-opacity-25 placeholder:text-black placeholder:text-opacity-25"
+            className="px-6 py-5 min-h-[250px] lg:py-2 rounded-xl bg-gray4 bg-opacity-50 outline-none w-full lg:w-auto text-black text-opacity-25 placeholder:text-black placeholder:text-opacity-25"
             id={id}
             name={name}
             placeholder={placeholder}

@@ -71,9 +71,9 @@ export default function PlansSectionIsland(
                                 Escolha um plano<br />{" "}
                                 para estar sempre junto<br /> de você.
                             </span>
-                            <div className="flex gap-6 items-center z-50">
+                            <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center z-50 mt-12">
                                 <label
-                                    className="hidden lg:flex text-orange1 text-nowrap"
+                                    className="text-orange1 text-nowrap font-sora"
                                     htmlFor="regionValue"
                                 >
                                     Região:
@@ -82,7 +82,7 @@ export default function PlansSectionIsland(
                                     className={`relative w-full lg:w-auto`}
                                 >
                                     <select
-                                        className={`px-6 py-5 lg:py-2 lg:rounded-md bg-white bg-opacity-50 outline-none text-[#9ca3be] appearance-none pr-8 w-full`}
+                                        className={`px-6 py-5 lg:py-2 rounded-xl lg:rounded-xl bg-white outline-none text-black text-opacity-25 placeholder:text-black placeholder:text-opacity-25 font-sora placeholder:font-sora appearance-none pr-8 w-full`}
                                         id="regionValue"
                                         name="regionValue"
                                         value={cities[regionValue]}
@@ -173,16 +173,15 @@ export default function PlansSectionIsland(
             <div className="flex justify-center px-10 lg:px-0 bg-white">
                 <div className="lg:max-w-[1400px] w-full pt-12 pb-16 lg:py-32 lg:px-40">
                     <div className="flex flex-col gap-5 lg:gap-0 lg:flex-row w-full justify-between px-0 lg:px-20 mb-28">
-                        <span className="text-orange4 text-4xl font-bold">
+                        <span className="text-orange4 text-4xl font-bold flex-shrink-0">
                             Compare e<br /> escolha o ideal<br /> para você
                         </span>
 
-                        <span className="text-black text-opacity-50">
-                            A Aurora é a única operadora com uma linha
-                            de<br />serviços moderna, centrada no cuidado
-                            integral e<br />individual de cada beneficiário.
-                            Conheça os nossos<br />planos e descubra o melhor
-                            para você.
+                        <span className="text-black text-opacity-50 lg:max-w-[400px]">
+                            A Aurora é a única operadora com uma linha de
+                            serviços moderna, centrada no cuidado integral e
+                            individual de cada beneficiário. Conheça os nossos
+                            planos e descubra o melhor para você.
                         </span>
                     </div>
                     <div class="hidden lg:grid grid-cols-4 text-center gap-4 sticky top-0 bg-white py-4">
