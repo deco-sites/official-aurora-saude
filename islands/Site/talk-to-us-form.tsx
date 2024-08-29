@@ -187,14 +187,10 @@ export default function TalkToUsIsland(
                             />
                         </div>
                         <SiteUFSelect
-                            id={"uf"}
-                            name={"uf"}
                             label={"UF:"}
                             value={UF}
                             inputValueSetter={setUF}
                             options={ufs}
-                            placeholder={UFPlaceholder}
-                            wfull
                         />
                         <SiteCitiesSelect
                             id={"city"}

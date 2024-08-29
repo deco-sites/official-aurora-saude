@@ -1,7 +1,4 @@
 export const cnpjMask = (cnpj: string): string => {
-  //console.log("CNPJ:", cnpj);
-  {
-    /*
   cnpj = cnpj.replace(/\D/g, "");
 
   cnpj = cnpj.substring(0, 14);
@@ -13,7 +10,6 @@ export const cnpjMask = (cnpj: string): string => {
     /^(\d{2})\.(\d{3})\.(\d{3})\/(\d{4})(\d)/,
     "$1.$2.$3/$4-$5",
   );
-    */
-  }
+
   return cnpj;
 };
