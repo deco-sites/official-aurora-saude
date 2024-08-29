@@ -86,6 +86,7 @@ export default function SalesSectionIsland() {
         <div className="flex justify-center lg:px-10 bg-gray4">
             <div className="lg:max-w-[1400px] w-full pt-12 pb-16 lg:py-20 flex flex-col gap-5 lg:gap-20">
                 <div className="flex flex-col gap-5 lg:gap-[10px]">
+                    {/**/}
                     <div className="flex px-10 lg:px-0 lg:hidden flex-col gap-5 font-sora mb-14">
                         <span className="text-orange1 text-xl font-bold">
                             Materiais<br /> de apoio
@@ -98,7 +99,7 @@ export default function SalesSectionIsland() {
                             de apoio e muito mais.
                         </span>
                     </div>
-                    <div className="flex pl-10 lg:pl-0 gap-3 lg:gap-0 lg:justify-between overflow-x-scroll scrollbar-none py-1">
+                    <div className="flex pl-10 lg:px-0 gap-3 lg:gap-0 lg:justify-between overflow-x-scroll scrollbar-none py-1">
                         {sections.map((section) => (
                             <NavigationButton
                                 key={section.id}

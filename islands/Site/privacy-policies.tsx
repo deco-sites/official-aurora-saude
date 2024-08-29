@@ -36,6 +36,19 @@ export default function PrivacyPoliciesIsland({ sections, device }: Props) {
 
     const handleClickExpandIcon = (index: number) => {
         expandedSection.value = expandedSection.value === index ? null : index;
+
+        //O setTimeout abaixo é responsável por scrollar a tela quando expando alguma seção
+        setTimeout(() => {
+            if (sectionRefs.current[index]) {
+                const yOffset = -50; // Ajuste o valor conforme necessário (para criar o "padding" desejado).
+                const y =
+                    sectionRefs.current[index].getBoundingClientRect().top +
+                    globalThis.scrollY +
+                    yOffset;
+
+                globalThis.scrollTo({ top: y, behavior: "smooth" });
+            }
+        }, 300);
     };
 
     const desktopComponent = (
