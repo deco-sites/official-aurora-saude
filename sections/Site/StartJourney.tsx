@@ -30,21 +30,26 @@ export default function StartJourney({ device }: StartJourneyProps) {
                         individual. Legal, né? Agora é hora de colocar tudo isso
                         em prática!
                     </span>
-                    <button className="text-pink1 lg:text-yellow bg-white lg:bg-orange1 rounded-full lg:w-fit py-6 px-10 flex justify-between lg:gap-10 w-full">
-                        Iniciar Jornada
-                        <Icon
-                            className={`h-auto ${
-                                device === "desktop" ? "" : "-rotate-90"
-                            }`}
-                            id={`${
-                                device === "desktop"
-                                    ? "YellowArrowUp"
-                                    : "PinkArrowDown"
-                            }`}
-                            strokeWidth={1}
-                            size={20}
-                        />
-                    </button>
+                    <a
+                        href="http://app.marsaude.net/aurora/login"
+                        target="_blank"
+                    >
+                        <button className="text-pink1 lg:text-yellow bg-white lg:bg-orange1 rounded-full lg:w-fit py-6 px-10 flex justify-between lg:gap-10 w-full">
+                            Iniciar Jornada
+                            <Icon
+                                className={`h-auto ${
+                                    device === "desktop" ? "" : "-rotate-90"
+                                }`}
+                                id={`${
+                                    device === "desktop"
+                                        ? "YellowArrowUp"
+                                        : "PinkArrowDown"
+                                }`}
+                                strokeWidth={1}
+                                size={20}
+                            />
+                        </button>
+                    </a>
                 </div>
             </div>
             <div className="relative lg:w-1/2">

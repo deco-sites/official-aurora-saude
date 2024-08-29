@@ -48,7 +48,7 @@ export default function SalesSectionIsland() {
     const NavigationButton = ({ section }) => {
         return (
             <button
-                className={`p-2 ${section.textColor} rounded-full py-5 px-12 whitespace-nowrap ${section.color} ${
+                className={`relative p-2 ${section.textColor} rounded-full py-5 px-12 whitespace-nowrap ${section.color} ${
                     activeSection.value === section.id
                         ? `${shadowColors[section.id]} lg:shadow-none`
                         : ""
@@ -58,6 +58,11 @@ export default function SalesSectionIsland() {
                 }}
             >
                 {section.label}
+                {
+                    /*
+                <div className="absolute bottom-0 left-0 w-full h-2 bg-red">
+                </div>*/
+                }
             </button>
         );
     };
