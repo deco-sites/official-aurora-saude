@@ -16,6 +16,7 @@ import { PhoneMask } from "site/helpers/Simulador/phoneMask.ts";
 import { cepMask } from "site/helpers/Simulador/cepMask.ts";
 import SiteUFSelect from "site/components/Site/site-uf-select.tsx";
 import SiteCitiesSelect from "site/components/Site/site-cities-select.tsx";
+import Image from "apps/website/components/Image.tsx";
 
 export interface OmbudsmanIslandProps {
     recipientsEmail: string;
@@ -101,6 +102,64 @@ export default function OmbudsmanIsland(
     const [address, setAddress] = useState("");
     const [cep, setCep] = useState("");
     const [message, setMessage] = useState("");
+
+    const [protocolNumberError, setProtocolNumberError] = useState(false);
+    const [cardCodeError, setCardCodeError] = useState(false);
+    const [nameError, setNameError] = useState(false);
+    const [emailError, setEmailError] = useState(false);
+    const [cpfError, setCpfError] = useState(false);
+    const [telError, setTelError] = useState(false);
+    const [UFError, setUFError] = useState(false);
+    const [cityError, setCityError] = useState(false);
+    const [addressError, setAddressError] = useState(false);
+    const [cepError, setCepError] = useState(false);
+    const [messageError, setMessageError] = useState(false);
+
+    const checkFields = (e) => {
+        e.preventDefault();
+
+        // Verifica os campos e atualiza os estados de erro
+        const protocolNumberErrorStatus = protocolNumber === "";
+        const cardCodeErrorStatus = cardCode === "";
+        const nameErrorStatus = name === "";
+        const emailErrorStatus = email === "";
+        const cpfErrorStatus = cpf === "";
+        const telErrorStatus = tel === "";
+        const UFErrorStatus = UF === "";
+        const cityErrorStatus = city === "";
+        const addressErrorStatus = address === "";
+        const cepErrorStatus = cep === "";
+        const messageErrorStatus = message === "";
+
+        setProtocolNumberError(protocolNumberErrorStatus);
+        setCardCodeError(cardCodeErrorStatus);
+        setNameError(nameErrorStatus);
+        setEmailError(emailErrorStatus);
+        setCpfError(cpfErrorStatus);
+        setTelError(telErrorStatus);
+        setUFError(UFErrorStatus);
+        setCityError(cityErrorStatus);
+        setAddressError(addressErrorStatus);
+        setCepError(cepErrorStatus);
+        setMessageError(messageErrorStatus);
+
+        // Se todos os erros forem resolvidos, envie o formulário
+        if (
+            !protocolNumberErrorStatus &&
+            !cardCodeErrorStatus &&
+            !nameErrorStatus &&
+            !emailErrorStatus &&
+            !cpfErrorStatus &&
+            !telErrorStatus &&
+            !UFErrorStatus &&
+            !cityErrorStatus &&
+            !addressErrorStatus &&
+            !cepErrorStatus &&
+            !messageErrorStatus
+        ) {
+            handleSubmit(e);
+        }
+    };
 
     // Buscar UFs na API do IBGE
     useEffect(() => {
@@ -194,169 +253,319 @@ export default function OmbudsmanIsland(
                             </span>
                         </div>
                     </div>
-                    <form
-                        className="flex flex-col gap-4 lg:gap-11"
-                        onSubmit={handleSubmit}
-                    >
+                    <form className="flex flex-col gap-4 lg:gap-11">
                         <div className="flex flex-col lg:flex-row gap-4 lg:gap-5 border-b border-b-black border-opacity-15 lg:border-none pb-10 lg:pb-0">
-                            <SiteInputText
-                                id={"protocol"}
-                                name={"protocol"}
-                                label={"Número do Protocolo"}
-                                value={protocolNumber}
-                                inputValueSetter={setProtocolNumber}
-                                placeholder={protocolNumberPlaceholder}
-                                mask={protocolMask}
-                                maxLength={20}
-                                wfull
-                            />
-                            <SiteInputText
-                                id={"cardcode"}
-                                name={"cardcode"}
-                                label={"Código da Carteirinha"}
-                                value={cardCode}
-                                inputValueSetter={setCardCode}
-                                placeholder={cardCodePlaceholder}
-                                mask={protocolMask}
-                                maxLength={17}
-                                wfull
-                            />
-                        </div>
-                        <SiteInputText
-                            id={"name"}
-                            name={"name"}
-                            label={"Nome"}
-                            value={name}
-                            inputValueSetter={setName}
-                            placeholder={namePlaceholder}
-                            wfull
-                        />
-                        <div className="flex flex-col lg:flex-row gap-5">
-                            <SiteInputText
-                                id={"email"}
-                                name={"email"}
-                                label={"E-mail"}
-                                value={email}
-                                inputValueSetter={setEmail}
-                                placeholder={emailPlaceholder}
-                                wfull
-                            />
-                            <div className="block lg:hidden">
+                            <div className="relative flex items-center gap-2 flex-grow">
                                 <SiteInputText
-                                    id={"tel"}
-                                    name={"tel"}
-                                    label={"Telefone"}
-                                    value={tel}
-                                    inputValueSetter={setTel}
-                                    placeholder={telPlaceholder}
-                                    mask={PhoneMask}
-                                    maxLength={16}
+                                    id={"protocol"}
+                                    name={"protocol"}
+                                    label={"Número do Protocolo"}
+                                    value={protocolNumber}
+                                    inputValueSetter={setProtocolNumber}
+                                    placeholder={protocolNumberPlaceholder}
+                                    mask={protocolMask}
+                                    maxLength={20}
                                     wfull
                                 />
+                                {protocolNumberError && (
+                                    <Image
+                                        src={"/Simulador/error-circle-icon.png"}
+                                        alt="Error Icon"
+                                        className="h-5 w-5 absolute top-50 right-4" //lg:left-[615px]
+                                        width=""
+                                        height=""
+                                    />
+                                )}
                             </div>
+                            <div className="relative flex items-center gap-2 flex-grow">
+                                <SiteInputText
+                                    id={"cardcode"}
+                                    name={"cardcode"}
+                                    label={"Código da Carteirinha"}
+                                    value={cardCode}
+                                    inputValueSetter={setCardCode}
+                                    placeholder={cardCodePlaceholder}
+                                    mask={protocolMask}
+                                    maxLength={17}
+                                    wfull
+                                />
+                                {cardCodeError && (
+                                    <Image
+                                        src={"/Simulador/error-circle-icon.png"}
+                                        alt="Error Icon"
+                                        className="h-5 w-5 absolute top-50 right-4" //lg:left-[615px]
+                                        width=""
+                                        height=""
+                                    />
+                                )}
+                            </div>
+                        </div>
+                        <div className="relative flex items-center gap-2">
                             <SiteInputText
-                                id={"cpf"}
-                                name={"cpf"}
-                                label={"CPF"}
-                                value={cpf}
-                                inputValueSetter={setCpf}
-                                placeholder={cpfPlaceholder}
-                                mask={cpfMask}
-                                maxLength={14}
+                                id={"name"}
+                                name={"name"}
+                                label={"Nome"}
+                                value={name}
+                                inputValueSetter={setName}
+                                placeholder={namePlaceholder}
                                 wfull
                             />
+                            {nameError && (
+                                <Image
+                                    src={"/Simulador/error-circle-icon.png"}
+                                    alt="Error Icon"
+                                    className="h-5 w-5 absolute top-50 right-4" //lg:left-[615px]
+                                    width=""
+                                    height=""
+                                />
+                            )}
+                        </div>
+                        <div className="flex flex-col lg:flex-row gap-5">
+                            <div className="relative flex items-center gap-2 flex-grow">
+                                <SiteInputText
+                                    id={"email"}
+                                    name={"email"}
+                                    label={"E-mail"}
+                                    value={email}
+                                    inputValueSetter={setEmail}
+                                    placeholder={emailPlaceholder}
+                                    wfull
+                                />
+                                {emailError && (
+                                    <Image
+                                        src={"/Simulador/error-circle-icon.png"}
+                                        alt="Error Icon"
+                                        className="h-5 w-5 absolute top-50 right-4" //lg:left-[615px]
+                                        width=""
+                                        height=""
+                                    />
+                                )}
+                            </div>
+                            <div className="block lg:hidden">
+                                <div className="relative flex items-center gap-2 flex-grow">
+                                    <SiteInputText
+                                        id={"tel"}
+                                        name={"tel"}
+                                        label={"Telefone"}
+                                        value={tel}
+                                        inputValueSetter={setTel}
+                                        placeholder={telPlaceholder}
+                                        mask={PhoneMask}
+                                        maxLength={16}
+                                        wfull
+                                    />
+                                    {telError && (
+                                        <Image
+                                            src={"/Simulador/error-circle-icon.png"}
+                                            alt="Error Icon"
+                                            className="h-5 w-5 absolute top-50 right-4" //lg:left-[615px]
+                                            width=""
+                                            height=""
+                                        />
+                                    )}
+                                </div>
+                            </div>
+                            <div className="relative flex items-center gap-2 flex-grow">
+                                <SiteInputText
+                                    id={"cpf"}
+                                    name={"cpf"}
+                                    label={"CPF"}
+                                    value={cpf}
+                                    inputValueSetter={setCpf}
+                                    placeholder={cpfPlaceholder}
+                                    mask={cpfMask}
+                                    maxLength={14}
+                                    wfull
+                                />
+                                {cpfError && (
+                                    <Image
+                                        src={"/Simulador/error-circle-icon.png"}
+                                        alt="Error Icon"
+                                        className="h-5 w-5 absolute top-50 right-4" //lg:left-[615px]
+                                        width=""
+                                        height=""
+                                    />
+                                )}
+                            </div>
                         </div>
                         <div className="flex flex-col gap-4 lg:hidden">
-                            <SiteInputText
-                                id={"cep"}
-                                name={"cep"}
-                                label={"CEP"}
-                                value={cep}
-                                inputValueSetter={setCep}
-                                placeholder={cepPlaceholder}
-                                mask={cepMask}
-                                maxLength={10}
-                                wfull
-                            />
-                            <SiteInputText
-                                id={"address"}
-                                name={"address"}
-                                label={"Endereço"}
-                                value={address}
-                                inputValueSetter={setAddress}
-                                placeholder={addressPlaceholder}
-                                wfull
-                            />
+                            <div className="relative flex items-center gap-2 flex-grow">
+                                <SiteInputText
+                                    id={"cep"}
+                                    name={"cep"}
+                                    label={"CEP"}
+                                    value={cep}
+                                    inputValueSetter={setCep}
+                                    placeholder={cepPlaceholder}
+                                    mask={cepMask}
+                                    maxLength={10}
+                                    wfull
+                                />
+                                {cepError && (
+                                    <Image
+                                        src={"/Simulador/error-circle-icon.png"}
+                                        alt="Error Icon"
+                                        className="h-5 w-5 absolute top-50 right-4" //lg:left-[615px]
+                                        width=""
+                                        height=""
+                                    />
+                                )}
+                            </div>
+                            <div className="relative flex items-center gap-2 flex-grow">
+                                <SiteInputText
+                                    id={"address"}
+                                    name={"address"}
+                                    label={"Endereço"}
+                                    value={address}
+                                    inputValueSetter={setAddress}
+                                    placeholder={addressPlaceholder}
+                                    wfull
+                                />
+                                {addressError && (
+                                    <Image
+                                        src={"/Simulador/error-circle-icon.png"}
+                                        alt="Error Icon"
+                                        className="h-5 w-5 absolute top-50 right-4" //lg:left-[615px]
+                                        width=""
+                                        height=""
+                                    />
+                                )}
+                            </div>
                         </div>
                         <div className="flex mb-3 gap-4 lg:gap-8 border-b border-b-black border-opacity-15 lg:border-none pb-10 lg:pb-0">
                             <div className="hidden lg:block">
-                                <SiteInputText
-                                    id={"tel"}
-                                    name={"tel"}
-                                    label={"Telefone"}
-                                    value={tel}
-                                    inputValueSetter={setTel}
-                                    placeholder={telPlaceholder}
-                                    mask={PhoneMask}
-                                    maxLength={16}
+                                <div className="relative flex items-center gap-2 flex-grow">
+                                    <SiteInputText
+                                        id={"tel"}
+                                        name={"tel"}
+                                        label={"Telefone"}
+                                        value={tel}
+                                        inputValueSetter={setTel}
+                                        placeholder={telPlaceholder}
+                                        mask={PhoneMask}
+                                        maxLength={16}
+                                        wfull
+                                    />
+                                    {telError && (
+                                        <Image
+                                            src={"/Simulador/error-circle-icon.png"}
+                                            alt="Error Icon"
+                                            className="h-5 w-5 absolute top-50 right-4" //lg:left-[615px]
+                                            width=""
+                                            height=""
+                                        />
+                                    )}
+                                </div>
+                            </div>
+                            <div className="relative flex items-center gap-2 flex-grow">
+                                <SiteUFSelect
+                                    id={"uf"}
+                                    name={"uf"}
+                                    label={"UF:"}
+                                    value={UF}
+                                    inputValueSetter={setUF}
+                                    options={ufs}
+                                    placeholder={UFPlaceholder}
                                     wfull
                                 />
+                                {UFError && (
+                                    <Image
+                                        src={"/Simulador/error-circle-icon.png"}
+                                        alt="Error Icon"
+                                        className="h-5 w-5 absolute top-50 -right-6" //lg:left-[615px]
+                                        width=""
+                                        height=""
+                                    />
+                                )}
                             </div>
-
-                            <SiteUFSelect
-                                id={"uf"}
-                                name={"uf"}
-                                label={"UF:"}
-                                value={UF}
-                                inputValueSetter={setUF}
-                                options={ufs}
-                                placeholder={UFPlaceholder}
-                                wfull
-                            />
-                            <SiteCitiesSelect
-                                id={"city"}
-                                name={"city"}
-                                label={"Cidade:"}
-                                value={city}
-                                inputValueSetter={setCity}
-                                options={cities}
-                                placeholder={cities[0]?.nome}
-                                wfull
-                            />
+                            <div className="relative flex items-center gap-2 flex-grow">
+                                <SiteCitiesSelect
+                                    id={"city"}
+                                    name={"city"}
+                                    label={"Cidade:"}
+                                    value={city}
+                                    inputValueSetter={setCity}
+                                    options={cities}
+                                    placeholder={cities[0]?.nome}
+                                    wfull
+                                />
+                                {cityError && (
+                                    <Image
+                                        src={"/Simulador/error-circle-icon.png"}
+                                        alt="Error Icon"
+                                        className="h-5 w-5 absolute top-50 -right-6" //lg:left-[615px]
+                                        width=""
+                                        height=""
+                                    />
+                                )}
+                            </div>
                         </div>
                         <div className="hidden lg:flex flex-col lg:flex-row gap-5">
-                            <SiteInputText
-                                id={"address"}
-                                name={"address"}
-                                label={"Endereço"}
-                                value={address}
-                                inputValueSetter={setAddress}
-                                placeholder={addressPlaceholder}
-                                wfull
-                            />
-                            <SiteInputText
-                                id={"cep"}
-                                name={"cep"}
-                                label={"CEP"}
-                                value={cep}
-                                inputValueSetter={setCep}
-                                placeholder={cepPlaceholder}
-                                mask={cepMask}
-                                maxLength={10}
-                                wfull
-                            />
+                            <div className="relative flex items-center gap-2 flex-grow">
+                                <SiteInputText
+                                    id={"address"}
+                                    name={"address"}
+                                    label={"Endereço"}
+                                    value={address}
+                                    inputValueSetter={setAddress}
+                                    placeholder={addressPlaceholder}
+                                    wfull
+                                />
+                                {addressError && (
+                                    <Image
+                                        src={"/Simulador/error-circle-icon.png"}
+                                        alt="Error Icon"
+                                        className="h-5 w-5 absolute top-50 right-4" //lg:left-[615px]
+                                        width=""
+                                        height=""
+                                    />
+                                )}
+                            </div>
+                            <div className="relative flex items-center gap-2 flex-grow">
+                                <SiteInputText
+                                    id={"cep"}
+                                    name={"cep"}
+                                    label={"CEP"}
+                                    value={cep}
+                                    inputValueSetter={setCep}
+                                    placeholder={cepPlaceholder}
+                                    mask={cepMask}
+                                    maxLength={10}
+                                    wfull
+                                />
+                                {cepError && (
+                                    <Image
+                                        src={"/Simulador/error-circle-icon.png"}
+                                        alt="Error Icon"
+                                        className="h-5 w-5 absolute top-50 right-4" //lg:left-[615px]
+                                        width=""
+                                        height=""
+                                    />
+                                )}
+                            </div>
                         </div>
-                        <SiteTextArea
-                            id={"message"}
-                            name={"message"}
-                            value={message}
-                            inputValueSetter={setMessage}
-                            placeholder={textareaPlaceholder}
-                        />
+                        <div className="relative flex items-center gap-2 flex-grow">
+                            <SiteTextArea
+                                id={"message"}
+                                name={"message"}
+                                value={message}
+                                inputValueSetter={setMessage}
+                                placeholder={textareaPlaceholder}
+                            />
+                            {messageError && (
+                                <Image
+                                    src={"/Simulador/error-circle-icon.png"}
+                                    alt="Error Icon"
+                                    className="h-5 w-5 absolute top-50 right-4" //lg:left-[615px]
+                                    width=""
+                                    height=""
+                                />
+                            )}
+                        </div>
 
                         <div className="flex justify-end w-full">
                             <button
-                                type="submit"
+                                onClick={checkFields}
                                 className="bg-orange4 text-white w-full lg:w-auto lg:px-24 py-3 rounded-full"
                             >
                                 Enviar

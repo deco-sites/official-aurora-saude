@@ -11,6 +11,7 @@ import SendingConfirmation from "site/components/Site/sending-confirmation.tsx";
 import { signal } from "@preact/signals";
 import { PhoneMask } from "site/helpers/Simulador/phoneMask.ts";
 import CustomSelect from "site/components/Site/custom-select.tsx";
+import Image from "apps/website/components/Image.tsx";
 
 export interface RequestQuoteIslandProps {
     recipientsEmail: string;
@@ -126,6 +127,37 @@ export default function RequestQuoteIsland(
         Por onde conheceu a Aurora: ${whereMeetAurora}
     `;
 
+    const checkFields = (e) => {
+        e.preventDefault();
+
+        // Verifica os campos e atualiza os estados de erro
+        const nameErrorStatus = name === "";
+        const emailErrorStatus = email === "";
+        const telErrorStatus = tel === "";
+        const UFErrorStatus = UF === "";
+        const cityErrorStatus = city === "";
+        const whereDidYouMeetAuroraErrorStatus = customWhereMeetAurora === "";
+
+        setNameError(nameErrorStatus);
+        setEmailError(emailErrorStatus);
+        setTelError(telErrorStatus);
+        setUFError(UFErrorStatus);
+        setCityError(cityErrorStatus);
+        setwhereDidYouMeetAuroraError(whereDidYouMeetAuroraErrorStatus);
+
+        // Se todos os erros forem resolvidos, envie o formulário
+        if (
+            !nameErrorStatus &&
+            !emailErrorStatus &&
+            !telErrorStatus &&
+            !UFErrorStatus &&
+            !cityErrorStatus &&
+            !whereDidYouMeetAuroraErrorStatus
+        ) {
+            handleSubmit(e);
+        }
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         requestQuoteEmailSended.value = true;
@@ -136,50 +168,65 @@ export default function RequestQuoteIsland(
         });
     };
 
+    const [nameError, setNameError] = useState(false);
+    const [emailError, setEmailError] = useState(false);
+    const [telError, setTelError] = useState(false);
+    const [UFError, setUFError] = useState(false);
+    const [cityError, setCityError] = useState(false);
+    const [whereDidYouMeetAuroraError, setwhereDidYouMeetAuroraError] =
+        useState(false);
+
     const formComponent = (
         <div className="flex justify-center px-10 lg:px-0">
             <div className="lg:max-w-[1400px] w-full pt-12 pb-16 lg:py-32 lg:px-32">
-                <form
-                    className="flex flex-col gap-4 lg:gap-11"
-                    onSubmit={handleSubmit}
-                >
+                <form className="flex flex-col gap-4 lg:gap-11">
                     <span className="lg:hidden font-bold text-xl text-gray3">
                         Informações de contato:
                     </span>
-                    <SiteInputText
-                        id={"name"}
-                        name={"name"}
-                        label={"Nome"}
-                        value={name}
-                        inputValueSetter={setName}
-                        placeholder={namePlaceholder}
-                        wfull
-                    />
-                    <SiteInputText
-                        id={"email"}
-                        name={"email"}
-                        label={"E-mail"}
-                        value={email}
-                        inputValueSetter={setEmail}
-                        placeholder={emailPlaceholder}
-                        wfull
-                    />
-
-                    <div className="block lg:hidden w-full">
+                    <div className="relative flex items-center gap-2">
                         <SiteInputText
-                            id={"tel"}
-                            name={"tel"}
-                            value={tel}
-                            inputValueSetter={setTel}
-                            label={"Telefone"}
-                            placeholder={telPlaceholder}
-                            mask={PhoneMask}
-                            maxLength={16}
+                            id={"name"}
+                            name={"name"}
+                            label={"Nome"}
+                            value={name}
+                            inputValueSetter={setName}
+                            placeholder={namePlaceholder}
                             wfull
                         />
+
+                        {nameError && (
+                            <Image
+                                src={"/Simulador/error-circle-icon.png"}
+                                alt="Error Icon"
+                                className="h-5 w-5 absolute top-50 right-4" //lg:left-[615px]
+                                width=""
+                                height=""
+                            />
+                        )}
                     </div>
-                    <div className="flex mb-3 gap-4 lg:gap-11">
-                        <div className="hidden lg:flex">
+                    <div className="relative flex items-center gap-2">
+                        <SiteInputText
+                            id={"email"}
+                            name={"email"}
+                            label={"E-mail"}
+                            value={email}
+                            inputValueSetter={setEmail}
+                            placeholder={emailPlaceholder}
+                            wfull
+                        />
+                        {emailError && (
+                            <Image
+                                src={"/Simulador/error-circle-icon.png"}
+                                alt="Error Icon"
+                                className="h-5 w-5 absolute top-50 right-4" //lg:left-[615px]
+                                width=""
+                                height=""
+                            />
+                        )}
+                    </div>
+
+                    <div className="block lg:hidden w-full">
+                        <div className="relative flex items-center gap-2">
                             <SiteInputText
                                 id={"tel"}
                                 name={"tel"}
@@ -191,27 +238,82 @@ export default function RequestQuoteIsland(
                                 maxLength={16}
                                 wfull
                             />
+                            {telError && (
+                                <Image
+                                    src={"/Simulador/error-circle-icon.png"}
+                                    alt="Error Icon"
+                                    className="h-5 w-5 absolute top-50 right-4" //lg:left-[615px]
+                                    width=""
+                                    height=""
+                                />
+                            )}
                         </div>
-                        <SiteUFSelect
-                            id={"uf"}
-                            name={"uf"}
-                            label={"UF:"}
-                            value={UF}
-                            inputValueSetter={setUF}
-                            options={ufs}
-                            placeholder={UFPlaceholder}
-                            wfull
-                        />
-                        <SiteCitiesSelect
-                            id={"city"}
-                            name={"city"}
-                            label={"Cidade:"}
-                            value={city}
-                            inputValueSetter={setCity}
-                            options={cities}
-                            placeholder={cities[0]?.nome}
-                            wfull
-                        />
+                    </div>
+                    <div className="flex mb-3 gap-4 lg:gap-11">
+                        <div className="relative hidden lg:flex items-center gap-2 flex-grow">
+                            <SiteInputText
+                                id={"tel"}
+                                name={"tel"}
+                                value={tel}
+                                inputValueSetter={setTel}
+                                label={"Telefone"}
+                                placeholder={telPlaceholder}
+                                mask={PhoneMask}
+                                maxLength={16}
+                                wfull
+                            />
+                            {telError && (
+                                <Image
+                                    src={"/Simulador/error-circle-icon.png"}
+                                    alt="Error Icon"
+                                    className="h-5 w-5 absolute top-50 right-4" //lg:left-[615px]
+                                    width=""
+                                    height=""
+                                />
+                            )}
+                        </div>
+                        <div className="relative flex items-center gap-2 flex-grow">
+                            <SiteUFSelect
+                                id={"uf"}
+                                name={"uf"}
+                                label={"UF:"}
+                                value={UF}
+                                inputValueSetter={setUF}
+                                options={ufs}
+                                placeholder={UFPlaceholder}
+                                wfull
+                            />
+                            {UFError && (
+                                <Image
+                                    src={"/Simulador/error-circle-icon.png"}
+                                    alt="Error Icon"
+                                    className="h-5 w-5 absolute top-50 -right-6" //lg:left-[615px]
+                                    width=""
+                                    height=""
+                                />
+                            )}
+                        </div>
+                        <div className="relative flex items-center gap-2 flex-grow">
+                            <SiteCitiesSelect
+                                id={"city"}
+                                name={"city"}
+                                label={"Cidade:"}
+                                value={city}
+                                inputValueSetter={setCity}
+                                options={cities}
+                                placeholder={cities[0]?.nome}
+                                wfull
+                            />
+                            {cityError && (
+                                <Image
+                                    src={"/Simulador/error-circle-icon.png"}
+                                    alt="Error Icon"
+                                    className="h-5 w-5 absolute top-50 -right-6" //lg:left-[615px]
+                                    width=""
+                                    height=""
+                                />
+                            )}
+                        </div>
                     </div>
 
                     {
@@ -232,18 +334,29 @@ export default function RequestQuoteIsland(
                     }
 
                     <div className="w-full lg:w-[45%]">
-                        <CustomSelect
-                            options={indicationsOptions}
-                            label={"Por onde você conheceu a Aurora?"}
-                            value={customWhereMeetAurora}
-                            inputValueSetter={setCustomWhereMeetAurora}
-                        />
+                        <div className="relative flex items-center gap-2">
+                            <CustomSelect
+                                options={indicationsOptions}
+                                label={"Por onde você conheceu a Aurora?"}
+                                value={customWhereMeetAurora}
+                                inputValueSetter={setCustomWhereMeetAurora}
+                            />
+                            {whereDidYouMeetAuroraError && (
+                                <Image
+                                    src={"/Simulador/error-circle-icon.png"}
+                                    alt="Error Icon"
+                                    className="h-5 w-5 absolute top-50 -right-6" //lg:left-[615px]
+                                    width=""
+                                    height=""
+                                />
+                            )}
+                        </div>
                     </div>
 
                     <div className="flex justify-end w-full">
                         <button
-                            type="submit"
                             className="bg-orange4 text-white w-full lg:w-auto lg:px-24 py-3 rounded-full"
+                            onClick={checkFields}
                         >
                             Solicite uma cotação
                         </button>
