@@ -45,8 +45,8 @@
               "questionText": "<p>Texto faltando no figma.</p>"
             },
             {
-              "questionTitle": "Como marcar um nutricionista, fonoaudiólogo, psicólogo, terapeuta ocupacional ou fisioterapeuta?",
-              "questionText": "<p>Texto faltando no figma.</p>"
+              "questionTitle": "Como encontrar um médico ou estabelecimento que atende meu plano?",
+              "questionText": "<p>Você pode encontrar médicos, consultórios, clínicas e hospitais que atendem seu plano através da rede credenciada que disponibilizamos em nosso site ou em seu aplicativo Aurora Saúde.</p>"
             },
             {
               "questionTitle": "Como agendar uma consulta presencial?",
@@ -57,8 +57,12 @@
               "questionText": "<p>Texto faltando no figma.</p>"
             },
             {
-              "questionTitle": "Como encontrar um médico ou estabelecimento que atende meu plano?",
-              "questionText": "<p>Você pode encontrar médicos, consultórios, clínicas e hospitais que atendem seu plano através da rede credenciada que disponibilizamos em nosso site ou em seu aplicativo Aurora Saúde.</p>"
+              "questionTitle": "Como marcar um nutricionista, fonoaudiólogo, psicólogo, terapeuta ocupacional ou fisioterapeuta?",
+              "questionText": "<p>Texto faltando no figma.</p>"
+            },
+            {
+              "questionTitle": "Como agendar um retorno de consulta?",
+              "questionText": "<p>Você pode ligar diretamente no consultório ou clínica onde realizou sua consulta e verificar o prazo de retorno.</p>"
             }
           ]
         },
