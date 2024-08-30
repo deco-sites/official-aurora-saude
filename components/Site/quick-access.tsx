@@ -10,27 +10,27 @@ export default function QuickAccess() {
             <QuickAccessIcon
                 text={"Boletos"}
                 icon={"CalendarIcon"}
-                link={"#"}
+                link={"https://6167prd-plano.cloudmv.com.br/mvsaudeweb/#/login/empresa"}
             />
             <QuickAccessIcon
                 text={"Rede Credenciada"}
                 icon={"WhitePlusSquare"}
-                link={"#"}
+                link={"https://6167prd-plano.cloudmv.com.br/mvsaudeweb/#/guia-medico"}
             />
             <QuickAccessIcon
                 text={"Telemedicina"}
                 icon={"MobilePhoneIcon"}
-                link={"#"}
+                link={"https://mksaude.clinicatempo.com.br/telemedicina-pa/#/login"}
             />
             <QuickAccessIcon
                 text={"Autorizações"}
                 icon={"ClipBoardIcon"}
-                link={"#"}
+                link={"https://6167prd-plano.cloudmv.com.br/mvautorizadorguias/"}
             />
             <QuickAccessIcon
                 text={"Guias e Documentos"}
                 icon={"FileIcon"}
-                link={"#"}
+                link={"/Site/Guias e Documentos - Aurora Saúde.zip"}
             />
         </div>
     );
