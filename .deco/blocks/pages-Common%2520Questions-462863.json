@@ -130,7 +130,31 @@
             },
             {
               "questionTitle": "Qual a diferença de urgência e emergência?",
-              "questionText": "<p>Emergências são as situações que necessitam de tratamento imediato, podendo ocorrer óbito se o atendimento não for realizado.</p><p></p><p>Exemplos de emergências: Hemorragias, AVC (Acidente Vascular Cerebral), parada cardiorrespiratória, dores agudas no peito, infarto, fraturas expostas, acidentes de trânsito, ferimentos à bala. </p><p></p><p>Já a urgência, é uma ocorrência imprevista sem caráter de risco eminente de morte, onde é necessário assistência médica imediata.</p><p></p><p>Exemplos de urgências: Fraturas não expostas, cólicas renais, aumento de pressão arterial, pancadas na cabeça, luxações ou torções, intoxicações agudas, queimaduras. </p>"
+              "questionText": "<p>Emergências são as situações que necessitam de tratamento imediato, podendo ocorrer óbito se o atendimento não for realizado.</p><p>Exemplos de emergências: Hemorragias, AVC (Acidente Vascular Cerebral), parada cardiorrespiratória, dores agudas no peito, infarto, fraturas expostas, acidentes de trânsito, ferimentos à bala.</p><p>Já a urgência, é uma ocorrência imprevista sem caráter de risco eminente de morte, onde é necessário assistência médica imediata.</p><p>Exemplos de urgências: Fraturas não expostas, cólicas renais, aumento de pressão arterial, pancadas na cabeça, luxações ou torções, intoxicações agudas, queimaduras.</p>"
+            },
+            {
+              "questionTitle": "Como fazer uma cirurgia programada?",
+              "questionText": "<p>As cirurgias programadas ou eletivas, são solicitadas e agendadas pelo médico solicitante, sendo assim, ao identificar a necessidade de um procedimento cirúrgico, o médico deverá encaminhar a solicitação ao plano e após autorizado, realizar o agendamento. </p><p>No dia e horário programados, o paciente deverá comparecer ao hospital com toda documentação necessária (informada previamente) e acompanhado de um responsável maior de 18 anos.</p>"
+            },
+            {
+              "questionTitle": "Como funcionam as internações e cirurgias de urgência?",
+              "questionText": "<p>As internações e cirurgias de urgência são solicitadas mediante atendimento de urgência e emergência no pronto socorro, após a avaliação e identificação da necessidade do procedimento em caráter de urgência. </p><p>Lembrando que sempre deverá ser verificada a cobertura pelo tipo de plano contratado.</p>"
+            },
+            {
+              "questionTitle": "Quais documentos são necessários para a internação?",
+              "questionText": "<p>Os documentos necessários para uma internação são:  </p><p>*Documento de identidade e CPF do paciente; </p><p>*Documento de identidade e CPF do responsável pelo paciente; </p><p>*Documento do convênio; </p><p>*Guia de autorização; </p><p>*Exames pré-operatórios; </p><p>*Risco cirúrgico; </p><p>*Termo de consentimento devidamente assinado pelo paciente ou responsável legal.</p>"
+            },
+            {
+              "questionTitle": "A Aurora Saúde possui serviço de ambulância?",
+              "questionText": "<p>Não, em caso de urgência em que não é possível o deslocamento do paciente até o serviço de saúde, o SAMU deverá ser acionado para realização da remoção.</p>"
+            },
+            {
+              "questionTitle": "Os planos da Aurora Saúde cobrem a colocação do DIU?",
+              "questionText": "<p>Sim, a inserção e o dispositivo possuem cobertura e será cobrado somente a coparticipação (caso haja).</p>"
+            },
+            {
+              "questionTitle": "Como solicitar a colocação do DIU?",
+              "questionText": "<p>Durante a consulta com o seu ginecologista, manifeste o seu desejo em fazer a inserção do DIU e você e o seu médico juntos irão definir qual melhor dispositivo para o seu caso. Após definir, o médico deverá formalizar o pedido com a descrição do código e do material e a documentação deverá ser encaminhada para a operadora. Após a autorização, agende o procedimento com o seu médico.</p>"
             }
           ]
         },
