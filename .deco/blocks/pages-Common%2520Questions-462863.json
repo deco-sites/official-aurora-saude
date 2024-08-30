@@ -215,12 +215,24 @@
           "themeName": "Questões Financeiras",
           "themeQuestions": [
             {
-              "questionTitle": "Opção 1",
-              "questionText": "<p>Texto da opção 1</p>"
+              "questionTitle": "Como retirar a segunda via do boleto?",
+              "questionText": "<p>Se você é o responsável pela empresa, você pode acessar seu boleto através do Portal Empresa localizado em nosso site <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://www.souaurorasaude.com.br\">www.souaurorasaude.com.br</a>.</p><p>Os boletos estarão disponíveis para emissão por 89 dias a contar da data de vencimento. Se desejar pagar um boleto vencimento a mais de 89 dias, pedimos que entre  em contato em nossos canais de atendimento para que possamos lhe ajudar.</p>"
             },
             {
-              "questionTitle": "Outra questão",
-              "questionText": "<p>Este é o texto de mais uma questão</p>"
+              "questionTitle": "Meu boleto está vencido. O que fazer?",
+              "questionText": "<p>Para boletos vencidos até 89 dias, os valores serão atualizados automaticamente na sua fatura, independente do banco. Por isso, não será necessário solicitar a emissão de um novo boleto para o pagamento. </p><p>Os boletos em atraso podem ser quitados em qualquer banco. Ou seja, não é necessário pagar no banco que emitiu o boleto. </p><p>Após o prazo de 89 dias, o cliente precisará entrar em contato com a Aurora Saúde para realizar a negociação do pagamento. </p>"
+            },
+            {
+              "questionTitle": "Como saber se meu boleto é verdadeiro?",
+              "questionText": "<p>Para saber se o boleto recebido é verdadeiro, deixamos abaixo algumas dicas para você conferir: </p><p>Leia o boleto com atenção e observe os detalhes: Documentos falsos costumam ter diferenças do padrão de formatação ou erros básicos de português. </p><p>Observe o número de registro do banco. Os três primeiros números do código digitável devem ser iguais aos do número de registro do banco. Exemplo: O número de registro do Banco Itaú é 341, então o código digitável deve começar com 341. </p><p>Observe se há falhas ou mudanças no padrão do código de barras: diferenças podem ser indícios de fraude. </p><p> </p><p>Lembre-se: Sempre use o portal de empresas para acessar seus boletos e extratos. </p>"
+            },
+            {
+              "questionTitle": "Onde encontrar meu informe de pagamentos?",
+              "questionText": "<p>Para beneficiários de planos empresariais, o informe de pagamento deve ser concedido pela empresa responsável.</p><p>Para beneficiários de planos coletivos por adesão, o informe de pagamento deve ser concedido pela Administradora de Benefícios.</p>"
+            },
+            {
+              "questionTitle": "Como cancelar o plano em caso de óbito do titular?",
+              "questionText": "<p>Em caso de óbito do titular:</p><p>Se é o responsável pela empresa, você deve solicitar o cancelamento do plano através do nosso portal de Empresas. </p><p>Se você é dependente do titular responsável da empresa e que veio a óbito, você deverá entrar em contato em nossos canais de atendimento para que realizemos o cancelamento do contrato empresarial.</p><p>Se você é beneficiário de planos coletivos por adesão, procure informações em sua Administradora de benefícios.</p><p>Importante: Para cancelamentos por este motivo, é necessário enviar o atestado de óbito.</p>"
             }
           ]
         }
