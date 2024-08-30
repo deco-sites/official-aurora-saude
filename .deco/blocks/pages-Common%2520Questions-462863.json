@@ -1,1 +1,173 @@
-{"name":"Cliente - Perguntas frequentes","path":"/perguntas-frequentes","sections":[{"__resolveType":"site/sections/Site/ColorfullWrapper.tsx","sections":[{"__resolveType":"site/sections/Site/HeaderSite.tsx","type":"cliente"},{"__resolveType":"site/sections/Site/BannerSection.tsx","image":{"desktop":{"image":"https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/3f8d9a68-3ad2-4caf-88fb-13798fe79f97"},"mobile":{"image":"https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/78fc7e0a-034b-43b0-b924-20fa6cfcb08a"},"alt":"Banner"},"textColor":"Branco","fontSize":"26","fontWeight":"semi-bold","desktopTitle":"Está com dúvidas?","mobileTitle":"Está com<br /> dúvidas?","titleFontSize":"26","titleFontWeight":"semi-bold"}]},{"__resolveType":"site/sections/Site/CommonQuestions.tsx","themes":[{"themeName":"Como utilizar o seu plano","themeQuestions":[{"questionTitle":"Como usar o aplicativo da Aurora Saúde?","questionText":"<p><span>Primeiro, acesse a loja de aplicativos do seu dispositivo móvel (Google Play Store para Android ou App Store para iOS). <br>Na barra de pesquisa, digite o nome da sua operadora de planos de saúde e encontre o aplicativo oficial. <br>Toque em \"Instalar\" para baixar e instalar o aplicativo no seu dispositivo. <br><br></span><strong><span>Cadastro ou Login: </span></strong><span><br><br>Abra o aplicativo após a instalação. <br>Faça o login com suas credenciais (nome de usuário e senha). <br>Após o login, você será direcionado para a página inicial do aplicativo. <br><br></span><strong><span>Em seu APP, você terá acesso às seguintes funcionalidades: </span></strong><span><br><br>Dados do Plano; <br>Acesso a sua Carteirinha do Plano; <br>Solicitar autorizações de exames ou procedimentos; <br>Acompanhar o status das autorizações; <br>Manuais e Informativos da Operadora; <br>Canal direto de comunicação para entrar em contato com a operadora;<br>Podcast de saúde; <br>Relatório de Coparticipações e Carências.<br><br>Se você encontrar dificuldades ou tiver dúvidas específicas sobre o aplicativo, não hesite em entrar em contato com a nossa central de atendimento ao cliente pelo App, WhatsApp ou Telefone 4000-2105.</span></p>"},{"questionTitle":"Onde encontrar minha carteirinha? ","questionText":"<p>Texto faltando no figma.</p>"},{"questionTitle":"Como marcar um nutricionista, fonoaudiólogo, psicólogo, terapeuta ocupacional ou fisioterapeuta?","questionText":"<p>Texto faltando no figma.</p>"},{"questionTitle":"Como agendar uma consulta presencial?","questionText":"<p>Texto faltando no figma.</p>"},{"questionTitle":"O que são consultas eletivas?","questionText":"<p>Texto faltando no figma.</p>"},{"questionTitle":"Como encontrar um médico ou estabelecimento que atende meu plano?","questionText":"<p>Você pode encontrar médicos, consultórios, clínicas e hospitais que atendem seu plano através da rede credenciada que disponibilizamos em nosso site ou em seu aplicativo Aurora Saúde.</p>"}]},{"themeName":"Contratação de planos","themeQuestions":[{"questionTitle":"Opção 1","questionText":"<p>Texto da opção 1</p>"},{"questionTitle":"Opção 2","questionText":"<p>Texto da opção 2</p>"}]},{"themeName":"Questões Financeiras","themeQuestions":[{"questionTitle":"Opção 1","questionText":"<p>Texto da opção 1</p>"},{"questionTitle":"Outra questão","questionText":"<p>Este é o texto de mais uma questão</p>"}]}]},{"__resolveType":"site/sections/Site/Footer.tsx"}],"seo":{"__resolveType":"website/sections/Seo/SeoV2.tsx"},"__resolveType":"website/pages/Page.tsx"}
+{
+  "name": "Cliente - Perguntas frequentes",
+  "path": "/perguntas-frequentes",
+  "sections": [
+    {
+      "__resolveType": "site/sections/Site/ColorfullWrapper.tsx",
+      "sections": [
+        {
+          "__resolveType": "site/sections/Site/HeaderSite.tsx",
+          "type": "cliente"
+        },
+        {
+          "__resolveType": "site/sections/Site/BannerSection.tsx",
+          "image": {
+            "desktop": {
+              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/3f8d9a68-3ad2-4caf-88fb-13798fe79f97"
+            },
+            "mobile": {
+              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/78fc7e0a-034b-43b0-b924-20fa6cfcb08a"
+            },
+            "alt": "Banner"
+          },
+          "textColor": "Branco",
+          "fontSize": "26",
+          "fontWeight": "semi-bold",
+          "desktopTitle": "Está com dúvidas?",
+          "mobileTitle": "Está com<br /> dúvidas?",
+          "titleFontSize": "26",
+          "titleFontWeight": "semi-bold"
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Site/CommonQuestions.tsx",
+      "themes": [
+        {
+          "themeName": "Como utilizar o seu plano",
+          "themeQuestions": [
+            {
+              "questionTitle": "Como usar o aplicativo da Aurora Saúde?",
+              "questionText": "<p><span>Primeiro, acesse a loja de aplicativos do seu dispositivo móvel (Google Play Store para Android ou App Store para iOS). <br>Na barra de pesquisa, digite o nome da sua operadora de planos de saúde e encontre o aplicativo oficial. <br>Toque em \"Instalar\" para baixar e instalar o aplicativo no seu dispositivo. <br><br></span><strong><span>Cadastro ou Login: </span></strong><span><br><br>Abra o aplicativo após a instalação. <br>Faça o login com suas credenciais (nome de usuário e senha). <br>Após o login, você será direcionado para a página inicial do aplicativo. <br><br></span><strong><span>Em seu APP, você terá acesso às seguintes funcionalidades: </span></strong><span><br><br>Dados do Plano; <br>Acesso a sua Carteirinha do Plano; <br>Solicitar autorizações de exames ou procedimentos; <br>Acompanhar o status das autorizações; <br>Manuais e Informativos da Operadora; <br>Canal direto de comunicação para entrar em contato com a operadora;<br>Podcast de saúde; <br>Relatório de Coparticipações e Carências.<br><br>Se você encontrar dificuldades ou tiver dúvidas específicas sobre o aplicativo, não hesite em entrar em contato com a nossa central de atendimento ao cliente pelo App, WhatsApp ou Telefone 4000-2105.</span></p>"
+            },
+            {
+              "questionTitle": "Onde encontrar minha carteirinha? ",
+              "questionText": "<p>Texto faltando no figma.</p>"
+            },
+            {
+              "questionTitle": "Como encontrar um médico ou estabelecimento que atende meu plano?",
+              "questionText": "<p>Você pode encontrar médicos, consultórios, clínicas e hospitais que atendem seu plano através da rede credenciada que disponibilizamos em nosso site ou em seu aplicativo Aurora Saúde.</p>"
+            },
+            {
+              "questionTitle": "Como agendar uma consulta presencial?",
+              "questionText": "<p>Texto faltando no figma.</p>"
+            },
+            {
+              "questionTitle": "O que são consultas eletivas?",
+              "questionText": "<p>Texto faltando no figma.</p>"
+            },
+            {
+              "questionTitle": "Como agendar um retorno de consulta?",
+              "questionText": "<p>Você pode ligar diretamente no consultório ou clínica onde realizou sua consulta e verificar o prazo de retorno.</p>"
+            },
+            {
+              "questionTitle": "Como confirmar um horário de consulta?",
+              "questionText": "<p>Você deverá entrar em contato com o consultório ou clínica para confirmar seu agendamento.</p>"
+            },
+            {
+              "questionTitle": "Como remarcar ou cancelar uma consulta?",
+              "questionText": "<p>Você pode remarcar ou cancelar uma consulta entrando em contato diretamente com o consultório ou clinica onde agendou sua consulta.</p>"
+            },
+            {
+              "questionTitle": "Como marcar um nutricionista, fonoaudiólogo, psicólogo, terapeuta ocupacional ou fisioterapeuta?",
+              "questionText": "<p>Texto faltando no figma.</p>"
+            },
+            {
+              "questionTitle": "Como agendar uma consulta a partir de um encaminhamento?",
+              "questionText": "<p>Você deverá entrar em contato com o consultório ou clínica para realizar seu agendamento.</p>"
+            },
+            {
+              "questionTitle": "Como realizar uma consulta de telemedicna?",
+              "questionText": "<p>Você pode realizar uma consulta de telemedicina através do acesso em seu portal do cliente. Lá haverá um link para você ser direcionado ao atendimento imediato de um médico da especialidade de clínica geral.</p>"
+            },
+            {
+              "questionTitle": "É cobrada coparticipação para realizar um Atendimento On-line de Urgência?",
+              "questionText": "<p>Poderá haver cobrança de coparticipação para atendimentos on-lines. Para confirmar se haverá cobranças, você deverá buscar o RH de sua empresa ou sua Administradora de Benefíciospara para que verifiquem o contrato. </p>"
+            },
+            {
+              "questionTitle": "O CID é obrigatório no atestado?",
+              "questionText": "<p>O CID, conforme legislação não é obrigatório, mas poderá ser aberto uma pendência para verificação com o Prestador.</p>"
+            },
+            {
+              "questionTitle": "Como consultar o status de autorização da guia de exame?",
+              "questionText": "<p>Você poderá verificar em seu APP todos os status das suas guias de autorização.</p>"
+            },
+            {
+              "questionTitle": "Como encontrar um estabelecimento para realizar meus exames?",
+              "questionText": "<p>Você pode encontrar uma clinica, hospitais ou prestadores que atendem seu plano acessando seu guia médico em seu portal do beneficiário ou APP.</p>"
+            },
+            {
+              "questionTitle": "Como marcar um exame ou procedimento?",
+              "questionText": "<p>Você deverá verificar sua rede de atendimento em seu guia médico e agendar a realização do procedimento diretamente com a clínica ou laboratório.</p>"
+            },
+            {
+              "questionTitle": "Como confirmar o horário de um exame ou procedimento?",
+              "questionText": "<p>Para confirmar o horário de um exame ou procedimento que foi agendado, você deverá entrar em contato diretamente com o prestador onde agendou a realização do procedimento. </p>"
+            },
+            {
+              "questionTitle": "Como solicitar a autorização pra realização de exames?",
+              "questionText": "<p>Você poderá solicitar a solicitação de autorização de realização de exames pelo seu portal ou app de beneficiário. É fácil e rápido!</p>"
+            },
+            {
+              "questionTitle": "Como saber se um exame foi autorizado?",
+              "questionText": "<p>Você poderá acompanhar sua solicitação de autorização pelo seu portal ou app de beneficiário.</p>"
+            },
+            {
+              "questionTitle": "Minha guia de exame venceu. Como revalidar?",
+              "questionText": "<p>Se a sua guia de exame venceu, você pode revalidá-la por mais 30 dias após a data de vencimento. Porém, não pode haver alteração na solicitação, como mudança de materiais cirúrgico. E também, não é possível revalidar caso tenha uma data prevista de exclusão do contrato.  </p><p>Para revalidar sua guia, você pode entrar em contato no 4000-2105.</p>"
+            },
+            {
+              "questionTitle": "Meu exame não foi autorizado. O que fazer?",
+              "questionText": "<p>Se seu exame não foi autorizado, você pode solicitar revisão, Além disso, você também pode entrar em contato conosco por telefone ou Whatsapp no número 4000-2105.</p>"
+            },
+            {
+              "questionTitle": "Quando devo ir ao pronto atendimento presencial?",
+              "questionText": "<p>Você deve procurar o pronto atendimento presencial em casos de urgência e emergência, por exemplo:</p><p>dores súbitas e intensas no peito ou no abdome, dificuldades respiratórias, traumas, perda de consciência, hemorragias, intoxicações ou envenenamentos, queimaduras, complicações gestacionais, comportamento suicida, sinais de infecções como febre alta, queda da pressão arterial e sinais de alerta de AVC (fraqueza, dificuldades na fala, dormência em um lado do corpo).  </p><p>Dúvidas de Onde Ir? Acesse nosso site e conheça nossas opções de atendimento.</p>"
+            },
+            {
+              "questionTitle": "Qual o pronto atendimento mais perto de mim?",
+              "questionText": "<p>Você pode localizar o pronto atendimento mais perto de você,  acessando  nossa rede credenciada através do nosso site ou app e conheça nossas opções de atendimento.  </p>"
+            },
+            {
+              "questionTitle": "Qual a diferença de urgência e emergência?",
+              "questionText": "<p>Emergências são as situações que necessitam de tratamento imediato, podendo ocorrer óbito se o atendimento não for realizado.</p><p></p><p>Exemplos de emergências: Hemorragias, AVC (Acidente Vascular Cerebral), parada cardiorrespiratória, dores agudas no peito, infarto, fraturas expostas, acidentes de trânsito, ferimentos à bala. </p><p></p><p>Já a urgência, é uma ocorrência imprevista sem caráter de risco eminente de morte, onde é necessário assistência médica imediata.</p><p></p><p>Exemplos de urgências: Fraturas não expostas, cólicas renais, aumento de pressão arterial, pancadas na cabeça, luxações ou torções, intoxicações agudas, queimaduras. </p>"
+            }
+          ]
+        },
+        {
+          "themeName": "Contratação de planos",
+          "themeQuestions": [
+            {
+              "questionTitle": "Opção 1",
+              "questionText": "<p>Texto da opção 1</p>"
+            },
+            {
+              "questionTitle": "Opção 2",
+              "questionText": "<p>Texto da opção 2</p>"
+            }
+          ]
+        },
+        {
+          "themeName": "Questões Financeiras",
+          "themeQuestions": [
+            {
+              "questionTitle": "Opção 1",
+              "questionText": "<p>Texto da opção 1</p>"
+            },
+            {
+              "questionTitle": "Outra questão",
+              "questionText": "<p>Este é o texto de mais uma questão</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Site/Footer.tsx"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
