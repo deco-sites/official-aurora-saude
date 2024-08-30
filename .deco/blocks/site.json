@@ -4,10 +4,10 @@
     "jsonLDs": [],
     "noIndexing": false,
     "description": "Escolha um plano para estar sempre junto de você.",
-    "titleTemplate": "%s | Aurora Saúde",
-    "descriptionTemplate": "%s | Deco.cx",
+    "titleTemplate": "Aurora Saúde",
+    "descriptionTemplate": "Aurora Saúde",
     "title": "Aurora Saúde",
-    "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/ed5511b6-a917-48bc-969b-af01df3ed4d8",
+    "favicon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/official-aurora-saude/4cd3440f-241b-4bb5-9868-987de09a65ed/FAVICON-REDONDO.png",
     "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/f8177c39-ae9e-491b-b470-81e2f7d4c3ad"
   },
   "global": [
