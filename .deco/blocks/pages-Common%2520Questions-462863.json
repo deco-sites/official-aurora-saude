@@ -79,6 +79,34 @@
             {
               "questionTitle": "Como realizar uma consulta de telemedicna?",
               "questionText": "<p>Você pode realizar uma consulta de telemedicina através do acesso em seu portal do cliente. Lá haverá um link para você ser direcionado ao atendimento imediato de um médico da especialidade de clínica geral.</p>"
+            },
+            {
+              "questionTitle": "É cobrada coparticipação para realizar um Atendimento On-line de Urgência?",
+              "questionText": "<p>Poderá haver cobrança de coparticipação para atendimentos on-lines. Para confirmar se haverá cobranças, você deverá buscar o RH de sua empresa ou sua Administradora de Benefíciospara para que verifiquem o contrato. </p>"
+            },
+            {
+              "questionTitle": "O CID é obrigatório no atestado?",
+              "questionText": "<p>O CID, conforme legislação não é obrigatório, mas poderá ser aberto uma pendência para verificação com o Prestador.</p>"
+            },
+            {
+              "questionTitle": "Como consultar o status de autorização da guia de exame?",
+              "questionText": "<p>Você poderá verificar em seu APP todos os status das suas guias de autorização.</p>"
+            },
+            {
+              "questionTitle": "Como encontrar um estabelecimento para realizar meus exames?",
+              "questionText": "<p>Você pode encontrar uma clinica, hospitais ou prestadores que atendem seu plano acessando seu guia médico em seu portal do beneficiário ou APP.</p>"
+            },
+            {
+              "questionTitle": "Como marcar um exame ou procedimento?",
+              "questionText": "<p>Você deverá verificar sua rede de atendimento em seu guia médico e agendar a realização do procedimento diretamente com a clínica ou laboratório.</p>"
+            },
+            {
+              "questionTitle": "Como confirmar o horário de um exame ou procedimento?",
+              "questionText": "<p>Para confirmar o horário de um exame ou procedimento que foi agendado, você deverá entrar em contato diretamente com o prestador onde agendou a realização do procedimento. </p>"
+            },
+            {
+              "questionTitle": "Como solicitar a autorização pra realização de exames?",
+              "questionText": "<p>Você poderá solicitar a solicitação de autorização de realização de exames pelo seu portal ou app de beneficiário. É fácil e rápido!</p>"
             }
           ]
         },
