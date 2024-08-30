@@ -107,6 +107,9 @@
             {
               "questionTitle": "Como solicitar a autorização pra realização de exames?",
               "questionText": "<p>Você poderá solicitar a solicitação de autorização de realização de exames pelo seu portal ou app de beneficiário. É fácil e rápido!</p>"
+            },
+            {
+              "questionTitle": "Como saber se um exame foi autorizado?"
             }
           ]
         },
