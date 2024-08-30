@@ -37,6 +37,7 @@ export default function SearchPage(props: SectionProps<typeof loader>) {
                     {props.resultsFound.map((result, index) => (
                         <SearchResult
                             key={index}
+                            title={result.title}
                             text={result.text}
                             link={result.path}
                         />
