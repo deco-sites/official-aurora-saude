@@ -57,12 +57,28 @@
               "questionText": "<p>Texto faltando no figma.</p>"
             },
             {
+              "questionTitle": "Como agendar um retorno de consulta?",
+              "questionText": "<p>Você pode ligar diretamente no consultório ou clínica onde realizou sua consulta e verificar o prazo de retorno.</p>"
+            },
+            {
+              "questionTitle": "Como confirmar um horário de consulta?",
+              "questionText": "<p>Você deverá entrar em contato com o consultório ou clínica para confirmar seu agendamento.</p>"
+            },
+            {
+              "questionTitle": "Como remarcar ou cancelar uma consulta?",
+              "questionText": "<p>Você pode remarcar ou cancelar uma consulta entrando em contato diretamente com o consultório ou clinica onde agendou sua consulta.</p>"
+            },
+            {
               "questionTitle": "Como marcar um nutricionista, fonoaudiólogo, psicólogo, terapeuta ocupacional ou fisioterapeuta?",
               "questionText": "<p>Texto faltando no figma.</p>"
             },
             {
-              "questionTitle": "Como agendar um retorno de consulta?",
-              "questionText": "<p>Você pode ligar diretamente no consultório ou clínica onde realizou sua consulta e verificar o prazo de retorno.</p>"
+              "questionTitle": "Como agendar uma consulta a partir de um encaminhamento?",
+              "questionText": "<p>Você deverá entrar em contato com o consultório ou clínica para realizar seu agendamento.</p>"
+            },
+            {
+              "questionTitle": "Como realizar uma consulta de telemedicna?",
+              "questionText": "<p>Você pode realizar uma consulta de telemedicina através do acesso em seu portal do cliente. Lá haverá um link para você ser direcionado ao atendimento imediato de um médico da especialidade de clínica geral.</p>"
             }
           ]
         },
