@@ -162,12 +162,28 @@
           "themeName": "Contratação de planos",
           "themeQuestions": [
             {
-              "questionTitle": "Opção 1",
-              "questionText": "<p>Texto da opção 1</p>"
+              "questionTitle": "Qual a rede de atendimento da AURORA SAÚDE?",
+              "questionText": "<p>O Cliente AURORA SAÚDE pode verificar a rede de atendimento através do nosso site <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://www.souaurorasaude.com.br\">www.souaurorasaude.com.br</a> ou através de seu App Aurora Saúde.</p>"
             },
             {
-              "questionTitle": "Opção 2",
-              "questionText": "<p>Texto da opção 2</p>"
+              "questionTitle": "Como cancelar meu plano?",
+              "questionText": "<p>Os planos de saúde da Aurora Saúde podem ser empresariais ou coletivos por adesão. </p><p>Em caso de plano empresarial, você deverá entrar em contato com o seu RH para solicitar o cancelamento. Caso você seja o responsável pela empresa, você poderá solicitar o cancelamento através de seu Portal Empresas e em caso de dúvidas, entre em contato com o setor de relacionamento empresarial para que possam conhecer as condições de cancelamento.</p><p>Em caso de plano coletivo por adesão, você deve solicitar o cancelamento diretamente com sua administradora pois ela nos enviará a solicitação de cancelamento de seu plano.</p><p>Lembrete: Em caso de cancelamento do plano do titular, os dependentes também serão cancelados.</p>"
+            },
+            {
+              "questionTitle": "Como saber se eu preciso cumprir carências?",
+              "questionText": "<p>Você pode consultar seu período de carência em seu contrato, em sua carteirinha em nosso site no Portal do Beneficiário ou através do seu APP Aurora Saúde. </p><p>Em caso de dúvidas, você pode nos chamar no Whatsapp ou ligar para o 4000-2105.</p>"
+            },
+            {
+              "questionTitle": "Titular e dependente: o que é e quem eu posso incluir no plano?",
+              "questionText": "<p>Em planos empresariais, os titulares dos planos podem ser os sócios, funcionários CLTs, prestadores de serviço PJ, estagiário, jovem aprendiz ou administradores das empresas e os dependentes são os beneficiários vinculados ao plano.  </p><p>Você pode associar alguns familiares como dependentes do seu plano. Podendo ser: cônjuges; filhos, enteados e titulados até 18 anos e que estejam sob a guarda do titular ou até 23 anos, 11 meses e 29 dias se estiverem estudando Para isso, basta comprovar o vínculo entre o titular e o dependente. </p><p>Em planos coletivos por adesão, os titulares são definidos de acordo com o tipo de entidade vinculada a administradora de benefícios.</p>"
+            },
+            {
+              "questionTitle": "O que é a coparticipação? Todos os planos têm?",
+              "questionText": "<p>Coparticipação é o valor pago pelos beneficiários a título de participação nos custos dos procedimentos realizados. Exemplo: Consulta médica, realização de exames, internações, entre outros. </p><p>Fique tranquilo pois você sómente pagará suas coparticipações através do boleto de sua empresa ou administradora de benefícios. Não há cobrança de coparticipações no ato do atendimento médico.</p><p>Todos os planos AURORA SAÚDE são coparticipativos e você pode solicitar sua tabela de coparticipações para sua empresa ou Administradora de Benefícios.</p>"
+            },
+            {
+              "questionTitle": "O que é a carência dos planos? Quando posso começar a usá-los?",
+              "questionText": "<p>A carência do plano de saúde é o prazo de espera necessário para realizar determinados procedimentos após a data de vigencia do plano. Nos planos empresariais, essa regra pode variar de acordo com o tipo de contrato e número de beneficiários pertencentes ao mesmo. </p><p>De forma geral, os clientes que acabam de contratar um plano de saúde Aurora Saúde devem cumprir o prazo de carência determinado pela Agência Nacional de Saúde Suplementar (ANS).  </p><p>A regra geral estipula intervalos variáveis entre o período de carência. </p><p>Na Aurora Saúde, estes prazos são divididos em: </p><p>24 horas para urgência e emergência. </p><p>30 dias para consultas médicas e exames simples. </p><p>180 dias para exames e terapias. </p><p>180 dias para atendimentos ambulatoriais. </p><p>180 dias para internações e cirurgias. </p><p>300 dias para partos. </p><p>Lembrete: É necessário observar a cobertura de plano pra melhor identificação das carências. Em casos de planos ambulatoriais, não há cobertura para internações, cirurgias e partos.</p>"
             }
           ]
         },
