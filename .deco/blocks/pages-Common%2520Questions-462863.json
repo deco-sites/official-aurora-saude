@@ -109,7 +109,28 @@
               "questionText": "<p>Você poderá solicitar a solicitação de autorização de realização de exames pelo seu portal ou app de beneficiário. É fácil e rápido!</p>"
             },
             {
-              "questionTitle": "Como saber se um exame foi autorizado?"
+              "questionTitle": "Como saber se um exame foi autorizado?",
+              "questionText": "<p>Você poderá acompanhar sua solicitação de autorização pelo seu portal ou app de beneficiário.</p>"
+            },
+            {
+              "questionTitle": "Minha guia de exame venceu. Como revalidar?",
+              "questionText": "<p>Se a sua guia de exame venceu, você pode revalidá-la por mais 30 dias após a data de vencimento. Porém, não pode haver alteração na solicitação, como mudança de materiais cirúrgico. E também, não é possível revalidar caso tenha uma data prevista de exclusão do contrato.  </p><p>Para revalidar sua guia, você pode entrar em contato no 4000-2105.</p>"
+            },
+            {
+              "questionTitle": "Meu exame não foi autorizado. O que fazer?",
+              "questionText": "<p>Se seu exame não foi autorizado, você pode solicitar revisão, Além disso, você também pode entrar em contato conosco por telefone ou Whatsapp no número 4000-2105.</p>"
+            },
+            {
+              "questionTitle": "Quando devo ir ao pronto atendimento presencial?",
+              "questionText": "<p>Você deve procurar o pronto atendimento presencial em casos de urgência e emergência, por exemplo:</p><p>dores súbitas e intensas no peito ou no abdome, dificuldades respiratórias, traumas, perda de consciência, hemorragias, intoxicações ou envenenamentos, queimaduras, complicações gestacionais, comportamento suicida, sinais de infecções como febre alta, queda da pressão arterial e sinais de alerta de AVC (fraqueza, dificuldades na fala, dormência em um lado do corpo).  </p><p>Dúvidas de Onde Ir? Acesse nosso site e conheça nossas opções de atendimento.</p>"
+            },
+            {
+              "questionTitle": "Qual o pronto atendimento mais perto de mim?",
+              "questionText": "<p>Você pode localizar o pronto atendimento mais perto de você,  acessando  nossa rede credenciada através do nosso site ou app e conheça nossas opções de atendimento.  </p>"
+            },
+            {
+              "questionTitle": "Qual a diferença de urgência e emergência?",
+              "questionText": "<p>Emergências são as situações que necessitam de tratamento imediato, podendo ocorrer óbito se o atendimento não for realizado.</p><p></p><p>Exemplos de emergências: Hemorragias, AVC (Acidente Vascular Cerebral), parada cardiorrespiratória, dores agudas no peito, infarto, fraturas expostas, acidentes de trânsito, ferimentos à bala. </p><p></p><p>Já a urgência, é uma ocorrência imprevista sem caráter de risco eminente de morte, onde é necessário assistência médica imediata.</p><p></p><p>Exemplos de urgências: Fraturas não expostas, cólicas renais, aumento de pressão arterial, pancadas na cabeça, luxações ou torções, intoxicações agudas, queimaduras. </p>"
             }
           ]
         },
