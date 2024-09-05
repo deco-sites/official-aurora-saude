@@ -29,7 +29,7 @@ export default function SearchButtonContainer({ option, expandedInput }) {
                     onClick={(e) => e.stopPropagation()}
                     onKeyDown={(e) => {
                         if (e.key === "Enter") {
-                            handleSearchClick(e, expandedInput);
+                            handleSearchClick(e, expandedInput, option);
                         }
                     }}
                 />

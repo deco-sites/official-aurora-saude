@@ -1,7 +1,7 @@
 import { invoke } from "../../runtime.ts";
 import { searchedWord } from "site/islands/Site/search-button-container.tsx";
 
-export const handleSearchClick = async (e, expandedInput) => {
+export const handleSearchClick = async (e, expandedInput, option) => {
     e.stopPropagation();
 
     if (expandedInput.value === false) {
@@ -9,13 +9,15 @@ export const handleSearchClick = async (e, expandedInput) => {
     } else {
         //console.log("Faz a pesquisa");
         await invoke.site.actions.search();
-        const link = `/pesquisa?query=${searchedWord.value}`;
+        const link = `/pesquisa?query=${searchedWord.value}&op=${option.id}`;
         globalThis.location.replace(link);
     }
 };
 
 export default function SearchButton({ option, expandedInput }) {
-    const handleClick = (e) => handleSearchClick(e, expandedInput);
+    const handleClick = (e) => {
+        handleSearchClick(e, expandedInput, option);
+    };
 
     return (
         <div

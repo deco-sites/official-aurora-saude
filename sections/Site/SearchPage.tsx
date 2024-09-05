@@ -12,13 +12,13 @@ type Props = Partial<{
 
 export default function SearchPage(props: SectionProps<typeof loader>) {
     return (
-        <div className="flex flex-col items-center px-10 lg:px-0">
-            <div className="lg:max-w-[1400px] w-full">
+        <div className="flex flex-col items-center">
+            <div className="lg:max-w-[1400px] w-full px-10 lg:px-0">
                 <div className="flex flex-col gap-16 py-16">
                     <QuickAccess />
 
                     <div className="flex justify-between items-center pb-7 border-b border-b-gray12">
-                        <div className="flex gap-4">
+                        <div className="flex flex-col lg:flex-row gap-4">
                             <span className="text-gray10 text-xl">
                                 Resultados da Pesquisa:
                             </span>
@@ -26,13 +26,15 @@ export default function SearchPage(props: SectionProps<typeof loader>) {
                                 {props.searchedWord}
                             </span>
                         </div>
-                        <button className="text-orange4 font-bold">
-                            Voltar
-                        </button>
+                        <a href="/" className="hidden lg:flex">
+                            <button className="text-orange4 font-bold">
+                                Voltar
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div className="bg-gray4 w-full flex justify-center">
+            <div className="bg-gray4 w-full flex justify-center p-10 lg:p-0">
                 <div className="lg:max-w-[1400px] w-full lg:py-20 flex flex-col gap-6">
                     {props.resultsFound.map((result, index) => (
                         <SearchResult

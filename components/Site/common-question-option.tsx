@@ -1,5 +1,6 @@
 import Image from "apps/website/components/Image.tsx";
 import { Signal, useSignal } from "@preact/signals";
+import { useRef } from "preact/hooks";
 
 export interface CommonQuestionOptionProps {
     activeQuestion: Signal<number | null>;
@@ -13,22 +14,34 @@ export interface CommonQuestionOptionProps {
 export default function CommmonQuestionOption(
     { activeQuestion, index, question }: CommonQuestionOptionProps,
 ) {
+    const questionRef = useRef<HTMLDivElement>(null);
+
     function handleClickIcon(index: number) {
         if (activeQuestion.value === index) {
             activeQuestion.value = null;
         } else {
             activeQuestion.value = index;
+            setTimeout(() => {
+                if (questionRef.current) {
+                    questionRef.current.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                    });
+                }
+            }, 300); // Atraso para permitir a transição de altura
         }
     }
 
     return (
         <div
             onClick={() => handleClickIcon(index)}
+            ref={questionRef}
             className={`${
                 activeQuestion.value === index
                     ? "bg-black bg-opacity-[.02] pb-8"
                     : "bg-orange1"
             } rounded-[20px] px-14 pt-8 flex flex-col gap-7 cursor-pointer transition-all duration-300`}
+            style={{ scrollMarginTop: "20px" }}
         >
             <div className="flex justify-between">
                 <span

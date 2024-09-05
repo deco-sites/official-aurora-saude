@@ -54,8 +54,8 @@ export default function LoggedAreasDropdownMenu({
                 }`}
             >
                 <a
-                    href="/"
-                    target="_self"
+                    href="https://aurorasaude.plataforma-beneficiario.mosiaomnichannel.com.br/#/"
+                    target="_blank"
                 >
                     <span>Sou Cliente</span>
                 </a>
@@ -66,8 +66,8 @@ export default function LoggedAreasDropdownMenu({
                     <span>Sou Empresa</span>
                 </a>
                 <a
-                    href="/corretor"
-                    target="_self"
+                    href="https://souaurorasaude.planium.io/web/login/entrar?target=venda"
+                    target="_blank"
                 >
                     <span>Sou Corretor</span>
                 </a>

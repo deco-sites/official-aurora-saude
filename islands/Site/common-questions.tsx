@@ -2,6 +2,7 @@ import { useSignal } from "@preact/signals";
 import CommonQuestionTheme from "site/components/Site/common-question-theme.tsx";
 import CommmonQuestionOption from "site/components/Site/common-question-option.tsx";
 import { Device } from "apps/website/matchers/device.ts";
+import { useEffect } from "preact/hooks";
 
 export interface Theme {
     themeName: string;
