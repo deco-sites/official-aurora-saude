@@ -3,6 +3,8 @@ import { useRef, useState } from "preact/hooks";
 import { useClickOutsideListener } from "site/helpers/Site/useClickOutsideListener.ts";
 import DropdownSections from "site/islands/Site/header-mobile-dropdown-sections.tsx";
 import Icon from "site/components/ui/Icon.tsx";
+import { searchedWord } from "site/islands/Site/search-button-container.tsx";
+import { handleSearchClick } from "site/islands/Site/search-button.tsx";
 
 export default function DropdownMobileMenu({ option, openerRef, setOpen }) {
     const dropdownRef = useRef(null);
@@ -82,15 +84,33 @@ export default function DropdownMobileMenu({ option, openerRef, setOpen }) {
                                         type="text"
                                         id=""
                                         name=""
+                                        value={searchedWord.value}
                                         placeholder={"Pesquise Aqui"}
                                         className="bg-transparent outline-none text-white placeholder:text-white"
+                                        onChange={(e) => {
+                                            searchedWord.value = e.target.value;
+                                            //console.log("searchWord", searchedWord.value);
+                                        }}
+                                        onClick={(e) => e.stopPropagation()}
+                                        onKeyDown={(e) => {
+                                            if (e.key === "Enter") {
+                                                const link =
+                                                    `/pesquisa?query=${searchedWord.value}&op=${option.id}`;
+
+                                                globalThis.location.replace(
+                                                    link,
+                                                );
+                                            }
+                                        }}
                                     />
                                     <Image
                                         src={"/Site/search-icon.svg"}
                                         alt="Search Icon"
                                         className="w-6 h-6"
                                         onClick={() =>
-                                            console.log("Realizar a busca")}
+                                            globalThis.location.replace(
+                                                `/pesquisa?query=${searchedWord.value}&op=${option.id}`,
+                                            )}
                                     />
                                     <Icon
                                         class="absolute top-1/2 transform -translate-y-1/2 -right-12 h-auto text-white"

@@ -1,14 +1,17 @@
 import LoggedAreasBtn from "site/islands/Site/logged-areas-btn.tsx";
 import HeaderMobileMenuBtn from "site/islands/Site/header-mobile-menu-btn.tsx";
 import SearchButtonContainer from "site/islands/Site/search-button-container.tsx";
-import { useSignal } from "@preact/signals";
+import { signal, useSignal } from "@preact/signals";
 import Image from "apps/website/components/Image.tsx";
+import { useEffect, useState } from "preact/hooks";
+import { FnContext } from "deco/types.ts";
 
 export interface Props {
     /**
      * @description Type of Header
      */
     type: "cliente" | "empresa" | "corretor" | "prestador";
+    opValue: string | null;
 }
 
 type Color = "orange" | "purple" | "pink" | "yellow" | "white" | "darkPink";
@@ -128,9 +131,17 @@ const colors = {
     darkPink: "text-pink2",
 };
 
-export default function HeaderSiteIsland({ type }: Props) {
+//export const headerType = signal<number | null>(null);
+
+export default function HeaderSiteIsland({ type, opValue }: Props) {
     const expandedInput = useSignal(false);
-    const option = headerOptions.find((option) => option.name === type);
+
+    const option = opValue !== null
+        ? headerOptions.find((option) => option.id === Number(opValue))
+        : headerOptions.find((option) => option.name === type);
+
+    //const option = headerOptions.find((option) => option.name === type);
+
     if (!option) return null;
     const buttonsArr = headerOptions.filter((item) => item.name !== type);
     const startIndex = buttonsArr.findIndex((item) => item.id > option.id);
@@ -151,6 +162,7 @@ export default function HeaderSiteIsland({ type }: Props) {
         3: "bg-pink6",
         4: "bg-pink6",
     };
+
     return (
         <div className="flex justify-center px-10 lg:px-0">
             <div className="flex gap-6 w-full ">

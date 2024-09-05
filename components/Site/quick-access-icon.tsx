@@ -5,7 +5,7 @@ export default function QuickAccessIcon(
 ) {
     return (
         <a href={link}>
-            <button className="flex items-center justify-center gap-4 bg-white bg-opacity-40 rounded-full px-7 py-6 text-white">
+            <button className="flex items-center justify-center gap-4 bg-white bg-opacity-40 rounded-full px-7 py-6 text-white whitespace-nowrap">
                 <Icon
                     class="h-auto"
                     id={icon}

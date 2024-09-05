@@ -19,6 +19,17 @@ interface IheaderOptions {
     textColor: "white" | "darkPink";
 }
 
-export default function Section({ type }: Props) {
-    return <HeaderSiteIsland type={type} />;
+export default function Section(props: ReturnType<typeof loader>) {
+    return <HeaderSiteIsland type={props.type} opValue={props.opValue} />;
 }
+
+export const loader = (props: Props, req: Request, _ctx: FnContext) => {
+    const op = new URL(req.url).search;
+    const params = new URLSearchParams(op);
+    const opValue = params.get("op");
+
+    return {
+        ...props,
+        opValue: opValue,
+    };
+};
