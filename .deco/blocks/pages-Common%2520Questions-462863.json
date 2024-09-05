@@ -42,7 +42,7 @@
             },
             {
               "questionTitle": "Onde encontrar minha carteirinha? ",
-              "questionText": "<p>Texto faltando no figma.</p>"
+              "questionText": "<p>A carteirinha digital está disponível no aplicativo da Aurora Saúde na opção Cartão Virtual.</p>"
             },
             {
               "questionTitle": "Como encontrar um médico ou estabelecimento que atende meu plano?",
@@ -50,11 +50,11 @@
             },
             {
               "questionTitle": "Como agendar uma consulta presencial?",
-              "questionText": "<p>Texto faltando no figma.</p>"
+              "questionText": "<p>Para agendar uma consulta presencial você deverá acessar a área do Cliente do site ou seu aplicativo da Aurora Saúde, localizar no Guia Médico o prestador que deseja conforme tipo de prestador, especialidade, cidade de atendimento e você deve entrar em contato diretamente com o consultório médico ou clínica para realizar o atendimento.</p><p>Em caso de dúvidas, você pode acionar nossa equipe pelos nossos canais de atendimento App Aurora Saúde, Whatsapp ou telefone 4000-2105.</p>"
             },
             {
               "questionTitle": "O que são consultas eletivas?",
-              "questionText": "<p>Texto faltando no figma.</p>"
+              "questionText": "<p>As consultas eletivas são consultas agendadas com antecedência.</p>"
             },
             {
               "questionTitle": "Como agendar um retorno de consulta?",
@@ -70,7 +70,7 @@
             },
             {
               "questionTitle": "Como marcar um nutricionista, fonoaudiólogo, psicólogo, terapeuta ocupacional ou fisioterapeuta?",
-              "questionText": "<p>Texto faltando no figma.</p>"
+              "questionText": "<p>Para agendamentos com nutricionista, fonoaudiólogo, psicólogo, terapeuta ocupacional ou fisioterapeuta você precisará de um encaminhamento médico prévio antes de marcar uma consulta.</p><p>Para conseguir um encaminhamento médico, agende uma consulta com um especialista. </p><p>Se você já possui uma guia autorizada, você pode fazer o agendamento com nossos profissionais localizando a clinica de preferencia atraves do site. </p>"
             },
             {
               "questionTitle": "Como agendar uma consulta a partir de um encaminhamento?",
