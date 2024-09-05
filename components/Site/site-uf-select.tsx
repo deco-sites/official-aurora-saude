@@ -79,7 +79,7 @@ export default function SiteUFSelect(
                     <div
                         ref={dropdownRef}
                         onClick={handleClickInside}
-                        className={`absolute z-50 max-h-80 overflow-y-scroll left-0 mt-[14px] bg-gray1 text-black text-opacity-25 rounded-xl px-[57px] py-[30px] w-full animate-[dropdown-bounce_0.3s_ease-out]`}
+                        className={`absolute z-50 max-h-80 overflow-y-scroll left-0 mt-[14px] bg-gray1 text-black text-opacity-25 rounded-xl py-[30px] w-full animate-[dropdown-bounce_0.3s_ease-out]`}
                     >
                         {options.map((option, index) => (
                             <div

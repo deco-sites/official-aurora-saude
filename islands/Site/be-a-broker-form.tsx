@@ -178,7 +178,11 @@ export default function BeABrokerFormIsland(
         fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados")
             .then((response) => response.json())
             .then((data) => {
-                setUfs(data);
+                const sortedData = data.sort((a, b) =>
+                    a.sigla.localeCompare(b.sigla)
+                );
+
+                setUfs(sortedData);
             })
             .catch((error) => {
                 console.error("Erro ao buscar UFs: ", error);
