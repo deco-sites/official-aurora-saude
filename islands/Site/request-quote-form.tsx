@@ -128,7 +128,7 @@ export default function RequestQuoteIsland(
         Telefone: ${tel}
         UF: ${UF}
         Cidade: ${city}
-        Por onde conheceu a Aurora: ${whereMeetAurora}
+        Por onde conheceu a Aurora: ${customWhereMeetAurora}
     `;
 
     const checkFields = (e) => {
