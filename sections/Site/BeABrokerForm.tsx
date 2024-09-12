@@ -1,10 +1,29 @@
 import BeABrokerFormIsland from "site/islands/Site/be-a-broker-form.tsx";
 
+/** @titleBy email */
+export interface RecipientsEmail {
+    email: string;
+}
+
+/** @titleBy email */
+export interface CopyEmail {
+    email?: string;
+}
+
 export interface Props {
-    recipientsEmail: string;
+    RecipientsEmailArr: RecipientsEmail[];
+    CopyToArr?: CopyEmail[];
     subject: string;
 }
 
-export default function BeABrokerForm({ recipientsEmail, subject }: Props) {
-    return <BeABrokerFormIsland recipientsEmail={recipientsEmail} subject={subject} />;
+export default function BeABrokerForm(
+    { RecipientsEmailArr, CopyToArr, subject }: Props,
+) {
+    return (
+        <BeABrokerFormIsland
+            RecipientsEmailArr={RecipientsEmailArr}
+            CopyToArr={CopyToArr}
+            subject={subject}
+        />
+    );
 }

@@ -35,10 +35,19 @@
       "recipientsEmail": "ouvidoria@souaurorasaude.com.br",
       "subject": "Aurora Saúde - Formulário Ouvidoria",
       "subtitle": "<p>A Ouvidoria da Aurora é um canal de comunicação independente e imparcial, que atua como um espaço de diálogo entre você e nós.</p><p>&nbsp;</p><p>Nosso objetivo é acolher suas manifestações, seja para assegurar seus direitos contratuais e regulamentares, seja para contribuir para a melhoria de nossos serviços.</p>",
-      "mobileSubtitle": "<p>A Ouvidoria da Aurora é um canal de comunicação independente e imparcial, que atua como um <span style=\"color: hsl(var(--base-700),var(--tw-text-opacity))\">espaço de diálogo entre você e </span>nós.</p><p>&nbsp;</p><p>Nosso objetivo é acolher suas manifestações, seja para assegurar seus direitos contratuais e regulamentares, seja para contribuir para a melhoria de nossos serviços.</p>"
+      "mobileSubtitle": "<p>A Ouvidoria da Aurora é um canal de comunicação independente e imparcial, que atua como um <span style=\"color: hsl(var(--base-700),var(--tw-text-opacity))\">espaço de diálogo entre você e </span>nós.</p><p>&nbsp;</p><p>Nosso objetivo é acolher suas manifestações, seja para assegurar seus direitos contratuais e regulamentares, seja para contribuir para a melhoria de nossos serviços.</p>",
+      "RecipientsEmailArr": [
+        {
+          "email": "ouvidoria@souaurorasaude.com.br"
+        }
+      ],
+      "CopyToArr": []
     },
     {
       "__resolveType": "site/sections/Site/Footer.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Site/FloatingButtons.tsx"
     }
   ],
   "seo": {

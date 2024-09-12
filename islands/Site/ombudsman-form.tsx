@@ -18,8 +18,17 @@ import SiteUFSelect from "site/components/Site/site-uf-select.tsx";
 import SiteCitiesSelect from "site/components/Site/site-cities-select.tsx";
 import Image from "apps/website/components/Image.tsx";
 
+export interface RecipientsEmail {
+    email: string;
+}
+
+export interface CopyEmail {
+    email?: string;
+}
+
 export interface OmbudsmanIslandProps {
-    recipientsEmail: string;
+    RecipientsEmailArr: RecipientsEmail[];
+    CopyToArr?: CopyEmail[];
     subtitle: string;
     mobileSubtitle: string;
     subject: string;
@@ -28,7 +37,7 @@ export interface OmbudsmanIslandProps {
 const ombudsmanEmailSended = signal(false);
 
 export default function OmbudsmanIsland(
-    { recipientsEmail, subject, subtitle, mobileSubtitle }:
+    { RecipientsEmailArr, CopyToArr, subject, subtitle, mobileSubtitle }:
         OmbudsmanIslandProps,
 ) {
     const [protocolNumberPlaceholder, setProtocolNumberPlaceholder] = useState(
@@ -227,7 +236,8 @@ export default function OmbudsmanIsland(
         e.preventDefault();
         ombudsmanEmailSended.value = true;
         await invoke.site.actions.sendEmail({
-            recipientsEmail: recipientsEmail,
+            RecipientsEmailArr: RecipientsEmailArr,
+            CopyToArr: CopyToArr,
             subject: subject,
             data: sendData,
         });

@@ -13,15 +13,24 @@ import { PhoneMask } from "site/helpers/Simulador/phoneMask.ts";
 import CustomSelect from "site/components/Site/custom-select.tsx";
 import Image from "apps/website/components/Image.tsx";
 
+export interface RecipientsEmail {
+    email: string;
+}
+
+export interface CopyEmail {
+    email?: string;
+}
+
 export interface RequestQuoteIslandProps {
-    recipientsEmail: string;
+    RecipientsEmailArr: RecipientsEmail[];
+    CopyToArr?: CopyEmail[];
     subject: string;
 }
 
 const requestQuoteEmailSended = signal(false);
 
 export default function RequestQuoteIsland(
-    { recipientsEmail, subject }: RequestQuoteIslandProps,
+    { RecipientsEmailArr, CopyToArr, subject }: RequestQuoteIslandProps,
 ) {
     const [namePlaceholder, setNamePlaceholder] = useState("Escreva aqui");
     const [emailPlaceholder, setEmailPlaceholder] = useState(
@@ -166,7 +175,8 @@ export default function RequestQuoteIsland(
         e.preventDefault();
         requestQuoteEmailSended.value = true;
         await invoke.site.actions.sendEmail({
-            recipientsEmail: recipientsEmail,
+            RecipientsEmailArr: RecipientsEmailArr,
+            CopyToArr: CopyToArr,
             subject: subject,
             data: sendData,
         });

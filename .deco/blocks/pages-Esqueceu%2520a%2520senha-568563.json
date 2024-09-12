@@ -17,6 +17,9 @@
     },
     {
       "__resolveType": "site/sections/Site/Footer.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Site/FloatingButtons.tsx"
     }
   ],
   "seo": {

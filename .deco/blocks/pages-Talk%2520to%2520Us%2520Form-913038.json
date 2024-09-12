@@ -34,10 +34,18 @@
     {
       "__resolveType": "site/sections/Site/TalkToUsForm.tsx",
       "recipientsEmail": "faleconosco@souaurorasaude.com.br",
-      "subject": "Aurora Saúde - Formulário Fale Conosco"
+      "subject": "Aurora Saúde - Formulário Fale Conosco",
+      "RecipientsEmailArr": [
+        {
+          "email": "faleconosco@souaurorasaude.com.br"
+        }
+      ]
     },
     {
       "__resolveType": "site/sections/Site/Footer.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Site/FloatingButtons.tsx"
     }
   ],
   "seo": {

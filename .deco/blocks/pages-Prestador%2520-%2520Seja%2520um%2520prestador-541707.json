@@ -31,11 +31,19 @@
     },
     {
       "__resolveType": "site/sections/Site/BeAProviderForm.tsx",
+      "subject": "Aurora Saúde - Seja um prestador credenciado",
       "recipientsEmail": "prestador@souaurorasaude.com.br",
-      "subject": "Aurora Saúde - Seja um prestador credenciado"
+      "RecipientsEmailArr": [
+        {
+          "email": "prestador@souaurorasaude.com.br"
+        }
+      ]
     },
     {
       "__resolveType": "site/sections/Site/Footer.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Site/FloatingButtons.tsx"
     }
   ],
   "seo": {

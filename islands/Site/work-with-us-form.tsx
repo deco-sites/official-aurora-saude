@@ -14,15 +14,24 @@ import { cepMask } from "site/helpers/Simulador/cepMask.ts";
 import SiteCitiesSelect from "site/components/Site/site-cities-select.tsx";
 import SiteUFSelect from "site/components/Site/site-uf-select.tsx";
 
+export interface RecipientsEmail {
+    email: string;
+}
+
+export interface CopyEmail {
+    email?: string;
+}
+
 export interface WorkWithUsIslandProps {
-    recipientsEmail: string;
+    RecipientsEmailArr: RecipientsEmail[];
+    CopyToArr?: CopyEmail[];
     subject: string;
 }
 
 const workWithUsEmailSended = signal(false);
 
 export default function WorkWithUsIsland(
-    { recipientsEmail, subject }: WorkWithUsIslandProps,
+    { RecipientsEmailArr, CopyToArr, subject }: WorkWithUsIslandProps,
 ) {
     const [namePlaceholder, setNamePlaceholder] = useState("Escreva aqui");
     const [emailPlaceholder, setEmailPlaceholder] = useState(
@@ -38,7 +47,7 @@ export default function WorkWithUsIsland(
 
     useEffect(() => {
         const updateNamePlaceholder = () => {
-            if (window.innerWidth < 640) {
+            if (globalThis.innerWidth < 640) {
                 setNamePlaceholder("Nome Completo");
                 setEmailPlaceholder("Email");
                 setTelPlaceholder("Telefone");
@@ -181,7 +190,8 @@ export default function WorkWithUsIsland(
         e.preventDefault();
         workWithUsEmailSended.value = true;
         await invoke.site.actions.sendEmail({
-            recipientsEmail: recipientsEmail,
+            RecipientsEmailArr: RecipientsEmailArr,
+            CopyToArr: CopyToArr,
             subject: subject,
             attachment: selectedFile,
             data: sendData,

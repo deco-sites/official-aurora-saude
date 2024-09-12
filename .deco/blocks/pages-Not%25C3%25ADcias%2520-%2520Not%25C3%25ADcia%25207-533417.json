@@ -1,1 +1,65 @@
-{"name":"Notícias - Notícia 7","path":"/noticias-noticia7","sections":[{"__resolveType":"site/sections/Site/ColorfullWrapper.tsx","sections":[{"__resolveType":"site/sections/Site/HeaderSite.tsx","type":"cliente"},{"__resolveType":"site/sections/Site/BannerSection.tsx","image":{"desktop":{"image":"https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/81096489-1048-4ca1-be7e-c4129504888a"},"mobile":{"image":"https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/154b646a-755d-4de1-89d2-c73c16aa12e3"},"alt":"Banner"},"desktopTitle":"Título 1","mobileTitle":"Título <br /> Título","desktopText":"Texto","mobileText":"Texto","textColor":"Branco","titleFontSize":"26","titleFontWeight":"semi-bold"}]},{"__resolveType":"site/sections/Site/NewsPage.tsx","text":"<p>Texto da notícia</p>","image":{"image":"https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/31218754-b9dc-4f36-b064-f88db35428a7","alt":"Banner"},"date":"30 de Agosto de 2024","title":"Notícia Teste","relatedsNews":[{"image":{"image":"https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/bfbe6b92-135b-41dd-bd2a-2668e936940c","alt":"Banner"},"date":"31 de Agosto de 2024","link":"/noticias-noticia4","title":"Título "}]},{"__resolveType":"site/sections/Site/Footer.tsx"}],"seo":{"__resolveType":"website/sections/Seo/SeoV2.tsx"},"__resolveType":"website/pages/Page.tsx"}
+{
+  "name": "Notícias - Notícia 7",
+  "path": "/noticias-noticia7",
+  "sections": [
+    {
+      "__resolveType": "site/sections/Site/ColorfullWrapper.tsx",
+      "sections": [
+        {
+          "__resolveType": "site/sections/Site/HeaderSite.tsx",
+          "type": "cliente"
+        },
+        {
+          "__resolveType": "site/sections/Site/BannerSection.tsx",
+          "image": {
+            "desktop": {
+              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/81096489-1048-4ca1-be7e-c4129504888a"
+            },
+            "mobile": {
+              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/154b646a-755d-4de1-89d2-c73c16aa12e3"
+            },
+            "alt": "Banner"
+          },
+          "desktopTitle": "Título 1",
+          "mobileTitle": "Título <br /> Título",
+          "desktopText": "Texto",
+          "mobileText": "Texto",
+          "textColor": "Branco",
+          "titleFontSize": "26",
+          "titleFontWeight": "semi-bold"
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Site/NewsPage.tsx",
+      "text": "<p>Texto da notícia</p>",
+      "image": {
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/31218754-b9dc-4f36-b064-f88db35428a7",
+        "alt": "Banner"
+      },
+      "date": "30 de Agosto de 2024",
+      "title": "Notícia Teste",
+      "relatedsNews": [
+        {
+          "image": {
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/bfbe6b92-135b-41dd-bd2a-2668e936940c",
+            "alt": "Banner"
+          },
+          "date": "31 de Agosto de 2024",
+          "link": "/noticias-noticia4",
+          "title": "Título "
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Site/Footer.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Site/FloatingButtons.tsx"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
