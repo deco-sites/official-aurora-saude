@@ -33,10 +33,18 @@
     {
       "__resolveType": "site/sections/Site/WorkWithUsForm.tsx",
       "recipientsEmail": "rh@souaurorasaude.com.br",
-      "subject": "Aurora Saúde - Formulário Trabalhe Conosco"
+      "subject": "Aurora Saúde - Formulário Trabalhe Conosco",
+      "RecipientsEmailArr": [
+        {
+          "email": "rh@souaurorasaude.com.br"
+        }
+      ]
     },
     {
       "__resolveType": "site/sections/Site/Footer.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Site/FloatingButtons.tsx"
     }
   ],
   "seo": {

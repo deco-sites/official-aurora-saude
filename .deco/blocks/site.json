@@ -12,9 +12,6 @@
   },
   "global": [
     {
-      "__resolveType": "site/sections/Site/FloatingButtons.tsx"
-    },
-    {
       "__resolveType": "htmx/sections/htmx.tsx"
     },
     {

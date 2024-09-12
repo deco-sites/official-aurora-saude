@@ -34,10 +34,18 @@
     {
       "__resolveType": "site/sections/Site/BeABrokerForm.tsx",
       "subject": "Aurora Saúde - Seja um corretor parceiro",
-      "recipientsEmail": "corretor@souaurorasaude.com.br"
+      "recipientsEmail": "corretor@souaurorasaude.com.br",
+      "RecipientsEmailArr": [
+        {
+          "email": "corretor@souaurorasaude.com.br"
+        }
+      ]
     },
     {
       "__resolveType": "site/sections/Site/Footer.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Site/FloatingButtons.tsx"
     }
   ],
   "seo": {

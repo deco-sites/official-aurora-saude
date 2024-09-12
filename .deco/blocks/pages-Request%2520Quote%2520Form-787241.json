@@ -32,11 +32,27 @@
     },
     {
       "__resolveType": "site/sections/Site/RequestQuoteForm.tsx",
+      "subject": "Aurora Saúde - Formulário de Cotação",
       "recipientsEmail": "corretor@souaurorasaude.com.br",
-      "subject": "Aurora Saúde - Formulário de Cotação"
+      "RecipientsEmailArr": [
+        {
+          "email": "eliane@salutarseguros.com.br"
+        },
+        {
+          "email": "suporte@salutarseguros.com.br"
+        }
+      ],
+      "CopyToArr": [
+        {
+          "email": "corretor@souaurorasaude.com.br"
+        }
+      ]
     },
     {
       "__resolveType": "site/sections/Site/Footer.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Site/FloatingButtons.tsx"
     }
   ],
   "seo": {

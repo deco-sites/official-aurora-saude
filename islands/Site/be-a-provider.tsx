@@ -13,15 +13,24 @@ import SiteUFSelect from "site/components/Site/site-uf-select.tsx";
 import SiteCitiesSelect from "site/components/Site/site-cities-select.tsx";
 import Image from "apps/website/components/Image.tsx";
 
+export interface RecipientsEmail {
+    email: string;
+}
+
+export interface CopyEmail {
+    email?: string;
+}
+
 export interface RequestQuoteIslandProps {
-    recipientsEmail: string;
+    RecipientsEmailArr: RecipientsEmail[];
+    CopyToArr?: CopyEmail[];
     subject: string;
 }
 
 const beAProviderEmailSended = signal(false);
 
 export default function BeAProviderFormIsland(
-    { recipientsEmail, subject }: RequestQuoteIslandProps,
+    { RecipientsEmailArr, CopyToArr, subject }: RequestQuoteIslandProps,
 ) {
     const [socialReasonPlaceholder, setSocialReasonPlaceholder] = useState(
         "Escreva aqui",
@@ -202,7 +211,8 @@ export default function BeAProviderFormIsland(
         e.preventDefault();
         beAProviderEmailSended.value = true;
         await invoke.site.actions.sendEmail({
-            recipientsEmail: recipientsEmail,
+            RecipientsEmailArr: RecipientsEmailArr,
+            CopyToArr: CopyToArr,
             subject: subject,
             data: sendData,
         });

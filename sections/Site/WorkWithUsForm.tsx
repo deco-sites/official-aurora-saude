@@ -1,12 +1,29 @@
 import WorkWithUsIsland from "site/islands/Site/work-with-us-form.tsx";
 
+/** @titleBy email */
+export interface RecipientsEmail {
+    email: string;
+}
+
+/** @titleBy email */
+export interface CopyEmail {
+    email?: string;
+}
+
 export interface Props {
-    recipientsEmail: string;
+    RecipientsEmailArr: RecipientsEmail[];
+    CopyToArr?: CopyEmail[];
     subject: string;
 }
 
-export default function WorkWithUs({ recipientsEmail, subject }: Props) {
+export default function WorkWithUs(
+    { RecipientsEmailArr, CopyToArr, subject }: Props,
+) {
     return (
-        <WorkWithUsIsland recipientsEmail={recipientsEmail} subject={subject} />
+        <WorkWithUsIsland
+            RecipientsEmailArr={RecipientsEmailArr}
+            CopyToArr={CopyToArr}
+            subject={subject}
+        />
     );
 }

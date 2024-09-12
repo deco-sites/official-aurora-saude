@@ -17,15 +17,24 @@ import CustomSelect from "site/components/Site/custom-select.tsx";
 import CustomSelectWithLabels from "site/components/Site/custom-select-whit-labels.tsx";
 import Image from "apps/website/components/Image.tsx";
 
+export interface RecipientsEmail {
+    email: string;
+}
+
+export interface CopyEmail {
+    email?: string;
+}
+
 export interface RequestQuoteIslandProps {
-    recipientsEmail: string;
+    RecipientsEmailArr: RecipientsEmail[];
+    CopyToArr?: CopyEmail[];
     subject: string;
 }
 
 const beABrokerEmailSended = signal(false);
 
 export default function BeABrokerFormIsland(
-    { recipientsEmail, subject }: RequestQuoteIslandProps,
+    { RecipientsEmailArr, CopyToArr, subject }: RequestQuoteIslandProps,
 ) {
     const [brokerNamePlaceholder, setbrokerNamePlaceholder] = useState(
         "Escreva aqui",
@@ -240,7 +249,8 @@ export default function BeABrokerFormIsland(
         e.preventDefault();
         beABrokerEmailSended.value = true;
         await invoke.site.actions.sendEmail({
-            recipientsEmail: recipientsEmail,
+            RecipientsEmailArr: RecipientsEmailArr,
+            CopyToArr: CopyToArr,
             subject: subject,
             data: sendData,
         });

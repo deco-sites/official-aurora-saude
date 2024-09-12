@@ -18,9 +18,18 @@ export interface Attachment {
     content: string;
 }
 
+export interface RecipientsEmail {
+    email: string;
+}
+
+export interface CopyEmail {
+    email?: string;
+}
+
 export interface Props {
     data: DataProps;
-    recipientsEmail: string;
+    RecipientsEmailArr: RecipientsEmail[];
+    CopyToArr?: CopyEmail[];
     subject: string;
     attachment?: Attachment | null;
 }
@@ -35,14 +44,20 @@ const sendEmail = async (
     const msg = {
         "personalizations": [
             {
-                "to": [
-                    {
-                        "email": props.recipientsEmail,
-                    },
-                ],
+                "to": props.RecipientsEmailArr.map((emailObj) => ({
+                    email: emailObj.email,
+                })),
+
+                // Adiciona "cc" apenas se props.CopyToArr existir e não for vazio
+                ...(props.CopyToArr && props.CopyToArr.length > 0
+                    ? {
+                        "cc": props.CopyToArr.map((emailObj) => ({
+                            email: emailObj.email,
+                        })),
+                    }
+                    : {}),
             },
         ],
-
         "subject": props.subject,
         "from": {
             "email": "naoresponda-site@souaurorasaude.com.br",

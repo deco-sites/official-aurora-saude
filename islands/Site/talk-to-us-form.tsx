@@ -12,15 +12,24 @@ import SiteUFSelect from "site/components/Site/site-uf-select.tsx";
 import SiteCitiesSelect from "site/components/Site/site-cities-select.tsx";
 import Image from "apps/website/components/Image.tsx";
 
+export interface RecipientsEmail {
+    email: string;
+}
+
+export interface CopyEmail {
+    email?: string;
+}
+
 export interface RequestQuoteIslandProps {
-    recipientsEmail: string;
+    RecipientsEmailArr: RecipientsEmail[];
+    CopyToArr?: CopyEmail[];
     subject: string;
 }
 
 const talkToUsEmailSended = signal(false);
 
 export default function TalkToUsIsland(
-    { recipientsEmail, subject }: RequestQuoteIslandProps,
+    { RecipientsEmailArr, CopyToArr, subject }: RequestQuoteIslandProps,
 ) {
     const [namePlaceholder, setNamePlaceholder] = useState("Escreva aqui");
     const [emailPlaceholder, setEmailPlaceholder] = useState(
@@ -35,7 +44,7 @@ export default function TalkToUsIsland(
 
     useEffect(() => {
         const updateNamePlaceholder = () => {
-            if (window.innerWidth < 640) {
+            if (globalThis.innerWidth < 640) {
                 setNamePlaceholder("Nome completo");
                 setEmailPlaceholder("E-mail");
                 setTelPlaceholder("Telefone");
@@ -167,7 +176,8 @@ export default function TalkToUsIsland(
         e.preventDefault();
         talkToUsEmailSended.value = true;
         await invoke.site.actions.sendEmail({
-            recipientsEmail: recipientsEmail,
+            RecipientsEmailArr: RecipientsEmailArr,
+            CopyToArr: CopyToArr,
             subject: subject,
             data: sendData,
         });
