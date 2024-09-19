@@ -271,9 +271,6 @@
     },
     {
       "__resolveType": "site/sections/Site/FloatingButtons.tsx"
-    },
-    {
-      "__resolveType": "GTM"
     }
   ],
   "__resolveType": "website/pages/Page.tsx"
