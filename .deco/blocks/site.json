@@ -20,6 +20,10 @@
     },
     {
       "__resolveType": "site/sections/Site/CookiesModal.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Site/GoogleTagManager.tsx",
+      "tag": "G-K8H6FR0TNN"
     }
   ],
   "routes": [
