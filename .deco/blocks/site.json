@@ -22,13 +22,10 @@
       "__resolveType": "site/sections/Site/CookiesModal.tsx"
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "website/sections/Analytics/Analytics.tsx",
-        "trackingIds": [
-          "G-K8H6FR0TNN"
-        ]
-      }
+      "__resolveType": "website/sections/Analytics/Analytics.tsx",
+      "trackingIds": [
+        "G-K8H6FR0TNN"
+      ]
     }
   ],
   "routes": [
