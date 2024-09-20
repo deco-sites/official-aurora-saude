@@ -20,9 +20,6 @@
     },
     {
       "__resolveType": "site/sections/Site/CookiesModal.tsx"
-    },
-    {
-      "__resolveType": "GTM"
     }
   ],
   "routes": [
