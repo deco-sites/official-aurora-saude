@@ -3,10 +3,9 @@ import Image from "apps/website/components/Image.tsx";
 import { Device } from "apps/website/matchers/device.ts";
 import Slider from "../../components/ui/Slider.tsx";
 import Icon from "site/components/ui/Icon.tsx";
-import { useId } from "https://esm.sh/v128/preact@10.19.6/compat/src/index.js";
-import { FnContext } from "deco/types.ts";
+import { useId } from "../../sdk/Site/useId.ts";
 import SliderJS from "../../islands/Site/sliderjs.tsx";
-
+import { type FnContext } from "@deco/deco";
 /**
  * @titleBy alt
  */
@@ -16,7 +15,6 @@ export interface Banner {
     height?: number;
     alt: string;
 }
-
 export interface Props {
     images?: Banner[];
     /**
@@ -29,24 +27,17 @@ export interface Props {
      */
     interval?: number;
 }
-
 const DEFAULT_PROPS = {
     images: [],
     preload: true,
 };
-
-function BannerItem(
-    { image, lcp, id, device }: {
-        image: Banner;
-        lcp?: boolean;
-        id: string;
-        device: Device;
-    },
-) {
-    const {
-        alt,
-    } = image;
-
+function BannerItem({ image, lcp, id, device }: {
+    image: Banner;
+    lcp?: boolean;
+    id: string;
+    device: Device;
+}) {
+    const { alt } = image;
     return (
         <>
             {device !== "desktop" && (
@@ -82,7 +73,6 @@ function BannerItem(
         </>
     );
 }
-
 function Dots({ images, interval = 0 }: Props) {
     return (
         <>
@@ -116,7 +106,6 @@ function Dots({ images, interval = 0 }: Props) {
         </>
     );
 }
-
 function Buttons() {
     return (
         <>
@@ -143,14 +132,12 @@ function Buttons() {
         </>
     );
 }
-
 function WhiteBannerCarousel(props: ReturnType<typeof loader>) {
     const id = useId();
     const { images, preload, interval, device } = {
         ...DEFAULT_PROPS,
         ...props,
     };
-
     return (
         <div className="flex justify-center lg:width-calc">
             <div className="flex gap-6 w-full">
@@ -242,12 +229,10 @@ function WhiteBannerCarousel(props: ReturnType<typeof loader>) {
         </div>
     );
 }
-
 export const loader = (props: Props, req: Request, ctx: FnContext) => {
     return {
         ...props,
         device: ctx.device,
     };
 };
-
 export default WhiteBannerCarousel;

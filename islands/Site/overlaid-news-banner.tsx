@@ -3,7 +3,7 @@ import { ImageWidget } from "apps/admin/widgets.ts";
 import { Device } from "apps/website/matchers/device.ts";
 import Slider from "../../components/ui/Slider.tsx";
 import SliderJS from "../../islands/Site/sliderjs.tsx";
-import { useId } from "https://esm.sh/v128/preact@10.19.6/compat/src/index.js";
+import { useId } from "../../sdk/Site/useId.ts";
 import { signal, useSignal } from "@preact/signals";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { textShortner } from "apps/website/components/_seo/helpers/textShortner.tsx";

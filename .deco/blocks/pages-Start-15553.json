@@ -14,22 +14,22 @@
           "images": [
             {
               "desktop": {
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/09a32ccb-a8c6-431c-aa5b-57cd116b59cf"
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/a4c696ca-0056-4208-9e02-4864b99e0f50"
               },
               "mobile": {
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/10fea2fe-0735-4be8-a894-ec6ab35f3d5d"
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/461f84c1-f650-48d0-b04e-22466a71b7f1"
               },
-              "alt": "Banner1",
+              "alt": "Banner",
               "link": "#"
             },
             {
               "desktop": {
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/d7f8d236-e461-49e3-845c-5ac7a51ba716"
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/6ef91a2e-36a1-4eb7-a890-5849d4d3c53b"
               },
               "mobile": {
                 "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/3b46e01f-ffcd-4842-95f8-c8af5ebe68cd"
               },
-              "alt": "Banner2",
+              "alt": "Banner",
               "link": "#"
             }
           ],

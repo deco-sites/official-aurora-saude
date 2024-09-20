@@ -1,14 +1,9 @@
-import { Section } from "deco/blocks/section.ts";
-
+import { type Section } from "@deco/deco/blocks";
 export interface BrokersHomeDivisorProps {
     section: Section;
 }
-
-export default function BrokersHomeDivisor(
-    { section }: BrokersHomeDivisorProps,
-) {
-    return (
-        <>
+export default function BrokersHomeDivisor({ section }: BrokersHomeDivisorProps) {
+    return (<>
             <div className="relative -mt-[2px] flex flex-col items-center h-[600px] lg:h-[280px] bg-pink6 lg:bg-gray4">
                 <div className="flex px-10 lg:px-0 justify-center lg:bg-fixed lg:bg-center lg:bg-no-repeat lg:bg-cover flex-col gap-10 w-full max-w-[1400px]">
                     <div className="absolute px-10 lg:px-0 inset-0 flex h-auto lg:h-[350px] justify-center -mt-28">
@@ -40,7 +35,7 @@ export default function BrokersHomeDivisor(
                                     </span>
 
                                     <div className="flex relative h-auto w-full">
-                                        <section.Component {...section.props} />
+                                        <section.Component {...section.props}/>
                                     </div>
                                 </div>
                             </div>
@@ -50,6 +45,5 @@ export default function BrokersHomeDivisor(
             </div>
             <div className="flex lg:hidden bg-gray4 h-32 w-full">
             </div>
-        </>
-    );
+        </>);
 }
