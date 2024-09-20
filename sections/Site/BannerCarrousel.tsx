@@ -3,10 +3,9 @@ import Image from "apps/website/components/Image.tsx";
 import { Device } from "apps/website/matchers/device.ts";
 import Slider from "../../components/ui/Slider.tsx";
 import Icon from "site/components/ui/Icon.tsx";
-import { useId } from "https://esm.sh/v128/preact@10.19.6/compat/src/index.js";
-import { FnContext } from "deco/types.ts";
+import { useId } from "../../sdk/Site/useId.ts";
 import SliderJS from "../../islands/Site/sliderjs.tsx";
-
+import { type FnContext } from "@deco/deco";
 /**
  * @titleBy alt
  */
@@ -27,7 +26,6 @@ export interface Banner {
     alt: string;
     link: string;
 }
-
 export interface Props {
     images?: Banner[];
     /**
@@ -40,27 +38,17 @@ export interface Props {
      */
     interval?: number;
 }
-
 const DEFAULT_PROPS = {
     images: [],
     preload: true,
 };
-
-function BannerItem(
-    { image, lcp, id, device }: {
-        image: Banner;
-        lcp?: boolean;
-        id: string;
-        device: Device;
-    },
-) {
-    const {
-        alt,
-        mobile,
-        desktop,
-        link,
-    } = image;
-
+function BannerItem({ image, lcp, id, device }: {
+    image: Banner;
+    lcp?: boolean;
+    id: string;
+    device: Device;
+}) {
+    const { alt, mobile, desktop, link } = image;
     return (
         <a
             id={id}
@@ -97,7 +85,6 @@ function BannerItem(
         </a>
     );
 }
-
 function Dots({ images, interval = 0 }: Props) {
     return (
         <>
@@ -131,7 +118,6 @@ function Dots({ images, interval = 0 }: Props) {
         </>
     );
 }
-
 function Buttons() {
     return (
         <>
@@ -158,14 +144,13 @@ function Buttons() {
         </>
     );
 }
-
 function BannerCarousel(props: ReturnType<typeof loader>) {
     const id = useId();
+
     const { images, preload, interval, device } = {
         ...DEFAULT_PROPS,
         ...props,
     };
-
     return (
         <div className="flex justify-center lg:width-calc px-10 lg:px-0">
             <div className="flex gap-6 w-full">
@@ -176,7 +161,6 @@ function BannerCarousel(props: ReturnType<typeof loader>) {
                     <Slider className="carousel carousel-center w-full col-span-full row-span-full gap-6 rounded-[20px]">
                         {images?.map((image, index) => {
                             const params = { promotion_name: image.alt };
-
                             return (
                                 <Slider.Item
                                     index={index}
@@ -212,12 +196,10 @@ function BannerCarousel(props: ReturnType<typeof loader>) {
         </div>
     );
 }
-
 export const loader = (props: Props, req: Request, ctx: FnContext) => {
     return {
         ...props,
         device: ctx.device,
     };
 };
-
 export default BannerCarousel;

@@ -2,7 +2,7 @@ import NewsCard from "site/components/Site/news-card.tsx";
 import Image from "apps/website/components/Image.tsx";
 import Slider from "../../components/ui/Slider.tsx";
 import SliderJS from "../../islands/Site/sliderjs.tsx";
-import { useId } from "https://esm.sh/v128/preact@10.19.6/compat/src/index.js";
+import { useId } from "../../sdk/Site/useId.ts";
 
 export default function NewsPageTemplateIsland(
     { image, date, title, text, relatedsNews, galleryImages, device },
