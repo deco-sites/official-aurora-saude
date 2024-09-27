@@ -21,20 +21,23 @@ export default function NewsCard({ imageSrc, alt, date, title, link }) {
                     />
                 </a>
             </div>
-            <div className="flex flex-col gap-5 px-14 py-5">
-                <a href={link} className="w-fit">
+            <div className="flex flex-col gap-5 px-14 py-5 h-full justify-between">
+                <a href={link} className="w-fit h-1/3">
                     <span className="text-pink1 font-normal">
                         {date}
                     </span>
                 </a>
-                <a href={link} className="w-fit">
+                <a
+                    href={link}
+                    className="w-fit min-h-1/3 lg:h-1/3 flex justify-start flex-grow flex-shrink-0"
+                >
                     <span
                         className="text-black opacity-50 font-sora font-bold text-lg"
                         dangerouslySetInnerHTML={{ __html: title }}
                     >
                     </span>
                 </a>
-                <a href={link} className="w-fit">
+                <a href={link} className="w-fit h-1/3">
                     <span className="text-orange4 font-black">
                         Leia mais
                     </span>

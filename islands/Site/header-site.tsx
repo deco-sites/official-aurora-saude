@@ -84,7 +84,8 @@ const headerOptions: IheaderOptions[] = [
             { text: "Nossos planos", link: "/nossos-planos", target: "_self" },
             {
                 text: "Vendas",
-                link: "https://souaurorasaude.planium.io/web/login/?target=venda",
+                link:
+                    "https://souaurorasaude.planium.io/web/login/?target=venda",
                 target: "_blank",
             },
             {
@@ -135,15 +136,15 @@ export default function HeaderSiteIsland({ type, opValue }: Props) {
         ? headerOptions.find((option) => option.id === Number(opValue))
         : headerOptions.find((option) => option.name === type);
     //const option = headerOptions.find((option) => option.name === type);
-    if (!option)
+    if (!option) {
         return null;
+    }
     const buttonsArr = headerOptions.filter((item) => item.name !== type);
     const startIndex = buttonsArr.findIndex((item) => item.id > option.id);
     let orderedOptions;
     if (startIndex === -1) {
         orderedOptions = [...buttonsArr];
-    }
-    else {
+    } else {
         orderedOptions = [
             ...buttonsArr.slice(startIndex),
             ...buttonsArr.slice(0, startIndex),
@@ -155,42 +156,87 @@ export default function HeaderSiteIsland({ type, opValue }: Props) {
         3: "bg-pink6",
         4: "bg-pink6",
     };
-    return (<div className="flex justify-center px-10 lg:px-0">
+    return (
+        <div className="flex justify-center px-10 lg:px-0">
             <div className="flex gap-6 w-full ">
                 <div className="w-full">
                     <div className="flex justify-end lg:justify-between px-7 lg:px-16">
                         <div className="hidden lg:flex gap-3">
-                            <a href={option?.link} className={`relative font-bold ${option?.name === "prestador"
-            ? "text-orange1"
-            : "text-white"} ${colors[option.color]} rounded-t-[20px] px-5 py-1`}>
+                            <a
+                                href={option?.link}
+                                className={`relative font-bold ${
+                                    option?.name === "prestador"
+                                        ? "text-orange1"
+                                        : "text-white"
+                                } ${
+                                    colors[
+                                        option.color
+                                    ]
+                                } rounded-t-[20px] px-5 py-1`}
+                            >
                                 {/*Aqui entra todo o código que tirei*/}
-                                <div className={`absolute ${colors[option.color]} w-6 h-6 -bottom-[6px] left-0 transform -translate-x-full`}>
-                                    <div className={`w-full h-full ${backgroundColors[option.id]}`} style={{
-            clipPath: "circle(101.8% at 1% 1%)",
-        }}>
+                                <div
+                                    className={`absolute ${
+                                        colors[option.color]
+                                    } w-6 h-6 -bottom-[6px] left-0 transform -translate-x-full`}
+                                >
+                                    <div
+                                        className={`w-full h-full ${
+                                            backgroundColors[option.id]
+                                        }`}
+                                        style={{
+                                            clipPath: "circle(101.8% at 1% 1%)",
+                                        }}
+                                    >
                                     </div>
                                 </div>
-                                <div className={`absolute ${colors[option.color]} w-6 h-6 -bottom-[6px] right-0 transform translate-x-full`}>
-                                    <div className={`w-full h-full ${backgroundColors[option.id]}`} style={{
-            clipPath: "circle(101.8% at 99% 0)",
-        }}>
+                                <div
+                                    className={`absolute ${
+                                        colors[option.color]
+                                    } w-6 h-6 -bottom-[6px] right-0 transform translate-x-full`}
+                                >
+                                    <div
+                                        className={`w-full h-full ${
+                                            backgroundColors[option.id]
+                                        }`}
+                                        style={{
+                                            clipPath: "circle(101.8% at 99% 0)",
+                                        }}
+                                    >
                                     </div>
                                 </div>
-                                <div className={`absolute ${colors[option.color]} w-full h-2 -bottom-2 left-0`}>
+                                <div
+                                    className={`absolute ${
+                                        colors[option.color]
+                                    } w-full h-2 -bottom-2 left-0`}
+                                >
                                 </div>
                                 <span className="relative z-10">
                                     {option.title}
                                 </span>
                             </a>
 
-                            {orderedOptions.map((headerOption, index) => (<a key={headerOption.id} href={headerOption.link} target={headerOption.target} className={` ${colors[headerOption?.textColor]} ${colors[headerOption.color]} rounded-[20px] px-5 py-1 z-10`}>
+                            {orderedOptions.map((headerOption, index) => (
+                                <a
+                                    key={headerOption.id}
+                                    href={headerOption.link}
+                                    target={headerOption.target}
+                                    className={` ${
+                                        colors[headerOption?.textColor]
+                                    } ${
+                                        colors[
+                                            headerOption.color
+                                        ]
+                                    } rounded-[20px] px-5 py-1 z-10`}
+                                >
                                     {headerOption.title}
-                                </a>))}
+                                </a>
+                            ))}
                         </div>
 
                         <div className="flex gap-9 text-white">
                             <div className="relative hidden lg:flex items-center gap-9">
-                                <LoggedAreasBtn option={option}/>
+                                <LoggedAreasBtn option={option} />
                                 <a href="/perguntas-frequentes">
                                     Perguntas Frequentes
                                 </a>
@@ -199,7 +245,7 @@ export default function HeaderSiteIsland({ type, opValue }: Props) {
                                 </a>
                             </div>
                             {
-        /*
+                                /*
     <div className="flex gap-4 items-center">
         <div className="flex gap-1 font-semibold">
             <span
@@ -222,22 +268,36 @@ export default function HeaderSiteIsland({ type, opValue }: Props) {
             }}
         />
     </div>*/
-        }
+                            }
                         </div>
                     </div>
 
-                    <div className={`flex items-center gap-12 justify-between ${colors[option.color]} p-7 lg:p-16 mt-[6px] rounded-[20px] h-20 lg:h-48`} onClick={() => expandedInput.value = false}>
+                    <div
+                        className={`flex items-center gap-12 justify-between ${
+                            colors[option.color]
+                        } p-7 lg:p-16 mt-[6px] rounded-[20px] h-20 lg:h-48`}
+                        onClick={() => expandedInput.value = false}
+                    >
                         <a href="/">
-                            <img src={option.name === "prestador"
-            ? "/Site/logo_aurora_prestador.svg"
-            : "/Site/default_logo_aurora.svg"} alt="Aurora Logo" width={140} className="w-28 lg:w-44"/>
+                            <img
+                                src={option.name === "prestador"
+                                    ? "/Site/logo_aurora_prestador.svg"
+                                    : "/Site/default_logo_aurora.svg"}
+                                alt="Aurora Logo"
+                                width={140}
+                                className="w-28 lg:w-44"
+                            />
                         </a>
 
-                        <HeaderMobileMenuBtn option={option}/>
+                        <HeaderMobileMenuBtn option={option} />
 
-                        <SearchButtonContainer option={option} expandedInput={expandedInput}/>
+                        <SearchButtonContainer
+                            option={option}
+                            expandedInput={expandedInput}
+                        />
                     </div>
                 </div>
             </div>
-        </div>);
+        </div>
+    );
 }

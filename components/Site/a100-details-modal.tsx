@@ -14,12 +14,15 @@ export default function A100DetailsModal(
 ) {
     useEffect(() => {
         if (activeModal === 0 || previousModal === 0) {
+            document.documentElement.classList.add("overflow-hidden");
             document.body.classList.add("overflow-hidden");
         } else {
+            document.documentElement.classList.remove("overflow-hidden");
             document.body.classList.remove("overflow-hidden");
         }
 
         return () => {
+            document.documentElement.classList.remove("overflow-hidden");
             document.body.classList.remove("overflow-hidden");
         };
     }, [activeModal, previousModal]);
@@ -29,7 +32,7 @@ export default function A100DetailsModal(
     return (
         <>
             <div
-                className={`fixed top-0 left-0 flex min-h-screen w-screen bg-orange1 justify-center items-start lg:items-center overflow-x-hidden overflow-y-scroll`}
+                className={`fixed top-0 left-0 flex min-h-screen w-screen bg-orange1 justify-center items-start lg:items-center overflow-x-hidden overflow-y-scroll max-h-full pb-8`}
                 style={{
                     ...style,
                     animation: activeModal === 0

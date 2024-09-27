@@ -7,12 +7,12 @@ export default function Footer() {
             <div className="flex justify-center bg-pink3">
                 <div className="lg:max-w-[1400px] w-full pt-24 pb-16">
                     <footer className="flex flex-col text-white px-10 lg:px-0">
-                        <div className="border-b border-b-white lg:border-none pb-12 lg:pb-0 flex mb-10 gap-12 items-center">
+                        <div className="border-b pl-3 lg:pl-0 border-b-white lg:border-none pb-12 lg:pb-0 flex mb-10 gap-12 items-center">
                             <Image
                                 src={"/Site/Footer/aurora-logo.svg"}
                                 alt={""}
                             />
-                            <div className="flex gap-5">
+                            <div className="flex justify-center gap-5">
                                 {
                                     /*
                                 <a href="#">
@@ -56,13 +56,13 @@ export default function Footer() {
                                 </a>
                             </div>
                         </div>
-                        <div className="w-full flex justify-center lg:justify-start text-base pb-20">
-                            <div className="hidden lg:flex lg:w-3/5 justify-between border-r border-r-white p-12 whitespace-nowrap">
+                        <div className="w-full flex flex-col-reverse lg:flex-row justify-center lg:justify-start text-base lg:pb-20">
+                            <div className="grid grid-cols-2 grid-rows-2 gap-y-14 lg:gap-y-0 lg:flex lg:w-3/5 justify-between border-t border-t-white lg:border-t-0 lg:border-r lg:border-r-white pt-9 lg:p-12 whitespace-nowrap">
                                 <div className="flex flex-col">
                                     <span className="font-semibold mb-6">
                                         Sou cliente
                                     </span>
-                                    <div className="flex flex-col gap-3">
+                                    <div className="flex flex-col gap-3 text-sm lg:text-base">
                                         <a href="/quem-somos" className="w-fit">
                                             Quem somos
                                         </a>
@@ -93,7 +93,7 @@ export default function Footer() {
                                     <span className="font-semibold mb-6">
                                         Precisa de Ajuda?
                                     </span>
-                                    <div className="flex flex-col gap-3">
+                                    <div className="flex flex-col gap-3 text-sm lg:text-base">
                                         <a href="/ouvidoria" className="w-fit">
                                             Ouvidoria
                                         </a>
@@ -127,7 +127,7 @@ export default function Footer() {
                                     <span className="font-semibold mb-6">
                                         Sou corretor
                                     </span>
-                                    <div className="flex flex-col gap-3">
+                                    <div className="flex flex-col gap-3 text-sm lg:text-base">
                                         <a href="/corretor" className="w-fit">
                                             Sou corretor
                                         </a>
@@ -149,7 +149,7 @@ export default function Footer() {
                                     <span className="font-semibold mb-6">
                                         Prestador
                                     </span>
-                                    <div className="flex flex-col gap-3">
+                                    <div className="flex flex-col gap-3 text-sm lg:text-base">
                                         <a
                                             href="/seja-um-prestador"
                                             className="w-fit"
@@ -159,7 +159,7 @@ export default function Footer() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="lg:w-2/5 text-center lg:text-left items-center lg:items-start flex flex-col gap-8 lg:py-12 lg:pl-20">
+                            <div className="lg:w-2/5 text-center lg:text-left items-center lg:items-start flex flex-col gap-8 pb-9 lg:py-12 lg:pl-20">
                                 <div className="flex flex-col gap-4">
                                     <span>Precisa de ajuda?</span>
                                     <a

@@ -58,7 +58,7 @@ export default function SalesSectionIsland({ sections, device }) {
                         ? `${
                             shadowColors[section.id]
                         } lg:shadow-none lg:rounded-t-[20px] lg:rounded-b-none`
-                        : ""
+                        : "z-50"
                 }`}
                 onClick={() => {
                     activeSection.value = section.id;
@@ -76,7 +76,7 @@ export default function SalesSectionIsland({ sections, device }) {
                             className={`${section.bgColor} absolute -bottom-2 left-0 w-6 h-6 -translate-x-full`}
                         >
                             <div
-                                className={`w-full h-full bg-gray4`}
+                                className={`relative w-full h-full bg-gray4`}
                                 style={{
                                     clipPath: "circle(101.8% at 1% 1%)",
                                 }}

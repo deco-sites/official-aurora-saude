@@ -4,7 +4,7 @@ export default function TableTopic({ topic }) {
     //console.log("Tópico", topic);
     return (
         <>
-            <div className="overflow-x-auto px-14 py-7">
+            <div className="overflow-x-auto lg:px-14 py-7">
                 <table className="min-w-full border-collapse">
                     <thead>
                         <tr>
