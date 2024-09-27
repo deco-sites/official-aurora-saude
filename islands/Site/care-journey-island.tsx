@@ -85,7 +85,7 @@ export default function CareJourneyIsland({ device }: Device) {
     return (
         <div className="w-full py-20 bg-yellow overflow-x-hidden">
             <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-28 lg:gap-36">
-                <div className="flex flex-col flex-1 px-16 lg:px-0 font-sora gap-10 lg:w-1/3">
+                <div className="flex flex-col flex-1 px-16 lg:px-10 2xl:px-0 font-sora gap-10 lg:w-1/3">
                     <div className="flex flex-col gap-5">
                         <span className="text-pink1 text-4xl font-bold">
                             Jornada de <br />Cuidado:
@@ -104,7 +104,7 @@ export default function CareJourneyIsland({ device }: Device) {
                         </button>
                     </a>
                 </div>
-                <div className="pl-8 lg:pl-0 flex gap-5 lg:w-2/3">
+                <div className="pl-8 lg:pl-10 2xl:px-0 flex gap-5 lg:w-2/3">
                     <div className="flex">
                         {leftCards.length > 0 && (
                             leftCards[leftCards.length - 1].component

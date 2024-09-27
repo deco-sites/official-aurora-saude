@@ -19,7 +19,7 @@ export default function NewsSection({ newsArr }: Props) {
         <>
             <div className="flex justify-center bg-white">
                 <div className="lg:max-w-[1400px] w-full pt-12 lg:pb-16 lg:py-16 flex flex-col">
-                    <div className="lg:mt-16 flex flex-col gap-10 px-10 lg:px-0 pb-10 lg:pb-0">
+                    <div className="lg:mt-16 flex flex-col gap-10 px-10 lg:px-10 2xl:px-0 pb-10 lg:pb-0">
                         <span className="block lg:hidden font-sora font-bold text-2xl text-orange4">
                             Últimas Notícias
                         </span>

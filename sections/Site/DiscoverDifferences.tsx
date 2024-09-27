@@ -19,15 +19,19 @@ export interface DiscoverDifferencesProps {
     section: Section;
     cards: Card[];
 }
-export default function DiscoverDifferences({ section, cards }: DiscoverDifferencesProps) {
-    return (<>
+export default function DiscoverDifferences(
+    { section, cards }: DiscoverDifferencesProps,
+) {
+    return (
+        <>
             <div className="flex justify-center bg-gray4 pt-10 lg:pt-20">
                 <div className="lg:max-w-[1400px] w-full flex flex-col gap-14">
-                    <section.Component {...section.props}/>
-                    <div className="px-10 lg:px-0 grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 gap-5 pb-9 lg:pb-28 h-full min-h-[calc(100vh-4rem)]">
-                        <DiscoverDifferencesIsland cards={cards}/>
+                    <section.Component {...section.props} />
+                    <div className="px-10 lg:px-10 2xl:px-0 grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 gap-5 pb-9 lg:pb-28 h-full min-h-[calc(100vh-4rem)]">
+                        <DiscoverDifferencesIsland cards={cards} />
                     </div>
                 </div>
             </div>
-        </>);
+        </>
+    );
 }

@@ -63,7 +63,7 @@ export default function PlansSectionIsland(
 
     return (
         <>
-            <div className="flex justify-center px-10 lg:px-0 bg-gray4">
+            <div className="flex justify-center px-10 lg:px-10 2xl:px-0 bg-gray4">
                 <div className="flex flex-col lg:max-w-[1400px] w-full pt-12 pb-16 lg:py-32">
                     <div className="flex flex-col">
                         <div className="flex flex-col lg:flex-row w-full justify-between mb-48">

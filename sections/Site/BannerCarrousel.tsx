@@ -152,7 +152,7 @@ function BannerCarousel(props: ReturnType<typeof loader>) {
         ...props,
     };
     return (
-        <div className="flex justify-center lg:width-calc px-10 lg:px-0">
+        <div className="flex justify-center lg:width-calc px-10 lg:px-10 2xl:px-0">
             <div className="flex gap-6 w-full">
                 <div
                     id={id}

@@ -3,7 +3,7 @@ import QuestionBox from "site/components/Site/frequently-asked-questions-option.
 export default function FrequentlyAskedQuestionsIsland({ questions }) {
     return (
         <>
-            <div className="flex justify-center bg-gray4 px-10 lg:px-0 border-b border-b-gray9">
+            <div className="flex justify-center bg-gray4 px-10 lg:px-10 2xl:px-0 border-b border-b-gray9">
                 <div className="flex flex-col gap-16 lg:w-[1400px] w-full pt-10 lg:pt-24 pb-16">
                     <span className="font-sora font-bold text-2xl text-pink6 lg:pl-12">
                         Dúvidas Frequentes

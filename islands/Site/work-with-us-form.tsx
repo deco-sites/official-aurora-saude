@@ -93,8 +93,10 @@ export default function WorkWithUsIsland(
     const [cityError, setCityError] = useState(false);
     const [addressError, setAddressError] = useState(false);
     const [cepError, setCepError] = useState(false);
+    const [attachmentError, setAttachmentError] = useState(false);
 
     const checkFields = (e) => {
+        console.log("Aqui ó:", selectedFile);
         e.preventDefault();
 
         // Verifica os campos e atualiza os estados de erro
@@ -105,6 +107,7 @@ export default function WorkWithUsIsland(
         const cityErrorStatus = city === "";
         const addressErrorStatus = address === "";
         const cepErrorStatus = cep === "";
+        const attachmentErrorStatus = selectedFile === null;
 
         setNameError(nameErrorStatus);
         setEmailError(emailErrorStatus);
@@ -113,6 +116,7 @@ export default function WorkWithUsIsland(
         setCityError(cityErrorStatus);
         setAddressError(addressErrorStatus);
         setCepError(cepErrorStatus);
+        setAttachmentError(attachmentErrorStatus);
 
         // Se todos os erros forem resolvidos, envie o formulário
         if (
@@ -122,7 +126,8 @@ export default function WorkWithUsIsland(
             !UFErrorStatus &&
             !cityErrorStatus &&
             !addressErrorStatus &&
-            !cepErrorStatus
+            !cepErrorStatus &&
+            !attachmentErrorStatus
         ) {
             handleSubmit(e);
         }
@@ -477,23 +482,35 @@ export default function WorkWithUsIsland(
                         </div>
                         <div className="flex pt-10 lg:pt-0 flex-col lg:flex-row gap-4 lg:gap-0 justify-between w-full">
                             <div className="flex flex-col items-center">
-                                <input
-                                    type="file"
-                                    ref={fileInputRef}
-                                    style={{ display: "none" }}
-                                    onChange={handleFileChange}
-                                />
-                                <button
-                                    className="flex justify-center items-center gap-5 bg-transparent border border-orange4 text-orange4 w-full lg:w-auto lg:px-10 py-3 rounded-full"
-                                    onClick={handleButtonClick}
-                                >
-                                    <Image
-                                        src={"/Site/clip-icon.svg"}
-                                        alt="Clip Icon"
-                                        className=""
+                                <div className="flex items-center">
+                                    <input
+                                        type="file"
+                                        ref={fileInputRef}
+                                        style={{ display: "none" }}
+                                        onChange={handleFileChange}
                                     />
-                                    Envie o seu currículo
-                                </button>
+                                    <button
+                                        className="flex justify-center items-center gap-5 bg-transparent border border-orange4 text-orange4 w-full lg:w-auto lg:px-10 py-3 rounded-full"
+                                        onClick={handleButtonClick}
+                                    >
+                                        <Image
+                                            src={"/Site/clip-icon.svg"}
+                                            alt="Clip Icon"
+                                            className=""
+                                        />
+                                        Envie o seu currículo
+                                    </button>
+                                    {attachmentError && (
+                                        <Image
+                                            src={"/Simulador/error-circle-icon.png"}
+                                            alt="Error Icon"
+                                            className="h-5 w-5 absolute top-50 right-16 lg:-right-4 lg:relative" //lg:left-[615px]"
+                                            width=""
+                                            height=""
+                                        />
+                                    )}
+                                </div>
+
                                 {selectedFile && (
                                     <span className="text-xs text-red">
                                         {selectedFile.name}

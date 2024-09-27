@@ -77,45 +77,154 @@ interface BannerSectionProps {
     buttonText: string;
     device: Device;
 }
-export default function BottomBannerSection({ image, desktopTitle, mobileTitle, desktopText, mobileText, textColor, titleFontSize, textFontSize, titleFontWeight, textFontWeight, hasButton, buttonColor, buttonText, device, }: BannerSectionProps) {
+export default function BottomBannerSection({
+    image,
+    desktopTitle,
+    mobileTitle,
+    desktopText,
+    mobileText,
+    textColor,
+    titleFontSize,
+    textFontSize,
+    titleFontWeight,
+    textFontWeight,
+    hasButton,
+    buttonColor,
+    buttonText,
+    device,
+}: BannerSectionProps) {
     const { alt, mobile, desktop } = image;
-    return (<div className="relative flex rounded-3xl px-10 lg:px-0 w-full max-w-full">
-            {device !== "desktop" && (<>
-                    <div className="flex flex-col gap-5 absolute bottom-8 transform left-16 right-16 w-auto max-w-full font-sora">
-                        {mobileTitle && (<span className={`break-words overflow-hidden ${fontSizes[titleFontSize]} ${textColors[textColor]} ${fontWeights[titleFontWeight]}`} dangerouslySetInnerHTML={{
-                    __html: mobileTitle,
-                }}>
-                            </span>)}
-                        {mobileText && (<span className={` break-words overflow-hidden ${fontWeights[textFontWeight]} ${textColors[textColor]} ${fontSizes[textFontSize]}`} dangerouslySetInnerHTML={{ __html: mobileText }}/>)}
-                        {hasButton && (<a href="/materiais-de-apoio">
-                                <button className={`text-white py-2 px-8 rounded-full ${buttonColors[buttonColor]}`}>
-                                    {buttonText}
-                                </button>
-                            </a>)}
-                    </div>
-                    <Image class="object-cover w-full h-full rounded-[20px]" src={mobile.image} alt={alt} width={mobile.width ?? 350} height={mobile.height ?? 350} preload loading="eager" fetchPriority="high" decoding="async"/>
-                </>)}
-            {device === "desktop" && (<>
-                    <div className="flex justify-between absolute top-1/2 transform -translate-y-1/2 left-12 pr-24 font-sora w-full items-center">
-                        <div className="flex flex-col gap-5">
-                            {desktopTitle && (<span className={` ${fontSizes[titleFontSize]} ${textColors[textColor]} ${fontWeights[titleFontWeight]}`} dangerouslySetInnerHTML={{
-                    __html: desktopTitle,
-                }}>
-                                </span>)}
-
-                            {desktopText && (<span className={` ${fontWeights[textFontWeight]} ${textColors[textColor]} ${fontSizes[textFontSize]}`} dangerouslySetInnerHTML={{
-                    __html: desktopText,
-                }}/>)}
+    const backgroundStyle = {
+        backgroundImage: `url(${
+            device === "desktop" ? desktop.image : mobile.image
+        })`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+    };
+    return (
+        <div className="px-10 lg:px-10 2xl:px-0 w-full h-[335px] max-w-[1400px]">
+            <div
+                className="relative flex rounded-3xl h-full w-full"
+                style={backgroundStyle}
+            >
+                {device !== "desktop" && (
+                    <>
+                        <div className="flex flex-col justify-end gap-5 w-full max-w-full font-sora pl-8 pb-6">
+                            {mobileTitle && (
+                                <span
+                                    className={`break-words overflow-hidden ${
+                                        fontSizes[titleFontSize]
+                                    } ${textColors[textColor]} ${
+                                        fontWeights[titleFontWeight]
+                                    }`}
+                                    dangerouslySetInnerHTML={{
+                                        __html: mobileTitle,
+                                    }}
+                                >
+                                </span>
+                            )}
+                            {mobileText && (
+                                <span
+                                    className={` break-words overflow-hidden ${
+                                        fontWeights[textFontWeight]
+                                    } ${textColors[textColor]} ${
+                                        fontSizes[textFontSize]
+                                    }`}
+                                    dangerouslySetInnerHTML={{
+                                        __html: mobileText,
+                                    }}
+                                />
+                            )}
+                            {hasButton && (
+                                <a href="/materiais-de-apoio">
+                                    <button
+                                        className={`text-white py-2 px-8 rounded-full ${
+                                            buttonColors[buttonColor]
+                                        }`}
+                                    >
+                                        {buttonText}
+                                    </button>
+                                </a>
+                            )}
                         </div>
-                        {hasButton && (<a href="/materiais-de-apoio">
-                                <button className={`text-white py-3 px-16 rounded-full ${buttonColors[buttonColor]}`}>
-                                    {buttonText}
-                                </button>
-                            </a>)}
-                    </div>
-                    <Image class="object-cover w-full h-full rounded-[20px]" src={desktop.image} alt={alt} width={desktop.width ?? 1436} height={desktop.height ?? 335} preload loading="eager" fetchPriority="high" decoding="async"/>
-                </>)}
-        </div>);
+                        {
+                            /*
+                        <Image
+                            class="object-cover w-full h-full rounded-[20px]"
+                            src={mobile.image}
+                            alt={alt}
+                            width={mobile.width ?? 350}
+                            height={mobile.height ?? 350}
+                            preload
+                            loading="eager"
+                            fetchPriority="high"
+                            decoding="async"
+                        />*/
+                        }
+                    </>
+                )}
+                {device === "desktop" && (
+                    <>
+                        <div className="flex justify-between font-sora items-center px-16">
+                            <div className="flex flex-col gap-5">
+                                {desktopTitle && (
+                                    <span
+                                        className={` ${
+                                            fontSizes[titleFontSize]
+                                        } ${textColors[textColor]} ${
+                                            fontWeights[titleFontWeight]
+                                        }`}
+                                        dangerouslySetInnerHTML={{
+                                            __html: desktopTitle,
+                                        }}
+                                    >
+                                    </span>
+                                )}
+
+                                {desktopText && (
+                                    <span
+                                        className={` ${
+                                            fontWeights[textFontWeight]
+                                        } ${textColors[textColor]} ${
+                                            fontSizes[textFontSize]
+                                        }`}
+                                        dangerouslySetInnerHTML={{
+                                            __html: desktopText,
+                                        }}
+                                    />
+                                )}
+                            </div>
+                            {hasButton && (
+                                <a href="/materiais-de-apoio">
+                                    <button
+                                        className={`text-white py-3 px-16 rounded-full ${
+                                            buttonColors[buttonColor]
+                                        }`}
+                                    >
+                                        {buttonText}
+                                    </button>
+                                </a>
+                            )}
+                        </div>
+                        {
+                            /*
+                        <Image
+                            class="object-cover w-full h-full rounded-[20px]"
+                            src={desktop.image}
+                            alt={alt}
+                            width={desktop.width ?? 1436}
+                            height={desktop.height ?? 335}
+                            preload
+                            loading="eager"
+                            fetchPriority="high"
+                            decoding="async"
+                        />*/
+                        }
+                    </>
+                )}
+            </div>
+        </div>
+    );
 }
 export const loader = (props: Props, req: Request, ctx: FnContext) => {
     return {

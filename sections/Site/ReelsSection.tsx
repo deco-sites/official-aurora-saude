@@ -18,8 +18,8 @@ export interface Props {
 export default function ReelsSection({ cards }: Props) {
     return (
         <>
-            <div className="hidden lg:flex justify-center pt-8 pb-12 lg:pt-20  bg-orange4 lg:bg-gradient-to-b from-orange4 to-darkPurple">
-                <div className="lg:max-w-[1400px] w-full flex flex-col gap-14">
+            <div className="hidden lg:flex justify-center pt-8 pb-12 lg:pt-20 bg-orange4 lg:bg-gradient-to-b from-orange4 to-darkPurple">
+                <div className="lg:max-w-[1400px] w-full flex flex-col gap-14 px-10 2xl:px-0">
                     <span className="text-white text-sm px-16">
                         Conheça a Aurora por quem faz a Aurora acontecer.{" "}
                         <strong>Assista aos vídeos:</strong>

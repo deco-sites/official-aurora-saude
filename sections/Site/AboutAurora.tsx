@@ -11,7 +11,7 @@ export interface Props {
 export default function AboutAurora({ title, text }: Props) {
     return (
         <>
-            <div className="flex justify-center px-10 lg:px-0">
+            <div className="flex justify-center px-10 lg:px-10 2xl:px-0">
                 <div className="lg:max-w-[1400px] w-full my-32 lg:pt-32">
                     <div className="flex flex-col lg:flex-row gap-6">
                         <div className="flex flex-col gap-7 lg:w-1/3 rounded-[20px] bg-pink1 p-12 lg:p-20">

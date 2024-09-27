@@ -6,7 +6,7 @@ export default function Footer() {
         <>
             <div className="flex justify-center bg-pink3">
                 <div className="lg:max-w-[1400px] w-full pt-24 pb-16">
-                    <footer className="flex flex-col text-white px-10 lg:px-0">
+                    <footer className="flex flex-col text-white px-10 lg:px-10 2xl:px-0">
                         <div className="border-b pl-3 lg:pl-0 border-b-white lg:border-none pb-12 lg:pb-0 flex mb-10 gap-12 items-center">
                             <Image
                                 src={"/Site/Footer/aurora-logo.svg"}
@@ -227,7 +227,7 @@ export default function Footer() {
                             <div className="hidden lg:flex items-center gap-12">
                                 <div className="bg-black p-1 inline-block">
                                     <div className="border-white border-[1px] p-[5px] inline-block">
-                                        <span className="p-2">
+                                        <span className="p-2 text-sm lg:text-xs 2xl:text-base whitespace-nowrap">
                                             ANS Nº: 423629
                                         </span>
                                     </div>
