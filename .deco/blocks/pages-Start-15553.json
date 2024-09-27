@@ -49,10 +49,10 @@
       "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/bfbe6b92-135b-41dd-bd2a-2668e936940c"
     },
     {
-      "__resolveType": "site/sections/Site/CareJourney.tsx"
+      "__resolveType": "site/sections/Site/MeetAurora.tsx"
     },
     {
-      "__resolveType": "site/sections/Site/MeetAurora.tsx"
+      "__resolveType": "site/sections/Site/CareJourney.tsx"
     },
     {
       "__resolveType": "site/sections/Site/DiscoverOurPlans.tsx",

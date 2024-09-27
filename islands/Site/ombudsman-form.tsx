@@ -64,7 +64,7 @@ export default function OmbudsmanIsland(
 
     useEffect(() => {
         const updateNamePlaceholder = () => {
-            if (window.innerWidth < 640) {
+            if (globalThis.innerWidth < 640) {
                 setProtocolNumberPlaceholder("Número do Protocolo");
                 setCardCodePlaceholder("Código da Carteirinha");
                 setNamePlaceholder("Nome Completo");

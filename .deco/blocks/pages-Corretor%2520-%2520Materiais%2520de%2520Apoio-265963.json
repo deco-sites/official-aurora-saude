@@ -39,10 +39,14 @@
           "materials": [
             {
               "date": "30/08/2024",
+<<<<<<< Updated upstream
               "name": "Novidades em breve...",
+=======
+>>>>>>> Stashed changes
               "category": "Categoria Teste",
               "city": "Rio de Janeiro / RJ",
-              "link": "#"
+              "link": "#",
+              "name": "Novidades em breve"
             },
             {
               "date": "31/08/2024",

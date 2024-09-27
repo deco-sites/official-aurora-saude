@@ -78,7 +78,7 @@ export default function FormStepTwoforFourthOption() {
 
   useEffect(() => {
     const updateNamePlaceholder = () => {
-      if (window.innerWidth < 640) {
+      if (globalThis.innerWidth < 640) {
         setSocialReasonPlaceholder("Razão Social");
         setCNPJPlaceholder("CNPJ");
         setNamePlaceholder("Nome Completo");

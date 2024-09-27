@@ -145,7 +145,7 @@ ${
         <div className="flex flex-col lg:flex-row items-baseline lg:gap-4">
           <span className="text-sm text-white">Valor total por mês</span>
           <span className="text-white font-semibold font-sora text-xl">
-            R$ {totalValue.toString().replace(".", ",")}
+            R$ {totalValue.toFixed(2).toString().replace(".", ",")}
           </span>
         </div>
       </div>

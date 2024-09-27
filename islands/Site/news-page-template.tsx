@@ -134,7 +134,7 @@ export default function NewsPageTemplateIsland(
                                 </span>
                                 <div className="flex gap-4">
                                     <a
-                                        href="https://www.facebook.com/share_channel/?link=http://localhost:8000/noticias-noticia4"
+                                        href={`https://www.facebook.com/sharer/sharer.php?u=${currentURL}`}
                                         target="_blank"
                                     >
                                         <Image
@@ -143,7 +143,7 @@ export default function NewsPageTemplateIsland(
                                         />
                                     </a>
                                     <a
-                                        href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//localhost%3A8000/noticias-noticia4"
+                                        href={`https://www.linkedin.com/sharing/share-offsite/?url=${currentURL}`}
                                         target="_blank"
                                     >
                                         <Image
@@ -152,7 +152,7 @@ export default function NewsPageTemplateIsland(
                                         />
                                     </a>
                                     <a
-                                        href="https://api.whatsapp.com/send?text=http://localhost:8000/noticias-noticia4"
+                                        href={`https://api.whatsapp.com/send?text=${currentURL}`}
                                         target="_blank"
                                     >
                                         <Image
@@ -161,7 +161,7 @@ export default function NewsPageTemplateIsland(
                                         />
                                     </a>
                                     <a
-                                        href="https://t.me/share/url?url=http%3A//localhost%3A8000/noticias-noticia4&text="
+                                        href={`https://t.me/share?url=${currentURL}`}
                                         target="_blank"
                                     >
                                         <Image
