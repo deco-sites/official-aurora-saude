@@ -71,8 +71,8 @@ export default function OverlaidNewsBannerIsland(
     return (
         <>
             <div className="relative flex items-center flex-col gap-10 h-[300px] bg-white lg:bg-gray4">
-                <div className="flex px-10 lg:px-0 justify-center lg:bg-fixed lg:bg-center lg:bg-no-repeat lg:bg-cover flex-col gap-10 w-full max-w-[1400px]">
-                    <div className="absolute px-10 lg:px-0 inset-0 flex h-[400px] lg:h-[500px] justify-center -mt-28">
+                <div className="flex px-10 lg:px-10 2xl:px-0 justify-center lg:bg-fixed lg:bg-center lg:bg-no-repeat lg:bg-cover flex-col gap-10 w-full max-w-[1400px]">
+                    <div className="absolute px-10 lg:px-10 2xl:px-0 inset-0 flex h-[400px] lg:h-[500px] justify-center -mt-28">
                         <div className="flex gap-6 max-w-[1400px] overflow-hidden rounded-[20px]">
                             <div className="relative w-full lg:w-2/3">
                                 <div

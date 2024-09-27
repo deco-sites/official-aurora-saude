@@ -16,8 +16,8 @@ export default function NewsPageTemplateIsland(
         <>
             <div className="flex justify-center bg-white lg:bg-gray4">
                 <div className="lg:max-w-[1400px] w-full pt-12 lg:pb-16 lg:py-16 flex flex-col">
-                    <div className="flex flex-col lg:flex-row gap-7 w-full">
-                        <div className="lg:w-3/5 px-10 lg:px-0">
+                    <div className="flex flex-col lg:flex-row gap-7 w-full px-10 lg:px-10 2xl:px-0">
+                        <div className="lg:w-3/5">
                             <div className="relative">
                                 <span className="hidden lg:inline-block font-bold text-orange4 cursor-pointer">
                                     Voltar
@@ -29,7 +29,7 @@ export default function NewsPageTemplateIsland(
                             </div>
 
                             <div className="flex flex-col lg:mt-20">
-                                <article>
+                                <article className="">
                                     <header className="flex flex-col gap-[10px]">
                                         <span className="text-pink1">
                                             {date}
@@ -91,7 +91,7 @@ export default function NewsPageTemplateIsland(
                                         className="w-full rounded-[20px] mb-8 lg:mb-16"
                                     />
                                     <section
-                                        className="mb-12 text-black text-opacity-70"
+                                        className="mb-12 text-black text-opacity-70 w-full max-w-full break-words"
                                         dangerouslySetInnerHTML={{
                                             __html: text,
                                         }}

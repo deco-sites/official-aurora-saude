@@ -23,8 +23,8 @@ export default function Section({ photo, device }: IPhotoProps) {
         <>
             <div className="flex justify-center lg:width-calc">
                 <div className="flex gap-6 lg:w-[1400px]">
-                    <div className="bg-white flex flex-col gap-14 pt-20 pb-24 w-screen">
-                        <div className="flex px-10 lg:px-0 lg:gap-5">
+                    <div className="bg-white flex flex-col gap-14 pt-20 pb-24 w-screen lg:w-[calc(100vw-18px)]">
+                        <div className="flex px-10 lg:px-10 2xl:px-0 lg:gap-5">
                             <div className="hidden lg:flex w-1/2 rounded-3xl">
                                 <Image
                                     src={photo.src}
@@ -57,7 +57,7 @@ export default function Section({ photo, device }: IPhotoProps) {
                             </div>
                         </div>
 
-                        <div className="flex px-10 lg:pl-0 gap-5 overflow-x-scroll scrollbar-none lg:overflow-auto lg:justify-between">
+                        <div className="flex px-10 lg:pl-10 2xl:pl-0 gap-5 overflow-x-scroll scrollbar-none lg:overflow-auto lg:justify-between">
                             <ServiceCardIsland cards={serviceCards} />
                         </div>
                     </div>

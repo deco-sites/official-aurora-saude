@@ -1,7 +1,7 @@
 export default function BrokerLoginSection() {
     return (
         <>
-            <div className="flex justify-center bg-aquagreen px-10 lg:px-0">
+            <div className="flex justify-center bg-aquagreen px-10 lg:px-10 2xl:px-0">
                 <div className="flex flex-col lg:flex-row gap-16 lg:w-[1400px] w-full pt-32 pb-36">
                     <div className="flex flex-col items-center gap-16 lg:flex-row bg-yellow rounded-[20px] lg:pl-20 lg:pr-12 py-16">
                         <div className="flex flex-col px-10 lg:px-0 text-pink6 gap-4 lg:gap-5">

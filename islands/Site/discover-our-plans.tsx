@@ -124,7 +124,7 @@ export default function DiscoverOurPlansIsland(
                 ref={sectionRef}
                 className="flex justify-center bg-gray4"
             >
-                <div className="flex justify-center gap-6 lg:w-[1400px] pt-20 lg:pt-32 pb-32 lg:pb-44 w-screen">
+                <div className="flex justify-center gap-6 lg:w-[1400px] pt-20 lg:pt-32 pb-32 lg:pb-44 w-screen lg:overflow-x-hidden">
                     <div className=" flex flex-col items-center w-full">
                         <span className="hidden lg:flex font-sora text-2xl text-black opacity-40 mb-56 lg:mb-6">
                             {sectionTitle}

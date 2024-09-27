@@ -157,11 +157,11 @@ export default function HeaderSiteIsland({ type, opValue }: Props) {
         4: "bg-pink6",
     };
     return (
-        <div className="flex justify-center px-10 lg:px-0">
+        <div className="flex justify-center px-10 lg:px-10 2xl:px-0">
             <div className="flex gap-6 w-full ">
                 <div className="w-full">
                     <div className="flex justify-end lg:justify-between px-7 lg:px-16">
-                        <div className="hidden lg:flex gap-3">
+                        <div className="hidden lg:flex gap-3 whitespace-nowrap">
                             <a
                                 href={option?.link}
                                 className={`relative font-bold ${
