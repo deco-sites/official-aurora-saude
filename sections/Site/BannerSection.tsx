@@ -109,7 +109,13 @@ export default function BannerSection({
             >
                 {device !== "desktop" && (
                     <>
-                        <div className="flex flex-col justify-end gap-5 w-full max-w-full font-sora pl-8 pb-6">
+                        <div
+                            className="flex flex-col justify-end gap-5 w-full max-w-full font-sora pl-8 pb-6"
+                            style={{
+                                width: mobile.width ?? 350,
+                                height: mobile.height ?? 350,
+                            }}
+                        >
                             {mobileTitle && (
                                 <span
                                     className={`break-words overflow-hidden ${
@@ -165,7 +171,13 @@ export default function BannerSection({
                 )}
                 {device === "desktop" && (
                     <>
-                        <div className="flex justify-between font-sora items-center px-16">
+                        <div
+                            className="flex justify-between font-sora items-center px-16"
+                            style={{
+                                width: desktop.width ?? 1436,
+                                height: desktop.height ?? 335,
+                            }}
+                        >
                             <div className="flex flex-col gap-5">
                                 {desktopTitle && (
                                     <span
