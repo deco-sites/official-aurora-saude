@@ -36,89 +36,35 @@
         {
           "textColor": "text-white",
           "bgColor": "bg-orange1",
-          "materials": [
-            {
-              "date": "30/08/2024",
-              "name": "Novidades em breve...",
-              "category": "Categoria Teste",
-              "city": "Rio de Janeiro / RJ",
-              "link": "#"
-            },
-            {
-              "date": "31/08/2024",
-              "name": "Novidades em breve...",
-              "category": "Teste 2",
-              "city": "Belo Horizonte / MG",
-              "link": "#"
-            },
-            {
-              "date": "01/09/2024",
-              "name": "Novidades em breve...",
-              "category": "Teste",
-              "city": "Belo Horizonte / MG",
-              "link": "#"
-            }
-          ],
+          "materials": [],
           "label": "Vendas 1 a 29 vidas",
           "id": 1
         },
         {
           "textColor": "text-white",
           "bgColor": "bg-pink1",
-          "materials": [
-            {
-              "date": "Teste",
-              "name": "Teste",
-              "category": "Teste",
-              "city": "Teste",
-              "link": "#"
-            }
-          ],
+          "materials": [],
           "label": "Vendas 30 a 99 vidas",
           "id": 2
         },
         {
           "textColor": "text-white",
           "bgColor": "bg-purple",
-          "materials": [
-            {
-              "date": "Teste",
-              "name": "Teste",
-              "category": "Teste",
-              "city": "Teste",
-              "link": "#"
-            }
-          ],
+          "materials": [],
           "label": "Vendas acima de 100 vidas",
           "id": 3
         },
         {
           "textColor": "text-white",
           "bgColor": "bg-aquagreen",
-          "materials": [
-            {
-              "date": "Teste",
-              "name": "Teste",
-              "category": "Teste",
-              "city": "Teste",
-              "link": "Teste"
-            }
-          ],
+          "materials": [],
           "label": "Pós-Venda",
           "id": 4
         },
         {
           "textColor": "text-pink1",
           "bgColor": "bg-yellow",
-          "materials": [
-            {
-              "date": "Teste",
-              "name": "Test",
-              "category": "Test",
-              "city": "Teste",
-              "link": "#"
-            }
-          ],
+          "materials": [],
           "label": "Campanhas de Venda",
           "id": 5
         }
