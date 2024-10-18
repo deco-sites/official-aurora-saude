@@ -172,7 +172,7 @@ export default function FormStepTwoforFourthOption() {
     async function fetchCityCode() {
       let cityCode = await getCityCode(cityValue4.value);
       cd_cidade.value = cityCode;
-      console.log("CD_CIDADE AQUI ERICK", cd_cidade.value);
+      //console.log("CD_CIDADE AQUI ERICK", cd_cidade.value);
     }
 
     fetchCityCode();

@@ -22,7 +22,7 @@ const saveStep2Option2 = async (
 ) => {
     const { supabaseClient } = ctx;
 
-    console.log("Chamou a saveStep2Option2", props.leadToSave);
+    //console.log("Chamou a saveStep2Option2", props.leadToSave);
 
     const { data, error } = await supabaseClient
         .from("leads")
@@ -30,9 +30,9 @@ const saveStep2Option2 = async (
         .select();
 
     if (error) {
-        console.log("Erro de inserção", error);
+        //console.log("Erro de inserção", error);
     } else {
-        console.log("Dados inseridos", data);
+        //console.log("Dados inseridos", data);
     }
 
     return {

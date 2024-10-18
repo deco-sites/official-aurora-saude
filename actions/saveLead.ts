@@ -49,9 +49,9 @@ const saveLead = async (
         .select();
 
     if (error) {
-        console.log("Erro da saveLeads", error);
+        //console.log("Erro da saveLeads", error);
     } else {
-        console.log("Data da saveLeads", data);
+        //console.log("Data da saveLeads", data);
         const cd_lead = data?.[0].cd_lead;
         //console.log("cd_lead gerado", cd_lead);
         //console.log("Verificando 1", thirdStepSignal.value.whoUseThePlan);
@@ -83,9 +83,9 @@ const saveLead = async (
             .select();
 
         if (error) {
-            console.log("Erro de inserção na saveLeadsDependent", error);
+            //console.log("Erro de inserção na saveLeadsDependent", error);
         } else {
-            console.log("Dados inseridos na saveLeadsDependent", data);
+            //console.log("Dados inseridos na saveLeadsDependent", data);
         }
 
         return {

@@ -96,7 +96,7 @@ export default function WorkWithUsIsland(
     const [attachmentError, setAttachmentError] = useState(false);
 
     const checkFields = (e) => {
-        console.log("Aqui ó:", selectedFile);
+        //console.log("Aqui ó:", selectedFile);
         e.preventDefault();
 
         // Verifica os campos e atualiza os estados de erro
