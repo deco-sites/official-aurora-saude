@@ -115,7 +115,7 @@ export default function FormStepFiveIsland() {
             cd_plano.value = selectedPlanObject.cd_plano;
             //console.log("CD_PLANO", cd_plano.value);
         } else {
-            console.log("Plano não encontrado");
+            //console.log("Plano não encontrado");
         }
 
         filledRanges.value = thirdStepSignal.value.beneficiariesValuesArr.map(
@@ -488,6 +488,9 @@ export default function FormStepFiveIsland() {
                                 beneficiariesArr={thirdStepSignal.value
                                     .beneficiariesValuesArr}
                                 priceRanges={priceRanges}
+                                selectedPlanName={plansInfos[
+                                    activePlanBtn.value - 1
+                                ].title}
                             />
                             <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
                                 {

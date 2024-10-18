@@ -21,8 +21,8 @@ const UpdateDependents = async (
 ) => {
     const { supabaseClient } = ctx;
 
-    console.log("Dados dentro da updateLead", props.dependentLead);
-    console.log("ID pra atualizar", props.leadId);
+    //console.log("Dados dentro da updateLead", props.dependentLead);
+    //console.log("ID pra atualizar", props.leadId);
 
     //console.log("Chamou a SaveLeadDependent", props.dependentLead);
 
@@ -33,9 +33,9 @@ const UpdateDependents = async (
         .eq("cd_lead", props.leadId);
 
     if (error) {
-        console.log("Erro de Exclusão", error);
+        //console.log("Erro de Exclusão", error);
     } else {
-        console.log("Dados Excluídos", data);
+        //console.log("Dados Excluídos", data);
         saveNewDependents();
     }
 
@@ -46,9 +46,9 @@ const UpdateDependents = async (
             .select();
 
         if (error) {
-            console.log("Erro de inserção na saveLeadsDependent", error);
+            //console.log("Erro de inserção na saveLeadsDependent", error);
         } else {
-            console.log("Dados inseridos na saveLeadsDependent", data);
+            //console.log("Dados inseridos na saveLeadsDependent", data);
         }
     }
 

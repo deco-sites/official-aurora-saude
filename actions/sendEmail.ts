@@ -135,7 +135,7 @@ const sendEmail = async (
         });
 
         if (response.ok) {
-            console.log("Email sent successfully");
+            //console.log("Email sent successfully");
         } else {
             const errorData = await response.json();
             console.error("SendGrid API error:", errorData);

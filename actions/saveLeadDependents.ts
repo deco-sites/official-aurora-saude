@@ -26,9 +26,9 @@ const saveLeadDependents = async (
         .select();
 
     if (error) {
-        console.log("Erro de inserção na saveLeadsDependent", error);
+        //console.log("Erro de inserção na saveLeadsDependent", error);
     } else {
-        console.log("Dados inseridos na saveLeadsDependent", data);
+        //console.log("Dados inseridos na saveLeadsDependent", data);
     }
 
     return {

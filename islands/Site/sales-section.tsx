@@ -2,8 +2,8 @@ import { Signal, signal } from "@preact/signals";
 import SupportMaterialCard from "site/components/Site/support-material-card.tsx";
 
 export default function SalesSectionIsland({ sections, device }) {
-    console.log("Sections:", sections);
-    console.log("Device:", device);
+    //console.log("Sections:", sections);
+    //console.log("Device:", device);
     {
         /*
     const sections = [
@@ -106,7 +106,7 @@ export default function SalesSectionIsland({ sections, device }) {
             (section) => section.id === activeSection.value,
         )?.bgColor;
 
-        console.log("Seção ativa:", activeSection.value);
+        //console.log("Seção ativa:", activeSection.value);
 
         return (
             <div

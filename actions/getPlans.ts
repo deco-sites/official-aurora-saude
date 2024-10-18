@@ -24,7 +24,9 @@ const getPlans = async (
             plan_type: props.plan_type,
         });
 
-    if (error) console.log("Erro:", error);
+    if (error) {
+        //console.log("Erro:", error);
+    }
 
     return {
         data,

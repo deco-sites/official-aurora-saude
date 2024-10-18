@@ -27,10 +27,10 @@ const RealUpdateDependents = async (
             .select();
 
         if (error) {
-            console.log("Erro no Update", error);
+            //console.log("Erro no Update", error);
             return { error }; // Saída antecipada se houver erro
         } else {
-            console.log("Dados Atualizados", data);
+            //console.log("Dados Atualizados", data);
         }
     }
 

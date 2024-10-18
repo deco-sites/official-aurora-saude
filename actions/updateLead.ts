@@ -27,8 +27,8 @@ const UpdateLead = async (
 ) => {
     const { supabaseClient } = ctx;
 
-    console.log("Dados dentro da updateLead", props.dataToUpdate);
-    console.log("ID pra atualizar", props.leadId);
+    //console.log("Dados dentro da updateLead", props.dataToUpdate);
+    //console.log("ID pra atualizar", props.leadId);
 
     //console.log("Chamou a SaveLeadDependent", props.dependentLead);
 
@@ -39,9 +39,9 @@ const UpdateLead = async (
         .select();
 
     if (error) {
-        console.log("Erro de Update", error);
+        //console.log("Erro de Update", error);
     } else {
-        console.log("Dados atualizados", data);
+        //console.log("Dados atualizados", data);
     }
 
     return {

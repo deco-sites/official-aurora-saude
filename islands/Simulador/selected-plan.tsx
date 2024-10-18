@@ -139,13 +139,15 @@ ${
             {/*a100 rmbh*/}
           </span>
           <span className="lg:hidden text-yellow font-bold font-sora py-4 text-5xl ">
-            a100 <br /> rmbh
+            {selectedPlanName}
+            {/*a100 <br /> rmbh*/}
           </span>
         </div>
         <div className="flex flex-col lg:flex-row items-baseline lg:gap-4">
           <span className="text-sm text-white">Valor total por mês</span>
           <span className="text-white font-semibold font-sora text-xl">
-            R$ {totalValue.toFixed(2).toString().replace(".", ",")}
+            R$ {Number(totalValue).toFixed(2).toString().replace(".", ",")}
+            {/*.toFixed(2).toString().replace(".", ",")*/}
           </span>
         </div>
       </div>
