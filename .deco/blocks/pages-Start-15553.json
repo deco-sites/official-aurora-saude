@@ -29,7 +29,17 @@
               "mobile": {
                 "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/3b46e01f-ffcd-4842-95f8-c8af5ebe68cd"
               },
-              "alt": "Banner",
+              "alt": "BannerSeteLagoas",
+              "link": "#"
+            },
+            {
+              "desktop": {
+                "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/official-aurora-saude/b3cdc0bf-dbab-4995-a218-acce08911363/banner-site-1438x522px.png"
+              },
+              "mobile": {
+                "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/official-aurora-saude/e82981ca-f93a-4df9-9c31-ddc1eea4b19f/banner-site-500x500px.png"
+              },
+              "alt": "BannerBH",
               "link": "#"
             }
           ],
