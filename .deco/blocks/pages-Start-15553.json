@@ -44,16 +44,6 @@
             },
             {
               "desktop": {
-                "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/official-aurora-saude/b3cdc0bf-dbab-4995-a218-acce08911363/banner-site-1438x522px.png"
-              },
-              "mobile": {
-                "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/official-aurora-saude/e82981ca-f93a-4df9-9c31-ddc1eea4b19f/banner-site-500x500px.png"
-              },
-              "alt": "BannerBH",
-              "link": "#"
-            },
-            {
-              "desktop": {
                 "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/official-aurora-saude/c4aaa47b-7153-46dd-b580-bd156cfcbef2/banner-site-aurora-1438x522_.png"
               },
               "mobile": {
