@@ -24,6 +24,15 @@
       "relatedsNews": [
         {
           "image": {
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/official-aurora-saude/4532d339-7640-4f8c-a08e-cbdaf2818f48/notpicia-site-1920x1080.png",
+            "alt": "Fettrominas"
+          },
+          "date": "31/10/2024",
+          "title": "Agora somos o plano de saúde para quem movimenta Minas",
+          "link": "/noticias-noticia7"
+        },
+        {
+          "image": {
             "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/3939c395-63e4-4736-b2f7-ebf3d47410fb",
             "alt": "Banner"
           },
