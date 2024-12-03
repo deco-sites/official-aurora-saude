@@ -14,16 +14,6 @@
           "images": [
             {
               "desktop": {
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/a4c696ca-0056-4208-9e02-4864b99e0f50"
-              },
-              "mobile": {
-                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/461f84c1-f650-48d0-b04e-22466a71b7f1"
-              },
-              "alt": "Banner",
-              "link": "#"
-            },
-            {
-              "desktop": {
                 "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/official-aurora-saude/b3cdc0bf-dbab-4995-a218-acce08911363/banner-site-1438x522px.png"
               },
               "mobile": {
