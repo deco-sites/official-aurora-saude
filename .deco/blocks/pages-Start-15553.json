@@ -41,16 +41,6 @@
               },
               "alt": "Fettrominas",
               "link": "Fettrominas"
-            },
-            {
-              "desktop": {
-                "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/official-aurora-saude/493cf25d-89aa-4e64-999c-22e67cd4b237/banner_app.png"
-              },
-              "mobile": {
-                "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/official-aurora-saude/49ecd1ef-c7d0-4d83-9072-89919efc360f/Mobile_500x500.png"
-              },
-              "alt": "Novembro Azul ",
-              "link": "Novembro Azul "
             }
           ],
           "interval": 5
