@@ -267,7 +267,7 @@
       "__resolveType": "LatestNews"
     },
     {
-      "__resolveType": "site/sections/Site/Footer.tsx"
+      "__resolveType": "Footer"
     },
     {
       "__resolveType": "site/sections/Site/FloatingButtons.tsx"
