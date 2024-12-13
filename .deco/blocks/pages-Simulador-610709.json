@@ -22,7 +22,10 @@
       "__resolveType": "site/sections/Simulador/SimulatorContent.tsx"
     },
     {
-      "__resolveType": "site/sections/Simulador/Footer.tsx"
+      "__resolveType": "site/sections/Simulador/Footer.tsx",
+      "ansNumber": 423629,
+      "cnpj": "49.955.478/0001-64",
+      "address": "Rua Ministro Orozimbo Nonato, 442 - Sala 903 - Vila da Serra - Nova Lima - MG"
     }
   ],
   "__resolveType": "website/pages/Page.tsx"
