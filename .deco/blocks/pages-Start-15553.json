@@ -31,6 +31,16 @@
               },
               "alt": "Fettrominas",
               "link": "Fettrominas"
+            },
+            {
+              "desktop": {
+                "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/official-aurora-saude/5a802cd4-6ffe-4d49-9600-87867375ed76/banner-site-1438x522px.jpg"
+              },
+              "mobile": {
+                "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/official-aurora-saude/5f72be6a-b506-43cb-8956-cd849499a9f8/banner-app-500x500px.png"
+              },
+              "alt": "Banner padrão ",
+              "link": "Banner padrão "
             }
           ],
           "interval": 5
