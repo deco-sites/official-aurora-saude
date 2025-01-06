@@ -20,13 +20,11 @@
             },
             "alt": "Banner"
           },
-          "desktopTitle": "Título 1",
           "mobileTitle": "Título <br /> Título",
-          "desktopText": "Texto",
-          "mobileText": "Texto",
           "textColor": "Branco",
           "titleFontSize": "26",
-          "titleFontWeight": "semi-bold"
+          "titleFontWeight": "semi-bold",
+          "desktopTitle": "Notícias "
         }
       ]
     },
@@ -42,12 +40,12 @@
       "relatedsNews": [
         {
           "image": {
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/bfbe6b92-135b-41dd-bd2a-2668e936940c",
+            "image": "https://data.decoassets.com/official-aurora-saude/e977ffa3-b1a5-44b4-9612-7ec84b2f4468/KAH_0417.jpg",
             "alt": "Banner"
           },
-          "date": "31 de Agosto de 2024",
+          "date": "22 de novembro de 2024",
           "link": "/noticias-noticia4",
-          "title": "Título "
+          "title": "Aurora Saúde marcando presença no SRH24"
         }
       ]
     },
