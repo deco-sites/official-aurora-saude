@@ -36,22 +36,29 @@
         {
           "textColor": "text-white",
           "bgColor": "bg-orange1",
-          "materials": [],
-          "label": "Vendas 1 a 29 vidas",
+          "materials": [
+            {
+              "date": "Nov/2024",
+              "name": "Tabela de Preços",
+              "category": "Venda ",
+              "city": "BHRM, CENTRAL MINEIRA, MONTES CLAROS "
+            }
+          ],
+          "label": "Vendas 1 a 99 vidas",
           "id": 1
-        },
-        {
-          "textColor": "text-white",
-          "bgColor": "bg-pink1",
-          "materials": [],
-          "label": "Vendas 30 a 99 vidas",
-          "id": 2
         },
         {
           "textColor": "text-white",
           "bgColor": "bg-purple",
           "materials": [],
           "label": "Vendas acima de 100 vidas",
+          "id": 2
+        },
+        {
+          "textColor": "text-white",
+          "bgColor": "bg-orange1",
+          "materials": [],
+          "label": "Campanhas",
           "id": 3
         },
         {
@@ -65,8 +72,22 @@
           "textColor": "text-pink1",
           "bgColor": "bg-yellow",
           "materials": [],
-          "label": "Campanhas de Venda",
-          "id": 5
+          "id": 5,
+          "label": "Materiais Institucionais"
+        },
+        {
+          "textColor": "text-white",
+          "bgColor": "bg-aquagreen",
+          "materials": [],
+          "id": 6,
+          "label": "Materiais de Divulgação "
+        },
+        {
+          "textColor": "text-white",
+          "bgColor": "bg-orange1",
+          "materials": [],
+          "id": 7,
+          "label": "Materiais Opcionais"
         }
       ]
     },
