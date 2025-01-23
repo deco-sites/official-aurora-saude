@@ -36,14 +36,7 @@
         {
           "textColor": "text-white",
           "bgColor": "bg-orange1",
-          "materials": [
-            {
-              "date": "Nov/2024",
-              "name": "Tabela de Preços",
-              "category": "Venda ",
-              "city": "BHRM, CENTRAL MINEIRA, MONTES CLAROS "
-            }
-          ],
+          "materials": [],
           "label": "Vendas 1 a 99 vidas",
           "id": 1
         },
