@@ -178,15 +178,6 @@
           "link": "https://www.youtube.com/shorts/LkpIaZwJrEc",
           "videoName": "liliane-freitas.mp4",
           "video": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/d62e6cb2-41ce-4efd-aa42-9c321e529aac"
-        },
-        {
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/33a642e2-1b0d-4546-b2d3-4f06a3e68663",
-          "alt": "Lucas",
-          "title": "Dr. Lucas Nascimento",
-          "description": "Superintendente de Negócios em Saúde",
-          "link": "https://www.youtube.com/shorts/oR32oLJaHv4",
-          "videoName": "dr-lucas-nascimento.mp4",
-          "video": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/bfb8caab-ae7b-4deb-8147-aa695e7b770c"
         }
       ]
     },

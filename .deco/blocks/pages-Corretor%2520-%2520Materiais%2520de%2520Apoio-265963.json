@@ -34,7 +34,6 @@
       "__resolveType": "site/sections/Site/SalesSection.tsx",
       "sections": [
         {
-          "textColor": "text-white",
           "bgColor": "bg-orange1",
           "materials": [
             {
@@ -46,7 +45,8 @@
             }
           ],
           "label": "Vendas 1 a 99 vidas",
-          "id": 1
+          "id": 1,
+          "textColor": "text-pink1"
         },
         {
           "textColor": "text-white",
