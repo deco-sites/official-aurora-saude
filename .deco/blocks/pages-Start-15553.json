@@ -41,6 +41,16 @@
               },
               "alt": "Banner padrão ",
               "link": "Banner padrão "
+            },
+            {
+              "desktop": {
+                "image": "https://data.decoassets.com/official-aurora-saude/cd2d5356-ba96-4310-9d63-b09ab16468a4/site-desktop.png"
+              },
+              "mobile": {
+                "image": "https://data.decoassets.com/official-aurora-saude/72b4f87a-3607-4cab-9f02-db8dfda0804b/site-mobile.jpg"
+              },
+              "alt": "Montes Claros",
+              "link": "MontesClaros"
             }
           ],
           "interval": 5
