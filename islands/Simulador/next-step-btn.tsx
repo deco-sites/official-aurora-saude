@@ -325,6 +325,7 @@ export default function NextStepBtn({ options, executionFunc }: INextStep) { //A
           const prices = await invoke.site.actions.getPrices({
             plan_code: cd_plano.value,
             ageranges: rangesArr.value,
+            plan_type: activeOption.value,
           });
 
           //console.log("Prices:", prices.data);
@@ -433,6 +434,7 @@ export default function NextStepBtn({ options, executionFunc }: INextStep) { //A
           const prices = await invoke.site.actions.getPrices({
             plan_code: cd_plano.value,
             ageranges: rangesArr.value,
+            plan_type: activeOption.value,
           });
 
           //console.log("Prices:", prices.data);
