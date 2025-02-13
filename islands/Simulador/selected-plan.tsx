@@ -120,7 +120,7 @@ ${
   const sendEmailToUser = async (e) => {
     //console.log("Envia e-mail pro usuario");
     await invoke.site.actions.sendEmail({
-      recipientsEmail: emailValue.value,
+      RecipientsEmailArr: [{ email: emailValue.value }],
       subject: "Simulação - Aurora",
       data: sendData,
     });
