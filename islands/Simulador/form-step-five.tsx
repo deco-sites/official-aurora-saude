@@ -192,37 +192,37 @@ export default function FormStepFiveIsland() {
 
   function updatePricesBasedOnRange(fetchedPrices) {
     fetchedPrices.forEach((priceObj) => {
-      //console.log("priceObj:", priceObj);
+      console.log("priceObj:", priceObj);
       switch (priceObj.faixa) {
         case "0 a 18 anos":
-          zeroTo18Prices.value = priceObj.valor_mensalidade;
+          zeroTo18Prices.value = priceObj.a_partir_de;
           break;
         case "19 a 23 anos":
-          nineteenTo23Prices.value = priceObj.valor_mensalidade;
+          nineteenTo23Prices.value = priceObj.a_partir_de;
           break;
         case "24 a 28 anos":
-          twentyFourTo28Prices.value = priceObj.valor_mensalidade;
+          twentyFourTo28Prices.value = priceObj.a_partir_de;
           break;
         case "29 a 33 anos":
-          twentyNineTo33Prices.value = priceObj.valor_mensalidade;
+          twentyNineTo33Prices.value = priceObj.a_partir_de;
           break;
         case "34 a 38 anos":
-          thirtyFourTo38Prices.value = priceObj.valor_mensalidade;
+          thirtyFourTo38Prices.value = priceObj.a_partir_de;
           break;
         case "39 a 43 anos":
-          thirtyNineTo43Prices.value = priceObj.valor_mensalidade;
+          thirtyNineTo43Prices.value = priceObj.a_partir_de;
           break;
         case "44 a 48 anos":
-          fortyFourTo48Prices.value = priceObj.valor_mensalidade;
+          fortyFourTo48Prices.value = priceObj.a_partir_de;
           break;
         case "49 a 53 anos":
-          fortyNineTo53Prices.value = priceObj.valor_mensalidade;
+          fortyNineTo53Prices.value = priceObj.a_partir_de;
           break;
         case "54 a 58 anos":
-          fiftyFourTo58Prices.value = priceObj.valor_mensalidade;
+          fiftyFourTo58Prices.value = priceObj.a_partir_de;
           break;
         case "59 anos ou mais":
-          fiftyNinePlusPrices.value = priceObj.valor_mensalidade;
+          fiftyNinePlusPrices.value = priceObj.a_partir_de;
           break;
         default:
           console.warn(
@@ -311,7 +311,7 @@ export default function FormStepFiveIsland() {
         const priceObj = prices?.find((price) => price.faixa === range);
         if (priceObj) {
           // Multiplicar o valor da mensalidade pela quantidade total de beneficiários
-          total += priceObj.valor_mensalidade *
+          total += priceObj.a_partir_de *
             totalBeneficiariesByRange[range];
         }
         return total;
@@ -464,7 +464,7 @@ export default function FormStepFiveIsland() {
             </div>
             <div className="flex flex-col gap-4 lg:gap-0 px-8 lg:px-0 mt-40 lg:mt-44 w-screen lg:w-auto">
               <div className="mb-16">
-                {/*{fetchedPrices.value.data[0].valor_mensalidade}*/}
+                {/*{fetchedPrices.value.data[0].a_partir_de}*/}
                 <FormTitleH1 text1={"Seu plano"} />
               </div>
 

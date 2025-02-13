@@ -104,7 +104,7 @@ ${
             Faixa de idade: ${beneficiary.range}
             Quantidade: ${beneficiary.qty}
             Valor da faixa: ${
-              price ? price.valor_mensalidade.toFixed(2) : "Não encontrado"
+              price ? price.a_partir_de.toFixed(2) : "Não encontrado"
             }
           `;
           },

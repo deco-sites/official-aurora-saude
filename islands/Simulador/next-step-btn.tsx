@@ -57,6 +57,7 @@ export default function NextStepBtn({ options, executionFunc }: INextStep) { //A
   }
 
   const cd_range = signal(0);
+
   async function fetchAgeRangeCode(value: string) {
     const ageRangeCode = await getAgeRangeCodeFunction(value);
     cd_range.value = ageRangeCode;
@@ -437,7 +438,6 @@ export default function NextStepBtn({ options, executionFunc }: INextStep) { //A
             plan_type: activeOption.value,
           });
 
-          //console.log("Prices:", prices.data);
           //console.log("CD_LEAD_DEP:", cd_lead_dep.value.data);
 
           const resultArray = await Promise.all(
@@ -446,6 +446,7 @@ export default function NextStepBtn({ options, executionFunc }: INextStep) { //A
               const correspondingPrice = await Promise.all(
                 prices.data.map(async (priceItem) => {
                   const code = await getAgeRangeCodeFunction(priceItem.faixa);
+                  console.log("Código retornado:", code);
                   return code === item.cd_faixa
                     ? priceItem.cd_tab_preco
                     : undefined;
