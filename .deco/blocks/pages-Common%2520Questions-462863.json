@@ -239,6 +239,59 @@
               "questionText": "<p>Em caso de óbito do titular:</p><p>Se é o responsável pela empresa, você deve solicitar o cancelamento do plano através do nosso portal de Empresas. </p><p>Se você é dependente do titular responsável da empresa e que veio a óbito, você deverá entrar em contato em nossos canais de atendimento para que realizemos o cancelamento do contrato empresarial.</p><p>Se você é beneficiário de planos coletivos por adesão, procure informações em sua Administradora de benefícios.</p><p>Importante: Para cancelamentos por este motivo, é necessário enviar o atestado de óbito.</p>"
             }
           ]
+        },
+        {
+          "themeQuestions": [
+            {
+              "questionTitle": "O que é a Jornada de Cuidados?",
+              "questionText": "<p><span style=\"font-size: 12pt\">A Jornada de Cuidados é o processo de medicina preventiva que a Aurora Saúde criou para ajudar seus beneficiários na prevenção de mais de 20 doenças. Para participar, o beneficiário deverá acessar seu App ou Portal Aurora Saúde, acessar o ícone “Jornada de Cuidados” e seguir os passos indicados.</span></p>"
+            },
+            {
+              "questionTitle": "O que é o Produto Incentivado?",
+              "questionText": "<p><span style=\"font-size: 12pt\">O produto incentivado é um produto no qual os clientes que o contratarem, garantem um percentual de desconto nos três primeiros meses de plano enquanto os beneficiários elegíveis do contrato (maiores de 18 anos) realizam as etapas da Jornada de Cuidado. A empresa contratante terá até 60 dias para que os beneficiários elegíveis concluam seus processos da Jornada e de acordo com o percentual de conclusão, a empresa poderá garantir o desconto pelos próximos 9 meses. O fluxo deverá ocorrer anualmente na renovação do contrato.</span></p>"
+            },
+            {
+              "questionTitle": "De quais atividades o BENEFICIÁRIO deverá participar para garantir o seu desconto do Produto Incentivado? ",
+              "questionText": "<p><span style=\"font-size: 12pt\">O Beneficiário deverá realizar as atividades propostas na Jornada de Cuidados até que não haja nenhuma pendência. O processo envolve:</span></p><ol type=\"1\"><li><p><span style=\"font-size: 12pt\">Responder ao Questionário disponível no App do beneficiário;</span></p></li><li><p><span style=\"font-size: 12pt\">Realizar os exames preventivos indicados na Jornada, quando necessário, e enviar os resultados pela plataforma;</span></p></li><li><p><span style=\"font-size: 12pt\">Após a análise dos resultados dos exames, se houver indicação de encaminhamento médico, o Beneficiário deverá comparecer à primeira consulta médica.</span></p></li></ol><p><span style=\"font-size: 12pt\">O processo deverá ser realizado anualmente na renovação do contrato.</span></p><p><span style=\"font-size: 12pt\">Somente será considerado elegível os beneficiários inclusos na vigência do contrato ou os que estão vigentes na data dos aniversários do contrato.</span></p>"
+            },
+            {
+              "questionTitle": "Como saberei quais exames deverei realizar para garantir o desconto do Produto Incentivado?",
+              "questionText": "<p><span style=\"font-size: 12pt\">Todo o processo é individual, então para saber quais exames nossa equipe te solicitará, pedimos que acesse o seu App ou Portal Aurora Saúde no ícone Jornada de Cuidados. Você deverá responder o questionário da forma mais transparente possível e nossa equipe lhe direcionará ao longo do processo. e se achar necessário lhe enviará um pedido médico com os exames que você deverá realizar em até 60 dias a contar da sua vigência.</span></p>"
+            },
+            {
+              "questionTitle": "Posso responder o questionário por outra pessoa? ",
+              "questionText": "<p><span style=\"font-size: 12pt\">As respostas aos questionários sempre estarão vinculadas ao CPF e telefone celular do beneficiário. É um processo pessoal e intransferível que demanda transparência do beneficiário, então não indicamos que responda por outros beneficiários.</span></p>"
+            },
+            {
+              "questionTitle": "O questionário da Jornada de Cuidados será considerado como uma Declaração de Saúde? ",
+              "questionText": "<p><span style=\"font-size: 12pt\">Não. A Declaração de saúde é um documento que você preenche e assina no ato da adesão do contrato e não deve ser confundido com a Jornada de Cuidados que é um processo que visa a prevenção de doenças.</span></p>"
+            },
+            {
+              "questionTitle": "Quem é obrigado a participar do Programa de Prevenção? ",
+              "questionText": "<p><span style=\"font-size: 12pt\">Nenhum Beneficiário é obrigado a participar da Jornada de Cuidados, entretanto, o processo é ofertado de forma gratuita para os beneficiários vinculados aos contratos da Aurora Saúde* cada beneficiário que não aderir a Jornada impacta no desconto na mensalidade proporcionalmente. Se todos os beneficiários elegíveis se recusarem a participar, não haverá desconto nas mensalidades. Salvo os casos acordados previamente.</span></p>"
+            },
+            {
+              "questionTitle": "Em quais situações haverá o direito ao desconto na mensalidade? ",
+              "questionText": "<p><span style=\"font-size: 12pt\">Para as empresas que tiverem o produto Incentivado, os beneficiários elegíveis deverão concluir todas as atividades da Jornada de Cuidados nos primeiros 60 dias após a data de vigência do contrato para garantir que tenha na mensalidade o desconto indicado na Proposta de Adesão assinada. O desconto será proporcional a quantidade de beneficiários elegíveis que concluírem sua Jornada de Cuidados.</span></p>"
+            },
+            {
+              "questionTitle": "Quais beneficiários poderão ser considerados elegíveis para participar do cálculo do Incentivo?",
+              "questionText": "<p><span style=\"font-size: 12pt\">Titulares e dependentes com 18 anos de idade ou mais.</span></p>"
+            },
+            {
+              "questionTitle": "A empresa a qual estou vinculado(a) terá acesso aos dados de saúde que respondi no questionário? ",
+              "questionText": "<p><span style=\"font-size: 12pt\">De forma alguma. Todo o processo da Jornada de Cuidados é pessoal, individual e sigiloso.</span></p>"
+            },
+            {
+              "questionTitle": "Como funcionará o desconto na mensalidade nos próximos anos do contrato?",
+              "questionText": "<p><span style=\"font-size: 12pt\">Os beneficiários deverão realizar a Jornada de Cuidados anualmente. Serão considerados elegíveis para cálculo do desconto todos os beneficiários acima de 18 anos. Assim como o primeiro ano, os beneficiários deverão realizar a Jornada de Cuidados em até 60 dias a contar do aniversário do contrato.</span></p>"
+            },
+            {
+              "questionTitle": "O que acontece se os beneficiários elegíveis não concluírem suas Jornadas de Cuidados em até 60 dias da vigência do contrato ou do aniversário dele?",
+              "questionText": "<p><span style=\"font-size: 12pt\">Caso eles não concluam o processo da Jornada de Cuidados no período, a empresa perderá o seu desconto e passará a pagar o valor de mensalidade integral dos beneficiários vinculados ao contrato.</span></p>"
+            }
+          ],
+          "themeName": "Produto Incentivado"
         }
       ]
     },
