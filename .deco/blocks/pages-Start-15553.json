@@ -24,16 +24,6 @@
             },
             {
               "desktop": {
-                "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/official-aurora-saude/c4aaa47b-7153-46dd-b580-bd156cfcbef2/banner-site-aurora-1438x522_.png"
-              },
-              "mobile": {
-                "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/official-aurora-saude/d169f026-38df-43e4-b667-c10ebeceb9a6/banner-site-aurora-500x500.png"
-              },
-              "alt": "Fettrominas",
-              "link": "Fettrominas"
-            },
-            {
-              "desktop": {
                 "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/official-aurora-saude/5a802cd4-6ffe-4d49-9600-87867375ed76/banner-site-1438x522px.jpg"
               },
               "mobile": {
@@ -51,6 +41,16 @@
               },
               "alt": "Montes Claros",
               "link": "https://www.instagram.com/p/DFvZlUOR5AM/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            },
+            {
+              "desktop": {
+                "image": "https://data.decoassets.com/official-aurora-saude/db086fd5-2fe9-4977-b037-7275f194f703/Banner-Noticia-Site1438x522.jpg"
+              },
+              "mobile": {
+                "image": "https://data.decoassets.com/official-aurora-saude/230ef555-b628-4b6e-bf7a-1734c73fff6f/Banner-Noticia-Site500x500.jpg"
+              },
+              "alt": "Aurora Odonto ",
+              "link": "https://www.socioodonto.com.br/auroraodonto/"
             }
           ],
           "interval": 5
