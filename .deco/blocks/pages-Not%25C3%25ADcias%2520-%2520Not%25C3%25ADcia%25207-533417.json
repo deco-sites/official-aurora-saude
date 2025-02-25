@@ -25,6 +25,20 @@
           "titleFontSize": "26",
           "titleFontWeight": "semi-bold",
           "desktopTitle": "Notícias "
+        },
+        {
+          "__resolveType": "website/sections/Rendering/Lazy.tsx",
+          "section": {
+            "__resolveType": "site/sections/Site/NewsPage.tsx",
+            "image": {
+              "image": "https://data.decoassets.com/official-aurora-saude/ddd6ac82-b1e1-4be5-911c-1232371d0c54/IMG_1915.jpeg",
+              "alt": "Montes Clatos "
+            },
+            "date": "06/02/2025",
+            "title": "Aurora Saúde chega a Montes Claros",
+            "text": "<p><span style=\"color: rgb(50, 49, 48); font-size: 18px\">No dia 6 de fevereiro, Montes Claros recebeu o lançamento oficial da Aurora Saúde, que escolheu a cidade para expandir seus serviços e levar uma nova visão de cuidado e bem-estar para o Norte de Minas. O evento, realizado em formato de café da manhã para corretores locais, foi um momento de apresentação dos diferenciais da Aurora e de celebração de parcerias estratégicas.</span><br><br><span style=\"color: rgb(50, 49, 48); font-size: 18px\">As sócias-fundadoras da Aurora, Marcela Meneses e Liliane Freitas, abriram o encontro destacando o compromisso da empresa com a saúde preventiva e com a qualidade de vida dos beneficiários. Elas apresentaram a Jornada de Cuidado, um modelo inovador que usa a tecnologia de rastreamento e prevenção de doenças para cuidar das pessoas, reforçando o impacto positivo que a Aurora trará para Montes Claros.</span><br><br><span style=\"color: rgb(50, 49, 48); font-size: 18px\">O evento contou também com a presença de representantes de empresas parceiras, reforçando a rede de colaboração que a Aurora está construindo para garantir sucesso na nova praça. Além disso, as diretoras aproveitaram para lançar três novos produtos integrados ao plano de saúde:</span><br><span style=\"color: rgb(50, 49, 48); font-size: 18px\">- Aurora Odonto: Um plano de saúde bucal completo, que garante cuidados integrais aos beneficiários.</span><br><span style=\"color: rgb(50, 49, 48); font-size: 18px\">- Seguro Viagem: Um seguro exclusivo, repleto de benefícios para quem busca tranquilidade durante suas viagens.</span><br><span style=\"color: rgb(50, 49, 48); font-size: 18px\">- Aeromédico: Um serviço de transporte aéreo para remoções de urgência e emergência.</span><br><span style=\"color: rgb(50, 49, 48); font-size: 18px\">O lançamento da Aurora Saúde em Montes Claros não só amplia as oportunidades para corretores e beneficiários, como também traz uma nova perspectiva para um mercado que enfrenta desafios constantes. Com foco em prevenção, cuidado integral e inovação, a Aurora promete ser uma referência em saúde suplementar, contribuindo para o bem-estar e a qualidade de vida da população norte-mineira!</span></p>",
+            "relatedsNews": []
+          }
         }
       ]
     },

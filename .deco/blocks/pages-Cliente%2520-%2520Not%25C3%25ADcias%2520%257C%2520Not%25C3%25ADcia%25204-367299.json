@@ -13,43 +13,46 @@
       "bgColor": "Laranja"
     },
     {
-      "__resolveType": "site/sections/Site/NewsPage.tsx",
-      "text": "<p>Além de patrocinar o evento, as fundadoras, Marcela e Liliane, conversaram no</p><p>podcast Talk SIM sobre suas trajetórias como empreendedoras no segmento da</p><p>saúde.</p><p>Aconteceu em novembro o SRH 24, evento promovido pela SIMgular que discute</p><p>as novas tendências em saúde e gestão de pessoas, trazendo especialistas para</p><p>a conversa. A 3ª edição do encontro ocorreu no Hospital Mater Dei, em Belo</p><p>Horizonte, para tratar do tema “evolução”.</p><p>Uma das novidades dessa edição foi o patrocínio da Aurora Saúde, que marcou</p><p>presença ao ter suas duas fundadoras, Marcela e Liliane, participando do Talk</p><p>SIM, um podcast ao vivo integrado à programação.</p><p>Na conversa, elas compartilharam insights sobre a trajetória como</p><p>empreendedoras no segmento da saúde, destacando os desafios e as</p><p>conquistas de liderar uma operadora de planos de saúde inovadora e integrada,</p><p>criada por mulheres.</p><p>[subtítulo] Jornada de Cuidado</p><p>Aproveitando o espaço, as fundadoras apresentaram os resultados da Jornada</p><p>de Cuidado, um programa de medicina preventiva que exemplifica o</p><p>compromisso da Aurora Saúde com a transformação do setor.</p><p>Na ocasião, abordaram, também, temas como empreendedorismo feminino,</p><p>soluções personalizadas para gestão de saúde, inovação tecnológica e a</p><p>importância da diversidade e inclusão nos modelos de negócios.</p><p>[subtítulo] Diversidade e inclusão nas organizações</p><p>Usando da experiência corporativa da Aurora Saúde para levantar algumas</p><p>reflexões, Marcela e Liliane compartilharam sobre como o posicionamento</p><p>disruptivo da operadora em um setor historicamente conservador, permite</p><p>com que adotem práticas de gestão modernas para transformar a experiência</p><p>do cliente e elevar o padrão da saúde suplementar no Brasil.</p><p>O SRH 24 continua a se consolidar como um evento estratégico, reunindo</p><p>grandes players do mercado para discutir as tendências e os desafios da gestão</p><p>de benefícios. Este ano foi especialmente marcante ao dar voz ao</p><p>empreendedorismo feminino e à inovação na saúde, elementos centrais na</p><p>inspiradora trajetória da Aurora Saúde.</p>",
-      "date": "22 de novembro",
-      "title": "Aurora Saúde marcando presença no SRH24",
-      "image": {
-        "alt": "Banner",
-        "image": "https://data.decoassets.com/official-aurora-saude/e977ffa3-b1a5-44b4-9612-7ec84b2f4468/KAH_0417.jpg"
-      },
-      "relatedsNews": [
-        {
-          "image": {
-            "image": "https://data.decoassets.com/official-aurora-saude/a619f415-625d-421d-bd70-6d45c288bed3/_DSC7943.jpg",
-            "alt": "Lançamento"
-          },
-          "date": "29 de setembro",
-          "title": "Mineiras lançam operadora de saúde em BH",
-          "link": "/noticias-noticia4"
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Site/NewsPage.tsx",
+        "image": {
+          "image": "https://data.decoassets.com/official-aurora-saude/ddd6ac82-b1e1-4be5-911c-1232371d0c54/IMG_1915.jpeg",
+          "alt": "Montes Claros"
         },
-        {
-          "image": {
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/a6edd630-d3cc-46e2-946a-71c89cb26486",
-            "alt": "Banner"
+        "date": "06 de Fevereiro de 2025",
+        "title": "Aurora Saúde chega no Norte de Minas ",
+        "text": "<p>No dia 6 de fevereiro, Montes Claros recebeu o lançamento oficial da Aurora Saúde, que escolheu a cidade para expandir seus serviços e levar uma nova visão de cuidado e bem-estar para o Norte de Minas. O evento, realizado em formato de café da manhã para corretores locais, foi um momento de apresentação dos diferenciais da Aurora e de celebração de parcerias estratégicas.</p><p></p><p>As sócias-fundadoras da Aurora, Marcela Meneses e Liliane Freitas, abriram o encontro destacando o compromisso da empresa com a saúde preventiva e com a qualidade de vida dos beneficiários. Elas apresentaram a Jornada de Cuidado, um modelo inovador que usa a tecnologia de rastreamento e prevenção de doenças para cuidar das pessoas, reforçando o impacto positivo que a Aurora trará para Montes Claros.</p><p></p><p>O evento contou também com a presença de representantes de empresas parceiras, reforçando a rede de colaboração que a Aurora está construindo para garantir sucesso na nova praça. Além disso, as diretoras aproveitaram para lançar três novos produtos integrados ao plano de saúde:</p><p>- Aurora Odonto: Um plano de saúde bucal completo, que garante cuidados integrais aos beneficiários.</p><p>- Seguro Viagem: Um seguro exclusivo, repleto de benefícios para quem busca tranquilidade durante suas viagens.</p><p>- Aeromédico: Um serviço de transporte aéreo para remoções de urgência e emergência.</p><p>O lançamento da Aurora Saúde em Montes Claros não só amplia as oportunidades para corretores e beneficiários, como também traz uma nova perspectiva para um mercado que enfrenta desafios constantes. Com foco em prevenção, cuidado integral e inovação, a Aurora promete ser uma referência em saúde suplementar, contribuindo para o bem-estar e a qualidade de vida da população norte-mineira!</p>",
+        "relatedsNews": [
+          {
+            "image": {
+              "alt": "S24",
+              "image": "https://data.decoassets.com/official-aurora-saude/e977ffa3-b1a5-44b4-9612-7ec84b2f4468/KAH_0417.jpg"
+            },
+            "link": "https://www.souaurorasaude.com.br/noticias-noticia4",
+            "title": "Aurora Saúde marcando presença no SRH 24",
+            "date": "22 de novembro de 2025"
           },
-          "date": "22 de agosto",
-          "title": "Minas Gerais ganha<br /> operadora de saúde<br /> fundada por mulheres",
-          "link": "/noticias-noticia"
-        },
-        {
-          "image": {
-            "alt": "Imagem",
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/a8c7caac-28cf-49d9-aff6-ccdc264953c2"
+          {
+            "image": {
+              "alt": "Lançamento  ",
+              "image": "https://data.decoassets.com/official-aurora-saude/70000a96-3455-40c1-8649-913fcf0300de/Lancamento-Aurora-22.jpg"
+            },
+            "title": "Minas Gerais ganha operadora de saúde fundada por mulheres",
+            "date": "22 de agosto de 2023",
+            "link": "https://www.souaurorasaude.com.br/noticias-noticia"
           },
-          "title": "Um novo jeito de cuidar da <br /> saúde",
-          "date": "1 de setembro",
-          "link": "/noticias-noticia5"
-        }
-      ]
+          {
+            "image": {
+              "alt": "Um novo jeito de cuidar",
+              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/a8c7caac-28cf-49d9-aff6-ccdc264953c2"
+            },
+            "title": "Um novo jeito de cuidar da saúde",
+            "date": "01 de Setembro de 2023",
+            "link": "https://www.souaurorasaude.com.br/noticias-noticia5"
+          }
+        ]
+      }
     },
     {
       "__resolveType": "Footer"
