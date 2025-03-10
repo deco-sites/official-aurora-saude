@@ -26,10 +26,21 @@
       },
       "carouselNews": [
         {
+          "image": "https://data.decoassets.com/official-aurora-saude/e6904f7d-45b0-47e5-9866-b54fb529ae83/Noticia-.png",
+          "date": "10 de março ",
+          "title": "A Aurora Saúde quer ouvir você ",
+          "link": "/noticias-noticia6"
+        },
+        {
+          "image": "https://data.decoassets.com/official-aurora-saude/e977ffa3-b1a5-44b4-9612-7ec84b2f4468/KAH_0417.jpg",
+          "date": "22 de novembro de 2024",
+          "title": "Aurora Saúde marcando presença no SRH24"
+        },
+        {
+          "link": "/noticias-noticia7",
           "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/official-aurora-saude/4532d339-7640-4f8c-a08e-cbdaf2818f48/notpicia-site-1920x1080.png",
           "date": "30/10/2024",
-          "title": "Agora somos o plano de saúde para quem movimenta Minas",
-          "link": "/noticias-noticia7"
+          "title": "Agora somos o plano de saúde para quem movimenta Minas"
         },
         {
           "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/b1208071-4470-4143-af55-f48aa832c772",
@@ -38,15 +49,10 @@
           "link": "/noticias-noticia4"
         },
         {
-          "link": "/noticias-noticia5",
           "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/c36300cf-4ac7-46a3-b754-d4703f8f5dbc",
           "date": "17 de agosto",
-          "title": "Nova operadora de saúde em BH"
-        },
-        {
-          "image": "https://data.decoassets.com/official-aurora-saude/e977ffa3-b1a5-44b4-9612-7ec84b2f4468/KAH_0417.jpg",
-          "date": "22 de novembro de 2024",
-          "title": "Aurora Saúde marcando presença no SRH24"
+          "title": "Nova operadora de saúde em BH",
+          "link": "/noticias-noticia5"
         }
       ],
       "device": "mobile"
