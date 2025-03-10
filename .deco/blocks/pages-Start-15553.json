@@ -51,6 +51,16 @@
               },
               "alt": "Aurora Odonto ",
               "link": "https://www.socioodonto.com.br/auroraodonto/"
+            },
+            {
+              "desktop": {
+                "image": "https://data.decoassets.com/official-aurora-saude/a46e1ff0-a00e-429f-bbea-ff78ec51b30d/Banner-Site-.png"
+              },
+              "mobile": {
+                "image": "https://data.decoassets.com/official-aurora-saude/fc5cda11-0c39-4496-83f8-dcfec2d36f09/Site-mobile-.png"
+              },
+              "alt": "Pesquisa IBRC",
+              "link": "https://www.souaurorasaude.com.br/noticias-noticia6"
             }
           ],
           "interval": 5
