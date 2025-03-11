@@ -19,34 +19,29 @@
     {
       "__resolveType": "site/sections/Site/OverlaidNewsBanner.tsx",
       "featuredNews": {
-        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/77521b9d-03c6-4d3e-a722-296984c548d9",
-        "date": "1 de setembro",
-        "title": "Um novo jeito de <br />cuidar da saúde",
-        "link": "/noticias-noticia5"
+        "image": "https://data.decoassets.com/official-aurora-saude/fc5cda11-0c39-4496-83f8-dcfec2d36f09/Site-mobile-.png",
+        "date": "10 de março de 2025",
+        "title": "A Aurora Saúde quer ouvir você",
+        "link": "/noticias-noticia6"
       },
       "carouselNews": [
         {
-          "image": "https://data.decoassets.com/official-aurora-saude/e6904f7d-45b0-47e5-9866-b54fb529ae83/Noticia-.png",
-          "date": "10 de março ",
-          "title": "A Aurora Saúde quer ouvir você ",
-          "link": "/noticias-noticia6"
+          "image": "https://data.decoassets.com/official-aurora-saude/d356a6ff-adae-429b-8a05-1f2b784ad896/Noticia-Site-.png",
+          "date": "11 de março de 2025",
+          "title": "Aurora Saúde em destaque na revista Pequenas Empresas & Grandes Negócios",
+          "link": "/noticia-noticia8"
         },
         {
-          "image": "https://data.decoassets.com/official-aurora-saude/e977ffa3-b1a5-44b4-9612-7ec84b2f4468/KAH_0417.jpg",
-          "date": "22 de novembro de 2024",
-          "title": "Aurora Saúde marcando presença no SRH24"
-        },
-        {
-          "link": "/noticias-noticia7",
           "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/official-aurora-saude/4532d339-7640-4f8c-a08e-cbdaf2818f48/notpicia-site-1920x1080.png",
           "date": "30/10/2024",
-          "title": "Agora somos o plano de saúde para quem movimenta Minas"
+          "title": "Agora somos o plano de saúde para quem movimenta Minas",
+          "link": "/noticias-noticia7"
         },
         {
+          "link": "/noticias-noticia4",
           "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/b1208071-4470-4143-af55-f48aa832c772",
           "date": "22 de agosto",
-          "title": "Minas Gerais ganha operadora de<br/> saúde fundada por mulheres",
-          "link": "/noticias-noticia4"
+          "title": "Minas Gerais ganha operadora de<br/> saúde fundada por mulheres"
         },
         {
           "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/c36300cf-4ac7-46a3-b754-d4703f8f5dbc",
@@ -61,11 +56,11 @@
       "__resolveType": "site/sections/Site/NewsSection.tsx",
       "newsArr": [
         {
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/03d08a14-ce1e-44d9-a9e7-044c50f18dc5",
-          "altImage": "MV Sistemas",
-          "date": "25 de setembro",
-          "title": "Aurora Saúde fecha parceria com MV Sistemas",
-          "link": "/noticias-noticia6"
+          "image": "https://data.decoassets.com/official-aurora-saude/ddd6ac82-b1e1-4be5-911c-1232371d0c54/IMG_1915.jpeg",
+          "altImage": "A Aurora Saúde chega ao norte de Minas ",
+          "date": "06 de fevereiro de 2025",
+          "title": "A Aurora Saúde chega ao norte de Minas ",
+          "link": "/noticias-noticia4"
         },
         {
           "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/4764bd91-8388-4f13-a3f9-2f80561daea2",
