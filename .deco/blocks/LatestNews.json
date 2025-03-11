@@ -2,25 +2,32 @@
   "__resolveType": "site/sections/Site/LatestNews.tsx",
   "newsArr": [
     {
+      "image": "https://data.decoassets.com/official-aurora-saude/d356a6ff-adae-429b-8a05-1f2b784ad896/Noticia-Site-.png",
+      "date": "11 de março de 2025",
+      "altImage": "PEGN",
+      "title": "Aurora Saúde em destaque na revista Pequenas Empresas & Grandes Negócios",
+      "link": "/notícia-noticia8"
+    },
+    {
       "image": "https://data.decoassets.com/official-aurora-saude/e6904f7d-45b0-47e5-9866-b54fb529ae83/Noticia-.png",
-      "date": "10 de março",
       "altImage": "Pesquisa IBRC",
+      "date": "10 de março",
       "title": "A Aurora Saúde quer ouvir você",
       "link": "/noticias-noticia6"
     },
     {
-      "image": "https://data.decoassets.com/official-aurora-saude/e977ffa3-b1a5-44b4-9612-7ec84b2f4468/KAH_0417.jpg",
-      "altImage": "SRH24",
-      "date": "22 de novembro",
-      "title": "Aurora Saúde marcando presença no SRH24",
-      "link": "/noticias-noticia4"
+      "image": "https://data.decoassets.com/official-aurora-saude/ddd6ac82-b1e1-4be5-911c-1232371d0c54/IMG_1915.jpeg",
+      "altImage": "Montes Claros ",
+      "date": "06 de fevereiro de 2025",
+      "link": "/noticias-noticia4",
+      "title": "Aurora Saúde chega no Norte de Minas"
     },
     {
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/a6edd630-d3cc-46e2-946a-71c89cb26486",
       "altImage": "Fundadoras Aurora Saúde",
       "date": "22 de agosto",
-      "title": "Minas Gerais ganha operadora de saúde fundada por mulheres",
-      "link": "/noticias-noticia4"
+      "link": "/noticias-noticia4",
+      "title": "Minas Gerais ganha operadora de saúde fundada por mulheres"
     }
   ]
 }

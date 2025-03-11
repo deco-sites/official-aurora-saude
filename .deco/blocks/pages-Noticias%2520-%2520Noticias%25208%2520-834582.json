@@ -1,6 +1,6 @@
 {
   "name": "Noticias - Noticias 8 ",
-  "path": "/example-path",
+  "path": "/notícia-noticia8",
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
