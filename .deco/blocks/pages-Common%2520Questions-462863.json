@@ -13,10 +13,10 @@
           "__resolveType": "site/sections/Site/BannerSection.tsx",
           "image": {
             "desktop": {
-              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/3f8d9a68-3ad2-4caf-88fb-13798fe79f97"
+              "image": "https://data.decoassets.com/official-aurora-saude/93d82d36-fc94-472b-81a3-8e8d0de68bb3/1742234204781-3f8d9a68-3ad2-4caf-88fb-13798fe79f97"
             },
             "mobile": {
-              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/78fc7e0a-034b-43b0-b924-20fa6cfcb08a"
+              "image": "https://data.decoassets.com/official-aurora-saude/bfb72954-8831-41e0-a61d-2aeb7775a0e3/1742234206848-78fc7e0a-034b-43b0-b924-20fa6cfcb08a"
             },
             "alt": "Banner"
           },
