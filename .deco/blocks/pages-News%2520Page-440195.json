@@ -15,7 +15,7 @@
     {
       "__resolveType": "site/sections/Site/NewsPage.tsx",
       "image": {
-        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/b865758b-3c56-4ace-8327-d45705b6b358",
+        "image": "https://data.decoassets.com/official-aurora-saude/f329336f-08fc-49bf-93fb-6fa22e603d6f/1742234212530-b865758b-3c56-4ace-8327-d45705b6b358",
         "alt": "Banner",
         "link": "#"
       },
@@ -25,7 +25,7 @@
       "relatedsNews": [
         {
           "image": {
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/802711e7-3dc4-4236-a904-fefa4e8e2aa9",
+            "image": "https://data.decoassets.com/official-aurora-saude/e6a5a920-3744-422b-b298-1974c0d8caee/1742234214844-802711e7-3dc4-4236-a904-fefa4e8e2aa9",
             "alt": "Image"
           },
           "date": "29 de setembro",
@@ -35,27 +35,27 @@
       ],
       "galleryImages": [
         {
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/d7f19207-fa74-4e98-89f3-52626511adec",
+          "image": "https://data.decoassets.com/official-aurora-saude/559c0ea4-2a2e-4518-8685-a1e3f7c69076/1742234216862-d7f19207-fa74-4e98-89f3-52626511adec",
           "alt": "Imagem"
         },
         {
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/31218754-b9dc-4f36-b064-f88db35428a7",
+          "image": "https://data.decoassets.com/official-aurora-saude/75f9f099-822a-42c8-a90f-bccf532f095c/1742234218554-31218754-b9dc-4f36-b064-f88db35428a7",
           "alt": "Banner"
         },
         {
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/eba6de5a-44ca-4269-b39c-a62aaa12725f",
+          "image": "https://data.decoassets.com/official-aurora-saude/9695d749-6d03-434e-9132-04bcea681d70/1742234220316-eba6de5a-44ca-4269-b39c-a62aaa12725f",
           "alt": "Imagem"
         },
         {
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/b829ccc7-4753-4e4e-bc5a-63bbe46cc2b1",
+          "image": "https://data.decoassets.com/official-aurora-saude/7bc98f6a-35d3-4978-bcaf-c09ff53785ff/1742234222067-b829ccc7-4753-4e4e-bc5a-63bbe46cc2b1",
           "alt": "Imagem"
         },
         {
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/580d2586-eac2-4779-a6a9-367760e5d481",
+          "image": "https://data.decoassets.com/official-aurora-saude/ccd49e1a-c911-45aa-ae91-3b690407affb/1742234223670-580d2586-eac2-4779-a6a9-367760e5d481",
           "alt": "Imagem"
         },
         {
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10558/337cda75-be48-4876-b724-aa905ceed2b1",
+          "image": "https://data.decoassets.com/official-aurora-saude/098b3905-1548-465d-95dc-e7dc3a8e90d7/1742234225111-337cda75-be48-4876-b724-aa905ceed2b1",
           "alt": "Imagem"
         }
       ]
