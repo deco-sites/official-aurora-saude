@@ -56,6 +56,13 @@
       "__resolveType": "site/sections/Site/NewsSection.tsx",
       "newsArr": [
         {
+          "image": "https://assets.decocache.com/official-aurora-saude/75d4260f-6a96-4fde-b3f7-338257877829/exame.png",
+          "altImage": "Exame",
+          "date": "21 de março de 2025",
+          "title": "A última publicação da Exame teve um espaço dedicado à Aurora Saúde",
+          "link": "/noticia-noticia9"
+        },
+        {
           "image": "https://data.decoassets.com/official-aurora-saude/ddd6ac82-b1e1-4be5-911c-1232371d0c54/IMG_1915.jpeg",
           "altImage": "A Aurora Saúde chega ao norte de Minas ",
           "date": "06 de fevereiro de 2025",
