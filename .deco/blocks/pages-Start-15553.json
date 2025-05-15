@@ -14,26 +14,6 @@
           "images": [
             {
               "desktop": {
-                "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/official-aurora-saude/b3cdc0bf-dbab-4995-a218-acce08911363/banner-site-1438x522px.png"
-              },
-              "mobile": {
-                "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/official-aurora-saude/e82981ca-f93a-4df9-9c31-ddc1eea4b19f/banner-site-500x500px.png"
-              },
-              "alt": "BannerBH",
-              "link": "#"
-            },
-            {
-              "desktop": {
-                "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/official-aurora-saude/5a802cd4-6ffe-4d49-9600-87867375ed76/banner-site-1438x522px.jpg"
-              },
-              "mobile": {
-                "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/official-aurora-saude/5f72be6a-b506-43cb-8956-cd849499a9f8/banner-app-500x500px.png"
-              },
-              "alt": "Banner padrão ",
-              "link": "Banner padrão "
-            },
-            {
-              "desktop": {
                 "image": "https://data.decoassets.com/official-aurora-saude/cd2d5356-ba96-4310-9d63-b09ab16468a4/site-desktop.png"
               },
               "mobile": {
@@ -61,6 +41,16 @@
               },
               "alt": "NR1",
               "link": "https://www.instagram.com/reel/DIbnWzPtkUZ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            },
+            {
+              "desktop": {
+                "image": "https://assets.decocache.com/official-aurora-saude/b9b67573-4ebd-4bd9-aa3e-33df0788d5e8/1438x522.png"
+              },
+              "mobile": {
+                "image": "https://assets.decocache.com/official-aurora-saude/bd261315-3b0d-44e1-a3ad-cbc82db80f05/500x500px.png"
+              },
+              "alt": "Mês das Mães",
+              "link": "/noticia-noticia12"
             }
           ],
           "interval": 5

@@ -2,9 +2,16 @@
   "__resolveType": "site/sections/Site/LatestNews.tsx",
   "newsArr": [
     {
+      "image": "https://assets.decocache.com/official-aurora-saude/b9b67573-4ebd-4bd9-aa3e-33df0788d5e8/1438x522.png",
+      "date": "15 de maio de 2025",
+      "altImage": "plano de parto",
+      "title": "Aurora Saúde lança plano de parto para gestantes",
+      "link": "/noticia-noticia12"
+    },
+    {
       "image": "https://assets.decocache.com/official-aurora-saude/6093723a-862d-44fe-96b9-aff2487568bc/Noticia-.png",
-      "date": "28 de abril de 2025",
       "altImage": "Pesquisa ",
+      "date": "28 de abril de 2025",
       "title": "Resultados da Pesquisa de Satisfação 2025 - Ano Base 2024",
       "link": "/noticia-noticia11"
     },
@@ -12,29 +19,15 @@
       "image": "https://assets.decocache.com/official-aurora-saude/21d18e6c-b0a5-48b2-9f61-cbe76d24f2fe/960x450.png",
       "altImage": "Aurora Odonto ",
       "date": "10 de abril de 2025",
-      "title": "Aurora Saúde apresenta o novo Aurora Odonto: cuidando do seu sorriso como você merece!",
-      "link": "/noticia-noticia10"
+      "link": "/noticia-noticia10",
+      "title": "Aurora Saúde apresenta o novo Aurora Odonto: cuidando do seu sorriso como você merece!"
     },
     {
       "image": "https://assets.decocache.com/official-aurora-saude/75d4260f-6a96-4fde-b3f7-338257877829/exame.png",
       "altImage": "exame",
       "date": "21 de março de 2025",
-      "link": "/noticia-noticia9",
-      "title": "A última publicação da Exame teve um"
-    },
-    {
-      "image": "https://data.decoassets.com/official-aurora-saude/d356a6ff-adae-429b-8a05-1f2b784ad896/Noticia-Site-.png",
-      "altImage": "PEGN",
-      "date": "11 de março de 2025",
-      "title": "Aurora Saúde em destaque na revista Pequenas",
-      "link": "/notícia-noticia8"
-    },
-    {
-      "image": "https://data.decoassets.com/official-aurora-saude/e6904f7d-45b0-47e5-9866-b54fb529ae83/Noticia-.png",
-      "altImage": "Pesquisa IBRC",
-      "date": "10 de março de 2025",
-      "title": "A Aurora Saúde quer ouvir você",
-      "link": "/noticias-noticia6"
+      "title": "A última publicação da Exame teve um",
+      "link": "/noticia-noticia9"
     }
   ]
 }
