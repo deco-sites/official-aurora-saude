@@ -2,9 +2,16 @@
   "__resolveType": "site/sections/Site/LatestNews.tsx",
   "newsArr": [
     {
-      "image": "https://assets.decocache.com/official-aurora-saude/b9b67573-4ebd-4bd9-aa3e-33df0788d5e8/1438x522.png",
+      "image": "https://assets.decocache.com/official-aurora-saude/1cf26e75-b8e9-4558-ae19-9b3ccfd00935/banners-blog.png",
       "date": "15 de maio de 2025",
+      "altImage": "gripe telemedicina",
+      "title": "Aurora Saúde oferece telemedicina sem coparticipação durante o inverno",
+      "link": "/noticia-noticia13"
+    },
+    {
+      "image": "https://assets.decocache.com/official-aurora-saude/b9b67573-4ebd-4bd9-aa3e-33df0788d5e8/1438x522.png",
       "altImage": "plano de parto",
+      "date": "15 de maio de 2025",
       "title": "Aurora Saúde lança plano de parto para gestantes",
       "link": "/noticia-noticia12"
     },
@@ -12,22 +19,15 @@
       "image": "https://assets.decocache.com/official-aurora-saude/6093723a-862d-44fe-96b9-aff2487568bc/Noticia-.png",
       "altImage": "Pesquisa ",
       "date": "28 de abril de 2025",
-      "title": "Resultados da Pesquisa de Satisfação 2025 - Ano Base 2024",
-      "link": "/noticia-noticia11"
+      "link": "/noticia-noticia11",
+      "title": "Resultados da Pesquisa de Satisfação 2025 - Ano Base 2024"
     },
     {
       "image": "https://assets.decocache.com/official-aurora-saude/21d18e6c-b0a5-48b2-9f61-cbe76d24f2fe/960x450.png",
       "altImage": "Aurora Odonto ",
       "date": "10 de abril de 2025",
-      "link": "/noticia-noticia10",
-      "title": "Aurora Saúde apresenta o novo Aurora Odonto: cuidando do seu sorriso como você merece!"
-    },
-    {
-      "image": "https://assets.decocache.com/official-aurora-saude/75d4260f-6a96-4fde-b3f7-338257877829/exame.png",
-      "altImage": "exame",
-      "date": "21 de março de 2025",
-      "title": "A última publicação da Exame teve um",
-      "link": "/noticia-noticia9"
+      "title": "Aurora Saúde apresenta o novo Aurora Odonto: cuidando do seu sorriso como você merece!",
+      "link": "/noticia-noticia10"
     }
   ]
 }

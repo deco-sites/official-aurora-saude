@@ -14,23 +14,23 @@
           "images": [
             {
               "desktop": {
-                "image": "https://data.decoassets.com/official-aurora-saude/cd2d5356-ba96-4310-9d63-b09ab16468a4/site-desktop.png"
+                "image": "https://assets.decocache.com/official-aurora-saude/e3552538-3415-4627-bfa8-f7c28e6a19d1/1438x522-(1).png"
               },
               "mobile": {
-                "image": "https://data.decoassets.com/official-aurora-saude/72b4f87a-3607-4cab-9f02-db8dfda0804b/site-mobile.jpg"
+                "image": "https://assets.decocache.com/official-aurora-saude/0ec9d1ae-d82d-412c-95bc-578129640d1c/500x500px.png"
               },
-              "alt": "Montes Claros",
-              "link": "https://www.instagram.com/p/DFvZlUOR5AM/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              "alt": "Gripe Telemedicina",
+              "link": "/noticia-noticia13"
             },
             {
               "desktop": {
-                "image": "https://data.decoassets.com/official-aurora-saude/db086fd5-2fe9-4977-b037-7275f194f703/Banner-Noticia-Site1438x522.jpg"
+                "image": "https://assets.decocache.com/official-aurora-saude/b9b67573-4ebd-4bd9-aa3e-33df0788d5e8/1438x522.png"
               },
               "mobile": {
-                "image": "https://data.decoassets.com/official-aurora-saude/230ef555-b628-4b6e-bf7a-1734c73fff6f/Banner-Noticia-Site500x500.jpg"
+                "image": "https://assets.decocache.com/official-aurora-saude/bd261315-3b0d-44e1-a3ad-cbc82db80f05/500x500px.png"
               },
-              "alt": "Aurora Odonto ",
-              "link": "https://www.socioodonto.com.br/auroraodonto/"
+              "alt": "Mês das Mães",
+              "link": "/noticia-noticia12"
             },
             {
               "desktop": {
@@ -44,13 +44,13 @@
             },
             {
               "desktop": {
-                "image": "https://assets.decocache.com/official-aurora-saude/b9b67573-4ebd-4bd9-aa3e-33df0788d5e8/1438x522.png"
+                "image": "https://data.decoassets.com/official-aurora-saude/cd2d5356-ba96-4310-9d63-b09ab16468a4/site-desktop.png"
               },
               "mobile": {
-                "image": "https://assets.decocache.com/official-aurora-saude/bd261315-3b0d-44e1-a3ad-cbc82db80f05/500x500px.png"
+                "image": "https://data.decoassets.com/official-aurora-saude/72b4f87a-3607-4cab-9f02-db8dfda0804b/site-mobile.jpg"
               },
-              "alt": "Mês das Mães",
-              "link": "/noticia-noticia12"
+              "alt": "Montes Claros",
+              "link": "https://www.instagram.com/p/DFvZlUOR5AM/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
             }
           ],
           "interval": 5
