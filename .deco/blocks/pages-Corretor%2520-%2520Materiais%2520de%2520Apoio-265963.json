@@ -119,9 +119,9 @@
             {
               "date": "2025",
               "name": "Aurora Odonto",
-              "category": "Servi",
               "city": ".",
-              "link": "https://drive.google.com/drive/folders/1G60LeifOrstnkKjmbfBT2vd5tNS7I1hv?usp=sharing"
+              "link": "https://drive.google.com/drive/folders/1G60LeifOrstnkKjmbfBT2vd5tNS7I1hv?usp=sharing",
+              "category": "Produtos e Serviços "
             },
             {
               "date": "2025",
@@ -129,6 +129,13 @@
               "category": "Produtos e Serviços ",
               "city": ".",
               "link": "https://drive.google.com/drive/folders/1b2zlbypNSy8bbi6N38lUPFqnaC6obtPg?usp=sharing"
+            },
+            {
+              "date": "2025",
+              "name": "Aeromédico",
+              "category": "Produtos e Serviços ",
+              "city": ".",
+              "link": "https://drive.google.com/drive/folders/1thDnUfw4UPs_esLWV5_Sl-AtvMsv0sJo?usp=sharing"
             }
           ],
           "id": 6,
