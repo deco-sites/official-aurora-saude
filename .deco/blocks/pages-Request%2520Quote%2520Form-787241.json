@@ -8,25 +8,6 @@
         {
           "__resolveType": "site/sections/Site/HeaderSite.tsx",
           "type": "cliente"
-        },
-        {
-          "__resolveType": "site/sections/Site/BannerSection.tsx",
-          "image": {
-            "desktop": {
-              "image": "https://data.decoassets.com/official-aurora-saude/d3c1122b-f22d-4533-a5c4-9922ec6032ae/1742234208745-a6062319-f5be-44da-8000-2f5853a672a4"
-            },
-            "mobile": {
-              "image": "https://data.decoassets.com/official-aurora-saude/a8bb2de7-e570-4ddc-95b5-68fa4dcf93ee/1742234210703-82103b52-1722-43a1-900b-2679abca5bcb"
-            },
-            "alt": "Banner"
-          },
-          "textColor": "Amarelo",
-          "fontWeight": "semi-bold",
-          "fontSize": "30",
-          "desktopTitle": "Solicite uma cotação <br />e descubra os planos<br /> disponíveis para você",
-          "mobileTitle": "Solicite uma cotação <br />e descubra os planos<br /> disponíveis para você",
-          "titleFontSize": "30",
-          "titleFontWeight": "semi-bold"
         }
       ]
     },
