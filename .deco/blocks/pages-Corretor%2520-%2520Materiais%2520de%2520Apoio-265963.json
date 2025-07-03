@@ -41,7 +41,7 @@
               "name": "Tabela de Preços",
               "category": "Venda ",
               "city": "BHRM, CENTRAL MINEIRA, MONTES CLAROS ",
-              "link": "https://drive.google.com/file/d/1XDCfs0L3NKwjnqBjmIwi9Go_nexcS9dl/view?usp=sharing"
+              "link": "https://drive.google.com/file/d/16eQK-7UmMSwtOd-R65ly3grynS1zyNFp/view?usp=sharing"
             },
             {
               "date": "Jun/2025",
@@ -78,13 +78,6 @@
         },
         {
           "textColor": "text-white",
-          "bgColor": "bg-purple",
-          "materials": [],
-          "label": "Vendas acima de 100 vidas",
-          "id": 2
-        },
-        {
-          "textColor": "text-white",
           "bgColor": "bg-orange1",
           "materials": [
             {
@@ -118,6 +111,13 @@
           "materials": [],
           "label": "Pós-Venda",
           "id": 4
+        },
+        {
+          "textColor": "text-white",
+          "bgColor": "bg-purple",
+          "materials": [],
+          "label": "Vendas acima de 100 vidas",
+          "id": 2
         },
         {
           "textColor": "text-pink1",
