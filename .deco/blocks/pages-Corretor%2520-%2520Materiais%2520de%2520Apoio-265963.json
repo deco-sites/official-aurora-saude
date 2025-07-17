@@ -70,27 +70,6 @@
               "category": "Manuais",
               "city": "abrangência",
               "link": "https://drive.google.com/file/d/1zOwe7m2s8Ytm-8itn_6GJk1DLBzwtR8K/view?usp=sharing"
-            },
-            {
-              "date": "Jul/2025",
-              "name": "MANUAL FETTROMINAS GERAL ",
-              "category": ".",
-              "city": "BH, BHRM, CONTAGEM, BETIM ",
-              "link": "https://drive.google.com/file/d/1wBrxUw1XYD6N3QjTJOs5yHY0GrTzQ03m/view?usp=sharing"
-            },
-            {
-              "date": "Jul/2025",
-              "name": "MANUAL FETTROMINAS BH E BHRM",
-              "link": "https://drive.google.com/file/d/1Xb07cKiN8R9AGpL2YBDlvvgA76s5uAR3/view?usp=sharing",
-              "category": ".",
-              "city": "BH, BHRM "
-            },
-            {
-              "date": "Jul/2025",
-              "name": "MANUAL FETTROMINAS CONTAGEM E BETIM",
-              "category": ".",
-              "city": "CONTAGEM, BETIM ",
-              "link": "https://drive.google.com/file/d/1hhN_d6NRhr5-H93muJFFVdPx_UHECNOy/view?usp=sharing"
             }
           ],
           "label": "Vendas 1 a 99 vidas",
@@ -102,11 +81,18 @@
           "bgColor": "bg-orange1",
           "materials": [
             {
-              "link": "https://drive.google.com/file/d/1960meA5N7YX7-9gC_7nVbjAVFrVhNCOA/view?usp=sharing",
+              "link": "https://drive.google.com/drive/folders/1N5FFX6UBVu8YvdC8MX5B-foczEeNJcrp?usp=sharing",
+              "date": "jun.25",
+              "name": "Reajuste de Tabela 2025",
+              "category": "Tabela de Preços ",
+              "city": ". "
+            },
+            {
               "date": "Fev/25",
               "name": "Regulamento Campanha Top 10 Aurora Saúde",
               "category": "Campanhas ",
-              "city": "BHRM"
+              "city": "BHRM",
+              "link": "https://drive.google.com/file/d/1960meA5N7YX7-9gC_7nVbjAVFrVhNCOA/view?usp=sharing"
             },
             {
               "date": "24 de abril de 2025",
@@ -114,17 +100,10 @@
               "category": "Campanha ",
               "city": ".",
               "link": "https://drive.google.com/file/d/1b-h8arwzH_2knIGOhN1_INrmpqeu4hCb/view?usp=sharing"
-            },
-            {
-              "date": "jun.25",
-              "name": "Reajuste de Tabela 2025",
-              "category": "Tabela de Preços ",
-              "city": ". ",
-              "link": "https://drive.google.com/drive/folders/1N5FFX6UBVu8YvdC8MX5B-foczEeNJcrp?usp=sharing"
             }
           ],
-          "label": "Campanhas",
-          "id": 3
+          "id": 3,
+          "label": "Vendas acima de 100 vidas"
         },
         {
           "textColor": "text-white",
@@ -136,31 +115,9 @@
         {
           "textColor": "text-white",
           "bgColor": "bg-purple",
-          "materials": [
-            {
-              "link": "https://drive.google.com/file/d/1wBrxUw1XYD6N3QjTJOs5yHY0GrTzQ03m/view?usp=sharing",
-              "date": "Jul/2025",
-              "name": "MANUAL FETTROMINAS GERAL ",
-              "category": ".",
-              "city": "BH, BHRM, CONTAGEM, BETIM "
-            },
-            {
-              "date": "Jul/2025",
-              "name": "MANUAL FETTROMINAS BH E BHRM",
-              "category": ".",
-              "city": "BH, BHRM ",
-              "link": "https://drive.google.com/file/d/1Xb07cKiN8R9AGpL2YBDlvvgA76s5uAR3/view?usp=sharing"
-            },
-            {
-              "date": "Jul/2025",
-              "name": "MANUAL FETTROMINAS CONTAGEM E BETIM ",
-              "category": ".",
-              "city": "CONTAGEM, BETIM ",
-              "link": "https://drive.google.com/file/d/1Xb07cKiN8R9AGpL2YBDlvvgA76s5uAR3/view?usp=sharing"
-            }
-          ],
-          "label": "Vendas acima de 100 vidas",
-          "id": 2
+          "materials": [],
+          "id": 2,
+          "label": "Campanhas "
         },
         {
           "textColor": "text-pink1",
