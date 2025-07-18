@@ -51,6 +51,13 @@
               "city": "CANAÃ DOS CARAJÁS, CARAJÁS, MARABÁ, NOVA LIMA, OURILÂNDIA, PARAUAPEBAS E TUCUMÃ"
             },
             {
+              "date": "Jul/2025",
+              "name": "MANUAIS FETTROMINAS 2025",
+              "category": ".",
+              "city": "BH, BHRM, CONTAGEM E BETIM ",
+              "link": "https://drive.google.com/drive/folders/1WO1pCsTNFLpyu5XUFrWSDSdAaYH5VGaT?usp=sharing"
+            },
+            {
               "date": "Mar/2025",
               "name": "Manual Seguro Viagem ",
               "category": "Manuais",
@@ -81,11 +88,18 @@
           "bgColor": "bg-orange1",
           "materials": [
             {
-              "link": "https://drive.google.com/drive/folders/1N5FFX6UBVu8YvdC8MX5B-foczEeNJcrp?usp=sharing",
+              "link": "https://drive.google.com/drive/folders/1WO1pCsTNFLpyu5XUFrWSDSdAaYH5VGaT?usp=sharing",
+              "date": "Jul/2025",
+              "name": "MANUAIS FETTROMINAS 2025",
+              "category": ".",
+              "city": "BH, BHRM, CONTAGEM E BETIM "
+            },
+            {
               "date": "jun.25",
               "name": "Reajuste de Tabela 2025",
               "category": "Tabela de Preços ",
-              "city": ". "
+              "city": ". ",
+              "link": "https://drive.google.com/drive/folders/1N5FFX6UBVu8YvdC8MX5B-foczEeNJcrp?usp=sharing"
             },
             {
               "date": "Fev/25",
