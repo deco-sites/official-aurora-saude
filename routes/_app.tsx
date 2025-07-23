@@ -30,7 +30,7 @@ export default defineApp(async (_req, ctx) => {
         {/* Google Tag Manager */}
         <script
           async
-          src="https://www.googletagmanager.com/ns.html?id=GTM-N32VLN6N"
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-N32VLN6N"
         >
         </script>
         <script>
