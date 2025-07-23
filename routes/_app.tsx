@@ -30,12 +30,12 @@ export default defineApp(async (_req, ctx) => {
         {/* Google Tag Manager */}
         <script
           async
-          src="https://www.googletagmanager.com/ns.html?id=GTM-KGKCB98Q"
+          src="https://www.googletagmanager.com/ns.html?id=GTM-N32VLN6N"
         >
         </script>
         <script>
           {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date()); gtag('config', 'GTM-KGKCB98Q');`}
+          gtag('js', new Date()); gtag('config', 'GTM-N32VLN6N');`}
         </script>
       </Head>
 
