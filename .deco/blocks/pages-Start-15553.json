@@ -51,6 +51,16 @@
               },
               "alt": "Montes Claros",
               "link": "https://www.instagram.com/p/DFvZlUOR5AM/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            },
+            {
+              "desktop": {
+                "image": "https://assets.decocache.com/official-aurora-saude/8450e008-9fab-44af-abeb-2ffd1e58f48a/BANNER-TV-SIM-.png"
+              },
+              "mobile": {
+                "image": "https://assets.decocache.com/official-aurora-saude/59c99e3b-8dca-4f41-b2ae-d60d5e499859/Feed-.png"
+              },
+              "link": "https://www.youtube.com/watch?v=V4OzjGTkd1s ",
+              "alt": "Podcast TV Sim "
             }
           ],
           "interval": 10
