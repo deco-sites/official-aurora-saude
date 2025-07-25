@@ -85,17 +85,17 @@
         },
         {
           "textColor": "text-white",
-          "bgColor": "bg-aquagreen",
+          "bgColor": "bg-purple",
           "materials": [
             {
+              "link": "https://drive.google.com/drive/folders/1WO1pCsTNFLpyu5XUFrWSDSdAaYH5VGaT?usp=sharing",
+              "city": "BH, BHRM, CONTAGEM, BETIM ",
+              "category": "Manuais",
               "date": "Jul/2025",
-              "name": "Manuais Fettrominas 2025",
-              "category": "Manuais ",
-              "city": "BH, CONTAGEM, BETIM",
-              "link": "https://drive.google.com/drive/folders/1WO1pCsTNFLpyu5XUFrWSDSdAaYH5VGaT?usp=sharing"
+              "name": "MANUAIS FETTROMINAS 2025"
             }
           ],
-          "id": 4,
+          "id": 2,
           "label": "Vendas acima de 100 vidas"
         },
         {
@@ -110,13 +110,6 @@
               "link": "https://drive.google.com/drive/folders/1N5FFX6UBVu8YvdC8MX5B-foczEeNJcrp?usp=sharing"
             },
             {
-              "date": "24 de abril de 2025",
-              "name": "Regulamento Campanha Mês das Mães ",
-              "category": "Campanha ",
-              "city": ".",
-              "link": "https://drive.google.com/file/d/1b-h8arwzH_2knIGOhN1_INrmpqeu4hCb/view?usp=sharing"
-            },
-            {
               "date": "Ago/2025",
               "name": "Regulamento Campanha Mês dos Pais ",
               "category": "Campanha Promocional Temporária ",
@@ -129,10 +122,10 @@
         },
         {
           "textColor": "text-white",
-          "bgColor": "bg-purple",
+          "bgColor": "bg-aquagreen",
           "materials": [],
-          "id": 2,
-          "label": "Pós-vendas "
+          "id": 4,
+          "label": "Pós-vendas"
         },
         {
           "textColor": "text-pink1",
