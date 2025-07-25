@@ -88,25 +88,11 @@
           "bgColor": "bg-orange1",
           "materials": [
             {
-              "link": "https://drive.google.com/drive/folders/1WO1pCsTNFLpyu5XUFrWSDSdAaYH5VGaT?usp=sharing",
-              "date": "Jul/2025",
-              "name": "MANUAIS FETTROMINAS 2025",
-              "category": ".",
-              "city": "BH, BHRM, CONTAGEM E BETIM "
-            },
-            {
+              "link": "https://drive.google.com/drive/folders/1N5FFX6UBVu8YvdC8MX5B-foczEeNJcrp?usp=sharing",
               "date": "jun.25",
               "name": "Reajuste de Tabela 2025",
               "category": "Tabela de Preços ",
-              "city": ". ",
-              "link": "https://drive.google.com/drive/folders/1N5FFX6UBVu8YvdC8MX5B-foczEeNJcrp?usp=sharing"
-            },
-            {
-              "date": "Fev/25",
-              "name": "Regulamento Campanha Top 10 Aurora Saúde",
-              "category": "Campanhas ",
-              "city": "BHRM",
-              "link": "https://drive.google.com/file/d/1960meA5N7YX7-9gC_7nVbjAVFrVhNCOA/view?usp=sharing"
+              "city": ". "
             },
             {
               "date": "24 de abril de 2025",
@@ -129,7 +115,15 @@
         {
           "textColor": "text-white",
           "bgColor": "bg-purple",
-          "materials": [],
+          "materials": [
+            {
+              "date": "Ago/2025",
+              "name": "Regulamento Campanha Mês dos Pais ",
+              "category": "Campanha Promocional Temporária",
+              "city": "BH, BHRM, CENTRAL MINEIRA, MONTES CLAROS E PARÁ ",
+              "link": "https://drive.google.com/file/d/1LvmTQCzFCiJ_fhxxVwJjRh4DZduLz6WT/view?usp=sharing"
+            }
+          ],
           "id": 2,
           "label": "Campanhas "
         },
