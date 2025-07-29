@@ -21,6 +21,9 @@
         },
         {
           "email": "suporte@salutarseguros.com.br"
+        },
+        {
+          "email": "marlio.fernandes@souaurorasaude.com.br"
         }
       ],
       "CopyToArr": [
@@ -29,7 +32,11 @@
         },
         {
           "email": "fabio.santos@souaurorasaude.com.br"
-        }
+        },
+        {
+          "email": "marlio.fernandes@souaurorasaude.com.br"
+        },
+        {}
       ]
     },
     {
