@@ -38,16 +38,9 @@
       "RecipientsEmailArr": [
         {
           "email": "faleconosco@souaurorasaude.com.br"
-        },
-        {
-          "email": "erick.nascimento@simbioseventures.com"
         }
       ],
-      "CopyToArr": [
-        {
-          "email": "erick.nascim3nto@gmail.com"
-        }
-      ]
+      "CopyToArr": []
     },
     {
       "__resolveType": "Footer"
