@@ -14,16 +14,6 @@
           "images": [
             {
               "desktop": {
-                "image": "https://assets.decocache.com/official-aurora-saude/9401cb35-c078-4cc0-ab7f-50c2adea043d/BANNER.jpg"
-              },
-              "mobile": {
-                "image": "https://assets.decocache.com/official-aurora-saude/f878bef8-9e8c-44c6-ae03-79eceb5fcc3d/Banner-Mobile.jpg"
-              },
-              "alt": "Reajuste 2025",
-              "link": "https://www.souaurorasaude.com.br/solicitar-cotacao"
-            },
-            {
-              "desktop": {
                 "image": "https://assets.decocache.com/official-aurora-saude/3e110999-e56d-4375-ada1-164a5a96837e/Banner-Site---4.png"
               },
               "mobile": {
