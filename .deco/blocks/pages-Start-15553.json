@@ -24,16 +24,6 @@
             },
             {
               "desktop": {
-                "image": "https://assets.decocache.com/official-aurora-saude/e3552538-3415-4627-bfa8-f7c28e6a19d1/1438x522-(1).png"
-              },
-              "mobile": {
-                "image": "https://assets.decocache.com/official-aurora-saude/0ec9d1ae-d82d-412c-95bc-578129640d1c/500x500px.png"
-              },
-              "alt": "Gripe Telemedicina",
-              "link": "/noticia-noticia13"
-            },
-            {
-              "desktop": {
                 "image": "https://assets.decocache.com/official-aurora-saude/3e110999-e56d-4375-ada1-164a5a96837e/Banner-Site---4.png"
               },
               "mobile": {
@@ -59,8 +49,8 @@
               "mobile": {
                 "image": "https://assets.decocache.com/official-aurora-saude/59c99e3b-8dca-4f41-b2ae-d60d5e499859/Feed-.png"
               },
-              "link": "https://www.youtube.com/watch?v=V4OzjGTkd1s ",
-              "alt": "Podcast TV Sim "
+              "alt": "Podcast TV Sim ",
+              "link": "https://www.youtube.com/watch?v=V4OzjGTkd1s "
             }
           ],
           "interval": 10
