@@ -78,8 +78,10 @@
     "__resolveType": "site/loaders/sendgrid/sendgridConfig.ts",
     "sendgridApiKey": {
       "__resolveType": "website/loaders/secret.ts",
-      "encrypted": "6dbded482bd9b8ea053aea067fa0ccb82c6cabec5be34bcc933ecd248fee8a3f5964c94ce8f270ab3c1f7ce12c72e40f746d6eb505eb2b480e1c26a1d61fab2bb1fc689366975e892245528feb633103",
+      "encrypted": "d74e5fb60242920a154ac6d268b6bea08abe593ce344d30c53da88af46767bdf",
       "name": "SENDGRIDAPIKEY"
     }
-  }
+  },
+  "whilelistURLs": [],
+  "whitelistPatterns": []
 }
