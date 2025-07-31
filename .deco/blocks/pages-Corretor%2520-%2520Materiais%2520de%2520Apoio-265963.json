@@ -37,18 +37,18 @@
           "bgColor": "bg-orange1",
           "materials": [
             {
-              "date": "Jun/2025",
+              "date": "Ago/2025",
               "name": "Tabela de Preços",
               "category": "Venda ",
               "city": "BHRM, CENTRAL MINEIRA, MONTES CLAROS ",
-              "link": "https://drive.google.com/file/d/1sbxFfW_pS9k5hWxEsKEuvVQUf6cRQXBX/view?usp=sharing"
+              "link": "https://drive.google.com/file/d/1fAAL2r-ygZTQpmi79bhQloXRybkk8glC/view?usp=sharing"
             },
             {
-              "date": "Jun/2025",
+              "date": "Ago/2025",
               "name": "Tabela de Preços Pará",
               "category": "Preços",
-              "link": "https://drive.google.com/file/d/13QrhAXObu28YYeB_MHr_cWeWUe4IK4Sb/view?usp=sharing",
-              "city": "CANAÃ DOS CARAJÁS, CARAJÁS, MARABÁ, NOVA LIMA, OURILÂNDIA, PARAUAPEBAS E TUCUMÃ"
+              "city": "CANAÃ DOS CARAJÁS, CARAJÁS, MARABÁ, NOVA LIMA, OURILÂNDIA, PARAUAPEBAS E TUCUMÃ",
+              "link": "https://drive.google.com/file/d/1VeLAMAaeKdtwn8iZW6boiDSMXbmoHE60/view?usp=sharing"
             },
             {
               "date": "Jul/2025",
@@ -77,6 +77,10 @@
               "category": "Manuais",
               "city": "abrangência",
               "link": "https://drive.google.com/file/d/1zOwe7m2s8Ytm-8itn_6GJk1DLBzwtR8K/view?usp=sharing"
+            },
+            {
+              "date": "Jul/2025",
+              "name": "Tabela de "
             }
           ],
           "label": "Vendas 1 a 99 vidas",
