@@ -1,13 +1,5 @@
 export const options = [
   {
-    id: 1,
-    icon: "/Simulador/home-icon.png",
-    image: "/Simulador/banner1.png",
-    option: "Você e sua<br /> família",
-    yellowText: "Inicie a simulação de sua proposta",
-    normaltext: "e mude para o plano que anda junto.",
-  },
-  {
     id: 2,
     icon: "/Simulador/briefcase-icon.png",
     image: "/Simulador/banner2.png",

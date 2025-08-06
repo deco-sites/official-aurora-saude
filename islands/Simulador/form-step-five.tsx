@@ -127,6 +127,11 @@ export default function FormStepFiveIsland() {
 
   // Segundo useEffect para chamar fetchPrices quando cd_plano e filledRanges estiverem prontos
   useEffect(() => {
+    console.log("usou 2", ageRangeValue.value);
+    console.log("usou 3", filledRanges.value);
+    console.log("usou 4", [
+      ...new Set([...filledRanges.value, ageRangeValue.value]),
+    ]);
     if (cd_plano.value && filledRanges.value.length > 0) {
       fetchPrices();
     }
@@ -134,14 +139,13 @@ export default function FormStepFiveIsland() {
 
   async function fetchPrices() {
     setLoading(true);
-
     try {
       const prices = await invoke.site.actions.getPrices({
         plan_code: cd_plano.value,
         ageranges: (thirdStepSignal.value.whoUseThePlan === "somente_eu" &&
             activeOption.value === 1)
           ? [ageRangeValue.value]
-          : filledRanges.value,
+          : [...new Set([...filledRanges.value, ageRangeValue.value])],
         plan_type: activeOption.value,
       });
 

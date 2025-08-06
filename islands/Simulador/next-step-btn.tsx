@@ -328,8 +328,7 @@ export default function NextStepBtn({ options, executionFunc }: INextStep) { //A
             ageranges: rangesArr.value,
             plan_type: activeOption.value,
           });
-
-          //console.log("Prices:", prices.data);
+          console.log("Prices:", prices.data);
 
           cd_tab_preco.value = prices.data.find((el) =>
             el.faixa === ageRangeValue.value
