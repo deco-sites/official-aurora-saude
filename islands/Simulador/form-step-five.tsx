@@ -127,11 +127,11 @@ export default function FormStepFiveIsland() {
 
   // Segundo useEffect para chamar fetchPrices quando cd_plano e filledRanges estiverem prontos
   useEffect(() => {
-    console.log("usou 2", ageRangeValue.value);
-    console.log("usou 3", filledRanges.value);
-    console.log("usou 4", [
+    //console.log("usou 2", ageRangeValue.value);
+    //console.log("usou 3", filledRanges.value);
+    /*console.log("usou 4", [
       ...new Set([...filledRanges.value, ageRangeValue.value]),
-    ]);
+    ]);*/
     if (cd_plano.value && filledRanges.value.length > 0) {
       fetchPrices();
     }
@@ -196,7 +196,7 @@ export default function FormStepFiveIsland() {
 
   function updatePricesBasedOnRange(fetchedPrices) {
     fetchedPrices.forEach((priceObj) => {
-      console.log("priceObj:", priceObj);
+      //console.log("priceObj:", priceObj);
       switch (priceObj.faixa) {
         case "0 a 18 anos":
           zeroTo18Prices.value = priceObj.a_partir_de;
@@ -241,7 +241,22 @@ export default function FormStepFiveIsland() {
   const selectedObject = transformedArray.value.find(
     (plan) => plan?.id === selectedPlan.value,
   );
-  propertyPrice.value = selectedObject?.price;
+
+  //console.log("aki ó", transformedArray.value);
+  //console.log("aki ó 2", selectedPlan.value);
+  //console.log("aki ó 3", fetchedPrices.value);
+  //console.log("aki ó 5", ageRangeValue.value);
+
+  if (fetchedPrices.value && ageRangeValue.value) {
+    const matchedPrice = fetchedPrices.value.find(
+      (price) => price.faixa === ageRangeValue.value,
+    );
+    const aPartirDe = matchedPrice?.a_partir_de;
+    //console.log("Valor de a_partir_de:", aPartirDe);
+    propertyPrice.value = aPartirDe;
+  }
+
+  //propertyPrice.value = selectedObject?.price;
 
   //console.log("Faixa de preço da idade de quem preencheu:", propertyPrice.value);
   //console.log("Fetched Prices:", fetchedPrices.value);
