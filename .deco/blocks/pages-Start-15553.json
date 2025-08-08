@@ -41,6 +41,16 @@
               },
               "alt": "Podcast TV Sim ",
               "link": "https://www.youtube.com/watch?v=V4OzjGTkd1s "
+            },
+            {
+              "desktop": {
+                "image": "https://assets.decocache.com/official-aurora-saude/4529f293-0f09-4d11-b66f-b95143302fa8/a47b962c-beba-4f17-9ecb-fc5c0bf76f6f.png"
+              },
+              "mobile": {
+                "image": "https://assets.decocache.com/official-aurora-saude/8ff88ac0-ad7e-4c22-a057-417d6809ac49/4b4ec548-4f88-4880-91c1-3dea685a58e5.png"
+              },
+              "link": "http://wa.me/553172636342",
+              "alt": "Campanha Dia das Pais "
             }
           ],
           "interval": 10
